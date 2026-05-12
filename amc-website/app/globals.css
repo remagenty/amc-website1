@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --amc-yellow: #ffd500;
+  --amc-yellow-dark: #e6c000;
+  --amc-cream: #f5f5f0;
+  --amc-gray: #5e5e5f;
+  --amc-text: #2d2d2d;
+  --header-height: 5rem;
+  --nav-height: 3rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--amc-text);
+  background: var(--amc-cream);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer base {
+  h1 { @apply text-3xl md:text-4xl lg:text-5xl font-bold text-amc-text leading-tight; }
+  h2 { @apply text-2xl md:text-3xl font-bold text-amc-text leading-snug; }
+  h3 { @apply text-xl md:text-2xl font-semibold text-amc-text; }
+  h4 { @apply text-lg font-semibold text-amc-text; }
+
+  a { @apply transition-colors duration-200; }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-amc-yellow text-amc-text font-semibold rounded-md
+      hover:bg-amc-yellow-dark active:scale-95 transition-all duration-200 focus-visible:outline-none
+      focus-visible:ring-2 focus-visible:ring-amc-yellow focus-visible:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-amc-text font-semibold rounded-md border border-gray-200
+      hover:border-amc-yellow hover:bg-amc-yellow/5 active:scale-95 transition-all duration-200;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-transparent text-white font-semibold rounded-md border-2 border-white
+      hover:bg-white hover:text-amc-text active:scale-95 transition-all duration-200;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 text-amc-text font-medium rounded-md
+      hover:bg-gray-100 active:scale-95 transition-all duration-200;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-card hover:shadow-card-hover transition-all duration-300;
+  }
+
+  .badge-new {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-green-100 text-green-800;
+  }
+
+  .badge-occasion {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-100 text-blue-800;
+  }
+
+  .badge-se {
+    @apply inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-bold bg-amc-yellow text-amc-text;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-20 lg:py-24;
+  }
+
+  .container-amc {
+    @apply max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .input-base {
+    @apply w-full px-4 py-3 rounded-lg border border-gray-200 text-amc-text placeholder:text-gray-400
+      focus:outline-none focus:ring-2 focus:ring-amc-yellow focus:border-transparent transition-all duration-200
+      bg-white;
+  }
+
+  .select-base {
+    @apply input-base appearance-none cursor-pointer;
+  }
+
+  .nav-link {
+    @apply text-sm font-medium text-amc-text hover:text-amc-yellow transition-colors duration-200 py-1;
+  }
+
+  .dropdown-item {
+    @apply flex items-center gap-3 px-4 py-2.5 text-sm text-amc-text hover:bg-amc-yellow/10 hover:text-amc-text
+      rounded-md transition-colors duration-150 cursor-pointer;
+  }
+
+  .product-card {
+    @apply card overflow-hidden cursor-pointer;
+  }
+
+  .section-title {
+    @apply text-2xl md:text-3xl lg:text-4xl font-bold text-amc-text;
+  }
+
+  .section-subtitle {
+    @apply text-base md:text-lg text-amc-text-secondary mt-3 max-w-2xl;
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+}
+
+/* Hero slider */
+.hero-slide { @apply absolute inset-0 transition-opacity duration-700 ease-in-out; }
+.hero-slide.active { @apply opacity-100; }
+.hero-slide.inactive { @apply opacity-0; }
+
+/* Mega menu */
+.mega-menu {
+  @apply absolute top-full left-0 right-0 bg-white shadow-xl border-t-2 border-amc-yellow
+    animate-slide-down z-50;
+}
+
+/* Swiper custom */
+.swiper-pagination-bullet {
+  @apply bg-white/60 opacity-100 !important;
+}
+.swiper-pagination-bullet-active {
+  @apply bg-amc-yellow !important;
+}
