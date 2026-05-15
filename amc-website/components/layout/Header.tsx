@@ -11,10 +11,15 @@ import {
   IconChevronDown,
   IconMenu,
   IconX,
-  IconPhone,
   IconArrowRight,
 } from "@/components/ui/Icons";
 import { SEBadge } from "@/components/ui/SEBadge";
+
+const TOP_BAR_ITEMS = [
+  "📞 +33 (0)4 50 00 00 00",
+  "📍 Saint-Félix, Haute-Savoie (74)",
+  "⏰ Lun-Ven : 8h-18h | Sam : 9h-12h",
+];
 
 const MEGA_MENUS = {
   materiels: {
@@ -64,6 +69,7 @@ export function Header() {
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [searchFocused, setSearchFocused] = useState(false);
+  const [carouselIndex, setCarouselIndex] = useState(0);
   const menuTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const pathname = usePathname();
 
@@ -77,6 +83,13 @@ export function Header() {
     setMobileOpen(false);
     setActiveMenu(null);
   }, [pathname]);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCarouselIndex((i) => (i + 1) % TOP_BAR_ITEMS.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, []);
 
   const handleMenuEnter = (menu: string) => {
     if (menuTimeoutRef.current) clearTimeout(menuTimeoutRef.current);
@@ -94,334 +107,268 @@ export function Header() {
     }
   };
 
+  const navLinkClass = (menu: string) =>
+    `h-full flex items-center gap-1 px-3 text-sm font-semibold transition-colors whitespace-nowrap ${
+      activeMenu === menu
+        ? "text-amc-yellow border-b-2 border-amc-yellow"
+        : "text-white hover:text-amc-yellow"
+    }`;
+
   return (
     <>
-      {/* Top bar */}
-      <div className="text-xs hidden lg:block" style={{ backgroundColor: "#FFFFFF", color: "#000000" }}>
-        <div className="container-amc flex justify-between items-center py-2">
-          <div className="flex items-center gap-6">
-            <a href="tel:+33450000000" className="flex items-center gap-1.5 hover:opacity-70 transition-opacity">
-              <IconPhone size={12} />
-              +33 (0)4 50 00 00 00
-            </a>
-            <span style={{ color: "#00000040" }}>|</span>
-            <span className="flex items-center gap-1.5">
-              <IconMapPin size={12} />
-              Saint-Félix, Haute-Savoie (74)
-            </span>
-          </div>
-          <div className="flex items-center gap-4">
-            <SEBadge size="sm" />
-            <span style={{ color: "#00000040" }}>|</span>
-            <Link href="/contact?type=sav" className="hover:opacity-70 transition-opacity">
-              Prendre RDV SAV
-            </Link>
-          </div>
+      <style>{`
+        @keyframes slideInRight {
+          from { transform: translateX(-40px); opacity: 0; }
+          to   { transform: translateX(0);     opacity: 1; }
+        }
+        .carousel-item { animation: slideInRight 0.35s ease-out forwards; }
+      `}</style>
+
+      {/* Top bar — white, compact, rotating info */}
+      <div
+        className="hidden lg:flex items-center justify-center text-xs"
+        style={{ backgroundColor: "#FFFFFF", color: "#000000", height: "36px" }}
+      >
+        <div
+          key={carouselIndex}
+          className="carousel-item font-medium"
+        >
+          {TOP_BAR_ITEMS[carouselIndex]}
         </div>
       </div>
 
-      {/* Main header */}
+      {/* Single merged header — gray */}
       <header
-        className={`sticky top-0 z-50 transition-shadow duration-300 ${
-          isScrolled ? "shadow-header" : ""
-        }`}
+        className={`sticky top-0 z-50 transition-shadow duration-300 ${isScrolled ? "shadow-header" : ""}`}
         style={{ backgroundColor: "#9B9B9B" }}
+        onMouseLeave={handleMenuLeave}
       >
-        <div className="container-amc">
-          <div className="flex items-center gap-4 h-20 lg:h-24">
-            {/* Logo */}
-            <Link href="/" className="flex-shrink-0 flex items-center self-stretch py-2" aria-label="AMC - Alpes Matériel Compact">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/logo-amc.png"
-                alt="AMC - Alpes Matériel Compact"
-                className="h-full w-auto max-h-20 lg:max-h-24 object-contain"
+        <div className="flex items-center h-16" style={{ paddingLeft: "20px", paddingRight: "16px" }}>
+
+          {/* Logo */}
+          <Link href="/" className="flex-shrink-0 flex items-center self-stretch py-1.5" aria-label="AMC - Alpes Matériel Compact">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/logo-amc.png"
+              alt="AMC - Alpes Matériel Compact"
+              className="h-full w-auto object-contain"
+            />
+          </Link>
+
+          {/* Search bar */}
+          <form onSubmit={handleSearch} className="hidden md:block mx-4 flex-shrink-0 w-[360px] xl:w-[420px]">
+            <div
+              className={`relative flex items-center rounded-lg transition-all duration-200 ${
+                searchFocused
+                  ? "ring-2 ring-amc-yellow"
+                  : ""
+              }`}
+              style={{ backgroundColor: "rgba(255,255,255,0.9)" }}
+            >
+              <IconSearch className="absolute left-3 text-gray-400" size={16} />
+              <input
+                type="search"
+                placeholder="Rechercher un matériel, une référence..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                onFocus={() => setSearchFocused(true)}
+                onBlur={() => setSearchFocused(false)}
+                className="w-full pl-9 pr-4 py-2 bg-transparent text-sm text-amc-text placeholder:text-gray-400 focus:outline-none rounded-lg"
               />
-            </Link>
+            </div>
+          </form>
 
-            {/* Search */}
-            <form onSubmit={handleSearch} className="flex-1 max-w-xl hidden md:block">
-              <div
-                className={`relative flex items-center rounded-lg border transition-all duration-200 ${
-                  searchFocused
-                    ? "border-amc-yellow ring-2 ring-amc-yellow/20 bg-white"
-                    : "border-gray-200 bg-gray-50 hover:border-gray-300"
-                }`}
-              >
-                <IconSearch className="absolute left-3.5 text-gray-400" size={18} />
-                <input
-                  type="search"
-                  placeholder="Rechercher un matériel, une référence..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  onFocus={() => setSearchFocused(true)}
-                  onBlur={() => setSearchFocused(false)}
-                  className="w-full pl-10 pr-4 py-2.5 bg-transparent text-sm text-amc-text placeholder:text-gray-400 focus:outline-none"
-                />
-              </div>
-            </form>
-
-            {/* Utilities */}
-            <div className="flex items-center gap-1 ml-auto lg:ml-0">
-              <button className="hidden lg:flex flex-col items-center gap-0.5 px-3 py-2 rounded-lg text-amc-text hover:bg-gray-50 transition-colors text-xs font-medium">
-                <IconHardHat size={20} />
-                <span>Mon chantier</span>
-              </button>
-              <Link
-                href="/contact#agences"
-                className="hidden lg:flex flex-col items-center gap-0.5 px-3 py-2 rounded-lg text-amc-text hover:bg-gray-50 transition-colors text-xs font-medium"
-              >
-                <IconMapPin size={20} />
-                <span>Nos agences</span>
-              </Link>
-              <Link
-                href="/contact"
-                className="hidden lg:flex flex-col items-center gap-0.5 px-3 py-2 rounded-lg text-amc-text hover:bg-gray-50 transition-colors text-xs font-medium"
-              >
-                <IconUser size={20} />
-                <span>Me contacter</span>
-              </Link>
-              <Link
-                href="/contact?type=devis"
-                className="btn-primary text-sm py-2.5 px-4 ml-2 rounded-lg"
-              >
-                Demande de devis
-              </Link>
-
-              {/* Mobile menu toggle */}
-              <button
-                onClick={() => setMobileOpen(!mobileOpen)}
-                className="lg:hidden p-2 rounded-lg text-amc-text hover:bg-gray-100 transition-colors ml-1"
-                aria-label="Menu"
-              >
-                {mobileOpen ? <IconX size={24} /> : <IconMenu size={24} />}
+          {/* Nav links — desktop */}
+          <nav className="hidden xl:flex items-center h-full">
+            {/* Nos matériels */}
+            <div className="relative h-full" onMouseEnter={() => handleMenuEnter("materiels")}>
+              <button className={navLinkClass("materiels")}>
+                Nos matériels <IconChevronDown size={14} className={`transition-transform ${activeMenu === "materiels" ? "rotate-180" : ""}`} />
               </button>
             </div>
+
+            {/* Vos besoins */}
+            <div className="relative h-full" onMouseEnter={() => handleMenuEnter("besoins")}>
+              <button className={navLinkClass("besoins")}>
+                Vos besoins <IconChevronDown size={14} className={`transition-transform ${activeMenu === "besoins" ? "rotate-180" : ""}`} />
+              </button>
+            </div>
+
+            {/* Nos services */}
+            <div className="relative h-full" onMouseEnter={() => handleMenuEnter("services")}>
+              <button className={navLinkClass("services")}>
+                Nos services <IconChevronDown size={14} className={`transition-transform ${activeMenu === "services" ? "rotate-180" : ""}`} />
+              </button>
+            </div>
+
+            {/* Nos partenaires */}
+            <div className="relative h-full" onMouseEnter={() => handleMenuEnter("partenaires")}>
+              <button className={navLinkClass("partenaires")}>
+                Nos partenaires <IconChevronDown size={14} className={`transition-transform ${activeMenu === "partenaires" ? "rotate-180" : ""}`} />
+              </button>
+            </div>
+
+            <Link
+              href="/contact"
+              className={`h-full flex items-center px-3 text-sm font-semibold transition-colors whitespace-nowrap ${
+                pathname === "/contact" ? "text-amc-yellow border-b-2 border-amc-yellow" : "text-white hover:text-amc-yellow"
+              }`}
+            >
+              Contact & Devis
+            </Link>
+          </nav>
+
+          {/* Right utilities */}
+          <div className="flex items-center gap-1 ml-auto">
+            <button className="hidden xl:flex flex-col items-center gap-0.5 px-2 py-1.5 rounded-lg text-white hover:bg-white/10 transition-colors text-xs font-medium">
+              <IconHardHat size={18} />
+              <span>Mon chantier</span>
+            </button>
+            <Link
+              href="/contact#agences"
+              className="hidden xl:flex flex-col items-center gap-0.5 px-2 py-1.5 rounded-lg text-white hover:bg-white/10 transition-colors text-xs font-medium"
+            >
+              <IconMapPin size={18} />
+              <span>Nos agences</span>
+            </Link>
+            <Link
+              href="/contact"
+              className="hidden xl:flex flex-col items-center gap-0.5 px-2 py-1.5 rounded-lg text-white hover:bg-white/10 transition-colors text-xs font-medium"
+            >
+              <IconUser size={18} />
+              <span>Me contacter</span>
+            </Link>
+            <Link
+              href="/contact?type=devis"
+              className="btn-primary text-sm py-2 px-3 ml-1 rounded-lg whitespace-nowrap"
+            >
+              Demande de devis
+            </Link>
+
+            {/* Mobile hamburger */}
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="xl:hidden p-2 rounded-lg text-white hover:bg-white/20 transition-colors ml-1"
+              aria-label="Menu"
+            >
+              {mobileOpen ? <IconX size={22} /> : <IconMenu size={22} />}
+            </button>
           </div>
         </div>
 
-        {/* Navigation */}
-        <nav
-          className="hidden lg:block border-t border-gray-100 bg-white"
-          onMouseLeave={handleMenuLeave}
-        >
-          <div className="container-amc">
-            <div className="flex items-center h-12">
-              {/* Nos matériels */}
-              <div
-                className="relative h-full"
-                onMouseEnter={() => handleMenuEnter("materiels")}
-              >
-                <button
-                  className={`h-full flex items-center gap-1.5 px-4 text-sm font-semibold transition-colors ${
-                    activeMenu === "materiels"
-                      ? "text-amc-yellow-dark border-b-2 border-amc-yellow"
-                      : "text-amc-text hover:text-amc-yellow-dark"
-                  }`}
-                >
-                  Nos matériels <IconChevronDown className={`transition-transform ${activeMenu === "materiels" ? "rotate-180" : ""}`} />
-                </button>
-              </div>
-
-              {/* Vos besoins */}
-              <div
-                className="relative h-full"
-                onMouseEnter={() => handleMenuEnter("besoins")}
-              >
-                <button
-                  className={`h-full flex items-center gap-1.5 px-4 text-sm font-semibold transition-colors ${
-                    activeMenu === "besoins"
-                      ? "text-amc-yellow-dark border-b-2 border-amc-yellow"
-                      : "text-amc-text hover:text-amc-yellow-dark"
-                  }`}
-                >
-                  Vos besoins <IconChevronDown className={`transition-transform ${activeMenu === "besoins" ? "rotate-180" : ""}`} />
-                </button>
-              </div>
-
-              {/* Nos services */}
-              <div
-                className="relative h-full"
-                onMouseEnter={() => handleMenuEnter("services")}
-              >
-                <button
-                  className={`h-full flex items-center gap-1.5 px-4 text-sm font-semibold transition-colors ${
-                    activeMenu === "services"
-                      ? "text-amc-yellow-dark border-b-2 border-amc-yellow"
-                      : "text-amc-text hover:text-amc-yellow-dark"
-                  }`}
-                >
-                  Nos services <IconChevronDown className={`transition-transform ${activeMenu === "services" ? "rotate-180" : ""}`} />
-                </button>
-              </div>
-
-              {/* Nos partenaires */}
-              <div
-                className="relative h-full"
-                onMouseEnter={() => handleMenuEnter("partenaires")}
-              >
-                <button
-                  className={`h-full flex items-center gap-1.5 px-4 text-sm font-semibold transition-colors ${
-                    activeMenu === "partenaires"
-                      ? "text-amc-yellow-dark border-b-2 border-amc-yellow"
-                      : "text-amc-text hover:text-amc-yellow-dark"
-                  }`}
-                >
-                  Nos partenaires <IconChevronDown className={`transition-transform ${activeMenu === "partenaires" ? "rotate-180" : ""}`} />
-                </button>
-              </div>
-
-              <Link
-                href="/contact"
-                className={`h-full flex items-center px-4 text-sm font-semibold transition-colors ${
-                  pathname === "/contact"
-                    ? "text-amc-yellow-dark border-b-2 border-amc-yellow"
-                    : "text-amc-text hover:text-amc-yellow-dark"
-                }`}
-              >
-                Contact & Devis
-              </Link>
-
-              <div className="ml-auto flex items-center gap-3">
-                <SEBadge size="sm" />
+        {/* Mega menu: Nos matériels */}
+        {activeMenu === "materiels" && (
+          <div className="mega-menu" onMouseEnter={() => handleMenuEnter("materiels")}>
+            <div className="container-amc py-8">
+              <div className="grid grid-cols-12 gap-8">
+                <div className="col-span-5">
+                  <h3 className="text-xs font-bold uppercase tracking-wider text-amc-text-secondary mb-4">Par catégorie</h3>
+                  <div className="grid grid-cols-2 gap-1">
+                    {MEGA_MENUS.materiels.categories.map((cat) => (
+                      <Link key={cat.href} href={cat.href} className="dropdown-item rounded-lg">
+                        <div>
+                          <div className="font-medium text-amc-text">{cat.label}</div>
+                          <div className="text-xs text-amc-text-secondary">{cat.desc}</div>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+                <div className="col-span-3">
+                  <h3 className="text-xs font-bold uppercase tracking-wider text-amc-text-secondary mb-4">Par marque</h3>
+                  <div className="space-y-1">
+                    {MEGA_MENUS.materiels.brands.map((brand) => (
+                      <Link key={brand.href} href={brand.href} className="dropdown-item">
+                        <div className="font-semibold">{brand.label}</div>
+                        <span className="ml-auto text-xs bg-amc-yellow text-amc-text px-1.5 py-0.5 rounded font-bold">{brand.badge}</span>
+                      </Link>
+                    ))}
+                  </div>
+                  <div className="mt-6 space-y-1">
+                    <h3 className="text-xs font-bold uppercase tracking-wider text-amc-text-secondary mb-4">État</h3>
+                    {MEGA_MENUS.materiels.states.map((state) => (
+                      <Link key={state.href} href={state.href} className="dropdown-item">
+                        <span>{state.icon}</span>
+                        <span className="font-medium">{state.label}</span>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+                <div className="col-span-4">
+                  <div className="bg-amc-yellow/10 rounded-xl p-5 border border-amc-yellow/20">
+                    <div className="font-bold text-amc-text mb-2">Besoin d'un conseil ?</div>
+                    <p className="text-sm text-amc-text-secondary mb-4">
+                      Nos experts AMC vous accompagnent dans le choix de vos équipements de chantier.
+                    </p>
+                    <Link href="/contact" className="btn-primary text-sm w-full justify-center">
+                      Parler à un expert <IconArrowRight size={14} />
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+        )}
 
-          {/* Mega menu: Nos matériels */}
-          {activeMenu === "materiels" && (
-            <div
-              className="mega-menu"
-              onMouseEnter={() => handleMenuEnter("materiels")}
-            >
-              <div className="container-amc py-8">
-                <div className="grid grid-cols-12 gap-8">
-                  <div className="col-span-5">
-                    <h3 className="text-xs font-bold uppercase tracking-wider text-amc-text-secondary mb-4">
-                      Par catégorie
-                    </h3>
-                    <div className="grid grid-cols-2 gap-1">
-                      {MEGA_MENUS.materiels.categories.map((cat) => (
-                        <Link key={cat.href} href={cat.href} className="dropdown-item rounded-lg">
-                          <div>
-                            <div className="font-medium text-amc-text">{cat.label}</div>
-                            <div className="text-xs text-amc-text-secondary">{cat.desc}</div>
-                          </div>
-                        </Link>
-                      ))}
+        {/* Mega menu: Vos besoins */}
+        {activeMenu === "besoins" && (
+          <div className="mega-menu" onMouseEnter={() => handleMenuEnter("besoins")}>
+            <div className="container-amc py-8">
+              <div className="grid grid-cols-3 gap-1">
+                {MEGA_MENUS.besoins.map((item) => (
+                  <Link key={item.href} href={item.href} className="dropdown-item rounded-lg">
+                    <div>
+                      <div className="font-semibold">{item.label}</div>
+                      <div className="text-xs text-amc-text-secondary">{item.desc}</div>
                     </div>
-                  </div>
-                  <div className="col-span-3">
-                    <h3 className="text-xs font-bold uppercase tracking-wider text-amc-text-secondary mb-4">
-                      Par marque
-                    </h3>
-                    <div className="space-y-1">
-                      {MEGA_MENUS.materiels.brands.map((brand) => (
-                        <Link key={brand.href} href={brand.href} className="dropdown-item">
-                          <div className="font-semibold">{brand.label}</div>
-                          <span className="ml-auto text-xs bg-amc-yellow text-amc-text px-1.5 py-0.5 rounded font-bold">
-                            {brand.badge}
-                          </span>
-                        </Link>
-                      ))}
-                    </div>
-                    <div className="mt-6 space-y-1">
-                      <h3 className="text-xs font-bold uppercase tracking-wider text-amc-text-secondary mb-4">
-                        État
-                      </h3>
-                      {MEGA_MENUS.materiels.states.map((state) => (
-                        <Link key={state.href} href={state.href} className="dropdown-item">
-                          <span>{state.icon}</span>
-                          <span className="font-medium">{state.label}</span>
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="col-span-4">
-                    <div className="bg-amc-yellow/10 rounded-xl p-5 border border-amc-yellow/20">
-                      <div className="font-bold text-amc-text mb-2">Besoin d'un conseil ?</div>
-                      <p className="text-sm text-amc-text-secondary mb-4">
-                        Nos experts AMC vous accompagnent dans le choix de vos équipements de chantier.
-                      </p>
-                      <Link href="/contact" className="btn-primary text-sm w-full justify-center">
-                        Parler à un expert <IconArrowRight size={14} />
-                      </Link>
-                    </div>
-                  </div>
-                </div>
+                  </Link>
+                ))}
               </div>
             </div>
-          )}
+          </div>
+        )}
 
-          {/* Mega menu: Vos besoins */}
-          {activeMenu === "besoins" && (
-            <div
-              className="mega-menu"
-              onMouseEnter={() => handleMenuEnter("besoins")}
-            >
-              <div className="container-amc py-8">
-                <div className="grid grid-cols-3 gap-1">
-                  {MEGA_MENUS.besoins.map((item) => (
-                    <Link key={item.href} href={item.href} className="dropdown-item rounded-lg">
-                      <div>
-                        <div className="font-semibold">{item.label}</div>
-                        <div className="text-xs text-amc-text-secondary">{item.desc}</div>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
+        {/* Mega menu: Nos services */}
+        {activeMenu === "services" && (
+          <div className="mega-menu" onMouseEnter={() => handleMenuEnter("services")}>
+            <div className="container-amc py-8">
+              <div className="grid grid-cols-3 gap-1">
+                {MEGA_MENUS.services.map((item) => (
+                  <Link key={item.href} href={item.href} className="dropdown-item rounded-lg">
+                    <div>
+                      <div className="font-semibold">{item.label}</div>
+                      <div className="text-xs text-amc-text-secondary">{item.desc}</div>
+                    </div>
+                  </Link>
+                ))}
               </div>
             </div>
-          )}
+          </div>
+        )}
 
-          {/* Mega menu: Nos services */}
-          {activeMenu === "services" && (
-            <div
-              className="mega-menu"
-              onMouseEnter={() => handleMenuEnter("services")}
-            >
-              <div className="container-amc py-8">
-                <div className="grid grid-cols-3 gap-1">
-                  {MEGA_MENUS.services.map((item) => (
-                    <Link key={item.href} href={item.href} className="dropdown-item rounded-lg">
-                      <div>
-                        <div className="font-semibold">{item.label}</div>
-                        <div className="text-xs text-amc-text-secondary">{item.desc}</div>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
+        {/* Mega menu: Nos partenaires */}
+        {activeMenu === "partenaires" && (
+          <div className="mega-menu" onMouseEnter={() => handleMenuEnter("partenaires")}>
+            <div className="container-amc py-8">
+              <div className="grid grid-cols-3 gap-4">
+                {MEGA_MENUS.partenaires.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="block p-4 rounded-xl border border-gray-100 hover:border-amc-yellow/50 hover:bg-amc-yellow/5 transition-all"
+                  >
+                    <div className="font-bold text-amc-text mb-1">{item.label}</div>
+                    <div className="text-sm text-amc-text-secondary">{item.desc}</div>
+                  </Link>
+                ))}
               </div>
             </div>
-          )}
-
-          {/* Mega menu: Partenaires */}
-          {activeMenu === "partenaires" && (
-            <div
-              className="mega-menu"
-              onMouseEnter={() => handleMenuEnter("partenaires")}
-            >
-              <div className="container-amc py-8">
-                <div className="grid grid-cols-3 gap-4">
-                  {MEGA_MENUS.partenaires.map((item) => (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      className="block p-4 rounded-xl border border-gray-100 hover:border-amc-yellow/50 hover:bg-amc-yellow/5 transition-all"
-                    >
-                      <div className="font-bold text-amc-text mb-1">{item.label}</div>
-                      <div className="text-sm text-amc-text-secondary">{item.desc}</div>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </div>
-          )}
-        </nav>
+          </div>
+        )}
 
         {/* Mobile menu */}
         {mobileOpen && (
-          <div className="lg:hidden border-t border-gray-100 bg-white max-h-[80vh] overflow-y-auto">
+          <div className="xl:hidden border-t border-white/20 bg-white max-h-[80vh] overflow-y-auto">
             <div className="p-4">
               <form onSubmit={handleSearch} className="mb-4">
                 <div className="relative">
