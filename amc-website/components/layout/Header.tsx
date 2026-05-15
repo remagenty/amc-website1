@@ -97,14 +97,14 @@ export function Header() {
   return (
     <>
       {/* Top bar */}
-      <div className="text-white text-xs hidden lg:block" style={{ backgroundColor: "#9B9B9B" }}>
+      <div className="text-xs hidden lg:block" style={{ backgroundColor: "#FFFFFF", color: "#000000" }}>
         <div className="container-amc flex justify-between items-center py-2">
           <div className="flex items-center gap-6">
-            <a href="tel:+33450000000" className="flex items-center gap-1.5 hover:text-amc-yellow transition-colors">
+            <a href="tel:+33450000000" className="flex items-center gap-1.5 hover:opacity-70 transition-opacity">
               <IconPhone size={12} />
               +33 (0)4 50 00 00 00
             </a>
-            <span className="text-white/40">|</span>
+            <span style={{ color: "#00000040" }}>|</span>
             <span className="flex items-center gap-1.5">
               <IconMapPin size={12} />
               Saint-Félix, Haute-Savoie (74)
@@ -112,8 +112,8 @@ export function Header() {
           </div>
           <div className="flex items-center gap-4">
             <SEBadge size="sm" />
-            <span className="text-white/40">|</span>
-            <Link href="/contact?type=sav" className="hover:text-amc-yellow transition-colors">
+            <span style={{ color: "#00000040" }}>|</span>
+            <Link href="/contact?type=sav" className="hover:opacity-70 transition-opacity">
               Prendre RDV SAV
             </Link>
           </div>
@@ -122,20 +122,20 @@ export function Header() {
 
       {/* Main header */}
       <header
-        className={`sticky top-0 z-50 bg-white transition-shadow duration-300 ${
-          isScrolled ? "shadow-header" : "border-b border-gray-100"
+        className={`sticky top-0 z-50 transition-shadow duration-300 ${
+          isScrolled ? "shadow-header" : ""
         }`}
+        style={{ backgroundColor: "#9B9B9B" }}
       >
         <div className="container-amc">
-          <div className="flex items-center gap-4 h-16 lg:h-20">
+          <div className="flex items-center gap-4 h-20 lg:h-24">
             {/* Logo */}
-            <Link href="/" className="flex-shrink-0" aria-label="AMC - Alpes Matériel Compact">
+            <Link href="/" className="flex-shrink-0 flex items-center self-stretch py-2" aria-label="AMC - Alpes Matériel Compact">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/logo-amc.png"
                 alt="AMC - Alpes Matériel Compact"
-                width={180}
-                className="h-auto w-[140px] lg:w-[180px]"
+                className="h-full w-auto max-h-20 lg:max-h-24 object-contain"
               />
             </Link>
 
