@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import {
   IconSearch,
@@ -98,7 +97,7 @@ export function Header() {
   return (
     <>
       {/* Top bar */}
-      <div className="bg-amc-gray-topbar text-white text-xs hidden lg:block">
+      <div className="text-white text-xs hidden lg:block" style={{ backgroundColor: "#9B9B9B" }}>
         <div className="container-amc flex justify-between items-center py-2">
           <div className="flex items-center gap-6">
             <a href="tel:+33450000000" className="flex items-center gap-1.5 hover:text-amc-yellow transition-colors">
@@ -131,12 +130,11 @@ export function Header() {
           <div className="flex items-center gap-4 h-16 lg:h-20">
             {/* Logo */}
             <Link href="/" className="flex-shrink-0" aria-label="AMC - Alpes Matériel Compact">
-              <Image
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
                 src="/images/logo-amc.png"
                 alt="AMC - Alpes Matériel Compact"
                 width={180}
-                height={34}
-                priority
                 className="h-auto w-[140px] lg:w-[180px]"
               />
             </Link>
