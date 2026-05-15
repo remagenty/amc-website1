@@ -216,38 +216,42 @@ export function Header() {
         </div>
 
         {/* Desktop nav bar */}
-        <nav className="hidden lg:block border-t border-white/20">
+        <nav className="hidden lg:block">
           <div className="container-amc">
-            <div className="flex items-center h-12">
+            <div className="flex items-center gap-2 h-14">
 
-              <div className="relative h-full" onMouseEnter={() => handleMenuEnter("materiels")}>
-                <button className={`h-full flex items-center gap-1.5 px-4 text-sm font-semibold transition-colors ${
-                  activeMenu === "materiels" ? "text-amc-yellow border-b-2 border-amc-yellow" : "text-white hover:text-amc-yellow"
-                }`}>
+              <div className="relative flex items-center h-full" onMouseEnter={() => handleMenuEnter("materiels")}>
+                <button
+                  className="flex items-center gap-1.5 px-5 py-2 rounded-full text-sm font-semibold transition-all"
+                  style={{ backgroundColor: "#FFD500", color: "#000000" }}
+                >
                   Nos matériels <IconChevronDown size={14} className={`transition-transform ${activeMenu === "materiels" ? "rotate-180" : ""}`} />
                 </button>
               </div>
 
-              <div className="relative h-full" onMouseEnter={() => handleMenuEnter("besoins")}>
-                <button className={`h-full flex items-center gap-1.5 px-4 text-sm font-semibold transition-colors ${
-                  activeMenu === "besoins" ? "text-amc-yellow border-b-2 border-amc-yellow" : "text-white hover:text-amc-yellow"
-                }`}>
+              <div className="relative flex items-center h-full" onMouseEnter={() => handleMenuEnter("besoins")}>
+                <button
+                  className="flex items-center gap-1.5 px-5 py-2 rounded-full text-sm font-semibold transition-all"
+                  style={{ backgroundColor: "#FFD500", color: "#000000" }}
+                >
                   Vos besoins <IconChevronDown size={14} className={`transition-transform ${activeMenu === "besoins" ? "rotate-180" : ""}`} />
                 </button>
               </div>
 
-              <div className="relative h-full" onMouseEnter={() => handleMenuEnter("services")}>
-                <button className={`h-full flex items-center gap-1.5 px-4 text-sm font-semibold transition-colors ${
-                  activeMenu === "services" ? "text-amc-yellow border-b-2 border-amc-yellow" : "text-white hover:text-amc-yellow"
-                }`}>
+              <div className="relative flex items-center h-full" onMouseEnter={() => handleMenuEnter("services")}>
+                <button
+                  className="flex items-center gap-1.5 px-5 py-2 rounded-full text-sm font-semibold transition-all"
+                  style={{ backgroundColor: "#FFD500", color: "#000000" }}
+                >
                   Nos services <IconChevronDown size={14} className={`transition-transform ${activeMenu === "services" ? "rotate-180" : ""}`} />
                 </button>
               </div>
 
-              <div className="relative h-full" onMouseEnter={() => handleMenuEnter("partenaires")}>
-                <button className={`h-full flex items-center gap-1.5 px-4 text-sm font-semibold transition-colors ${
-                  activeMenu === "partenaires" ? "text-amc-yellow border-b-2 border-amc-yellow" : "text-white hover:text-amc-yellow"
-                }`}>
+              <div className="relative flex items-center h-full" onMouseEnter={() => handleMenuEnter("partenaires")}>
+                <button
+                  className="flex items-center gap-1.5 px-5 py-2 rounded-full text-sm font-semibold transition-all"
+                  style={{ backgroundColor: "#FFD500", color: "#000000" }}
+                >
                   Nos partenaires <IconChevronDown size={14} className={`transition-transform ${activeMenu === "partenaires" ? "rotate-180" : ""}`} />
                 </button>
               </div>
