@@ -97,7 +97,7 @@ export function Header() {
   return (
     <>
       {/* Top bar */}
-      <div className="bg-amc-gray text-white text-xs hidden lg:block">
+      <div className="text-white text-xs hidden lg:block" style={{ backgroundColor: "#9B9B9B" }}>
         <div className="container-amc flex justify-between items-center py-2">
           <div className="flex items-center gap-6">
             <a href="tel:+33450000000" className="flex items-center gap-1.5 hover:text-amc-yellow transition-colors">
@@ -129,14 +129,14 @@ export function Header() {
         <div className="container-amc">
           <div className="flex items-center gap-4 h-16 lg:h-20">
             {/* Logo */}
-            <Link href="/" className="flex-shrink-0 flex items-center gap-2" aria-label="AMC - Alpes Matériel Compact">
-              <div className="flex items-center justify-center w-10 h-10 lg:w-12 lg:h-12 rounded-lg bg-amc-yellow">
-                <span className="text-amc-text font-black text-lg lg:text-xl tracking-tight">AMC</span>
-              </div>
-              <div className="hidden sm:block">
-                <div className="font-bold text-amc-text text-sm leading-none">Alpes Matériel</div>
-                <div className="font-bold text-amc-text text-sm leading-none">Compact</div>
-              </div>
+            <Link href="/" className="flex-shrink-0" aria-label="AMC - Alpes Matériel Compact">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/logo-amc.png"
+                alt="AMC - Alpes Matériel Compact"
+                width={180}
+                className="h-auto w-[140px] lg:w-[180px]"
+              />
             </Link>
 
             {/* Search */}
