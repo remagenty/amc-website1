@@ -6,8 +6,8 @@ import { usePathname } from "next/navigation";
 import {
   IconSearch,
   IconMapPin,
-  IconUser,
   IconHardHat,
+  IconLock,
   IconChevronDown,
   IconMenu,
   IconX,
@@ -177,11 +177,11 @@ export function Header() {
                 <span>Nos agences</span>
               </Link>
               <Link
-                href="/contact"
+                href="/connexion"
                 className="flex flex-col items-center gap-0.5 px-3 py-2 rounded-lg text-white hover:bg-white/15 transition-colors text-xs font-medium"
               >
-                <IconUser size={20} />
-                <span>Me contacter</span>
+                <IconLock size={20} />
+                <span>Me connecter</span>
               </Link>
               <Link
                 href="/contact?type=devis"
