@@ -230,37 +230,26 @@ export function Header() {
               </div>
 
               <div className="relative flex items-center h-full" onMouseEnter={() => handleMenuEnter("besoins")}>
-                <button
-                  className="flex items-center gap-1.5 px-5 py-2 rounded-full text-sm font-semibold transition-all"
-                  style={{ backgroundColor: "#FFD500", color: "#000000" }}
-                >
+                <button className="flex items-center gap-1.5 px-4 text-sm font-semibold text-white hover:text-amc-yellow transition-colors">
                   Vos besoins <IconChevronDown size={14} className={`transition-transform ${activeMenu === "besoins" ? "rotate-180" : ""}`} />
                 </button>
               </div>
 
               <div className="relative flex items-center h-full" onMouseEnter={() => handleMenuEnter("services")}>
-                <button
-                  className="flex items-center gap-1.5 px-5 py-2 rounded-full text-sm font-semibold transition-all"
-                  style={{ backgroundColor: "#FFD500", color: "#000000" }}
-                >
+                <button className="flex items-center gap-1.5 px-4 text-sm font-semibold text-white hover:text-amc-yellow transition-colors">
                   Nos services <IconChevronDown size={14} className={`transition-transform ${activeMenu === "services" ? "rotate-180" : ""}`} />
                 </button>
               </div>
 
               <div className="relative flex items-center h-full" onMouseEnter={() => handleMenuEnter("partenaires")}>
-                <button
-                  className="flex items-center gap-1.5 px-5 py-2 rounded-full text-sm font-semibold transition-all"
-                  style={{ backgroundColor: "#FFD500", color: "#000000" }}
-                >
+                <button className="flex items-center gap-1.5 px-4 text-sm font-semibold text-white hover:text-amc-yellow transition-colors">
                   Nos partenaires <IconChevronDown size={14} className={`transition-transform ${activeMenu === "partenaires" ? "rotate-180" : ""}`} />
                 </button>
               </div>
 
               <Link
                 href="/contact"
-                className={`h-full flex items-center px-4 text-sm font-semibold transition-colors ${
-                  pathname === "/contact" ? "text-amc-yellow border-b-2 border-amc-yellow" : "text-white hover:text-amc-yellow"
-                }`}
+                className="flex items-center px-4 text-sm font-semibold text-white hover:text-amc-yellow transition-colors"
               >
                 Contact & Devis
               </Link>
