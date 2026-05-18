@@ -17,7 +17,7 @@ import { SEBadge } from "@/components/ui/SEBadge";
 
 const TOP_BAR_ITEMS = [
   "📞 +33 (0)4 50 00 00 00",
-  "📍 Saint-Félix, Haute-Savoie (74)",
+  "📍 ZAC D’Orsan, Saint-Félix (74)",
   "⏰ Lun-Ven : 8h-18h | Sam : 9h-12h",
 ];
 
