@@ -3,13 +3,14 @@
 import { useState } from "react";
 import { IconMapPin } from "@/components/ui/Icons";
 
-const LAT = 46.0766;
-const LNG = 6.0750;
+const LAT = 46.076638;
+const LNG = 6.075011;
 const ADDRESS = "ZAC D'Orsan, 330 Rue du Mont Blanc, 74540 Saint-Félix, Haute-Savoie";
 
+const ZOOM_DELTA = 0.004; // tighter bbox = zoom ~16
 const OSM_EMBED =
   `https://www.openstreetmap.org/export/embed.html` +
-  `?bbox=${LNG - 0.012}%2C${LAT - 0.008}%2C${LNG + 0.012}%2C${LAT + 0.008}` +
+  `?bbox=${LNG - ZOOM_DELTA}%2C${LAT - ZOOM_DELTA * 0.6}%2C${LNG + ZOOM_DELTA}%2C${LAT + ZOOM_DELTA * 0.6}` +
   `&layer=mapnik&marker=${LAT}%2C${LNG}`;
 
 const GMAPS_DEST = "https://www.google.com/maps/place/ZAC+D%27Orsan,+330+Rue+du+Mont+Blanc,+74540+Saint-F%C3%A9lix";
