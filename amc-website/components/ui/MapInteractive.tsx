@@ -3,16 +3,16 @@
 import { useState } from "react";
 import { IconMapPin } from "@/components/ui/Icons";
 
-const LAT = 46.076638;
-const LNG = 6.075011;
+const LAT = 45.79640;
+const LNG = 5.97107;
 const ADDRESS = "ZAC D'Orsan, 330 Rue du Mont Blanc, 74540 Saint-Félix, Haute-Savoie";
 
 // ll= forces the map center; q= pins the marker at exact coordinates
 const GMAPS_EMBED =
-  "https://www.google.com/maps?ll=46.076638,6.075011" +
-  "&q=46.076638,6.075011" +
+  "https://www.google.com/maps?ll=45.79640,5.97107" +
+  "&q=45.79640,5.97107" +
   "&hl=fr&z=16&output=embed";
-const GMAPS_DIR = "https://www.google.com/maps/dir/?api=1&destination=46.076638,6.075011";
+const GMAPS_DIR = "https://www.google.com/maps/dir/?api=1&destination=45.79640,5.97107";
 
 export function MapInteractive() {
   const [locating, setLocating] = useState(false);
