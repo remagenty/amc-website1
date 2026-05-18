@@ -46,7 +46,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     ctaHref: "/catalogue",
     ctaSecondaryLabel: "Demander un devis",
     ctaSecondaryHref: "/contact?type=devis",
-    image: "/images/slides/slide-1.jpg",
+    image: "/images/Slide-1.jpg",
   },
   {
     id: "slide-2",
@@ -57,31 +57,20 @@ export const HERO_SLIDES: HeroSlide[] = [
     ctaHref: "/partenaires/wacker-neuson",
     ctaSecondaryLabel: "Contactez-nous",
     ctaSecondaryHref: "/contact",
-    image: "/images/hero/hero-2.jpg",
+    video: "/videos/Slide-2.mp4",
     badge: "Partenaire officiel",
   },
   {
     id: "slide-3",
-    title: "Service après-vente certifié SE+",
+    title: "Atelier certifié SE+ et techniciens qualifiés",
     subtitle:
-      "Notre équipe technique certifiée SE+ assure la maintenance, réparation et fourniture de pièces d'origine pour tous vos équipements.",
-    ctaLabel: "Nos services SAV",
+      "Un service après-vente d'excellence avec des techniciens certifiés et un atelier équipé",
+    ctaLabel: "Découvrir nos services",
     ctaHref: "/services",
     ctaSecondaryLabel: "Prendre rendez-vous",
     ctaSecondaryHref: "/contact?type=sav",
-    image: "/images/hero/hero-3.jpg",
+    image: "/images/Slide-3.jpg",
     badge: "Certification SE+",
-  },
-  {
-    id: "slide-4",
-    title: "Matériel d'occasion certifié",
-    subtitle:
-      "Des machines d'occasion rigoureusement inspectées, révisées et garanties. Qualité certifiée au meilleur prix pour vos chantiers.",
-    ctaLabel: "Voir les occasions",
-    ctaHref: "/occasion",
-    ctaSecondaryLabel: "En savoir plus",
-    ctaSecondaryHref: "/services#occasion",
-    image: "/images/hero/hero-4.jpg",
   },
 ];
 
