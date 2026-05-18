@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation";
 import {
   IconSearch,
   IconMapPin,
-  IconHardHat,
   IconLock,
   IconChevronDown,
   IconMenu,
@@ -152,7 +151,7 @@ export function Header() {
             </Link>
 
             {/* Search bar */}
-            <form onSubmit={handleSearch} className="flex-1 max-w-[480px]">
+            <form onSubmit={handleSearch} className="flex-1 max-w-[580px]">
               <div
                 className={`relative flex items-center rounded-lg transition-all duration-200 ${
                   searchFocused ? "ring-2 ring-amc-yellow" : ""
@@ -174,10 +173,6 @@ export function Header() {
 
             {/* Actions */}
             <div className="flex items-center gap-1 ml-auto">
-              <button className="flex flex-col items-center gap-0.5 px-3 py-2 rounded-lg text-white hover:bg-white/15 transition-colors text-xs font-medium">
-                <IconHardHat size={20} />
-                <span>Mon chantier</span>
-              </button>
               <Link
                 href="/contact#agences"
                 className="flex flex-col items-center gap-0.5 px-3 py-2 rounded-lg text-white hover:bg-white/15 transition-colors text-xs font-medium"
