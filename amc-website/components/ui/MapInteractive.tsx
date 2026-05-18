@@ -7,8 +7,12 @@ const LAT = 46.076638;
 const LNG = 6.075011;
 const ADDRESS = "ZAC D'Orsan, 330 Rue du Mont Blanc, 74540 Saint-Félix, Haute-Savoie";
 
-const GMAPS_EMBED = `https://maps.google.com/maps?q=${LAT},${LNG}&hl=fr&z=16&output=embed`;
-const GMAPS_DIR = `https://www.google.com/maps/dir/?api=1&destination=${LAT},${LNG}`;
+// ll= forces the map center; q= pins the marker at exact coordinates
+const GMAPS_EMBED =
+  "https://www.google.com/maps?ll=46.076638,6.075011" +
+  "&q=46.076638,6.075011" +
+  "&hl=fr&z=16&output=embed";
+const GMAPS_DIR = "https://www.google.com/maps/dir/?api=1&destination=46.076638,6.075011";
 
 export function MapInteractive() {
   const [locating, setLocating] = useState(false);
