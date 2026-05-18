@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import { ContactForm } from "./ContactForm";
 import { IconMapPin, IconPhone, IconMail, IconClock } from "@/components/ui/Icons";
 import { SEBadge } from "@/components/ui/SEBadge";
+import { MapInteractive } from "@/components/ui/MapInteractive";
 
 export const metadata: Metadata = {
   title: "Contact & Devis | AMC — Alpes Matériel Compact",
@@ -83,25 +84,6 @@ export default function ContactPage() {
                 </p>
               </div>
             </div>
-
-            {/* Map placeholder */}
-            <div id="agences" className="bg-white rounded-2xl shadow-card overflow-hidden">
-              <div className="bg-gray-100 h-48 flex items-center justify-center text-amc-text-secondary">
-                <div className="text-center p-6">
-                  <IconMapPin size={32} className="mx-auto mb-2 text-amc-yellow" />
-                  <p className="font-medium text-sm">Saint-Félix, Haute-Savoie</p>
-                  <p className="text-xs mt-1">ZA les Bruyères, 74540</p>
-                  <a
-                    href="https://maps.google.com/?q=Saint-Félix,74540"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-3 inline-block text-xs font-semibold text-amc-yellow-dark hover:underline"
-                  >
-                    Ouvrir dans Google Maps →
-                  </a>
-                </div>
-              </div>
-            </div>
           </div>
 
           {/* Form */}
@@ -115,6 +97,11 @@ export default function ContactPage() {
               </Suspense>
             </div>
           </div>
+        </div>
+
+        {/* Carte interactive — pleine largeur */}
+        <div id="agences" className="mt-8">
+          <MapInteractive />
         </div>
       </div>
     </div>
