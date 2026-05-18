@@ -15,10 +15,10 @@ import {
 } from "@/components/ui/Icons";
 import { SEBadge } from "@/components/ui/SEBadge";
 
-const TOP_BAR_ITEMS = [
-  "📞 +33 (0)4 50 00 00 00",
-  "📍 ZAC D’Orsan, Saint-Félix (74)",
-  "⏰ Lun-Ven : 8h-18h | Sam : 9h-12h",
+const TOP_BAR_ITEMS: { label: string; href?: string }[] = [
+  { label: "📞 +33 (0)4 50 00 00 00" },
+  { label: "📍 ZAC D’Orsan, Saint-Félix (74)", href: "/contact#nous-localiser" },
+  { label: "⏰ Lun-Ven : 8h-18h | Sam : 9h-12h" },
 ];
 
 const MEGA_MENUS = {
@@ -123,7 +123,16 @@ export function Header() {
         style={{ backgroundColor: "#FFFFFF", color: "#000000", height: "36px" }}
       >
         <div key={carouselIndex} className="carousel-item font-medium">
-          {TOP_BAR_ITEMS[carouselIndex]}
+          {TOP_BAR_ITEMS[carouselIndex].href ? (
+            <Link
+              href={TOP_BAR_ITEMS[carouselIndex].href!}
+              className="hover:underline hover:opacity-75 transition-opacity cursor-pointer"
+            >
+              {TOP_BAR_ITEMS[carouselIndex].label}
+            </Link>
+          ) : (
+            TOP_BAR_ITEMS[carouselIndex].label
+          )}
         </div>
       </div>
 
