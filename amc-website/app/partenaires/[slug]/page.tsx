@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getBrandInfo, getProductsByBrand, BRANDS } from "@/lib/data";
 import { ProductCard } from "@/components/ui/ProductCard";
-import { IconArrowRight, IconExternalLink } from "@/components/ui/Icons";
+import { IconArrowRight } from "@/components/ui/Icons";
 
 interface Props {
   params: { slug: string };
@@ -62,7 +62,7 @@ export default function PartnerPage({ params }: Props) {
             <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-amc-yellow text-amc-text mb-6">
               Partenaire officiel
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white">
               {brand.name}
             </h1>
             <p className="mt-3 text-xl font-semibold text-white/80">
@@ -71,7 +71,7 @@ export default function PartnerPage({ params }: Props) {
             <p className="mt-5 text-base text-white/70 leading-relaxed max-w-2xl">
               {brand.description}
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-8">
               <Link
                 href={`/catalogue?marque=${brand.id}`}
                 className="btn-primary rounded-lg"
@@ -79,15 +79,6 @@ export default function PartnerPage({ params }: Props) {
                 Voir toute la gamme {brand.name}
                 <IconArrowRight size={16} />
               </Link>
-              <a
-                href={brand.website}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-outline rounded-lg text-sm"
-              >
-                Site officiel
-                <IconExternalLink size={14} />
-              </a>
             </div>
           </div>
         </div>
