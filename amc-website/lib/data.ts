@@ -46,7 +46,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     ctaHref: "/catalogue",
     ctaSecondaryLabel: "Demander un devis",
     ctaSecondaryHref: "/contact?type=devis",
-    image: "/images/hero/hero-1.jpg",
+    image: "/images/slides/slide-1.jpg",
   },
   {
     id: "slide-2",
