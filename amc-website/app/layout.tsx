@@ -84,7 +84,7 @@ export default function RootLayout({
                 "Distributeur officiel Wacker Neuson, Magni et Promove Demolition. Vente matériels de chantier neufs et occasion. SAV certifié SE+.",
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "ZA les Bruyères",
+                streetAddress: "ZAC D'Orsan, 330 Rue du Mont Blanc",
                 addressLocality: "Saint-Félix",
                 addressRegion: "Haute-Savoie",
                 postalCode: "74540",
