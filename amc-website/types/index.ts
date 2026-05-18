@@ -69,7 +69,8 @@ export interface HeroSlide {
   ctaHref: string;
   ctaSecondaryLabel?: string;
   ctaSecondaryHref?: string;
-  image: string;
+  image?: string;
+  video?: string;
   badge?: string;
 }
 
