@@ -1,26 +1,40 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { useState } from "react";
 import { IconMapPin } from "@/components/ui/Icons";
 
 const LAT = 46.076638;
 const LNG = 6.075011;
-const ADDRESS = "ZAC D'Orsan, 330 Rue du Mont Blanc, 74540 Saint-Félix, Haute-Savoie";
+const ADDRESS = "ZAC D'Orsan, 330 Rue du Mont Blanc, 74540 Saint-Félix";
 
-const ZOOM_DELTA = 0.004; // tighter bbox = zoom ~16
-const OSM_EMBED =
-  `https://www.openstreetmap.org/export/embed.html` +
-  `?bbox=${LNG - ZOOM_DELTA}%2C${LAT - ZOOM_DELTA * 0.6}%2C${LNG + ZOOM_DELTA}%2C${LAT + ZOOM_DELTA * 0.6}` +
-  `&layer=mapnik&marker=${LAT}%2C${LNG}`;
-
-const GMAPS_DEST = "https://www.google.com/maps/place/ZAC+D%27Orsan,+330+Rue+du+Mont+Blanc,+74540+Saint-F%C3%A9lix";
+const MapView = dynamic(() => import("./MapView"), {
+  ssr: false,
+  loading: () => (
+    <div
+      className="flex items-center justify-center bg-gray-100 text-sm text-gray-500"
+      style={{ height: "400px" }}
+    >
+      Chargement de la carte…
+    </div>
+  ),
+});
 
 export function MapInteractive() {
   const [locating, setLocating] = useState(false);
 
+  const handleGetDirections = () => {
+    const dest = encodeURIComponent(ADDRESS);
+    window.open(
+      `https://www.google.com/maps/dir/?api=1&destination=${dest}`,
+      "_blank",
+      "noopener,noreferrer"
+    );
+  };
+
   const handleLocate = () => {
     if (!navigator.geolocation) {
-      window.open(GMAPS_DEST, "_blank", "noopener,noreferrer");
+      handleGetDirections();
       return;
     }
     setLocating(true);
@@ -28,12 +42,16 @@ export function MapInteractive() {
       (pos) => {
         setLocating(false);
         const { latitude, longitude } = pos.coords;
-        const url = `https://www.google.com/maps/dir/${latitude},${longitude}/ZAC+D%27Orsan,+330+Rue+du+Mont+Blanc,+74540+Saint-F%C3%A9lix`;
-        window.open(url, "_blank", "noopener,noreferrer");
+        const dest = encodeURIComponent(ADDRESS);
+        window.open(
+          `https://www.google.com/maps/dir/${latitude},${longitude}/${dest}`,
+          "_blank",
+          "noopener,noreferrer"
+        );
       },
       () => {
         setLocating(false);
-        window.open(GMAPS_DEST, "_blank", "noopener,noreferrer");
+        handleGetDirections();
       }
     );
   };
@@ -45,33 +63,21 @@ export function MapInteractive() {
           <IconMapPin size={18} className="text-amc-yellow flex-shrink-0" />
           <h3 className="font-bold text-amc-text">Nous localiser</h3>
         </div>
-        <p className="text-sm text-amc-text-secondary mt-1">{ADDRESS}</p>
+        <p className="text-sm text-amc-text-secondary mt-1">
+          {ADDRESS}, Haute-Savoie
+        </p>
       </div>
 
-      {/* Interactive OpenStreetMap iframe — pan, zoom, layers built-in */}
-      <div style={{ height: "400px" }}>
-        <iframe
-          src={OSM_EMBED}
-          width="100%"
-          height="100%"
-          style={{ border: 0, display: "block" }}
-          title="Carte AMC — Saint-Félix, Haute-Savoie"
-          aria-label="Carte interactive de localisation AMC Alpes Matériel Compact"
-          loading="lazy"
-        />
-      </div>
+      <MapView />
 
-      {/* Buttons */}
       <div className="p-4 flex flex-wrap gap-3">
-        <a
-          href={GMAPS_DEST}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex-1 min-w-[160px] text-center py-2.5 rounded-full text-sm font-bold transition-all hover:brightness-95"
+        <button
+          onClick={handleGetDirections}
+          className="flex-1 min-w-[160px] py-2.5 rounded-full text-sm font-bold transition-all hover:brightness-95"
           style={{ backgroundColor: "#FFD500", color: "#000000" }}
         >
           Obtenir l&apos;itinéraire
-        </a>
+        </button>
         <button
           onClick={handleLocate}
           disabled={locating}
