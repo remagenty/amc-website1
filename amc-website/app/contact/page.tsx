@@ -101,7 +101,7 @@ export default function ContactPage() {
         </div>
 
         {/* Carte interactive — pleine largeur */}
-        <div id="agences" className="mt-8">
+        <div id="nous-localiser" className="mt-8 scroll-mt-8">
           <MapInteractive />
         </div>
       </div>
