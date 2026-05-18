@@ -146,12 +146,12 @@ export default function PartnerPage({ params }: Props) {
       </section>
 
       {/* CTA */}
-      <section className="bg-amc-gray py-14 text-white">
+      <section className="bg-white py-14">
         <div className="container-amc text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-3">
-            Besoin d'un conseil sur la gamme {brand.name} ?
+          <h2 className="text-2xl md:text-3xl font-bold mb-3 text-amc-text">
+            Besoin d&apos;un conseil sur la gamme {brand.name} ?
           </h2>
-          <p className="text-white/70 max-w-xl mx-auto mb-8 text-sm">
+          <p className="text-black max-w-xl mx-auto mb-8 text-sm">
             Nos experts AMC, partenaires officiels {brand.name}, vous accompagnent dans le choix
             du matériel le mieux adapté à vos chantiers.
           </p>
