@@ -41,11 +41,21 @@ export function MapInteractive() {
         aria-label="Carte Google Maps — AMC Alpes Matériel Compact"
       />
 
-      <div className="p-4 flex justify-center">
+      <div className="p-5 flex justify-center">
         <button
           onClick={handleGetDirections}
-          className="py-3 px-8 rounded-full text-base font-semibold transition-all hover:brightness-95"
-          style={{ backgroundColor: "#FFD500", color: "#000000" }}
+          className="rounded-full font-semibold transition-all hover:brightness-95"
+          style={{
+            backgroundColor: "#FFD500",
+            color: "#000000",
+            padding: "16px 48px",
+            fontSize: "18px",
+            fontWeight: 600,
+            width: "60%",
+            maxWidth: "500px",
+            border: "none",
+            cursor: "pointer",
+          }}
         >
           Obtenir l&apos;itinéraire
         </button>
