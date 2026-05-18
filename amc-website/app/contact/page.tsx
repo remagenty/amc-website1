@@ -40,7 +40,8 @@ export default function ContactPage() {
                   <div>
                     <p className="font-medium text-amc-text">Adresse</p>
                     <p className="text-amc-text-secondary mt-0.5">
-                      ZA les Bruyères<br />
+                      ZAC D&apos;Orsan<br />
+                      330 Rue du Mont Blanc<br />
                       74540 Saint-Félix<br />
                       Haute-Savoie
                     </p>
