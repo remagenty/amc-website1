@@ -174,7 +174,7 @@ export function Header() {
                 className="flex flex-col items-center gap-0.5 px-3 py-2 rounded-lg text-white hover:bg-white/15 transition-colors text-xs font-medium"
               >
                 <IconMapPin size={20} />
-                <span>Nos agences</span>
+                <span>Notre agence</span>
               </Link>
               <Link
                 href="/connexion"
