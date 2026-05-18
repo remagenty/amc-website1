@@ -28,17 +28,36 @@ export default function PartnerPage({ params }: Props) {
 
   const products = getProductsByBrand(params.slug);
 
-  const BG_COLORS: Record<string, string> = {
-    "wacker-neuson": "from-red-900 to-red-700",
-    magni: "from-blue-900 to-blue-700",
-    "promove-demolition": "from-orange-900 to-orange-700",
+  const BRAND_IMAGES: Record<string, string> = {
+    "wacker-neuson": "/images/photo-wacker-catalogue.jpg",
+    magni: "/images/Magni-catalogue.avif",
+    "promove-demolition": "/images/promove-catalogue.png",
   };
+
+  const heroImage = BRAND_IMAGES[params.slug];
 
   return (
     <div className="min-h-screen bg-amc-cream">
       {/* Hero */}
-      <section className={`bg-gradient-to-br ${BG_COLORS[params.slug] ?? "from-amc-gray to-gray-800"} text-white py-20 md:py-28`}>
-        <div className="container-amc">
+      <section className="relative text-white py-20 md:py-28 overflow-hidden">
+        {/* Fond couleur fallback */}
+        <div className="absolute inset-0 bg-gray-900" />
+
+        {/* Photo catalogue */}
+        {heroImage && (
+          /* eslint-disable-next-line @next/next/no-img-element */
+          <img
+            src={heroImage}
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 w-full h-full object-cover object-center"
+          />
+        )}
+
+        {/* Overlay sombre pour lisibilité */}
+        <div className="absolute inset-0" style={{ backgroundColor: "rgba(0,0,0,0.55)" }} />
+
+        <div className="relative z-10 container-amc">
           <div className="max-w-3xl">
             <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-amc-yellow text-amc-text mb-6">
               Partenaire officiel
