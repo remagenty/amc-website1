@@ -2,8 +2,6 @@
 
 import { IconMapPin } from "@/components/ui/Icons";
 
-const LAT = 45.79640;
-const LNG = 5.97107;
 const ADDRESS = "ZAC D'Orsan, 330 Rue du Mont Blanc, 74540 Saint-Félix, Haute-Savoie";
 
 // ll= forces the map center; q= pins the marker at exact coordinates
