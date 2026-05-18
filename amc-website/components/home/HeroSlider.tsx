@@ -58,8 +58,21 @@ export function HeroSlider() {
           {/* Background gradient fallback */}
           <div className={`absolute inset-0 bg-gradient-to-br ${BG_COLORS[i % BG_COLORS.length]}`} />
 
+          {/* Vidéo de fond */}
+          {s.video && (
+            <video
+              src={s.video}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover object-center"
+              aria-hidden="true"
+            />
+          )}
+
           {/* Photo de fond */}
-          {s.image && (
+          {!s.video && s.image && (
             /* eslint-disable-next-line @next/next/no-img-element */
             <img
               src={s.image}
@@ -70,7 +83,7 @@ export function HeroSlider() {
           )}
 
           {/* Overlay sombre pour lisibilité du texte */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/65 via-black/40 to-black/20" />
+          <div className="absolute inset-0" style={{ backgroundColor: "rgba(0,0,0,0.4)" }} />
         </div>
       ))}
 
