@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { IconMapPin } from "@/components/ui/Icons";
 
 const LAT = 45.79640;
@@ -15,33 +14,8 @@ const GMAPS_EMBED =
 const GMAPS_DIR = "https://www.google.com/maps/dir/?api=1&destination=45.79640,5.97107";
 
 export function MapInteractive() {
-  const [locating, setLocating] = useState(false);
-
   const handleGetDirections = () => {
     window.open(GMAPS_DIR, "_blank", "noopener,noreferrer");
-  };
-
-  const handleLocate = () => {
-    if (!navigator.geolocation) {
-      handleGetDirections();
-      return;
-    }
-    setLocating(true);
-    navigator.geolocation.getCurrentPosition(
-      (pos) => {
-        setLocating(false);
-        const { latitude, longitude } = pos.coords;
-        window.open(
-          `https://www.google.com/maps/dir/${latitude},${longitude}/${LAT},${LNG}`,
-          "_blank",
-          "noopener,noreferrer"
-        );
-      },
-      () => {
-        setLocating(false);
-        handleGetDirections();
-      }
-    );
   };
 
   return (
@@ -67,22 +41,13 @@ export function MapInteractive() {
         aria-label="Carte Google Maps — AMC Alpes Matériel Compact"
       />
 
-      <div className="p-4 flex flex-wrap gap-3">
+      <div className="p-4 flex justify-center">
         <button
           onClick={handleGetDirections}
-          className="flex-1 min-w-[160px] py-2.5 rounded-full text-sm font-bold transition-all hover:brightness-95"
+          className="py-3 px-8 rounded-full text-base font-semibold transition-all hover:brightness-95"
           style={{ backgroundColor: "#FFD500", color: "#000000" }}
         >
           Obtenir l&apos;itinéraire
-        </button>
-        <button
-          onClick={handleLocate}
-          disabled={locating}
-          className="flex-1 min-w-[160px] py-2.5 rounded-full text-sm font-bold border-2 border-gray-300 transition-all hover:border-gray-400 disabled:opacity-60"
-          style={{ backgroundColor: "transparent", color: "#000000" }}
-          aria-label="Utiliser ma position pour obtenir l'itinéraire"
-        >
-          {locating ? "Localisation…" : "Me localiser"}
         </button>
       </div>
     </div>
