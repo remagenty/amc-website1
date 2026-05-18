@@ -1,35 +1,20 @@
 "use client";
 
-import dynamic from "next/dynamic";
 import { useState } from "react";
 import { IconMapPin } from "@/components/ui/Icons";
 
 const LAT = 46.076638;
 const LNG = 6.075011;
-const ADDRESS = "ZAC D'Orsan, 330 Rue du Mont Blanc, 74540 Saint-Félix";
+const ADDRESS = "ZAC D'Orsan, 330 Rue du Mont Blanc, 74540 Saint-Félix, Haute-Savoie";
 
-const MapView = dynamic(() => import("./MapView"), {
-  ssr: false,
-  loading: () => (
-    <div
-      className="flex items-center justify-center bg-gray-100 text-sm text-gray-500"
-      style={{ height: "400px" }}
-    >
-      Chargement de la carte…
-    </div>
-  ),
-});
+const GMAPS_EMBED = `https://maps.google.com/maps?q=${LAT},${LNG}&hl=fr&z=16&output=embed`;
+const GMAPS_DIR = `https://www.google.com/maps/dir/?api=1&destination=${LAT},${LNG}`;
 
 export function MapInteractive() {
   const [locating, setLocating] = useState(false);
 
   const handleGetDirections = () => {
-    const dest = encodeURIComponent(ADDRESS);
-    window.open(
-      `https://www.google.com/maps/dir/?api=1&destination=${dest}`,
-      "_blank",
-      "noopener,noreferrer"
-    );
+    window.open(GMAPS_DIR, "_blank", "noopener,noreferrer");
   };
 
   const handleLocate = () => {
@@ -42,9 +27,8 @@ export function MapInteractive() {
       (pos) => {
         setLocating(false);
         const { latitude, longitude } = pos.coords;
-        const dest = encodeURIComponent(ADDRESS);
         window.open(
-          `https://www.google.com/maps/dir/${latitude},${longitude}/${dest}`,
+          `https://www.google.com/maps/dir/${latitude},${longitude}/${LAT},${LNG}`,
           "_blank",
           "noopener,noreferrer"
         );
@@ -63,12 +47,21 @@ export function MapInteractive() {
           <IconMapPin size={18} className="text-amc-yellow flex-shrink-0" />
           <h3 className="font-bold text-amc-text">Nous localiser</h3>
         </div>
-        <p className="text-sm text-amc-text-secondary mt-1">
-          {ADDRESS}, Haute-Savoie
-        </p>
+        <p className="text-sm text-amc-text-secondary mt-1">{ADDRESS}</p>
       </div>
 
-      <MapView />
+      {/* Google Maps embed — exact coordinates, no API key needed */}
+      <iframe
+        src={GMAPS_EMBED}
+        width="100%"
+        height="400"
+        style={{ border: 0, display: "block" }}
+        allowFullScreen
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        title="Localisation AMC — ZAC D'Orsan, Saint-Félix"
+        aria-label="Carte Google Maps — AMC Alpes Matériel Compact"
+      />
 
       <div className="p-4 flex flex-wrap gap-3">
         <button
