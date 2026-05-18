@@ -3,16 +3,16 @@
 import { useState } from "react";
 import { IconMapPin } from "@/components/ui/Icons";
 
-const LAT = 46.0764;
-const LNG = 6.0752;
-const ADDRESS = "ZA Les Bruyères, 74540 Saint-Félix, Haute-Savoie";
+const LAT = 46.0766;
+const LNG = 6.0750;
+const ADDRESS = "ZAC D'Orsan, 330 Rue du Mont Blanc, 74540 Saint-Félix, Haute-Savoie";
 
 const OSM_EMBED =
   `https://www.openstreetmap.org/export/embed.html` +
   `?bbox=${LNG - 0.012}%2C${LAT - 0.008}%2C${LNG + 0.012}%2C${LAT + 0.008}` +
   `&layer=mapnik&marker=${LAT}%2C${LNG}`;
 
-const GMAPS_DEST = `https://www.google.com/maps/dir/?api=1&destination=${LAT},${LNG}`;
+const GMAPS_DEST = "https://www.google.com/maps/place//data=!4m2!3m1!1s0x478b9f823ecae80f:0x54a85392234adf69";
 
 export function MapInteractive() {
   const [locating, setLocating] = useState(false);
