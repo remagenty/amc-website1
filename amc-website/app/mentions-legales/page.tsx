@@ -15,7 +15,7 @@ export default function MentionsLegalesPage() {
           <h2>Éditeur du site</h2>
           <p>
             <strong>AMC — Alpes Matériel Compact</strong><br />
-            ZA les Bruyères<br />
+            ZAC D&apos;Orsan, 330 Rue du Mont Blanc<br />
             74540 Saint-Félix — Haute-Savoie<br />
             Téléphone : +33 (0)4 50 00 00 00<br />
             Email : contact@amc-savoie.fr
