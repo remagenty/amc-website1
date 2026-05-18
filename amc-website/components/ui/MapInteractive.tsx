@@ -12,7 +12,7 @@ const OSM_EMBED =
   `?bbox=${LNG - 0.012}%2C${LAT - 0.008}%2C${LNG + 0.012}%2C${LAT + 0.008}` +
   `&layer=mapnik&marker=${LAT}%2C${LNG}`;
 
-const GMAPS_DEST = "https://www.google.com/maps/place//data=!4m2!3m1!1s0x478b9f823ecae80f:0x54a85392234adf69";
+const GMAPS_DEST = "https://www.google.com/maps/place/ZAC+D%27Orsan,+330+Rue+du+Mont+Blanc,+74540+Saint-F%C3%A9lix";
 
 export function MapInteractive() {
   const [locating, setLocating] = useState(false);
@@ -27,7 +27,7 @@ export function MapInteractive() {
       (pos) => {
         setLocating(false);
         const { latitude, longitude } = pos.coords;
-        const url = `https://www.google.com/maps/dir/${latitude},${longitude}/${LAT},${LNG}`;
+        const url = `https://www.google.com/maps/dir/${latitude},${longitude}/ZAC+D%27Orsan,+330+Rue+du+Mont+Blanc,+74540+Saint-F%C3%A9lix`;
         window.open(url, "_blank", "noopener,noreferrer");
       },
       () => {
