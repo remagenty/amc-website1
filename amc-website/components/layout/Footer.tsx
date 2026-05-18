@@ -60,7 +60,8 @@ export function Footer() {
               <div className="flex items-start gap-2">
                 <IconMapPin size={16} className="mt-0.5 flex-shrink-0 text-amc-yellow" />
                 <span>
-                  ZA les Bruyères<br />
+                  ZAC D&apos;Orsan<br />
+                  330 Rue du Mont Blanc<br />
                   74540 Saint-Félix<br />
                   Haute-Savoie
                 </span>
