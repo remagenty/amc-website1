@@ -49,11 +49,9 @@ const MEGA_MENUS = {
     { label: "BTP & Construction", href: "/catalogue?secteur=btp", desc: "Gros œuvre, second œuvre" },
   ],
   services: [
-    { label: "Vente matériel neuf", href: "/services#neuf", desc: "Gamme complète constructeurs" },
-    { label: "Matériel occasion certifié", href: "/occasion", desc: "Inspecté & garanti" },
+    { label: "Vente machines neuves", href: "/catalogue?etat=neuf", desc: "Gamme complète constructeurs" },
     { label: "Service après-vente", href: "/services#sav", desc: "Certification SE+" },
-    { label: "Pièces détachées", href: "/services#pieces", desc: "Origine constructeur" },
-    { label: "Maintenance préventive", href: "/services#maintenance", desc: "Contrats entretien" },
+    { label: "Vente machine d'occasion", href: "/occasion", desc: "Inspecté & garanti" },
   ],
   partenaires: [
     { label: "Wacker Neuson", href: "/partenaires/wacker-neuson", desc: "Gamme complète équipements compacts" },
