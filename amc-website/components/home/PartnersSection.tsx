@@ -29,49 +29,54 @@ export function PartnersSection() {
           {BRANDS.map((brand) => (
             <div
               key={brand.id}
-              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-amc-yellow/40 transition-all duration-300 group"
+              className="relative overflow-hidden border border-white/10 rounded-2xl p-8 hover:border-amc-yellow/40 transition-all duration-300 group"
+              style={{
+                backgroundImage: `url(${BRAND_LOGOS[brand.id]})`,
+                backgroundSize: "60%",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+              }}
             >
-              {/* Logo */}
-              <div className="h-20 flex items-center justify-center bg-white rounded-xl mb-6 px-4">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={BRAND_LOGOS[brand.id]}
-                  alt={`Logo ${brand.name}`}
-                  className="max-h-14 max-w-full w-auto object-contain"
-                />
-              </div>
+              {/* Overlay semi-transparent gris */}
+              <div
+                className="absolute inset-0 rounded-2xl"
+                style={{ backgroundColor: "rgba(148, 148, 148, 0.88)" }}
+              />
 
-              <div className="mb-2">
-                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-amc-yellow text-amc-text">
-                  Partenaire officiel
-                </span>
-              </div>
+              {/* Contenu par-dessus le voile */}
+              <div className="relative z-10">
+                <div className="mb-2">
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-amc-yellow text-amc-text">
+                    Partenaire officiel
+                  </span>
+                </div>
 
-              <p className="text-white/70 text-sm leading-relaxed mt-3 mb-6">
-                {brand.description}
-              </p>
+                <p className="text-white/70 text-sm leading-relaxed mt-3 mb-6">
+                  {brand.description}
+                </p>
 
-              <div className="flex items-center justify-between">
-                <span className="text-xs text-white/40">
-                  {brand.productCount} références disponibles
-                </span>
-                <div className="flex items-center gap-3">
-                  <a
-                    href={brand.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white/50 hover:text-white transition-colors"
-                    aria-label={`Site officiel ${brand.name}`}
-                  >
-                    <IconExternalLink size={14} />
-                  </a>
-                  <Link
-                    href={`/partenaires/${brand.slug}`}
-                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-amc-yellow hover:text-white transition-colors group-hover:gap-2"
-                  >
-                    Découvrir
-                    <IconArrowRight size={14} />
-                  </Link>
+                <div className="flex items-center justify-between">
+                  <span className="text-xs text-white/40">
+                    {brand.productCount} références disponibles
+                  </span>
+                  <div className="flex items-center gap-3">
+                    <a
+                      href={brand.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white/50 hover:text-white transition-colors"
+                      aria-label={`Site officiel ${brand.name}`}
+                    >
+                      <IconExternalLink size={14} />
+                    </a>
+                    <Link
+                      href={`/partenaires/${brand.slug}`}
+                      className="inline-flex items-center gap-1.5 text-sm font-semibold text-amc-yellow hover:text-white transition-colors group-hover:gap-2"
+                    >
+                      Découvrir
+                      <IconArrowRight size={14} />
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
