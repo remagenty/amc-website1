@@ -2,6 +2,12 @@ import Link from "next/link";
 import { BRANDS } from "@/lib/data";
 import { IconArrowRight, IconExternalLink } from "@/components/ui/Icons";
 
+const BRAND_LOGOS: Record<string, string> = {
+  "wacker-neuson": "/images/logo-wacker.png",
+  magni:           "/images/logo-magni.png",
+  "promove-demolition": "/images/logo-promove.jpg",
+};
+
 export function PartnersSection() {
   return (
     <section
@@ -25,11 +31,14 @@ export function PartnersSection() {
               key={brand.id}
               className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-amc-yellow/40 transition-all duration-300 group"
             >
-              {/* Brand logo placeholder */}
-              <div className="h-16 flex items-center mb-6">
-                <div className="text-2xl font-black text-amc-yellow tracking-tight">
-                  {brand.name}
-                </div>
+              {/* Logo */}
+              <div className="h-20 flex items-center justify-center bg-white rounded-xl mb-6 px-4">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={BRAND_LOGOS[brand.id]}
+                  alt={`Logo ${brand.name}`}
+                  className="max-h-14 max-w-full w-auto object-contain"
+                />
               </div>
 
               <div className="mb-2">
