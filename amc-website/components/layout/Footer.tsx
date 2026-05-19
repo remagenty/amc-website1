@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { SEBadge } from "@/components/ui/SEBadge";
-import { NewsletterForm } from "@/components/ui/NewsletterForm";
+import { FooterNewsletter } from "@/components/ui/FooterNewsletter";
 import {
   IconMapPin,
   IconPhone,
@@ -202,16 +202,8 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Newsletter */}
-        <div className="mt-12 pt-8 border-t border-white/10">
-          <div className="bg-white/5 rounded-xl p-6 flex flex-col sm:flex-row items-center gap-4">
-            <div className="flex-1">
-              <p className="font-bold text-white">Restez informé des nouveaux matériels</p>
-              <p className="text-sm text-white/60 mt-1">Recevez nos actualités et nouveautés en avant-première</p>
-            </div>
-            <NewsletterForm />
-          </div>
-        </div>
+        {/* Newsletter — masquée sur /partenaires/* (doublon avec le bloc blanc de ces pages) */}
+        <FooterNewsletter />
 
         {/* Bottom */}
         <div className="mt-8 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-white/50">
