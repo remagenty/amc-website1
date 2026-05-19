@@ -30,20 +30,19 @@ export function PartnersSection() {
             <div
               key={brand.id}
               className="relative overflow-hidden border border-white/10 rounded-2xl p-8 hover:border-amc-yellow/40 transition-all duration-300 group"
-              style={{
-                backgroundImage: `url(${BRAND_LOGOS[brand.id]})`,
-                backgroundSize: "60%",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-              }}
+              style={{ backgroundColor: "#ababab" }}
             >
-              {/* Overlay semi-transparent gris */}
-              <div
-                className="absolute inset-0 rounded-2xl"
-                style={{ backgroundColor: "rgba(148, 148, 148, 0.88)" }}
+              {/* Logo en filigrane — mix-blend-mode:multiply efface le fond blanc
+                  quelle que soit le format (JPG, PNG sans alpha) */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={BRAND_LOGOS[brand.id]}
+                alt=""
+                aria-hidden="true"
+                className="absolute inset-0 w-full h-full object-contain p-8 mix-blend-multiply opacity-40 pointer-events-none select-none"
               />
 
-              {/* Contenu par-dessus le voile */}
+              {/* Contenu par-dessus le logo */}
               <div className="relative z-10">
                 <div className="mb-2">
                   <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-amc-yellow text-amc-text">
