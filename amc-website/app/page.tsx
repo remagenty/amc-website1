@@ -17,8 +17,8 @@ export default function HomePage() {
     <>
       <HeroSlider />
       <ReassuranceBar />
-      <ActivitiesSection />
       <PartnersSection />
+      <ActivitiesSection />
       <FeaturedProducts />
       <WhyChooseSection />
     </>
