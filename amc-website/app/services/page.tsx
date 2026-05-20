@@ -85,33 +85,6 @@ const CERTIFICATION_POINTS = [
 export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-amc-cream">
-      {/* Hero */}
-      <section className="bg-amc-gray text-white py-16 md:py-24">
-        <div className="container-amc">
-          <div className="max-w-3xl">
-            <div className="mb-6">
-              <SEBadge size="lg" />
-            </div>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-black leading-tight">
-              Service après-vente expert
-            </h1>
-            <p className="mt-5 text-lg text-white/75 leading-relaxed">
-              AMC dispose d'un atelier certifié SE+ pour assurer la maintenance, la réparation et la
-              fourniture de pièces d'origine pour tous vos équipements de chantier.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/contact?type=sav" className="btn-primary rounded-lg">
-                Prendre rendez-vous <IconArrowRight size={16} />
-              </Link>
-              <a href="tel:+33450000000" className="btn-outline rounded-lg">
-                <IconPhone size={16} />
-                Appeler directement
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Services détaillés */}
       <section className="section-padding">
         <div className="container-amc">
@@ -169,6 +142,33 @@ export default function ServicesPage() {
                 </div>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Hero */}
+      <section className="bg-amc-gray text-white py-16 md:py-24">
+        <div className="container-amc">
+          <div className="max-w-3xl">
+            <div className="mb-6">
+              <SEBadge size="lg" />
+            </div>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-black leading-tight">
+              Service après-vente expert
+            </h1>
+            <p className="mt-5 text-lg text-white/75 leading-relaxed">
+              AMC dispose d'un atelier certifié SE+ pour assurer la maintenance, la réparation et la
+              fourniture de pièces d'origine pour tous vos équipements de chantier.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link href="/contact?type=sav" className="btn-primary rounded-lg">
+                Prendre rendez-vous <IconArrowRight size={16} />
+              </Link>
+              <a href="tel:+33450000000" className="btn-outline rounded-lg">
+                <IconPhone size={16} />
+                Appeler directement
+              </a>
+            </div>
           </div>
         </div>
       </section>
