@@ -97,7 +97,7 @@ export default function SavPage() {
             <Link href="/contact?type=sav" className="btn-primary">
               Prendre rendez-vous <IconArrowRight size={16} />
             </Link>
-            <a href="tel:+33450000000" className="btn-outline">
+            <a href="tel:+33426784390" className="btn-outline">
               <IconPhone size={16} /> Appeler l&apos;atelier
             </a>
           </div>
@@ -183,8 +183,8 @@ export default function SavPage() {
               <Link href="/contact?type=sav" className="btn-primary">
                 Demander un devis SAV <IconArrowRight size={16} />
               </Link>
-              <a href="tel:+33450000000" className="btn-outline">
-                <IconPhone size={16} /> +33 (0)4 50 00 00 00
+              <a href="tel:+33426784390" className="btn-outline">
+                <IconPhone size={16} /> 04 26 78 43 90
               </a>
             </div>
           </ScrollReveal>
