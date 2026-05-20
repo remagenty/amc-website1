@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation";
 import {
   IconSearch,
   IconMapPin,
-  IconLock,
   IconChevronDown,
   IconMenu,
   IconX,
@@ -180,10 +179,27 @@ export function Header() {
               </Link>
               <Link
                 href="/connexion"
-                className="flex flex-col items-center gap-0.5 px-3 py-2 rounded-lg text-white hover:bg-white/15 transition-colors text-xs font-medium"
+                className="flex flex-col items-center gap-0.5 px-3 py-2 rounded-lg text-white hover:bg-white/15 transition-colors"
               >
-                <IconLock size={20} />
-                <span>Me connecter</span>
+                <div className="relative">
+                  <svg width="30" height="30" viewBox="0 0 32 32" fill="none">
+                    {/* Hard hat dome */}
+                    <path d="M16 4C10.5 4 6 8.4 6 13H26C26 8.4 21.5 4 16 4Z" fill="#FFD500"/>
+                    {/* Hard hat brim */}
+                    <rect x="3" y="12.5" width="26" height="3" rx="1.5" fill="#FFD500"/>
+                    {/* Head */}
+                    <circle cx="16" cy="20" r="4" fill="currentColor"/>
+                    {/* Body / shoulders */}
+                    <path d="M7 31C7 26 11 22.5 16 22.5C21 22.5 25 26 25 31H7Z" fill="currentColor"/>
+                  </svg>
+                  <span className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full text-white text-[9px] font-black flex items-center justify-center leading-none">
+                    1
+                  </span>
+                </div>
+                <span className="text-[11px] font-medium leading-tight">Me connecter</span>
+                <span className="bg-amc-yellow text-amc-text text-[10px] font-black px-2.5 py-0.5 rounded-full leading-tight">
+                  PRO
+                </span>
               </Link>
               <Link
                 href="/contact?type=devis"
