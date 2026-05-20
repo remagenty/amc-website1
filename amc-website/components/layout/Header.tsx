@@ -113,17 +113,9 @@ export function Header() {
         .carousel-item { animation: slideInRight 0.35s ease-out forwards; }
 
         @keyframes badge-jump {
-          /* Torse (droite) — position de départ */
           0%   { top: 20px; left: 40px; }
-          /* 1er petit saut vers le haut */
-          20%  { top: 11px; left: 40px; }
-          /* Retour au torse */
-          40%  { top: 20px; left: 40px; }
-          /* Grand saut vers le casque (haut gauche) */
-          65%  { top: -3px; left: 8px;  }
-          /* Reste au casque */
-          99%  { top: -3px; left: 8px;  }
-          /* Reset instantané au torse pour la boucle */
+          15%  { top: 11px; left: 40px; }
+          30%  { top: 20px; left: 40px; }
           100% { top: 20px; left: 40px; }
         }
         .badge-animate {
