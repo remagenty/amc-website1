@@ -70,16 +70,13 @@ export default function ActualitesPage() {
     <div className="min-h-screen bg-amc-cream">
 
       {/* Hero */}
-      <section className="bg-amc-gray text-white py-6 md:py-8">
+      <section className="bg-amc-cream py-6 md:py-8">
         <div className="container-amc">
           <div className="max-w-2xl">
-            <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-amc-yellow text-amc-text mb-5">
-              Blog & Ressources
-            </span>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-black leading-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-black leading-tight text-amc-text">
               Actualités & Expertise
             </h1>
-            <p className="mt-4 text-lg text-white/75 leading-relaxed">
+            <p className="mt-4 text-lg text-amc-text leading-relaxed">
               Conseils terrain, nouveautés constructeurs, guides pratiques — tout ce qu'il faut savoir
               pour optimiser vos chantiers.
             </p>
