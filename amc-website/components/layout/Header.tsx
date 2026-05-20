@@ -111,6 +111,20 @@ export function Header() {
           to   { transform: translateX(0);     opacity: 1; }
         }
         .carousel-item { animation: slideInRight 0.35s ease-out forwards; }
+
+        @keyframes badge-jump {
+          0%        { top: 24px; right: 1px;  transform: scale(1);    opacity: 1; }
+          18%       { top: -18px; right: 8px; transform: scale(1.15); opacity: 1; }
+          32%       { top: -4px;  right: -4px; transform: scale(0.9); opacity: 1; }
+          38%       { top: -4px;  right: -4px; transform: scale(1);   opacity: 1; }
+          88%       { top: -4px;  right: -4px; transform: scale(1);   opacity: 1; }
+          89%       { top: -4px;  right: -4px; transform: scale(1);   opacity: 0; }
+          90%, 100% { top: 24px;  right: 1px;  transform: scale(1);   opacity: 0; }
+        }
+        .badge-animate {
+          animation: badge-jump 4s ease-in-out infinite;
+          position: absolute;
+        }
       `}</style>
 
       {/* Top bar — rotating info */}
@@ -183,8 +197,8 @@ export function Header() {
               >
                 <div className="relative">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/images/me-connecter.png" alt="" aria-hidden="true" className="h-9 w-auto mix-blend-multiply" />
-                  <span className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full text-white text-[9px] font-black flex items-center justify-center leading-none">
+                  <img src="/images/me-connecter.png" alt="" aria-hidden="true" className="h-9 w-auto" />
+                  <span className="badge-animate w-4 h-4 bg-red-500 rounded-full text-white text-[9px] font-black flex items-center justify-center leading-none">
                     1
                   </span>
                 </div>
