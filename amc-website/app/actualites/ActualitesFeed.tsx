@@ -1,8 +1,15 @@
 "use client";
 
 import { useState } from "react";
+import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { ARTICLES } from "./articles-data";
+
+const FILTER_FROM_PARAM: Record<string, string> = {
+  nouveautes: "Nouveautés",
+  conseils: "Conseils",
+  actualites: "Actualités",
+};
 
 const FILTERS = ["Tous", "Nouveautés", "Conseils", "Actualités"];
 
@@ -13,7 +20,10 @@ const CATEGORY_STYLES: Record<string, { bg: string; color: string }> = {
 };
 
 export function ActualitesFeed() {
-  const [activeFilter, setActiveFilter] = useState("Tous");
+  const searchParams = useSearchParams();
+  const param = searchParams.get("filter") ?? "";
+  const initial = FILTER_FROM_PARAM[param.toLowerCase()] ?? "Tous";
+  const [activeFilter, setActiveFilter] = useState(initial);
 
   const filtered =
     activeFilter === "Tous"
