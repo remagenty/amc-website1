@@ -32,7 +32,7 @@ export default function PartnerPage({ params }: Props) {
   const BRAND_IMAGES: Record<string, string> = {
     "wacker-neuson": "/images/photo-wacker-catalogue.jpg",
     magni: "/images/Magni-catalogue.avif",
-    "promove-demolition": "/images/promove-catalogue.png",
+    "promove-demolition": "/images/catalogue-promove-demolition.jpg",
   };
 
   const heroImage = BRAND_IMAGES[params.slug];
