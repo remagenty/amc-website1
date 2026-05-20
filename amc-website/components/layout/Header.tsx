@@ -116,7 +116,7 @@ export function Header() {
       {/* Top bar — rotating info */}
       <div
         className="hidden lg:flex items-center justify-center text-xs"
-        style={{ backgroundColor: "#9B9B9B", color: "#FFFFFF", height: "36px" }}
+        style={{ backgroundColor: "#FFFFFF", color: "#000000", height: "36px" }}
       >
         <div key={carouselIndex} className="carousel-item font-medium">
           {TOP_BAR_ITEMS[carouselIndex].href ? (
@@ -183,7 +183,7 @@ export function Header() {
               >
                 <div className="relative">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/images/me-connecter.png" alt="" aria-hidden="true" className="h-9 w-auto" />
+                  <img src="/images/me-connecter.png" alt="" aria-hidden="true" className="h-9 w-auto mix-blend-multiply" />
                   <span className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full text-white text-[9px] font-black flex items-center justify-center leading-none">
                     1
                   </span>
