@@ -113,10 +113,10 @@ export function Header() {
         .carousel-item { animation: slideInRight 0.35s ease-out forwards; }
       `}</style>
 
-      {/* Top bar — white, compact, rotating info */}
+      {/* Top bar — rotating info */}
       <div
         className="hidden lg:flex items-center justify-center text-xs"
-        style={{ backgroundColor: "#FFFFFF", color: "#000000", height: "36px" }}
+        style={{ backgroundColor: "#9B9B9B", color: "#FFFFFF", height: "36px" }}
       >
         <div key={carouselIndex} className="carousel-item font-medium">
           {TOP_BAR_ITEMS[carouselIndex].href ? (
