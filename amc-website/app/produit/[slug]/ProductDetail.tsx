@@ -429,7 +429,7 @@ export function ProductDetail({
             <Link href={`/contact?type=devis&produit=${product.slug}`} className="btn-primary rounded-lg">
               Demander un devis <IconArrowRight size={16} />
             </Link>
-            <a href="tel:+33450000000" className="btn-outline rounded-lg">
+            <a href="tel:+33426784390" className="btn-outline rounded-lg">
               <IconPhone size={16} />
               Appeler maintenant
             </a>
