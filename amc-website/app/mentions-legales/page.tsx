@@ -17,7 +17,7 @@ export default function MentionsLegalesPage() {
             <strong>AMC — Alpes Matériel Compact</strong><br />
             ZAC D&apos;Orsan, 330 Rue du Mont Blanc<br />
             74540 Saint-Félix — Haute-Savoie<br />
-            Téléphone : +33 (0)4 50 00 00 00<br />
+            Téléphone : 04 26 78 43 90<br />
             Email : contact@amc-savoie.fr
           </p>
 
