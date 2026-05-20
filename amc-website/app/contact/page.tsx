@@ -51,8 +51,8 @@ export default function ContactPage() {
                   <IconPhone size={18} className="text-amc-yellow mt-0.5 flex-shrink-0" />
                   <div>
                     <p className="font-medium text-amc-text">Téléphone</p>
-                    <a href="tel:+33450000000" className="text-amc-text-secondary hover:text-amc-yellow-dark transition-colors mt-0.5 block">
-                      +33 (0)4 50 00 00 00
+                    <a href="tel:+33426784390" className="text-amc-text-secondary hover:text-amc-yellow-dark transition-colors mt-0.5 block">
+                      04 26 78 43 90
                     </a>
                   </div>
                 </div>
