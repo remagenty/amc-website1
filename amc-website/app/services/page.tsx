@@ -164,7 +164,7 @@ export default function ServicesPage() {
               <Link href="/contact?type=sav" className="btn-primary rounded-lg">
                 Prendre rendez-vous <IconArrowRight size={16} />
               </Link>
-              <a href="tel:+33450000000" className="btn-outline rounded-lg">
+              <a href="tel:+33426784390" className="btn-outline rounded-lg">
                 <IconPhone size={16} />
                 Appeler directement
               </a>
@@ -234,9 +234,9 @@ export default function ServicesPage() {
             <Link href="/contact?type=sav" className="btn-primary bg-amc-text text-white hover:bg-amc-gray rounded-lg">
               Formulaire de contact <IconArrowRight size={16} />
             </Link>
-            <a href="tel:+33450000000" className="btn-secondary rounded-lg">
+            <a href="tel:+33426784390" className="btn-secondary rounded-lg">
               <IconPhone size={16} />
-              +33 (0)4 50 00 00 00
+              04 26 78 43 90
             </a>
           </div>
         </div>
