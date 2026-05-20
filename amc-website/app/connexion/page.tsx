@@ -16,20 +16,8 @@ export default function ConnexionPage() {
 
   return (
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: "#F5F5F5" }}>
-      {/* Logo centré */}
-      <div className="flex justify-center pt-10 pb-8">
-        <Link href="/">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/images/logo-amc.png"
-            alt="AMC - Alpes Matériel Compact"
-            className="h-16 w-auto object-contain"
-          />
-        </Link>
-      </div>
-
       {/* Conteneur principal */}
-      <div className="flex-1 flex items-start justify-center px-4 pb-12">
+      <div className="flex-1 flex items-start justify-center px-4 pt-10 pb-8">
         <div className="w-full max-w-4xl rounded-2xl overflow-hidden shadow-card-hover flex flex-col lg:flex-row">
 
           {/* ── COLONNE GAUCHE : CONNEXION ── */}
@@ -144,6 +132,18 @@ export default function ConnexionPage() {
             </button>
           </div>
         </div>
+      </div>
+
+      {/* Logo centré — sous le bloc de connexion */}
+      <div className="flex justify-center pb-8">
+        <Link href="/">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/logo-amc.png"
+            alt="AMC - Alpes Matériel Compact"
+            className="h-16 w-auto object-contain"
+          />
+        </Link>
       </div>
 
       {/* Footer */}
