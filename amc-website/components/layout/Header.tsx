@@ -15,28 +15,80 @@ import { SEBadge } from "@/components/ui/SEBadge";
 
 const TOP_BAR_ITEMS: { label: string; href?: string }[] = [
   { label: "📞 +33 (0)4 50 00 00 00" },
-  { label: "📍 ZAC D’Orsan, Saint-Félix (74)", href: "/contact#nous-localiser" },
+  { label: "📍 ZAC D'Orsan, Saint-Félix (74)", href: "/contact#nous-localiser" },
   { label: "⏰ Lun-Ven : 8h-18h | Sam : 9h-12h" },
+];
+
+const MATERIELS_CATEGORIES = [
+  {
+    id: "tp",
+    label: "Travaux Publics & TP",
+    href: "/catalogue?secteur=tp",
+    subs: [
+      { label: "Mini-pelles", href: "/catalogue?categorie=mini-pelles" },
+      { label: "Compacteurs", href: "/catalogue?categorie=compacteurs" },
+      { label: "Chargeuses", href: "/catalogue?categorie=chargeuses" },
+      { label: "Dumpers articulés", href: "/catalogue?categorie=dumpers" },
+    ],
+  },
+  {
+    id: "demolition",
+    label: "Démolition & Déconstruction",
+    href: "/catalogue?secteur=demolition",
+    subs: [
+      { label: "Outils de démolition", href: "/catalogue?categorie=demolition" },
+      { label: "Brise-béton hydrauliques", href: "/catalogue?categorie=brise-beton" },
+      { label: "Cisailles hydrauliques", href: "/catalogue?categorie=cisailles" },
+    ],
+  },
+  {
+    id: "compactage",
+    label: "Compactage",
+    href: "/catalogue?secteur=compactage",
+    subs: [
+      { label: "Plaques vibrantes", href: "/catalogue?categorie=plaques-vibrantes" },
+      { label: "Pilonneuses", href: "/catalogue?categorie=pilonneuses" },
+      { label: "Rouleaux compacteurs", href: "/catalogue?categorie=rouleaux" },
+    ],
+  },
+  {
+    id: "urbain",
+    label: "Chantiers urbains",
+    href: "/catalogue?secteur=urbain",
+    subs: [
+      { label: "Matériel compact", href: "/catalogue?secteur=urbain&type=compact" },
+      { label: "Équipements d'accès réduit", href: "/catalogue?secteur=urbain&type=acces-reduit" },
+      { label: "Solutions zéro émission", href: "/catalogue?secteur=urbain&type=zero-emission" },
+    ],
+  },
+  {
+    id: "manutention",
+    label: "Manutention & Levage",
+    href: "/catalogue?secteur=manutention",
+    subs: [
+      { label: "Chariots télescopiques", href: "/catalogue?categorie=telescopiques" },
+      { label: "Nacelles", href: "/catalogue?categorie=nacelles" },
+      { label: "Plateformes élévatrices", href: "/catalogue?categorie=plateformes" },
+    ],
+  },
+  {
+    id: "btp",
+    label: "BTP & Construction",
+    href: "/catalogue?secteur=btp",
+    subs: [
+      { label: "Bétonnières", href: "/catalogue?categorie=betonnieres" },
+      { label: "Malaxeurs", href: "/catalogue?categorie=malaxeurs" },
+      { label: "Équipements de gros œuvre", href: "/catalogue?secteur=btp" },
+    ],
+  },
 ];
 
 const MEGA_MENUS = {
   materiels: {
-    categories: [
-      { label: "Compacteurs & Rouleaux", href: "/catalogue?categorie=compacteurs", desc: "Compactage sol & enrobé" },
-      { label: "Dumpers articulés", href: "/catalogue?categorie=dumpers", desc: "Transport de matériaux" },
-      { label: "Pelles compactes", href: "/catalogue?categorie=pelles", desc: "Excavation & terrassement" },
-      { label: "Télescopiques rotatifs", href: "/catalogue?categorie=telescopiques", desc: "Levage & manutention" },
-      { label: "Outils de démolition", href: "/catalogue?categorie=demolition", desc: "Brise-roches, cisailles" },
-      { label: "Manutention", href: "/catalogue?categorie=manutention", desc: "Chargeuses, mini-chargeurs" },
-    ],
     brands: [
       { label: "Wacker Neuson", href: "/partenaires/wacker-neuson", badge: "Officiel" },
       { label: "Magni", href: "/partenaires/magni", badge: "Officiel" },
       { label: "Promove Demolition", href: "/partenaires/promove-demolition", badge: "Officiel" },
-    ],
-    states: [
-      { label: "Matériel neuf", href: "/catalogue?etat=neuf", icon: "⭐" },
-      { label: "Matériel occasion", href: "/occasion", icon: "🔄" },
     ],
   },
   besoins: [
@@ -63,6 +115,7 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
+  const [openSubCategory, setOpenSubCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [searchFocused, setSearchFocused] = useState(false);
   const [carouselIndex, setCarouselIndex] = useState(0);
@@ -78,6 +131,7 @@ export function Header() {
   useEffect(() => {
     setMobileOpen(false);
     setActiveMenu(null);
+    setOpenSubCategory(null);
   }, [pathname]);
 
   useEffect(() => {
@@ -93,7 +147,19 @@ export function Header() {
   };
 
   const handleMenuLeave = () => {
-    menuTimeoutRef.current = setTimeout(() => setActiveMenu(null), 150);
+    // Only auto-close hover-based menus; materiels is click-based
+    if (activeMenu !== "materiels") {
+      menuTimeoutRef.current = setTimeout(() => setActiveMenu(null), 150);
+    }
+  };
+
+  const toggleSubCategory = (id: string) => {
+    setOpenSubCategory(openSubCategory === id ? null : id);
+  };
+
+  const closeMateriels = () => {
+    setActiveMenu(null);
+    setOpenSubCategory(null);
   };
 
   const handleSearch = (e: React.FormEvent) => {
@@ -125,6 +191,14 @@ export function Header() {
           animation: badge-jump 4s ease-in-out infinite;
         }
       `}</style>
+
+      {/* Overlay for click-outside on materiels menu */}
+      {activeMenu === "materiels" && (
+        <div
+          className="fixed inset-0 z-[45]"
+          onClick={closeMateriels}
+        />
+      )}
 
       {/* Top bar — rotating info */}
       <div
@@ -243,12 +317,21 @@ export function Header() {
           <div className="container-amc">
             <div className="flex items-center gap-2 h-14">
 
-              <div className="relative flex items-center h-full" onMouseEnter={() => handleMenuEnter("materiels")}>
+              {/* Nos matériels — click-based */}
+              <div className="relative flex items-center h-full">
                 <button
                   className="flex items-center gap-1.5 px-5 py-2 rounded-full text-sm font-semibold transition-all"
                   style={{ backgroundColor: "#FFD500", color: "#000000" }}
+                  onClick={() => {
+                    if (activeMenu === "materiels") {
+                      closeMateriels();
+                    } else {
+                      setActiveMenu("materiels");
+                      setOpenSubCategory(null);
+                    }
+                  }}
                 >
-                  Nos matériels <IconChevronDown size={14} className={`transition-transform ${activeMenu === "materiels" ? "rotate-180" : ""}`} />
+                  Nos matériels <IconChevronDown size={14} className={`transition-transform duration-200 ${activeMenu === "materiels" ? "rotate-180" : ""}`} />
                 </button>
               </div>
 
@@ -283,51 +366,88 @@ export function Header() {
             </div>
           </div>
 
-          {/* Mega menu: Nos matériels */}
+          {/* Mega menu: Nos matériels — accordion subcategories */}
           {activeMenu === "materiels" && (
-            <div className="mega-menu" onMouseEnter={() => handleMenuEnter("materiels")}>
-              <div className="container-amc py-8">
+            <div className="mega-menu" style={{ position: "relative", zIndex: 50 }}>
+              <div className="container-amc py-6">
                 <div className="grid grid-cols-12 gap-8">
-                  <div className="col-span-5">
-                    <h3 className="text-xs font-bold uppercase tracking-wider text-amc-text-secondary mb-4">Par catégorie</h3>
-                    <div className="grid grid-cols-2 gap-1">
-                      {MEGA_MENUS.materiels.categories.map((cat) => (
-                        <Link key={cat.href} href={cat.href} className="dropdown-item rounded-lg">
-                          <div>
-                            <div className="font-medium text-amc-text">{cat.label}</div>
-                            <div className="text-xs text-amc-text-secondary">{cat.desc}</div>
+
+                  {/* Left: accordion categories */}
+                  <div className="col-span-8">
+                    <h3 className="text-xs font-bold uppercase tracking-wider text-amc-text-secondary mb-3">
+                      Nos catégories
+                    </h3>
+                    <div className="divide-y divide-gray-100">
+                      {MATERIELS_CATEGORIES.map((cat) => (
+                        <div key={cat.id}>
+                          <div className="flex items-center">
+                            <Link
+                              href={cat.href}
+                              className="flex-1 py-3 px-2 text-sm font-semibold text-amc-text hover:text-amc-yellow-dark transition-colors"
+                              onClick={closeMateriels}
+                            >
+                              {cat.label}
+                            </Link>
+                            <button
+                              onClick={(e) => { e.stopPropagation(); toggleSubCategory(cat.id); }}
+                              className="px-3 py-3 text-gray-400 hover:text-amc-text transition-colors"
+                              aria-label={`Sous-catégories ${cat.label}`}
+                            >
+                              <IconChevronDown
+                                size={14}
+                                className={`transition-transform duration-300 ${openSubCategory === cat.id ? "rotate-180" : ""}`}
+                              />
+                            </button>
                           </div>
-                        </Link>
+
+                          {/* Subcategories with smooth height animation */}
+                          <div
+                            style={{
+                              maxHeight: openSubCategory === cat.id ? "200px" : "0",
+                              overflow: "hidden",
+                              transition: "max-height 0.3s ease-in-out",
+                            }}
+                          >
+                            <div className="pl-2 pb-3 grid grid-cols-2 gap-x-4 gap-y-0.5">
+                              {cat.subs.map((sub) => (
+                                <Link
+                                  key={sub.href}
+                                  href={sub.href}
+                                  className="flex items-center gap-2 px-3 py-2 text-sm text-amc-text-secondary hover:text-amc-text hover:bg-amc-yellow/5 rounded-lg transition-colors"
+                                  onClick={closeMateriels}
+                                >
+                                  <span className="w-1.5 h-1.5 rounded-full bg-amc-yellow flex-shrink-0" />
+                                  {sub.label}
+                                </Link>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
                       ))}
                     </div>
                   </div>
-                  <div className="col-span-3">
-                    <h3 className="text-xs font-bold uppercase tracking-wider text-amc-text-secondary mb-4">Par marque</h3>
-                    <div className="space-y-1">
-                      {MEGA_MENUS.materiels.brands.map((brand) => (
-                        <Link key={brand.href} href={brand.href} className="dropdown-item">
-                          <div className="font-semibold">{brand.label}</div>
-                          <span className="ml-auto text-xs bg-amc-yellow text-amc-text px-1.5 py-0.5 rounded font-bold">{brand.badge}</span>
-                        </Link>
-                      ))}
+
+                  {/* Right: brands + conseil */}
+                  <div className="col-span-4 space-y-5">
+                    <div>
+                      <h3 className="text-xs font-bold uppercase tracking-wider text-amc-text-secondary mb-3">
+                        Par marque
+                      </h3>
+                      <div className="space-y-1">
+                        {MEGA_MENUS.materiels.brands.map((brand) => (
+                          <Link key={brand.href} href={brand.href} className="dropdown-item" onClick={closeMateriels}>
+                            <div className="font-semibold">{brand.label}</div>
+                            <span className="ml-auto text-xs bg-amc-yellow text-amc-text px-1.5 py-0.5 rounded font-bold">{brand.badge}</span>
+                          </Link>
+                        ))}
+                      </div>
                     </div>
-                    <div className="mt-6 space-y-1">
-                      <h3 className="text-xs font-bold uppercase tracking-wider text-amc-text-secondary mb-4">État</h3>
-                      {MEGA_MENUS.materiels.states.map((state) => (
-                        <Link key={state.href} href={state.href} className="dropdown-item">
-                          <span>{state.icon}</span>
-                          <span className="font-medium">{state.label}</span>
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="col-span-4">
-                    <div className="bg-amc-yellow/10 rounded-xl p-5 border border-amc-yellow/20">
-                      <div className="font-bold text-amc-text mb-2">Besoin d'un conseil ?</div>
-                      <p className="text-sm text-amc-text-secondary mb-4">
+                    <div className="bg-amc-yellow/10 rounded-xl p-4 border border-amc-yellow/20">
+                      <div className="font-bold text-amc-text mb-1 text-sm">Besoin d'un conseil ?</div>
+                      <p className="text-xs text-amc-text-secondary mb-3">
                         Nos experts AMC vous accompagnent dans le choix de vos équipements de chantier.
                       </p>
-                      <Link href="/contact" className="btn-primary text-sm w-full justify-center">
+                      <Link href="/contact" className="btn-primary text-sm w-full justify-center" onClick={closeMateriels}>
                         Parler à un expert <IconArrowRight size={14} />
                       </Link>
                     </div>
