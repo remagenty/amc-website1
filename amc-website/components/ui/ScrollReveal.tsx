@@ -25,16 +25,16 @@ export function ScrollReveal({
       ([entry]) => {
         setVisible(entry.isIntersecting);
       },
-      { threshold: 0.12 }
+      { threshold: 0.30 }
     );
     observer.observe(el);
     return () => observer.disconnect();
   }, []);
 
   const initial: Record<string, string> = {
-    left: "translateX(-64px)",
-    right: "translateX(64px)",
-    bottom: "translateY(52px)",
+    left: "translateX(-60px)",
+    right: "translateX(60px)",
+    bottom: "translateY(60px)",
   };
 
   return (
@@ -44,7 +44,7 @@ export function ScrollReveal({
       style={{
         opacity: visible ? 1 : 0,
         transform: visible ? "translate(0,0)" : initial[from],
-        transition: `opacity 0.75s cubic-bezier(.22,1,.36,1) ${delay}ms, transform 0.75s cubic-bezier(.22,1,.36,1) ${delay}ms`,
+        transition: `opacity 0.8s cubic-bezier(0.25,0.1,0.25,1) ${delay}ms, transform 0.8s cubic-bezier(0.25,0.1,0.25,1) ${delay}ms`,
         willChange: "opacity, transform",
       }}
     >
