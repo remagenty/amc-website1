@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { ARTICLES } from "./articles-data";
 
 const FILTERS = ["Tous", "Nouveautés", "Conseils", "Actualités"];
 
@@ -9,59 +10,7 @@ const CATEGORY_STYLES: Record<string, { bg: string; color: string }> = {
   Nouveautés: { bg: "#d1fae5", color: "#065f46" },
   Conseils:   { bg: "#dbeafe", color: "#1e40af" },
   Actualités: { bg: "#fef3c7", color: "#92400e" },
-  Guides:     { bg: "#ede9fe", color: "#5b21b6" },
 };
-
-const ARTICLES = [
-  {
-    slug: "wacker-neuson-gamme-zero-emission-2026",
-    title: "Wacker Neuson lance sa nouvelle gamme zéro émission 2026",
-    category: "Nouveautés",
-    summary:
-      "Découvrez la révolution électrique avec les nouvelles mini-pelles et compacteurs 100% électriques. Performance maximale, zéro émission, pour des chantiers urbains plus propres.",
-    date: "15 mai 2026",
-    readTime: "3 min",
-    gradientFrom: "#34d399",
-    gradientTo: "#0f766e",
-    icon: "⚡",
-  },
-  {
-    slug: "5-conseils-maintenance-engins-chantier",
-    title: "5 conseils pour optimiser la maintenance de vos engins de chantier",
-    category: "Conseils",
-    summary:
-      "Prolongez la durée de vie de votre matériel et réduisez vos coûts d'exploitation grâce à ces bonnes pratiques d'entretien préventif recommandées par nos experts.",
-    date: "10 mai 2026",
-    readTime: "5 min",
-    gradientFrom: "#60a5fa",
-    gradientTo: "#1d4ed8",
-    icon: "🔧",
-  },
-  {
-    slug: "amc-certification-se-plus-saint-felix",
-    title: "AMC obtient la certification SE+ pour son atelier de Saint-Félix",
-    category: "Actualités",
-    summary:
-      "Notre atelier est désormais certifié SE+ par Wacker Neuson, garantissant un service après-vente d'excellence avec des techniciens qualifiés et un stock de pièces détachées optimal.",
-    date: "3 mai 2026",
-    readTime: "4 min",
-    gradientFrom: "#fbbf24",
-    gradientTo: "#d97706",
-    icon: "🏆",
-  },
-  {
-    slug: "chantiers-montagne-quel-equipement-choisir",
-    title: "Chantiers en montagne : quel équipement choisir ?",
-    category: "Conseils",
-    summary:
-      "Altitude, pentes raides, accès difficiles : nos experts vous guident dans le choix du matériel adapté aux contraintes spécifiques des chantiers alpins.",
-    date: "28 avril 2026",
-    readTime: "6 min",
-    gradientFrom: "#94a3b8",
-    gradientTo: "#334155",
-    icon: "⛰️",
-  },
-];
 
 export function ActualitesFeed() {
   const [activeFilter, setActiveFilter] = useState("Tous");
@@ -102,13 +51,11 @@ export function ActualitesFeed() {
                 key={article.slug}
                 className="group bg-white rounded-2xl shadow-card overflow-hidden flex flex-col transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1"
               >
-                {/* Image placeholder */}
+                {/* Image */}
                 <div className="relative overflow-hidden" style={{ paddingTop: "56.25%" }}>
                   <div
                     className="absolute inset-0 flex items-center justify-center transition-transform duration-500 group-hover:scale-105"
-                    style={{
-                      background: `linear-gradient(135deg, ${article.gradientFrom}, ${article.gradientTo})`,
-                    }}
+                    style={{ background: `linear-gradient(135deg, ${article.gradientFrom}, ${article.gradientTo})` }}
                   >
                     <span className="text-6xl select-none">{article.icon}</span>
                   </div>
@@ -151,14 +98,12 @@ export function ActualitesFeed() {
           })}
         </div>
 
-        {/* Empty state */}
         {filtered.length === 0 && (
           <div className="text-center py-16 text-amc-text-secondary text-sm">
             Aucun article dans cette catégorie pour le moment.
           </div>
         )}
 
-        {/* Load more */}
         {filtered.length > 0 && (
           <div className="text-center mt-12">
             <button
