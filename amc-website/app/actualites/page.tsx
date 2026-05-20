@@ -70,7 +70,7 @@ export default function ActualitesPage() {
     <div className="min-h-screen bg-amc-cream">
 
       {/* Hero */}
-      <section className="bg-amc-gray text-white py-14 md:py-20">
+      <section className="bg-amc-gray text-white py-6 md:py-8">
         <div className="container-amc">
           <div className="max-w-2xl">
             <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-amc-yellow text-amc-text mb-5">
