@@ -113,24 +113,24 @@ export function Header() {
         .carousel-item { animation: slideInRight 0.35s ease-out forwards; }
 
         @keyframes badge-jump {
-          /* Apparition à la main */
-          0%   { top: 24px; right: 4px; opacity: 0; }
-          3%   { top: 24px; right: 4px; opacity: 1; }
-          /* 1er saut : main → menton */
-          25%  { top: 12px; right: 4px; opacity: 1; }
-          /* Descente : menton → main */
-          50%  { top: 24px; right: 4px; opacity: 1; }
-          /* 2e saut : main → casque */
-          75%  { top: -4px; right: 4px; opacity: 1; }
+          /* Torse (droite) — position de départ */
+          0%   { top: 20px; left: 40px; }
+          /* 1er petit saut vers le haut */
+          20%  { top: 11px; left: 40px; }
+          /* Retour au torse */
+          40%  { top: 20px; left: 40px; }
+          /* Grand saut vers le casque (haut gauche) */
+          65%  { top: -3px; left: 8px;  }
           /* Reste au casque */
-          93%  { top: -4px; right: 4px; opacity: 1; }
-          /* Disparition discrète avant reset */
-          97%  { top: -4px; right: 4px; opacity: 0; }
-          100% { top: 24px; right: 4px; opacity: 0; }
+          99%  { top: -3px; left: 8px;  }
+          /* Reset instantané au torse pour la boucle */
+          100% { top: 20px; left: 40px; }
         }
         .badge-animate {
-          animation: badge-jump 4s ease-in-out infinite;
           position: absolute;
+          top: 20px;
+          left: 40px;
+          animation: badge-jump 4s ease-in-out infinite;
         }
       `}</style>
 
