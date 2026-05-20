@@ -259,13 +259,18 @@ export default function ArticlePage({ params }: Props) {
                 Catégories
               </h3>
               <div className="space-y-1">
-                {["Tous les articles", "Nouveautés", "Conseils", "Actualités"].map((cat) => (
+                {[
+                  { label: "Tous les articles", href: "/actualites" },
+                  { label: "Nouveautés", href: "/actualites?filter=nouveautes" },
+                  { label: "Conseils", href: "/actualites?filter=conseils" },
+                  { label: "Actualités", href: "/actualites?filter=actualites" },
+                ].map(({ label, href }) => (
                   <Link
-                    key={cat}
-                    href={cat === "Tous les articles" ? "/actualites" : `/actualites?categorie=${cat.toLowerCase()}`}
+                    key={label}
+                    href={href}
                     className="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-amc-text-secondary hover:bg-amc-yellow/5 hover:text-amc-text transition-colors"
                   >
-                    <span>{cat}</span>
+                    <span>{label}</span>
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M9 18l6-6-6-6" />
                     </svg>
