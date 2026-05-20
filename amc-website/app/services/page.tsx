@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SEBadge } from "@/components/ui/SEBadge";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import {
   IconWrench,
   IconShield,
@@ -111,6 +112,67 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Services détaillés */}
+      <section className="section-padding">
+        <div className="container-amc">
+          <h2 className="section-title text-center mb-12">Nos services</h2>
+          <div className="space-y-8">
+            {SERVICES.map((service, i) => {
+              const isEven = i % 2 === 0;
+              const textFrom = isEven ? "left" : "right";
+              const imageFrom = isEven ? "right" : "left";
+              return (
+                <div
+                  key={service.id}
+                  id={service.id}
+                  className={`bg-white rounded-2xl shadow-card overflow-hidden flex flex-col md:flex-row${
+                    !isEven ? " md:flex-row-reverse" : ""
+                  }`}
+                >
+                  {/* Colonne texte */}
+                  <ScrollReveal from={textFrom} className="flex-1">
+                    <div className="p-8 h-full">
+                      <div className="p-3 rounded-xl bg-amc-yellow/10 w-fit mb-5">
+                        {service.icon}
+                      </div>
+                      <h3 className="text-2xl font-bold text-amc-text flex items-center gap-2">
+                        {service.title}
+                        {service.se && <SEBadge size="sm" />}
+                      </h3>
+                      <p className="text-amc-yellow-dark font-semibold text-sm mt-1">
+                        {service.subtitle}
+                      </p>
+                      <p className="text-amc-text-secondary mt-4 leading-relaxed text-sm">
+                        {service.description}
+                      </p>
+                      <ul className="mt-5 space-y-3">
+                        {service.features.map((f) => (
+                          <li key={f} className="flex items-center gap-3 text-sm text-amc-text">
+                            <div className="w-6 h-6 rounded-full bg-amc-yellow/20 flex items-center justify-center flex-shrink-0">
+                              <IconCheck size={12} className="text-amc-yellow-dark" />
+                            </div>
+                            {f}
+                          </li>
+                        ))}
+                      </ul>
+                      <Link href={service.href} className="btn-primary mt-6 rounded-lg text-sm">
+                        Nous contacter <IconArrowRight size={14} />
+                      </Link>
+                    </div>
+                  </ScrollReveal>
+                  {/* Colonne image */}
+                  <ScrollReveal from={imageFrom} delay={150} className="flex-1 min-h-[260px] md:min-h-0">
+                    <div className="h-full bg-gray-200 flex items-center justify-center">
+                      <span className="text-gray-400 text-sm font-medium">Photo à venir</span>
+                    </div>
+                  </ScrollReveal>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
       {/* Certification SE+ */}
       <section id="certification" className="bg-white py-16">
         <div className="container-amc">
@@ -153,61 +215,6 @@ export default function ServicesPage() {
                 ))}
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services détaillés */}
-      <section className="section-padding">
-        <div className="container-amc">
-          <h2 className="section-title text-center mb-12">Nos services</h2>
-          <div className="space-y-8">
-            {SERVICES.map((service, i) => {
-              const isEven = i % 2 === 0;
-              return (
-                <div
-                  key={service.id}
-                  id={service.id}
-                  className={`bg-white rounded-2xl shadow-card overflow-hidden flex flex-col md:flex-row${
-                    !isEven ? " md:flex-row-reverse" : ""
-                  }`}
-                >
-                  {/* Colonne texte */}
-                  <div className="flex-1 p-8">
-                    <div className="p-3 rounded-xl bg-amc-yellow/10 w-fit mb-5">
-                      {service.icon}
-                    </div>
-                    <h3 className="text-2xl font-bold text-amc-text flex items-center gap-2">
-                      {service.title}
-                      {service.se && <SEBadge size="sm" />}
-                    </h3>
-                    <p className="text-amc-yellow-dark font-semibold text-sm mt-1">
-                      {service.subtitle}
-                    </p>
-                    <p className="text-amc-text-secondary mt-4 leading-relaxed text-sm">
-                      {service.description}
-                    </p>
-                    <ul className="mt-5 space-y-3">
-                      {service.features.map((f) => (
-                        <li key={f} className="flex items-center gap-3 text-sm text-amc-text">
-                          <div className="w-6 h-6 rounded-full bg-amc-yellow/20 flex items-center justify-center flex-shrink-0">
-                            <IconCheck size={12} className="text-amc-yellow-dark" />
-                          </div>
-                          {f}
-                        </li>
-                      ))}
-                    </ul>
-                    <Link href={service.href} className="btn-primary mt-6 rounded-lg text-sm">
-                      Nous contacter <IconArrowRight size={14} />
-                    </Link>
-                  </div>
-                  {/* Colonne image */}
-                  <div className="flex-1 min-h-[260px] md:min-h-0 bg-gray-200 flex items-center justify-center">
-                    <span className="text-gray-400 text-sm font-medium">Photo à venir</span>
-                  </div>
-                </div>
-              );
-            })}
           </div>
         </div>
       </section>
