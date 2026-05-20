@@ -182,15 +182,15 @@ export function Header() {
                 className="flex flex-col items-center gap-0.5 px-3 py-2 rounded-lg text-white hover:bg-white/15 transition-colors"
               >
                 <div className="relative">
-                  <svg width="30" height="30" viewBox="0 0 32 32" fill="none">
-                    {/* Hard hat dome */}
-                    <path d="M16 4C10.5 4 6 8.4 6 13H26C26 8.4 21.5 4 16 4Z" fill="#FFD500"/>
-                    {/* Hard hat brim */}
-                    <rect x="3" y="12.5" width="26" height="3" rx="1.5" fill="#FFD500"/>
-                    {/* Head */}
-                    <circle cx="16" cy="20" r="4" fill="currentColor"/>
-                    {/* Body / shoulders */}
-                    <path d="M7 31C7 26 11 22.5 16 22.5C21 22.5 25 26 25 31H7Z" fill="currentColor"/>
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    {/* Body */}
+                    <path d="M8 32C8 27.5 11.6 24 16 24C20.4 24 24 27.5 24 32H8Z" fill="currentColor"/>
+                    {/* Head — large enough to be visible below the brim */}
+                    <circle cx="16" cy="18.5" r="5.5" fill="currentColor"/>
+                    {/* Hat dome — bottom edge at y=14, cutting ~1/3 into head */}
+                    <path d="M7 14C7 9.5 10.5 6 16 6C21.5 6 25 9.5 25 14Z" fill="#FFD500"/>
+                    {/* Hat brim */}
+                    <rect x="4" y="14" width="24" height="2.5" rx="1.25" fill="#FFD500"/>
                   </svg>
                   <span className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full text-white text-[9px] font-black flex items-center justify-center leading-none">
                     1
