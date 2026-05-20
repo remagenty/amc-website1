@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -91,17 +91,11 @@ const MEGA_MENUS = {
       { label: "Promove Demolition", href: "/partenaires/promove-demolition", badge: "Officiel" },
     ],
   },
-  besoins: [
-    { label: "Travaux Publics & TP", href: "/catalogue?secteur=tp", desc: "Terrassement, voirie, réseaux" },
-    { label: "Démolition & Déconstruction", href: "/catalogue?secteur=demolition", desc: "Démolition sélective" },
-    { label: "Manutention & Levage", href: "/catalogue?secteur=manutention", desc: "Chariots télescopiques" },
-    { label: "Compactage", href: "/catalogue?secteur=compactage", desc: "Routes, fondations" },
-    { label: "Chantiers urbains", href: "/catalogue?secteur=urbain", desc: "Accès réduit, bruit faible" },
-    { label: "BTP & Construction", href: "/catalogue?secteur=btp", desc: "Gros œuvre, second œuvre" },
-  ],
   services: [
     { label: "Vente machines neuves", href: "/catalogue?etat=neuf", desc: "Gamme complète constructeurs" },
     { label: "Service après-vente", href: "/services#sav", desc: "Certification SE+" },
+    { label: "Pièces détachées", href: "/services#pieces", desc: "Origine constructeur" },
+    { label: "Maintenance préventive", href: "/services#maintenance", desc: "Contrats sur mesure" },
     { label: "Vente machine d'occasion", href: "/occasion", desc: "Inspecté & garanti" },
   ],
   partenaires: [
@@ -119,7 +113,6 @@ export function Header() {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchFocused, setSearchFocused] = useState(false);
   const [carouselIndex, setCarouselIndex] = useState(0);
-  const menuTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -141,25 +134,18 @@ export function Header() {
     return () => clearInterval(timer);
   }, []);
 
-  const handleMenuEnter = (menu: string) => {
-    if (menuTimeoutRef.current) clearTimeout(menuTimeoutRef.current);
-    setActiveMenu(menu);
+  const toggleMenu = (menu: string) => {
+    setActiveMenu(activeMenu === menu ? null : menu);
+    setOpenSubCategory(null);
   };
 
-  const handleMenuLeave = () => {
-    // Only auto-close hover-based menus; materiels is click-based
-    if (activeMenu !== "materiels") {
-      menuTimeoutRef.current = setTimeout(() => setActiveMenu(null), 150);
-    }
+  const closeMenu = () => {
+    setActiveMenu(null);
+    setOpenSubCategory(null);
   };
 
   const toggleSubCategory = (id: string) => {
     setOpenSubCategory(openSubCategory === id ? null : id);
-  };
-
-  const closeMateriels = () => {
-    setActiveMenu(null);
-    setOpenSubCategory(null);
   };
 
   const handleSearch = (e: React.FormEvent) => {
@@ -192,12 +178,9 @@ export function Header() {
         }
       `}</style>
 
-      {/* Overlay for click-outside on materiels menu */}
-      {activeMenu === "materiels" && (
-        <div
-          className="fixed inset-0 z-[45]"
-          onClick={closeMateriels}
-        />
+      {/* Overlay — click outside to close any open menu */}
+      {activeMenu && (
+        <div className="fixed inset-0 z-[45]" onClick={closeMenu} />
       )}
 
       {/* Top bar — rotating info */}
@@ -224,7 +207,6 @@ export function Header() {
         <div className="container-amc">
           <div className="flex items-center gap-4 h-20 lg:h-24">
 
-            {/* Logo */}
             <Link href="/" className="flex-shrink-0 flex items-center self-stretch py-2" aria-label="AMC - Alpes Matériel Compact">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -234,7 +216,6 @@ export function Header() {
               />
             </Link>
 
-            {/* Search bar */}
             <form onSubmit={handleSearch} className="flex-1 max-w-[580px]">
               <div
                 className={`relative flex items-center rounded-lg transition-all duration-200 ${
@@ -255,7 +236,6 @@ export function Header() {
               </div>
             </form>
 
-            {/* Actions */}
             <div className="flex items-center gap-1 ml-auto">
               <Link
                 href="/contact#agences"
@@ -295,9 +275,8 @@ export function Header() {
       <header
         className={`sticky top-0 z-50 transition-shadow duration-300 ${isScrolled ? "shadow-header" : ""}`}
         style={{ backgroundColor: "#9B9B9B" }}
-        onMouseLeave={handleMenuLeave}
       >
-        {/* Mobile row (logo + hamburger) */}
+        {/* Mobile row */}
         <div className="lg:hidden flex items-center justify-between px-4 h-16" style={{ backgroundColor: "#9B9B9B" }}>
           <Link href="/" aria-label="AMC - Alpes Matériel Compact">
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -312,47 +291,54 @@ export function Header() {
           </button>
         </div>
 
-        {/* Desktop nav bar */}
+        {/* Desktop nav */}
         <nav className="hidden lg:block">
           <div className="container-amc">
-            <div className="flex items-center gap-2 h-14">
+            <div className="flex items-center gap-1 h-14">
 
-              {/* Nos matériels — click-based */}
+              {/* Nos matériels */}
               <div className="relative flex items-center h-full">
                 <button
                   className="flex items-center gap-1.5 px-5 py-2 rounded-full text-sm font-semibold transition-all"
                   style={{ backgroundColor: "#FFD500", color: "#000000" }}
-                  onClick={() => {
-                    if (activeMenu === "materiels") {
-                      closeMateriels();
-                    } else {
-                      setActiveMenu("materiels");
-                      setOpenSubCategory(null);
-                    }
-                  }}
+                  onClick={() => toggleMenu("materiels")}
                 >
-                  Nos matériels <IconChevronDown size={14} className={`transition-transform duration-200 ${activeMenu === "materiels" ? "rotate-180" : ""}`} />
+                  Nos matériels
+                  <IconChevronDown size={14} className={`transition-transform duration-200 ${activeMenu === "materiels" ? "rotate-180" : ""}`} />
                 </button>
               </div>
 
-              <div className="relative flex items-center h-full" onMouseEnter={() => handleMenuEnter("besoins")}>
-                <button className="flex items-center gap-1.5 px-4 text-sm font-semibold text-white hover:text-amc-yellow transition-colors">
-                  Vos besoins <IconChevronDown size={14} className={`transition-transform ${activeMenu === "besoins" ? "rotate-180" : ""}`} />
+              {/* Nos services */}
+              <div className="relative flex items-center h-full">
+                <button
+                  className="flex items-center gap-1.5 px-4 text-sm font-semibold text-white hover:text-amc-yellow transition-colors"
+                  onClick={() => toggleMenu("services")}
+                >
+                  Nos services
+                  <IconChevronDown size={14} className={`transition-transform duration-200 ${activeMenu === "services" ? "rotate-180" : ""}`} />
                 </button>
               </div>
 
-              <div className="relative flex items-center h-full" onMouseEnter={() => handleMenuEnter("services")}>
-                <button className="flex items-center gap-1.5 px-4 text-sm font-semibold text-white hover:text-amc-yellow transition-colors">
-                  Nos services <IconChevronDown size={14} className={`transition-transform ${activeMenu === "services" ? "rotate-180" : ""}`} />
+              {/* Nos partenaires */}
+              <div className="relative flex items-center h-full">
+                <button
+                  className="flex items-center gap-1.5 px-4 text-sm font-semibold text-white hover:text-amc-yellow transition-colors"
+                  onClick={() => toggleMenu("partenaires")}
+                >
+                  Nos partenaires
+                  <IconChevronDown size={14} className={`transition-transform duration-200 ${activeMenu === "partenaires" ? "rotate-180" : ""}`} />
                 </button>
               </div>
 
-              <div className="relative flex items-center h-full" onMouseEnter={() => handleMenuEnter("partenaires")}>
-                <button className="flex items-center gap-1.5 px-4 text-sm font-semibold text-white hover:text-amc-yellow transition-colors">
-                  Nos partenaires <IconChevronDown size={14} className={`transition-transform ${activeMenu === "partenaires" ? "rotate-180" : ""}`} />
-                </button>
-              </div>
+              {/* Actualités & Expertise */}
+              <Link
+                href="/actualites"
+                className="flex items-center px-4 text-sm font-semibold text-white hover:text-amc-yellow transition-colors"
+              >
+                Actualités & Expertise
+              </Link>
 
+              {/* Contact & Devis */}
               <Link
                 href="/contact"
                 className="flex items-center px-4 text-sm font-semibold text-white hover:text-amc-yellow transition-colors"
@@ -366,13 +352,11 @@ export function Header() {
             </div>
           </div>
 
-          {/* Mega menu: Nos matériels — accordion subcategories */}
+          {/* Mega menu: Nos matériels */}
           {activeMenu === "materiels" && (
             <div className="mega-menu" style={{ position: "relative", zIndex: 50 }}>
               <div className="container-amc py-6">
                 <div className="grid grid-cols-12 gap-8">
-
-                  {/* Left: accordion categories */}
                   <div className="col-span-8">
                     <h3 className="text-xs font-bold uppercase tracking-wider text-amc-text-secondary mb-3">
                       Nos catégories
@@ -384,14 +368,13 @@ export function Header() {
                             <Link
                               href={cat.href}
                               className="flex-1 py-3 px-2 text-sm font-semibold text-amc-text hover:text-amc-yellow-dark transition-colors"
-                              onClick={closeMateriels}
+                              onClick={closeMenu}
                             >
                               {cat.label}
                             </Link>
                             <button
                               onClick={(e) => { e.stopPropagation(); toggleSubCategory(cat.id); }}
                               className="px-3 py-3 text-gray-400 hover:text-amc-text transition-colors"
-                              aria-label={`Sous-catégories ${cat.label}`}
                             >
                               <IconChevronDown
                                 size={14}
@@ -399,8 +382,6 @@ export function Header() {
                               />
                             </button>
                           </div>
-
-                          {/* Subcategories with smooth height animation */}
                           <div
                             style={{
                               maxHeight: openSubCategory === cat.id ? "200px" : "0",
@@ -414,7 +395,7 @@ export function Header() {
                                   key={sub.href}
                                   href={sub.href}
                                   className="flex items-center gap-2 px-3 py-2 text-sm text-amc-text-secondary hover:text-amc-text hover:bg-amc-yellow/5 rounded-lg transition-colors"
-                                  onClick={closeMateriels}
+                                  onClick={closeMenu}
                                 >
                                   <span className="w-1.5 h-1.5 rounded-full bg-amc-yellow flex-shrink-0" />
                                   {sub.label}
@@ -426,8 +407,6 @@ export function Header() {
                       ))}
                     </div>
                   </div>
-
-                  {/* Right: brands + conseil */}
                   <div className="col-span-4 space-y-5">
                     <div>
                       <h3 className="text-xs font-bold uppercase tracking-wider text-amc-text-secondary mb-3">
@@ -435,7 +414,7 @@ export function Header() {
                       </h3>
                       <div className="space-y-1">
                         {MEGA_MENUS.materiels.brands.map((brand) => (
-                          <Link key={brand.href} href={brand.href} className="dropdown-item" onClick={closeMateriels}>
+                          <Link key={brand.href} href={brand.href} className="dropdown-item" onClick={closeMenu}>
                             <div className="font-semibold">{brand.label}</div>
                             <span className="ml-auto text-xs bg-amc-yellow text-amc-text px-1.5 py-0.5 rounded font-bold">{brand.badge}</span>
                           </Link>
@@ -443,11 +422,11 @@ export function Header() {
                       </div>
                     </div>
                     <div className="bg-amc-yellow/10 rounded-xl p-4 border border-amc-yellow/20">
-                      <div className="font-bold text-amc-text mb-1 text-sm">Besoin d'un conseil ?</div>
+                      <div className="font-bold text-amc-text mb-1 text-sm">Besoin d&apos;un conseil ?</div>
                       <p className="text-xs text-amc-text-secondary mb-3">
                         Nos experts AMC vous accompagnent dans le choix de vos équipements de chantier.
                       </p>
-                      <Link href="/contact" className="btn-primary text-sm w-full justify-center" onClick={closeMateriels}>
+                      <Link href="/contact" className="btn-primary text-sm w-full justify-center" onClick={closeMenu}>
                         Parler à un expert <IconArrowRight size={14} />
                       </Link>
                     </div>
@@ -457,37 +436,38 @@ export function Header() {
             </div>
           )}
 
-          {/* Mega menu: Vos besoins */}
-          {activeMenu === "besoins" && (
-            <div className="mega-menu" onMouseEnter={() => handleMenuEnter("besoins")}>
-              <div className="container-amc py-8">
-                <div className="grid grid-cols-3 gap-1">
-                  {MEGA_MENUS.besoins.map((item) => (
-                    <Link key={item.href} href={item.href} className="dropdown-item rounded-lg">
-                      <div>
-                        <div className="font-semibold">{item.label}</div>
-                        <div className="text-xs text-amc-text-secondary">{item.desc}</div>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </div>
-          )}
-
           {/* Mega menu: Nos services */}
           {activeMenu === "services" && (
-            <div className="mega-menu" onMouseEnter={() => handleMenuEnter("services")}>
+            <div className="mega-menu" style={{ position: "relative", zIndex: 50 }}>
               <div className="container-amc py-8">
-                <div className="grid grid-cols-3 gap-1">
-                  {MEGA_MENUS.services.map((item) => (
-                    <Link key={item.href} href={item.href} className="dropdown-item rounded-lg">
-                      <div>
-                        <div className="font-semibold">{item.label}</div>
-                        <div className="text-xs text-amc-text-secondary">{item.desc}</div>
-                      </div>
-                    </Link>
-                  ))}
+                <div className="grid grid-cols-12 gap-8">
+                  <div className="col-span-8">
+                    <h3 className="text-xs font-bold uppercase tracking-wider text-amc-text-secondary mb-4">
+                      Nos prestations
+                    </h3>
+                    <div className="grid grid-cols-2 gap-1">
+                      {MEGA_MENUS.services.map((item) => (
+                        <Link key={item.href} href={item.href} className="dropdown-item rounded-lg" onClick={closeMenu}>
+                          <div>
+                            <div className="font-semibold">{item.label}</div>
+                            <div className="text-xs text-amc-text-secondary">{item.desc}</div>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="col-span-4">
+                    <div className="bg-amc-yellow/10 rounded-xl p-4 border border-amc-yellow/20">
+                      <SEBadge size="sm" />
+                      <div className="font-bold text-amc-text mb-1 text-sm mt-3">SAV certifié SE+</div>
+                      <p className="text-xs text-amc-text-secondary mb-3">
+                        Atelier agréé par les constructeurs, techniciens certifiés, pièces d&apos;origine garanties.
+                      </p>
+                      <Link href="/services" className="btn-primary text-sm w-full justify-center" onClick={closeMenu}>
+                        Nos services <IconArrowRight size={14} />
+                      </Link>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -495,7 +475,7 @@ export function Header() {
 
           {/* Mega menu: Nos partenaires */}
           {activeMenu === "partenaires" && (
-            <div className="mega-menu" onMouseEnter={() => handleMenuEnter("partenaires")}>
+            <div className="mega-menu" style={{ position: "relative", zIndex: 50 }}>
               <div className="container-amc py-8">
                 <div className="grid grid-cols-3 gap-4">
                   {MEGA_MENUS.partenaires.map((item) => (
@@ -503,6 +483,7 @@ export function Header() {
                       key={item.href}
                       href={item.href}
                       className="block p-4 rounded-xl border border-gray-100 hover:border-amc-yellow/50 hover:bg-amc-yellow/5 transition-all"
+                      onClick={closeMenu}
                     >
                       <div className="font-bold text-amc-text mb-1">{item.label}</div>
                       <div className="text-sm text-amc-text-secondary">{item.desc}</div>
@@ -539,6 +520,7 @@ export function Header() {
                   { label: "Magni", href: "/partenaires/magni" },
                   { label: "Promove Demolition", href: "/partenaires/promove-demolition" },
                   { label: "Nos services", href: "/services" },
+                  { label: "Actualités & Expertise", href: "/actualites" },
                   { label: "Contact & Devis", href: "/contact" },
                 ].map((link) => (
                   <Link
