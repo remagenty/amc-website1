@@ -72,7 +72,7 @@ export default function ActualitesPage() {
       {/* Hero */}
       <section className="bg-amc-cream py-6 md:py-8">
         <div className="container-amc">
-          <div className="max-w-2xl">
+          <div className="max-w-2xl mx-auto text-center">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-black leading-tight text-amc-text">
               Actualités & Expertise
             </h1>
