@@ -208,10 +208,10 @@ export default function ArticlePage({ params }: Props) {
                 Parler à un expert
               </Link>
               <a
-                href="tel:+33450000000"
+                href="tel:+33426784390"
                 className="flex items-center justify-center gap-2 w-full py-2.5 rounded-lg text-sm font-semibold text-white border border-white/30 hover:bg-white/10 transition-colors mt-2"
               >
-                +33 (0)4 50 00 00 00
+                04 26 78 43 90
               </a>
             </div>
 
