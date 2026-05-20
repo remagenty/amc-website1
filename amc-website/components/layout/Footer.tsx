@@ -65,9 +65,9 @@ export function Footer() {
                   Haute-Savoie
                 </span>
               </div>
-              <a href="tel:+33450000000" className="flex items-center gap-2 hover:text-white transition-colors">
+              <a href="tel:+33426784390" className="flex items-center gap-2 hover:text-white transition-colors">
                 <IconPhone size={16} className="text-amc-yellow flex-shrink-0" />
-                +33 (0)4 50 00 00 00
+                04 26 78 43 90
               </a>
               <a href="mailto:contact@amc-savoie.fr" className="flex items-center gap-2 hover:text-white transition-colors">
                 <IconMail size={16} className="text-amc-yellow flex-shrink-0" />
