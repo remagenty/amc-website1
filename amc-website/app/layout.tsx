@@ -90,7 +90,7 @@ export default function RootLayout({
                 postalCode: "74540",
                 addressCountry: "FR",
               },
-              telephone: "+33450000000",
+              telephone: "+33426784390",
               email: "contact@amc-savoie.fr",
               openingHoursSpecification: [
                 {
