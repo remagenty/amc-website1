@@ -182,15 +182,26 @@ export function Header() {
                 className="flex flex-col items-center gap-0.5 px-3 py-2 rounded-lg text-white hover:bg-white/15 transition-colors"
               >
                 <div className="relative">
-                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                    {/* Body */}
-                    <path d="M8 32C8 27.5 11.6 24 16 24C20.4 24 24 27.5 24 32H8Z" fill="currentColor"/>
-                    {/* Head — large enough to be visible below the brim */}
-                    <circle cx="16" cy="18.5" r="5.5" fill="currentColor"/>
-                    {/* Hat dome — bottom edge at y=14, cutting ~1/3 into head */}
-                    <path d="M7 14C7 9.5 10.5 6 16 6C21.5 6 25 9.5 25 14Z" fill="#FFD500"/>
+                  <svg width="32" height="38" viewBox="0 0 48 58" fill="none">
+                    {/* Head — gray, behind body */}
+                    <circle cx="24" cy="30" r="7.5" fill="#DCDCDC" stroke="#2a1200" strokeWidth="1.5"/>
+                    <path d="M21 27C22.5 25 25.5 25 27 27" stroke="white" strokeWidth="1" fill="none" strokeLinecap="round"/>
+                    {/* Arms — behind body, peek out from sides */}
+                    <rect x="5" y="40" width="10" height="12" rx="5" fill="#DCDCDC" stroke="#2a1200" strokeWidth="1.5"/>
+                    <rect x="33" y="40" width="10" height="12" rx="5" fill="#DCDCDC" stroke="#2a1200" strokeWidth="1.5"/>
+                    {/* Body — trapezoid, covers parts of head and arms */}
+                    <path d="M17 34Q15 34 14.5 36L12 54Q11.5 56.5 14 56.5H34Q36.5 56.5 36 54L33.5 36Q33 34 31 34Z"
+                      fill="#FFD500" stroke="#2a1200" strokeWidth="1.5" strokeLinejoin="round"/>
+                    {/* Pocket/uniform detail */}
+                    <path d="M17.5 37.5L17.5 42.5L22.5 42.5" stroke="white" strokeWidth="1.2" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+                    {/* Hat dome — on top of everything */}
+                    <path d="M24 2C15 2 9 9 9 20H39C39 9 33 2 24 2Z" fill="#FFD500" stroke="#2a1200" strokeWidth="1.5"/>
                     {/* Hat brim */}
-                    <rect x="4" y="14" width="24" height="2.5" rx="1.25" fill="#FFD500"/>
+                    <rect x="5" y="19" width="38" height="5.5" rx="2.75" fill="#FFD500" stroke="#2a1200" strokeWidth="1.5"/>
+                    {/* Hat ribs — 3 vertical lines */}
+                    <line x1="24" y1="3" x2="24" y2="20" stroke="#2a1200" strokeWidth="1.2"/>
+                    <path d="M18.5 6C17.5 10 17.5 15.5 18.5 20" stroke="#2a1200" strokeWidth="1.2" fill="none"/>
+                    <path d="M29.5 6C30.5 10 30.5 15.5 29.5 20" stroke="#2a1200" strokeWidth="1.2" fill="none"/>
                   </svg>
                   <span className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full text-white text-[9px] font-black flex items-center justify-center leading-none">
                     1
