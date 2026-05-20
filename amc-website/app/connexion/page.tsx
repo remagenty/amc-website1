@@ -15,7 +15,7 @@ export default function ConnexionPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col" style={{ backgroundColor: "#F5F5F5" }}>
+    <div className="flex flex-col" style={{ backgroundColor: "#F5F5F5" }}>
       {/* Conteneur principal */}
       <div className="flex items-start justify-center px-4 pt-10 pb-10">
         <div className="w-full max-w-4xl flex flex-col">
