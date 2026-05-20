@@ -14,9 +14,9 @@ export default function NotFound() {
           Utilisez notre catalogue pour trouver le matériel dont vous avez besoin.
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
-          <Link href="/catalogue" className="btn-primary rounded-lg">
+          <Link href="/actualites" className="btn-primary rounded-lg">
             <IconSearch size={16} />
-            Explorer le catalogue
+            Actualités & Expertise
           </Link>
           <Link href="/" className="btn-secondary rounded-lg">
             Retour à l'accueil <IconArrowRight size={16} />
