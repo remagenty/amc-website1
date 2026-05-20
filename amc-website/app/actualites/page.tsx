@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { ActualitesFeed } from "./ActualitesFeed";
 
 export const metadata: Metadata = {
@@ -27,7 +28,9 @@ export default function ActualitesPage() {
       </section>
 
       {/* Feed filtrable (client component) */}
-      <ActualitesFeed />
+      <Suspense fallback={<div className="container-amc py-16 text-center text-amc-text-secondary text-sm">Chargement…</div>}>
+        <ActualitesFeed />
+      </Suspense>
 
       {/* Newsletter CTA */}
       <section className="bg-white border-t border-gray-100 py-14">
