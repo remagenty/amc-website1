@@ -310,7 +310,7 @@ export const ARTICLES: Article[] = [
       {
         type: "callout",
         title: "Votre machine Wacker Neuson nécessite une intervention ?",
-        body: "Contactez directement notre atelier certifié SE+ au +33 (0)4 50 00 00 00 ou via notre formulaire en ligne. Nous vous répondons sous 24h ouvrées et proposons la prise en charge ou la venue d'un technicien sur site.",
+        body: "Contactez directement notre atelier certifié SE+ au 04 26 78 43 90 ou via notre formulaire en ligne. Nous vous répondons sous 24h ouvrées et proposons la prise en charge ou la venue d'un technicien sur site.",
       },
       { type: "cta", label: "Découvrir nos services SAV", href: "/services" },
     ],
