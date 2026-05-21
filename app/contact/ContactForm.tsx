@@ -14,17 +14,15 @@ const REQUEST_TYPES = [
 ];
 
 const MATERIEL_TYPES = [
-  "Compacteur / Plaque vibrante",
-  "Mini-pelle / Excavatrice",
-  "Chargeur / Télescopique",
-  "Nacelle / Élévateur",
-  "Dumper / Tombereau",
-  "Pompe / Assèchement",
-  "Groupe électrogène",
+  "Mini-pelle",
+  "Dumper",
+  "Compacteur",
+  "Chargeuse",
+  "Télescopique",
   "Autre",
 ];
 
-const MARQUES = ["Wacker Neuson", "Magni", "Promove", "Autre"];
+const MARQUES = ["Wacker Neuson", "Magni", "Promove Demolition", "Autre"];
 
 const MAX_FILE_SIZE  = 5 * 1024 * 1024;
 const MAX_PHOTOS     = 3;
