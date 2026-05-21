@@ -260,6 +260,12 @@ export function Header() {
                 </span>
               </Link>
               <Link
+                href="/contact"
+                className="flex flex-col items-center gap-0.5 px-3 py-2 rounded-lg text-white hover:bg-white/15 transition-colors text-xs font-medium"
+              >
+                <span>Contact</span>
+              </Link>
+              <Link
                 href="/contact?type=devis"
                 className="btn-primary text-sm py-2.5 px-4 ml-2 rounded-lg whitespace-nowrap"
               >
@@ -347,18 +353,6 @@ export function Header() {
                 className="flex items-center px-4 text-sm font-semibold text-white hover:text-amc-yellow transition-colors"
               >
                 Actualités & Expertise
-              </Link>
-
-              {/* Contact */}
-              <Link
-                href="/contact"
-                className={`flex items-center px-4 text-sm font-semibold transition-colors ${
-                  pathname === "/contact"
-                    ? "text-amc-yellow"
-                    : "text-white hover:text-amc-yellow"
-                }`}
-              >
-                Contact
               </Link>
 
               <div className="ml-auto" />
