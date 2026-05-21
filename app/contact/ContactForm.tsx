@@ -30,11 +30,7 @@ const ACCEPTED_TYPES = ["image/jpeg", "image/png", "image/jpg"];
 
 type PhotoFile = { file: File; preview: string };
 
-const PHOTO_LABELS: Record<string, string> = {
-  sav:    "Photos du matériel ou de la panne",
-  pieces: "Photos de la pièce recherchée",
-  autre:  "Joindre des photos",
-};
+const PHOTO_LABEL = "Joindre des photos (optionnel)";
 
 function PhotoUpload({
   label,
@@ -83,9 +79,8 @@ function PhotoUpload({
 
   return (
     <div>
-      <div className="flex items-baseline gap-2 mb-1.5">
+      <div className="mb-1.5">
         <span className="text-sm font-semibold text-amc-text">{label}</span>
-        <span className="text-xs text-amc-text-secondary">(optionnel — max {MAX_PHOTOS} photos)</span>
       </div>
 
       {files.length < MAX_PHOTOS && (
@@ -102,7 +97,7 @@ function PhotoUpload({
               Cliquer pour ajouter {files.length > 0 ? "une autre photo" : "des photos"}
             </span>
             <span className="text-xs text-amc-text-secondary mt-0.5">
-              📎 Formats acceptés : JPG, PNG • Max 5 Mo par photo
+              Formats acceptés : JPG, PNG • Max 3 photos • 5 Mo par photo
             </span>
           </label>
           <input
@@ -556,7 +551,7 @@ export function ContactForm() {
       {showPhotos && (
         <div className="pt-6 border-t border-gray-100">
           <PhotoUpload
-            label={PHOTO_LABELS[form.type]}
+            label={PHOTO_LABEL}
             files={photosState[form.type][0]}
             onChange={photosState[form.type][1]}
           />
