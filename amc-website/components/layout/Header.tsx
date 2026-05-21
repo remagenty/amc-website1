@@ -93,10 +93,9 @@ const MEGA_MENUS = {
   },
   services: [
     { label: "Vente machines neuves", href: "/catalogue?etat=neuf", desc: "Gamme complète constructeurs" },
-    { label: "Service après-vente", href: "/services#sav", desc: "Certification SE+" },
     { label: "Pièces détachées", href: "/services#pieces", desc: "Origine constructeur" },
-    { label: "Maintenance préventive", href: "/services#maintenance", desc: "Contrats sur mesure" },
     { label: "Vente machine d'occasion", href: "/occasion", desc: "Inspecté & garanti" },
+    { label: "Maintenance préventive", href: "/services#maintenance", desc: "Contrats sur mesure" },
   ],
   partenaires: [
     { label: "Wacker Neuson", href: "/partenaires/wacker-neuson", desc: "Gamme complète équipements compacts" },
@@ -319,6 +318,18 @@ export function Header() {
                 </button>
               </div>
 
+              {/* SAV */}
+              <Link
+                href="/sav"
+                className={`flex items-center px-4 text-sm font-semibold transition-colors ${
+                  pathname === "/sav"
+                    ? "text-amc-yellow"
+                    : "text-white hover:text-amc-yellow"
+                }`}
+              >
+                SAV
+              </Link>
+
               {/* Nos partenaires */}
               <div className="relative flex items-center h-full">
                 <button
@@ -520,6 +531,7 @@ export function Header() {
                   { label: "Magni", href: "/partenaires/magni" },
                   { label: "Promove Demolition", href: "/partenaires/promove-demolition" },
                   { label: "Nos services", href: "/services" },
+                  { label: "SAV", href: "/sav" },
                   { label: "Actualités & Expertise", href: "/actualites" },
                   { label: "Contact & Devis", href: "/contact" },
                 ].map((link) => (
