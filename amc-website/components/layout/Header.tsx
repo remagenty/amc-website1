@@ -459,14 +459,26 @@ export function Header() {
                       Nos prestations
                     </h3>
                     <div className="grid grid-cols-2 gap-1">
-                      {MEGA_MENUS.services.map((item) => (
-                        <Link key={item.href} href={item.href} className="dropdown-item rounded-lg" onClick={closeMenu}>
-                          <div>
-                            <div className="font-semibold">{item.label}</div>
-                            <div className="text-xs text-amc-text-secondary">{item.desc}</div>
-                          </div>
-                        </Link>
-                      ))}
+                      <div className="space-y-1">
+                        {MEGA_MENUS.services.slice(0, 3).map((item) => (
+                          <Link key={item.href} href={item.href} className="dropdown-item rounded-lg" onClick={closeMenu}>
+                            <div>
+                              <div className="font-semibold">{item.label}</div>
+                              <div className="text-xs text-amc-text-secondary">{item.desc}</div>
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+                      <div className="space-y-1">
+                        {MEGA_MENUS.services.slice(3).map((item) => (
+                          <Link key={item.href} href={item.href} className="dropdown-item rounded-lg" onClick={closeMenu}>
+                            <div>
+                              <div className="font-semibold">{item.label}</div>
+                              <div className="text-xs text-amc-text-secondary">{item.desc}</div>
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
                     </div>
                   </div>
                   <div className="col-span-4">
