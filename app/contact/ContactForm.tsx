@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useCallback } from "react";
 import { useSearchParams } from "next/navigation";
 import { IconCheck, IconArrowRight } from "@/components/ui/Icons";
 
@@ -25,6 +25,118 @@ const MATERIEL_TYPES = [
 ];
 
 const MARQUES = ["Wacker Neuson", "Magni", "Promove", "Autre"];
+
+const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5 MB
+const MAX_PHOTOS    = 3;
+const ACCEPTED_TYPES = ["image/jpeg", "image/png", "image/jpg"];
+
+type PhotoFile = { file: File; preview: string };
+
+function PhotoUpload({
+  label,
+  files,
+  onChange,
+}: {
+  label: string;
+  files: PhotoFile[];
+  onChange: (files: PhotoFile[]) => void;
+}) {
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  const handleFiles = useCallback(
+    (incoming: FileList | null) => {
+      if (!incoming) return;
+      const accepted: PhotoFile[] = [];
+      const errors: string[] = [];
+
+      Array.from(incoming).forEach((file) => {
+        if (files.length + accepted.length >= MAX_PHOTOS) {
+          errors.push(`Maximum ${MAX_PHOTOS} photos autorisées.`);
+          return;
+        }
+        if (!ACCEPTED_TYPES.includes(file.type)) {
+          errors.push(`${file.name} : format non accepté (JPG, PNG uniquement).`);
+          return;
+        }
+        if (file.size > MAX_FILE_SIZE) {
+          errors.push(`${file.name} : fichier trop lourd (max 5 Mo).`);
+          return;
+        }
+        accepted.push({ file, preview: URL.createObjectURL(file) });
+      });
+
+      if (errors.length) alert(errors.join("\n"));
+      if (accepted.length) onChange([...files, ...accepted]);
+
+      if (inputRef.current) inputRef.current.value = "";
+    },
+    [files, onChange]
+  );
+
+  const remove = (index: number) => {
+    URL.revokeObjectURL(files[index].preview);
+    onChange(files.filter((_, i) => i !== index));
+  };
+
+  return (
+    <div>
+      <div className="flex items-baseline gap-2 mb-1.5">
+        <label className="block text-sm font-semibold text-amc-text">{label}</label>
+        <span className="text-xs text-amc-text-secondary">(optionnel — max {MAX_PHOTOS} photos)</span>
+      </div>
+
+      {files.length < MAX_PHOTOS && (
+        <>
+          <label
+            className="flex flex-col items-center justify-center w-full px-4 py-5 border-2 border-dashed border-gray-200 rounded-xl cursor-pointer bg-gray-50 hover:border-amc-yellow hover:bg-amc-yellow/5 transition-colors"
+            htmlFor={`photo-input-${label}`}
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-amc-text-secondary mb-2">
+              <rect x="3" y="3" width="18" height="18" rx="2" /><circle cx="8.5" cy="8.5" r="1.5" />
+              <polyline points="21 15 16 10 5 21" />
+            </svg>
+            <span className="text-sm text-amc-text-secondary">
+              Cliquer pour ajouter {files.length > 0 ? "une autre photo" : "des photos"}
+            </span>
+            <span className="text-xs text-amc-text-secondary mt-0.5">JPG, PNG — 5 Mo max par photo</span>
+          </label>
+          <input
+            ref={inputRef}
+            id={`photo-input-${label}`}
+            type="file"
+            accept="image/jpeg,image/png,image/jpg"
+            multiple
+            className="sr-only"
+            onChange={(e) => handleFiles(e.target.files)}
+          />
+        </>
+      )}
+
+      {files.length > 0 && (
+        <div className="flex flex-wrap gap-3 mt-3">
+          {files.map((pf, i) => (
+            <div key={i} className="relative w-24 h-24 flex-shrink-0">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={pf.preview}
+                alt={`photo ${i + 1}`}
+                className="w-full h-full object-cover rounded-lg border-2 border-gray-200"
+              />
+              <button
+                type="button"
+                onClick={() => remove(i)}
+                className="absolute -top-2 -right-2 w-6 h-6 bg-red-500 hover:bg-red-600 text-white rounded-full flex items-center justify-center text-xs font-bold transition-colors shadow"
+                aria-label="Supprimer"
+              >
+                ×
+              </button>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
 
 type FormState = {
   type: string;
@@ -120,7 +232,7 @@ function Field({ label, required, error, children }: { label: string; required?:
 }
 
 export function ContactForm() {
-  const searchParams = useSearchParams();
+  const searchParams  = useSearchParams();
   const defaultType   = searchParams.get("type")    ?? "devis";
   const defaultProduit = searchParams.get("produit") ?? "";
 
@@ -129,9 +241,11 @@ export function ContactForm() {
     type:    REQUEST_TYPES.find((t) => t.value === defaultType) ? defaultType : "devis",
     materiel: defaultProduit,
   });
-  const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading]     = useState(false);
-  const [errors, setErrors]       = useState<Record<string, string>>({});
+  const [photosSav,    setPhotosSav]    = useState<PhotoFile[]>([]);
+  const [photosPieces, setPhotosPieces] = useState<PhotoFile[]>([]);
+  const [submitted,    setSubmitted]    = useState(false);
+  const [loading,      setLoading]      = useState(false);
+  const [errors,       setErrors]       = useState<Record<string, string>>({});
   const [fieldsVisible, setFieldsVisible] = useState(true);
 
   const set = (key: string, value: string | boolean) => {
@@ -152,13 +266,13 @@ export function ContactForm() {
     const required = REQUIRED[form.type] ?? [];
     const e: Record<string, string> = {};
     for (const field of required) {
-      const val = (form as Record<string, unknown>)[field];
       if (field === "email") {
-        if (!form.email.trim() || !/\S+@\S+\.\S+/.test(form.email)) {
-          e.email = "Email invalide";
+        if (!form.email.trim() || !/\S+@\S+\.\S+/.test(form.email)) e.email = "Email invalide";
+      } else {
+        const val = (form as Record<string, unknown>)[field];
+        if (!val || (typeof val === "string" && !val.trim())) {
+          e[field] = ERROR_LABELS[field] ?? `${field} requis`;
         }
-      } else if (!val || (typeof val === "string" && !val.trim())) {
-        e[field] = ERROR_LABELS[field] ?? `${field} requis`;
       }
     }
     if (!form.consent) e.consent = "Vous devez accepter la politique de confidentialité";
@@ -176,6 +290,15 @@ export function ContactForm() {
     setSubmitted(true);
   };
 
+  const resetAll = () => {
+    photosSav.forEach((p)    => URL.revokeObjectURL(p.preview));
+    photosPieces.forEach((p) => URL.revokeObjectURL(p.preview));
+    setPhotosSav([]);
+    setPhotosPieces([]);
+    setSubmitted(false);
+    setForm(INITIAL_FORM);
+  };
+
   if (submitted) {
     return (
       <div className="py-12 text-center">
@@ -186,10 +309,7 @@ export function ContactForm() {
         <p className="text-amc-text-secondary text-sm max-w-md mx-auto">
           Merci pour votre demande. Notre équipe vous contactera dans les plus brefs délais, généralement sous 24h ouvrées.
         </p>
-        <button
-          onClick={() => { setSubmitted(false); setForm(INITIAL_FORM); }}
-          className="mt-6 btn-secondary rounded-lg text-sm"
-        >
+        <button onClick={resetAll} className="mt-6 btn-secondary rounded-lg text-sm">
           Envoyer une nouvelle demande
         </button>
       </div>
@@ -225,7 +345,7 @@ export function ContactForm() {
       <div style={{ transition: "opacity 0.18s ease", opacity: fieldsVisible ? 1 : 0 }}>
         <div className="space-y-5">
 
-          {/* ── FIELDS COMMON TO ALL ── */}
+          {/* Common: Prénom + Nom */}
           <div className="grid sm:grid-cols-2 gap-4">
             <Field label="Prénom" required error={errors.firstName}>
               <input type="text" value={form.firstName} onChange={(e) => set("firstName", e.target.value)}
@@ -257,7 +377,7 @@ export function ContactForm() {
             </Field>
           </div>
 
-          {/* ── DEVIS specific ── */}
+          {/* ── DEVIS ── */}
           {form.type === "devis" && (
             <Field label="Matériel concerné">
               <input type="text" value={form.materiel} onChange={(e) => set("materiel", e.target.value)}
@@ -265,7 +385,7 @@ export function ContactForm() {
             </Field>
           )}
 
-          {/* ── SAV specific ── */}
+          {/* ── SAV ── */}
           {form.type === "sav" && (
             <>
               <div className="grid sm:grid-cols-2 gap-4">
@@ -301,6 +421,14 @@ export function ContactForm() {
                   placeholder="Décrivez le dysfonctionnement observé, les conditions d'apparition…"
                   rows={4} className={inp("descriptionPanne", "resize-none")} />
               </Field>
+
+              {/* Photo upload — SAV */}
+              <PhotoUpload
+                label="Photos du matériel ou de la panne"
+                files={photosSav}
+                onChange={setPhotosSav}
+              />
+
               <Field label="Intervention souhaitée" required>
                 <div className="flex gap-6 pt-1">
                   {[{ v: "atelier", l: "À l'atelier" }, { v: "site", l: "Sur site" }].map(({ v, l }) => (
@@ -328,7 +456,7 @@ export function ContactForm() {
             </>
           )}
 
-          {/* ── PIECES specific ── */}
+          {/* ── PIÈCES ── */}
           {form.type === "pieces" && (
             <>
               <div className="grid sm:grid-cols-2 gap-4">
@@ -368,10 +496,17 @@ export function ContactForm() {
                   placeholder="Décrivez la pièce, son emplacement, la raison du remplacement…"
                   rows={3} className={inp("descriptionPiece", "resize-none")} />
               </Field>
+
+              {/* Photo upload — Pièces */}
+              <PhotoUpload
+                label="Photos de la pièce"
+                files={photosPieces}
+                onChange={setPhotosPieces}
+              />
             </>
           )}
 
-          {/* ── OCCASION specific ── */}
+          {/* ── OCCASION ── */}
           {form.type === "occasion" && (
             <>
               <Field label="Type de matériel recherché" required error={errors.materielRecherche}>
@@ -390,7 +525,7 @@ export function ContactForm() {
               </div>
               <Field label="Critères spécifiques">
                 <textarea value={form.criteresSpecifiques} onChange={(e) => set("criteresSpecifiques", e.target.value)}
-                  placeholder="Heures máx, options souhaitées, marque préférée…"
+                  placeholder="Heures max, options souhaitées, marque préférée…"
                   rows={3} className="input-base resize-none" />
               </Field>
             </>
@@ -404,7 +539,7 @@ export function ContactForm() {
             </Field>
           )}
 
-          {/* Message (devis, information, autre) */}
+          {/* Message */}
           {["devis", "information", "autre"].includes(form.type) && (
             <Field label="Message" required error={errors.message}>
               <textarea value={form.message} onChange={(e) => set("message", e.target.value)}
