@@ -26,11 +26,17 @@ const MATERIEL_TYPES = [
 
 const MARQUES = ["Wacker Neuson", "Magni", "Promove", "Autre"];
 
-const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5 MB
-const MAX_PHOTOS    = 3;
+const MAX_FILE_SIZE  = 5 * 1024 * 1024;
+const MAX_PHOTOS     = 3;
 const ACCEPTED_TYPES = ["image/jpeg", "image/png", "image/jpg"];
 
 type PhotoFile = { file: File; preview: string };
+
+const PHOTO_LABELS: Record<string, string> = {
+  sav:    "Photos du matériel ou de la panne",
+  pieces: "Photos de la pièce recherchée",
+  autre:  "Joindre des photos",
+};
 
 function PhotoUpload({
   label,
@@ -55,11 +61,11 @@ function PhotoUpload({
           return;
         }
         if (!ACCEPTED_TYPES.includes(file.type)) {
-          errors.push(`${file.name} : format non accepté (JPG, PNG uniquement).`);
+          errors.push(`"${file.name}" : format non accepté (JPG, PNG uniquement).`);
           return;
         }
         if (file.size > MAX_FILE_SIZE) {
-          errors.push(`${file.name} : fichier trop lourd (max 5 Mo).`);
+          errors.push(`"${file.name}" : fichier trop lourd (max 5 Mo).`);
           return;
         }
         accepted.push({ file, preview: URL.createObjectURL(file) });
@@ -67,7 +73,6 @@ function PhotoUpload({
 
       if (errors.length) alert(errors.join("\n"));
       if (accepted.length) onChange([...files, ...accepted]);
-
       if (inputRef.current) inputRef.current.value = "";
     },
     [files, onChange]
@@ -81,15 +86,15 @@ function PhotoUpload({
   return (
     <div>
       <div className="flex items-baseline gap-2 mb-1.5">
-        <label className="block text-sm font-semibold text-amc-text">{label}</label>
+        <span className="text-sm font-semibold text-amc-text">{label}</span>
         <span className="text-xs text-amc-text-secondary">(optionnel — max {MAX_PHOTOS} photos)</span>
       </div>
 
       {files.length < MAX_PHOTOS && (
         <>
           <label
-            className="flex flex-col items-center justify-center w-full px-4 py-5 border-2 border-dashed border-gray-200 rounded-xl cursor-pointer bg-gray-50 hover:border-amc-yellow hover:bg-amc-yellow/5 transition-colors"
             htmlFor={`photo-input-${label}`}
+            className="flex flex-col items-center justify-center w-full px-4 py-5 border-2 border-dashed border-gray-200 rounded-xl cursor-pointer bg-gray-50 hover:border-amc-yellow hover:bg-amc-yellow/5 transition-colors"
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-amc-text-secondary mb-2">
               <rect x="3" y="3" width="18" height="18" rx="2" /><circle cx="8.5" cy="8.5" r="1.5" />
@@ -98,7 +103,9 @@ function PhotoUpload({
             <span className="text-sm text-amc-text-secondary">
               Cliquer pour ajouter {files.length > 0 ? "une autre photo" : "des photos"}
             </span>
-            <span className="text-xs text-amc-text-secondary mt-0.5">JPG, PNG — 5 Mo max par photo</span>
+            <span className="text-xs text-amc-text-secondary mt-0.5">
+              📎 Formats acceptés : JPG, PNG • Max 5 Mo par photo
+            </span>
           </label>
           <input
             ref={inputRef}
@@ -125,7 +132,7 @@ function PhotoUpload({
               <button
                 type="button"
                 onClick={() => remove(i)}
-                className="absolute -top-2 -right-2 w-6 h-6 bg-red-500 hover:bg-red-600 text-white rounded-full flex items-center justify-center text-xs font-bold transition-colors shadow"
+                className="absolute -top-2 -right-2 w-6 h-6 bg-red-500 hover:bg-red-600 text-white rounded-full flex items-center justify-center text-sm font-bold transition-colors shadow"
                 aria-label="Supprimer"
               >
                 ×
@@ -232,8 +239,8 @@ function Field({ label, required, error, children }: { label: string; required?:
 }
 
 export function ContactForm() {
-  const searchParams  = useSearchParams();
-  const defaultType   = searchParams.get("type")    ?? "devis";
+  const searchParams   = useSearchParams();
+  const defaultType    = searchParams.get("type")    ?? "devis";
   const defaultProduit = searchParams.get("produit") ?? "";
 
   const [form, setForm] = useState<FormState>({
@@ -241,11 +248,15 @@ export function ContactForm() {
     type:    REQUEST_TYPES.find((t) => t.value === defaultType) ? defaultType : "devis",
     materiel: defaultProduit,
   });
+
+  // One photos state per upload-enabled type
   const [photosSav,    setPhotosSav]    = useState<PhotoFile[]>([]);
   const [photosPieces, setPhotosPieces] = useState<PhotoFile[]>([]);
-  const [submitted,    setSubmitted]    = useState(false);
-  const [loading,      setLoading]      = useState(false);
-  const [errors,       setErrors]       = useState<Record<string, string>>({});
+  const [photosAutre,  setPhotosAutre]  = useState<PhotoFile[]>([]);
+
+  const [submitted,     setSubmitted]     = useState(false);
+  const [loading,       setLoading]       = useState(false);
+  const [errors,        setErrors]        = useState<Record<string, string>>({});
   const [fieldsVisible, setFieldsVisible] = useState(true);
 
   const set = (key: string, value: string | boolean) => {
@@ -291,10 +302,10 @@ export function ContactForm() {
   };
 
   const resetAll = () => {
-    photosSav.forEach((p)    => URL.revokeObjectURL(p.preview));
-    photosPieces.forEach((p) => URL.revokeObjectURL(p.preview));
+    [...photosSav, ...photosPieces, ...photosAutre].forEach((p) => URL.revokeObjectURL(p.preview));
     setPhotosSav([]);
     setPhotosPieces([]);
+    setPhotosAutre([]);
     setSubmitted(false);
     setForm(INITIAL_FORM);
   };
@@ -321,6 +332,14 @@ export function ContactForm() {
     `input-base ${errors[key] ? "border-red-400 ring-1 ring-red-400" : ""} ${extra ?? ""}`;
   const sel = (key: string) =>
     `select-base ${errors[key] ? "border-red-400 ring-1 ring-red-400" : ""}`;
+
+  // Photo upload is shown for these 3 types only
+  const showPhotos = ["sav", "pieces", "autre"].includes(form.type);
+  const photosState: Record<string, [PhotoFile[], (f: PhotoFile[]) => void]> = {
+    sav:    [photosSav,    setPhotosSav],
+    pieces: [photosPieces, setPhotosPieces],
+    autre:  [photosAutre,  setPhotosAutre],
+  };
 
   return (
     <form onSubmit={handleSubmit} noValidate className="space-y-5">
@@ -421,14 +440,6 @@ export function ContactForm() {
                   placeholder="Décrivez le dysfonctionnement observé, les conditions d'apparition…"
                   rows={4} className={inp("descriptionPanne", "resize-none")} />
               </Field>
-
-              {/* Photo upload — SAV */}
-              <PhotoUpload
-                label="Photos du matériel ou de la panne"
-                files={photosSav}
-                onChange={setPhotosSav}
-              />
-
               <Field label="Intervention souhaitée" required>
                 <div className="flex gap-6 pt-1">
                   {[{ v: "atelier", l: "À l'atelier" }, { v: "site", l: "Sur site" }].map(({ v, l }) => (
@@ -496,13 +507,6 @@ export function ContactForm() {
                   placeholder="Décrivez la pièce, son emplacement, la raison du remplacement…"
                   rows={3} className={inp("descriptionPiece", "resize-none")} />
               </Field>
-
-              {/* Photo upload — Pièces */}
-              <PhotoUpload
-                label="Photos de la pièce"
-                files={photosPieces}
-                onChange={setPhotosPieces}
-              />
             </>
           )}
 
@@ -539,7 +543,6 @@ export function ContactForm() {
             </Field>
           )}
 
-          {/* Message */}
           {["devis", "information", "autre"].includes(form.type) && (
             <Field label="Message" required error={errors.message}>
               <textarea value={form.message} onChange={(e) => set("message", e.target.value)}
@@ -550,6 +553,17 @@ export function ContactForm() {
 
         </div>
       </div>
+
+      {/* ── PHOTO UPLOAD — SAV, Pièces, Autre uniquement ── */}
+      {showPhotos && (
+        <div className="pt-6 border-t border-gray-100">
+          <PhotoUpload
+            label={PHOTO_LABELS[form.type]}
+            files={photosState[form.type][0]}
+            onChange={photosState[form.type][1]}
+          />
+        </div>
+      )}
 
       {/* Consent */}
       <div>
