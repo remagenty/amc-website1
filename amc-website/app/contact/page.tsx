@@ -20,12 +20,23 @@ export default function ContactPage() {
     <div className="min-h-screen bg-amc-cream">
 
       {/* ── Hero ── */}
-      <section className="bg-white border-b border-gray-100 py-12">
-        <div className="container-amc">
-          <h1 className="text-3xl md:text-4xl font-black text-amc-text">
+      <section className="relative h-[400px] md:h-[460px] flex items-center overflow-hidden">
+        {/* Image de fond */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/images/Slide-1.jpg"
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        />
+        {/* Overlay sombre */}
+        <div className="absolute inset-0" style={{ backgroundColor: "rgba(0,0,0,0.55)" }} />
+        {/* Texte */}
+        <div className="relative z-10 container-amc">
+          <h1 className="text-4xl md:text-5xl font-black text-white leading-tight">
             Contactez-nous
           </h1>
-          <p className="text-amc-text-secondary mt-3 max-w-xl">
+          <p className="text-white/80 mt-4 text-lg max-w-xl">
             Notre équipe est à votre écoute du lundi au samedi.
           </p>
         </div>
