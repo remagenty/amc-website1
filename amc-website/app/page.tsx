@@ -5,6 +5,7 @@ import { ActivitiesSection } from "@/components/home/ActivitiesSection";
 import { PartnersSection } from "@/components/home/PartnersSection";
 import { FeaturedProducts } from "@/components/home/FeaturedProducts";
 import { WhyChooseSection } from "@/components/home/WhyChooseSection";
+import { MapInteractive } from "@/components/ui/MapInteractive";
 
 export const metadata: Metadata = {
   title: "Accueil | AMC — Vente matériels de chantier Rhône-Alpes",
@@ -21,6 +22,13 @@ export default function HomePage() {
       <ActivitiesSection />
       <FeaturedProducts />
       <WhyChooseSection />
+
+      {/* Carte — juste avant le footer */}
+      <section className="bg-amc-cream py-12">
+        <div className="container-amc">
+          <MapInteractive />
+        </div>
+      </section>
     </>
   );
 }
