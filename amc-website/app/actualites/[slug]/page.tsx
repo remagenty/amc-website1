@@ -201,7 +201,7 @@ export default function ArticlePage({ params }: Props) {
                 Nos experts AMC vous répondent sous 24h pour toute demande de devis ou de conseil technique.
               </p>
               <Link
-                href="/contact?type=information"
+                href="/devis?type=information"
                 className="flex items-center justify-center gap-2 w-full py-2.5 rounded-lg text-sm font-bold transition-all hover:brightness-95"
                 style={{ backgroundColor: "#FFD500", color: "#000000" }}
               >

@@ -156,7 +156,7 @@ export default function PartnerPage({ params }: Props) {
             Nos experts AMC, partenaires officiels {brand.name}, vous accompagnent dans le choix
             du matériel le mieux adapté à vos chantiers.
           </p>
-          <Link href="/contact?type=information" className="btn-primary rounded-lg">
+          <Link href="/devis?type=information" className="btn-primary rounded-lg">
             Parler à un expert <IconArrowRight size={16} />
           </Link>
         </div>

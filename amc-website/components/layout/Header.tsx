@@ -260,7 +260,7 @@ export function Header() {
                 </span>
               </Link>
               <Link
-                href="/contact?type=devis"
+                href="/devis"
                 className="btn-primary text-sm py-2.5 px-4 ml-2 rounded-lg whitespace-nowrap"
               >
                 Demande de devis
@@ -560,7 +560,7 @@ export function Header() {
                 ))}
               </nav>
               <div className="mt-4 pt-4 border-t border-gray-100">
-                <Link href="/contact?type=devis" className="btn-primary w-full justify-center text-sm">
+                <Link href="/devis" className="btn-primary w-full justify-center text-sm">
                   Demande de devis
                 </Link>
               </div>

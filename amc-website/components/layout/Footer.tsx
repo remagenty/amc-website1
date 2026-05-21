@@ -25,7 +25,7 @@ const FOOTER_LINKS = {
     { label: "Service Après-Vente", href: "/services#sav" },
     { label: "Pièces détachées", href: "/services#pieces" },
     { label: "Maintenance préventive", href: "/services#maintenance" },
-    { label: "Devis en ligne", href: "/contact?type=devis" },
+    { label: "Devis en ligne", href: "/devis" },
     { label: "Financement", href: "/services#financement" },
   ],
   entreprise: [

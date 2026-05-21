@@ -40,7 +40,7 @@ export default function OccasionPage() {
               techniciens agréés SE+. Qualité garantie au meilleur prix pour vos chantiers.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/contact?type=devis" className="btn-primary rounded-lg">
+              <Link href="/devis" className="btn-primary rounded-lg">
                 Demander un devis <IconArrowRight size={16} />
               </Link>
               <Link href="/services" className="btn-outline rounded-lg">
@@ -120,7 +120,7 @@ export default function OccasionPage() {
             <p className="text-amc-text-secondary text-sm mb-4">
               Vous ne trouvez pas le matériel recherché ?
             </p>
-            <Link href="/contact?type=recherche" className="btn-secondary rounded-lg">
+            <Link href="/devis?type=recherche" className="btn-secondary rounded-lg">
               Déposer une demande de recherche <IconArrowRight size={16} />
             </Link>
           </div>
