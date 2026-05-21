@@ -460,7 +460,7 @@ export function Header() {
                     </h3>
                     <div className="grid grid-cols-2 gap-1">
                       <div className="space-y-1">
-                        {MEGA_MENUS.services.slice(0, 3).map((item) => (
+                        {MEGA_MENUS.services.slice(0, 2).map((item) => (
                           <Link key={item.href} href={item.href} className="dropdown-item rounded-lg" onClick={closeMenu}>
                             <div>
                               <div className="font-semibold">{item.label}</div>
@@ -470,7 +470,7 @@ export function Header() {
                         ))}
                       </div>
                       <div className="space-y-1">
-                        {MEGA_MENUS.services.slice(3).map((item) => (
+                        {MEGA_MENUS.services.slice(2).map((item) => (
                           <Link key={item.href} href={item.href} className="dropdown-item rounded-lg" onClick={closeMenu}>
                             <div>
                               <div className="font-semibold">{item.label}</div>
