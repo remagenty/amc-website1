@@ -349,7 +349,9 @@ export function Header() {
                 Actualités & Expertise
               </Link>
 
-              {/* Contact */}
+              <div className="ml-auto" />
+
+              {/* Contact — extrême droite */}
               <Link
                 href="/contact"
                 className={`flex items-center px-4 text-sm font-semibold transition-colors ${
@@ -360,8 +362,6 @@ export function Header() {
               >
                 Contact
               </Link>
-
-              <div className="ml-auto" />
             </div>
           </div>
 
