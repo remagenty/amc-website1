@@ -260,6 +260,12 @@ export function Header() {
                 </span>
               </Link>
               <Link
+                href="/contact"
+                className="px-3 py-2 rounded-lg text-white hover:bg-white/15 transition-colors text-xs font-medium"
+              >
+                Contact
+              </Link>
+              <Link
                 href="/contact?type=devis"
                 className="btn-primary text-sm py-2.5 px-4 ml-2 rounded-lg whitespace-nowrap"
               >
@@ -349,17 +355,7 @@ export function Header() {
                 Actualités & Expertise
               </Link>
 
-              {/* Contact & Devis */}
-              <Link
-                href="/contact"
-                className="flex items-center px-4 text-sm font-semibold text-white hover:text-amc-yellow transition-colors"
-              >
-                Contact & Devis
-              </Link>
-
-              <div className="ml-auto flex items-center gap-3">
-                <SEBadge size="sm" />
-              </div>
+              <div className="ml-auto" />
             </div>
           </div>
 
