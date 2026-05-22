@@ -22,7 +22,7 @@ const FOOTER_LINKS = {
     { label: "Matériel occasion", href: "/occasion" },
   ],
   services: [
-    { label: "Service Après-Vente", href: "/services#sav" },
+    { label: "Service Après-Vente", href: "/sav" },
     { label: "Pièces détachées", href: "/services#pieces" },
     { label: "Maintenance préventive", href: "/services#maintenance" },
     { label: "Devis en ligne", href: "/devis" },
