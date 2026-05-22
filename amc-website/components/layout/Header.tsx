@@ -445,9 +445,9 @@ export function Header() {
                     <div className="w-10 h-10 rounded-lg bg-amc-yellow/10 flex items-center justify-center mb-4 text-xl">
                       🏗️
                     </div>
-                    <h4 className="font-bold text-amc-text text-base mb-3">Vente &amp; Location</h4>
+                    <h4 className="font-bold text-amc-text text-base mb-3">Vente</h4>
                     <ul className="space-y-2 text-sm text-amc-text-secondary flex-1">
-                      {["Machines neuves", "Machines d'occasion", "Location courte et longue durée"].map((item) => (
+                      {["Machines neuves", "Machines d'occasion"].map((item) => (
                         <li key={item} className="flex items-center gap-2">
                           <span className="w-1.5 h-1.5 rounded-full bg-amc-yellow flex-shrink-0" />
                           {item}
