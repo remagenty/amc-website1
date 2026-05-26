@@ -299,17 +299,11 @@ export function WnCategoryPage({
               </span>
             )}
           </div>
-          <span className="text-xs text-amc-text-secondary">
-            <strong className="text-amc-text">{filtered.length}</strong> machine{filtered.length > 1 ? "s" : ""}
-          </span>
         </div>
 
         {/* ── 1. Catégories de machines ── */}
         <FilterSection title="Catégories de machines">
-          <div
-            className="space-y-0.5"
-            style={{ maxHeight: "280px", overflowY: "auto" }}
-          >
+          <div className="space-y-0.5">
             {ALL_CATEGORIES.map((cat) => {
               const count = categoryCounts[cat.slug] ?? 0;
               const isCurrent = cat.slug === categorySlug;
@@ -391,7 +385,7 @@ export function WnCategoryPage({
                   onChange={() => setFilterStatus(v)}
                   label={v === "neuf" ? "Matériel neuf" : "Matériel occasion"}
                   count={count}
-                  disabled={count === 0 && filterStatus !== v}
+                  disabled={false}
                 />
               );
             })}
