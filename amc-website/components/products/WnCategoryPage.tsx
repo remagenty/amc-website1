@@ -4,9 +4,25 @@ import { useState, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import type { WnMachine } from "@/lib/wn-catalogue";
-import { CATEGORY_LABELS, getCategoryUrlSlug } from "@/lib/wn-catalogue";
-import { IconSearch, IconFilter, IconArrowRight, IconCheck, IconChevronDown } from "@/components/ui/Icons";
+import {
+  CATEGORY_LABELS,
+  getCategoryUrlSlug,
+  getAllWnMachines,
+  getWnCategories,
+} from "@/lib/wn-catalogue";
+import {
+  IconSearch,
+  IconFilter,
+  IconArrowRight,
+  IconCheck,
+  IconChevronDown,
+  IconX,
+} from "@/components/ui/Icons";
 import { SEBadge } from "@/components/ui/SEBadge";
+
+// Computed once at module level — 55 machines, no re-import cost
+const ALL_MACHINES = getAllWnMachines();
+const ALL_CATEGORIES = getWnCategories(); // [{slug, label, count}]
 
 const SORT_OPTIONS = [
   { value: "featured", label: "Pertinence" },
@@ -14,6 +30,8 @@ const SORT_OPTIONS = [
   { value: "name-desc", label: "Alphabétique Z→A" },
   { value: "disponible", label: "Disponibles en premier" },
 ];
+
+// ── Machine card ──────────────────────────────────────────────────────────────
 
 function MachineCard({ machine }: { machine: WnMachine }) {
   const categorySlug = getCategoryUrlSlug(machine);
@@ -65,7 +83,6 @@ function MachineCard({ machine }: { machine: WnMachine }) {
           {machine.description_courte}
         </p>
 
-        {/* First 3 specs */}
         {Object.keys(machine.caracteristiques_techniques).length > 0 && (
           <div className="grid grid-cols-2 gap-1.5 mb-3">
             {Object.entries(machine.caracteristiques_techniques).slice(0, 2).map(([key, val]) => (
@@ -83,7 +100,11 @@ function MachineCard({ machine }: { machine: WnMachine }) {
           <div>
             {machine.prix_ht ? (
               <p className="font-black text-amc-text">
-                {new Intl.NumberFormat("fr-FR", { style: "currency", currency: "EUR", maximumFractionDigits: 0 }).format(machine.prix_ht)}
+                {new Intl.NumberFormat("fr-FR", {
+                  style: "currency",
+                  currency: "EUR",
+                  maximumFractionDigits: 0,
+                }).format(machine.prix_ht)}
                 <span className="text-xs font-normal text-amc-text-secondary ml-1">HT</span>
               </p>
             ) : (
@@ -99,29 +120,103 @@ function MachineCard({ machine }: { machine: WnMachine }) {
   );
 }
 
+// ── Collapsible filter section ────────────────────────────────────────────────
+
 function FilterSection({
   title,
   children,
   defaultOpen = true,
+  count,
 }: {
   title: string;
   children: React.ReactNode;
   defaultOpen?: boolean;
+  count?: number;
 }) {
   const [open, setOpen] = useState(defaultOpen);
   return (
     <div className="border-b border-gray-100 pb-4 mb-4 last:border-0 last:mb-0 last:pb-0">
       <button
         onClick={() => setOpen(!open)}
-        className="flex items-center justify-between w-full text-sm font-semibold text-amc-text mb-3"
+        className="flex items-center justify-between w-full text-sm font-semibold text-amc-text mb-0 py-1 hover:text-amc-yellow-dark transition-colors"
       >
-        {title}
-        <IconChevronDown size={14} className={`transition-transform ${open ? "rotate-180" : ""}`} />
+        <span className="flex items-center gap-2">
+          {title}
+          {count !== undefined && count > 0 && (
+            <span className="text-xs font-bold bg-amc-yellow text-amc-text px-1.5 py-0.5 rounded-full leading-none">
+              {count}
+            </span>
+          )}
+        </span>
+        <IconChevronDown
+          size={14}
+          className={`text-amc-text-secondary flex-shrink-0 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+        />
       </button>
-      {open && children}
+      <div
+        style={{
+          maxHeight: open ? "600px" : "0",
+          overflow: "hidden",
+          transition: "max-height 0.25s ease-in-out",
+        }}
+      >
+        <div className="mt-3">{children}</div>
+      </div>
     </div>
   );
 }
+
+// ── Custom radio/checkbox ─────────────────────────────────────────────────────
+
+function FilterOption({
+  checked,
+  onChange,
+  label,
+  count,
+  disabled = false,
+}: {
+  checked: boolean;
+  onChange: () => void;
+  label: string;
+  count?: number;
+  disabled?: boolean;
+}) {
+  return (
+    <label
+      className={`flex items-center justify-between gap-2 cursor-pointer group ${
+        disabled ? "opacity-40 cursor-not-allowed" : ""
+      }`}
+    >
+      <div className="flex items-center gap-2.5" onClick={disabled ? undefined : onChange}>
+        <div
+          className={`w-4 h-4 rounded border-2 flex items-center justify-center transition-colors flex-shrink-0 ${
+            checked
+              ? "bg-amc-yellow border-amc-yellow"
+              : disabled
+              ? "border-gray-200"
+              : "border-gray-300 group-hover:border-amc-yellow"
+          } ${disabled ? "" : "cursor-pointer"}`}
+        >
+          {checked && <IconCheck size={10} className="text-black" />}
+        </div>
+        <span className={`text-sm transition-colors ${
+          checked ? "font-semibold text-amc-text" : "text-amc-text group-hover:text-amc-text"
+        }`}>
+          {label}
+        </span>
+      </div>
+      {count !== undefined && (
+        <span className={`text-xs flex-shrink-0 ${
+          count === 0 ? "text-gray-300" : "text-amc-text-secondary"
+        }`}>
+          ({count})
+        </span>
+      )}
+    </label>
+  );
+}
+
+// ── Main page component ───────────────────────────────────────────────────────
 
 export function WnCategoryPage({
   machines,
@@ -133,12 +228,25 @@ export function WnCategoryPage({
   const [search, setSearch] = useState("");
   const [filterStatus, setFilterStatus] = useState<"all" | "neuf" | "occasion">("all");
   const [filterAvailability, setFilterAvailability] = useState<"all" | "disponible" | "sur_commande">("all");
-  const [filterFeatured, setFilterFeatured] = useState(false);
   const [sort, setSort] = useState("featured");
   const [mobileFiltres, setMobileFiltres] = useState(false);
 
   const categoryLabel = CATEGORY_LABELS[categorySlug] ?? categorySlug;
 
+  // ── Dynamic category counts (all machines, filtered by status + availability) ──
+  const categoryCounts = useMemo(() => {
+    let list = ALL_MACHINES;
+    if (filterStatus !== "all") list = list.filter((m) => m.etat === filterStatus);
+    if (filterAvailability !== "all") list = list.filter((m) => m.disponibilite === filterAvailability);
+
+    const counts: Record<string, number> = {};
+    for (const m of list) {
+      counts[getCategoryUrlSlug(m)] = (counts[getCategoryUrlSlug(m)] ?? 0) + 1;
+    }
+    return counts;
+  }, [filterStatus, filterAvailability]);
+
+  // ── Filtered machines for the current category ──
   const filtered = useMemo(() => {
     let list = [...machines];
 
@@ -151,18 +259,8 @@ export function WnCategoryPage({
           m.description_courte.toLowerCase().includes(q)
       );
     }
-
-    if (filterStatus !== "all") {
-      list = list.filter((m) => m.etat === filterStatus);
-    }
-
-    if (filterAvailability !== "all") {
-      list = list.filter((m) => m.disponibilite === filterAvailability);
-    }
-
-    if (filterFeatured) {
-      list = list.filter((m) => m.featured);
-    }
+    if (filterStatus !== "all") list = list.filter((m) => m.etat === filterStatus);
+    if (filterAvailability !== "all") list = list.filter((m) => m.disponibilite === filterAvailability);
 
     list.sort((a, b) => {
       if (sort === "name-asc") return a.nom_complet.localeCompare(b.nom_complet, "fr");
@@ -175,100 +273,158 @@ export function WnCategoryPage({
     });
 
     return list;
-  }, [machines, search, filterStatus, filterAvailability, filterFeatured, sort]);
+  }, [machines, search, filterStatus, filterAvailability, sort]);
 
   const activeFilterCount =
     (filterStatus !== "all" ? 1 : 0) +
-    (filterAvailability !== "all" ? 1 : 0) +
-    (filterFeatured ? 1 : 0);
+    (filterAvailability !== "all" ? 1 : 0);
 
+  const resetFilters = () => {
+    setFilterStatus("all");
+    setFilterAvailability("all");
+  };
+
+  // ── Sidebar filter panel ──
   const FilterPanel = () => (
     <aside className="w-64 flex-shrink-0">
       <div className="bg-white rounded-xl shadow-card p-5 sticky top-24">
-        <div className="flex items-center justify-between mb-5">
-          <h2 className="font-bold text-amc-text text-sm">Filtres</h2>
-          {activeFilterCount > 0 && (
-            <button
-              onClick={() => {
-                setFilterStatus("all");
-                setFilterAvailability("all");
-                setFilterFeatured(false);
-              }}
-              className="text-xs text-red-500 hover:text-red-700 font-medium"
-            >
-              Réinitialiser
-            </button>
-          )}
+        {/* Header */}
+        <div className="flex items-center justify-between mb-5 pb-4 border-b border-gray-100">
+          <div className="flex items-center gap-2">
+            <IconFilter size={15} className="text-amc-text-secondary" />
+            <h2 className="font-bold text-amc-text text-sm">Filtres</h2>
+            {activeFilterCount > 0 && (
+              <span className="text-xs font-bold bg-amc-yellow text-amc-text px-1.5 py-0.5 rounded-full leading-none">
+                {activeFilterCount}
+              </span>
+            )}
+          </div>
+          <span className="text-xs text-amc-text-secondary">
+            <strong className="text-amc-text">{filtered.length}</strong> machine{filtered.length > 1 ? "s" : ""}
+          </span>
         </div>
 
-        <FilterSection title="État du matériel">
-          <div className="space-y-2">
-            {(["all", "neuf", "occasion"] as const).map((v) => (
-              <label key={v} className="flex items-center gap-2.5 cursor-pointer group">
-                <div
-                  onClick={() => setFilterStatus(v)}
-                  className={`w-4 h-4 rounded border-2 flex items-center justify-center transition-colors cursor-pointer flex-shrink-0 ${
-                    filterStatus === v
-                      ? "bg-amc-yellow border-amc-yellow"
-                      : "border-gray-300 group-hover:border-amc-yellow"
+        {/* ── 1. Catégories de machines ── */}
+        <FilterSection title="Catégories de machines">
+          <div
+            className="space-y-0.5"
+            style={{ maxHeight: "280px", overflowY: "auto" }}
+          >
+            {ALL_CATEGORIES.map((cat) => {
+              const count = categoryCounts[cat.slug] ?? 0;
+              const isCurrent = cat.slug === categorySlug;
+              return (
+                <Link
+                  key={cat.slug}
+                  href={`/materiels/${cat.slug}`}
+                  className={`flex items-center justify-between px-3 py-2 rounded-lg text-sm transition-all ${
+                    isCurrent
+                      ? "bg-amc-yellow/15 text-amc-text font-semibold border border-amc-yellow/40"
+                      : count === 0
+                      ? "text-gray-300 cursor-default pointer-events-none"
+                      : "text-amc-text-secondary hover:text-amc-text hover:bg-gray-50"
                   }`}
                 >
-                  {filterStatus === v && <IconCheck size={10} className="text-black" />}
-                </div>
-                <span className="text-sm text-amc-text capitalize">
-                  {v === "all" ? "Tous" : v === "neuf" ? "Neuf" : "Occasion"}
-                </span>
-              </label>
-            ))}
+                  <span className="flex items-center gap-2">
+                    {isCurrent && (
+                      <span className="w-1.5 h-1.5 rounded-full bg-amc-yellow flex-shrink-0" />
+                    )}
+                    {cat.label}
+                  </span>
+                  <span className={`text-xs flex-shrink-0 ml-2 ${
+                    isCurrent ? "font-bold text-amc-text" : "text-amc-text-secondary"
+                  }`}>
+                    ({count})
+                  </span>
+                </Link>
+              );
+            })}
           </div>
         </FilterSection>
 
-        <FilterSection title="Disponibilité">
-          <div className="space-y-2">
-            {(["all", "disponible", "sur_commande"] as const).map((v) => (
-              <label key={v} className="flex items-center gap-2.5 cursor-pointer group">
-                <div
-                  onClick={() => setFilterAvailability(v)}
-                  className={`w-4 h-4 rounded border-2 flex items-center justify-center transition-colors cursor-pointer flex-shrink-0 ${
-                    filterAvailability === v
-                      ? "bg-amc-yellow border-amc-yellow"
-                      : "border-gray-300 group-hover:border-amc-yellow"
-                  }`}
-                >
-                  {filterAvailability === v && <IconCheck size={10} className="text-black" />}
-                </div>
-                <span className="text-sm text-amc-text">
-                  {v === "all" ? "Tous" : v === "disponible" ? "En stock" : "Sur commande"}
-                </span>
-              </label>
-            ))}
+        {/* ── 2. Disponibilité ── */}
+        <FilterSection title="Disponibilité" count={filterAvailability !== "all" ? 1 : undefined}>
+          <div className="space-y-2.5">
+            <FilterOption
+              checked={filterAvailability === "all"}
+              onChange={() => setFilterAvailability("all")}
+              label="Tous"
+            />
+            {(["disponible", "sur_commande"] as const).map((v) => {
+              const count = machines.filter(
+                (m) =>
+                  m.disponibilite === v &&
+                  (filterStatus === "all" || m.etat === filterStatus)
+              ).length;
+              return (
+                <FilterOption
+                  key={v}
+                  checked={filterAvailability === v}
+                  onChange={() => setFilterAvailability(v)}
+                  label={v === "disponible" ? "En stock" : "Sur commande"}
+                  count={count}
+                  disabled={count === 0 && filterAvailability !== v}
+                />
+              );
+            })}
           </div>
         </FilterSection>
 
-        <FilterSection title="Mise en avant" defaultOpen={false}>
-          <label className="flex items-center gap-2.5 cursor-pointer group">
-            <div
-              onClick={() => setFilterFeatured(!filterFeatured)}
-              className={`w-4 h-4 rounded border-2 flex items-center justify-center transition-colors cursor-pointer flex-shrink-0 ${
-                filterFeatured
-                  ? "bg-amc-yellow border-amc-yellow"
-                  : "border-gray-300 group-hover:border-amc-yellow"
-              }`}
-            >
-              {filterFeatured && <IconCheck size={10} className="text-black" />}
-            </div>
-            <span className="text-sm text-amc-text">Machines vedettes</span>
-          </label>
+        {/* ── 3. État du matériel ── */}
+        <FilterSection title="État du matériel" count={filterStatus !== "all" ? 1 : undefined}>
+          <div className="space-y-2.5">
+            <FilterOption
+              checked={filterStatus === "all"}
+              onChange={() => setFilterStatus("all")}
+              label="Neuf et occasion"
+            />
+            {(["neuf", "occasion"] as const).map((v) => {
+              const count = machines.filter(
+                (m) =>
+                  m.etat === v &&
+                  (filterAvailability === "all" || m.disponibilite === filterAvailability)
+              ).length;
+              return (
+                <FilterOption
+                  key={v}
+                  checked={filterStatus === v}
+                  onChange={() => setFilterStatus(v)}
+                  label={v === "neuf" ? "Matériel neuf" : "Matériel occasion"}
+                  count={count}
+                  disabled={count === 0 && filterStatus !== v}
+                />
+              );
+            })}
+          </div>
         </FilterSection>
 
-        {/* CTA */}
+        {/* ── Reset button ── */}
+        <button
+          onClick={resetFilters}
+          disabled={activeFilterCount === 0}
+          className={`w-full mt-2 py-2.5 rounded-lg text-sm font-semibold border transition-all ${
+            activeFilterCount > 0
+              ? "border-red-200 text-red-600 hover:bg-red-50 cursor-pointer"
+              : "border-gray-100 text-gray-300 cursor-default"
+          }`}
+        >
+          <span className="flex items-center justify-center gap-2">
+            <IconX size={14} />
+            Réinitialiser les filtres
+          </span>
+        </button>
+
+        {/* ── CTA ── */}
         <div className="mt-5 pt-4 border-t border-gray-100">
           <div className="bg-amc-yellow/10 rounded-xl p-4 border border-amc-yellow/20">
-            <p className="font-bold text-amc-text text-xs mb-1">Besoin d'un conseil ?</p>
+            <p className="font-bold text-amc-text text-xs mb-1">Besoin d&apos;un conseil ?</p>
             <p className="text-[11px] text-amc-text-secondary mb-3">
               Nos experts vous aident à choisir la machine adaptée.
             </p>
-            <Link href="/contact" className="btn-primary text-xs w-full justify-center py-2 rounded-lg">
+            <Link
+              href="/contact"
+              className="btn-primary text-xs w-full justify-center py-2 rounded-lg"
+            >
               Contacter un expert
             </Link>
           </div>
@@ -302,9 +458,7 @@ export function WnCategoryPage({
               Wacker Neuson
             </span>
           </div>
-          <h1 className="text-2xl md:text-3xl font-black text-amc-text">
-            {categoryLabel}
-          </h1>
+          <h1 className="text-2xl md:text-3xl font-black text-amc-text">{categoryLabel}</h1>
           <p className="text-amc-text-secondary mt-2 text-sm max-w-2xl">
             Découvrez toute la gamme Wacker Neuson — distributeur officiel AMC Alpes Matériel Compact, région Rhône-Alpes.
           </p>
@@ -355,7 +509,7 @@ export function WnCategoryPage({
                 onClick={() => setFilterStatus("all")}
                 className="inline-flex items-center gap-1.5 px-3 py-1 bg-amc-yellow/10 text-amc-text text-xs font-medium rounded-full border border-amc-yellow/30 hover:bg-red-50 hover:border-red-200 hover:text-red-600 transition-colors"
               >
-                {filterStatus === "neuf" ? "Neuf" : "Occasion"} <span>×</span>
+                {filterStatus === "neuf" ? "Neuf" : "Occasion"} <IconX size={10} />
               </button>
             )}
             {filterAvailability !== "all" && (
@@ -363,15 +517,7 @@ export function WnCategoryPage({
                 onClick={() => setFilterAvailability("all")}
                 className="inline-flex items-center gap-1.5 px-3 py-1 bg-amc-yellow/10 text-amc-text text-xs font-medium rounded-full border border-amc-yellow/30 hover:bg-red-50 hover:border-red-200 hover:text-red-600 transition-colors"
               >
-                {filterAvailability === "disponible" ? "En stock" : "Sur commande"} <span>×</span>
-              </button>
-            )}
-            {filterFeatured && (
-              <button
-                onClick={() => setFilterFeatured(false)}
-                className="inline-flex items-center gap-1.5 px-3 py-1 bg-amc-yellow/10 text-amc-text text-xs font-medium rounded-full border border-amc-yellow/30 hover:bg-red-50 hover:border-red-200 hover:text-red-600 transition-colors"
-              >
-                Vedettes <span>×</span>
+                {filterAvailability === "disponible" ? "En stock" : "Sur commande"} <IconX size={10} />
               </button>
             )}
           </div>
@@ -390,17 +536,19 @@ export function WnCategoryPage({
                 className="fixed inset-0 bg-black/40 z-40 lg:hidden"
                 onClick={() => setMobileFiltres(false)}
               />
-              <div className="fixed inset-y-0 left-0 w-80 max-w-[90vw] bg-white z-50 overflow-y-auto p-5 shadow-2xl lg:hidden">
-                <div className="flex items-center justify-between mb-6">
+              <div className="fixed inset-y-0 left-0 w-80 max-w-[90vw] bg-white z-50 overflow-y-auto shadow-2xl lg:hidden">
+                <div className="flex items-center justify-between px-5 py-4 border-b border-gray-100">
                   <h2 className="font-bold text-amc-text">Filtres</h2>
                   <button
                     onClick={() => setMobileFiltres(false)}
-                    className="text-amc-text-secondary hover:text-amc-text"
+                    className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
                   >
-                    ✕
+                    <IconX size={18} />
                   </button>
                 </div>
-                <FilterPanel />
+                <div className="p-5">
+                  <FilterPanel />
+                </div>
               </div>
             </>
           )}
@@ -419,16 +567,8 @@ export function WnCategoryPage({
                 <p className="text-amc-text-secondary text-sm mb-6">
                   Modifiez vos critères ou réinitialisez les filtres.
                 </p>
-                <button
-                  onClick={() => {
-                    setSearch("");
-                    setFilterStatus("all");
-                    setFilterAvailability("all");
-                    setFilterFeatured(false);
-                  }}
-                  className="btn-primary rounded-lg"
-                >
-                  Réinitialiser
+                <button onClick={resetFilters} className="btn-primary rounded-lg">
+                  Réinitialiser les filtres
                 </button>
               </div>
             ) : (
