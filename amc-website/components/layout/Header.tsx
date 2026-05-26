@@ -21,64 +21,43 @@ const TOP_BAR_ITEMS: { label: string; href?: string }[] = [
 
 const MATERIELS_CATEGORIES = [
   {
-    id: "tp",
-    label: "Travaux Publics & TP",
-    href: "/catalogue?secteur=tp",
+    id: "terrassement",
+    label: "Terrassement & Excavation",
+    href: "/materiels/mini-pelles",
     subs: [
-      { label: "Mini-pelles", href: "/catalogue?categorie=mini-pelles" },
-      { label: "Compacteurs", href: "/catalogue?categorie=compacteurs" },
-      { label: "Chargeuses", href: "/catalogue?categorie=chargeuses" },
-      { label: "Dumpers articulés", href: "/catalogue?categorie=dumpers" },
-    ],
-  },
-  {
-    id: "demolition",
-    label: "Démolition & Déconstruction",
-    href: "/catalogue?secteur=demolition",
-    subs: [
-      { label: "Outils de démolition", href: "/catalogue?categorie=demolition" },
-      { label: "Brise-béton hydrauliques", href: "/catalogue?categorie=brise-beton" },
-      { label: "Cisailles hydrauliques", href: "/catalogue?categorie=cisailles" },
+      { label: "Mini-pelles", href: "/materiels/mini-pelles" },
+      { label: "Dumpers articulés", href: "/materiels/dumpers" },
+      { label: "Chargeuses compactes", href: "/materiels/chargeuses" },
+      { label: "Télescopiques", href: "/materiels/telescopiques" },
     ],
   },
   {
     id: "compactage",
     label: "Compactage",
-    href: "/catalogue?secteur=compactage",
+    href: "/materiels/compacteurs",
     subs: [
-      { label: "Plaques vibrantes", href: "/catalogue?categorie=plaques-vibrantes" },
-      { label: "Pilonneuses", href: "/catalogue?categorie=pilonneuses" },
-      { label: "Rouleaux compacteurs", href: "/catalogue?categorie=rouleaux" },
+      { label: "Compacteurs tandem", href: "/materiels/compacteurs" },
+      { label: "Plaques vibrantes", href: "/materiels/plaques-vibrantes" },
+      { label: "Pilonneuses", href: "/materiels/pilonneuses" },
     ],
   },
   {
-    id: "urbain",
-    label: "Chantiers urbains",
-    href: "/catalogue?secteur=urbain",
+    id: "demolition",
+    label: "Démolition & Outillage",
+    href: "/materiels/marteaux-piqueurs",
     subs: [
-      { label: "Matériel compact", href: "/catalogue?secteur=urbain&type=compact" },
-      { label: "Équipements d'accès réduit", href: "/catalogue?secteur=urbain&type=acces-reduit" },
-      { label: "Solutions zéro émission", href: "/catalogue?secteur=urbain&type=zero-emission" },
+      { label: "Marteaux piqueurs", href: "/materiels/marteaux-piqueurs" },
+      { label: "Outillage de sol", href: "/materiels/outillage" },
     ],
   },
   {
-    id: "manutention",
-    label: "Manutention & Levage",
-    href: "/catalogue?secteur=manutention",
+    id: "electrique",
+    label: "Solutions zéro émission",
+    href: "/materiels/mini-pelles",
     subs: [
-      { label: "Chariots télescopiques", href: "/catalogue?categorie=telescopiques" },
-      { label: "Nacelles", href: "/catalogue?categorie=nacelles" },
-      { label: "Plateformes élévatrices", href: "/catalogue?categorie=plateformes" },
-    ],
-  },
-  {
-    id: "btp",
-    label: "BTP & Construction",
-    href: "/catalogue?secteur=btp",
-    subs: [
-      { label: "Bétonnières", href: "/catalogue?categorie=betonnieres" },
-      { label: "Malaxeurs", href: "/catalogue?categorie=malaxeurs" },
-      { label: "Équipements de gros œuvre", href: "/catalogue?secteur=btp" },
+      { label: "Mini-pelles électriques", href: "/materiels/mini-pelles" },
+      { label: "Dumpers électriques", href: "/materiels/dumpers" },
+      { label: "Chargeuses électriques", href: "/materiels/chargeuses" },
     ],
   },
 ];
@@ -454,8 +433,8 @@ export function Header() {
                         </li>
                       ))}
                     </ul>
-                    <Link href="/catalogue" className="mt-5 btn-primary text-sm w-full justify-center" onClick={closeMenu}>
-                      Découvrir notre gamme <IconArrowRight size={13} />
+                    <Link href="/materiels" className="mt-5 btn-primary text-sm w-full justify-center" onClick={closeMenu}>
+                      Voir tous nos matériels <IconArrowRight size={13} />
                     </Link>
                   </div>
 
@@ -538,8 +517,8 @@ export function Header() {
               </form>
               <nav className="space-y-1">
                 {[
-                  { label: "Nos matériels", href: "/catalogue" },
-                  { label: "Matériel neuf", href: "/catalogue?etat=neuf" },
+                  { label: "Nos matériels", href: "/materiels" },
+                  { label: "Matériel neuf", href: "/materiels" },
                   { label: "Matériel occasion", href: "/occasion" },
                   { label: "Wacker Neuson", href: "/partenaires/wacker-neuson" },
                   { label: "Magni", href: "/partenaires/magni" },
