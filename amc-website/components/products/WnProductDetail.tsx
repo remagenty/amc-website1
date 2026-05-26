@@ -258,10 +258,10 @@ export function WnProductDetail({ machine, similar, categorySlug, categoryLabel 
             {/* Brand badge */}
             <div className="mt-4 flex items-center gap-3">
               <span className="text-sm font-bold px-3 py-1.5 rounded-lg bg-red-50 text-red-700 border border-red-200">
-                Wacker Neuson
+                {machine.marque}
               </span>
               <Link
-                href="/partenaires/wacker-neuson"
+                href={`/partenaires/${machine.marque.toLowerCase().replace(/\s+/g, "-")}`}
                 className="text-sm text-amc-text-secondary hover:text-amc-yellow-dark transition-colors"
               >
                 Voir toute la gamme →

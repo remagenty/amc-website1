@@ -449,12 +449,12 @@ export function WnCategoryPage({
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-2">
             <span className="text-xs font-bold uppercase tracking-wider text-amc-text-secondary bg-white px-3 py-1 rounded-full border border-gray-200">
-              Wacker Neuson
+              {machines[0]?.marque ?? "Wacker Neuson"}
             </span>
           </div>
           <h1 className="text-2xl md:text-3xl font-black text-amc-text">{categoryLabel}</h1>
           <p className="text-amc-text-secondary mt-2 text-sm max-w-2xl">
-            Découvrez toute la gamme Wacker Neuson — distributeur officiel AMC Alpes Matériel Compact, région Rhône-Alpes.
+            Découvrez toute la gamme {machines[0]?.marque ?? "Wacker Neuson"} — distributeur officiel AMC Alpes Matériel Compact, région Rhône-Alpes.
           </p>
         </div>
 

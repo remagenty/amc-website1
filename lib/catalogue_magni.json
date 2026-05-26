@@ -1,0 +1,1151 @@
+{
+  "marque": "Magni",
+  "date_mise_a_jour": "2026-05-26",
+  "machines": [
+    {
+      "id": "magni-rth-5-18",
+      "marque": "Magni",
+      "modele": "RTH 5.18",
+      "reference": "RTH 5.18",
+      "nom_complet": "Téléhandler rotatif Magni RTH 5.18",
+      "slug": "magni-rth-5-18",
+      "categorie": "Téléhandler rotatif",
+      "sous_categorie": "Chariot télescopique rotatif",
+      "description_courte": "Téléhandler rotatif 5 tonnes à 18m de hauteur avec rotation 360° et stabilisateurs automatiques.",
+      "description_longue": "Le Magni RTH 5.18 est un téléhandler rotatif haute performance offrant une capacité de 5 000 kg à une hauteur maximale de 18 m. Grâce à sa rotation 360° et ses stabilisateurs automatiques, il garantit une stabilité et une sécurité optimales sur tous types de terrains. Motorisé par le Deutz TCD 3.6 L4 Stage V de 74 kW, il répond aux normes antipollution les plus strictes tout en offrant une puissance de travail remarquable pour les chantiers BTP et industriels exigeants.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "sur_commande",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "charge_max_kg": 5000,
+        "hauteur_max_m": 18,
+        "portee_max_m": 14.5,
+        "masse_operationnelle_kg": 15200,
+        "puissance_kw": 74
+      },
+      "points_forts": [
+        "Rotation 360° pour une polyvalence maximale",
+        "Stabilisateurs automatiques pour une sécurité optimale",
+        "Moteur Deutz Stage V faibles émissions",
+        "Portée horizontale de 14,5 m"
+      ],
+      "applications": [
+        "Levage sur chantier BTP",
+        "Manutention industrielle",
+        "Travaux en hauteur",
+        "Montage de structures"
+      ],
+      "secteurs": ["BTP", "Construction", "Événementiel", "Industrie"],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": true,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/magni-rth-5-18.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.magnith.com/fr/produits/5-18/",
+      "date_scraping": "2026-05-26T00:00:00Z"
+    },
+    {
+      "id": "magni-rth-5-21",
+      "marque": "Magni",
+      "modele": "RTH 5.21",
+      "reference": "RTH 5.21",
+      "nom_complet": "Téléhandler rotatif Magni RTH 5.21",
+      "slug": "magni-rth-5-21",
+      "categorie": "Téléhandler rotatif",
+      "sous_categorie": "Chariot télescopique rotatif",
+      "description_courte": "Téléhandler rotatif 5 tonnes à 21m avec rotation 360° et stabilisateurs, idéal pour les grands chantiers.",
+      "description_longue": "Le Magni RTH 5.21 offre une capacité de levage de 5 000 kg jusqu'à 21 m de hauteur avec une portée horizontale de 17,4 m. Son système de rotation 360° et ses stabilisateurs hydrauliques automatiques en font un outil polyvalent et sécurisé pour les applications BTP, industrielles et événementielles. Le moteur Deutz TCD 3.6 L4 Stage V de 100 kW assure des performances élevées tout en respectant les normes d'émissions actuelles.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "sur_commande",
+      "featured": true,
+      "caracteristiques_techniques": {
+        "charge_max_kg": 5000,
+        "hauteur_max_m": 21,
+        "portee_max_m": 17.4,
+        "masse_operationnelle_kg": 16500,
+        "puissance_kw": 100
+      },
+      "points_forts": [
+        "Rotation 360° continue pour une couverture totale",
+        "Hauteur de levage impressionnante de 21 m",
+        "Portée horizontale de 17,4 m",
+        "Stabilisateurs automatiques pour terrain accidenté"
+      ],
+      "applications": [
+        "Levage de matériaux en hauteur",
+        "Montage de charpentes",
+        "Manutention sur grands chantiers",
+        "Événementiel et spectacle"
+      ],
+      "secteurs": ["BTP", "Construction", "Événementiel", "Industrie"],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": true,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/magni-rth-5-21.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.magnith.com/fr/prodotto/5-21/",
+      "date_scraping": "2026-05-26T00:00:00Z"
+    },
+    {
+      "id": "magni-rth-5-23",
+      "marque": "Magni",
+      "modele": "RTH 5.23",
+      "reference": "RTH 5.23",
+      "nom_complet": "Téléhandler rotatif Magni RTH 5.23",
+      "slug": "magni-rth-5-23",
+      "categorie": "Téléhandler rotatif",
+      "sous_categorie": "Chariot télescopique rotatif",
+      "description_courte": "Téléhandler rotatif 5 tonnes à 23m de hauteur, excellent rapport capacité/hauteur pour les constructions élevées.",
+      "description_longue": "Le Magni RTH 5.23 est un téléhandler rotatif performant capable de soulever 5 000 kg à une hauteur de 23 m avec une portée horizontale de 19 m. Sa rotation 360° et ses stabilisateurs automatiques permettent de travailler efficacement sur les chantiers à contraintes d'espace. Motorisé par un Deutz TCD 3.6 L4 Stage V 100 kW, il combine puissance et conformité aux normes environnementales pour les projets de construction ambitieux.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "sur_commande",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "charge_max_kg": 5000,
+        "hauteur_max_m": 23,
+        "portee_max_m": 19,
+        "masse_operationnelle_kg": 17000,
+        "puissance_kw": 100
+      },
+      "points_forts": [
+        "Hauteur de travail de 23 m pour les constructions élevées",
+        "Portée de 19 m avec charge complète",
+        "Rotation 360° avec stabilisateurs hydrauliques",
+        "Moteur Deutz Stage V haute performance"
+      ],
+      "applications": [
+        "Construction de bâtiments multi-étages",
+        "Pose de toitures",
+        "Levage industriel",
+        "Assemblage de structures métalliques"
+      ],
+      "secteurs": ["BTP", "Construction", "Événementiel", "Industrie"],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": true,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/magni-rth-5-23.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.magnith.com/fr/produits/5-23/",
+      "date_scraping": "2026-05-26T00:00:00Z"
+    },
+    {
+      "id": "magni-rth-5-25",
+      "marque": "Magni",
+      "modele": "RTH 5.25",
+      "reference": "RTH 5.25",
+      "nom_complet": "Téléhandler rotatif Magni RTH 5.25",
+      "slug": "magni-rth-5-25",
+      "categorie": "Téléhandler rotatif",
+      "sous_categorie": "Chariot télescopique rotatif",
+      "description_courte": "Téléhandler rotatif 5 tonnes à 25m de hauteur avec rotation 360° pour les chantiers en hauteur.",
+      "description_longue": "Le Magni RTH 5.25 repousse les limites avec une capacité de 5 000 kg à 25 m de hauteur et une portée horizontale de 21 m. Son architecture de rotation 360° et ses stabilisateurs télescopiques automatiques assurent une stabilité parfaite. Motorisé par le Deutz TCD 3.6 L4 Stage V 100 kW, il est destiné aux chantiers exigeant des levages en grande hauteur tels que les immeubles, les ouvrages d'art ou les installations industrielles.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "sur_commande",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "charge_max_kg": 5000,
+        "hauteur_max_m": 25,
+        "portee_max_m": 21,
+        "masse_operationnelle_kg": 17500,
+        "puissance_kw": 100
+      },
+      "points_forts": [
+        "Hauteur exceptionnelle de 25 m pour les grands projets",
+        "Portée horizontale de 21 m",
+        "Stabilisateurs télescopiques automatiques",
+        "Rotation 360° sans restriction"
+      ],
+      "applications": [
+        "Construction d'immeubles R+8 et plus",
+        "Ouvrages d'art et génie civil",
+        "Installations industrielles en hauteur",
+        "Pose de façades et bardages"
+      ],
+      "secteurs": ["BTP", "Construction", "Événementiel", "Industrie"],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": true,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/magni-rth-5-25.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.magnith.com/fr/produits/rth-5-25/",
+      "date_scraping": "2026-05-26T00:00:00Z"
+    },
+    {
+      "id": "magni-rth-6-26",
+      "marque": "Magni",
+      "modele": "RTH 6.26",
+      "reference": "RTH 6.26",
+      "nom_complet": "Téléhandler rotatif Magni RTH 6.26",
+      "slug": "magni-rth-6-26",
+      "categorie": "Téléhandler rotatif",
+      "sous_categorie": "Chariot télescopique rotatif",
+      "description_courte": "Téléhandler rotatif 6 tonnes à 26m de hauteur, haute capacité pour les chantiers industriels lourds.",
+      "description_longue": "Le Magni RTH 6.26 offre une capacité de levage de 6 000 kg à 26 m de hauteur avec une portée de 22,2 m. Sa construction robuste, sa rotation 360° et ses stabilisateurs automatiques le rendent idéal pour les opérations de levage lourd sur les grands chantiers. Le moteur Deutz TCD 4.1 L4 Stage V de 120 kW garantit une puissance suffisante pour toutes les configurations de travail les plus exigeantes.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "sur_commande",
+      "featured": true,
+      "caracteristiques_techniques": {
+        "charge_max_kg": 6000,
+        "hauteur_max_m": 26,
+        "portee_max_m": 22.2,
+        "masse_operationnelle_kg": 19000,
+        "puissance_kw": 120
+      },
+      "points_forts": [
+        "Capacité de 6 tonnes pour les charges lourdes",
+        "Hauteur de 26 m et portée de 22,2 m",
+        "Rotation 360° avec stabilisation automatique",
+        "Moteur Deutz 4.1 L Stage V 120 kW"
+      ],
+      "applications": [
+        "Levage de préfabriqués lourds",
+        "Montage de structures industrielles",
+        "Chantiers de génie civil",
+        "Opérations de manutention lourde"
+      ],
+      "secteurs": ["BTP", "Construction", "Événementiel", "Industrie"],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": true,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/magni-rth-6-26.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.magnith.com/fr/produits/6-26/",
+      "date_scraping": "2026-05-26T00:00:00Z"
+    },
+    {
+      "id": "magni-rth-6-30",
+      "marque": "Magni",
+      "modele": "RTH 6.30",
+      "reference": "RTH 6.30",
+      "nom_complet": "Téléhandler rotatif Magni RTH 6.30",
+      "slug": "magni-rth-6-30",
+      "categorie": "Téléhandler rotatif",
+      "sous_categorie": "Chariot télescopique rotatif",
+      "description_courte": "Téléhandler rotatif 6 tonnes à 30m, conçu pour les levages en grande hauteur sur chantiers complexes.",
+      "description_longue": "Le Magni RTH 6.30 est une machine de levage rotatif de haute performance avec une capacité de 6 000 kg à 30 m de hauteur et une portée de 25 m. Son moteur Deutz TCD 7.8 de 163 kW lui confère une puissance robuste pour les opérations les plus exigeantes. Idéal pour les chantiers de grande envergure, il intègre la rotation 360° et des stabilisateurs automatiques pour une sécurité et une flexibilité maximales.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "sur_commande",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "charge_max_kg": 6000,
+        "hauteur_max_m": 30,
+        "portee_max_m": 25,
+        "masse_operationnelle_kg": 21800,
+        "puissance_kw": 163
+      },
+      "points_forts": [
+        "Hauteur de 30 m pour les projets ambitieux",
+        "Portée de 25 m en configuration rotatif",
+        "Moteur Deutz TCD 7.8 puissant 163 kW",
+        "Stabilisateurs automatiques tous terrains"
+      ],
+      "applications": [
+        "Construction de tours et immeubles",
+        "Pose d'éléments lourds en hauteur",
+        "Travaux sur ouvrages d'art",
+        "Montage de structures préfabriquées"
+      ],
+      "secteurs": ["BTP", "Construction", "Événementiel", "Industrie"],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": true,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/magni-rth-6-30.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.magnith.com/fr/produits/rth-6-30/",
+      "date_scraping": "2026-05-26T00:00:00Z"
+    },
+    {
+      "id": "magni-rth-6-35",
+      "marque": "Magni",
+      "modele": "RTH 6.35",
+      "reference": "RTH 6.35",
+      "nom_complet": "Téléhandler rotatif Magni RTH 6.35",
+      "slug": "magni-rth-6-35",
+      "categorie": "Téléhandler rotatif",
+      "sous_categorie": "Chariot télescopique rotatif",
+      "description_courte": "Téléhandler rotatif 6 tonnes à 35m, performances de grue pour les projets de construction les plus ambitieux.",
+      "description_longue": "Le Magni RTH 6.35 atteint 35 m de hauteur avec une capacité de 6 000 kg et une portée impressionnante de 29 m. Motorisé par un Mercedes OM 934 LA Stage IV de 170 kW, il dispose d'une puissance exceptionnelle pour les levages en grande hauteur. Sa rotation 360° et ses stabilisateurs automatiques lui permettent de s'adapter aux espaces restreints et aux configurations les plus complexes.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "sur_commande",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "charge_max_kg": 6000,
+        "hauteur_max_m": 35,
+        "portee_max_m": 29,
+        "masse_operationnelle_kg": 24000,
+        "puissance_kw": 170
+      },
+      "points_forts": [
+        "Performances de grue avec hauteur de 35 m",
+        "Portée de 29 m en configuration optimale",
+        "Moteur Mercedes OM 934 LA 170 kW",
+        "Rotation 360° avec stabilisateurs automatiques"
+      ],
+      "applications": [
+        "Construction de bâtiments en grande hauteur",
+        "Montage de structures complexes",
+        "Opérations de levage lourd",
+        "Chantiers d'infrastructure majeurs"
+      ],
+      "secteurs": ["BTP", "Construction", "Événementiel", "Industrie"],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": true,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/magni-rth-6-35.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.magnith.com/fr/produits/rth-6-35/",
+      "date_scraping": "2026-05-26T00:00:00Z"
+    },
+    {
+      "id": "magni-rth-7-26",
+      "marque": "Magni",
+      "modele": "RTH 7.26",
+      "reference": "RTH 7.26",
+      "nom_complet": "Téléhandler rotatif Magni RTH 7.26",
+      "slug": "magni-rth-7-26",
+      "categorie": "Téléhandler rotatif",
+      "sous_categorie": "Chariot télescopique rotatif",
+      "description_courte": "Téléhandler rotatif 7 tonnes à 26m, haute capacité pour les levages lourds avec rotation 360°.",
+      "description_longue": "Le Magni RTH 7.26 combine une capacité de 7 000 kg avec une hauteur de levage de 26 m et une portée de 21 m. Son moteur Volvo TAD 572 VE de 160 kW garantit une puissance fiable pour les travaux industriels intensifs. La rotation 360° et les stabilisateurs automatiques permettent de réaliser des levages précis même dans des environnements contraints. Conçu pour les professionnels exigeant le meilleur en termes de capacité et de flexibilité.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "sur_commande",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "charge_max_kg": 7000,
+        "hauteur_max_m": 26,
+        "portee_max_m": 21,
+        "masse_operationnelle_kg": 20700,
+        "puissance_kw": 160
+      },
+      "points_forts": [
+        "Capacité de 7 tonnes pour les charges exceptionnelles",
+        "Moteur Volvo TAD 572 VE 160 kW fiable",
+        "Rotation 360° pour un positionnement optimal",
+        "Stabilisateurs automatiques pour tous terrains"
+      ],
+      "applications": [
+        "Levage de préfabriqués très lourds",
+        "Industrie pétrolière et chimique",
+        "Montage de grandes structures",
+        "Chantiers navals et portuaires"
+      ],
+      "secteurs": ["BTP", "Construction", "Événementiel", "Industrie"],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": true,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/magni-rth-7-26.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.magnith.com/fr/produits/rth-7-26/",
+      "date_scraping": "2026-05-26T00:00:00Z"
+    },
+    {
+      "id": "magni-rth-8-35",
+      "marque": "Magni",
+      "modele": "RTH 8.35",
+      "reference": "RTH 8.35",
+      "nom_complet": "Téléhandler rotatif Magni RTH 8.35",
+      "slug": "magni-rth-8-35",
+      "categorie": "Téléhandler rotatif",
+      "sous_categorie": "Chariot télescopique rotatif",
+      "description_courte": "Téléhandler rotatif 8 tonnes à 35m, le fleuron de la gamme RTH pour les chantiers les plus exigeants.",
+      "description_longue": "Le Magni RTH 8.35 est un téléhandler rotatif de très haute performance avec une capacité de 8 000 kg à 35 m de hauteur et une portée horizontale de 29 m. Sa puissance de 175 kW / 238 HP lui permet de réaliser les levages les plus ambitieux avec précision et sécurité. Rotation 360° intégrale et stabilisateurs automatiques télescopiques en font l'outil de référence pour les grands chantiers BTP, l'industrie lourde et les opérations événementielles d'envergure.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "sur_commande",
+      "featured": true,
+      "caracteristiques_techniques": {
+        "charge_max_kg": 8000,
+        "hauteur_max_m": 35,
+        "portee_max_m": 29,
+        "masse_operationnelle_kg": 24000,
+        "puissance_kw": 175
+      },
+      "points_forts": [
+        "Capacité maximale de 8 tonnes en rotatif",
+        "Hauteur de 35 m pour les chantiers les plus élevés",
+        "Moteur 175 kW / 238 HP haute puissance",
+        "Rotation 360° avec stabilisateurs automatiques télescopiques"
+      ],
+      "applications": [
+        "Grands chantiers BTP",
+        "Levage de charges très lourdes",
+        "Industrie lourde et pétrochimie",
+        "Événements et spectacles de grande envergure"
+      ],
+      "secteurs": ["BTP", "Construction", "Événementiel", "Industrie"],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": true,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/magni-rth-8-35.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.magnith.com/fr/produits/rth-8-35/",
+      "date_scraping": "2026-05-26T00:00:00Z"
+    },
+    {
+      "id": "magni-rth-8-39",
+      "marque": "Magni",
+      "modele": "RTH 8.39",
+      "reference": "RTH 8.39",
+      "nom_complet": "Téléhandler rotatif Magni RTH 8.39",
+      "slug": "magni-rth-8-39",
+      "categorie": "Téléhandler rotatif",
+      "sous_categorie": "Chariot télescopique rotatif",
+      "description_courte": "Téléhandler rotatif 8 tonnes à 39m, record de hauteur pour la gamme RTH Magni.",
+      "description_longue": "Le Magni RTH 8.39 atteint des hauteurs de 39 m avec une capacité de 8 000 kg et une portée horizontale de 33 m, établissant de nouveaux standards dans la catégorie des téléhandlers rotatifs. Sa puissance de 175 kW / 238 HP combinée à la rotation 360° et aux stabilisateurs automatiques lui permet d'intervenir là où les grues mobiles ne peuvent pas accéder. Solution idéale pour les projets de construction ambitieux nécessitant un équipement de levage exceptionnel.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "sur_commande",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "charge_max_kg": 8000,
+        "hauteur_max_m": 39,
+        "portee_max_m": 33,
+        "masse_operationnelle_kg": 26000,
+        "puissance_kw": 175
+      },
+      "points_forts": [
+        "Hauteur record de 39 m pour la gamme RTH",
+        "Portée horizontale exceptionnelle de 33 m",
+        "Capacité de 8 tonnes en configuration haute",
+        "Alternative aux grues mobiles sur sites contraints"
+      ],
+      "applications": [
+        "Bâtiments exceptionnels en grande hauteur",
+        "Ouvrages d'art et viaducs",
+        "Installations éoliennes et énergies renouvelables",
+        "Chantiers à accès restreint"
+      ],
+      "secteurs": ["BTP", "Construction", "Événementiel", "Industrie"],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": true,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/magni-rth-8-39.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.magnith.com/fr/produits/rth-8-39/",
+      "date_scraping": "2026-05-26T00:00:00Z"
+    },
+    {
+      "id": "magni-rth-13-26",
+      "marque": "Magni",
+      "modele": "RTH 13.26",
+      "reference": "RTH 13.26",
+      "nom_complet": "Téléhandler rotatif Magni RTH 13.26",
+      "slug": "magni-rth-13-26",
+      "categorie": "Téléhandler rotatif",
+      "sous_categorie": "Chariot télescopique rotatif",
+      "description_courte": "Téléhandler rotatif 13 tonnes à 26m, capacité maximale de la gamme pour les levages industriels exceptionnels.",
+      "description_longue": "Le Magni RTH 13.26 est le champion de capacité de la gamme RTH avec 13 000 kg de charge maximale à 26 m de hauteur et une portée de 20 m. Motorisé par un Mercedes OM 934 LA Stage IV de 170 kW, il est destiné aux opérations de levage lourd dans l'industrie lourde, la pétrochimie et les grands chantiers. Sa rotation 360° et ses stabilisateurs automatiques lui confèrent une flexibilité inégalée pour les charges les plus importantes.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "sur_commande",
+      "featured": true,
+      "caracteristiques_techniques": {
+        "charge_max_kg": 13000,
+        "hauteur_max_m": 26,
+        "portee_max_m": 20,
+        "masse_operationnelle_kg": 30600,
+        "puissance_kw": 170
+      },
+      "points_forts": [
+        "Capacité record de 13 tonnes en téléhandler rotatif",
+        "Moteur Mercedes OM 934 LA Stage IV 170 kW",
+        "Rotation 360° pour charges exceptionnelles",
+        "Stabilisateurs automatiques de grande envergure"
+      ],
+      "applications": [
+        "Industrie lourde et pétrochimie",
+        "Levage de modules de process",
+        "Chantiers offshore et navals",
+        "Montage de grandes installations industrielles"
+      ],
+      "secteurs": ["BTP", "Construction", "Événementiel", "Industrie"],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": true,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/magni-rth-13-26.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.magnith.com/fr/produits/rth-13-26/",
+      "date_scraping": "2026-05-26T00:00:00Z"
+    },
+    {
+      "id": "magni-th-3-6",
+      "marque": "Magni",
+      "modele": "TH 3.6",
+      "reference": "TH 3.6",
+      "nom_complet": "Téléhandler fixe Magni TH 3.6",
+      "slug": "magni-th-3-6",
+      "categorie": "Téléhandler fixe",
+      "sous_categorie": "Chariot télescopique fixe",
+      "description_courte": "Téléhandler fixe compact 3 tonnes à 6m, maniabilité exceptionnelle pour les chantiers contraints.",
+      "description_longue": "Le Magni TH 3.6 est un téléhandler fixe compact et polyvalent avec une capacité de 3 000 kg à 6 m de hauteur. Sa conception compacte et son poids de 4 850 kg en font l'outil idéal pour les chantiers à espace restreint, les petites constructions et les activités de manutention légère. Le moteur Deutz Stage V de 55 kW offre un bon équilibre entre puissance et consommation, garantissant une utilisation économique et respectueuse de l'environnement.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "sur_commande",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "charge_max_kg": 3000,
+        "hauteur_max_m": 6,
+        "masse_operationnelle_kg": 4850,
+        "puissance_kw": 55
+      },
+      "points_forts": [
+        "Conception compacte pour les espaces restreints",
+        "Poids léger de 4 850 kg pour la mobilité",
+        "Moteur Deutz Stage V économique",
+        "Polyvalence pour de multiples configurations d'outils"
+      ],
+      "applications": [
+        "Manutention sur petits chantiers",
+        "Approvisionnement de matériaux",
+        "Travaux de rénovation",
+        "Stockage en entrepôt"
+      ],
+      "secteurs": ["BTP", "Logistique", "Industrie"],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": true,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/magni-th-3-6.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.magnith.com/fr/produits/3-6/",
+      "date_scraping": "2026-05-26T00:00:00Z"
+    },
+    {
+      "id": "magni-th-4-5-15",
+      "marque": "Magni",
+      "modele": "TH 4.5.15",
+      "reference": "TH 4.5.15",
+      "nom_complet": "Téléhandler fixe Magni TH 4.5.15",
+      "slug": "magni-th-4-5-15",
+      "categorie": "Téléhandler fixe",
+      "sous_categorie": "Chariot télescopique fixe",
+      "description_courte": "Téléhandler fixe 4,5 tonnes à 15m, polyvalence et compacité pour la construction et la logistique.",
+      "description_longue": "Le Magni TH 4.5.15 offre une capacité de 4 500 kg à 15 m de hauteur dans un gabarit compact de 8 000 kg. Sa stabilité remarquable et son moteur Deutz TCD 3.6 Stage V de 55 kW en font un compagnon fiable pour les chantiers de construction de taille moyenne. La combinaison de compacité et de hauteur de levage en fait un choix polyvalent pour la logistique, le BTP et les opérations industrielles nécessitant précision et efficacité.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "sur_commande",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "charge_max_kg": 4500,
+        "hauteur_max_m": 15,
+        "masse_operationnelle_kg": 8000,
+        "puissance_kw": 55
+      },
+      "points_forts": [
+        "Excellent rapport capacité/compacité",
+        "Hauteur de 15 m pour des applications variées",
+        "Moteur Deutz TCD 3.6 Stage V performant",
+        "Stabilité accrue pour les charges à hauteur"
+      ],
+      "applications": [
+        "Construction de maisons individuelles",
+        "Approvisionnement de chantiers",
+        "Chargement et déchargement de camions",
+        "Stockage en hauteur"
+      ],
+      "secteurs": ["BTP", "Logistique", "Industrie"],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": true,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/magni-th-4-5-15.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.magnith.com/fr/produits/th-4-5-15/",
+      "date_scraping": "2026-05-26T00:00:00Z"
+    },
+    {
+      "id": "magni-th-4-5-19",
+      "marque": "Magni",
+      "modele": "TH 4.5.19",
+      "reference": "TH 4.5.19",
+      "nom_complet": "Téléhandler fixe Magni TH 4.5.19",
+      "slug": "magni-th-4-5-19",
+      "categorie": "Téléhandler fixe",
+      "sous_categorie": "Chariot télescopique fixe",
+      "description_courte": "Téléhandler fixe 4,5 tonnes à 19m, polyvalence maximale pour les chantiers de construction en hauteur.",
+      "description_longue": "Le Magni TH 4.5.19 propose une capacité de 4 500 kg à 19 m de hauteur, offrant une portée remarquable pour un téléhandler fixe de cette catégorie. Avec un poids de 12 800 kg et un moteur Deutz TCD 3.6 Stage V de 74 kW, il allie puissance et stabilité pour les chantiers de construction, la logistique et les opérations industrielles. Sa polyvalence avec les multiples outils disponibles en fait un équipement incontournable des chantiers modernes.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "sur_commande",
+      "featured": true,
+      "caracteristiques_techniques": {
+        "charge_max_kg": 4500,
+        "hauteur_max_m": 19,
+        "masse_operationnelle_kg": 12800,
+        "puissance_kw": 74
+      },
+      "points_forts": [
+        "Hauteur de 19 m pour les constructions à plusieurs niveaux",
+        "Capacité de 4,5 t avec stabilité optimisée",
+        "Moteur Deutz TCD 3.6 Stage V économique",
+        "Large gamme d'outils et accessoires compatibles"
+      ],
+      "applications": [
+        "Construction de bâtiments résidentiels",
+        "Approvisionnement de chantiers en hauteur",
+        "Manutention en entrepôt logistique",
+        "Travaux de second œuvre"
+      ],
+      "secteurs": ["BTP", "Logistique", "Industrie"],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": true,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/magni-th-4-5-19.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.magnith.com/fr/produits/4-5-19-p/",
+      "date_scraping": "2026-05-26T00:00:00Z"
+    },
+    {
+      "id": "magni-th-5-5-19",
+      "marque": "Magni",
+      "modele": "TH 5.5.19",
+      "reference": "TH 5.5.19",
+      "nom_complet": "Téléhandler fixe Magni TH 5.5.19",
+      "slug": "magni-th-5-5-19",
+      "categorie": "Téléhandler fixe",
+      "sous_categorie": "Chariot télescopique fixe",
+      "description_courte": "Téléhandler fixe 5,5 tonnes à 19m, haute capacité et stabilité pour les lourdes charges en construction.",
+      "description_longue": "Le Magni TH 5.5.19 offre une capacité élevée de 5 500 kg à 19 m de hauteur, idéale pour les chantiers de construction nécessitant la manipulation de matériaux lourds. Avec des dimensions de 6 350 mm de longueur et 2 480 mm de largeur, il conserve une encombrement maîtrisé malgré sa capacité importante. Son moteur Deutz TCD 3.6 Stage V de 74 kW garantit des performances optimales pour une utilisation intensive quotidienne.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "sur_commande",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "charge_max_kg": 5500,
+        "hauteur_max_m": 19,
+        "masse_operationnelle_kg": 13500,
+        "puissance_kw": 74,
+        "longueur_mm": 6350,
+        "largeur_mm": 2480
+      },
+      "points_forts": [
+        "Capacité de 5,5 tonnes pour les charges lourdes",
+        "Dimensions maîtrisées pour la maniabilité",
+        "Moteur Deutz TCD 3.6 Stage V fiable",
+        "Haute stabilité à 19 m de hauteur"
+      ],
+      "applications": [
+        "Levage de préfabriqués béton",
+        "Approvisionnement de chantiers industriels",
+        "Manutention de palettes lourdes",
+        "Construction commerciale et industrielle"
+      ],
+      "secteurs": ["BTP", "Logistique", "Industrie"],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": true,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/magni-th-5-5-19.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.magnith.com/fr/produits/th-5-5-19/",
+      "date_scraping": "2026-05-26T00:00:00Z"
+    },
+    {
+      "id": "magni-th-5-5-24",
+      "marque": "Magni",
+      "modele": "TH 5.5.24",
+      "reference": "TH 5.5.24",
+      "nom_complet": "Téléhandler fixe Magni TH 5.5.24",
+      "slug": "magni-th-5-5-24",
+      "categorie": "Téléhandler fixe",
+      "sous_categorie": "Chariot télescopique fixe",
+      "description_courte": "Téléhandler fixe 5,5 tonnes à 24m, le meilleur ratio capacité/hauteur de la gamme fixe Magni.",
+      "description_longue": "Le Magni TH 5.5.24 pousse les limites des téléhandlers fixes avec une capacité de 5 500 kg à 24 m de hauteur. Son moteur Deutz Stage V de 100 kW lui confère la puissance nécessaire pour maintenir ces performances même dans les conditions les plus difficiles. Avec un poids opérationnel de 16 000 kg, il assure une base stable pour les levages les plus exigeants. Idéal pour les chantiers de construction importants, les entrepôts logistiques de grande hauteur et les opérations industrielles.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "sur_commande",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "charge_max_kg": 5500,
+        "hauteur_max_m": 24,
+        "masse_operationnelle_kg": 16000,
+        "puissance_kw": 100
+      },
+      "points_forts": [
+        "Combinaison unique 5,5 t à 24 m en fixe",
+        "Moteur Deutz Stage V 100 kW puissant",
+        "Stabilité maximale pour les grandes hauteurs",
+        "Polyvalence avec de nombreux équipements disponibles"
+      ],
+      "applications": [
+        "Construction de centres commerciaux",
+        "Entrepôts logistiques grande hauteur",
+        "Chantiers industriels importants",
+        "Montage de charpentes métalliques"
+      ],
+      "secteurs": ["BTP", "Logistique", "Industrie"],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": true,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/magni-th-5-5-24.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.magnith.com/fr/produits/th-5-5-24/",
+      "date_scraping": "2026-05-26T00:00:00Z"
+    },
+    {
+      "id": "magni-th-6-10",
+      "marque": "Magni",
+      "modele": "TH 6.10",
+      "reference": "TH 6.10",
+      "nom_complet": "Téléhandler fixe Magni TH 6.10",
+      "slug": "magni-th-6-10",
+      "categorie": "Téléhandler fixe",
+      "sous_categorie": "Chariot télescopique fixe",
+      "description_courte": "Téléhandler fixe 6 tonnes à 10m, haute capacité de levage pour les chantiers et entrepôts industriels.",
+      "description_longue": "Le Magni TH 6.10 est conçu pour la manutention de charges très lourdes allant jusqu'à 6 000 kg à 10 m de hauteur. Avec un poids opérationnel de 12 000 kg et un moteur Deutz Stage V de 74 kW, il offre une excellente stabilité pour les opérations de levage intensif. Sa conception robuste et sa capacité de charge élevée en font un outil de choix pour les entrepôts industriels, les chantiers de préfabricants et les opérations portuaires.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "sur_commande",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "charge_max_kg": 6000,
+        "hauteur_max_m": 10,
+        "masse_operationnelle_kg": 12000,
+        "puissance_kw": 74
+      },
+      "points_forts": [
+        "Capacité maximale de 6 tonnes pour charges lourdes",
+        "Construction robuste pour usage intensif",
+        "Moteur Deutz Stage V économique et fiable",
+        "Stabilité optimale pour les opérations de manutention"
+      ],
+      "applications": [
+        "Manutention en entrepôt industriel",
+        "Chargement et déchargement de semi-remorques",
+        "Déplacement de préfabriqués béton",
+        "Opérations portuaires et logistiques"
+      ],
+      "secteurs": ["BTP", "Logistique", "Industrie"],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": true,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/magni-th-6-10.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.magnith.com/fr/produits/th-6-10/",
+      "date_scraping": "2026-05-26T00:00:00Z"
+    },
+    {
+      "id": "magni-th-6-20",
+      "marque": "Magni",
+      "modele": "TH 6.20",
+      "reference": "TH 6.20",
+      "nom_complet": "Téléhandler fixe Magni TH 6.20",
+      "slug": "magni-th-6-20",
+      "categorie": "Téléhandler fixe",
+      "sous_categorie": "Chariot télescopique fixe",
+      "description_courte": "Téléhandler fixe 6 tonnes à 20m, le summum de la gamme fixe Magni pour les opérations lourdes en hauteur.",
+      "description_longue": "Le Magni TH 6.20 est le modèle haut de gamme des téléhandlers fixes Magni, offrant une capacité de 6 000 kg à 20 m de hauteur. Son moteur Deutz Stage V de 120 kW propulse ce mastodonte de 17 000 kg avec efficacité et économie d'énergie. Sa structure renforcée et ses systèmes de sécurité avancés en font l'outil de référence pour les chantiers de construction lourde, les opérations industrielles et les entrepôts grande hauteur les plus exigeants.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "sur_commande",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "charge_max_kg": 6000,
+        "hauteur_max_m": 20,
+        "masse_operationnelle_kg": 17000,
+        "puissance_kw": 120
+      },
+      "points_forts": [
+        "6 tonnes à 20 m, record de la gamme fixe",
+        "Moteur Deutz Stage V 120 kW haute puissance",
+        "Structure renforcée pour usage intensif quotidien",
+        "Systèmes de sécurité avancés certifiés"
+      ],
+      "applications": [
+        "Construction industrielle lourde",
+        "Entrepôts logistiques très grande hauteur",
+        "Chantiers de préfabrication béton",
+        "Opérations de manutention exceptionnelle"
+      ],
+      "secteurs": ["BTP", "Logistique", "Industrie"],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": true,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/magni-th-6-20.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.magnith.com/fr/produits/th-6-20/",
+      "date_scraping": "2026-05-26T00:00:00Z"
+    },
+    {
+      "id": "magni-tha-3-6",
+      "marque": "Magni",
+      "modele": "THA 3.6",
+      "reference": "THA 3.6",
+      "nom_complet": "Téléhandler agricole Magni THA 3.6",
+      "slug": "magni-tha-3-6",
+      "categorie": "Téléhandler agricole",
+      "sous_categorie": "Chariot télescopique agricole",
+      "description_courte": "Téléhandler agricole 3 tonnes à 5,8m, robustesse et polyvalence pour l'exploitation agricole quotidienne.",
+      "description_longue": "Le Magni THA 3.6 est un téléhandler agricole compact et robuste avec une capacité de 3 000 kg et une hauteur de levage de 5,8 m. Sa vitesse de déplacement de 35 km/h lui permet d'intervenir rapidement sur les grandes exploitations. Conçu spécialement pour le monde agricole, il accepte une large gamme d'attaches agricoles (fourche à fumier, benne, godet, plateau fourrager) pour une polyvalence maximale au fil des saisons. Le moteur Deutz Stage V de 55 kW garantit fiabilité et économies de carburant.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "sur_commande",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "charge_max_kg": 3000,
+        "hauteur_max_m": 5.8,
+        "masse_operationnelle_kg": 4850,
+        "puissance_kw": 55,
+        "vitesse_max_kmh": 35
+      },
+      "points_forts": [
+        "Conçu spécifiquement pour l'agriculture",
+        "Vitesse de 35 km/h pour les déplacements rapides",
+        "Large gamme d'attaches agricoles compatible",
+        "Moteur Deutz Stage V sobre en carburant"
+      ],
+      "applications": [
+        "Chargement et déstockage de fourrage",
+        "Manutention en élevage",
+        "Gestion des fumiers et lisiers",
+        "Travaux de cour de ferme"
+      ],
+      "secteurs": ["Agriculture", "Élevage", "Viticulture"],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": true,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/magni-tha-3-6.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.magnith.com/fr/produits/tha-3-6/",
+      "date_scraping": "2026-05-26T00:00:00Z"
+    },
+    {
+      "id": "magni-tha-4-5-8",
+      "marque": "Magni",
+      "modele": "THA 4.5.8",
+      "reference": "THA 4.5.8",
+      "nom_complet": "Téléhandler agricole Magni THA 4.5.8",
+      "slug": "magni-tha-4-5-8",
+      "categorie": "Téléhandler agricole",
+      "sous_categorie": "Chariot télescopique agricole",
+      "description_courte": "Téléhandler agricole 4,5 tonnes à 7,7m à 40 km/h, idéal pour les grandes exploitations céréalières.",
+      "description_longue": "Le Magni THA 4.5.8 offre une capacité de 4 500 kg à 7,7 m de hauteur avec une vitesse de déplacement de 40 km/h pour intervenir rapidement sur de grandes surfaces agricoles. Motorisé par un FPT N45 Stage V de 125 kW, il délivre des performances robustes pour les travaux les plus exigeants de la ferme. Parfait pour le chargement de silos, la gestion des ensilages et le déplacement de grosses balles rondes, il est l'outil universel des grandes exploitations.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "sur_commande",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "charge_max_kg": 4500,
+        "hauteur_max_m": 7.7,
+        "masse_operationnelle_kg": 7500,
+        "puissance_kw": 125,
+        "vitesse_max_kmh": 40
+      },
+      "points_forts": [
+        "Vitesse de 40 km/h pour la mobilité sur exploitation",
+        "Moteur FPT N45 Stage V 125 kW puissant",
+        "Capacité de 4,5 t pour les charges agricoles lourdes",
+        "Attaches agricoles universelles compatibles"
+      ],
+      "applications": [
+        "Chargement de silos à grains",
+        "Gestion des ensilages et balles rondes",
+        "Manutention en grandes exploitations céréalières",
+        "Travaux de récolte et de stockage"
+      ],
+      "secteurs": ["Agriculture", "Élevage", "Viticulture"],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": true,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/magni-tha-4-5-8.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.magnith.com/fr/produits/tha-4-5-8/",
+      "date_scraping": "2026-05-26T00:00:00Z"
+    },
+    {
+      "id": "magni-tha-4-5-10",
+      "marque": "Magni",
+      "modele": "THA 4.5.10",
+      "reference": "THA 4.5.10",
+      "nom_complet": "Téléhandler agricole Magni THA 4.5.10",
+      "slug": "magni-tha-4-5-10",
+      "categorie": "Téléhandler agricole",
+      "sous_categorie": "Chariot télescopique agricole",
+      "description_courte": "Téléhandler agricole 4,5 tonnes à 9,6m, portée étendue pour l'alimentation des bâtiments d'élevage.",
+      "description_longue": "Le Magni THA 4.5.10 combine une capacité de 4 500 kg avec une hauteur de levage de 9,6 m et une vitesse de 40 km/h. Son moteur FPT Stage V de 125 kW assure des performances solides pour les travaux agricoles intensifs. La hauteur de levage accrue par rapport au THA 4.5.8 en fait l'outil idéal pour l'alimentation des silos hauts, les travaux en bâtiments d'élevage sur plusieurs niveaux et les opérations nécessitant une portée verticale supérieure.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "sur_commande",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "charge_max_kg": 4500,
+        "hauteur_max_m": 9.6,
+        "masse_operationnelle_kg": 8500,
+        "puissance_kw": 125,
+        "vitesse_max_kmh": 40
+      },
+      "points_forts": [
+        "Hauteur de 9,6 m pour silos et bâtiments élevés",
+        "Vitesse de 40 km/h pour la mobilité inter-parcelles",
+        "Moteur FPT Stage V 125 kW robuste",
+        "Polyvalence maximale avec les équipements agricoles"
+      ],
+      "applications": [
+        "Alimentation de silos en hauteur",
+        "Travaux en bâtiments d'élevage",
+        "Manutention de balles en grande hauteur",
+        "Approvisionnement de châteaux d'eau agricoles"
+      ],
+      "secteurs": ["Agriculture", "Élevage", "Viticulture"],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": true,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/magni-tha-4-5-10.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.magnith.com/fr/produits/tha-4-5-10/",
+      "date_scraping": "2026-05-26T00:00:00Z"
+    },
+    {
+      "id": "magni-tha-5-8",
+      "marque": "Magni",
+      "modele": "THA 5.8",
+      "reference": "THA 5.8",
+      "nom_complet": "Téléhandler agricole Magni THA 5.8",
+      "slug": "magni-tha-5-8",
+      "categorie": "Téléhandler agricole",
+      "sous_categorie": "Chariot télescopique agricole",
+      "description_courte": "Téléhandler agricole 5 tonnes à 7,7m à 50 km/h, rapidité et puissance pour les grandes fermes.",
+      "description_longue": "Le Magni THA 5.8 est le choix des grandes exploitations qui ne veulent faire aucun compromis entre capacité de charge et vitesse de déplacement. Avec 5 000 kg de capacité, une hauteur de levage de 7,7 m et une vitesse de 50 km/h, il répond aux besoins des grandes fermes céréalières et d'élevage. Le moteur FPT Stage V de 125 kW garantit une puissance fiable pour toutes les saisons agricoles et la robustesse Magni assure une longévité maximale.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "sur_commande",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "charge_max_kg": 5000,
+        "hauteur_max_m": 7.7,
+        "masse_operationnelle_kg": 8200,
+        "puissance_kw": 125,
+        "vitesse_max_kmh": 50
+      },
+      "points_forts": [
+        "Vitesse record de 50 km/h pour la mobilité agricole",
+        "Capacité de 5 tonnes pour les travaux lourds",
+        "Moteur FPT Stage V 125 kW économique",
+        "Construction robuste pour une longévité maximale"
+      ],
+      "applications": [
+        "Grandes exploitations céréalières",
+        "Élevage laitier intensif",
+        "Transport rapide entre les bâtiments",
+        "Gestion des déchets et fumiers agricoles"
+      ],
+      "secteurs": ["Agriculture", "Élevage", "Viticulture"],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": true,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/magni-tha-5-8.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.magnith.com/fr/produits/tha-5-8/",
+      "date_scraping": "2026-05-26T00:00:00Z"
+    },
+    {
+      "id": "magni-tha-5-10",
+      "marque": "Magni",
+      "modele": "THA 5.10",
+      "reference": "THA 5.10",
+      "nom_complet": "Téléhandler agricole Magni THA 5.10",
+      "slug": "magni-tha-5-10",
+      "categorie": "Téléhandler agricole",
+      "sous_categorie": "Chariot télescopique agricole",
+      "description_courte": "Téléhandler agricole 5 tonnes à 10m à 50 km/h, le haut de gamme agricole Magni pour toutes les saisons.",
+      "description_longue": "Le Magni THA 5.10 est le modèle haut de gamme de la gamme agricole Magni, combinant une capacité de 5 000 kg, une hauteur de levage de 10 m et une vitesse de déplacement de 50 km/h. Son moteur FPT Stage V de 125 kW lui confère la puissance nécessaire pour les opérations les plus exigeantes de l'agriculture moderne. Avec sa hauteur de levage accrue, il est parfaitement adapté pour l'alimentation des silos les plus hauts, les bâtiments d'élevage sur plusieurs niveaux et les opérations viti-vinicoles nécessitant de la hauteur.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "sur_commande",
+      "featured": true,
+      "caracteristiques_techniques": {
+        "charge_max_kg": 5000,
+        "hauteur_max_m": 10,
+        "masse_operationnelle_kg": 9700,
+        "puissance_kw": 125,
+        "vitesse_max_kmh": 50
+      },
+      "points_forts": [
+        "Le plus polyvalent de la gamme agricole Magni",
+        "10 m de hauteur et 50 km/h de vitesse",
+        "Capacité de 5 tonnes toutes saisons",
+        "Attaches agricoles universelles et accessoires nombreux"
+      ],
+      "applications": [
+        "Grandes cultures et exploitation intensive",
+        "Élevage et gestion des fourrages",
+        "Viticulture et arboriculture",
+        "Stockage agricole en grande hauteur"
+      ],
+      "secteurs": ["Agriculture", "Élevage", "Viticulture"],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": true,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/magni-tha-5-10.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.magnith.com/fr/produits/tha-5-10/",
+      "date_scraping": "2026-05-26T00:00:00Z"
+    }
+  ]
+}

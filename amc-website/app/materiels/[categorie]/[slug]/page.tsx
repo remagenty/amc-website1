@@ -8,6 +8,14 @@ import {
   CATEGORY_LABELS,
   SLUG_TO_CATEGORY,
 } from "@/lib/wn-catalogue";
+import {
+  getMagniMachineBySlug,
+  getMagniSimilarMachines,
+  getAllMagniMachines,
+  getMagniCategoryUrlSlug,
+  MAGNI_CATEGORY_LABELS,
+  MAGNI_SLUG_TO_CATEGORY,
+} from "@/lib/magni-catalogue";
 import { WnProductDetail } from "@/components/products/WnProductDetail";
 
 interface Props {
@@ -15,16 +23,20 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  const machines = getAllWnMachines();
-  return machines.map((m) => ({
+  const wnParams = getAllWnMachines().map((m) => ({
     categorie: getCategoryUrlSlug(m),
     slug: m.slug,
   }));
+  const magniParams = getAllMagniMachines().map((m) => ({
+    categorie: getMagniCategoryUrlSlug(m),
+    slug: m.slug,
+  }));
+  return [...wnParams, ...magniParams];
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const machine = getWnMachineBySlug(slug);
+  const machine = getWnMachineBySlug(slug) ?? getMagniMachineBySlug(slug);
   if (!machine) return {};
 
   return {
@@ -43,18 +55,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function ProductPage({ params }: Props) {
   const { slug, categorie } = await params;
 
-  if (!SLUG_TO_CATEGORY[categorie]) notFound();
+  const isMagni = !!MAGNI_SLUG_TO_CATEGORY[categorie];
+  const isWn = !!SLUG_TO_CATEGORY[categorie];
+  if (!isMagni && !isWn) notFound();
 
-  const machine = getWnMachineBySlug(slug);
+  const machine = isMagni
+    ? getMagniMachineBySlug(slug)
+    : getWnMachineBySlug(slug);
   if (!machine) notFound();
 
-  const safeMachine = machine!;
-  const similar = getWnSimilarMachines(safeMachine, 4);
-  const categoryLabel = CATEGORY_LABELS[categorie] ?? categorie;
+  const similar = isMagni
+    ? getMagniSimilarMachines(machine, 4)
+    : getWnSimilarMachines(machine, 4);
+
+  const categoryLabel = isMagni
+    ? (MAGNI_CATEGORY_LABELS[categorie] ?? categorie)
+    : (CATEGORY_LABELS[categorie] ?? categorie);
 
   return (
     <WnProductDetail
-      machine={safeMachine}
+      machine={machine}
       similar={similar}
       categorySlug={categorie}
       categoryLabel={categoryLabel}
