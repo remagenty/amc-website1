@@ -33,6 +33,9 @@ export interface WnMachine {
     image_principale: string;
     images: string[];
     video: string | null;
+    // Populated by scripts/update-catalogue-image-paths.js after local download
+    image_principale_local?: string;
+    images_local?: string[];
   };
   url_wacker_neuson: string;
   date_scraping: string;
@@ -139,10 +142,10 @@ function toCategoryField(categorie: string): Product["category"] {
 // ── Adapter ───────────────────────────────────────────────────────────────────
 
 export function wnMachineToProduct(m: WnMachine): Product {
-  const allImages = [
-    m.medias.image_principale,
-    ...m.medias.images,
-  ].filter(Boolean);
+  // Prefer locally downloaded images, fall back to original URLs
+  const heroLocal = m.medias.image_principale_local ?? m.medias.image_principale;
+  const galleryLocal = m.medias.images_local ?? m.medias.images;
+  const allImages = [heroLocal, ...galleryLocal].filter(Boolean);
 
   return {
     id: m.id,

@@ -45,7 +45,7 @@ function MachineCard({ machine }: { machine: WnMachine }) {
     >
       <div className="relative aspect-[4/3] bg-gray-100 overflow-hidden">
         <Image
-          src={machine.medias.image_principale || "/images/products/placeholder-wn.jpg"}
+          src={(machine.medias.image_principale_local ?? machine.medias.image_principale) || "/images/products/placeholder-wn.jpg"}
           alt={machine.nom_complet}
           fill
           loading="lazy"

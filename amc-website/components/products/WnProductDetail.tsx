@@ -106,7 +106,7 @@ function SimilarCard({ machine }: { machine: WnMachine }) {
     >
       <div className="relative aspect-[4/3] bg-gray-100">
         <Image
-          src={machine.medias.image_principale || "/images/products/placeholder-wn.jpg"}
+          src={(machine.medias.image_principale_local ?? machine.medias.image_principale) || "/images/products/placeholder-wn.jpg"}
           alt={machine.nom_complet}
           fill
           loading="lazy"
@@ -150,7 +150,9 @@ interface Props {
 export function WnProductDetail({ machine, similar, categorySlug, categoryLabel }: Props) {
   const [activeImage, setActiveImage] = useState(0);
 
-  const allImages = [machine.medias.image_principale, ...machine.medias.images].filter(Boolean);
+  const hero = machine.medias.image_principale_local ?? machine.medias.image_principale;
+  const gallery = machine.medias.images_local ?? machine.medias.images;
+  const allImages = [hero, ...gallery].filter(Boolean);
   const displayImages = allImages.length > 0 ? allImages : ["/images/products/placeholder-wn.jpg"];
 
   const specEntries = Object.entries(machine.caracteristiques_techniques).filter(
