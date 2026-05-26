@@ -52,7 +52,7 @@ const SERVICES = [
       "Livraison express disponible",
       "Conseil technique inclus",
     ],
-    href: "/contact?type=pieces",
+    href: "/devis?type=pieces",
   },
   {
     id: "maintenance",
@@ -69,7 +69,7 @@ const SERVICES = [
       "Suivi du parc machines",
       "Optimisation des coûts d'exploitation",
     ],
-    href: "/contact?type=maintenance",
+    href: "/devis?type=maintenance",
   },
 ];
 
@@ -161,7 +161,7 @@ export default function ServicesPage() {
               fourniture de pièces d'origine pour tous vos équipements de chantier.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/contact?type=sav" className="btn-primary rounded-lg">
+              <Link href="/devis?type=sav" className="btn-primary rounded-lg">
                 Prendre rendez-vous <IconArrowRight size={16} />
               </Link>
               <a href="tel:+33426784390" className="btn-outline rounded-lg">
@@ -231,7 +231,7 @@ export default function ServicesPage() {
             sous 24h ouvrées.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
-            <Link href="/contact?type=sav" className="btn-primary bg-amc-text text-white hover:bg-amc-gray rounded-lg">
+            <Link href="/devis?type=sav" className="btn-primary bg-amc-text text-white hover:bg-amc-gray rounded-lg">
               Formulaire de contact <IconArrowRight size={16} />
             </Link>
             <a href="tel:+33426784390" className="btn-secondary rounded-lg">

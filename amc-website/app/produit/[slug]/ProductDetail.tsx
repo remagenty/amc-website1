@@ -216,7 +216,7 @@ export function ProductDetail({
                 {/* CTAs */}
                 <div className="space-y-3">
                   <Link
-                    href={`/contact?type=devis&produit=${product.slug}`}
+                    href={`/devis?type=devis&produit=${product.slug}`}
                     className="btn-primary w-full justify-center text-base py-4 rounded-xl"
                   >
                     Demander un devis
@@ -426,7 +426,7 @@ export function ProductDetail({
             Nos experts AMC sont disponibles pour vous accompagner dans votre choix.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
-            <Link href={`/contact?type=devis&produit=${product.slug}`} className="btn-primary rounded-lg">
+            <Link href={`/devis?type=devis&produit=${product.slug}`} className="btn-primary rounded-lg">
               Demander un devis <IconArrowRight size={16} />
             </Link>
             <a href="tel:+33426784390" className="btn-outline rounded-lg">

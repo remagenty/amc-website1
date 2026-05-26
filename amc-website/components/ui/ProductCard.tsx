@@ -100,7 +100,7 @@ export function ProductCard({ product, className = "" }: ProductCardProps) {
 
         <div className="mt-3 pt-3 border-t border-gray-100" onClick={(e) => e.stopPropagation()}>
           <Link
-            href={`/contact?type=devis&produit=${product.slug}`}
+            href={`/devis?type=devis&produit=${product.slug}`}
             className="w-full btn-primary text-sm py-2.5 rounded-md"
           >
             <IconZap size={14} />

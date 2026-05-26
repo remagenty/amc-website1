@@ -94,7 +94,7 @@ export default function SavPage() {
             Un atelier certifié, des techniciens spécialisés et des pièces d&apos;origine pour maintenir vos engins au meilleur niveau.
           </p>
           <div className="flex flex-wrap gap-3">
-            <Link href="/contact?type=sav" className="btn-primary">
+            <Link href="/devis?type=sav" className="btn-primary">
               Prendre rendez-vous <IconArrowRight size={16} />
             </Link>
             <a href="tel:+33426784390" className="btn-outline">
@@ -180,7 +180,7 @@ export default function SavPage() {
               Contactez notre atelier pour un devis, une prise en charge ou tout renseignement sur nos contrats d&apos;entretien.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/contact?type=sav" className="btn-primary">
+              <Link href="/devis?type=sav" className="btn-primary">
                 Demander un devis SAV <IconArrowRight size={16} />
               </Link>
               <a href="tel:+33426784390" className="btn-outline">

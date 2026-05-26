@@ -91,13 +91,6 @@ const MEGA_MENUS = {
       { label: "Promove Demolition", href: "/partenaires/promove-demolition", badge: "Officiel" },
     ],
   },
-  services: [
-    { label: "Vente machines neuves", href: "/catalogue?etat=neuf", desc: "Gamme complète constructeurs" },
-    { label: "Service après-vente", href: "/services#sav", desc: "Certification SE+" },
-    { label: "Pièces détachées", href: "/services#pieces", desc: "Origine constructeur" },
-    { label: "Maintenance préventive", href: "/services#maintenance", desc: "Contrats sur mesure" },
-    { label: "Vente machine d'occasion", href: "/occasion", desc: "Inspecté & garanti" },
-  ],
   partenaires: [
     { label: "Wacker Neuson", href: "/partenaires/wacker-neuson", desc: "Gamme complète équipements compacts" },
     { label: "Magni", href: "/partenaires/magni", desc: "Télescopiques rotatifs haute performance" },
@@ -261,7 +254,7 @@ export function Header() {
                 </span>
               </Link>
               <Link
-                href="/contact?type=devis"
+                href="/devis"
                 className="btn-primary text-sm py-2.5 px-4 ml-2 rounded-lg whitespace-nowrap"
               >
                 Demande de devis
@@ -338,17 +331,19 @@ export function Header() {
                 Actualités & Expertise
               </Link>
 
-              {/* Contact & Devis */}
+              <div className="ml-auto" />
+
+              {/* Contact — extrême droite */}
               <Link
                 href="/contact"
-                className="flex items-center px-4 text-sm font-semibold text-white hover:text-amc-yellow transition-colors"
+                className={`flex items-center px-4 text-sm font-semibold transition-colors ${
+                  pathname === "/contact"
+                    ? "text-amc-yellow"
+                    : "text-white hover:text-amc-yellow"
+                }`}
               >
-                Contact & Devis
+                Contact
               </Link>
-
-              <div className="ml-auto flex items-center gap-3">
-                <SEBadge size="sm" />
-              </div>
             </div>
           </div>
 
@@ -436,38 +431,68 @@ export function Header() {
             </div>
           )}
 
-          {/* Mega menu: Nos services */}
+          {/* Mega menu: Nos services — 3 blocs égaux */}
           {activeMenu === "services" && (
             <div className="mega-menu" style={{ position: "relative", zIndex: 50 }}>
               <div className="container-amc py-8">
-                <div className="grid grid-cols-12 gap-8">
-                  <div className="col-span-8">
-                    <h3 className="text-xs font-bold uppercase tracking-wider text-amc-text-secondary mb-4">
-                      Nos prestations
-                    </h3>
-                    <div className="grid grid-cols-2 gap-1">
-                      {MEGA_MENUS.services.map((item) => (
-                        <Link key={item.href} href={item.href} className="dropdown-item rounded-lg" onClick={closeMenu}>
-                          <div>
-                            <div className="font-semibold">{item.label}</div>
-                            <div className="text-xs text-amc-text-secondary">{item.desc}</div>
-                          </div>
-                        </Link>
+                <h3 className="text-xs font-bold uppercase tracking-wider text-amc-text-secondary mb-5">
+                  Nos prestations
+                </h3>
+                <div className="grid grid-cols-3 gap-5">
+
+                  {/* Bloc 1 — Vente & Location */}
+                  <div className="flex flex-col p-5 rounded-xl border border-gray-100 hover:border-amc-yellow/50 hover:shadow-md transition-all">
+                    <div className="w-10 h-10 rounded-lg bg-amc-yellow/10 flex items-center justify-center mb-4 text-xl">
+                      🏗️
+                    </div>
+                    <h4 className="font-bold text-amc-text text-base mb-3">Vente</h4>
+                    <ul className="space-y-2 text-sm text-amc-text-secondary flex-1">
+                      {["Machines neuves", "Machines d'occasion"].map((item) => (
+                        <li key={item} className="flex items-center gap-2">
+                          <span className="w-1.5 h-1.5 rounded-full bg-amc-yellow flex-shrink-0" />
+                          {item}
+                        </li>
                       ))}
-                    </div>
+                    </ul>
+                    <Link href="/catalogue" className="mt-5 btn-primary text-sm w-full justify-center" onClick={closeMenu}>
+                      Découvrir notre gamme <IconArrowRight size={13} />
+                    </Link>
                   </div>
-                  <div className="col-span-4">
-                    <div className="bg-amc-yellow/10 rounded-xl p-4 border border-amc-yellow/20">
-                      <SEBadge size="sm" />
-                      <div className="font-bold text-amc-text mb-1 text-sm mt-3">SAV certifié SE+</div>
-                      <p className="text-xs text-amc-text-secondary mb-3">
-                        Atelier agréé par les constructeurs, techniciens certifiés, pièces d&apos;origine garanties.
-                      </p>
-                      <Link href="/services" className="btn-primary text-sm w-full justify-center" onClick={closeMenu}>
-                        Nos services <IconArrowRight size={14} />
-                      </Link>
+
+                  {/* Bloc 2 — SAV certifié SE+ */}
+                  <div className="flex flex-col p-5 rounded-xl border border-amc-yellow/30 bg-amc-yellow/5 hover:border-amc-yellow hover:shadow-md transition-all">
+                    <div className="flex items-center gap-2 mb-4">
+                      <span className="text-2xl">🔧</span>
+                      <span className="text-xs font-bold bg-amc-yellow text-amc-text px-2 py-0.5 rounded">SE+</span>
                     </div>
+                    <h4 className="font-bold text-amc-text text-base mb-3">SAV certifié SE+</h4>
+                    <p className="text-sm text-amc-text-secondary flex-1">
+                      Atelier agréé par les constructeurs, techniciens certifiés, pièces d&apos;origine garanties.
+                    </p>
+                    <Link href="/sav" className="mt-5 btn-primary text-sm w-full justify-center" onClick={closeMenu}>
+                      En savoir plus <IconArrowRight size={13} />
+                    </Link>
                   </div>
+
+                  {/* Bloc 3 — Maintenance & Pièces */}
+                  <div className="flex flex-col p-5 rounded-xl border border-gray-100 hover:border-amc-yellow/50 hover:shadow-md transition-all">
+                    <div className="w-10 h-10 rounded-lg bg-amc-yellow/10 flex items-center justify-center mb-4 text-xl">
+                      ⚙️
+                    </div>
+                    <h4 className="font-bold text-amc-text text-base mb-3">Maintenance &amp; Pièces</h4>
+                    <ul className="space-y-2 text-sm text-amc-text-secondary flex-1">
+                      {["Pièces détachées d'origine constructeur", "Maintenance préventive (contrats sur mesure)"].map((item) => (
+                        <li key={item} className="flex items-center gap-2">
+                          <span className="w-1.5 h-1.5 rounded-full bg-amc-yellow flex-shrink-0" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                    <Link href="/devis?type=pieces" className="mt-5 btn-primary text-sm w-full justify-center" onClick={closeMenu}>
+                      Commander des pièces <IconArrowRight size={13} />
+                    </Link>
+                  </div>
+
                 </div>
               </div>
             </div>
@@ -520,6 +545,7 @@ export function Header() {
                   { label: "Magni", href: "/partenaires/magni" },
                   { label: "Promove Demolition", href: "/partenaires/promove-demolition" },
                   { label: "Nos services", href: "/services" },
+                  { label: "SAV & Atelier", href: "/sav" },
                   { label: "Actualités & Expertise", href: "/actualites" },
                   { label: "Contact & Devis", href: "/contact" },
                 ].map((link) => (
@@ -534,7 +560,7 @@ export function Header() {
                 ))}
               </nav>
               <div className="mt-4 pt-4 border-t border-gray-100">
-                <Link href="/contact?type=devis" className="btn-primary w-full justify-center text-sm">
+                <Link href="/devis" className="btn-primary w-full justify-center text-sm">
                   Demande de devis
                 </Link>
               </div>
