@@ -60,10 +60,10 @@ async function scrapeImages() {
       ensureDirectoryExists(destDir);
 
       // Aller sur la page de la machine
-      if (machine.url_wacker) {
-        console.log(`   🌐 Visite de ${machine.url_wacker}`);
+      if (machine.url_wacker_neuson) {
+        console.log(`   🌐 Visite de ${machine.url_wacker_neuson}`);
 
-        await page.goto(machine.url_wacker, {
+        await page.goto(machine.url_wacker_neuson, {
           waitUntil: 'networkidle2',
           timeout: 30000
         });
