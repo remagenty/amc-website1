@@ -338,24 +338,18 @@ export function Header() {
                     <div className="divide-y divide-gray-100">
                       {MATERIELS_CATEGORIES.map((cat) => (
                         <div key={cat.id}>
-                          <div className="flex items-center">
-                            <Link
-                              href={cat.href}
-                              className="flex-1 py-3 px-2 text-sm font-semibold text-amc-text hover:text-amc-yellow-dark transition-colors"
-                              onClick={closeMenu}
-                            >
+                          <button
+                            onClick={() => toggleSubCategory(cat.id)}
+                            className="w-full flex items-center justify-between py-3 px-2 hover:bg-gray-50 rounded-lg transition-colors cursor-pointer"
+                          >
+                            <span className="text-sm font-semibold text-amc-text hover:text-amc-yellow-dark transition-colors text-left">
                               {cat.label}
-                            </Link>
-                            <button
-                              onClick={(e) => { e.stopPropagation(); toggleSubCategory(cat.id); }}
-                              className="px-3 py-3 text-gray-400 hover:text-amc-text transition-colors"
-                            >
-                              <IconChevronDown
-                                size={14}
-                                className={`transition-transform duration-300 ${openSubCategory === cat.id ? "rotate-180" : ""}`}
-                              />
-                            </button>
-                          </div>
+                            </span>
+                            <IconChevronDown
+                              size={14}
+                              className={`text-gray-400 flex-shrink-0 transition-transform duration-300 ${openSubCategory === cat.id ? "rotate-180" : ""}`}
+                            />
+                          </button>
                           <div
                             style={{
                               maxHeight: openSubCategory === cat.id ? "200px" : "0",
