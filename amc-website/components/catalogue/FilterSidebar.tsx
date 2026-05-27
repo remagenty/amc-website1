@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { BRANDS, CATEGORIES } from "@/lib/data";
 import { IconChevronDown, IconX, IconFilter } from "@/components/ui/Icons";
 
 interface FilterSidebarProps {
@@ -17,6 +16,8 @@ interface FilterSidebarProps {
   totalCount: number;
   mobileOpen: boolean;
   onMobileClose: () => void;
+  availableCategories?: Array<{ id: string; label: string; count: number }>;
+  availableBrands?: Array<{ id: string; label: string; count: number }>;
 }
 
 function FilterGroup({
@@ -51,6 +52,8 @@ export function FilterSidebar({
   totalCount,
   mobileOpen,
   onMobileClose,
+  availableCategories,
+  availableBrands,
 }: FilterSidebarProps) {
   const toggleMulti = (key: string, value: string, current: string[]) => {
     const next = current.includes(value)
@@ -122,58 +125,62 @@ export function FilterSidebar({
       </FilterGroup>
 
       {/* Catégories */}
-      <FilterGroup title="Catégorie de matériel">
-        <div className="space-y-2">
-          {CATEGORIES.map((cat) => (
-            <label
-              key={cat.id}
-              className="flex items-center justify-between cursor-pointer group"
-            >
-              <div className="flex items-center gap-2.5">
-                <input
-                  type="checkbox"
-                  checked={selected.categories.includes(cat.id)}
-                  onChange={() =>
-                    toggleMulti("categories", cat.id, selected.categories)
-                  }
-                  className="w-4 h-4 accent-amc-yellow cursor-pointer rounded"
-                />
-                <span className="text-sm text-amc-text group-hover:text-amc-yellow-dark transition-colors">
-                  {cat.label}
-                </span>
-              </div>
-              <span className="text-xs text-amc-text-secondary">({cat.count})</span>
-            </label>
-          ))}
-        </div>
-      </FilterGroup>
+      {availableCategories && availableCategories.length > 0 && (
+        <FilterGroup title="Catégorie de matériel">
+          <div className="space-y-2">
+            {availableCategories.map((cat) => (
+              <label
+                key={cat.id}
+                className="flex items-center justify-between cursor-pointer group"
+              >
+                <div className="flex items-center gap-2.5">
+                  <input
+                    type="checkbox"
+                    checked={selected.categories.includes(cat.id)}
+                    onChange={() =>
+                      toggleMulti("categories", cat.id, selected.categories)
+                    }
+                    className="w-4 h-4 accent-amc-yellow cursor-pointer rounded"
+                  />
+                  <span className="text-sm text-amc-text group-hover:text-amc-yellow-dark transition-colors">
+                    {cat.label}
+                  </span>
+                </div>
+                <span className="text-xs text-amc-text-secondary">({cat.count})</span>
+              </label>
+            ))}
+          </div>
+        </FilterGroup>
+      )}
 
       {/* Marques */}
-      <FilterGroup title="Marque">
-        <div className="space-y-2">
-          {BRANDS.map((brand) => (
-            <label
-              key={brand.id}
-              className="flex items-center justify-between cursor-pointer group"
-            >
-              <div className="flex items-center gap-2.5">
-                <input
-                  type="checkbox"
-                  checked={selected.brands.includes(brand.id)}
-                  onChange={() =>
-                    toggleMulti("brands", brand.id, selected.brands)
-                  }
-                  className="w-4 h-4 accent-amc-yellow cursor-pointer rounded"
-                />
-                <span className="text-sm text-amc-text group-hover:text-amc-yellow-dark transition-colors">
-                  {brand.name}
-                </span>
-              </div>
-              <span className="text-xs text-amc-text-secondary">({brand.productCount})</span>
-            </label>
-          ))}
-        </div>
-      </FilterGroup>
+      {availableBrands && availableBrands.length > 0 && (
+        <FilterGroup title="Marque">
+          <div className="space-y-2">
+            {availableBrands.map((brand) => (
+              <label
+                key={brand.id}
+                className="flex items-center justify-between cursor-pointer group"
+              >
+                <div className="flex items-center gap-2.5">
+                  <input
+                    type="checkbox"
+                    checked={selected.brands.includes(brand.id)}
+                    onChange={() =>
+                      toggleMulti("brands", brand.id, selected.brands)
+                    }
+                    className="w-4 h-4 accent-amc-yellow cursor-pointer rounded"
+                  />
+                  <span className="text-sm text-amc-text group-hover:text-amc-yellow-dark transition-colors">
+                    {brand.label}
+                  </span>
+                </div>
+                <span className="text-xs text-amc-text-secondary">({brand.count})</span>
+              </label>
+            ))}
+          </div>
+        </FilterGroup>
+      )}
 
       {/* Budget */}
       <FilterGroup title="Budget">

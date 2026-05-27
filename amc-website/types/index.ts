@@ -40,6 +40,7 @@ export interface Product {
   tags: string[];
   applications: string[];
   sectors: string[];
+  categorySlug?: string;
 }
 
 export interface BrandInfo {

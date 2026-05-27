@@ -28,7 +28,7 @@ const MATERIELS_CATEGORIES = [
       { label: "Mini-pelles", href: "/materiels/mini-pelles" },
       { label: "Dumpers articulés", href: "/materiels/dumpers" },
       { label: "Chargeuses compactes", href: "/materiels/chargeuses" },
-      { label: "Télescopiques", href: "/materiels/telescopiques" },
+      { label: "Télescopiques WN", href: "/materiels/telescopiques" },
     ],
   },
   {
@@ -42,22 +42,25 @@ const MATERIELS_CATEGORIES = [
     ],
   },
   {
-    id: "demolition",
-    label: "Démolition & Outillage",
-    href: "/materiels/marteaux-piqueurs",
+    id: "telehandlers",
+    label: "Téléhandlers Magni",
+    href: "/materiels/telehandlers-rotatifs",
     subs: [
-      { label: "Marteaux piqueurs", href: "/materiels/marteaux-piqueurs" },
-      { label: "Outillage de sol", href: "/materiels/outillage" },
+      { label: "Téléhandlers rotatifs", href: "/materiels/telehandlers-rotatifs" },
+      { label: "Téléhandlers fixes", href: "/materiels/telehandlers-fixes" },
+      { label: "Téléhandlers agricoles", href: "/materiels/telehandlers-agricoles" },
     ],
   },
   {
-    id: "electrique",
-    label: "Solutions zéro émission",
-    href: "/materiels/mini-pelles",
+    id: "demolition",
+    label: "Démolition Promove",
+    href: "/materiels/brise-roches",
     subs: [
-      { label: "Mini-pelles électriques", href: "/materiels/mini-pelles" },
-      { label: "Dumpers électriques", href: "/materiels/dumpers" },
-      { label: "Chargeuses électriques", href: "/materiels/chargeuses" },
+      { label: "Brise-roches hydrauliques", href: "/materiels/brise-roches" },
+      { label: "Pinces multiprocesseurs", href: "/materiels/pinces-multiprocesseurs" },
+      { label: "Pulvérisateurs béton", href: "/materiels/pulverisateurs" },
+      { label: "Cisailles à ferraille", href: "/materiels/cisailles" },
+      { label: "Pinces de tri", href: "/materiels/pinces-de-tri" },
     ],
   },
 ];
@@ -65,9 +68,9 @@ const MATERIELS_CATEGORIES = [
 const MEGA_MENUS = {
   materiels: {
     brands: [
-      { label: "Wacker Neuson", href: "/partenaires/wacker-neuson", badge: "Officiel" },
-      { label: "Magni", href: "/partenaires/magni", badge: "Officiel" },
-      { label: "Promove Demolition", href: "/partenaires/promove-demolition", badge: "Officiel" },
+      { label: "Wacker Neuson", href: "/materiels/mini-pelles", badge: "55 machines" },
+      { label: "Magni", href: "/materiels/telehandlers-rotatifs", badge: "23 machines" },
+      { label: "Promove Demolition", href: "/materiels/brise-roches", badge: "22 outils" },
     ],
   },
   partenaires: [

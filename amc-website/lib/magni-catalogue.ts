@@ -1,6 +1,7 @@
 import catalogueData from "./catalogue_magni.json";
 import type { WnMachine } from "./wn-catalogue";
-import { CATEGORY_LABELS as WN_CATEGORY_LABELS, getCategoryUrlSlug as getWnCategoryUrlSlug } from "./wn-catalogue";
+import { wnMachineToProduct } from "./wn-catalogue";
+import type { Product } from "@/types";
 
 // Magni-specific categories
 export const MAGNI_CATEGORY_TO_SLUG: Record<string, string> = {
@@ -51,4 +52,17 @@ export function getMagniCategories(): Array<{slug: string; label: string; count:
 
 export function getMagniCategoryUrlSlug(machine: WnMachine): string {
   return MAGNI_CATEGORY_TO_SLUG[machine.categorie] ?? machine.categorie.toLowerCase().replace(/\s+/g, "-");
+}
+
+export function magniMachineToProduct(m: WnMachine): Product {
+  return {
+    ...wnMachineToProduct(m),
+    brand: "magni" as const,
+    categorySlug: getMagniCategoryUrlSlug(m),
+    tags: [m.categorie.toLowerCase(), m.sous_categorie.toLowerCase(), "magni"],
+  };
+}
+
+export function getMagniProducts(): Product[] {
+  return ALL_MAGNI_MACHINES.map(magniMachineToProduct);
 }

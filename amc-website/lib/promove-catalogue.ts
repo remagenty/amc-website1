@@ -1,5 +1,7 @@
 import catalogueData from "./catalogue_promove.json";
 import type { WnMachine } from "./wn-catalogue";
+import { wnMachineToProduct } from "./wn-catalogue";
+import type { Product } from "@/types";
 
 export const PROMOVE_CATEGORY_TO_SLUG: Record<string, string> = {
   "Brise-roche hydraulique": "brise-roches",
@@ -53,4 +55,17 @@ export function getPromoveCategories(): Array<{slug: string; label: string; coun
 
 export function getPromoveCategoryUrlSlug(machine: WnMachine): string {
   return PROMOVE_CATEGORY_TO_SLUG[machine.categorie] ?? machine.categorie.toLowerCase().replace(/\s+/g, "-");
+}
+
+export function promoveMachineToProduct(m: WnMachine): Product {
+  return {
+    ...wnMachineToProduct(m),
+    brand: "promove-demolition" as const,
+    categorySlug: getPromoveCategoryUrlSlug(m),
+    tags: [m.categorie.toLowerCase(), m.sous_categorie.toLowerCase(), "promove demolition"],
+  };
+}
+
+export function getPromoveProducts(): Product[] {
+  return ALL_PROMOVE_MACHINES.map(promoveMachineToProduct);
 }

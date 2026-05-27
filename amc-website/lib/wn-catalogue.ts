@@ -177,6 +177,7 @@ export function wnMachineToProduct(m: WnMachine): Product {
     tags: [m.categorie.toLowerCase(), m.sous_categorie.toLowerCase(), "wacker neuson"],
     applications: m.applications,
     sectors: m.secteurs,
+    categorySlug: getCategoryUrlSlug(m),
   };
 }
 
