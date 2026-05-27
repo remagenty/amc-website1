@@ -10,6 +10,7 @@ import {
   getAllWnMachines,
   getWnCategories,
 } from "@/lib/wn-catalogue";
+import { getCatalogueBrands } from "@/lib/data";
 import {
   IconSearch,
   IconFilter,
@@ -23,6 +24,20 @@ import { SEBadge } from "@/components/ui/SEBadge";
 // Computed once at module level — 55 machines, no re-import cost
 const ALL_MACHINES = getAllWnMachines();
 const ALL_CATEGORIES = getWnCategories(); // [{slug, label, count}]
+const ALL_BRANDS = getCatalogueBrands(); // [{id, label, count}]
+
+function brandIdFromMarque(marque: string): string {
+  const m = marque.toLowerCase();
+  if (m.includes("magni")) return "magni";
+  if (m.includes("promove")) return "promove-demolition";
+  return "wacker-neuson";
+}
+
+function placeholderForBrand(brandId: string): string {
+  if (brandId === "magni") return "/images/products/placeholder-magni.svg";
+  if (brandId === "promove-demolition") return "/images/products/placeholder-promove.svg";
+  return "/images/products/placeholder-wn.svg";
+}
 
 const SORT_OPTIONS = [
   { value: "featured", label: "Pertinence" },
@@ -34,9 +49,12 @@ const SORT_OPTIONS = [
 // ── Machine card ──────────────────────────────────────────────────────────────
 
 function MachineCard({ machine }: { machine: WnMachine }) {
+  const [imgError, setImgError] = useState(false);
   const categorySlug = getCategoryUrlSlug(machine);
   const href = `/materiels/${categorySlug}/${machine.slug}`;
   const isAvailable = machine.disponibilite === "disponible";
+  const brandId = brandIdFromMarque(machine.marque ?? "");
+  const imgSrc = machine.medias.image_principale_local ?? machine.medias.image_principale;
 
   return (
     <Link
@@ -44,17 +62,27 @@ function MachineCard({ machine }: { machine: WnMachine }) {
       className="group bg-white rounded-xl shadow-card hover:shadow-card-hover transition-all duration-200 overflow-hidden flex flex-col"
     >
       <div className="relative aspect-[4/3] bg-gray-100 overflow-hidden">
-        <Image
-          src={(machine.medias.image_principale_local ?? machine.medias.image_principale) || "/images/products/placeholder-wn.jpg"}
-          alt={machine.nom_complet}
-          fill
-          loading="lazy"
-          className="object-cover group-hover:scale-105 transition-transform duration-300"
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          onError={(e) => {
-            (e.target as HTMLImageElement).src = "/images/products/placeholder-wn.jpg";
-          }}
-        />
+        {imgSrc && !imgError ? (
+          <Image
+            src={imgSrc}
+            alt={machine.nom_complet}
+            fill
+            loading="lazy"
+            className="object-cover group-hover:scale-105 transition-transform duration-300"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            onError={() => setImgError(true)}
+          />
+        ) : (
+          <div className="w-full h-full flex flex-col items-center justify-center bg-gray-50">
+            <Image
+              src={placeholderForBrand(brandId)}
+              alt=""
+              fill
+              className="object-contain p-4 opacity-60"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            />
+          </div>
+        )}
         <div className="absolute top-3 left-3 flex flex-wrap gap-1.5">
           <span className={`text-xs font-bold px-2.5 py-1 rounded-full ${
             machine.etat === "neuf"
@@ -232,6 +260,7 @@ export function WnCategoryPage({
   const [mobileFiltres, setMobileFiltres] = useState(false);
 
   const categoryLabel = CATEGORY_LABELS[categorySlug] ?? categorySlug;
+  const currentBrandId = brandIdFromMarque(machines[0]?.marque ?? "");
 
   // ── Dynamic category counts (all machines, filtered by status + availability) ──
   const categoryCounts = useMemo(() => {
@@ -301,7 +330,39 @@ export function WnCategoryPage({
           </div>
         </div>
 
-        {/* ── 1. Catégories de machines ── */}
+        {/* ── 1. Marque ── */}
+        <FilterSection title="Marque">
+          <div className="space-y-0.5">
+            {ALL_BRANDS.map((brand) => {
+              const isCurrentBrand = brand.id === currentBrandId;
+              return (
+                <Link
+                  key={brand.id}
+                  href={isCurrentBrand ? "#" : `/catalogue?marque=${brand.id}`}
+                  className={`flex items-center justify-between px-3 py-2 rounded-lg text-sm transition-all ${
+                    isCurrentBrand
+                      ? "bg-amc-yellow/15 text-amc-text font-semibold border border-amc-yellow/40"
+                      : "text-amc-text-secondary hover:text-amc-text hover:bg-gray-50"
+                  }`}
+                >
+                  <span className="flex items-center gap-2">
+                    {isCurrentBrand && (
+                      <span className="w-1.5 h-1.5 rounded-full bg-amc-yellow flex-shrink-0" />
+                    )}
+                    {brand.label}
+                  </span>
+                  <span className={`text-xs flex-shrink-0 ml-2 ${
+                    isCurrentBrand ? "font-bold text-amc-text" : "text-amc-text-secondary"
+                  }`}>
+                    ({brand.count})
+                  </span>
+                </Link>
+              );
+            })}
+          </div>
+        </FilterSection>
+
+        {/* ── 2. Catégories de machines ── */}
         <FilterSection title="Catégories de machines">
           <div className="space-y-0.5">
             {ALL_CATEGORIES.map((cat) => {
@@ -336,7 +397,7 @@ export function WnCategoryPage({
           </div>
         </FilterSection>
 
-        {/* ── 2. Disponibilité ── */}
+        {/* ── 3. Disponibilité ── */}
         <FilterSection title="Disponibilité" count={filterAvailability !== "all" ? 1 : undefined}>
           <div className="space-y-2.5">
             <FilterOption
@@ -364,7 +425,7 @@ export function WnCategoryPage({
           </div>
         </FilterSection>
 
-        {/* ── 3. État du matériel ── */}
+        {/* ── 4. État du matériel ── */}
         <FilterSection title="État du matériel" count={filterStatus !== "all" ? 1 : undefined}>
           <div className="space-y-2.5">
             <FilterOption
