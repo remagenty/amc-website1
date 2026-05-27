@@ -34,6 +34,7 @@ export function CataloguePage() {
     categories: searchParams.get("categorie") ? [searchParams.get("categorie") as string] : [],
     brands: searchParams.get("marque") ? [searchParams.get("marque") as string] : [],
     status: searchParams.get("etat") ?? "all",
+    availability: "all" as string,
     priceMin: undefined as number | undefined,
     priceMax: undefined as number | undefined,
   });
@@ -48,7 +49,7 @@ export function CataloguePage() {
   };
 
   const handleReset = () => {
-    setFilters({ categories: [], brands: [], status: "all", priceMin: undefined, priceMax: undefined });
+    setFilters({ categories: [], brands: [], status: "all", availability: "all", priceMin: undefined, priceMax: undefined });
     setSearch("");
     setPage(1);
   };
@@ -75,6 +76,10 @@ export function CataloguePage() {
     }
     if (filters.status !== "all") {
       list = list.filter((p) => p.status === filters.status);
+    }
+    if (filters.availability !== "all") {
+      const wantAvailable = filters.availability === "disponible";
+      list = list.filter((p) => p.available === wantAvailable);
     }
     if (filters.priceMin !== undefined) {
       list = list.filter((p) => p.price === undefined || p.price >= (filters.priceMin ?? 0));
@@ -107,6 +112,7 @@ export function CataloguePage() {
     filters.categories.length +
     filters.brands.length +
     (filters.status !== "all" ? 1 : 0) +
+    (filters.availability !== "all" ? 1 : 0) +
     (filters.priceMin ? 1 : 0) +
     (filters.priceMax ? 1 : 0);
 
