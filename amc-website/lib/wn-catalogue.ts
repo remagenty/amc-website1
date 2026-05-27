@@ -110,7 +110,12 @@ const SPEC_MAP: Record<string, { label: string; unit: string }> = {
   // Magni telehandler specs
   portee_max_m: { label: "Portée maximale", unit: "m" },
   vitesse_transport_kmh: { label: "Vitesse de transport", unit: "km/h" },
-  rotation_deg: { label: "Rotation tourelle", unit: "°" },
+  rotation_deg: { label: "Rotation", unit: "°" },
+  // Promove demolition attachment specs
+  debit_l_min: { label: "Débit hydraulique", unit: "L/min" },
+  diametre_burin_mm: { label: "Diamètre burin", unit: "mm" },
+  ouverture_machoire_mm: { label: "Ouverture mâchoire", unit: "mm" },
+  force_fermeture_kn: { label: "Force de fermeture", unit: "kN" },
 };
 
 function technicalSpecsToArray(specs: Record<string, string | number>): Spec[] {

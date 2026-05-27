@@ -16,6 +16,14 @@ import {
   MAGNI_CATEGORY_LABELS,
   MAGNI_SLUG_TO_CATEGORY,
 } from "@/lib/magni-catalogue";
+import {
+  getPromoveMachineBySlug,
+  getPromoveSimilarMachines,
+  getAllPromoveMachines,
+  getPromoveCategoryUrlSlug,
+  PROMOVE_CATEGORY_LABELS,
+  PROMOVE_SLUG_TO_CATEGORY,
+} from "@/lib/promove-catalogue";
 import { WnProductDetail } from "@/components/products/WnProductDetail";
 
 interface Props {
@@ -31,12 +39,19 @@ export async function generateStaticParams() {
     categorie: getMagniCategoryUrlSlug(m),
     slug: m.slug,
   }));
-  return [...wnParams, ...magniParams];
+  const promoveParams = getAllPromoveMachines().map((m) => ({
+    categorie: getPromoveCategoryUrlSlug(m),
+    slug: m.slug,
+  }));
+  return [...wnParams, ...magniParams, ...promoveParams];
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const machine = getWnMachineBySlug(slug) ?? getMagniMachineBySlug(slug);
+  const machine =
+    getWnMachineBySlug(slug) ??
+    getMagniMachineBySlug(slug) ??
+    getPromoveMachineBySlug(slug);
   if (!machine) return {};
 
   return {
@@ -56,20 +71,27 @@ export default async function ProductPage({ params }: Props) {
   const { slug, categorie } = await params;
 
   const isMagni = !!MAGNI_SLUG_TO_CATEGORY[categorie];
+  const isPromove = !!PROMOVE_SLUG_TO_CATEGORY[categorie];
   const isWn = !!SLUG_TO_CATEGORY[categorie];
-  if (!isMagni && !isWn) notFound();
+  if (!isMagni && !isPromove && !isWn) notFound();
 
   const machine = isMagni
     ? getMagniMachineBySlug(slug)
+    : isPromove
+    ? getPromoveMachineBySlug(slug)
     : getWnMachineBySlug(slug);
   if (!machine) notFound();
 
   const similar = isMagni
     ? getMagniSimilarMachines(machine, 4)
+    : isPromove
+    ? getPromoveSimilarMachines(machine, 4)
     : getWnSimilarMachines(machine, 4);
 
   const categoryLabel = isMagni
     ? (MAGNI_CATEGORY_LABELS[categorie] ?? categorie)
+    : isPromove
+    ? (PROMOVE_CATEGORY_LABELS[categorie] ?? categorie)
     : (CATEGORY_LABELS[categorie] ?? categorie);
 
   return (

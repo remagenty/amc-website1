@@ -1,0 +1,158 @@
+══════════════════════════════════════════════════════════════════════
+  CATALOGUE PROMOVE DEMOLITION — URLs du site AMC Alpes Matériel Compact
+  Généré le 27/05/2026 — 22 outils
+══════════════════════════════════════════════════════════════════════
+
+── PAGES CATÉGORIES ─────────────────────────────────────────────────
+
+  Brise-roches hydrauliques (9 outils)
+  https://amc-website1.vercel.app/materiels/brise-roches
+
+  Pinces multiprocesseurs (3 outils)
+  https://amc-website1.vercel.app/materiels/pinces-multiprocesseurs
+
+  Pulvérisateurs béton (3 outils)
+  https://amc-website1.vercel.app/materiels/pulverisateurs
+
+  Cisailles à ferraille (2 outils)
+  https://amc-website1.vercel.app/materiels/cisailles
+
+  Pinces de tri et démolition (5 outils)
+  https://amc-website1.vercel.app/materiels/pinces-de-tri
+
+──────────────────────────────────────────────────────────────────────
+  BRISE-ROCHES HYDRAULIQUES (9 outils)
+──────────────────────────────────────────────────────────────────────
+
+  Brise-roche hydraulique Promove xP 61
+  → AMC     : https://amc-website1.vercel.app/materiels/brise-roches/promove-xp-61
+  → Promove : https://www.promovedemolition.com/hydraulic-breakers/light-range/xp-61/
+
+  Brise-roche hydraulique Promove xP 101
+  → AMC     : https://amc-website1.vercel.app/materiels/brise-roches/promove-xp-101
+  → Promove : https://www.promovedemolition.com/hydraulic-breakers/light-range/xp-101/
+
+  Brise-roche hydraulique Promove xP 151
+  → AMC     : https://amc-website1.vercel.app/materiels/brise-roches/promove-xp-151
+  → Promove : https://www.promovedemolition.com/hydraulic-breakers/light-range/xp-151/
+
+  Brise-roche hydraulique Promove xP 300
+  → AMC     : https://amc-website1.vercel.app/materiels/brise-roches/promove-xp-300
+  → Promove : https://www.promovedemolition.com/hydraulic-breakers/light-range/xp-300/
+
+  Brise-roche hydraulique Promove xP 400
+  → AMC     : https://amc-website1.vercel.app/materiels/brise-roches/promove-xp-400
+  → Promove : https://www.promovedemolition.com/hydraulic-breakers/light-range/xp-400/
+
+  Brise-roche hydraulique Promove xP 600
+  → AMC     : https://amc-website1.vercel.app/materiels/brise-roches/promove-xp-600
+  → Promove : https://www.promovedemolition.com/hydraulic-breakers/medium-heavy-range/xp-600/
+
+  Brise-roche hydraulique Promove xP 800
+  → AMC     : https://amc-website1.vercel.app/materiels/brise-roches/promove-xp-800
+  → Promove : https://www.promovedemolition.com/hydraulic-breakers/medium-heavy-range/xp-800/
+
+  Brise-roche hydraulique Promove xP 1000
+  → AMC     : https://amc-website1.vercel.app/materiels/brise-roches/promove-xp-1000
+  → Promove : https://www.promovedemolition.com/hydraulic-breakers/medium-heavy-range/xp-1000/
+
+  Brise-roche hydraulique Promove xP 1500
+  → AMC     : https://amc-website1.vercel.app/materiels/brise-roches/promove-xp-1500
+  → Promove : https://www.promovedemolition.com/hydraulic-breakers/medium-heavy-range/xp-1500/
+
+──────────────────────────────────────────────────────────────────────
+  PINCES MULTIPROCESSEURS (3 outils)
+──────────────────────────────────────────────────────────────────────
+
+  Pince multiprocesseur Promove CP 210
+  → AMC     : https://amc-website1.vercel.app/materiels/pinces-multiprocesseurs/promove-cp-210
+  → Promove : https://www.promovedemolition.com/multi-processors/cp-210/
+
+  Pince multiprocesseur Promove CP 300 Sharker
+  → AMC     : https://amc-website1.vercel.app/materiels/pinces-multiprocesseurs/promove-cp-300-sk
+  → Promove : https://www.promovedemolition.com/multi-processors/cp-300-sharker/
+
+  Pince multiprocesseur Promove CP 600
+  → AMC     : https://amc-website1.vercel.app/materiels/pinces-multiprocesseurs/promove-cp-600
+  → Promove : https://www.promovedemolition.com/multi-processors/cp-600/
+
+──────────────────────────────────────────────────────────────────────
+  PULVÉRISATEURS BÉTON (3 outils)
+──────────────────────────────────────────────────────────────────────
+
+  Pulvérisateur béton Promove CF 45
+  → AMC     : https://amc-website1.vercel.app/materiels/pulverisateurs/promove-cf-45
+  → Promove : https://www.promovedemolition.com/concrete-pulverizers/cf-45/
+
+  Pulvérisateur béton Promove CF 130
+  → AMC     : https://amc-website1.vercel.app/materiels/pulverisateurs/promove-cf-130
+  → Promove : https://www.promovedemolition.com/concrete-pulverizers/cf-130/
+
+  Pulvérisateur rotatif Promove CR 800
+  → AMC     : https://amc-website1.vercel.app/materiels/pulverisateurs/promove-cr-800
+  → Promove : https://www.promovedemolition.com/rotating-pulverizers/cr-800/
+
+──────────────────────────────────────────────────────────────────────
+  CISAILLES À FERRAILLE (2 outils)
+──────────────────────────────────────────────────────────────────────
+
+  Cisaille à ferraille Promove SC 700
+  → AMC     : https://amc-website1.vercel.app/materiels/cisailles/promove-sc-700
+  → Promove : https://www.promovedemolition.com/scrap-shears/sc-700/
+
+  Cisaille à ferraille Promove SC 1300
+  → AMC     : https://amc-website1.vercel.app/materiels/cisailles/promove-sc-1300
+  → Promove : https://www.promovedemolition.com/scrap-shears/sc-1300/
+
+──────────────────────────────────────────────────────────────────────
+  PINCES DE TRI ET DÉMOLITION (5 outils)
+──────────────────────────────────────────────────────────────────────
+
+  Pince de tri Promove SG 5.8
+  → AMC     : https://amc-website1.vercel.app/materiels/pinces-de-tri/promove-sg-5-8
+  → Promove : https://www.promovedemolition.com/sorting-grapples/sg-5-8/
+
+  Pince de tri Promove SG 10.16
+  → AMC     : https://amc-website1.vercel.app/materiels/pinces-de-tri/promove-sg-10-16
+  → Promove : https://www.promovedemolition.com/sorting-grapples/sg-10-16/
+
+  Pince de tri Promove SG 16.20
+  → AMC     : https://amc-website1.vercel.app/materiels/pinces-de-tri/promove-sg-16-20
+  → Promove : https://www.promovedemolition.com/sorting-grapples/sg-16-20/
+
+  Pince de démolition lourde Promove HG+ 17.28
+  → AMC     : https://amc-website1.vercel.app/materiels/pinces-de-tri/promove-hg-17-28
+  → Promove : https://www.promovedemolition.com/demolition-grapples/hg-plus-17-28/
+
+  Pince de démolition lourde Promove HG+ 25.38
+  → AMC     : https://amc-website1.vercel.app/materiels/pinces-de-tri/promove-hg-25-38
+  → Promove : https://www.promovedemolition.com/demolition-grapples/hg-plus-25-38/
+
+══════════════════════════════════════════════════════════════════════
+  URLs OFFICIELLES PROMOVEDEMOLITION.COM
+══════════════════════════════════════════════════════════════════════
+
+  xP 61                https://www.promovedemolition.com/hydraulic-breakers/light-range/xp-61/
+  xP 101               https://www.promovedemolition.com/hydraulic-breakers/light-range/xp-101/
+  xP 151               https://www.promovedemolition.com/hydraulic-breakers/light-range/xp-151/
+  xP 300               https://www.promovedemolition.com/hydraulic-breakers/light-range/xp-300/
+  xP 400               https://www.promovedemolition.com/hydraulic-breakers/light-range/xp-400/
+  xP 600               https://www.promovedemolition.com/hydraulic-breakers/medium-heavy-range/xp-600/
+  xP 800               https://www.promovedemolition.com/hydraulic-breakers/medium-heavy-range/xp-800/
+  xP 1000              https://www.promovedemolition.com/hydraulic-breakers/medium-heavy-range/xp-1000/
+  xP 1500              https://www.promovedemolition.com/hydraulic-breakers/medium-heavy-range/xp-1500/
+  CP 210               https://www.promovedemolition.com/multi-processors/cp-210/
+  CP 300 Sharker       https://www.promovedemolition.com/multi-processors/cp-300-sharker/
+  CP 600               https://www.promovedemolition.com/multi-processors/cp-600/
+  CF 45                https://www.promovedemolition.com/concrete-pulverizers/cf-45/
+  CF 130               https://www.promovedemolition.com/concrete-pulverizers/cf-130/
+  CR 800               https://www.promovedemolition.com/rotating-pulverizers/cr-800/
+  SC 700               https://www.promovedemolition.com/scrap-shears/sc-700/
+  SC 1300              https://www.promovedemolition.com/scrap-shears/sc-1300/
+  SG 5.8               https://www.promovedemolition.com/sorting-grapples/sg-5-8/
+  SG 10.16             https://www.promovedemolition.com/sorting-grapples/sg-10-16/
+  SG 16.20             https://www.promovedemolition.com/sorting-grapples/sg-16-20/
+  HG+ 17.28            https://www.promovedemolition.com/demolition-grapples/hg-plus-17-28/
+  HG+ 25.38            https://www.promovedemolition.com/demolition-grapples/hg-plus-25-38/
+
+══════════════════════════════════════════════════════════════════════
