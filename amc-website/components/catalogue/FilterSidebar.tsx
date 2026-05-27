@@ -8,6 +8,7 @@ interface FilterSidebarProps {
     categories: string[];
     brands: string[];
     status: string;
+    availability?: string;
     priceMin?: number;
     priceMax?: number;
   };
@@ -66,6 +67,7 @@ export function FilterSidebar({
     selected.categories.length +
     selected.brands.length +
     (selected.status !== "all" ? 1 : 0) +
+    (selected.availability && selected.availability !== "all" ? 1 : 0) +
     (selected.priceMin ? 1 : 0) +
     (selected.priceMax ? 1 : 0);
 
@@ -96,33 +98,34 @@ export function FilterSidebar({
         <strong className="text-amc-text">{totalCount}</strong> résultat{totalCount > 1 ? "s" : ""}
       </p>
 
-      {/* État */}
-      <FilterGroup title="État">
-        <div className="space-y-2">
-          {[
-            { value: "all", label: "Neuf et occasion" },
-            { value: "neuf", label: "Matériel neuf" },
-            { value: "occasion", label: "Matériel occasion" },
-          ].map((opt) => (
-            <label
-              key={opt.value}
-              className="flex items-center gap-2.5 cursor-pointer group"
-            >
-              <input
-                type="radio"
-                name="status"
-                value={opt.value}
-                checked={selected.status === opt.value}
-                onChange={() => onChange("status", opt.value)}
-                className="w-4 h-4 accent-amc-yellow cursor-pointer"
-              />
-              <span className="text-sm text-amc-text group-hover:text-amc-yellow-dark transition-colors">
-                {opt.label}
-              </span>
-            </label>
-          ))}
-        </div>
-      </FilterGroup>
+      {/* Marque — FIRST */}
+      {availableBrands && availableBrands.length > 0 && (
+        <FilterGroup title="Marque">
+          <div className="space-y-2">
+            {availableBrands.map((brand) => (
+              <label
+                key={brand.id}
+                className="flex items-center justify-between cursor-pointer group"
+              >
+                <div className="flex items-center gap-2.5">
+                  <input
+                    type="checkbox"
+                    checked={selected.brands.includes(brand.id)}
+                    onChange={() =>
+                      toggleMulti("brands", brand.id, selected.brands)
+                    }
+                    className="w-4 h-4 accent-amc-yellow cursor-pointer rounded"
+                  />
+                  <span className="text-sm text-amc-text group-hover:text-amc-yellow-dark transition-colors">
+                    {brand.label}
+                  </span>
+                </div>
+                <span className="text-xs text-amc-text-secondary">({brand.count})</span>
+              </label>
+            ))}
+          </div>
+        </FilterGroup>
+      )}
 
       {/* Catégories */}
       {availableCategories && availableCategories.length > 0 && (
@@ -153,34 +156,61 @@ export function FilterSidebar({
         </FilterGroup>
       )}
 
-      {/* Marques */}
-      {availableBrands && availableBrands.length > 0 && (
-        <FilterGroup title="Marque">
-          <div className="space-y-2">
-            {availableBrands.map((brand) => (
-              <label
-                key={brand.id}
-                className="flex items-center justify-between cursor-pointer group"
-              >
-                <div className="flex items-center gap-2.5">
-                  <input
-                    type="checkbox"
-                    checked={selected.brands.includes(brand.id)}
-                    onChange={() =>
-                      toggleMulti("brands", brand.id, selected.brands)
-                    }
-                    className="w-4 h-4 accent-amc-yellow cursor-pointer rounded"
-                  />
-                  <span className="text-sm text-amc-text group-hover:text-amc-yellow-dark transition-colors">
-                    {brand.label}
-                  </span>
-                </div>
-                <span className="text-xs text-amc-text-secondary">({brand.count})</span>
-              </label>
-            ))}
-          </div>
-        </FilterGroup>
-      )}
+      {/* Disponibilité */}
+      <FilterGroup title="Disponibilité">
+        <div className="space-y-2">
+          {[
+            { value: "all", label: "Tous" },
+            { value: "disponible", label: "En stock" },
+            { value: "sur_commande", label: "Sur commande" },
+          ].map((opt) => (
+            <label
+              key={opt.value}
+              className="flex items-center gap-2.5 cursor-pointer group"
+            >
+              <input
+                type="radio"
+                name="availability"
+                value={opt.value}
+                checked={(selected.availability ?? "all") === opt.value}
+                onChange={() => onChange("availability", opt.value)}
+                className="w-4 h-4 accent-amc-yellow cursor-pointer"
+              />
+              <span className="text-sm text-amc-text group-hover:text-amc-yellow-dark transition-colors">
+                {opt.label}
+              </span>
+            </label>
+          ))}
+        </div>
+      </FilterGroup>
+
+      {/* État */}
+      <FilterGroup title="État">
+        <div className="space-y-2">
+          {[
+            { value: "all", label: "Neuf et occasion" },
+            { value: "neuf", label: "Matériel neuf" },
+            { value: "occasion", label: "Matériel occasion" },
+          ].map((opt) => (
+            <label
+              key={opt.value}
+              className="flex items-center gap-2.5 cursor-pointer group"
+            >
+              <input
+                type="radio"
+                name="status"
+                value={opt.value}
+                checked={selected.status === opt.value}
+                onChange={() => onChange("status", opt.value)}
+                className="w-4 h-4 accent-amc-yellow cursor-pointer"
+              />
+              <span className="text-sm text-amc-text group-hover:text-amc-yellow-dark transition-colors">
+                {opt.label}
+              </span>
+            </label>
+          ))}
+        </div>
+      </FilterGroup>
 
       {/* Budget */}
       <FilterGroup title="Budget">
