@@ -54,7 +54,8 @@ function MachineCard({ machine }: { machine: WnMachine }) {
   const href = `/materiels/${categorySlug}/${machine.slug}`;
   const isAvailable = machine.disponibilite === "disponible";
   const brandId = brandIdFromMarque(machine.marque ?? "");
-  const imgSrc = machine.medias.image_principale_local ?? machine.medias.image_principale;
+  const rawSrc = machine.medias.image_principale_local ?? machine.medias.image_principale;
+  const imgSrc = rawSrc ? encodeURI(rawSrc) : null;
 
   return (
     <Link
