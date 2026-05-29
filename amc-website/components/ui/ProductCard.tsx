@@ -31,7 +31,11 @@ export function ProductCard({ product, className = "" }: ProductCardProps) {
   return (
     <article
       className={`card overflow-hidden group cursor-pointer ${className}`}
-      onClick={() => router.push(`/produit/${product.slug}`)}
+      onClick={() => router.push(
+        product.categorySlug
+          ? `/materiels/${product.categorySlug}/${product.slug}`
+          : `/produit/${product.slug}`
+      )}
     >
       <div className="relative overflow-hidden aspect-[4/3] bg-gray-100">
         <Image
@@ -100,7 +104,7 @@ export function ProductCard({ product, className = "" }: ProductCardProps) {
 
         <div className="mt-3 pt-3 border-t border-gray-100" onClick={(e) => e.stopPropagation()}>
           <Link
-            href={`/devis?type=devis&produit=${product.slug}`}
+            href={`/devis?type=devis&produit=${product.slug}&modele=${encodeURIComponent(product.name)}`}
             className="w-full btn-primary text-sm py-2.5 rounded-md"
           >
             <IconZap size={14} />

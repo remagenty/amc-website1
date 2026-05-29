@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react";
 import { useSearchParams } from "next/navigation";
-import { PRODUCTS } from "@/lib/data";
+import { getMachines, getCatalogueCategories, getCatalogueBrands } from "@/lib/data";
 import { ProductCard } from "@/components/ui/ProductCard";
 import { FilterSidebar } from "@/components/catalogue/FilterSidebar";
 import { IconFilter, IconSearch } from "@/components/ui/Icons";
@@ -17,15 +17,24 @@ const SORT_OPTIONS = [
 
 const PER_PAGE = 12;
 
+const ALL_MACHINES = getMachines();
+const AVAILABLE_CATEGORIES = getCatalogueCategories();
+const AVAILABLE_BRANDS = getCatalogueBrands();
+
+const BRAND_DISPLAY: Record<string, string> = {
+  "wacker-neuson": "Wacker Neuson",
+  magni: "Magni",
+  "promove-demolition": "Promove Demolition",
+};
+
 export function CataloguePage() {
   const searchParams = useSearchParams();
 
   const [filters, setFilters] = useState({
-    categories: searchParams.get("categorie")
-      ? [searchParams.get("categorie") as string]
-      : [],
+    categories: searchParams.get("categorie") ? [searchParams.get("categorie") as string] : [],
     brands: searchParams.get("marque") ? [searchParams.get("marque") as string] : [],
     status: searchParams.get("etat") ?? "all",
+    availability: "all" as string,
     priceMin: undefined as number | undefined,
     priceMax: undefined as number | undefined,
   });
@@ -40,13 +49,13 @@ export function CataloguePage() {
   };
 
   const handleReset = () => {
-    setFilters({ categories: [], brands: [], status: "all", priceMin: undefined, priceMax: undefined });
+    setFilters({ categories: [], brands: [], status: "all", availability: "all", priceMin: undefined, priceMax: undefined });
     setSearch("");
     setPage(1);
   };
 
   const filtered = useMemo(() => {
-    let list: Product[] = [...PRODUCTS];
+    let list: Product[] = [...ALL_MACHINES];
 
     if (search.trim()) {
       const q = search.toLowerCase();
@@ -60,13 +69,17 @@ export function CataloguePage() {
     }
 
     if (filters.categories.length > 0) {
-      list = list.filter((p) => filters.categories.includes(p.category));
+      list = list.filter((p) => p.categorySlug && filters.categories.includes(p.categorySlug));
     }
     if (filters.brands.length > 0) {
       list = list.filter((p) => filters.brands.includes(p.brand));
     }
     if (filters.status !== "all") {
       list = list.filter((p) => p.status === filters.status);
+    }
+    if (filters.availability !== "all") {
+      const wantAvailable = filters.availability === "disponible";
+      list = list.filter((p) => p.available === wantAvailable);
     }
     if (filters.priceMin !== undefined) {
       list = list.filter((p) => p.price === undefined || p.price >= (filters.priceMin ?? 0));
@@ -86,9 +99,6 @@ export function CataloguePage() {
         const pb = b.priceOnRequest ? -Infinity : (b.price ?? -Infinity);
         return pb - pa;
       }
-      if (sort === "newest") {
-        return (b.year ?? 2024) - (a.year ?? 2024);
-      }
       return (b.featured ? 1 : 0) - (a.featured ? 1 : 0);
     });
 
@@ -97,6 +107,14 @@ export function CataloguePage() {
 
   const totalPages = Math.ceil(filtered.length / PER_PAGE);
   const paginated = filtered.slice((page - 1) * PER_PAGE, page * PER_PAGE);
+
+  const activeCount =
+    filters.categories.length +
+    filters.brands.length +
+    (filters.status !== "all" ? 1 : 0) +
+    (filters.availability !== "all" ? 1 : 0) +
+    (filters.priceMin ? 1 : 0) +
+    (filters.priceMax ? 1 : 0);
 
   return (
     <div className="min-h-screen bg-amc-cream">
@@ -120,42 +138,36 @@ export function CataloguePage() {
             Catalogue matériels de chantier
           </h1>
           <p className="text-amc-text-secondary mt-2 text-sm">
-            Matériels neufs et d'occasion — Wacker Neuson, Magni, Promove Demolition
+            {ALL_MACHINES.length} machines — Wacker Neuson, Magni, Promove Demolition
           </p>
         </div>
 
         {/* Toolbar */}
         <div className="flex flex-col sm:flex-row gap-3 mb-6">
-          {/* Search */}
           <div className="relative flex-1 max-w-md">
             <IconSearch size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
             <input
               type="search"
               placeholder="Rechercher un modèle, une référence..."
               value={search}
-              onChange={(e) => {
-                setSearch(e.target.value);
-                setPage(1);
-              }}
+              onChange={(e) => { setSearch(e.target.value); setPage(1); }}
               className="w-full pl-9 pr-4 py-2.5 bg-white border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-amc-yellow"
             />
           </div>
 
-          {/* Mobile filter button */}
           <button
             onClick={() => setMobileFiltres(true)}
             className="lg:hidden btn-secondary text-sm py-2.5 gap-2"
           >
             <IconFilter size={16} />
             Filtres
-            {(filters.categories.length + filters.brands.length + (filters.status !== "all" ? 1 : 0)) > 0 && (
+            {activeCount > 0 && (
               <span className="bg-amc-yellow text-amc-text text-xs font-bold px-1.5 py-0.5 rounded-full">
-                {filters.categories.length + filters.brands.length + (filters.status !== "all" ? 1 : 0)}
+                {activeCount}
               </span>
             )}
           </button>
 
-          {/* Sort */}
           <select
             value={sort}
             onChange={(e) => setSort(e.target.value)}
@@ -167,8 +179,8 @@ export function CataloguePage() {
           </select>
         </div>
 
-        {/* Active filters chips */}
-        {(filters.categories.length > 0 || filters.brands.length > 0 || filters.status !== "all") && (
+        {/* Active filter chips */}
+        {activeCount > 0 && (
           <div className="flex flex-wrap gap-2 mb-6">
             {filters.status !== "all" && (
               <button
@@ -179,22 +191,25 @@ export function CataloguePage() {
                 <span aria-hidden>×</span>
               </button>
             )}
-            {filters.categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => handleFilterChange("categories", filters.categories.filter((c) => c !== cat))}
-                className="inline-flex items-center gap-1.5 px-3 py-1 bg-amc-yellow/10 text-amc-text text-xs font-medium rounded-full border border-amc-yellow/30 hover:bg-red-50 hover:border-red-200 hover:text-red-600 transition-colors capitalize"
-              >
-                {cat} <span aria-hidden>×</span>
-              </button>
-            ))}
+            {filters.categories.map((cat) => {
+              const label = AVAILABLE_CATEGORIES.find(c => c.id === cat)?.label ?? cat;
+              return (
+                <button
+                  key={cat}
+                  onClick={() => handleFilterChange("categories", filters.categories.filter((c) => c !== cat))}
+                  className="inline-flex items-center gap-1.5 px-3 py-1 bg-amc-yellow/10 text-amc-text text-xs font-medium rounded-full border border-amc-yellow/30 hover:bg-red-50 hover:border-red-200 hover:text-red-600 transition-colors"
+                >
+                  {label} <span aria-hidden>×</span>
+                </button>
+              );
+            })}
             {filters.brands.map((brand) => (
               <button
                 key={brand}
                 onClick={() => handleFilterChange("brands", filters.brands.filter((b) => b !== brand))}
                 className="inline-flex items-center gap-1.5 px-3 py-1 bg-amc-yellow/10 text-amc-text text-xs font-medium rounded-full border border-amc-yellow/30 hover:bg-red-50 hover:border-red-200 hover:text-red-600 transition-colors"
               >
-                {brand.replace("-", " ")} <span aria-hidden>×</span>
+                {BRAND_DISPLAY[brand] ?? brand} <span aria-hidden>×</span>
               </button>
             ))}
           </div>
@@ -209,6 +224,8 @@ export function CataloguePage() {
             totalCount={filtered.length}
             mobileOpen={mobileFiltres}
             onMobileClose={() => setMobileFiltres(false)}
+            availableCategories={AVAILABLE_CATEGORIES}
+            availableBrands={AVAILABLE_BRANDS}
           />
 
           <div className="flex-1 min-w-0">
@@ -235,7 +252,6 @@ export function CataloguePage() {
                   ))}
                 </div>
 
-                {/* Pagination */}
                 {totalPages > 1 && (
                   <div className="mt-10 flex justify-center gap-2" aria-label="Pagination">
                     <button

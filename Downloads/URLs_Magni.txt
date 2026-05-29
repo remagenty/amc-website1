@@ -1,0 +1,149 @@
+══════════════════════════════════════════════════════════════════════
+  CATALOGUE MAGNI — URLs du site AMC Alpes Matériel Compact
+  Généré le 26/05/2026 — 23 machines
+══════════════════════════════════════════════════════════════════════
+
+── PAGES CATÉGORIES ─────────────────────────────────────────────────
+
+  Téléhandlers rotatifs (11 machines)
+  https://amc-website1.vercel.app/materiels/telehandlers-rotatifs
+
+  Téléhandlers fixes (7 machines)
+  https://amc-website1.vercel.app/materiels/telehandlers-fixes
+
+  Téléhandlers agricoles (5 machines)
+  https://amc-website1.vercel.app/materiels/telehandlers-agricoles
+
+──────────────────────────────────────────────────────────────────────
+  TÉLÉHANDLERS ROTATIFS (11 machines)
+──────────────────────────────────────────────────────────────────────
+
+  Téléhandler rotatif Magni RTH 5.18
+  → AMC  : https://amc-website1.vercel.app/materiels/telehandlers-rotatifs/magni-rth-5-18
+  → Magni: https://www.magnith.com/fr/produits/5-18/
+
+  Téléhandler rotatif Magni RTH 5.21
+  → AMC  : https://amc-website1.vercel.app/materiels/telehandlers-rotatifs/magni-rth-5-21
+  → Magni: https://www.magnith.com/fr/prodotto/5-21/
+
+  Téléhandler rotatif Magni RTH 5.23
+  → AMC  : https://amc-website1.vercel.app/materiels/telehandlers-rotatifs/magni-rth-5-23
+  → Magni: https://www.magnith.com/fr/produits/5-23/
+
+  Téléhandler rotatif Magni RTH 5.25
+  → AMC  : https://amc-website1.vercel.app/materiels/telehandlers-rotatifs/magni-rth-5-25
+  → Magni: https://www.magnith.com/fr/produits/rth-5-25/
+
+  Téléhandler rotatif Magni RTH 6.26
+  → AMC  : https://amc-website1.vercel.app/materiels/telehandlers-rotatifs/magni-rth-6-26
+  → Magni: https://www.magnith.com/fr/produits/6-26/
+
+  Téléhandler rotatif Magni RTH 6.30
+  → AMC  : https://amc-website1.vercel.app/materiels/telehandlers-rotatifs/magni-rth-6-30
+  → Magni: https://www.magnith.com/fr/produits/rth-6-30/
+
+  Téléhandler rotatif Magni RTH 6.35
+  → AMC  : https://amc-website1.vercel.app/materiels/telehandlers-rotatifs/magni-rth-6-35
+  → Magni: https://www.magnith.com/fr/produits/rth-6-35/
+
+  Téléhandler rotatif Magni RTH 7.26
+  → AMC  : https://amc-website1.vercel.app/materiels/telehandlers-rotatifs/magni-rth-7-26
+  → Magni: https://www.magnith.com/fr/produits/rth-7-26/
+
+  Téléhandler rotatif Magni RTH 8.35
+  → AMC  : https://amc-website1.vercel.app/materiels/telehandlers-rotatifs/magni-rth-8-35
+  → Magni: https://www.magnith.com/fr/produits/rth-8-35/
+
+  Téléhandler rotatif Magni RTH 8.39
+  → AMC  : https://amc-website1.vercel.app/materiels/telehandlers-rotatifs/magni-rth-8-39
+  → Magni: https://www.magnith.com/fr/produits/rth-8-39/
+
+  Téléhandler rotatif Magni RTH 13.26
+  → AMC  : https://amc-website1.vercel.app/materiels/telehandlers-rotatifs/magni-rth-13-26
+  → Magni: https://www.magnith.com/fr/produits/rth-13-26/
+
+──────────────────────────────────────────────────────────────────────
+  TÉLÉHANDLERS FIXES (7 machines)
+──────────────────────────────────────────────────────────────────────
+
+  Téléhandler fixe Magni TH 3.6
+  → AMC  : https://amc-website1.vercel.app/materiels/telehandlers-fixes/magni-th-3-6
+  → Magni: https://www.magnith.com/fr/produits/3-6/
+
+  Téléhandler fixe Magni TH 4.5.15
+  → AMC  : https://amc-website1.vercel.app/materiels/telehandlers-fixes/magni-th-4-5-15
+  → Magni: https://www.magnith.com/fr/produits/th-4-5-15/
+
+  Téléhandler fixe Magni TH 4.5.19
+  → AMC  : https://amc-website1.vercel.app/materiels/telehandlers-fixes/magni-th-4-5-19
+  → Magni: https://www.magnith.com/fr/produits/4-5-19-p/
+
+  Téléhandler fixe Magni TH 5.5.19
+  → AMC  : https://amc-website1.vercel.app/materiels/telehandlers-fixes/magni-th-5-5-19
+  → Magni: https://www.magnith.com/fr/produits/th-5-5-19/
+
+  Téléhandler fixe Magni TH 5.5.24
+  → AMC  : https://amc-website1.vercel.app/materiels/telehandlers-fixes/magni-th-5-5-24
+  → Magni: https://www.magnith.com/fr/produits/th-5-5-24/
+
+  Téléhandler fixe Magni TH 6.10
+  → AMC  : https://amc-website1.vercel.app/materiels/telehandlers-fixes/magni-th-6-10
+  → Magni: https://www.magnith.com/fr/produits/th-6-10/
+
+  Téléhandler fixe Magni TH 6.20
+  → AMC  : https://amc-website1.vercel.app/materiels/telehandlers-fixes/magni-th-6-20
+  → Magni: https://www.magnith.com/fr/produits/th-6-20/
+
+──────────────────────────────────────────────────────────────────────
+  TÉLÉHANDLERS AGRICOLES (5 machines)
+──────────────────────────────────────────────────────────────────────
+
+  Téléhandler agricole Magni THA 3.6
+  → AMC  : https://amc-website1.vercel.app/materiels/telehandlers-agricoles/magni-tha-3-6
+  → Magni: https://www.magnith.com/fr/produits/tha-3-6/
+
+  Téléhandler agricole Magni THA 4.5.8
+  → AMC  : https://amc-website1.vercel.app/materiels/telehandlers-agricoles/magni-tha-4-5-8
+  → Magni: https://www.magnith.com/fr/produits/tha-4-5-8/
+
+  Téléhandler agricole Magni THA 4.5.10
+  → AMC  : https://amc-website1.vercel.app/materiels/telehandlers-agricoles/magni-tha-4-5-10
+  → Magni: https://www.magnith.com/fr/produits/tha-4-5-10/
+
+  Téléhandler agricole Magni THA 5.8
+  → AMC  : https://amc-website1.vercel.app/materiels/telehandlers-agricoles/magni-tha-5-8
+  → Magni: https://www.magnith.com/fr/produits/tha-5-8/
+
+  Téléhandler agricole Magni THA 5.10
+  → AMC  : https://amc-website1.vercel.app/materiels/telehandlers-agricoles/magni-tha-5-10
+  → Magni: https://www.magnith.com/fr/produits/tha-5-10/
+
+══════════════════════════════════════════════════════════════════════
+  URLs OFFICIELLES MAGNITH.COM
+══════════════════════════════════════════════════════════════════════
+
+  RTH 5.18        https://www.magnith.com/fr/produits/5-18/
+  RTH 5.21        https://www.magnith.com/fr/prodotto/5-21/
+  RTH 5.23        https://www.magnith.com/fr/produits/5-23/
+  RTH 5.25        https://www.magnith.com/fr/produits/rth-5-25/
+  RTH 6.26        https://www.magnith.com/fr/produits/6-26/
+  RTH 6.30        https://www.magnith.com/fr/produits/rth-6-30/
+  RTH 6.35        https://www.magnith.com/fr/produits/rth-6-35/
+  RTH 7.26        https://www.magnith.com/fr/produits/rth-7-26/
+  RTH 8.35        https://www.magnith.com/fr/produits/rth-8-35/
+  RTH 8.39        https://www.magnith.com/fr/produits/rth-8-39/
+  RTH 13.26       https://www.magnith.com/fr/produits/rth-13-26/
+  TH 3.6          https://www.magnith.com/fr/produits/3-6/
+  TH 4.5.15       https://www.magnith.com/fr/produits/th-4-5-15/
+  TH 4.5.19       https://www.magnith.com/fr/produits/4-5-19-p/
+  TH 5.5.19       https://www.magnith.com/fr/produits/th-5-5-19/
+  TH 5.5.24       https://www.magnith.com/fr/produits/th-5-5-24/
+  TH 6.10         https://www.magnith.com/fr/produits/th-6-10/
+  TH 6.20         https://www.magnith.com/fr/produits/th-6-20/
+  THA 3.6         https://www.magnith.com/fr/produits/tha-3-6/
+  THA 4.5.8       https://www.magnith.com/fr/produits/tha-4-5-8/
+  THA 4.5.10      https://www.magnith.com/fr/produits/tha-4-5-10/
+  THA 5.8         https://www.magnith.com/fr/produits/tha-5-8/
+  THA 5.10        https://www.magnith.com/fr/produits/tha-5-10/
+
+══════════════════════════════════════════════════════════════════════

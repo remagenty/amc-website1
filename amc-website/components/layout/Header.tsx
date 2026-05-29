@@ -21,64 +21,46 @@ const TOP_BAR_ITEMS: { label: string; href?: string }[] = [
 
 const MATERIELS_CATEGORIES = [
   {
-    id: "tp",
-    label: "Travaux Publics & TP",
-    href: "/catalogue?secteur=tp",
+    id: "terrassement",
+    label: "Terrassement & Excavation",
+    href: "/materiels/mini-pelles",
     subs: [
-      { label: "Mini-pelles", href: "/catalogue?categorie=mini-pelles" },
-      { label: "Compacteurs", href: "/catalogue?categorie=compacteurs" },
-      { label: "Chargeuses", href: "/catalogue?categorie=chargeuses" },
-      { label: "Dumpers articulés", href: "/catalogue?categorie=dumpers" },
-    ],
-  },
-  {
-    id: "demolition",
-    label: "Démolition & Déconstruction",
-    href: "/catalogue?secteur=demolition",
-    subs: [
-      { label: "Outils de démolition", href: "/catalogue?categorie=demolition" },
-      { label: "Brise-béton hydrauliques", href: "/catalogue?categorie=brise-beton" },
-      { label: "Cisailles hydrauliques", href: "/catalogue?categorie=cisailles" },
+      { label: "Mini-pelles", href: "/materiels/mini-pelles" },
+      { label: "Dumpers articulés", href: "/materiels/dumpers" },
+      { label: "Chargeuses compactes", href: "/materiels/chargeuses" },
+      { label: "Télescopiques WN", href: "/materiels/telescopiques" },
     ],
   },
   {
     id: "compactage",
     label: "Compactage",
-    href: "/catalogue?secteur=compactage",
+    href: "/materiels/compacteurs",
     subs: [
-      { label: "Plaques vibrantes", href: "/catalogue?categorie=plaques-vibrantes" },
-      { label: "Pilonneuses", href: "/catalogue?categorie=pilonneuses" },
-      { label: "Rouleaux compacteurs", href: "/catalogue?categorie=rouleaux" },
+      { label: "Compacteurs tandem", href: "/materiels/compacteurs" },
+      { label: "Plaques vibrantes", href: "/materiels/plaques-vibrantes" },
+      { label: "Pilonneuses", href: "/materiels/pilonneuses" },
     ],
   },
   {
-    id: "urbain",
-    label: "Chantiers urbains",
-    href: "/catalogue?secteur=urbain",
+    id: "telehandlers",
+    label: "Téléhandlers Magni",
+    href: "/materiels/telehandlers-rotatifs",
     subs: [
-      { label: "Matériel compact", href: "/catalogue?secteur=urbain&type=compact" },
-      { label: "Équipements d'accès réduit", href: "/catalogue?secteur=urbain&type=acces-reduit" },
-      { label: "Solutions zéro émission", href: "/catalogue?secteur=urbain&type=zero-emission" },
+      { label: "Téléhandlers rotatifs", href: "/materiels/telehandlers-rotatifs" },
+      { label: "Téléhandlers fixes", href: "/materiels/telehandlers-fixes" },
+      { label: "Téléhandlers agricoles", href: "/materiels/telehandlers-agricoles" },
     ],
   },
   {
-    id: "manutention",
-    label: "Manutention & Levage",
-    href: "/catalogue?secteur=manutention",
+    id: "demolition",
+    label: "Démolition Promove",
+    href: "/materiels/brise-roches",
     subs: [
-      { label: "Chariots télescopiques", href: "/catalogue?categorie=telescopiques" },
-      { label: "Nacelles", href: "/catalogue?categorie=nacelles" },
-      { label: "Plateformes élévatrices", href: "/catalogue?categorie=plateformes" },
-    ],
-  },
-  {
-    id: "btp",
-    label: "BTP & Construction",
-    href: "/catalogue?secteur=btp",
-    subs: [
-      { label: "Bétonnières", href: "/catalogue?categorie=betonnieres" },
-      { label: "Malaxeurs", href: "/catalogue?categorie=malaxeurs" },
-      { label: "Équipements de gros œuvre", href: "/catalogue?secteur=btp" },
+      { label: "Brise-roches hydrauliques", href: "/materiels/brise-roches" },
+      { label: "Pinces multiprocesseurs", href: "/materiels/pinces-multiprocesseurs" },
+      { label: "Pulvérisateurs béton", href: "/materiels/pulverisateurs" },
+      { label: "Cisailles à ferraille", href: "/materiels/cisailles" },
+      { label: "Pinces de tri", href: "/materiels/pinces-de-tri" },
     ],
   },
 ];
@@ -86,9 +68,9 @@ const MATERIELS_CATEGORIES = [
 const MEGA_MENUS = {
   materiels: {
     brands: [
-      { label: "Wacker Neuson", href: "/partenaires/wacker-neuson", badge: "Officiel" },
-      { label: "Magni", href: "/partenaires/magni", badge: "Officiel" },
-      { label: "Promove Demolition", href: "/partenaires/promove-demolition", badge: "Officiel" },
+      { label: "Wacker Neuson", href: "/materiels/mini-pelles", badge: "55 machines" },
+      { label: "Magni", href: "/materiels/telehandlers-rotatifs", badge: "23 machines" },
+      { label: "Promove Demolition", href: "/materiels/brise-roches", badge: "22 outils" },
     ],
   },
   partenaires: [
@@ -359,24 +341,18 @@ export function Header() {
                     <div className="divide-y divide-gray-100">
                       {MATERIELS_CATEGORIES.map((cat) => (
                         <div key={cat.id}>
-                          <div className="flex items-center">
-                            <Link
-                              href={cat.href}
-                              className="flex-1 py-3 px-2 text-sm font-semibold text-amc-text hover:text-amc-yellow-dark transition-colors"
-                              onClick={closeMenu}
-                            >
+                          <button
+                            onClick={() => toggleSubCategory(cat.id)}
+                            className="w-full flex items-center justify-between py-3 px-2 hover:bg-gray-50 rounded-lg transition-colors cursor-pointer"
+                          >
+                            <span className="text-sm font-semibold text-amc-text hover:text-amc-yellow-dark transition-colors text-left">
                               {cat.label}
-                            </Link>
-                            <button
-                              onClick={(e) => { e.stopPropagation(); toggleSubCategory(cat.id); }}
-                              className="px-3 py-3 text-gray-400 hover:text-amc-text transition-colors"
-                            >
-                              <IconChevronDown
-                                size={14}
-                                className={`transition-transform duration-300 ${openSubCategory === cat.id ? "rotate-180" : ""}`}
-                              />
-                            </button>
-                          </div>
+                            </span>
+                            <IconChevronDown
+                              size={14}
+                              className={`text-gray-400 flex-shrink-0 transition-transform duration-300 ${openSubCategory === cat.id ? "rotate-180" : ""}`}
+                            />
+                          </button>
                           <div
                             style={{
                               maxHeight: openSubCategory === cat.id ? "200px" : "0",
@@ -454,8 +430,8 @@ export function Header() {
                         </li>
                       ))}
                     </ul>
-                    <Link href="/catalogue" className="mt-5 btn-primary text-sm w-full justify-center" onClick={closeMenu}>
-                      Découvrir notre gamme <IconArrowRight size={13} />
+                    <Link href="/materiels" className="mt-5 btn-primary text-sm w-full justify-center" onClick={closeMenu}>
+                      Voir tous nos matériels <IconArrowRight size={13} />
                     </Link>
                   </div>
 
@@ -538,8 +514,8 @@ export function Header() {
               </form>
               <nav className="space-y-1">
                 {[
-                  { label: "Nos matériels", href: "/catalogue" },
-                  { label: "Matériel neuf", href: "/catalogue?etat=neuf" },
+                  { label: "Nos matériels", href: "/materiels" },
+                  { label: "Matériel neuf", href: "/materiels" },
                   { label: "Matériel occasion", href: "/occasion" },
                   { label: "Wacker Neuson", href: "/partenaires/wacker-neuson" },
                   { label: "Magni", href: "/partenaires/magni" },

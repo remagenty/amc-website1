@@ -1,4 +1,47 @@
 import type { Product, BrandInfo, HeroSlide, Service } from "@/types";
+import { getAllWnMachines, wnMachineToProduct, getCategoryUrlSlug, CATEGORY_LABELS as WN_CATEGORY_LABELS } from "./wn-catalogue";
+import { getMagniProducts, getMagniCategories, MAGNI_CATEGORY_LABELS } from "./magni-catalogue";
+import { getPromoveProducts, getPromoveCategories, PROMOVE_CATEGORY_LABELS } from "./promove-catalogue";
+
+export const ALL_CATEGORY_LABELS: Record<string, string> = {
+  ...WN_CATEGORY_LABELS,
+  ...MAGNI_CATEGORY_LABELS,
+  ...PROMOVE_CATEGORY_LABELS,
+};
+
+let _cachedMachines: Product[] | null = null;
+
+export function getMachines(): Product[] {
+  if (_cachedMachines) return _cachedMachines;
+  const wnProducts = getAllWnMachines().map(m => ({
+    ...wnMachineToProduct(m),
+    categorySlug: getCategoryUrlSlug(m),
+  }));
+  _cachedMachines = [...wnProducts, ...getMagniProducts(), ...getPromoveProducts()];
+  return _cachedMachines;
+}
+
+export function getCatalogueCategories(): Array<{id: string; label: string; count: number}> {
+  const counts: Record<string, number> = {};
+  for (const m of getMachines()) {
+    const slug = m.categorySlug ?? "";
+    if (slug) counts[slug] = (counts[slug] ?? 0) + 1;
+  }
+  return Object.entries(counts)
+    .map(([id, count]) => ({ id, label: ALL_CATEGORY_LABELS[id] ?? id, count }))
+    .sort((a, b) => a.label.localeCompare(b.label, "fr"));
+}
+
+export function getCatalogueBrands(): Array<{id: string; label: string; count: number}> {
+  const counts: Record<string, number> = {};
+  for (const m of getMachines()) counts[m.brand] = (counts[m.brand] ?? 0) + 1;
+  const labels: Record<string, string> = {
+    "wacker-neuson": "Wacker Neuson",
+    "magni": "Magni",
+    "promove-demolition": "Promove Demolition",
+  };
+  return Object.entries(counts).map(([id, count]) => ({ id, label: labels[id] ?? id, count }));
+}
 
 export const BRANDS: BrandInfo[] = [
   {
