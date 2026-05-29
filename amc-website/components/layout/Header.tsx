@@ -58,6 +58,7 @@ const MEGA_MENUS = {
     brands: [
       { label: "Wacker Neuson", href: "/materiels/mini-pelles", badge: "55 machines" },
       { label: "Magni", href: "/materiels/telehandlers-rotatifs", badge: "23 machines" },
+      { label: "Promove Demolition", href: "/materiels/brise-roches", badge: "22 outils" },
     ],
   },
   partenaires: [
