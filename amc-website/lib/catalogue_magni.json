@@ -37,7 +37,12 @@
         "Travaux en hauteur",
         "Montage de structures"
       ],
-      "secteurs": ["BTP", "Construction", "Événementiel", "Industrie"],
+      "secteurs": [
+        "BTP",
+        "Construction",
+        "Événementiel",
+        "Industrie"
+      ],
       "services": {
         "garantie_constructeur": true,
         "sav_certifie_se_plus": true,
@@ -45,7 +50,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/magni-rth-5-18.jpg",
+        "image_principale": "/images/machines/Téléhandler rotatif/magni-rth-5-18/hero.png",
         "images": [],
         "video": null
       },
@@ -87,7 +92,12 @@
         "Manutention sur grands chantiers",
         "Événementiel et spectacle"
       ],
-      "secteurs": ["BTP", "Construction", "Événementiel", "Industrie"],
+      "secteurs": [
+        "BTP",
+        "Construction",
+        "Événementiel",
+        "Industrie"
+      ],
       "services": {
         "garantie_constructeur": true,
         "sav_certifie_se_plus": true,
@@ -95,7 +105,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/magni-rth-5-21.jpg",
+        "image_principale": "/images/machines/Téléhandler rotatif/magni-rth-5-21/hero.png",
         "images": [],
         "video": null
       },
@@ -137,7 +147,12 @@
         "Levage industriel",
         "Assemblage de structures métalliques"
       ],
-      "secteurs": ["BTP", "Construction", "Événementiel", "Industrie"],
+      "secteurs": [
+        "BTP",
+        "Construction",
+        "Événementiel",
+        "Industrie"
+      ],
       "services": {
         "garantie_constructeur": true,
         "sav_certifie_se_plus": true,
@@ -145,7 +160,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/magni-rth-5-23.jpg",
+        "image_principale": "/images/machines/Téléhandler rotatif/magni-rth-5-23/hero.png",
         "images": [],
         "video": null
       },
@@ -187,7 +202,12 @@
         "Installations industrielles en hauteur",
         "Pose de façades et bardages"
       ],
-      "secteurs": ["BTP", "Construction", "Événementiel", "Industrie"],
+      "secteurs": [
+        "BTP",
+        "Construction",
+        "Événementiel",
+        "Industrie"
+      ],
       "services": {
         "garantie_constructeur": true,
         "sav_certifie_se_plus": true,
@@ -195,7 +215,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/magni-rth-5-25.jpg",
+        "image_principale": "/images/machines/Téléhandler rotatif/magni-rth-5-25/hero.png",
         "images": [],
         "video": null
       },
@@ -237,7 +257,12 @@
         "Chantiers de génie civil",
         "Opérations de manutention lourde"
       ],
-      "secteurs": ["BTP", "Construction", "Événementiel", "Industrie"],
+      "secteurs": [
+        "BTP",
+        "Construction",
+        "Événementiel",
+        "Industrie"
+      ],
       "services": {
         "garantie_constructeur": true,
         "sav_certifie_se_plus": true,
@@ -245,7 +270,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/magni-rth-6-26.jpg",
+        "image_principale": "/images/machines/Téléhandler rotatif/magni-rth-6-26/hero.png",
         "images": [],
         "video": null
       },
@@ -287,7 +312,12 @@
         "Travaux sur ouvrages d'art",
         "Montage de structures préfabriquées"
       ],
-      "secteurs": ["BTP", "Construction", "Événementiel", "Industrie"],
+      "secteurs": [
+        "BTP",
+        "Construction",
+        "Événementiel",
+        "Industrie"
+      ],
       "services": {
         "garantie_constructeur": true,
         "sav_certifie_se_plus": true,
@@ -295,7 +325,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/magni-rth-6-30.jpg",
+        "image_principale": "/images/machines/Téléhandler rotatif/magni-rth-6-30/hero.png",
         "images": [],
         "video": null
       },
@@ -337,7 +367,12 @@
         "Opérations de levage lourd",
         "Chantiers d'infrastructure majeurs"
       ],
-      "secteurs": ["BTP", "Construction", "Événementiel", "Industrie"],
+      "secteurs": [
+        "BTP",
+        "Construction",
+        "Événementiel",
+        "Industrie"
+      ],
       "services": {
         "garantie_constructeur": true,
         "sav_certifie_se_plus": true,
@@ -345,7 +380,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/magni-rth-6-35.jpg",
+        "image_principale": "/images/machines/Téléhandler rotatif/magni-rth-6-35/hero.png",
         "images": [],
         "video": null
       },
@@ -387,7 +422,12 @@
         "Montage de grandes structures",
         "Chantiers navals et portuaires"
       ],
-      "secteurs": ["BTP", "Construction", "Événementiel", "Industrie"],
+      "secteurs": [
+        "BTP",
+        "Construction",
+        "Événementiel",
+        "Industrie"
+      ],
       "services": {
         "garantie_constructeur": true,
         "sav_certifie_se_plus": true,
@@ -395,7 +435,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/magni-rth-7-26.jpg",
+        "image_principale": "/images/machines/Téléhandler rotatif/magni-rth-7-26/hero.png",
         "images": [],
         "video": null
       },
@@ -437,7 +477,12 @@
         "Industrie lourde et pétrochimie",
         "Événements et spectacles de grande envergure"
       ],
-      "secteurs": ["BTP", "Construction", "Événementiel", "Industrie"],
+      "secteurs": [
+        "BTP",
+        "Construction",
+        "Événementiel",
+        "Industrie"
+      ],
       "services": {
         "garantie_constructeur": true,
         "sav_certifie_se_plus": true,
@@ -445,7 +490,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/magni-rth-8-35.jpg",
+        "image_principale": "/images/machines/Téléhandler rotatif/magni-rth-8-35/hero.png",
         "images": [],
         "video": null
       },
@@ -487,7 +532,12 @@
         "Installations éoliennes et énergies renouvelables",
         "Chantiers à accès restreint"
       ],
-      "secteurs": ["BTP", "Construction", "Événementiel", "Industrie"],
+      "secteurs": [
+        "BTP",
+        "Construction",
+        "Événementiel",
+        "Industrie"
+      ],
       "services": {
         "garantie_constructeur": true,
         "sav_certifie_se_plus": true,
@@ -495,7 +545,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/magni-rth-8-39.jpg",
+        "image_principale": "/images/machines/Téléhandler rotatif/magni-rth-8-39/hero.png",
         "images": [],
         "video": null
       },
@@ -537,7 +587,12 @@
         "Chantiers offshore et navals",
         "Montage de grandes installations industrielles"
       ],
-      "secteurs": ["BTP", "Construction", "Événementiel", "Industrie"],
+      "secteurs": [
+        "BTP",
+        "Construction",
+        "Événementiel",
+        "Industrie"
+      ],
       "services": {
         "garantie_constructeur": true,
         "sav_certifie_se_plus": true,
@@ -545,7 +600,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/magni-rth-13-26.jpg",
+        "image_principale": "/images/machines/Téléhandler rotatif/magni-rth-13-26/hero.png",
         "images": [],
         "video": null
       },
@@ -586,7 +641,11 @@
         "Travaux de rénovation",
         "Stockage en entrepôt"
       ],
-      "secteurs": ["BTP", "Logistique", "Industrie"],
+      "secteurs": [
+        "BTP",
+        "Logistique",
+        "Industrie"
+      ],
       "services": {
         "garantie_constructeur": true,
         "sav_certifie_se_plus": true,
@@ -594,7 +653,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/magni-th-3-6.jpg",
+        "image_principale": "/images/machines/Téléhandler fixe/magni-th-3-6/hero.jpg",
         "images": [],
         "video": null
       },
@@ -635,7 +694,11 @@
         "Chargement et déchargement de camions",
         "Stockage en hauteur"
       ],
-      "secteurs": ["BTP", "Logistique", "Industrie"],
+      "secteurs": [
+        "BTP",
+        "Logistique",
+        "Industrie"
+      ],
       "services": {
         "garantie_constructeur": true,
         "sav_certifie_se_plus": true,
@@ -643,7 +706,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/magni-th-4-5-15.jpg",
+        "image_principale": "/images/machines/Téléhandler fixe/magni-th-4-5-15/hero.jpg",
         "images": [],
         "video": null
       },
@@ -684,7 +747,11 @@
         "Manutention en entrepôt logistique",
         "Travaux de second œuvre"
       ],
-      "secteurs": ["BTP", "Logistique", "Industrie"],
+      "secteurs": [
+        "BTP",
+        "Logistique",
+        "Industrie"
+      ],
       "services": {
         "garantie_constructeur": true,
         "sav_certifie_se_plus": true,
@@ -692,7 +759,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/magni-th-4-5-19.jpg",
+        "image_principale": "/images/machines/Téléhandler fixe/magni-th-4-5-19/hero.jpg",
         "images": [],
         "video": null
       },
@@ -735,7 +802,11 @@
         "Manutention de palettes lourdes",
         "Construction commerciale et industrielle"
       ],
-      "secteurs": ["BTP", "Logistique", "Industrie"],
+      "secteurs": [
+        "BTP",
+        "Logistique",
+        "Industrie"
+      ],
       "services": {
         "garantie_constructeur": true,
         "sav_certifie_se_plus": true,
@@ -743,7 +814,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/magni-th-5-5-19.jpg",
+        "image_principale": "/images/machines/Téléhandler fixe/magni-th-5-5-19/hero.jpg",
         "images": [],
         "video": null
       },
@@ -784,7 +855,11 @@
         "Chantiers industriels importants",
         "Montage de charpentes métalliques"
       ],
-      "secteurs": ["BTP", "Logistique", "Industrie"],
+      "secteurs": [
+        "BTP",
+        "Logistique",
+        "Industrie"
+      ],
       "services": {
         "garantie_constructeur": true,
         "sav_certifie_se_plus": true,
@@ -792,7 +867,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/magni-th-5-5-24.jpg",
+        "image_principale": "/images/machines/Téléhandler fixe/magni-th-5-5-24/hero.jpg",
         "images": [],
         "video": null
       },
@@ -833,7 +908,11 @@
         "Déplacement de préfabriqués béton",
         "Opérations portuaires et logistiques"
       ],
-      "secteurs": ["BTP", "Logistique", "Industrie"],
+      "secteurs": [
+        "BTP",
+        "Logistique",
+        "Industrie"
+      ],
       "services": {
         "garantie_constructeur": true,
         "sav_certifie_se_plus": true,
@@ -841,7 +920,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/magni-th-6-10.jpg",
+        "image_principale": "/images/machines/Téléhandler fixe/magni-th-6-10/hero.jpg",
         "images": [],
         "video": null
       },
@@ -882,7 +961,11 @@
         "Chantiers de préfabrication béton",
         "Opérations de manutention exceptionnelle"
       ],
-      "secteurs": ["BTP", "Logistique", "Industrie"],
+      "secteurs": [
+        "BTP",
+        "Logistique",
+        "Industrie"
+      ],
       "services": {
         "garantie_constructeur": true,
         "sav_certifie_se_plus": true,
@@ -890,7 +973,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/magni-th-6-20.jpg",
+        "image_principale": "/images/machines/Téléhandler fixe/magni-th-6-20/hero.jpg",
         "images": [],
         "video": null
       },
@@ -932,7 +1015,11 @@
         "Gestion des fumiers et lisiers",
         "Travaux de cour de ferme"
       ],
-      "secteurs": ["Agriculture", "Élevage", "Viticulture"],
+      "secteurs": [
+        "Agriculture",
+        "Élevage",
+        "Viticulture"
+      ],
       "services": {
         "garantie_constructeur": true,
         "sav_certifie_se_plus": true,
@@ -940,7 +1027,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/magni-tha-3-6.jpg",
+        "image_principale": "/images/machines/Téléhandler agricole/magni-tha-3-6/hero.jpg",
         "images": [],
         "video": null
       },
@@ -982,7 +1069,11 @@
         "Manutention en grandes exploitations céréalières",
         "Travaux de récolte et de stockage"
       ],
-      "secteurs": ["Agriculture", "Élevage", "Viticulture"],
+      "secteurs": [
+        "Agriculture",
+        "Élevage",
+        "Viticulture"
+      ],
       "services": {
         "garantie_constructeur": true,
         "sav_certifie_se_plus": true,
@@ -990,7 +1081,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/magni-tha-4-5-8.jpg",
+        "image_principale": "/images/machines/Téléhandler agricole/magni-tha-4-5-8/hero.jpg",
         "images": [],
         "video": null
       },
@@ -1032,7 +1123,11 @@
         "Manutention de balles en grande hauteur",
         "Approvisionnement de châteaux d'eau agricoles"
       ],
-      "secteurs": ["Agriculture", "Élevage", "Viticulture"],
+      "secteurs": [
+        "Agriculture",
+        "Élevage",
+        "Viticulture"
+      ],
       "services": {
         "garantie_constructeur": true,
         "sav_certifie_se_plus": true,
@@ -1040,7 +1135,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/magni-tha-4-5-10.jpg",
+        "image_principale": "/images/machines/Téléhandler agricole/magni-tha-4-5-10/hero.jpg",
         "images": [],
         "video": null
       },
@@ -1082,7 +1177,11 @@
         "Transport rapide entre les bâtiments",
         "Gestion des déchets et fumiers agricoles"
       ],
-      "secteurs": ["Agriculture", "Élevage", "Viticulture"],
+      "secteurs": [
+        "Agriculture",
+        "Élevage",
+        "Viticulture"
+      ],
       "services": {
         "garantie_constructeur": true,
         "sav_certifie_se_plus": true,
@@ -1090,7 +1189,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/magni-tha-5-8.jpg",
+        "image_principale": "/images/machines/Téléhandler agricole/magni-tha-5-8/hero.jpg",
         "images": [],
         "video": null
       },
@@ -1132,7 +1231,11 @@
         "Viticulture et arboriculture",
         "Stockage agricole en grande hauteur"
       ],
-      "secteurs": ["Agriculture", "Élevage", "Viticulture"],
+      "secteurs": [
+        "Agriculture",
+        "Élevage",
+        "Viticulture"
+      ],
       "services": {
         "garantie_constructeur": true,
         "sav_certifie_se_plus": true,
@@ -1140,7 +1243,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/magni-tha-5-10.jpg",
+        "image_principale": "/images/machines/Téléhandler agricole/magni-tha-5-10/hero.jpg",
         "images": [],
         "video": null
       },
