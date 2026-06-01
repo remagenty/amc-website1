@@ -1,0 +1,1117 @@
+{
+  "marque": "Promove Demolition",
+  "date_mise_a_jour": "2026-05-27",
+  "machines": [
+    {
+      "id": "promove-xp-61",
+      "marque": "Promove Demolition",
+      "modele": "xP 61",
+      "reference": "xP 61",
+      "nom_complet": "Brise-roche hydraulique Promove xP 61",
+      "slug": "promove-xp-61",
+      "categorie": "Brise-roche hydraulique",
+      "sous_categorie": "Série XP Light Range",
+      "description_courte": "Brise-roche hydraulique ultra-compact 60 kg pour mini-pelles 0,6–1,6 t. Idéal pour travaux en espace confiné.",
+      "description_longue": "Le Promove xP 61 est le brise-roche le plus compact de la gamme XP. Pesant seulement 60 kg, il est conçu pour les mini-pelles de 0,6 à 1,6 tonne et excelle dans les travaux de démolition en espaces confinés : sous-sols, tranchées étroites, intérieurs de bâtiments. Son énergie d'impact de 174 J assure une efficacité remarquable malgré sa taille réduite. La structure monobloc en acier haute résistance garantit durabilité et fiabilité sur les chantiers les plus exigeants.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "sur_commande",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "masse_operationnelle_kg": 60,
+        "energie_impact_j": 174,
+        "pression_service_bar": 110,
+        "debit_l_min": "10 – 15",
+        "diametre_burin_mm": 38,
+        "frequence_coups_min": "600 – 900"
+      },
+      "points_forts": [
+        "Ultra-compact pour mini-pelles dès 0,6 t",
+        "Idéal pour travaux en espace confiné",
+        "Structure monobloc haute résistance",
+        "Entretien simplifié"
+      ],
+      "applications": [
+        "Démolition en espace confiné",
+        "Tranchées étroites",
+        "Intérieurs de bâtiments",
+        "Travaux de rénovation"
+      ],
+      "secteurs": ["BTP", "Démolition", "Terrassement", "Rénovation"],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": false,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/promove/xp-61/hero.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.promovedemolition.com/hydraulic-breakers/light-range/xp-61/",
+      "date_scraping": "2026-05-27"
+    },
+    {
+      "id": "promove-xp-101",
+      "marque": "Promove Demolition",
+      "modele": "xP 101",
+      "reference": "xP 101",
+      "nom_complet": "Brise-roche hydraulique Promove xP 101",
+      "slug": "promove-xp-101",
+      "categorie": "Brise-roche hydraulique",
+      "sous_categorie": "Série XP Light Range",
+      "description_courte": "Marteau hydraulique léger 100 kg pour mini-pelles 1–2,5 t. Robuste et polyvalent pour démolition secondaire.",
+      "description_longue": "Le Promove xP 101 est un brise-roche léger conçu pour les mini-pelles de 1 à 2,5 tonnes. Avec une énergie d'impact de 350 J et un poids de 100 kg, il offre un excellent rapport performance/encombrement. Sa fréquence de frappe élevée (526 à 838 coups/min) le rend particulièrement efficace pour les travaux de démolition secondaire, les fondations superficielles et les chantiers de rénovation urbaine. Compatible avec la plupart des mini-pelles du marché.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "sur_commande",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "masse_operationnelle_kg": 100,
+        "energie_impact_j": 350,
+        "pression_service_bar": 110,
+        "debit_l_min": "15 – 25",
+        "diametre_burin_mm": 45,
+        "frequence_coups_min": "526 – 838"
+      },
+      "points_forts": [
+        "Haute fréquence de frappe jusqu'à 838 coups/min",
+        "Compatible mini-pelles standard",
+        "Structure acier haute résistance",
+        "Polyvalent sur tous types de matériaux"
+      ],
+      "applications": [
+        "Démolition secondaire",
+        "Fondations superficielles",
+        "Chantiers de rénovation",
+        "Découpe de béton"
+      ],
+      "secteurs": ["BTP", "Démolition", "Terrassement", "Rénovation"],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": false,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/promove/xp-101/hero.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.promovedemolition.com/hydraulic-breakers/light-range/xp-101/",
+      "date_scraping": "2026-05-27"
+    },
+    {
+      "id": "promove-xp-151",
+      "marque": "Promove Demolition",
+      "modele": "xP 151",
+      "reference": "xP 151",
+      "nom_complet": "Brise-roche hydraulique Promove xP 151",
+      "slug": "promove-xp-151",
+      "categorie": "Brise-roche hydraulique",
+      "sous_categorie": "Série XP Light Range",
+      "description_courte": "Brise-roche compact haute performance 165 kg pour pelles 1,8–4 t. Contre-pression admise jusqu'à 25 bar.",
+      "description_longue": "Le Promove xP 151 est un brise-roche compact offrant de hautes performances pour les pelles de 1,8 à 4 tonnes. Son énergie d'impact de 899 J en fait un outil remarquablement puissant pour sa classe de poids. Il accepte une contre-pression jusqu'à 25 bar, le rendant compatible avec les machines modernes équipées de circuits hydrauliques haute pression. La structure monobloc en acier haute résistance garantit une longévité maximale même sur les matériaux les plus durs.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "sur_commande",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "masse_operationnelle_kg": 165,
+        "energie_impact_j": 899,
+        "pression_service_bar": 130,
+        "debit_l_min": "25 – 35",
+        "diametre_burin_mm": 56
+      },
+      "points_forts": [
+        "899 J d'énergie pour sa classe de poids",
+        "Contre-pression admise 25 bar",
+        "Compatible pelles modernes",
+        "Structure monobloc longue durée"
+      ],
+      "applications": [
+        "Démolition béton armé",
+        "Roches dures",
+        "Terrassement en milieu urbain",
+        "Chantiers de rénovation"
+      ],
+      "secteurs": ["BTP", "Démolition", "Terrassement"],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": false,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/promove/xp-151/hero.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.promovedemolition.com/hydraulic-breakers/light-range/xp-151/",
+      "date_scraping": "2026-05-27"
+    },
+    {
+      "id": "promove-xp-300",
+      "marque": "Promove Demolition",
+      "modele": "xP 300",
+      "reference": "xP 300",
+      "nom_complet": "Brise-roche hydraulique Promove xP 300",
+      "slug": "promove-xp-300",
+      "categorie": "Brise-roche hydraulique",
+      "sous_categorie": "Série XP Light Range",
+      "description_courte": "Brise-roche léger polyvalent 300 kg pour pelles 4–9 t. Structure monobloc acier haute résistance.",
+      "description_longue": "Le Promove xP 300 est le brise-roche léger de référence pour les pelles de 4 à 9 tonnes. Pesant 300 kg, il délivre une énergie d'impact de 946 J avec une fréquence de frappe de 552 à 663 coups/min. Sa structure monobloc en acier haute résistance et son burin de 80 mm de diamètre lui permettent d'attaquer efficacement tous types de roches, béton et maçonnerie. C'est l'outil idéal pour les entreprises de terrassement et démolition en milieu urbain.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "sur_commande",
+      "featured": true,
+      "caracteristiques_techniques": {
+        "masse_operationnelle_kg": 300,
+        "energie_impact_j": 946,
+        "pression_service_bar": 130,
+        "debit_l_min": "50 – 60",
+        "diametre_burin_mm": 80,
+        "frequence_coups_min": "552 – 663"
+      },
+      "points_forts": [
+        "Idéal pour pelles de 4 à 9 tonnes",
+        "Structure monobloc acier haute résistance",
+        "Burin Ø80 mm pour tous matériaux",
+        "Fréquence de frappe élevée"
+      ],
+      "applications": [
+        "Terrassement",
+        "Démolition urbaine",
+        "Roches et béton",
+        "Fondations"
+      ],
+      "secteurs": ["BTP", "Démolition", "Terrassement", "Carrières"],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": false,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/promove/xp-300/hero.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.promovedemolition.com/hydraulic-breakers/light-range/xp-300/",
+      "date_scraping": "2026-05-27"
+    },
+    {
+      "id": "promove-xp-400",
+      "marque": "Promove Demolition",
+      "modele": "xP 400",
+      "reference": "xP 400",
+      "nom_complet": "Brise-roche hydraulique Promove xP 400",
+      "slug": "promove-xp-400",
+      "categorie": "Brise-roche hydraulique",
+      "sous_categorie": "Série XP Light Range",
+      "description_courte": "Brise-roche intermédiaire 430 kg pour pelles 5,5–10 t. Excellent rapport poids/performance avec 1 440 J.",
+      "description_longue": "Le Promove xP 400 est un brise-roche intermédiaire offrant un excellent rapport poids/performance pour les pelles de 5,5 à 10 tonnes. Son énergie d'impact de 1 440 J et sa pression de travail de 120 à 140 bar en font un outil puissant et efficace pour les chantiers de démolition et terrassement de taille moyenne. Il est particulièrement apprécié sur les chantiers BTP nécessitant une cadence élevée.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "sur_commande",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "masse_operationnelle_kg": 430,
+        "energie_impact_j": 1440,
+        "pression_service_bar": 140,
+        "debit_l_min": "70 – 80",
+        "diametre_burin_mm": 80,
+        "frequence_coups_min": "521 – 595"
+      },
+      "points_forts": [
+        "1 440 J d'énergie d'impact",
+        "Pour pelles de 5,5 à 10 tonnes",
+        "Cadence élevée 521–595 coups/min",
+        "Robustesse et longévité"
+      ],
+      "applications": [
+        "Démolition béton",
+        "Terrassement",
+        "Chantiers BTP",
+        "Roches moyennes à dures"
+      ],
+      "secteurs": ["BTP", "Démolition", "Terrassement"],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": false,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/promove/xp-400/hero.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.promovedemolition.com/hydraulic-breakers/light-range/xp-400/",
+      "date_scraping": "2026-05-27"
+    },
+    {
+      "id": "promove-xp-600",
+      "marque": "Promove Demolition",
+      "modele": "xP 600",
+      "reference": "xP 600",
+      "nom_complet": "Brise-roche hydraulique Promove xP 600",
+      "slug": "promove-xp-600",
+      "categorie": "Brise-roche hydraulique",
+      "sous_categorie": "Série XP Medium-Heavy Range",
+      "description_courte": "Brise-roche moyen 486 kg pour pelles 7–15 t. Haute fréquence de frappe et énergie 1 917 J.",
+      "description_longue": "Le Promove xP 600 est un brise-roche moyen de nouvelle génération pour les pelles de 7 à 15 tonnes. Avec 1 917 J d'énergie d'impact et une fréquence de frappe de 370 à 550 coups/min, il offre une polyvalence remarquable pour la démolition primaire et secondaire. Sa conception medium-heavy lui confère une robustesse accrue pour les applications intensives sur roches et béton armé.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "sur_commande",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "masse_operationnelle_kg": 486,
+        "energie_impact_j": 1917,
+        "pression_service_bar": 150,
+        "debit_l_min": "80 – 100",
+        "diametre_burin_mm": 90,
+        "frequence_coups_min": "370 – 550"
+      },
+      "points_forts": [
+        "1 917 J d'énergie d'impact",
+        "Haute fréquence de frappe",
+        "Gamme Medium-Heavy renforcée",
+        "Pour pelles 7 à 15 tonnes"
+      ],
+      "applications": [
+        "Démolition primaire et secondaire",
+        "Roches dures",
+        "Béton armé",
+        "Carrières"
+      ],
+      "secteurs": ["BTP", "Démolition", "Carrières", "Génie civil"],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": false,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/promove/xp-600/hero.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.promovedemolition.com/hydraulic-breakers/medium-heavy-range/xp-600/",
+      "date_scraping": "2026-05-27"
+    },
+    {
+      "id": "promove-xp-800",
+      "marque": "Promove Demolition",
+      "modele": "xP 800",
+      "reference": "xP 800",
+      "nom_complet": "Brise-roche hydraulique Promove xP 800",
+      "slug": "promove-xp-800",
+      "categorie": "Brise-roche hydraulique",
+      "sous_categorie": "Série XP Medium-Heavy Range",
+      "description_courte": "Brise-roche moyen-lourd 630 kg pour pelles 8–18 t. Haute performance avec 3 602 J et contre-pression 25 bar.",
+      "description_longue": "Le Promove xP 800 est un brise-roche moyen-lourd haute performance pour les pelles de 8 à 18 tonnes. Il délivre 3 602 J d'énergie d'impact avec une fréquence de frappe de 538 à 720 coups/min. Sa contre-pression admise de 25 bar le rend compatible avec toutes les pelles modernes à haute pression. Conçu pour les chantiers intensifs de démolition de béton armé, de carrières et de génie civil.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "sur_commande",
+      "featured": true,
+      "caracteristiques_techniques": {
+        "masse_operationnelle_kg": 630,
+        "energie_impact_j": 3602,
+        "pression_service_bar": 180,
+        "debit_l_min": "85 – 110",
+        "diametre_burin_mm": 100,
+        "frequence_coups_min": "538 – 720"
+      },
+      "points_forts": [
+        "3 602 J d'énergie d'impact",
+        "Fréquence de frappe jusqu'à 720 coups/min",
+        "Contre-pression admise 25 bar",
+        "Compatible pelles 8 à 18 tonnes"
+      ],
+      "applications": [
+        "Démolition béton armé",
+        "Travaux de carrière",
+        "Génie civil lourd",
+        "Roches dures"
+      ],
+      "secteurs": ["BTP", "Démolition", "Carrières", "Génie civil"],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": false,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/promove/xp-800/hero.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.promovedemolition.com/hydraulic-breakers/medium-heavy-range/xp-800/",
+      "date_scraping": "2026-05-27"
+    },
+    {
+      "id": "promove-xp-1000",
+      "marque": "Promove Demolition",
+      "modele": "xP 1000",
+      "reference": "xP 1000",
+      "nom_complet": "Brise-roche hydraulique Promove xP 1000",
+      "slug": "promove-xp-1000",
+      "categorie": "Brise-roche hydraulique",
+      "sous_categorie": "Série XP Medium-Heavy Range",
+      "description_courte": "Brise-roche lourd 1 000 kg pour pelles 10–20 t. Puissance 4 496 J pour démolition exigeante.",
+      "description_longue": "Le Promove xP 1000 est un brise-roche lourd conçu pour les pelles de 10 à 20 tonnes. Son énergie d'impact de 4 496 J en fait un outil redoutablement efficace sur les chantiers de démolition primaire, les carrières et le génie civil lourd. La structure renforcée Hardox garantit une durabilité maximale même dans les applications les plus intensives. Un outil de référence pour les entrepreneurs en démolition professionnelle.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "sur_commande",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "masse_operationnelle_kg": 1000,
+        "energie_impact_j": 4496,
+        "pression_service_bar": 180,
+        "debit_l_min": "90 – 120",
+        "diametre_burin_mm": 110
+      },
+      "points_forts": [
+        "4 496 J d'énergie d'impact",
+        "Structure renforcée Hardox",
+        "Pour pelles 10 à 20 tonnes",
+        "Applications démolition primaire"
+      ],
+      "applications": [
+        "Démolition primaire",
+        "Carrières",
+        "Génie civil lourd",
+        "Béton et roches dures"
+      ],
+      "secteurs": ["Démolition", "Carrières", "Génie civil"],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": false,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/promove/xp-1000/hero.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.promovedemolition.com/hydraulic-breakers/medium-heavy-range/xp-1000/",
+      "date_scraping": "2026-05-27"
+    },
+    {
+      "id": "promove-xp-1500",
+      "marque": "Promove Demolition",
+      "modele": "xP 1500",
+      "reference": "xP 1500",
+      "nom_complet": "Brise-roche hydraulique Promove xP 1500",
+      "slug": "promove-xp-1500",
+      "categorie": "Brise-roche hydraulique",
+      "sous_categorie": "Série XP Medium-Heavy Range",
+      "description_courte": "Brise-roche lourd 1 295 kg pour pelles 15–28 t. 5 448 J d'énergie pour carrières et grands chantiers.",
+      "description_longue": "Le Promove xP 1500 est un brise-roche lourd taillé pour les carrières et les grands chantiers de démolition. Compatible avec les pelles de 15 à 28 tonnes, il développe 5 448 J d'énergie d'impact avec un burin de 130 mm. Sa conception robuste et les matériaux Hardox employés dans sa fabrication lui confèrent une longévité exceptionnelle dans les environnements les plus sévères : roches abrasives, béton armé haute résistance, structures industrielles.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "sur_commande",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "masse_operationnelle_kg": 1295,
+        "energie_impact_j": 5448,
+        "pression_service_bar": 180,
+        "debit_l_min": "130 – 170",
+        "diametre_burin_mm": 130
+      },
+      "points_forts": [
+        "5 448 J d'énergie d'impact",
+        "Burin Ø130 mm pour roches dures",
+        "Compatible pelles 15 à 28 tonnes",
+        "Fabrication Hardox longue durée"
+      ],
+      "applications": [
+        "Carrières",
+        "Grands chantiers de démolition",
+        "Béton armé haute résistance",
+        "Structures industrielles"
+      ],
+      "secteurs": ["Démolition", "Carrières", "Industrie", "Génie civil"],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": false,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/promove/xp-1500/hero.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.promovedemolition.com/hydraulic-breakers/medium-heavy-range/xp-1500/",
+      "date_scraping": "2026-05-27"
+    },
+    {
+      "id": "promove-cp-210",
+      "marque": "Promove Demolition",
+      "modele": "CP 210",
+      "reference": "CP 210",
+      "nom_complet": "Pince multiprocesseur Promove CP 210",
+      "slug": "promove-cp-210",
+      "categorie": "Pince multiprocesseur",
+      "sous_categorie": "Série CP",
+      "description_courte": "Pince multiprocesseur compacte 210 kg pour mini-pelles 1,7–3 t. Mâchoires interchangeables béton, cisaille et tri.",
+      "description_longue": "Le Promove CP 210 est un multi-processeur compact idéal pour les mini-pelles de 1,7 à 3 tonnes. Équipé d'un vérin surdimensionné unique, il garantit de hautes performances de démolition pour son gabarit. Il est livré avec trois types de mâchoires interchangeables : béton PR pour l'écrasement, cisaille SC pour le découpage, et tri TG pour la séparation des matériaux. Une solution polyvalente et économique pour les petits chantiers de démolition sélective.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "sur_commande",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "masse_operationnelle_kg": 210,
+        "pression_service_bar": 250,
+        "debit_l_min": "20 – 35",
+        "ouverture_machoire_mm": 320
+      },
+      "points_forts": [
+        "3 types de mâchoires interchangeables",
+        "Vérin surdimensionné unique",
+        "Pour mini-pelles dès 1,7 t",
+        "Polyvalence béton / cisaille / tri"
+      ],
+      "applications": [
+        "Démolition sélective",
+        "Séparation béton/armatures",
+        "Découpage de ferrailles",
+        "Tri de matériaux"
+      ],
+      "secteurs": ["Démolition", "Recyclage", "BTP", "Rénovation"],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": false,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/promove/cp-210/hero.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.promovedemolition.com/multi-processors/cp-210/",
+      "date_scraping": "2026-05-27"
+    },
+    {
+      "id": "promove-cp-300-sk",
+      "marque": "Promove Demolition",
+      "modele": "CP 300 Sharker",
+      "reference": "CP 300 SK",
+      "nom_complet": "Pince multiprocesseur Promove CP 300 Sharker",
+      "slug": "promove-cp-300-sk",
+      "categorie": "Pince multiprocesseur",
+      "sous_categorie": "Série CP",
+      "description_courte": "Multiprocesseur 280 kg pour pelles 3–9 t. Booster hydraulique innovant, 20 t de force d'écrasement.",
+      "description_longue": "Le Promove CP 300 Sharker est une évolution innovante de la série CP, intégrant un booster hydraulique exclusif qui amplifie considérablement la force d'écrasement. Pour les pelles de 3 à 9 tonnes, il délivre jusqu'à 20 tonnes de force de fermeture avec une ouverture de mâchoire de 386 mm — la plus large de sa catégorie. Disponible en versions mâchoire béton PR et cisaille SC, le Sharker s'impose comme la référence pour la démolition sélective sur pelles de taille moyenne.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "sur_commande",
+      "featured": true,
+      "caracteristiques_techniques": {
+        "masse_operationnelle_kg": 280,
+        "pression_service_bar": 250,
+        "debit_l_min": "30 – 50",
+        "ouverture_machoire_mm": 386,
+        "force_fermeture_kn": 196
+      },
+      "points_forts": [
+        "Booster hydraulique exclusif",
+        "20 t de force d'écrasement",
+        "Plus grande ouverture de sa catégorie (386 mm)",
+        "Pour pelles 3 à 9 tonnes"
+      ],
+      "applications": [
+        "Démolition sélective",
+        "Séparation béton/ferrailles",
+        "Chantiers urbains",
+        "Réhabilitation de structures"
+      ],
+      "secteurs": ["Démolition", "BTP", "Recyclage", "Rénovation"],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": false,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/promove/cp-300-sk/hero.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.promovedemolition.com/multi-processors/cp-300-sharker/",
+      "date_scraping": "2026-05-27"
+    },
+    {
+      "id": "promove-cp-600",
+      "marque": "Promove Demolition",
+      "modele": "CP 600",
+      "reference": "CP 600",
+      "nom_complet": "Pince multiprocesseur Promove CP 600",
+      "slug": "promove-cp-600",
+      "categorie": "Pince multiprocesseur",
+      "sous_categorie": "Série CP",
+      "description_courte": "Multiprocesseur 600 kg avec rotation 360° pour pelles 6–12 t. 35 t de force, 3 mâchoires interchangeables.",
+      "description_longue": "Le Promove CP 600 est un multi-processeur de milieu de gamme polyvalent et puissant pour les pelles de 6 à 12 tonnes. Sa rotation 360° hydraulique offre une maniabilité et une précision maximales pour toutes les positions de travail. Disponible avec trois types de mâchoires interchangeables (béton PR 580 mm, cisaille SC 308 mm, tri TG), il développe 35 tonnes de force d'écrasement. La structure en acier Hardox anti-usure garantit une durabilité optimale sur les chantiers intensifs.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "sur_commande",
+      "featured": true,
+      "caracteristiques_techniques": {
+        "masse_operationnelle_kg": 600,
+        "pression_service_bar": 300,
+        "debit_l_min": "60 – 120",
+        "ouverture_machoire_mm": 580,
+        "force_fermeture_kn": 343,
+        "rotation_deg": 360
+      },
+      "points_forts": [
+        "Rotation 360° hydraulique",
+        "35 t de force d'écrasement",
+        "3 mâchoires interchangeables",
+        "Acier Hardox anti-usure"
+      ],
+      "applications": [
+        "Démolition sélective",
+        "Béton armé et ferrailles",
+        "Travaux de déconstruction",
+        "Recyclage de matériaux"
+      ],
+      "secteurs": ["Démolition", "BTP", "Recyclage", "Industrie"],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": false,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/promove/cp-600/hero.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.promovedemolition.com/multi-processors/cp-600/",
+      "date_scraping": "2026-05-27"
+    },
+    {
+      "id": "promove-cf-45",
+      "marque": "Promove Demolition",
+      "modele": "CF 45",
+      "reference": "CF 45",
+      "nom_complet": "Pulvérisateur béton Promove CF 45",
+      "slug": "promove-cf-45",
+      "categorie": "Pulvérisateur béton",
+      "sous_categorie": "Série CF",
+      "description_courte": "Pulvérisateur angulaire 380 kg pour pelles 3–8 t. Séparation béton/armatures, structure Hardox 400.",
+      "description_longue": "Le Promove CF 45 est un pulvérisateur angulaire pour la démolition secondaire et la séparation béton/armatures, conçu pour les pelles de 3 à 8 tonnes. Sa structure en Hardox 400 offre une résistance exceptionnelle à l'abrasion. Le vérin monté en position inversée protège le composant hydraulique des impacts. Avec 26 t de force en pointe et 80 t au centre, il fragmente efficacement le béton tout en libérant les armatures pour le recyclage. Les lames réversibles prolongent la durée de vie de l'outil.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "sur_commande",
+      "featured": true,
+      "caracteristiques_techniques": {
+        "masse_operationnelle_kg": 380,
+        "pression_service_bar": 300,
+        "debit_l_min": "60 – 110",
+        "ouverture_machoire_mm": 420,
+        "force_fermeture_kn": 785
+      },
+      "points_forts": [
+        "Structure Hardox 400 anti-usure",
+        "Vérin inversé protégé des impacts",
+        "Lames réversibles longue durée",
+        "80 t de force au centre"
+      ],
+      "applications": [
+        "Démolition secondaire",
+        "Séparation béton/armatures",
+        "Recyclage de béton",
+        "Planchers et murs"
+      ],
+      "secteurs": ["Démolition", "Recyclage", "BTP"],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": false,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/promove/cf-45/hero.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.promovedemolition.com/concrete-pulverizers/cf-45/",
+      "date_scraping": "2026-05-27"
+    },
+    {
+      "id": "promove-cf-130",
+      "marque": "Promove Demolition",
+      "modele": "CF 130",
+      "reference": "CF 130",
+      "nom_complet": "Pulvérisateur béton Promove CF 130",
+      "slug": "promove-cf-130",
+      "categorie": "Pulvérisateur béton",
+      "sous_categorie": "Série CF",
+      "description_courte": "Pulvérisateur moyen-lourd 1 300 kg pour pelles 13–25 t. 53 t en pointe, 161 t au centre.",
+      "description_longue": "Le Promove CF 130 est un pulvérisateur moyen-lourd pour les pelles de 13 à 25 tonnes. Il développe 53 tonnes de force en pointe et 161 tonnes de force au centre, permettant de fragmenter les structures les plus résistantes : planchers épais, murs périmétriques, piliers de béton armé. Ses lames réversibles en acier Hardox permettent d'allonger la durée de vie tout en maintenant l'efficacité de coupe. Un outil de référence pour la déconstruction de bâtiments industriels.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "sur_commande",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "masse_operationnelle_kg": 1300,
+        "pression_service_bar": 350,
+        "debit_l_min": "140 – 200",
+        "force_fermeture_kn": 1579
+      },
+      "points_forts": [
+        "161 t de force au centre",
+        "Lames réversibles Hardox",
+        "Pour pelles 13 à 25 tonnes",
+        "Déconstruction structures industrielles"
+      ],
+      "applications": [
+        "Déconstruction bâtiments industriels",
+        "Planchers et structures",
+        "Recyclage béton armé",
+        "Démolition primaire"
+      ],
+      "secteurs": ["Démolition", "Industrie", "Recyclage"],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": false,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/promove/cf-130/hero.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.promovedemolition.com/concrete-pulverizers/cf-130/",
+      "date_scraping": "2026-05-27"
+    },
+    {
+      "id": "promove-cr-800",
+      "marque": "Promove Demolition",
+      "modele": "CR 800",
+      "reference": "CR 800",
+      "nom_complet": "Pulvérisateur rotatif Promove CR 800",
+      "slug": "promove-cr-800",
+      "categorie": "Pulvérisateur béton",
+      "sous_categorie": "Série CR Rotatif",
+      "description_courte": "Pulvérisateur rotatif multi-usage 800 kg pour pelles 6–13 t. Rotation 360° en continu, lames spéciales pour armatures.",
+      "description_longue": "Le Promove CR 800 est un pulvérisateur rotatif multi-usage pour les pelles de 6 à 13 tonnes. Sa rotation 360° en continu lui permet d'intervenir dans toutes les positions sans repositionner l'engin. Développant 40 tonnes de force au centre, il assure la fragmentation du béton et le cisaillage des armatures en une seule opération grâce à ses lames spéciales pour rebars. Idéal pour la déconstruction à grande hauteur et les applications mixtes cisaillage/écrasement.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "sur_commande",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "masse_operationnelle_kg": 800,
+        "pression_service_bar": 350,
+        "debit_l_min": "70 – 110",
+        "force_fermeture_kn": 392,
+        "rotation_deg": 360
+      },
+      "points_forts": [
+        "Rotation 360° continue",
+        "Cisaillage armatures et écrasement béton",
+        "40 t de force au centre",
+        "Polyvalence cisaille/pulvérisateur"
+      ],
+      "applications": [
+        "Déconstruction à grande hauteur",
+        "Démolition mixte béton/armatures",
+        "Structures industrielles",
+        "Chantiers urbains"
+      ],
+      "secteurs": ["Démolition", "BTP", "Industrie"],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": false,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/promove/cr-800/hero.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.promovedemolition.com/rotating-pulverizers/cr-800/",
+      "date_scraping": "2026-05-27"
+    },
+    {
+      "id": "promove-sc-700",
+      "marque": "Promove Demolition",
+      "modele": "SC 700",
+      "reference": "SC 700",
+      "nom_complet": "Cisaille à ferraille Promove SC 700",
+      "slug": "promove-sc-700",
+      "categorie": "Cisaille à ferraille",
+      "sous_categorie": "Série SC",
+      "description_courte": "Cisaille à ferraille 700 kg pour pelles 8–20 t. Rotation 360°, montage flèche ou bras, chantiers de recyclage.",
+      "description_longue": "La Promove SC 700 est une cisaille à ferraille pour les pelles de 8 à 20 tonnes. Avec sa rotation 360° hydraulique et son ouverture de mâchoire de 380 mm, elle s'adapte à toutes les configurations de chantier. Montable sur flèche ou sur bras, elle offre une flexibilité d'utilisation maximale. Ses lames en acier haute résistance cisaillent efficacement poutrelles, tubes, câbles et structures métalliques pour les chantiers de démolition industrielle et les ferrailleurs.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "sur_commande",
+      "featured": true,
+      "caracteristiques_techniques": {
+        "masse_operationnelle_kg": 700,
+        "pression_service_bar": 350,
+        "debit_l_min": "100 – 180",
+        "ouverture_machoire_mm": 380,
+        "rotation_deg": 360
+      },
+      "points_forts": [
+        "Rotation 360° hydraulique",
+        "Montage flèche ou bras",
+        "Lames acier haute résistance",
+        "Polyvalent recyclage et démolition"
+      ],
+      "applications": [
+        "Démolition industrielle",
+        "Recyclage ferrailles",
+        "Déconstruction structures métalliques",
+        "Ferrailleurs"
+      ],
+      "secteurs": ["Démolition", "Recyclage", "Industrie", "Sidérurgie"],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": false,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/promove/sc-700/hero.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.promovedemolition.com/scrap-shears/sc-700/",
+      "date_scraping": "2026-05-27"
+    },
+    {
+      "id": "promove-sc-1300",
+      "marque": "Promove Demolition",
+      "modele": "SC 1300",
+      "reference": "SC 1300",
+      "nom_complet": "Cisaille à ferraille Promove SC 1300",
+      "slug": "promove-sc-1300",
+      "categorie": "Cisaille à ferraille",
+      "sous_categorie": "Série SC",
+      "description_courte": "Cisaille robuste 1 320 kg pour pelles 12–20 t. 2 697 kN de force de cisaillage, rotation 360°.",
+      "description_longue": "La Promove SC 1300 est une cisaille à ferraille robuste conçue pour les applications les plus exigeantes : démolition industrielle, déchetterries et ferrailleurs professionnels. Pour les pelles de 12 à 20 tonnes, elle développe 2 697 kN de force de cisaillage avec une ouverture de 450 mm. Sa rotation 360° hydraulique et sa structure en acier Hardox garantissent polyvalence et durabilité sur les chantiers intensifs. Un outil de production incontournable pour les professionnels du recyclage.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "sur_commande",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "masse_operationnelle_kg": 1320,
+        "pression_service_bar": 350,
+        "debit_l_min": "150 – 250",
+        "ouverture_machoire_mm": 450,
+        "force_fermeture_kn": 2697,
+        "rotation_deg": 360
+      },
+      "points_forts": [
+        "2 697 kN de force de cisaillage",
+        "Structure Hardox longue durée",
+        "Pour pelles 12 à 20 tonnes",
+        "Rotation 360° hydraulique"
+      ],
+      "applications": [
+        "Déconstruction industrielle",
+        "Ferrailleurs professionnels",
+        "Déchetteries",
+        "Recyclage acier"
+      ],
+      "secteurs": ["Recyclage", "Industrie", "Démolition", "Sidérurgie"],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": false,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/promove/sc-1300/hero.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.promovedemolition.com/scrap-shears/sc-1300/",
+      "date_scraping": "2026-05-27"
+    },
+    {
+      "id": "promove-sg-5-8",
+      "marque": "Promove Demolition",
+      "modele": "SG 5.8",
+      "reference": "SG 5.8",
+      "nom_complet": "Pince de tri Promove SG 5.8",
+      "slug": "promove-sg-5-8",
+      "categorie": "Pince de tri et démolition",
+      "sous_categorie": "Série SG",
+      "description_courte": "Pince de tri légère 450 kg pour pelles 5–8 t. Rotation 360°, 200 L de capacité, démolition sélective.",
+      "description_longue": "La Promove SG 5.8 est une pince de tri légère et maniable pour les pelles de 5 à 8 tonnes. Avec une capacité de 200 litres et une ouverture de 1 500 mm, elle est parfaitement adaptée aux opérations de tri sélectif, de démolition légère et de manutention de déchets en milieu urbain. Sa rotation 360° continue et sa force de fermeture de 25 kN lui permettent de saisir et déplacer tous types de matériaux avec précision.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "sur_commande",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "masse_operationnelle_kg": 450,
+        "pression_service_bar": 300,
+        "debit_l_min": "10 – 15",
+        "ouverture_machoire_mm": 1500,
+        "force_fermeture_kn": 25,
+        "rotation_deg": 360
+      },
+      "points_forts": [
+        "Légère et maniable en milieu urbain",
+        "Rotation 360° continue",
+        "Ouverture 1 500 mm",
+        "Pour pelles 5 à 8 tonnes"
+      ],
+      "applications": [
+        "Tri sélectif de déchets",
+        "Démolition légère",
+        "Manutention déchets inertes",
+        "Chantiers urbains"
+      ],
+      "secteurs": ["Recyclage", "Démolition", "BTP", "Environnement"],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": false,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/promove/sg-5-8/hero.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.promovedemolition.com/sorting-grapples/sg-5-8/",
+      "date_scraping": "2026-05-27"
+    },
+    {
+      "id": "promove-sg-10-16",
+      "marque": "Promove Demolition",
+      "modele": "SG 10.16",
+      "reference": "SG 10.16",
+      "nom_complet": "Pince de tri Promove SG 10.16",
+      "slug": "promove-sg-10-16",
+      "categorie": "Pince de tri et démolition",
+      "sous_categorie": "Série SG",
+      "description_courte": "Pince de tri polyvalente 780 kg pour pelles 10–16 t. 400 L, rotation 360°, recyclage et démolition urbaine.",
+      "description_longue": "La Promove SG 10.16 est une pince de tri polyvalente pour les pelles de 10 à 16 tonnes. Sa capacité de 400 litres et son ouverture de 1 700 mm la rendent efficace sur les chantiers de recyclage, de tri sélectif et de démolition urbaine. Avec 35 kN de force de fermeture et une rotation 360°, elle permet de saisir et trier efficacement les déchets de construction, les matériaux métalliques et les gravats. Sa conception robuste garantit une durabilité maximale sur les chantiers intensifs.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "sur_commande",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "masse_operationnelle_kg": 780,
+        "pression_service_bar": 300,
+        "debit_l_min": "50 – 60",
+        "ouverture_machoire_mm": 1700,
+        "force_fermeture_kn": 35,
+        "rotation_deg": 360
+      },
+      "points_forts": [
+        "400 L de capacité",
+        "Force de fermeture 35 kN",
+        "Ouverture 1 700 mm",
+        "Rotation 360° continue"
+      ],
+      "applications": [
+        "Recyclage et tri sélectif",
+        "Démolition urbaine",
+        "Déchets de chantier",
+        "Manutention matériaux lourds"
+      ],
+      "secteurs": ["Recyclage", "Démolition", "BTP", "Environnement"],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": false,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/promove/sg-10-16/hero.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.promovedemolition.com/sorting-grapples/sg-10-16/",
+      "date_scraping": "2026-05-27"
+    },
+    {
+      "id": "promove-sg-16-20",
+      "marque": "Promove Demolition",
+      "modele": "SG 16.20",
+      "reference": "SG 16.20",
+      "nom_complet": "Pince de tri Promove SG 16.20",
+      "slug": "promove-sg-16-20",
+      "categorie": "Pince de tri et démolition",
+      "sous_categorie": "Série SG",
+      "description_courte": "Pince de tri grande capacité 1 100 kg pour pelles 16–20 t. 650 L, 43 kN, déconstruction.",
+      "description_longue": "La Promove SG 16.20 est une pince de tri de grande capacité pour les pelles de 16 à 20 tonnes. Sa capacité de 650 litres et son ouverture de 1 950 mm lui permettent de manipuler des volumes importants de matériaux sur les grands chantiers de déconstruction. Sa force de fermeture de 43 kN assure une prise ferme sur tous types de matériaux, des gravats légers aux éléments métalliques lourds.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "sur_commande",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "masse_operationnelle_kg": 1100,
+        "pression_service_bar": 300,
+        "debit_l_min": "20 – 25",
+        "ouverture_machoire_mm": 1950,
+        "force_fermeture_kn": 43,
+        "rotation_deg": 360
+      },
+      "points_forts": [
+        "650 L de grande capacité",
+        "Ouverture 1 950 mm",
+        "Pour pelles 16 à 20 tonnes",
+        "Grands chantiers de déconstruction"
+      ],
+      "applications": [
+        "Grands chantiers de déconstruction",
+        "Recyclage industriel",
+        "Manutention gros volumes",
+        "Tri de gravats"
+      ],
+      "secteurs": ["Démolition", "Recyclage", "Industrie"],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": false,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/promove/sg-16-20/hero.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.promovedemolition.com/sorting-grapples/sg-16-20/",
+      "date_scraping": "2026-05-27"
+    },
+    {
+      "id": "promove-hg-17-28",
+      "marque": "Promove Demolition",
+      "modele": "HG+ 17.28",
+      "reference": "HG+ 17.28",
+      "nom_complet": "Pince de démolition lourde Promove HG+ 17.28",
+      "slug": "promove-hg-17-28",
+      "categorie": "Pince de tri et démolition",
+      "sous_categorie": "Série HG+ Lourde",
+      "description_courte": "Pince de démolition lourde 1 500 kg pour pelles 17–28 t. Rotation 360°, valve anti-retour de sécurité.",
+      "description_longue": "La Promove HG+ 17.28 est une pince de démolition lourde pour les pelles de 17 à 28 tonnes. Avec 68 kN de force de fermeture, une ouverture de 2 100 mm et une capacité de 800 litres, elle est conçue pour les interventions de démolition et de tri sur les grands chantiers. Sa valve anti-retour de sécurité empêche toute chute de charge en cas de rupture de flexible. Les lames de coupe réversibles en acier haute résistance offrent une durée de vie prolongée.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "sur_commande",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "masse_operationnelle_kg": 1500,
+        "pression_service_bar": 210,
+        "debit_l_min": 35,
+        "ouverture_machoire_mm": 2100,
+        "force_fermeture_kn": 68,
+        "rotation_deg": 360
+      },
+      "points_forts": [
+        "Valve anti-retour de sécurité anti-chute",
+        "68 kN de force de fermeture",
+        "Ouverture 2 100 mm",
+        "Lames de coupe réversibles"
+      ],
+      "applications": [
+        "Démolition grands bâtiments",
+        "Tri de matériaux lourds",
+        "Déconstruction industrielle",
+        "Chantiers de réhabilitation"
+      ],
+      "secteurs": ["Démolition", "Industrie", "BTP"],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": false,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/promove/hg-17-28/hero.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.promovedemolition.com/demolition-grapples/hg-plus-17-28/",
+      "date_scraping": "2026-05-27"
+    },
+    {
+      "id": "promove-hg-25-38",
+      "marque": "Promove Demolition",
+      "modele": "HG+ 25.38",
+      "reference": "HG+ 25.38",
+      "nom_complet": "Pince de démolition lourde Promove HG+ 25.38",
+      "slug": "promove-hg-25-38",
+      "categorie": "Pince de tri et démolition",
+      "sous_categorie": "Série HG+ Lourde",
+      "description_courte": "Pince de démolition lourde 1 900 kg pour pelles 25–38 t. 80 kN de force, rotation 360°, Hardox.",
+      "description_longue": "La Promove HG+ 25.38 est une pince de démolition lourde haute résistance pour les pelles de 25 à 38 tonnes. Elle développe 80 kN de force de fermeture avec une ouverture de 2 200 mm et une capacité de 900 litres. La structure en acier Hardox, les lames interchangeables et le système de protection haute pression garantissent fiabilité et longévité sur les chantiers de démolition industrielle et de tri de matériaux les plus exigeants.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "sur_commande",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "masse_operationnelle_kg": 1900,
+        "pression_service_bar": 210,
+        "debit_l_min": 35,
+        "ouverture_machoire_mm": 2200,
+        "force_fermeture_kn": 80,
+        "rotation_deg": 360
+      },
+      "points_forts": [
+        "80 kN de force de fermeture",
+        "Structure Hardox haute résistance",
+        "Lames interchangeables",
+        "Pour pelles 25 à 38 tonnes"
+      ],
+      "applications": [
+        "Démolition industrielle",
+        "Tri de matériaux lourds",
+        "Déconstruction de grands ouvrages",
+        "Recyclage intensif"
+      ],
+      "secteurs": ["Démolition", "Industrie", "Recyclage"],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": false,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/promove/hg-25-38/hero.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.promovedemolition.com/demolition-grapples/hg-plus-25-38/",
+      "date_scraping": "2026-05-27"
+    }
+  ]
+}
