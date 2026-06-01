@@ -11,15 +11,15 @@ const BRAND_LOGOS: Record<string, string> = {
 export function PartnersSection() {
   return (
     <section
-      className="bg-amc-gray section-padding"
+      className="bg-white section-padding"
       aria-labelledby="partners-title"
     >
       <div className="container-amc">
         <div className="text-center mb-12">
-          <h2 id="partners-title" className="section-title text-white">
+          <h2 id="partners-title" className="section-title text-amc-text">
             Nos partenaires officiels
           </h2>
-          <p className="section-subtitle text-white/70 mx-auto mt-4">
+          <p className="section-subtitle text-amc-text-secondary mx-auto mt-4">
             AMC est distributeur agréé des plus grandes marques de matériels de chantier.
             Garantie constructeur, support technique et gammes complètes.
           </p>
