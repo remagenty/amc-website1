@@ -48,9 +48,8 @@ const SORT_OPTIONS = [
 
 // ── Machine card ──────────────────────────────────────────────────────────────
 
-function MachineCard({ machine }: { machine: WnMachine }) {
+function MachineCard({ machine, categorySlug }: { machine: WnMachine; categorySlug: string }) {
   const [imgError, setImgError] = useState(false);
-  const categorySlug = getCategoryUrlSlug(machine);
   const href = `/materiels/${categorySlug}/${machine.slug}`;
   const isAvailable = machine.disponibilite === "disponible";
   const brandId = brandIdFromMarque(machine.marque ?? "");
@@ -631,7 +630,7 @@ export function WnCategoryPage({
             ) : (
               <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
                 {filtered.map((machine) => (
-                  <MachineCard key={machine.id} machine={machine} />
+                  <MachineCard key={machine.id} machine={machine} categorySlug={categorySlug} />
                 ))}
               </div>
             )}
