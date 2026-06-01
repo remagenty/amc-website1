@@ -83,7 +83,7 @@ export function PartnersSection() {
         </div>
 
         <div className="mt-10 text-center">
-          <Link href="/catalogue" className="btn-outline rounded-lg">
+          <Link href="/catalogue" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-transparent text-amc-text font-semibold rounded-lg border-2 border-amc-text hover:bg-amc-text hover:text-white active:scale-95 transition-all duration-200">
             Voir tout le catalogue <IconArrowRight size={16} />
           </Link>
         </div>
