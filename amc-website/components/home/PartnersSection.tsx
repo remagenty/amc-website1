@@ -11,15 +11,15 @@ const BRAND_LOGOS: Record<string, string> = {
 export function PartnersSection() {
   return (
     <section
-      className="bg-amc-gray section-padding"
+      className="bg-amc-cream pt-16 pb-10 md:pt-20 md:pb-12 lg:pt-24 lg:pb-14"
       aria-labelledby="partners-title"
     >
       <div className="container-amc">
         <div className="text-center mb-12">
-          <h2 id="partners-title" className="section-title text-white">
+          <h2 id="partners-title" className="section-title text-amc-text">
             Nos partenaires officiels
           </h2>
-          <p className="section-subtitle text-white/70 mx-auto mt-4">
+          <p className="section-subtitle text-amc-text-secondary mx-auto mt-4">
             AMC est distributeur agréé des plus grandes marques de matériels de chantier.
             Garantie constructeur, support technique et gammes complètes.
           </p>
@@ -83,7 +83,7 @@ export function PartnersSection() {
         </div>
 
         <div className="mt-10 text-center">
-          <Link href="/catalogue" className="btn-outline rounded-lg">
+          <Link href="/catalogue" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-transparent text-amc-text font-semibold rounded-lg border-2 border-amc-text hover:bg-amc-text hover:text-white active:scale-95 transition-all duration-200">
             Voir tout le catalogue <IconArrowRight size={16} />
           </Link>
         </div>

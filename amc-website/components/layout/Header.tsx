@@ -43,24 +43,12 @@ const MATERIELS_CATEGORIES = [
   },
   {
     id: "telehandlers",
-    label: "Téléhandlers Magni",
+    label: "Téléhandlers",
     href: "/materiels/telehandlers-rotatifs",
     subs: [
-      { label: "Téléhandlers rotatifs", href: "/materiels/telehandlers-rotatifs" },
-      { label: "Téléhandlers fixes", href: "/materiels/telehandlers-fixes" },
-      { label: "Téléhandlers agricoles", href: "/materiels/telehandlers-agricoles" },
-    ],
-  },
-  {
-    id: "demolition",
-    label: "Démolition Promove",
-    href: "/materiels/brise-roches",
-    subs: [
-      { label: "Brise-roches hydrauliques", href: "/materiels/brise-roches" },
-      { label: "Pinces multiprocesseurs", href: "/materiels/pinces-multiprocesseurs" },
-      { label: "Pulvérisateurs béton", href: "/materiels/pulverisateurs" },
-      { label: "Cisailles à ferraille", href: "/materiels/cisailles" },
-      { label: "Pinces de tri", href: "/materiels/pinces-de-tri" },
+      { label: "Rotatifs", href: "/materiels/telehandlers-rotatifs" },
+      { label: "Fixes", href: "/materiels/telehandlers-fixes" },
+      { label: "Agricoles", href: "/materiels/telehandlers-agricoles" },
     ],
   },
 ];

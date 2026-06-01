@@ -45,14 +45,13 @@ export function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-6">
           {/* Col 1: AMC */}
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center gap-2 mb-5" aria-label="AMC - Alpes Matériel Compact">
-              <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-amc-yellow flex-shrink-0">
-                <span className="text-amc-text font-black text-xl tracking-tight">AMC</span>
-              </div>
-              <div>
-                <div className="font-bold text-white text-sm leading-none">Alpes Matériel</div>
-                <div className="font-bold text-white text-sm leading-none">Compact</div>
-              </div>
+            <Link href="/" className="inline-block mb-5" aria-label="AMC - Alpes Matériel Compact">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/logo-amc.png"
+                alt="AMC — Alpes Matériel Compact"
+                className="h-16 w-auto object-contain"
+              />
             </Link>
 
             <address className="not-italic space-y-3 text-sm text-white/75">
