@@ -98,24 +98,36 @@ function AccordionSection({
 // ── Similar machine card ──────────────────────────────────────────────────────
 
 function SimilarCard({ machine }: { machine: WnMachine }) {
+  const [imgError, setImgError] = useState(false);
   const href = `/materiels/${getCategoryUrlSlug(machine)}/${machine.slug}`;
+  const rawSrc = machine.medias.image_principale_local ?? machine.medias.image_principale;
+  const imgSrc = rawSrc ? encodeURI(rawSrc) : null;
+
   return (
     <Link
       href={href}
       className="group bg-white rounded-xl shadow-card hover:shadow-card-hover transition-all overflow-hidden"
     >
       <div className="relative aspect-[4/3] bg-gray-100">
-        <Image
-          src={(machine.medias.image_principale_local ?? machine.medias.image_principale) || "/images/products/placeholder-wn.jpg"}
-          alt={machine.nom_complet}
-          fill
-          loading="lazy"
-          className="object-cover group-hover:scale-105 transition-transform duration-300"
-          sizes="(max-width: 640px) 100vw, 25vw"
-          onError={(e) => {
-            (e.target as HTMLImageElement).src = "/images/products/placeholder-wn.jpg";
-          }}
-        />
+        {imgSrc && !imgError ? (
+          <Image
+            src={imgSrc}
+            alt={machine.nom_complet}
+            fill
+            loading="lazy"
+            className="object-cover group-hover:scale-105 transition-transform duration-300"
+            sizes="(max-width: 640px) 100vw, 25vw"
+            onError={() => setImgError(true)}
+          />
+        ) : (
+          <Image
+            src="/images/products/placeholder-wn.jpg"
+            alt=""
+            fill
+            className="object-contain p-4 opacity-40"
+            sizes="25vw"
+          />
+        )}
         <div className="absolute top-2 left-2">
           <span className={`text-xs font-bold px-2 py-0.5 rounded-full ${
             machine.etat === "neuf" ? "bg-green-100 text-green-700" : "bg-blue-100 text-blue-700"
@@ -152,7 +164,7 @@ export function WnProductDetail({ machine, similar, categorySlug, categoryLabel 
 
   const hero = machine.medias.image_principale_local ?? machine.medias.image_principale;
   const gallery = machine.medias.images_local ?? machine.medias.images;
-  const allImages = [hero, ...gallery].filter(Boolean);
+  const allImages = [hero, ...gallery].filter(Boolean).map((p) => encodeURI(p as string));
   const displayImages = allImages.length > 0 ? allImages : ["/images/products/placeholder-wn.jpg"];
 
   const specEntries = Object.entries(machine.caracteristiques_techniques).filter(
