@@ -50,7 +50,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/Téléhandler rotatif/magni-rth-5-18/hero.png",
+        "image_principale": "/images/machines/telehandler-rotatif/magni-rth-5-18/hero.jpg",
         "images": [],
         "video": null
       },
@@ -105,7 +105,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/Téléhandler rotatif/magni-rth-5-21/hero.png",
+        "image_principale": "/images/machines/telehandler-rotatif/magni-rth-5-21/hero.png",
         "images": [],
         "video": null
       },
@@ -160,7 +160,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/Téléhandler rotatif/magni-rth-5-23/hero.png",
+        "image_principale": "/images/machines/telehandler-rotatif/magni-rth-5-23/hero.png",
         "images": [],
         "video": null
       },
@@ -215,7 +215,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/Téléhandler rotatif/magni-rth-5-25/hero.png",
+        "image_principale": "/images/machines/telehandler-rotatif/magni-rth-5-25/hero.png",
         "images": [],
         "video": null
       },
@@ -270,7 +270,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/Téléhandler rotatif/magni-rth-6-26/hero.png",
+        "image_principale": "/images/machines/telehandler-rotatif/magni-rth-6-26/hero.png",
         "images": [],
         "video": null
       },
@@ -325,7 +325,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/Téléhandler rotatif/magni-rth-6-30/hero.png",
+        "image_principale": "/images/machines/telehandler-rotatif/magni-rth-6-30/hero.png",
         "images": [],
         "video": null
       },
@@ -380,7 +380,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/Téléhandler rotatif/magni-rth-6-35/hero.png",
+        "image_principale": "/images/machines/telehandler-rotatif/magni-rth-6-35/hero.png",
         "images": [],
         "video": null
       },
@@ -435,7 +435,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/Téléhandler rotatif/magni-rth-7-26/hero.png",
+        "image_principale": "/images/machines/telehandler-rotatif/magni-rth-7-26/hero.png",
         "images": [],
         "video": null
       },
@@ -490,7 +490,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/Téléhandler rotatif/magni-rth-8-35/hero.png",
+        "image_principale": "/images/machines/telehandler-rotatif/magni-rth-8-35/hero.png",
         "images": [],
         "video": null
       },
@@ -545,7 +545,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/Téléhandler rotatif/magni-rth-8-39/hero.png",
+        "image_principale": "/images/machines/telehandler-rotatif/magni-rth-8-39/hero.png",
         "images": [],
         "video": null
       },
@@ -600,7 +600,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/Téléhandler rotatif/magni-rth-13-26/hero.png",
+        "image_principale": "/images/machines/telehandler-rotatif/magni-rth-13-26/hero.png",
         "images": [],
         "video": null
       },
@@ -653,7 +653,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/Téléhandler fixe/magni-th-3-6/hero.jpg",
+        "image_principale": "/images/machines/telehandler-fixe/magni-th-3-6/hero.jpg",
         "images": [],
         "video": null
       },
@@ -706,7 +706,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/Téléhandler fixe/magni-th-4-5-15/hero.jpg",
+        "image_principale": "/images/machines/telehandler-fixe/magni-th-4-5-15/hero.png",
         "images": [],
         "video": null
       },
@@ -759,7 +759,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/Téléhandler fixe/magni-th-4-5-19/hero.jpg",
+        "image_principale": "/images/machines/telehandler-fixe/magni-th-4-5-19/hero.png",
         "images": [],
         "video": null
       },
@@ -814,7 +814,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/Téléhandler fixe/magni-th-5-5-19/hero.jpg",
+        "image_principale": "/images/machines/telehandler-fixe/magni-th-5-5-19/hero.png",
         "images": [],
         "video": null
       },
@@ -867,7 +867,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/Téléhandler fixe/magni-th-5-5-24/hero.jpg",
+        "image_principale": "/images/machines/telehandler-fixe/magni-th-5-5-24/hero.png",
         "images": [],
         "video": null
       },
@@ -920,7 +920,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/Téléhandler fixe/magni-th-6-10/hero.jpg",
+        "image_principale": "/images/machines/telehandler-fixe/magni-th-6-10/hero.png",
         "images": [],
         "video": null
       },
@@ -973,7 +973,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/Téléhandler fixe/magni-th-6-20/hero.jpg",
+        "image_principale": "/images/machines/telehandler-fixe/magni-th-6-20/hero.png",
         "images": [],
         "video": null
       },
@@ -1027,7 +1027,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/Téléhandler agricole/magni-tha-3-6/hero.jpg",
+        "image_principale": "/images/machines/telehandler-agricole/magni-tha-3-6/hero.jpg",
         "images": [],
         "video": null
       },
@@ -1081,7 +1081,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/Téléhandler agricole/magni-tha-4-5-8/hero.jpg",
+        "image_principale": "/images/machines/telehandler-agricole/magni-tha-4-5-8/hero.png",
         "images": [],
         "video": null
       },
@@ -1135,7 +1135,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/Téléhandler agricole/magni-tha-4-5-10/hero.jpg",
+        "image_principale": "/images/machines/telehandler-agricole/magni-tha-4-5-10/hero.png",
         "images": [],
         "video": null
       },
@@ -1189,7 +1189,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/Téléhandler agricole/magni-tha-5-8/hero.jpg",
+        "image_principale": "/images/machines/telehandler-agricole/magni-tha-5-8/hero.png",
         "images": [],
         "video": null
       },
@@ -1243,7 +1243,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/Téléhandler agricole/magni-tha-5-10/hero.jpg",
+        "image_principale": "/images/machines/telehandler-agricole/magni-tha-5-10/hero.png",
         "images": [],
         "video": null
       },
