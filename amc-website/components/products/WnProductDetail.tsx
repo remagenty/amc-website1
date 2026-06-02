@@ -97,9 +97,9 @@ function AccordionSection({
 
 // ── Similar machine card ──────────────────────────────────────────────────────
 
-function SimilarCard({ machine }: { machine: WnMachine }) {
+function SimilarCard({ machine, categorySlug }: { machine: WnMachine; categorySlug: string }) {
   const [imgError, setImgError] = useState(false);
-  const href = `/materiels/${getCategoryUrlSlug(machine)}/${machine.slug}`;
+  const href = `/materiels/${categorySlug}/${machine.slug}`;
   const rawSrc = machine.medias.image_principale_local ?? machine.medias.image_principale;
   const imgSrc = rawSrc ? encodeURI(rawSrc) : null;
 
@@ -563,7 +563,7 @@ export function WnProductDetail({ machine, similar, categorySlug, categoryLabel 
             </div>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
               {similar.map((m) => (
-                <SimilarCard key={m.id} machine={m} />
+                <SimilarCard key={m.id} machine={m} categorySlug={categorySlug} />
               ))}
             </div>
           </div>
