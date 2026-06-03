@@ -37,12 +37,12 @@ export function ProductCard({ product, className = "" }: ProductCardProps) {
           : `/produit/${product.slug}`
       )}
     >
-      <div className="relative overflow-hidden aspect-[4/3] bg-gray-100">
+      <div className="relative overflow-hidden aspect-[4/3] bg-white">
         <Image
           src={product.images[0] || "/images/placeholder-product.jpg"}
           alt={`${product.name} — ${product.shortDescription}`}
           fill
-          className="object-contain p-4 transition-transform duration-500 group-hover:scale-105"
+          className="object-contain p-2 transition-transform duration-500 group-hover:scale-105"
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
         <div className="absolute top-3 left-3 flex flex-wrap gap-1.5">

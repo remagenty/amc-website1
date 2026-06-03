@@ -109,12 +109,12 @@ export function ProductDetail({
           {/* Left: gallery (2/5) */}
           <div className="lg:col-span-2">
             <div className="bg-white rounded-2xl shadow-card overflow-hidden">
-              <div className="relative aspect-[4/3] bg-gray-100">
+              <div className="relative aspect-[4/3] bg-white">
                 <Image
                   src={product.images[activeImage] || "/images/placeholder-product.jpg"}
                   alt={`${product.name} — vue ${activeImage + 1}`}
                   fill
-                  className="object-contain p-6"
+                  className="object-contain p-3"
                   priority
                   sizes="(max-width: 1024px) 100vw, 40vw"
                 />

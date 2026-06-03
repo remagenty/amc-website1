@@ -108,14 +108,14 @@ function SimilarCard({ machine, categorySlug }: { machine: WnMachine; categorySl
       href={href}
       className="group bg-white rounded-xl shadow-card hover:shadow-card-hover transition-all overflow-hidden"
     >
-      <div className="relative aspect-[4/3] bg-gray-100">
+      <div className="relative aspect-[4/3] bg-white">
         {imgSrc && !imgError ? (
           <Image
             src={imgSrc}
             alt={machine.nom_complet}
             fill
             loading="lazy"
-            className="object-contain p-4 group-hover:scale-105 transition-transform duration-300"
+            className="object-contain p-2 group-hover:scale-105 transition-transform duration-300"
             sizes="(max-width: 640px) 100vw, 25vw"
             onError={() => setImgError(true)}
           />
@@ -124,7 +124,7 @@ function SimilarCard({ machine, categorySlug }: { machine: WnMachine; categorySl
             src="/images/products/placeholder-wn.jpg"
             alt=""
             fill
-            className="object-contain p-4 opacity-40"
+            className="object-contain p-2 opacity-40"
             sizes="25vw"
           />
         )}
@@ -204,12 +204,12 @@ export function WnProductDetail({ machine, similar, categorySlug, categoryLabel 
           {/* Left — gallery (2/5) */}
           <div className="lg:col-span-2">
             <div className="bg-white rounded-2xl shadow-card overflow-hidden">
-              <div className="relative aspect-[4/3] bg-gray-100">
+              <div className="relative aspect-[4/3] bg-white">
                 <Image
                   src={displayImages[activeImage]}
                   alt={`${machine.nom_complet} — vue ${activeImage + 1}`}
                   fill
-                  className="object-contain p-6"
+                  className="object-contain p-3"
                   priority
                   sizes="(max-width: 1024px) 100vw, 40vw"
                   onError={(e) => {
