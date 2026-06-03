@@ -17,9 +17,21 @@ const SORT_OPTIONS = [
 
 const PER_PAGE = 12;
 
+// Static full lists — computed once from the whole catalogue, never change.
+// These define the STABLE set of options shown in the filter sidebar.
 const ALL_MACHINES = getMachines();
-const AVAILABLE_CATEGORIES = getCatalogueCategories();
-const AVAILABLE_BRANDS = getCatalogueBrands();
+const ALL_CATEGORIES_STABLE = getCatalogueCategories();
+const ALL_BRANDS_STABLE = getCatalogueBrands();
+
+// Shared search predicate
+function matchesSearch(p: Product, q: string): boolean {
+  return (
+    p.name.toLowerCase().includes(q) ||
+    p.model.toLowerCase().includes(q) ||
+    p.shortDescription.toLowerCase().includes(q) ||
+    p.tags.some((t) => t.toLowerCase().includes(q))
+  );
+}
 
 const BRAND_DISPLAY: Record<string, string> = {
   "wacker-neuson": "Wacker Neuson",
@@ -54,41 +66,37 @@ export function CataloguePage() {
     setPage(1);
   };
 
+  // Helper: apply a subset of filters to a machine list
+  const applyFilters = useMemo(() => {
+    return (
+      list: Product[],
+      opts: { excludeCategory?: boolean; excludeBrand?: boolean } = {}
+    ): Product[] => {
+      let result = list;
+      const q = search.trim().toLowerCase();
+      if (q) result = result.filter((p) => matchesSearch(p, q));
+      if (!opts.excludeCategory && filters.categories.length > 0)
+        result = result.filter((p) => p.categorySlug && filters.categories.includes(p.categorySlug));
+      if (!opts.excludeBrand && filters.brands.length > 0)
+        result = result.filter((p) => filters.brands.includes(p.brand));
+      if (filters.status !== "all")
+        result = result.filter((p) => p.status === filters.status);
+      if (filters.availability !== "all") {
+        const want = filters.availability === "disponible";
+        result = result.filter((p) => p.available === want);
+      }
+      if (filters.priceMin !== undefined)
+        result = result.filter((p) => p.price === undefined || p.price >= (filters.priceMin ?? 0));
+      if (filters.priceMax !== undefined)
+        result = result.filter((p) => p.price === undefined || p.price <= (filters.priceMax ?? Infinity));
+      return result;
+    };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [filters, search]);
+
   const filtered = useMemo(() => {
-    let list: Product[] = [...ALL_MACHINES];
-
-    if (search.trim()) {
-      const q = search.toLowerCase();
-      list = list.filter(
-        (p) =>
-          p.name.toLowerCase().includes(q) ||
-          p.model.toLowerCase().includes(q) ||
-          p.shortDescription.toLowerCase().includes(q) ||
-          p.tags.some((t) => t.toLowerCase().includes(q))
-      );
-    }
-
-    if (filters.categories.length > 0) {
-      list = list.filter((p) => p.categorySlug && filters.categories.includes(p.categorySlug));
-    }
-    if (filters.brands.length > 0) {
-      list = list.filter((p) => filters.brands.includes(p.brand));
-    }
-    if (filters.status !== "all") {
-      list = list.filter((p) => p.status === filters.status);
-    }
-    if (filters.availability !== "all") {
-      const wantAvailable = filters.availability === "disponible";
-      list = list.filter((p) => p.available === wantAvailable);
-    }
-    if (filters.priceMin !== undefined) {
-      list = list.filter((p) => p.price === undefined || p.price >= (filters.priceMin ?? 0));
-    }
-    if (filters.priceMax !== undefined) {
-      list = list.filter((p) => p.price === undefined || p.price <= (filters.priceMax ?? Infinity));
-    }
-
-    list.sort((a, b) => {
+    const list = applyFilters(ALL_MACHINES);
+    return [...list].sort((a, b) => {
       if (sort === "price-asc") {
         const pa = a.priceOnRequest ? Infinity : (a.price ?? Infinity);
         const pb = b.priceOnRequest ? Infinity : (b.price ?? Infinity);
@@ -101,9 +109,27 @@ export function CataloguePage() {
       }
       return (b.featured ? 1 : 0) - (a.featured ? 1 : 0);
     });
+  }, [applyFilters, sort]);
 
-    return list;
-  }, [filters, search, sort]);
+  // --- Faceted counts ---
+  // Categories: count from set filtered by everything EXCEPT the category filter.
+  // This way ALL categories always appear and counts reflect the active brand/status/etc.
+  const categoriesWithCounts = useMemo(() => {
+    const base = applyFilters(ALL_MACHINES, { excludeCategory: true });
+    const counts: Record<string, number> = {};
+    for (const m of base) {
+      if (m.categorySlug) counts[m.categorySlug] = (counts[m.categorySlug] ?? 0) + 1;
+    }
+    return ALL_CATEGORIES_STABLE.map((cat) => ({ ...cat, count: counts[cat.id] ?? 0 }));
+  }, [applyFilters]);
+
+  // Brands: count from set filtered by everything EXCEPT the brand filter.
+  const brandsWithCounts = useMemo(() => {
+    const base = applyFilters(ALL_MACHINES, { excludeBrand: true });
+    const counts: Record<string, number> = {};
+    for (const m of base) counts[m.brand] = (counts[m.brand] ?? 0) + 1;
+    return ALL_BRANDS_STABLE.map((brand) => ({ ...brand, count: counts[brand.id] ?? 0 }));
+  }, [applyFilters]);
 
   const totalPages = Math.ceil(filtered.length / PER_PAGE);
   const paginated = filtered.slice((page - 1) * PER_PAGE, page * PER_PAGE);
@@ -192,7 +218,7 @@ export function CataloguePage() {
               </button>
             )}
             {filters.categories.map((cat) => {
-              const label = AVAILABLE_CATEGORIES.find(c => c.id === cat)?.label ?? cat;
+              const label = ALL_CATEGORIES_STABLE.find(c => c.id === cat)?.label ?? cat;
               return (
                 <button
                   key={cat}
@@ -224,8 +250,8 @@ export function CataloguePage() {
             totalCount={filtered.length}
             mobileOpen={mobileFiltres}
             onMobileClose={() => setMobileFiltres(false)}
-            availableCategories={AVAILABLE_CATEGORIES}
-            availableBrands={AVAILABLE_BRANDS}
+            availableCategories={categoriesWithCounts}
+            availableBrands={brandsWithCounts}
           />
 
           <div className="flex-1 min-w-0">
