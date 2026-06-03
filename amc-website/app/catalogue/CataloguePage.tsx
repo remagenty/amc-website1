@@ -5,7 +5,7 @@ import { useSearchParams } from "next/navigation";
 import { getMachines, getCatalogueCategories, getCatalogueBrands } from "@/lib/data";
 import { ProductCard } from "@/components/ui/ProductCard";
 import { FilterSidebar } from "@/components/catalogue/FilterSidebar";
-import { IconFilter, IconSearch } from "@/components/ui/Icons";
+import { IconFilter } from "@/components/ui/Icons";
 import type { Product } from "@/types";
 
 const SORT_OPTIONS = [
@@ -168,19 +168,8 @@ export function CataloguePage() {
           </p>
         </div>
 
-        {/* Toolbar */}
-        <div className="flex flex-col sm:flex-row gap-3 mb-6">
-          <div className="relative flex-1 max-w-md">
-            <IconSearch size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
-            <input
-              type="search"
-              placeholder="Rechercher un modèle, une référence..."
-              value={search}
-              onChange={(e) => { setSearch(e.target.value); setPage(1); }}
-              className="w-full pl-9 pr-4 py-2.5 bg-white border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-amc-yellow"
-            />
-          </div>
-
+        {/* Toolbar — search moved into filter sidebar */}
+        <div className="flex items-center gap-3 mb-6">
           <button
             onClick={() => setMobileFiltres(true)}
             className="lg:hidden btn-secondary text-sm py-2.5 gap-2"
@@ -252,6 +241,8 @@ export function CataloguePage() {
             onMobileClose={() => setMobileFiltres(false)}
             availableCategories={categoriesWithCounts}
             availableBrands={brandsWithCounts}
+            search={search}
+            onSearchChange={(s) => { setSearch(s); setPage(1); }}
           />
 
           <div className="flex-1 min-w-0">
