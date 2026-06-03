@@ -50,13 +50,13 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/telehandler-rotatif/magni-rth-5-18/hero.jpg",
+        "image_principale": "/images/machines/telehandler-rotatif/magni-rth-5-18/hero.png",
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/5-18/",
       "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": "/images/machines/telehandler-rotatif/magni-rth-5-18/hero.jpg"
+      "image_principale": "/images/machines/telehandler-rotatif/magni-rth-5-18/hero.png"
     },
     {
       "id": "magni-rth-5-21",
@@ -664,13 +664,13 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/telehandler-fixe/magni-th-3-6/hero.jpg",
+        "image_principale": "/images/machines/telehandler-fixe/magni-th-3-6/hero.png",
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/3-6/",
       "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": "/images/machines/telehandler-fixe/magni-th-3-6/hero.jpg"
+      "image_principale": "/images/machines/telehandler-fixe/magni-th-3-6/hero.png"
     },
     {
       "id": "magni-th-4-5-15",
@@ -1045,13 +1045,13 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/telehandler-agricole/magni-tha-3-6/hero.jpg",
+        "image_principale": "/images/machines/telehandler-agricole/magni-tha-3-6/hero.png",
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/tha-3-6/",
       "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": "/images/machines/telehandler-agricole/magni-tha-3-6/hero.jpg"
+      "image_principale": "/images/machines/telehandler-agricole/magni-tha-3-6/hero.png"
     },
     {
       "id": "magni-tha-4-5-8",
