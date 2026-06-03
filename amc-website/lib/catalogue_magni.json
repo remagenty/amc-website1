@@ -339,62 +339,6 @@
       "image_principale": "/images/machines/magni/magni-rth-6-30.png"
     },
     {
-      "id": "magni-rth-6-35",
-      "marque": "Magni",
-      "modele": "RTH 6.35",
-      "reference": "RTH 6.35",
-      "nom_complet": "Téléhandler rotatif Magni RTH 6.35",
-      "slug": "magni-rth-6-35",
-      "categorie": "Téléhandler rotatif",
-      "sous_categorie": "Chariot télescopique rotatif",
-      "description_courte": "Téléhandler rotatif 6 tonnes à 35m, performances de grue pour les projets de construction les plus ambitieux.",
-      "description_longue": "Le Magni RTH 6.35 atteint 35 m de hauteur avec une capacité de 6 000 kg et une portée impressionnante de 29 m. Motorisé par un Mercedes OM 934 LA Stage IV de 170 kW, il dispose d'une puissance exceptionnelle pour les levages en grande hauteur. Sa rotation 360° et ses stabilisateurs automatiques lui permettent de s'adapter aux espaces restreints et aux configurations les plus complexes.",
-      "prix_ht": null,
-      "devise": "EUR",
-      "etat": "neuf",
-      "disponibilite": "sur_commande",
-      "featured": false,
-      "caracteristiques_techniques": {
-        "charge_max_kg": 6000,
-        "hauteur_max_m": 35,
-        "portee_max_m": 29,
-        "masse_operationnelle_kg": 24000,
-        "puissance_kw": 170
-      },
-      "points_forts": [
-        "Performances de grue avec hauteur de 35 m",
-        "Portée de 29 m en configuration optimale",
-        "Moteur Mercedes OM 934 LA 170 kW",
-        "Rotation 360° avec stabilisateurs automatiques"
-      ],
-      "applications": [
-        "Construction de bâtiments en grande hauteur",
-        "Montage de structures complexes",
-        "Opérations de levage lourd",
-        "Chantiers d'infrastructure majeurs"
-      ],
-      "secteurs": [
-        "BTP",
-        "Construction",
-        "Événementiel",
-        "Industrie"
-      ],
-      "services": {
-        "garantie_constructeur": true,
-        "sav_certifie_se_plus": true,
-        "pieces_detachees_origine": true,
-        "financement_disponible": true
-      },
-      "medias": {
-        "image_principale": null,
-        "images": [],
-        "video": null
-      },
-      "url_wacker_neuson": "https://www.magnith.com/fr/produits/rth-6-35/",
-      "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": null
-    },
-    {
       "id": "magni-rth-8-35",
       "marque": "Magni",
       "modele": "RTH 8.35",
