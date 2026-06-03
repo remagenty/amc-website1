@@ -50,13 +50,13 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": null,
+        "image_principale": "/images/machines/magni/magni-rth-5-18.png",
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/5-18/",
       "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": null
+      "image_principale": "/images/machines/magni/magni-rth-5-18.png"
     },
     {
       "id": "magni-rth-5-21",
@@ -106,13 +106,13 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": null,
+        "image_principale": "/images/machines/magni/magni-rth-5-21.png",
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/prodotto/5-21/",
       "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": null
+      "image_principale": "/images/machines/magni/magni-rth-5-21.png"
     },
     {
       "id": "magni-rth-5-23",
@@ -162,13 +162,13 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": null,
+        "image_principale": "/images/machines/magni/magni-rth-5-23.png",
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/5-23/",
       "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": null
+      "image_principale": "/images/machines/magni/magni-rth-5-23.png"
     },
     {
       "id": "magni-rth-5-25",
@@ -218,13 +218,13 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": null,
+        "image_principale": "/images/machines/magni/magni-rth-5-25.png",
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/rth-5-25/",
       "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": null
+      "image_principale": "/images/machines/magni/magni-rth-5-25.png"
     },
     {
       "id": "magni-rth-6-26",
@@ -274,13 +274,13 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": null,
+        "image_principale": "/images/machines/magni/magni-rth-6-26.png",
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/6-26/",
       "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": null
+      "image_principale": "/images/machines/magni/magni-rth-6-26.png"
     },
     {
       "id": "magni-rth-6-30",
@@ -330,13 +330,13 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": null,
+        "image_principale": "/images/machines/magni/magni-rth-6-30.png",
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/rth-6-30/",
       "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": null
+      "image_principale": "/images/machines/magni/magni-rth-6-30.png"
     },
     {
       "id": "magni-rth-6-35",
@@ -442,13 +442,13 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": null,
+        "image_principale": "/images/machines/magni/magni-rth-8-35.png",
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/rth-8-35/",
       "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": null
+      "image_principale": "/images/machines/magni/magni-rth-8-35.png"
     },
     {
       "id": "magni-rth-8-39",
@@ -498,13 +498,13 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": null,
+        "image_principale": "/images/machines/magni/magni-rth-8-39.png",
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/rth-8-39/",
       "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": null
+      "image_principale": "/images/machines/magni/magni-rth-8-39.png"
     },
     {
       "id": "magni-rth-13-26",
@@ -554,13 +554,13 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": null,
+        "image_principale": "/images/machines/magni/magni-rth-13-26.png",
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/rth-13-26/",
       "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": null
+      "image_principale": "/images/machines/magni/magni-rth-13-26.png"
     },
     {
       "id": "magni-th-3-6",
@@ -608,13 +608,13 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": null,
+        "image_principale": "/images/machines/magni/magni-th-3-6.png",
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/3-6/",
       "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": null
+      "image_principale": "/images/machines/magni/magni-th-3-6.png"
     },
     {
       "id": "magni-th-4-5-15",
@@ -662,13 +662,13 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": null,
+        "image_principale": "/images/machines/magni/magni-th-4-5-15.png",
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/th-4-5-15/",
       "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": null
+      "image_principale": "/images/machines/magni/magni-th-4-5-15.png"
     },
     {
       "id": "magni-th-4-5-19",
@@ -716,13 +716,13 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": null,
+        "image_principale": "/images/machines/magni/magni-th-4-5-19.png",
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/4-5-19-p/",
       "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": null
+      "image_principale": "/images/machines/magni/magni-th-4-5-19.png"
     },
     {
       "id": "magni-th-5-5-19",
@@ -772,13 +772,13 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": null,
+        "image_principale": "/images/machines/magni/magni-th-5-5-19.png",
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/th-5-5-19/",
       "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": null
+      "image_principale": "/images/machines/magni/magni-th-5-5-19.png"
     },
     {
       "id": "magni-th-5-5-24",
@@ -826,13 +826,13 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": null,
+        "image_principale": "/images/machines/magni/magni-th-5-5-24.png",
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/th-5-5-24/",
       "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": null
+      "image_principale": "/images/machines/magni/magni-th-5-5-24.png"
     },
     {
       "id": "magni-th-6-20",
@@ -880,13 +880,13 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": null,
+        "image_principale": "/images/machines/magni/magni-th-6-20.png",
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/th-6-20/",
       "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": null
+      "image_principale": "/images/machines/magni/magni-th-6-20.png"
     },
     {
       "id": "magni-tha-3-6",
@@ -935,13 +935,13 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": null,
+        "image_principale": "/images/machines/magni/magni-tha-3-6.png",
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/tha-3-6/",
       "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": null
+      "image_principale": "/images/machines/magni/magni-tha-3-6.png"
     },
     {
       "id": "magni-tha-4-5-8",
@@ -990,13 +990,13 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": null,
+        "image_principale": "/images/machines/magni/magni-tha-4-5-8.png",
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/tha-4-5-8/",
       "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": null
+      "image_principale": "/images/machines/magni/magni-tha-4-5-8.png"
     },
     {
       "id": "magni-tha-4-5-10",
@@ -1045,13 +1045,13 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": null,
+        "image_principale": "/images/machines/magni/magni-tha-4-5-10.png",
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/tha-4-5-10/",
       "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": null
+      "image_principale": "/images/machines/magni/magni-tha-4-5-10.png"
     },
     {
       "id": "magni-tha-5-8",
@@ -1100,13 +1100,13 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": null,
+        "image_principale": "/images/machines/magni/magni-tha-5-8.png",
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/tha-5-8/",
       "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": null
+      "image_principale": "/images/machines/magni/magni-tha-5-8.png"
     },
     {
       "id": "magni-tha-5-10",
@@ -1155,13 +1155,13 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": null,
+        "image_principale": "/images/machines/magni/magni-tha-5-10.png",
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/tha-5-10/",
       "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": null
+      "image_principale": "/images/machines/magni/magni-tha-5-10.png"
     }
   ]
 }
