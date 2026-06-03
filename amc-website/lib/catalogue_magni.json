@@ -395,62 +395,6 @@
       "image_principale": null
     },
     {
-      "id": "magni-rth-7-26",
-      "marque": "Magni",
-      "modele": "RTH 7.26",
-      "reference": "RTH 7.26",
-      "nom_complet": "Téléhandler rotatif Magni RTH 7.26",
-      "slug": "magni-rth-7-26",
-      "categorie": "Téléhandler rotatif",
-      "sous_categorie": "Chariot télescopique rotatif",
-      "description_courte": "Téléhandler rotatif 7 tonnes à 26m, haute capacité pour les levages lourds avec rotation 360°.",
-      "description_longue": "Le Magni RTH 7.26 combine une capacité de 7 000 kg avec une hauteur de levage de 26 m et une portée de 21 m. Son moteur Volvo TAD 572 VE de 160 kW garantit une puissance fiable pour les travaux industriels intensifs. La rotation 360° et les stabilisateurs automatiques permettent de réaliser des levages précis même dans des environnements contraints. Conçu pour les professionnels exigeant le meilleur en termes de capacité et de flexibilité.",
-      "prix_ht": null,
-      "devise": "EUR",
-      "etat": "neuf",
-      "disponibilite": "sur_commande",
-      "featured": false,
-      "caracteristiques_techniques": {
-        "charge_max_kg": 7000,
-        "hauteur_max_m": 26,
-        "portee_max_m": 21,
-        "masse_operationnelle_kg": 20700,
-        "puissance_kw": 160
-      },
-      "points_forts": [
-        "Capacité de 7 tonnes pour les charges exceptionnelles",
-        "Moteur Volvo TAD 572 VE 160 kW fiable",
-        "Rotation 360° pour un positionnement optimal",
-        "Stabilisateurs automatiques pour tous terrains"
-      ],
-      "applications": [
-        "Levage de préfabriqués très lourds",
-        "Industrie pétrolière et chimique",
-        "Montage de grandes structures",
-        "Chantiers navals et portuaires"
-      ],
-      "secteurs": [
-        "BTP",
-        "Construction",
-        "Événementiel",
-        "Industrie"
-      ],
-      "services": {
-        "garantie_constructeur": true,
-        "sav_certifie_se_plus": true,
-        "pieces_detachees_origine": true,
-        "financement_disponible": true
-      },
-      "medias": {
-        "image_principale": null,
-        "images": [],
-        "video": null
-      },
-      "url_wacker_neuson": "https://www.magnith.com/fr/produits/rth-7-26/",
-      "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": null
-    },
-    {
       "id": "magni-rth-8-35",
       "marque": "Magni",
       "modele": "RTH 8.35",
@@ -887,60 +831,6 @@
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/th-5-5-24/",
-      "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": null
-    },
-    {
-      "id": "magni-th-6-10",
-      "marque": "Magni",
-      "modele": "TH 6.10",
-      "reference": "TH 6.10",
-      "nom_complet": "Téléhandler fixe Magni TH 6.10",
-      "slug": "magni-th-6-10",
-      "categorie": "Téléhandler fixe",
-      "sous_categorie": "Chariot télescopique fixe",
-      "description_courte": "Téléhandler fixe 6 tonnes à 10m, haute capacité de levage pour les chantiers et entrepôts industriels.",
-      "description_longue": "Le Magni TH 6.10 est conçu pour la manutention de charges très lourdes allant jusqu'à 6 000 kg à 10 m de hauteur. Avec un poids opérationnel de 12 000 kg et un moteur Deutz Stage V de 74 kW, il offre une excellente stabilité pour les opérations de levage intensif. Sa conception robuste et sa capacité de charge élevée en font un outil de choix pour les entrepôts industriels, les chantiers de préfabricants et les opérations portuaires.",
-      "prix_ht": null,
-      "devise": "EUR",
-      "etat": "neuf",
-      "disponibilite": "sur_commande",
-      "featured": false,
-      "caracteristiques_techniques": {
-        "charge_max_kg": 6000,
-        "hauteur_max_m": 10,
-        "masse_operationnelle_kg": 12000,
-        "puissance_kw": 74
-      },
-      "points_forts": [
-        "Capacité maximale de 6 tonnes pour charges lourdes",
-        "Construction robuste pour usage intensif",
-        "Moteur Deutz Stage V économique et fiable",
-        "Stabilité optimale pour les opérations de manutention"
-      ],
-      "applications": [
-        "Manutention en entrepôt industriel",
-        "Chargement et déchargement de semi-remorques",
-        "Déplacement de préfabriqués béton",
-        "Opérations portuaires et logistiques"
-      ],
-      "secteurs": [
-        "BTP",
-        "Logistique",
-        "Industrie"
-      ],
-      "services": {
-        "garantie_constructeur": true,
-        "sav_certifie_se_plus": true,
-        "pieces_detachees_origine": true,
-        "financement_disponible": true
-      },
-      "medias": {
-        "image_principale": null,
-        "images": [],
-        "video": null
-      },
-      "url_wacker_neuson": "https://www.magnith.com/fr/produits/th-6-10/",
       "date_scraping": "2026-05-26T00:00:00Z",
       "image_principale": null
     },
