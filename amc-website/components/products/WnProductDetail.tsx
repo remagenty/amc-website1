@@ -115,7 +115,7 @@ function SimilarCard({ machine, categorySlug }: { machine: WnMachine; categorySl
             alt={machine.nom_complet}
             fill
             loading="lazy"
-            className="object-cover group-hover:scale-105 transition-transform duration-300"
+            className="object-contain p-4 group-hover:scale-105 transition-transform duration-300"
             sizes="(max-width: 640px) 100vw, 25vw"
             onError={() => setImgError(true)}
           />
@@ -209,7 +209,7 @@ export function WnProductDetail({ machine, similar, categorySlug, categoryLabel 
                   src={displayImages[activeImage]}
                   alt={`${machine.nom_complet} — vue ${activeImage + 1}`}
                   fill
-                  className="object-cover"
+                  className="object-contain p-6"
                   priority
                   sizes="(max-width: 1024px) 100vw, 40vw"
                   onError={(e) => {
@@ -255,7 +255,7 @@ export function WnProductDetail({ machine, similar, categorySlug, categoryLabel 
                         src={img}
                         alt=""
                         fill
-                        className="object-cover"
+                        className="object-contain p-1"
                         sizes="64px"
                         onError={(e) => {
                           (e.target as HTMLImageElement).src = "/images/products/placeholder-wn.jpg";
