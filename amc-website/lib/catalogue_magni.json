@@ -50,13 +50,13 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/telehandler-rotatif/magni-rth-5-18/hero.png",
+        "image_principale": null,
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/5-18/",
       "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": "/images/machines/telehandler-rotatif/magni-rth-5-18/hero.png"
+      "image_principale": null
     },
     {
       "id": "magni-rth-5-21",
@@ -106,13 +106,13 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/telehandler-rotatif/magni-rth-5-21/hero.png",
+        "image_principale": null,
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/prodotto/5-21/",
       "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": "/images/machines/telehandler-rotatif/magni-rth-5-21/hero.png"
+      "image_principale": null
     },
     {
       "id": "magni-rth-5-23",
@@ -162,13 +162,13 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/telehandler-rotatif/magni-rth-5-23/hero.png",
+        "image_principale": null,
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/5-23/",
       "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": "/images/machines/telehandler-rotatif/magni-rth-5-23/hero.png"
+      "image_principale": null
     },
     {
       "id": "magni-rth-5-25",
@@ -218,13 +218,13 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/telehandler-rotatif/magni-rth-5-25/hero.png",
+        "image_principale": null,
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/rth-5-25/",
       "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": "/images/machines/telehandler-rotatif/magni-rth-5-25/hero.png"
+      "image_principale": null
     },
     {
       "id": "magni-rth-6-26",
@@ -274,13 +274,13 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/telehandler-rotatif/magni-rth-6-26/hero.png",
+        "image_principale": null,
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/6-26/",
       "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": "/images/machines/telehandler-rotatif/magni-rth-6-26/hero.png"
+      "image_principale": null
     },
     {
       "id": "magni-rth-6-30",
@@ -330,13 +330,13 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/telehandler-rotatif/magni-rth-6-30/hero.png",
+        "image_principale": null,
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/rth-6-30/",
       "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": "/images/machines/telehandler-rotatif/magni-rth-6-30/hero.png"
+      "image_principale": null
     },
     {
       "id": "magni-rth-6-35",
@@ -386,13 +386,13 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/telehandler-rotatif/magni-rth-6-35/hero.png",
+        "image_principale": null,
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/rth-6-35/",
       "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": "/images/machines/telehandler-rotatif/magni-rth-6-35/hero.png"
+      "image_principale": null
     },
     {
       "id": "magni-rth-7-26",
@@ -442,13 +442,13 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/telehandler-rotatif/magni-rth-7-26/hero.png",
+        "image_principale": null,
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/rth-7-26/",
       "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": "/images/machines/telehandler-rotatif/magni-rth-7-26/hero.png"
+      "image_principale": null
     },
     {
       "id": "magni-rth-8-35",
@@ -498,13 +498,13 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/telehandler-rotatif/magni-rth-8-35/hero.png",
+        "image_principale": null,
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/rth-8-35/",
       "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": "/images/machines/telehandler-rotatif/magni-rth-8-35/hero.png"
+      "image_principale": null
     },
     {
       "id": "magni-rth-8-39",
@@ -554,13 +554,13 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/telehandler-rotatif/magni-rth-8-39/hero.png",
+        "image_principale": null,
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/rth-8-39/",
       "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": "/images/machines/telehandler-rotatif/magni-rth-8-39/hero.png"
+      "image_principale": null
     },
     {
       "id": "magni-rth-13-26",
@@ -610,13 +610,13 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/telehandler-rotatif/magni-rth-13-26/hero.png",
+        "image_principale": null,
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/rth-13-26/",
       "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": "/images/machines/telehandler-rotatif/magni-rth-13-26/hero.png"
+      "image_principale": null
     },
     {
       "id": "magni-th-3-6",
@@ -664,13 +664,13 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/telehandler-fixe/magni-th-3-6/hero.png",
+        "image_principale": null,
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/3-6/",
       "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": "/images/machines/telehandler-fixe/magni-th-3-6/hero.png"
+      "image_principale": null
     },
     {
       "id": "magni-th-4-5-15",
@@ -718,13 +718,13 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/telehandler-fixe/magni-th-4-5-15/hero.png",
+        "image_principale": null,
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/th-4-5-15/",
       "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": "/images/machines/telehandler-fixe/magni-th-4-5-15/hero.png"
+      "image_principale": null
     },
     {
       "id": "magni-th-4-5-19",
@@ -772,13 +772,13 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/telehandler-fixe/magni-th-4-5-19/hero.png",
+        "image_principale": null,
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/4-5-19-p/",
       "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": "/images/machines/telehandler-fixe/magni-th-4-5-19/hero.png"
+      "image_principale": null
     },
     {
       "id": "magni-th-5-5-19",
@@ -828,13 +828,13 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/telehandler-fixe/magni-th-5-5-19/hero.png",
+        "image_principale": null,
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/th-5-5-19/",
       "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": "/images/machines/telehandler-fixe/magni-th-5-5-19/hero.png"
+      "image_principale": null
     },
     {
       "id": "magni-th-5-5-24",
@@ -882,13 +882,13 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/telehandler-fixe/magni-th-5-5-24/hero.png",
+        "image_principale": null,
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/th-5-5-24/",
       "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": "/images/machines/telehandler-fixe/magni-th-5-5-24/hero.png"
+      "image_principale": null
     },
     {
       "id": "magni-th-6-10",
@@ -936,13 +936,13 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/telehandler-fixe/magni-th-6-10/hero.png",
+        "image_principale": null,
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/th-6-10/",
       "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": "/images/machines/telehandler-fixe/magni-th-6-10/hero.png"
+      "image_principale": null
     },
     {
       "id": "magni-th-6-20",
@@ -990,13 +990,13 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/telehandler-fixe/magni-th-6-20/hero.png",
+        "image_principale": null,
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/th-6-20/",
       "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": "/images/machines/telehandler-fixe/magni-th-6-20/hero.png"
+      "image_principale": null
     },
     {
       "id": "magni-tha-3-6",
@@ -1045,13 +1045,13 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/telehandler-agricole/magni-tha-3-6/hero.png",
+        "image_principale": null,
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/tha-3-6/",
       "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": "/images/machines/telehandler-agricole/magni-tha-3-6/hero.png"
+      "image_principale": null
     },
     {
       "id": "magni-tha-4-5-8",
@@ -1100,13 +1100,13 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/telehandler-agricole/magni-tha-4-5-8/hero.png",
+        "image_principale": null,
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/tha-4-5-8/",
       "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": "/images/machines/telehandler-agricole/magni-tha-4-5-8/hero.png"
+      "image_principale": null
     },
     {
       "id": "magni-tha-4-5-10",
@@ -1155,13 +1155,13 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/telehandler-agricole/magni-tha-4-5-10/hero.png",
+        "image_principale": null,
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/tha-4-5-10/",
       "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": "/images/machines/telehandler-agricole/magni-tha-4-5-10/hero.png"
+      "image_principale": null
     },
     {
       "id": "magni-tha-5-8",
@@ -1210,13 +1210,13 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/telehandler-agricole/magni-tha-5-8/hero.png",
+        "image_principale": null,
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/tha-5-8/",
       "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": "/images/machines/telehandler-agricole/magni-tha-5-8/hero.png"
+      "image_principale": null
     },
     {
       "id": "magni-tha-5-10",
@@ -1265,13 +1265,13 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/telehandler-agricole/magni-tha-5-10/hero.png",
+        "image_principale": null,
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/tha-5-10/",
       "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": "/images/machines/telehandler-agricole/magni-tha-5-10/hero.png"
+      "image_principale": null
     }
   ]
 }
