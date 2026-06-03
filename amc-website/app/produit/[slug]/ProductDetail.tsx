@@ -114,7 +114,7 @@ export function ProductDetail({
                   src={product.images[activeImage] || "/images/placeholder-product.jpg"}
                   alt={`${product.name} — vue ${activeImage + 1}`}
                   fill
-                  className="object-cover"
+                  className="object-contain p-6"
                   priority
                   sizes="(max-width: 1024px) 100vw, 40vw"
                 />
@@ -142,7 +142,7 @@ export function ProductDetail({
                       } transition-all`}
                       aria-label={`Image ${i + 1}`}
                     >
-                      <Image src={img} alt="" fill className="object-cover" sizes="64px" />
+                      <Image src={img} alt="" fill className="object-contain p-1" sizes="64px" />
                     </button>
                   ))}
                 </div>
