@@ -1,23 +1,22 @@
 {
   "meta": {
-    "version": "1.0.0",
+    "version": "2.0.0",
     "marque": "Wacker Neuson",
     "distributeur": "AMC - Alpes Matériel Compact",
-    "description": "Catalogue complet des machines Wacker Neuson distribuées par AMC",
-    "total_machines": 55,
+    "description": "Catalogue mis à jour — modèles vérifiés sur wackerneuson.fr (juin 2026)",
+    "total_machines": 37,
     "categories": [
       "Chargeuse",
       "Compacteur",
       "Dumper",
       "Marteau piqueur",
       "Mini-pelle",
-      "Outillage",
       "Pilonneuse",
       "Plaque vibrante",
       "Télescopique"
     ],
     "date_creation": "2026-05-26T08:29:07Z",
-    "date_mise_a_jour": "2026-05-26T08:29:07Z"
+    "date_mise_a_jour": "2026-06-04T14:17:12Z"
   },
   "machines": [
     {
@@ -135,63 +134,6 @@
       "date_scraping": "2026-05-26T08:29:07Z"
     },
     {
-      "id": "wn-003",
-      "marque": "Wacker Neuson",
-      "modele": "EZ38",
-      "reference": "EZ38",
-      "nom_complet": "Mini-pelle Wacker Neuson EZ38",
-      "slug": "wacker-neuson-ez38",
-      "categorie": "Mini-pelle",
-      "sous_categorie": "Mini-pelle queue zéro",
-      "description_courte": "Mini-pelle queue zéro 3,8 t, polyvalente pour chantiers variés.",
-      "description_longue": "La Wacker Neuson EZ38 est une mini-pelle queue zéro de 3,8 tonnes polyvalente et performante. Elle offre un déport de flèche permettant de travailler en bord de fouille et de franchir les obstacles. Idéale pour les professionnels exigeants du BTP.",
-      "prix_ht": null,
-      "devise": "EUR",
-      "etat": "neuf",
-      "disponibilite": "disponible",
-      "featured": true,
-      "caracteristiques_techniques": {
-        "masse_operationnelle_kg": 3800,
-        "puissance_kw": 24.4,
-        "profondeur_fouille_max_mm": 3270,
-        "force_arrachement_godet_kn": 36.0,
-        "largeur_transport_mm": 1590,
-        "hauteur_transport_mm": 2550,
-        "longueur_transport_mm": 4690,
-        "capacite_godet_m3": 0.1
-      },
-      "points_forts": [
-        "Queue zéro",
-        "Déport de flèche latéral",
-        "Haute force d'arrachement",
-        "Stabilisateurs réglables"
-      ],
-      "applications": [
-        "Excavation",
-        "Pose de canalisations",
-        "Travaux de fondation",
-        "Démolition"
-      ],
-      "secteurs": [
-        "BTP",
-        "Génie civil",
-        "Assainissement"
-      ],
-      "services": {
-        "garantie_constructeur": true,
-        "sav_certifie_se_plus": true,
-        "pieces_detachees_origine": true,
-        "financement_disponible": true
-      },
-      "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-ez38.jpg",
-        "images": [],
-        "video": null
-      },
-      "url_wacker_neuson": "https://www.wackerneuson.com/fr/produits/mini-pelles/ez38",
-      "date_scraping": "2026-05-26T08:29:07Z"
-    },
-    {
       "id": "wn-004",
       "marque": "Wacker Neuson",
       "modele": "EZ53",
@@ -306,290 +248,6 @@
       "date_scraping": "2026-05-26T08:29:07Z"
     },
     {
-      "id": "wn-006",
-      "marque": "Wacker Neuson",
-      "modele": "1503",
-      "reference": "1503",
-      "nom_complet": "Mini-pelle Wacker Neuson 1503",
-      "slug": "wacker-neuson-1503",
-      "categorie": "Mini-pelle",
-      "sous_categorie": "Mini-pelle compacte",
-      "description_courte": "Mini-pelle compacte 1,5 t, légèreté et agilité pour petits chantiers.",
-      "description_longue": "La Wacker Neuson 1503 est une mini-pelle de 1,5 tonne idéale pour les petits chantiers nécessitant légèreté et maniabilité. Facile à transporter sur remorque légère, elle convient parfaitement aux travaux de jardinage, aménagement et tranchées.",
-      "prix_ht": null,
-      "devise": "EUR",
-      "etat": "neuf",
-      "disponibilite": "disponible",
-      "featured": false,
-      "caracteristiques_techniques": {
-        "masse_operationnelle_kg": 1490,
-        "puissance_kw": 10.9,
-        "profondeur_fouille_max_mm": 2250,
-        "force_arrachement_godet_kn": 15.5,
-        "largeur_transport_mm": 980,
-        "hauteur_transport_mm": 2300,
-        "longueur_transport_mm": 3300,
-        "capacite_godet_m3": 0.04
-      },
-      "points_forts": [
-        "Transport sur remorque légère",
-        "Faible pression au sol",
-        "Facile à manœuvrer",
-        "Bras de pelle offset"
-      ],
-      "applications": [
-        "Jardinage paysager",
-        "Travaux privés",
-        "Assainissement résidentiel"
-      ],
-      "secteurs": [
-        "Paysagisme",
-        "BTP léger",
-        "Agriculture"
-      ],
-      "services": {
-        "garantie_constructeur": true,
-        "sav_certifie_se_plus": true,
-        "pieces_detachees_origine": true,
-        "financement_disponible": true
-      },
-      "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-1503.jpg",
-        "images": [],
-        "video": null
-      },
-      "url_wacker_neuson": "https://www.wackerneuson.com/fr/produits/mini-pelles/1503",
-      "date_scraping": "2026-05-26T08:29:07Z"
-    },
-    {
-      "id": "wn-007",
-      "marque": "Wacker Neuson",
-      "modele": "2503",
-      "reference": "2503",
-      "nom_complet": "Mini-pelle Wacker Neuson 2503",
-      "slug": "wacker-neuson-2503",
-      "categorie": "Mini-pelle",
-      "sous_categorie": "Mini-pelle compacte",
-      "description_courte": "Mini-pelle compacte 2,5 t, équilibre parfait entre performance et maniabilité.",
-      "description_longue": "La Wacker Neuson 2503 de 2,5 tonnes offre un excellent compromis entre puissance et compacité. Équipée d'un système de flèche offset, elle permet de travailler en bord de mur et dans des espaces réduits tout en maintenant de hautes performances.",
-      "prix_ht": null,
-      "devise": "EUR",
-      "etat": "neuf",
-      "disponibilite": "disponible",
-      "featured": false,
-      "caracteristiques_techniques": {
-        "masse_operationnelle_kg": 2490,
-        "puissance_kw": 16.1,
-        "profondeur_fouille_max_mm": 2680,
-        "force_arrachement_godet_kn": 22.0,
-        "largeur_transport_mm": 1300,
-        "hauteur_transport_mm": 2410,
-        "longueur_transport_mm": 3870,
-        "capacite_godet_m3": 0.065
-      },
-      "points_forts": [
-        "Flèche offset pour travaux en bord de mur",
-        "Vaste choix d'accessoires",
-        "Consommation réduite",
-        "Entretien simplifié"
-      ],
-      "applications": [
-        "Tranchées",
-        "Fondations légères",
-        "Paysagisme",
-        "Réseaux"
-      ],
-      "secteurs": [
-        "BTP",
-        "Paysagisme",
-        "Assainissement"
-      ],
-      "services": {
-        "garantie_constructeur": true,
-        "sav_certifie_se_plus": true,
-        "pieces_detachees_origine": true,
-        "financement_disponible": true
-      },
-      "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-2503.jpg",
-        "images": [],
-        "video": null
-      },
-      "url_wacker_neuson": "https://www.wackerneuson.com/fr/produits/mini-pelles/2503",
-      "date_scraping": "2026-05-26T08:29:07Z"
-    },
-    {
-      "id": "wn-008",
-      "marque": "Wacker Neuson",
-      "modele": "3503",
-      "reference": "3503",
-      "nom_complet": "Mini-pelle Wacker Neuson 3503",
-      "slug": "wacker-neuson-3503",
-      "categorie": "Mini-pelle",
-      "sous_categorie": "Mini-pelle compacte",
-      "description_courte": "Mini-pelle 3,5 t robuste et polyvalente pour chantiers professionnels.",
-      "description_longue": "La Wacker Neuson 3503 est une mini-pelle de 3,5 tonnes robuste et fiable. Elle convient aux travaux quotidiens exigeants des professionnels du BTP et des entreprises d'assainissement. Performances élevées et faible coût d'exploitation.",
-      "prix_ht": null,
-      "devise": "EUR",
-      "etat": "neuf",
-      "disponibilite": "disponible",
-      "featured": true,
-      "caracteristiques_techniques": {
-        "masse_operationnelle_kg": 3490,
-        "puissance_kw": 21.3,
-        "profondeur_fouille_max_mm": 3120,
-        "force_arrachement_godet_kn": 33.0,
-        "largeur_transport_mm": 1550,
-        "hauteur_transport_mm": 2500,
-        "longueur_transport_mm": 4560,
-        "capacite_godet_m3": 0.09
-      },
-      "points_forts": [
-        "Robustesse éprouvée sur chantier",
-        "Flèche offset standard",
-        "Hydraulique puissant",
-        "Accès moteur facilité"
-      ],
-      "applications": [
-        "Terrassement",
-        "Démolition légère",
-        "VRD",
-        "Agriculture"
-      ],
-      "secteurs": [
-        "BTP",
-        "Agriculture",
-        "Paysagisme"
-      ],
-      "services": {
-        "garantie_constructeur": true,
-        "sav_certifie_se_plus": true,
-        "pieces_detachees_origine": true,
-        "financement_disponible": true
-      },
-      "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-3503.jpg",
-        "images": [],
-        "video": null
-      },
-      "url_wacker_neuson": "https://www.wackerneuson.com/fr/produits/mini-pelles/3503",
-      "date_scraping": "2026-05-26T08:29:07Z"
-    },
-    {
-      "id": "wn-009",
-      "marque": "Wacker Neuson",
-      "modele": "4503",
-      "reference": "4503",
-      "nom_complet": "Mini-pelle Wacker Neuson 4503",
-      "slug": "wacker-neuson-4503",
-      "categorie": "Mini-pelle",
-      "sous_categorie": "Mini-pelle compacte",
-      "description_courte": "Mini-pelle 4,5 t, puissante et stable pour chantiers variés.",
-      "description_longue": "La Wacker Neuson 4503 de 4,5 tonnes est une mini-pelle polyvalente parfaite pour les chantiers de taille moyenne. Elle combine puissance hydraulique, stabilité et facilité d'utilisation pour les opérateurs expérimentés.",
-      "prix_ht": null,
-      "devise": "EUR",
-      "etat": "neuf",
-      "disponibilite": "sur_commande",
-      "featured": false,
-      "caracteristiques_techniques": {
-        "masse_operationnelle_kg": 4500,
-        "puissance_kw": 30.0,
-        "profondeur_fouille_max_mm": 3440,
-        "force_arrachement_godet_kn": 45.0,
-        "largeur_transport_mm": 1800,
-        "hauteur_transport_mm": 2600,
-        "longueur_transport_mm": 5200,
-        "capacite_godet_m3": 0.14
-      },
-      "points_forts": [
-        "Puissance hydraulique élevée",
-        "Grande stabilité",
-        "Cabine ROPS/FOPS",
-        "Nombreux équipements disponibles"
-      ],
-      "applications": [
-        "Terrassement moyen",
-        "Démolition",
-        "Construction",
-        "Recyclage"
-      ],
-      "secteurs": [
-        "BTP",
-        "Génie civil",
-        "Démolition"
-      ],
-      "services": {
-        "garantie_constructeur": true,
-        "sav_certifie_se_plus": true,
-        "pieces_detachees_origine": true,
-        "financement_disponible": true
-      },
-      "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-4503.jpg",
-        "images": [],
-        "video": null
-      },
-      "url_wacker_neuson": "https://www.wackerneuson.com/fr/produits/mini-pelles/4503",
-      "date_scraping": "2026-05-26T08:29:07Z"
-    },
-    {
-      "id": "wn-010",
-      "marque": "Wacker Neuson",
-      "modele": "6003",
-      "reference": "6003",
-      "nom_complet": "Mini-pelle Wacker Neuson 6003",
-      "slug": "wacker-neuson-6003",
-      "categorie": "Mini-pelle",
-      "sous_categorie": "Mini-pelle",
-      "description_courte": "Mini-pelle 6 t, performance maximale pour les professionnels du terrassement.",
-      "description_longue": "La Wacker Neuson 6003 de 6 tonnes est une pelle performante offrant une grande hauteur de déversement et une force d'arrachement importante. Idéale pour les terrassements significatifs et les travaux de construction.",
-      "prix_ht": null,
-      "devise": "EUR",
-      "etat": "neuf",
-      "disponibilite": "sur_commande",
-      "featured": false,
-      "caracteristiques_techniques": {
-        "masse_operationnelle_kg": 6000,
-        "puissance_kw": 40.0,
-        "profondeur_fouille_max_mm": 3900,
-        "force_arrachement_godet_kn": 58.0,
-        "largeur_transport_mm": 2100,
-        "hauteur_transport_mm": 2700,
-        "longueur_transport_mm": 6000,
-        "capacite_godet_m3": 0.22
-      },
-      "points_forts": [
-        "Force d'arrachement élevée",
-        "Longue portée",
-        "Compatible brise-roche",
-        "Système de refroidissement optimisé"
-      ],
-      "applications": [
-        "Terrassement",
-        "Carrière",
-        "Construction",
-        "Mines"
-      ],
-      "secteurs": [
-        "BTP",
-        "Génie civil",
-        "Carrière"
-      ],
-      "services": {
-        "garantie_constructeur": true,
-        "sav_certifie_se_plus": true,
-        "pieces_detachees_origine": true,
-        "financement_disponible": true
-      },
-      "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-6003.jpg",
-        "images": [],
-        "video": null
-      },
-      "url_wacker_neuson": "https://www.wackerneuson.com/fr/produits/mini-pelles/6003",
-      "date_scraping": "2026-05-26T08:29:07Z"
-    },
-    {
       "id": "wn-011",
       "marque": "Wacker Neuson",
       "modele": "DT10",
@@ -700,178 +358,6 @@
         "video": null
       },
       "url_wacker_neuson": "https://www.wackerneuson.com/fr/produits/dumpers/dt15",
-      "date_scraping": "2026-05-26T08:29:07Z"
-    },
-    {
-      "id": "wn-013",
-      "marque": "Wacker Neuson",
-      "modele": "DT20",
-      "reference": "DT20",
-      "nom_complet": "Dumper Wacker Neuson DT20",
-      "slug": "wacker-neuson-dt20",
-      "categorie": "Dumper",
-      "sous_categorie": "Dumper articulé",
-      "description_courte": "Dumper articulé 2 t, polyvalent pour tout type de chantier.",
-      "description_longue": "Le Wacker Neuson DT20 est un dumper articulé 2 tonnes robuste et polyvalent. Sa transmission hydrostatique assure un confort de conduite optimal sur tous types de terrains. Benne basculante hydraulique pour un déchargement rapide.",
-      "prix_ht": null,
-      "devise": "EUR",
-      "etat": "neuf",
-      "disponibilite": "disponible",
-      "featured": true,
-      "caracteristiques_techniques": {
-        "charge_utile_kg": 2000,
-        "capacite_benne_m3": 1.0,
-        "puissance_kw": 18.5,
-        "vitesse_max_kmh": 12,
-        "largeur_mm": 1200,
-        "longueur_mm": 2900,
-        "hauteur_mm": 1600,
-        "masse_totale_kg": 2800
-      },
-      "points_forts": [
-        "4 roues motrices permanentes",
-        "Bonne stabilité en pente",
-        "Ergonomie conducteur optimisée",
-        "Entretien facilité"
-      ],
-      "applications": [
-        "Chantier BTP",
-        "Terrassement",
-        "Paysagisme professionnel",
-        "Agriculture"
-      ],
-      "secteurs": [
-        "BTP",
-        "Agriculture",
-        "Paysagisme"
-      ],
-      "services": {
-        "garantie_constructeur": true,
-        "sav_certifie_se_plus": true,
-        "pieces_detachees_origine": true,
-        "financement_disponible": true
-      },
-      "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-dt20.jpg",
-        "images": [],
-        "video": null
-      },
-      "url_wacker_neuson": "https://www.wackerneuson.com/fr/produits/dumpers/dt20",
-      "date_scraping": "2026-05-26T08:29:07Z"
-    },
-    {
-      "id": "wn-014",
-      "marque": "Wacker Neuson",
-      "modele": "DT25",
-      "reference": "DT25",
-      "nom_complet": "Dumper Wacker Neuson DT25",
-      "slug": "wacker-neuson-dt25",
-      "categorie": "Dumper",
-      "sous_categorie": "Dumper articulé",
-      "description_courte": "Dumper articulé 2,5 t, robustesse et capacité pour chantiers exigeants.",
-      "description_longue": "Le Wacker Neuson DT25 est un dumper 2,5 tonnes alliant robustesse et capacité de charge importante. Parfaitement adapté aux chantiers de construction et terrassement nécessitant un transport de matériaux intensif.",
-      "prix_ht": null,
-      "devise": "EUR",
-      "etat": "neuf",
-      "disponibilite": "sur_commande",
-      "featured": false,
-      "caracteristiques_techniques": {
-        "charge_utile_kg": 2500,
-        "capacite_benne_m3": 1.3,
-        "puissance_kw": 22.4,
-        "vitesse_max_kmh": 12,
-        "largeur_mm": 1300,
-        "longueur_mm": 3100,
-        "hauteur_mm": 1700,
-        "masse_totale_kg": 3400
-      },
-      "points_forts": [
-        "Benne haute capacité",
-        "Traction intégrale",
-        "Protection cabine ROPS",
-        "Hydraulique puissant"
-      ],
-      "applications": [
-        "Terrassement",
-        "Construction",
-        "Carrière légère",
-        "Agriculture"
-      ],
-      "secteurs": [
-        "BTP",
-        "Génie civil",
-        "Agriculture"
-      ],
-      "services": {
-        "garantie_constructeur": true,
-        "sav_certifie_se_plus": true,
-        "pieces_detachees_origine": true,
-        "financement_disponible": true
-      },
-      "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-dt25.jpg",
-        "images": [],
-        "video": null
-      },
-      "url_wacker_neuson": "https://www.wackerneuson.com/fr/produits/dumpers/dt25",
-      "date_scraping": "2026-05-26T08:29:07Z"
-    },
-    {
-      "id": "wn-015",
-      "marque": "Wacker Neuson",
-      "modele": "DT30",
-      "reference": "DT30",
-      "nom_complet": "Dumper Wacker Neuson DT30",
-      "slug": "wacker-neuson-dt30",
-      "categorie": "Dumper",
-      "sous_categorie": "Dumper articulé",
-      "description_courte": "Dumper articulé 3 t, idéal pour les gros chantiers de terrassement.",
-      "description_longue": "Le Wacker Neuson DT30 est un dumper articulé de 3 tonnes conçu pour les gros chantiers. Sa grande capacité de benne et sa puissance moteur en font un outil incontournable pour le transport intensif de matériaux sur chantier.",
-      "prix_ht": null,
-      "devise": "EUR",
-      "etat": "neuf",
-      "disponibilite": "sur_commande",
-      "featured": false,
-      "caracteristiques_techniques": {
-        "charge_utile_kg": 3000,
-        "capacite_benne_m3": 1.6,
-        "puissance_kw": 27.5,
-        "vitesse_max_kmh": 13,
-        "largeur_mm": 1450,
-        "longueur_mm": 3400,
-        "hauteur_mm": 1850,
-        "masse_totale_kg": 4200
-      },
-      "points_forts": [
-        "Grande capacité de chargement",
-        "Articulation articulée pour terrain accidenté",
-        "Cabine ROPS homologuée",
-        "Freinage performant"
-      ],
-      "applications": [
-        "Grands terrassements",
-        "Construction routière",
-        "Mines et carrières",
-        "Agriculture"
-      ],
-      "secteurs": [
-        "BTP",
-        "Génie civil",
-        "Agriculture",
-        "Carrière"
-      ],
-      "services": {
-        "garantie_constructeur": true,
-        "sav_certifie_se_plus": true,
-        "pieces_detachees_origine": true,
-        "financement_disponible": true
-      },
-      "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-dt30.jpg",
-        "images": [],
-        "video": null
-      },
-      "url_wacker_neuson": "https://www.wackerneuson.com/fr/produits/dumpers/dt30",
       "date_scraping": "2026-05-26T08:29:07Z"
     },
     {
@@ -991,63 +477,6 @@
       "date_scraping": "2026-05-26T08:29:07Z"
     },
     {
-      "id": "wn-018",
-      "marque": "Wacker Neuson",
-      "modele": "WL34",
-      "reference": "WL34",
-      "nom_complet": "Chargeuse compacte Wacker Neuson WL34",
-      "slug": "wacker-neuson-wl34",
-      "categorie": "Chargeuse",
-      "sous_categorie": "Chargeuse compacte",
-      "description_courte": "Chargeuse compacte 3,4 t, puissance et polyvalence pour usage intensif.",
-      "description_longue": "La Wacker Neuson WL34 est une chargeuse compacte de taille intermédiaire offrant une force de chargement élevée et une grande polyvalence. Adaptée aux usages professionnels intensifs en BTP et agriculture.",
-      "prix_ht": null,
-      "devise": "EUR",
-      "etat": "neuf",
-      "disponibilite": "disponible",
-      "featured": false,
-      "caracteristiques_techniques": {
-        "charge_utile_kg": 1600,
-        "capacite_godet_m3": 0.65,
-        "puissance_kw": 39.5,
-        "vitesse_max_kmh": 20,
-        "largeur_mm": 1600,
-        "longueur_mm": 4000,
-        "hauteur_mm": 2300,
-        "masse_totale_kg": 5200
-      },
-      "points_forts": [
-        "Force de levage élevée",
-        "Système de flottement du godet",
-        "Transmission automatique",
-        "Cabine climatisée en option"
-      ],
-      "applications": [
-        "Chargement de camions",
-        "Terrassement",
-        "Manutention lourde",
-        "Agriculture intensive"
-      ],
-      "secteurs": [
-        "BTP",
-        "Agriculture",
-        "Industrie"
-      ],
-      "services": {
-        "garantie_constructeur": true,
-        "sav_certifie_se_plus": true,
-        "pieces_detachees_origine": true,
-        "financement_disponible": true
-      },
-      "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-wl34.jpg",
-        "images": [],
-        "video": null
-      },
-      "url_wacker_neuson": "https://www.wackerneuson.com/fr/produits/chargeuses/wl34",
-      "date_scraping": "2026-05-26T08:29:07Z"
-    },
-    {
       "id": "wn-019",
       "marque": "Wacker Neuson",
       "modele": "WL52",
@@ -1106,61 +535,6 @@
       "date_scraping": "2026-05-26T08:29:07Z"
     },
     {
-      "id": "wn-020",
-      "marque": "Wacker Neuson",
-      "modele": "RD12",
-      "reference": "RD12",
-      "nom_complet": "Compacteur tandem Wacker Neuson RD12",
-      "slug": "wacker-neuson-rd12",
-      "categorie": "Compacteur",
-      "sous_categorie": "Rouleau tandem",
-      "description_courte": "Rouleau tandem vibrant 1,2 t, compact pour enrobés et sols en petits espaces.",
-      "description_longue": "Le Wacker Neuson RD12 est un rouleau compacteur tandem de 1,2 tonne idéal pour les travaux de compactage d'enrobés et de sols granulaires en espaces réduits. Sa compacité lui permet d'accéder aux zones difficiles.",
-      "prix_ht": null,
-      "devise": "EUR",
-      "etat": "neuf",
-      "disponibilite": "disponible",
-      "featured": false,
-      "caracteristiques_techniques": {
-        "masse_operationnelle_kg": 1200,
-        "largeur_de_travail_mm": 700,
-        "amplitude_mm": 0.4,
-        "frequence_hz": 55,
-        "vitesse_max_kmh": 5,
-        "puissance_kw": 10.5
-      },
-      "points_forts": [
-        "Très compact",
-        "Bon compactage pour sa taille",
-        "Facile à transporter",
-        "Conduite intuitive"
-      ],
-      "applications": [
-        "Enrobés voirie",
-        "Compactage sol",
-        "Allées privées",
-        "Travaux en espace réduit"
-      ],
-      "secteurs": [
-        "BTP",
-        "Voirie",
-        "Paysagisme"
-      ],
-      "services": {
-        "garantie_constructeur": true,
-        "sav_certifie_se_plus": true,
-        "pieces_detachees_origine": true,
-        "financement_disponible": true
-      },
-      "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-rd12.jpg",
-        "images": [],
-        "video": null
-      },
-      "url_wacker_neuson": "https://www.wackerneuson.com/fr/produits/compacteurs/rd12",
-      "date_scraping": "2026-05-26T08:29:07Z"
-    },
-    {
       "id": "wn-021",
       "marque": "Wacker Neuson",
       "modele": "RD18",
@@ -1213,114 +587,6 @@
         "video": null
       },
       "url_wacker_neuson": "https://www.wackerneuson.com/fr/produits/compacteurs/rd18",
-      "date_scraping": "2026-05-26T08:29:07Z"
-    },
-    {
-      "id": "wn-022",
-      "marque": "Wacker Neuson",
-      "modele": "RD27",
-      "reference": "RD27",
-      "nom_complet": "Compacteur tandem Wacker Neuson RD27",
-      "slug": "wacker-neuson-rd27",
-      "categorie": "Compacteur",
-      "sous_categorie": "Rouleau tandem",
-      "description_courte": "Rouleau tandem articulé 2,7 t, haute performance pour voirie professionnelle.",
-      "description_longue": "Le Wacker Neuson RD27 de 2,7 tonnes est un compacteur tandem articulé de haute performance destiné aux professionnels de la voirie et des travaux publics. Vibration indépendante sur chaque tambour pour un compactage optimal.",
-      "prix_ht": null,
-      "devise": "EUR",
-      "etat": "neuf",
-      "disponibilite": "disponible",
-      "featured": true,
-      "caracteristiques_techniques": {
-        "masse_operationnelle_kg": 2700,
-        "largeur_de_travail_mm": 1000,
-        "amplitude_mm": 0.5,
-        "frequence_hz": 58,
-        "vitesse_max_kmh": 7,
-        "puissance_kw": 18.5
-      },
-      "points_forts": [
-        "Vibration indépendante 2 tambours",
-        "Cabine ROPS homologuée",
-        "Système anti-ségrégation",
-        "Contrôle électronique de vibration"
-      ],
-      "applications": [
-        "Routes départementales",
-        "Autoroutes",
-        "Pistes aéroportuaires",
-        "Grands parkings"
-      ],
-      "secteurs": [
-        "Travaux publics",
-        "Voirie",
-        "BTP"
-      ],
-      "services": {
-        "garantie_constructeur": true,
-        "sav_certifie_se_plus": true,
-        "pieces_detachees_origine": true,
-        "financement_disponible": true
-      },
-      "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-rd27.jpg",
-        "images": [],
-        "video": null
-      },
-      "url_wacker_neuson": "https://www.wackerneuson.com/fr/produits/compacteurs/rd27",
-      "date_scraping": "2026-05-26T08:29:07Z"
-    },
-    {
-      "id": "wn-023",
-      "marque": "Wacker Neuson",
-      "modele": "RD40",
-      "reference": "RD40",
-      "nom_complet": "Compacteur tandem Wacker Neuson RD40",
-      "slug": "wacker-neuson-rd40",
-      "categorie": "Compacteur",
-      "sous_categorie": "Rouleau tandem",
-      "description_courte": "Rouleau tandem 4 t, robustesse pour chantiers de voirie importants.",
-      "description_longue": "Le Wacker Neuson RD40 est un rouleau compacteur tandem articulé de 4 tonnes pour les chantiers de voirie importants. Sa robustesse et ses performances en font un choix privilégié pour les entreprises de travaux publics.",
-      "prix_ht": null,
-      "devise": "EUR",
-      "etat": "neuf",
-      "disponibilite": "sur_commande",
-      "featured": false,
-      "caracteristiques_techniques": {
-        "masse_operationnelle_kg": 4000,
-        "largeur_de_travail_mm": 1300,
-        "amplitude_mm": 0.55,
-        "frequence_hz": 55,
-        "vitesse_max_kmh": 9,
-        "puissance_kw": 26.0
-      },
-      "points_forts": [
-        "Grande largeur de compactage",
-        "Déport de direction",
-        "Système de vibration haute fréquence",
-        "Cabine climatisée"
-      ],
-      "applications": [
-        "Routes principales",
-        "Zones industrielles",
-        "Aéroports"
-      ],
-      "secteurs": [
-        "Travaux publics",
-        "Génie civil"
-      ],
-      "services": {
-        "garantie_constructeur": true,
-        "sav_certifie_se_plus": true,
-        "pieces_detachees_origine": true,
-        "financement_disponible": true
-      },
-      "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-rd40.jpg",
-        "images": [],
-        "video": null
-      },
-      "url_wacker_neuson": "https://www.wackerneuson.com/fr/produits/compacteurs/rd40",
       "date_scraping": "2026-05-26T08:29:07Z"
     },
     {
@@ -1761,399 +1027,6 @@
       "date_scraping": "2026-05-26T08:29:07Z"
     },
     {
-      "id": "wn-032",
-      "marque": "Wacker Neuson",
-      "modele": "EH27",
-      "reference": "EH27",
-      "nom_complet": "Marteau piqueur électrique Wacker Neuson EH27",
-      "slug": "wacker-neuson-eh27",
-      "categorie": "Marteau piqueur",
-      "sous_categorie": "Marteau électrique",
-      "description_courte": "Marteau piqueur électrique 27 kg, polyvalent pour démolition et burinage.",
-      "description_longue": "Le Wacker Neuson EH27 est un marteau piqueur électrique de 27 kg offrant une excellente force d'impact pour les travaux de démolition, burinage et percement. Son moteur électrique lui confère un fonctionnement sans émissions.",
-      "prix_ht": null,
-      "devise": "EUR",
-      "etat": "neuf",
-      "disponibilite": "disponible",
-      "featured": false,
-      "caracteristiques_techniques": {
-        "masse_operationnelle_kg": 27,
-        "energie_impact_j": 45,
-        "frequence_coups_min": 1200,
-        "puissance_kw": 2.0,
-        "alimentation": "électrique 230V"
-      },
-      "points_forts": [
-        "Zéro émission",
-        "Fonctionnement silencieux relatif",
-        "Idéal intérieur",
-        "Entretien réduit"
-      ],
-      "applications": [
-        "Démolition béton",
-        "Burinage",
-        "Percement",
-        "Travaux intérieur"
-      ],
-      "secteurs": [
-        "BTP",
-        "Démolition",
-        "Rénovation"
-      ],
-      "services": {
-        "garantie_constructeur": true,
-        "sav_certifie_se_plus": true,
-        "pieces_detachees_origine": true,
-        "financement_disponible": true
-      },
-      "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-eh27.jpg",
-        "images": [],
-        "video": null
-      },
-      "url_wacker_neuson": "https://www.wackerneuson.com/fr/produits/marteaux-piqueurs/eh27",
-      "date_scraping": "2026-05-26T08:29:07Z"
-    },
-    {
-      "id": "wn-033",
-      "marque": "Wacker Neuson",
-      "modele": "BH24",
-      "reference": "BH24",
-      "nom_complet": "Marteau piqueur pneumatique Wacker Neuson BH24",
-      "slug": "wacker-neuson-bh24",
-      "categorie": "Marteau piqueur",
-      "sous_categorie": "Marteau pneumatique",
-      "description_courte": "Marteau piqueur pneumatique 24 kg, puissant pour démolition intensive.",
-      "description_longue": "Le Wacker Neuson BH24 est un marteau piqueur pneumatique de 24 kg destiné aux travaux de démolition intensive. Sa puissance de frappe élevée lui permet de briser le béton armé et les matériaux les plus durs.",
-      "prix_ht": null,
-      "devise": "EUR",
-      "etat": "neuf",
-      "disponibilite": "disponible",
-      "featured": false,
-      "caracteristiques_techniques": {
-        "masse_operationnelle_kg": 24,
-        "energie_impact_j": 52,
-        "frequence_coups_min": 1400,
-        "pression_service_bar": 6,
-        "alimentation": "pneumatique"
-      },
-      "points_forts": [
-        "Haute énergie d'impact",
-        "Outil pneumatique",
-        "Robustesse",
-        "Entretien simple"
-      ],
-      "applications": [
-        "Démolition béton armé",
-        "Chaussées",
-        "Fondations",
-        "Rénovation lourde"
-      ],
-      "secteurs": [
-        "BTP",
-        "Démolition",
-        "Travaux publics"
-      ],
-      "services": {
-        "garantie_constructeur": true,
-        "sav_certifie_se_plus": true,
-        "pieces_detachees_origine": true,
-        "financement_disponible": true
-      },
-      "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-bh24.jpg",
-        "images": [],
-        "video": null
-      },
-      "url_wacker_neuson": "https://www.wackerneuson.com/fr/produits/marteaux-piqueurs/bh24",
-      "date_scraping": "2026-05-26T08:29:07Z"
-    },
-    {
-      "id": "wn-034",
-      "marque": "Wacker Neuson",
-      "modele": "G25A",
-      "reference": "G25A",
-      "nom_complet": "Groupe électrogène Wacker Neuson G25A",
-      "slug": "wacker-neuson-g25a",
-      "categorie": "Outillage",
-      "sous_categorie": "Groupe électrogène",
-      "description_courte": "Groupe électrogène 2,5 kVA, alimentation électrique fiable pour chantiers.",
-      "description_longue": "Le Wacker Neuson G25A est un groupe électrogène portable de 2,5 kVA idéal pour l'alimentation d'outils électriques sur les chantiers sans réseau électrique. Moteur robuste, démarrage facile.",
-      "prix_ht": null,
-      "devise": "EUR",
-      "etat": "neuf",
-      "disponibilite": "disponible",
-      "featured": false,
-      "caracteristiques_techniques": {
-        "puissance_kva": 2.5,
-        "puissance_kw": 2.0,
-        "tension_v": 230,
-        "frequence_hz": 50,
-        "masse_kg": 38,
-        "capacite_reservoir_l": 7.5,
-        "autonomie_h": 8
-      },
-      "points_forts": [
-        "Portable et compact",
-        "Démarrage facile",
-        "Niveau sonore modéré",
-        "Fiabilité éprouvée"
-      ],
-      "applications": [
-        "Alimentation chantier",
-        "Éclairage",
-        "Outils portatifs",
-        "Événements extérieurs"
-      ],
-      "secteurs": [
-        "BTP",
-        "Événementiel",
-        "Agriculture"
-      ],
-      "services": {
-        "garantie_constructeur": true,
-        "sav_certifie_se_plus": true,
-        "pieces_detachees_origine": true,
-        "financement_disponible": true
-      },
-      "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-g25a.jpg",
-        "images": [],
-        "video": null
-      },
-      "url_wacker_neuson": "https://www.wackerneuson.com/fr/produits/generateurs/g25a",
-      "date_scraping": "2026-05-26T08:29:07Z"
-    },
-    {
-      "id": "wn-035",
-      "marque": "Wacker Neuson",
-      "modele": "50Z3",
-      "reference": "50Z3",
-      "nom_complet": "Mini-pelle Wacker Neuson 50Z3",
-      "slug": "wacker-neuson-50z3",
-      "categorie": "Mini-pelle",
-      "sous_categorie": "Mini-pelle queue zéro",
-      "description_courte": "Mini-pelle 5 t queue zéro, idéale pour zones urbaines et espaces confinés.",
-      "description_longue": "La Wacker Neuson 50Z3 est une mini-pelle de 5 tonnes à rayon de braquage zéro, parfaite pour les travaux en espaces confinés comme les cours, allées ou chantiers en zone urbaine dense. Elle offre puissance et polyvalence dans un encombrement minimal.",
-      "prix_ht": null,
-      "devise": "EUR",
-      "etat": "neuf",
-      "disponibilite": "disponible",
-      "featured": true,
-      "caracteristiques_techniques": {
-        "masse_operationnelle_kg": 5000,
-        "puissance_kw": 34.5,
-        "profondeur_fouille_max_mm": 3620,
-        "force_arrachement_godet_kn": 49.0,
-        "largeur_transport_mm": 1960,
-        "hauteur_transport_mm": 2600,
-        "longueur_transport_mm": 5420,
-        "capacite_godet_m3": 0.17
-      },
-      "points_forts": [
-        "Queue zéro",
-        "Moteur Stage V faibles émissions",
-        "Très stable",
-        "Cabine confort ROPS/FOPS"
-      ],
-      "applications": [
-        "Chantiers urbains",
-        "Démolition légère",
-        "Terrassement",
-        "Réseaux VRD"
-      ],
-      "secteurs": [
-        "BTP",
-        "Génie civil",
-        "Démolition"
-      ],
-      "services": {
-        "garantie_constructeur": true,
-        "sav_certifie_se_plus": true,
-        "pieces_detachees_origine": true,
-        "financement_disponible": true
-      },
-      "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-50z3.jpg",
-        "images": [],
-        "video": null
-      },
-      "url_wacker_neuson": "https://www.wackerneuson.com/fr/produits/mini-pelles/50z3",
-      "date_scraping": "2026-05-26T08:29:07Z"
-    },
-    {
-      "id": "wn-036",
-      "marque": "Wacker Neuson",
-      "modele": "28Z3",
-      "reference": "28Z3",
-      "nom_complet": "Mini-pelle Wacker Neuson 28Z3",
-      "slug": "wacker-neuson-28z3",
-      "categorie": "Mini-pelle",
-      "sous_categorie": "Mini-pelle queue zéro",
-      "description_courte": "Mini-pelle 2,8 t queue zéro, compacte et performante.",
-      "description_longue": "La Wacker Neuson 28Z3 est une mini-pelle queue zéro de 2,8 tonnes alliant compacité et performances. Sa flèche offset et son rayon zéro en font un outil très prisé pour les chantiers en espaces réduits.",
-      "prix_ht": null,
-      "devise": "EUR",
-      "etat": "neuf",
-      "disponibilite": "disponible",
-      "featured": false,
-      "caracteristiques_techniques": {
-        "masse_operationnelle_kg": 2800,
-        "puissance_kw": 18.4,
-        "profondeur_fouille_max_mm": 2830,
-        "force_arrachement_godet_kn": 26.0,
-        "largeur_transport_mm": 1400,
-        "hauteur_transport_mm": 2480,
-        "longueur_transport_mm": 4080,
-        "capacite_godet_m3": 0.075
-      },
-      "points_forts": [
-        "Queue zéro compact",
-        "Offset flèche",
-        "Maniabilité en espace confiné",
-        "Bras double"
-      ],
-      "applications": [
-        "Travaux résidentiels",
-        "Tranchées",
-        "Paysagisme",
-        "Réseaux"
-      ],
-      "secteurs": [
-        "BTP",
-        "Paysagisme",
-        "Assainissement"
-      ],
-      "services": {
-        "garantie_constructeur": true,
-        "sav_certifie_se_plus": true,
-        "pieces_detachees_origine": true,
-        "financement_disponible": true
-      },
-      "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-28z3.jpg",
-        "images": [],
-        "video": null
-      },
-      "url_wacker_neuson": "https://www.wackerneuson.com/fr/produits/mini-pelles/28z3",
-      "date_scraping": "2026-05-26T08:29:07Z"
-    },
-    {
-      "id": "wn-037",
-      "marque": "Wacker Neuson",
-      "modele": "3001",
-      "reference": "3001",
-      "nom_complet": "Dumper Wacker Neuson 3001",
-      "slug": "wacker-neuson-dumper-3001",
-      "categorie": "Dumper",
-      "sous_categorie": "Dumper sur chenilles",
-      "description_courte": "Dumper sur chenilles 3 t, pour terrains accidentés et chantiers difficiles.",
-      "description_longue": "Le Wacker Neuson 3001 est un dumper sur chenilles de 3 tonnes offrant une stabilité maximale sur terrains accidentés. Sa traction par chenilles assure une adhérence optimale en toutes conditions.",
-      "prix_ht": null,
-      "devise": "EUR",
-      "etat": "neuf",
-      "disponibilite": "sur_commande",
-      "featured": false,
-      "caracteristiques_techniques": {
-        "charge_utile_kg": 3000,
-        "capacite_benne_m3": 1.5,
-        "puissance_kw": 24.5,
-        "vitesse_max_kmh": 8,
-        "largeur_mm": 1500,
-        "longueur_mm": 3200,
-        "hauteur_mm": 1900,
-        "masse_totale_kg": 4800
-      },
-      "points_forts": [
-        "Chenilles pour tous terrains",
-        "Stabilité maximale",
-        "Faible pression au sol",
-        "Benne basculante hydraulique"
-      ],
-      "applications": [
-        "Terrains meubles",
-        "Pentes",
-        "Forêts",
-        "Zones inondées"
-      ],
-      "secteurs": [
-        "BTP",
-        "Forestier",
-        "Agriculture"
-      ],
-      "services": {
-        "garantie_constructeur": true,
-        "sav_certifie_se_plus": true,
-        "pieces_detachees_origine": true,
-        "financement_disponible": true
-      },
-      "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-3001.jpg",
-        "images": [],
-        "video": null
-      },
-      "url_wacker_neuson": "https://www.wackerneuson.com/fr/produits/dumpers/3001",
-      "date_scraping": "2026-05-26T08:29:07Z"
-    },
-    {
-      "id": "wn-038",
-      "marque": "Wacker Neuson",
-      "modele": "5001",
-      "reference": "5001",
-      "nom_complet": "Dumper Wacker Neuson 5001",
-      "slug": "wacker-neuson-dumper-5001",
-      "categorie": "Dumper",
-      "sous_categorie": "Dumper sur chenilles",
-      "description_courte": "Dumper chenilles 5 t, haute capacité pour chantiers difficiles.",
-      "description_longue": "Le Wacker Neuson 5001 est un dumper sur chenilles de 5 tonnes pour les chantiers les plus exigeants. Sa grande capacité de benne et son train de chenilles assurent des performances optimales sur tous les types de terrain.",
-      "prix_ht": null,
-      "devise": "EUR",
-      "etat": "neuf",
-      "disponibilite": "sur_commande",
-      "featured": false,
-      "caracteristiques_techniques": {
-        "charge_utile_kg": 5000,
-        "capacite_benne_m3": 2.5,
-        "puissance_kw": 36.0,
-        "vitesse_max_kmh": 9,
-        "largeur_mm": 1800,
-        "longueur_mm": 3700,
-        "hauteur_mm": 2100,
-        "masse_totale_kg": 7200
-      },
-      "points_forts": [
-        "Haute capacité chenilles",
-        "Traction sur terrain difficile",
-        "Benne grande capacité",
-        "Robustesse industrielle"
-      ],
-      "applications": [
-        "Grands chantiers",
-        "Mines",
-        "Forêt",
-        "Agriculture intensive"
-      ],
-      "secteurs": [
-        "BTP",
-        "Agriculture",
-        "Forestier",
-        "Mines"
-      ],
-      "services": {
-        "garantie_constructeur": true,
-        "sav_certifie_se_plus": true,
-        "pieces_detachees_origine": true,
-        "financement_disponible": true
-      },
-      "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-5001.jpg",
-        "images": [],
-        "video": null
-      },
-      "url_wacker_neuson": "https://www.wackerneuson.com/fr/produits/dumpers/5001",
-      "date_scraping": "2026-05-26T08:29:07Z"
-    },
-    {
       "id": "wn-039",
       "marque": "Wacker Neuson",
       "modele": "WL38",
@@ -2325,62 +1198,6 @@
       "date_scraping": "2026-05-26T08:29:07Z"
     },
     {
-      "id": "wn-042",
-      "marque": "Wacker Neuson",
-      "modele": "8503",
-      "reference": "8503",
-      "nom_complet": "Mini-pelle Wacker Neuson 8503",
-      "slug": "wacker-neuson-8503",
-      "categorie": "Mini-pelle",
-      "sous_categorie": "Mini-pelle",
-      "description_courte": "Mini-pelle 8,5 t pour travaux lourds et terrassements importants.",
-      "description_longue": "La Wacker Neuson 8503 de 8,5 tonnes est conçue pour les travaux de terrassement importants. Puissante et robuste, elle offre une grande profondeur de fouille et une force d'arrachement élevée.",
-      "prix_ht": null,
-      "devise": "EUR",
-      "etat": "neuf",
-      "disponibilite": "sur_commande",
-      "featured": false,
-      "caracteristiques_techniques": {
-        "masse_operationnelle_kg": 8500,
-        "puissance_kw": 52.0,
-        "profondeur_fouille_max_mm": 4500,
-        "force_arrachement_godet_kn": 78.0,
-        "largeur_transport_mm": 2500,
-        "hauteur_transport_mm": 2900,
-        "longueur_transport_mm": 7100,
-        "capacite_godet_m3": 0.32
-      },
-      "points_forts": [
-        "Grande profondeur de fouille",
-        "Force élevée",
-        "Cabine pressurisée",
-        "Équipement Stage V"
-      ],
-      "applications": [
-        "Terrassements profonds",
-        "Génie civil",
-        "Construction industrielle"
-      ],
-      "secteurs": [
-        "BTP",
-        "Génie civil",
-        "Carrière"
-      ],
-      "services": {
-        "garantie_constructeur": true,
-        "sav_certifie_se_plus": true,
-        "pieces_detachees_origine": true,
-        "financement_disponible": true
-      },
-      "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-8503.jpg",
-        "images": [],
-        "video": null
-      },
-      "url_wacker_neuson": "https://www.wackerneuson.com/fr/produits/mini-pelles/8503",
-      "date_scraping": "2026-05-26T08:29:07Z"
-    },
-    {
       "id": "wn-043",
       "marque": "Wacker Neuson",
       "modele": "DT10e",
@@ -2491,60 +1308,6 @@
         "video": null
       },
       "url_wacker_neuson": "https://www.wackerneuson.com/fr/produits/chargeuses/wl20",
-      "date_scraping": "2026-05-26T08:29:07Z"
-    },
-    {
-      "id": "wn-045",
-      "marque": "Wacker Neuson",
-      "modele": "RD11A",
-      "reference": "RD11A",
-      "nom_complet": "Compacteur tandem Wacker Neuson RD11A",
-      "slug": "wacker-neuson-rd11a",
-      "categorie": "Compacteur",
-      "sous_categorie": "Rouleau tandem",
-      "description_courte": "Rouleau tandem 1,1 t, ultra-compact pour travaux en espaces très réduits.",
-      "description_longue": "Le Wacker Neuson RD11A est un rouleau tandem d'une tonne ultra-compact, parfait pour les travaux de compactage en espaces très réduits. Sa faible largeur lui permet d'accéder aux zones inaccessibles aux rouleaux classiques.",
-      "prix_ht": null,
-      "devise": "EUR",
-      "etat": "neuf",
-      "disponibilite": "disponible",
-      "featured": false,
-      "caracteristiques_techniques": {
-        "masse_operationnelle_kg": 1100,
-        "largeur_de_travail_mm": 650,
-        "amplitude_mm": 0.38,
-        "frequence_hz": 58,
-        "vitesse_max_kmh": 5,
-        "puissance_kw": 9.5
-      },
-      "points_forts": [
-        "Ultra-compact",
-        "Largeur minimale",
-        "Maniabilité extrême",
-        "Idéal enrobé"
-      ],
-      "applications": [
-        "Enrobés en allées étroites",
-        "Trottoirs",
-        "Parkings résidentiels"
-      ],
-      "secteurs": [
-        "Voirie",
-        "BTP",
-        "Paysagisme"
-      ],
-      "services": {
-        "garantie_constructeur": true,
-        "sav_certifie_se_plus": true,
-        "pieces_detachees_origine": true,
-        "financement_disponible": true
-      },
-      "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-rd11a.jpg",
-        "images": [],
-        "video": null
-      },
-      "url_wacker_neuson": "https://www.wackerneuson.com/fr/produits/compacteurs/rd11a",
       "date_scraping": "2026-05-26T08:29:07Z"
     },
     {
@@ -2767,172 +1530,6 @@
       "date_scraping": "2026-05-26T08:29:07Z"
     },
     {
-      "id": "wn-050",
-      "marque": "Wacker Neuson",
-      "modele": "DT20e",
-      "reference": "DT20e",
-      "nom_complet": "Dumper électrique Wacker Neuson DT20e",
-      "slug": "wacker-neuson-dt20e",
-      "categorie": "Dumper",
-      "sous_categorie": "Dumper électrique",
-      "description_courte": "Dumper articulé électrique 2 t, performant et zéro émission.",
-      "description_longue": "Le Wacker Neuson DT20e est la version électrique du dumper articulé 2 tonnes. Zéro émission et fonctionnement silencieux, il est idéal pour les chantiers en zones sensibles ou les travaux en intérieur.",
-      "prix_ht": null,
-      "devise": "EUR",
-      "etat": "neuf",
-      "disponibilite": "sur_commande",
-      "featured": true,
-      "caracteristiques_techniques": {
-        "charge_utile_kg": 2000,
-        "capacite_benne_m3": 1.0,
-        "puissance_kw": 15.0,
-        "vitesse_max_kmh": 11,
-        "largeur_mm": 1200,
-        "longueur_mm": 2950,
-        "hauteur_mm": 1620,
-        "masse_totale_kg": 3100
-      },
-      "points_forts": [
-        "100% électrique",
-        "Zéro émission",
-        "Silencieux",
-        "Performance équivalente thermique"
-      ],
-      "applications": [
-        "Chantiers urbains",
-        "Intérieur",
-        "Zones sensibles",
-        "Terrassement"
-      ],
-      "secteurs": [
-        "BTP",
-        "Génie civil",
-        "Industrie"
-      ],
-      "services": {
-        "garantie_constructeur": true,
-        "sav_certifie_se_plus": true,
-        "pieces_detachees_origine": true,
-        "financement_disponible": true
-      },
-      "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-dt20e.jpg",
-        "images": [],
-        "video": null
-      },
-      "url_wacker_neuson": "https://www.wackerneuson.com/fr/produits/dumpers/dt20e",
-      "date_scraping": "2026-05-26T08:29:07Z"
-    },
-    {
-      "id": "wn-051",
-      "marque": "Wacker Neuson",
-      "modele": "VP1550Aw",
-      "reference": "VP1550Aw",
-      "nom_complet": "Plaque vibrante Wacker Neuson VP1550Aw",
-      "slug": "wacker-neuson-vp1550aw",
-      "categorie": "Plaque vibrante",
-      "sous_categorie": "Plaque vibrante simple sens",
-      "description_courte": "Plaque vibrante 150 kg, robuste pour compactage de sous-couches.",
-      "description_longue": "La Wacker Neuson VP1550Aw est une plaque vibrante de 150 kg à moteur essence. Robuste et fiable, elle est adaptée au compactage de sous-couches granulaires et de sols sableux.",
-      "prix_ht": null,
-      "devise": "EUR",
-      "etat": "neuf",
-      "disponibilite": "disponible",
-      "featured": false,
-      "caracteristiques_techniques": {
-        "masse_operationnelle_kg": 150,
-        "force_centrifuge_kn": 15,
-        "largeur_de_travail_mm": 500,
-        "frequence_hz": 88,
-        "puissance_kw": 3.2,
-        "vitesse_avancement_m_min": 22
-      },
-      "points_forts": [
-        "Polyvalente",
-        "Moteur puissant",
-        "Robustesse",
-        "Accès moteur facilité"
-      ],
-      "applications": [
-        "Graviers",
-        "Sable",
-        "Sous-couche",
-        "Remblais"
-      ],
-      "secteurs": [
-        "BTP",
-        "Paysagisme",
-        "Voirie"
-      ],
-      "services": {
-        "garantie_constructeur": true,
-        "sav_certifie_se_plus": true,
-        "pieces_detachees_origine": true,
-        "financement_disponible": true
-      },
-      "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-vp1550aw.jpg",
-        "images": [],
-        "video": null
-      },
-      "url_wacker_neuson": "https://www.wackerneuson.com/fr/produits/plaques-vibrantes/vp1550aw",
-      "date_scraping": "2026-05-26T08:29:07Z"
-    },
-    {
-      "id": "wn-052",
-      "marque": "Wacker Neuson",
-      "modele": "RD16",
-      "reference": "RD16",
-      "nom_complet": "Compacteur tandem Wacker Neuson RD16",
-      "slug": "wacker-neuson-rd16",
-      "categorie": "Compacteur",
-      "sous_categorie": "Rouleau tandem",
-      "description_courte": "Rouleau tandem 1,6 t articulé, efficace pour revêtements de surface.",
-      "description_longue": "Le Wacker Neuson RD16 est un rouleau tandem articulé de 1,6 tonne offrant de bonnes performances pour le compactage des enrobés et surfaces. Sa direction articulée facilite les travaux en zones réduites.",
-      "prix_ht": null,
-      "devise": "EUR",
-      "etat": "neuf",
-      "disponibilite": "disponible",
-      "featured": false,
-      "caracteristiques_techniques": {
-        "masse_operationnelle_kg": 1600,
-        "largeur_de_travail_mm": 760,
-        "amplitude_mm": 0.42,
-        "frequence_hz": 55,
-        "vitesse_max_kmh": 6,
-        "puissance_kw": 12.0
-      },
-      "points_forts": [
-        "Direction articulée",
-        "Aspersion eau intégrée",
-        "Compactage enrobés",
-        "Maniable"
-      ],
-      "applications": [
-        "Enrobés",
-        "Voirie urbaine",
-        "Trottoirs",
-        "Parkings"
-      ],
-      "secteurs": [
-        "Voirie",
-        "BTP"
-      ],
-      "services": {
-        "garantie_constructeur": true,
-        "sav_certifie_se_plus": true,
-        "pieces_detachees_origine": true,
-        "financement_disponible": true
-      },
-      "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-rd16.jpg",
-        "images": [],
-        "video": null
-      },
-      "url_wacker_neuson": "https://www.wackerneuson.com/fr/produits/compacteurs/rd16",
-      "date_scraping": "2026-05-26T08:29:07Z"
-    },
-    {
       "id": "wn-053",
       "marque": "Wacker Neuson",
       "modele": "EZ26e",
@@ -2990,102 +1587,42 @@
       "date_scraping": "2026-05-26T08:29:07Z"
     },
     {
-      "id": "wn-054",
+      "id": "wn-new-001",
       "marque": "Wacker Neuson",
-      "modele": "SW28e",
-      "reference": "SW28e",
-      "nom_complet": "Chargeuse sur chenilles électrique Wacker Neuson SW28e",
-      "slug": "wacker-neuson-sw28e",
-      "categorie": "Chargeuse",
-      "sous_categorie": "Chargeuse sur chenilles électrique",
-      "description_courte": "Chargeuse sur chenilles électrique, polyvalente pour espaces confinés.",
-      "description_longue": "La Wacker Neuson SW28e est une chargeuse sur chenilles entièrement électrique. Sa conception sans émissions et son faible niveau sonore la rendent idéale pour les travaux en espaces confinés ou dans des environnements sensibles.",
-      "prix_ht": null,
-      "devise": "EUR",
-      "etat": "neuf",
-      "disponibilite": "sur_commande",
-      "featured": false,
-      "caracteristiques_techniques": {
-        "charge_utile_kg": 1000,
-        "capacite_godet_m3": 0.4,
-        "puissance_kw": 18.0,
-        "vitesse_max_kmh": 8,
-        "largeur_mm": 1150,
-        "longueur_mm": 2800,
-        "hauteur_mm": 1800,
-        "masse_totale_kg": 2600
-      },
-      "points_forts": [
-        "Électrique",
-        "Sur chenilles",
-        "Zéro émission",
-        "Espaces très confinés"
-      ],
-      "applications": [
-        "Intérieur",
-        "Tunnels",
-        "Zones protégées",
-        "Agriculture"
-      ],
-      "secteurs": [
-        "BTP",
-        "Agriculture",
-        "Industrie",
-        "Environnement"
-      ],
-      "services": {
-        "garantie_constructeur": true,
-        "sav_certifie_se_plus": true,
-        "pieces_detachees_origine": true,
-        "financement_disponible": true
-      },
-      "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-sw28e.jpg",
-        "images": [],
-        "video": null
-      },
-      "url_wacker_neuson": "https://www.wackerneuson.com/fr/produits/chargeuses/sw28e",
-      "date_scraping": "2026-05-26T08:29:07Z"
-    },
-    {
-      "id": "wn-055",
-      "marque": "Wacker Neuson",
-      "modele": "EH9",
-      "reference": "EH9",
-      "nom_complet": "Marteau piqueur pneumatique léger Wacker Neuson EH9",
-      "slug": "wacker-neuson-eh9",
-      "categorie": "Marteau piqueur",
-      "sous_categorie": "Marteau pneumatique léger",
-      "description_courte": "Marteau piqueur léger 9 kg, idéal pour burinage et démolition légère.",
-      "description_longue": "Le Wacker Neuson EH9 est un marteau piqueur pneumatique léger de 9 kg. Compact et maniable, il est parfait pour les travaux de burinage, démolition légère et percement sur chantier.",
+      "modele": "DW20",
+      "reference": "DW20",
+      "nom_complet": "Dumper sur pneus Wacker Neuson DW20",
+      "slug": "wacker-neuson-dw20",
+      "categorie": "Dumper",
+      "sous_categorie": "Dumper sur pneus",
+      "description_courte": "Dumper sur pneus 2 t, maniable et robuste pour chantiers variés.",
+      "description_longue": "Le Wacker Neuson DW20 est un dumper sur pneus de 2 tonnes alliant maniabilité et robustesse. Idéal pour les chantiers de construction, paysagisme et travaux publics.",
       "prix_ht": null,
       "devise": "EUR",
       "etat": "neuf",
       "disponibilite": "disponible",
       "featured": false,
       "caracteristiques_techniques": {
-        "masse_operationnelle_kg": 9,
-        "energie_impact_j": 18,
-        "frequence_coups_min": 1800,
-        "pression_service_bar": 6,
-        "alimentation": "pneumatique"
+        "charge_utile_kg": 2000,
+        "puissance_kw": 18.4,
+        "vitesse_max_kmh": 12
       },
       "points_forts": [
-        "Très léger",
+        "Sur pneus",
+        "Benne basculante",
         "Maniable",
-        "Bonne énergie d'impact",
-        "Usage polyvalent"
+        "Robuste"
       ],
       "applications": [
-        "Burinage",
-        "Démolition légère",
-        "Carrelage",
-        "Rénovation"
+        "Chantiers BTP",
+        "Paysagisme",
+        "Terrassement",
+        "Évacuation déblais"
       ],
       "secteurs": [
         "BTP",
-        "Rénovation",
-        "Démolition"
+        "Paysagisme",
+        "Génie civil"
       ],
       "services": {
         "garantie_constructeur": true,
@@ -3094,12 +1631,428 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-eh9.jpg",
+        "image_principale": "/images/catalogue/wacker-neuson-dw20.jpg",
         "images": [],
         "video": null
       },
-      "url_wacker_neuson": "https://www.wackerneuson.com/fr/produits/marteaux-piqueurs/eh9",
-      "date_scraping": "2026-05-26T08:29:07Z"
+      "url_wacker_neuson": "https://www.wackerneuson.fr/produits/dumpers/dw20",
+      "date_scraping": "2026-06-04T14:17:12Z"
+    },
+    {
+      "id": "wn-new-002",
+      "marque": "Wacker Neuson",
+      "modele": "DW30",
+      "reference": "DW30",
+      "nom_complet": "Dumper sur pneus Wacker Neuson DW30",
+      "slug": "wacker-neuson-dw30",
+      "categorie": "Dumper",
+      "sous_categorie": "Dumper sur pneus",
+      "description_courte": "Dumper sur pneus 3 t, puissance et polyvalence pour grands chantiers.",
+      "description_longue": "Le Wacker Neuson DW30 est un dumper sur pneus de 3 tonnes offrant puissance et polyvalence.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "disponible",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "charge_utile_kg": 3000,
+        "puissance_kw": 24.4,
+        "vitesse_max_kmh": 12
+      },
+      "points_forts": [
+        "Sur pneus",
+        "Grande capacité",
+        "Moteur puissant",
+        "Cabine confort"
+      ],
+      "applications": [
+        "Grands chantiers",
+        "Terrassement",
+        "Évacuation déblais",
+        "VRD"
+      ],
+      "secteurs": [
+        "BTP",
+        "Génie civil",
+        "Travaux publics"
+      ],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": true,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/wacker-neuson-dw30.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.wackerneuson.fr/produits/dumpers/dw30",
+      "date_scraping": "2026-06-04T14:17:12Z"
+    },
+    {
+      "id": "wn-new-003",
+      "marque": "Wacker Neuson",
+      "modele": "RD24",
+      "reference": "RD24",
+      "nom_complet": "Rouleau tandem articulé Wacker Neuson RD24",
+      "slug": "wacker-neuson-rd24",
+      "categorie": "Compacteur",
+      "sous_categorie": "Rouleau tandem",
+      "description_courte": "Rouleau tandem articulé 2,4 t, efficace pour enrobés et surfaces.",
+      "description_longue": "Le Wacker Neuson RD24 est un rouleau tandem articulé de 2,4 tonnes.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "disponible",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "masse_operationnelle_kg": 2400,
+        "largeur_de_travail_mm": 900,
+        "frequence_hz": 55,
+        "vitesse_max_kmh": 8
+      },
+      "points_forts": [
+        "Direction articulée",
+        "Aspersion eau intégrée",
+        "Compactage enrobés",
+        "Maniable"
+      ],
+      "applications": [
+        "Enrobés",
+        "Voirie urbaine",
+        "Trottoirs",
+        "Parkings"
+      ],
+      "secteurs": [
+        "Voirie",
+        "BTP"
+      ],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": true,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/wacker-neuson-rd24.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.wackerneuson.fr/produits/rouleaux/rd24",
+      "date_scraping": "2026-06-04T14:17:12Z"
+    },
+    {
+      "id": "wn-new-004",
+      "marque": "Wacker Neuson",
+      "modele": "RD28",
+      "reference": "RD28",
+      "nom_complet": "Rouleau tandem articulé Wacker Neuson RD28",
+      "slug": "wacker-neuson-rd28",
+      "categorie": "Compacteur",
+      "sous_categorie": "Rouleau tandem",
+      "description_courte": "Rouleau tandem articulé 2,8 t, polyvalent pour voirie et enrobés.",
+      "description_longue": "Le Wacker Neuson RD28 est un rouleau tandem articulé de 2,8 tonnes polyvalent et robuste.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "disponible",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "masse_operationnelle_kg": 2800,
+        "largeur_de_travail_mm": 1000,
+        "frequence_hz": 55,
+        "vitesse_max_kmh": 8
+      },
+      "points_forts": [
+        "Direction articulée",
+        "Haute fréquence vibration",
+        "Polyvalent",
+        "Aspersion eau"
+      ],
+      "applications": [
+        "Enrobés",
+        "Voirie",
+        "Parkings",
+        "Grandes surfaces"
+      ],
+      "secteurs": [
+        "Voirie",
+        "BTP",
+        "Travaux publics"
+      ],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": true,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/wacker-neuson-rd28.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.wackerneuson.fr/produits/rouleaux/rd28",
+      "date_scraping": "2026-06-04T14:17:12Z"
+    },
+    {
+      "id": "wn-new-005",
+      "marque": "Wacker Neuson",
+      "modele": "RD45",
+      "reference": "RD45",
+      "nom_complet": "Rouleau tandem articulé Wacker Neuson RD45",
+      "slug": "wacker-neuson-rd45",
+      "categorie": "Compacteur",
+      "sous_categorie": "Rouleau tandem",
+      "description_courte": "Rouleau tandem articulé 4,5 t, puissant pour chantiers de grande envergure.",
+      "description_longue": "Le Wacker Neuson RD45 est le rouleau tandem articulé le plus puissant de la gamme avec 4,5 tonnes.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "disponible",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "masse_operationnelle_kg": 4500,
+        "largeur_de_travail_mm": 1200,
+        "frequence_hz": 50,
+        "vitesse_max_kmh": 10
+      },
+      "points_forts": [
+        "Grande puissance",
+        "Direction articulée",
+        "Haute productivité",
+        "Cabine confort"
+      ],
+      "applications": [
+        "Grandes routes",
+        "Aéroports",
+        "Zones industrielles",
+        "Enrobés épais"
+      ],
+      "secteurs": [
+        "Voirie",
+        "Travaux publics",
+        "Génie civil"
+      ],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": true,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/wacker-neuson-rd45.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.wackerneuson.fr/produits/rouleaux/rd45",
+      "date_scraping": "2026-06-04T14:17:12Z"
+    },
+    {
+      "id": "wn-new-006",
+      "marque": "Wacker Neuson",
+      "modele": "BH40",
+      "reference": "BH40",
+      "nom_complet": "Marteau-piqueur thermique Wacker Neuson BH40",
+      "slug": "wacker-neuson-bh40",
+      "categorie": "Marteau piqueur",
+      "sous_categorie": "Marteau-piqueur thermique",
+      "description_courte": "Marteau-piqueur thermique léger, idéal pour démolition et burinage.",
+      "description_longue": "Le Wacker Neuson BH40 est un marteau-piqueur thermique léger et compact. Son moteur WM80 à faibles émissions le rend idéal pour les travaux de démolition, burinage et rénovation en milieu urbain.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "disponible",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "alimentation": "thermique",
+        "moteur": "WM80"
+      },
+      "points_forts": [
+        "Légèreté",
+        "Faibles émissions",
+        "Moteur WM80",
+        "Maniable"
+      ],
+      "applications": [
+        "Démolition légère",
+        "Burinage",
+        "Rénovation",
+        "Chantiers urbains"
+      ],
+      "secteurs": [
+        "BTP",
+        "Démolition",
+        "Rénovation"
+      ],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": true,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/wacker-neuson-bh40.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.wackerneuson.fr/produits/technique-de-demolition/marteaux-piqueurs-thermiques/bh40",
+      "date_scraping": "2026-06-04T14:17:12Z"
+    },
+    {
+      "id": "wn-new-007",
+      "marque": "Wacker Neuson",
+      "modele": "BH55",
+      "reference": "BH55",
+      "nom_complet": "Marteau-piqueur thermique Wacker Neuson BH55",
+      "slug": "wacker-neuson-bh55",
+      "categorie": "Marteau piqueur",
+      "sous_categorie": "Marteau-piqueur thermique",
+      "description_courte": "Marteau-piqueur thermique puissant pour démolition intensive.",
+      "description_longue": "Le Wacker Neuson BH55 est un marteau-piqueur thermique puissant conçu pour la démolition intensive.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "disponible",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "alimentation": "thermique",
+        "moteur": "WM80"
+      },
+      "points_forts": [
+        "Haute énergie de frappe",
+        "Robuste",
+        "Moteur WM80",
+        "Faibles émissions"
+      ],
+      "applications": [
+        "Démolition béton",
+        "Burinage intensif",
+        "Chantiers lourds",
+        "Voirie"
+      ],
+      "secteurs": [
+        "BTP",
+        "Démolition",
+        "Génie civil"
+      ],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": true,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/wacker-neuson-bh55.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.wackerneuson.fr/produits/technique-de-demolition/marteaux-piqueurs-thermiques/bh55",
+      "date_scraping": "2026-06-04T14:17:12Z"
+    },
+    {
+      "id": "wn-new-008",
+      "marque": "Wacker Neuson",
+      "modele": "BH65",
+      "reference": "BH65",
+      "nom_complet": "Marteau-piqueur thermique Wacker Neuson BH65",
+      "slug": "wacker-neuson-bh65",
+      "categorie": "Marteau piqueur",
+      "sous_categorie": "Marteau-piqueur thermique",
+      "description_courte": "Marteau-piqueur thermique haute performance, démolition lourde.",
+      "description_longue": "Le Wacker Neuson BH65 est le marteau-piqueur thermique haut de gamme de la série.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "disponible",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "alimentation": "thermique",
+        "moteur": "WM80"
+      },
+      "points_forts": [
+        "Très haute énergie de frappe",
+        "Démolition lourde",
+        "Grande robustesse",
+        "Faibles émissions CO"
+      ],
+      "applications": [
+        "Démolition lourde",
+        "Béton armé",
+        "Fondations",
+        "Réseaux souterrains"
+      ],
+      "secteurs": [
+        "Démolition",
+        "BTP",
+        "Génie civil"
+      ],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": true,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/wacker-neuson-bh65.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.wackerneuson.fr/produits/technique-de-demolition/marteaux-piqueurs-thermiques/bh65",
+      "date_scraping": "2026-06-04T14:17:12Z"
+    },
+    {
+      "id": "wn-new-009",
+      "marque": "Wacker Neuson",
+      "modele": "TH625",
+      "reference": "TH625",
+      "nom_complet": "Chariot télescopique Wacker Neuson TH625",
+      "slug": "wacker-neuson-th625",
+      "categorie": "Télescopique",
+      "sous_categorie": "Chariot télescopique",
+      "description_courte": "Chariot télescopique 6,1 m de hauteur, charge utile élevée.",
+      "description_longue": "Le Wacker Neuson TH625 est un chariot télescopique compact et puissant offrant une hauteur de levage de 6,1 mètres.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "disponible",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "hauteur_levage_mm": 6123,
+        "charge_utile_kg": 2500,
+        "puissance_kw": 55,
+        "masse_totale_kg": 4650
+      },
+      "points_forts": [
+        "Grande hauteur de levage",
+        "Charge utile élevée",
+        "Compact",
+        "Polyvalent"
+      ],
+      "applications": [
+        "Chantiers construction",
+        "Manutention",
+        "Gerbage matériaux",
+        "Agriculture"
+      ],
+      "secteurs": [
+        "BTP",
+        "Agriculture",
+        "Industrie"
+      ],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": true,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/wacker-neuson-th625.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.wackerneuson.fr/produits/chariots-telescopiques/th625",
+      "date_scraping": "2026-06-04T14:17:12Z"
     }
   ]
 }
