@@ -4,7 +4,7 @@
     "marque": "Wacker Neuson",
     "distributeur": "AMC - Alpes Matériel Compact",
     "description": "Catalogue mis à jour — modèles vérifiés sur wackerneuson.fr (juin 2026)",
-    "total_machines": 38,
+    "total_machines": 42,
     "categories": [
       "Chargeuse",
       "Compacteur",
@@ -16,7 +16,7 @@
       "Télescopique"
     ],
     "date_creation": "2026-05-26T08:29:07Z",
-    "date_mise_a_jour": "2026-06-04T14:24:24Z"
+    "date_mise_a_jour": "2026-06-04T14:28:13Z"
   },
   "machines": [
     {
@@ -2096,6 +2096,210 @@
       },
       "url_wacker_neuson": "https://www.wackerneuson.fr/produits/pilonneuses/ds70",
       "date_scraping": "2026-06-04T14:24:24Z"
+    },
+    {
+      "id": "wn-dump-001",
+      "marque": "Wacker Neuson",
+      "modele": "DT12",
+      "reference": "DT12",
+      "nom_complet": "Dumper chenilles Wacker Neuson DT12",
+      "slug": "wacker-neuson-dt12",
+      "categorie": "Dumper",
+      "sous_categorie": "Dumper chenilles",
+      "description_courte": "Dumper chenilles 1,2 t, compact et stable sur tous terrains.",
+      "description_longue": "Le Wacker Neuson DT12 est un dumper sur chenilles d'une charge utile de 1 200 kg. Sa conception compacte et ses chenilles en caoutchouc lui assurent une excellente stabilité sur les terrains difficiles et les pentes.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "disponible",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "charge_utile_kg": 1200,
+        "type_propulsion": "chenilles"
+      },
+      "points_forts": [
+        "Chenilles caoutchouc",
+        "Compact",
+        "Stable en pente",
+        "Faible empreinte au sol"
+      ],
+      "applications": [
+        "Pentes et talus",
+        "Terrains meubles",
+        "Jardins",
+        "Chantiers difficiles"
+      ],
+      "secteurs": [
+        "BTP",
+        "Paysagisme",
+        "Génie civil"
+      ],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": true,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/wacker-neuson-dt12.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.wackerneuson.fr/produits/dumpers/dt12",
+      "date_scraping": "2026-06-04T14:28:13Z"
+    },
+    {
+      "id": "wn-dump-002",
+      "marque": "Wacker Neuson",
+      "modele": "DT23",
+      "reference": "DT23",
+      "nom_complet": "Dumper chenilles Wacker Neuson DT23",
+      "slug": "wacker-neuson-dt23",
+      "categorie": "Dumper",
+      "sous_categorie": "Dumper chenilles",
+      "description_courte": "Dumper chenilles 2,3 t, polyvalent pour chantiers exigeants.",
+      "description_longue": "Le Wacker Neuson DT23 est un dumper sur chenilles d'une charge utile de 2 300 kg. Robuste et polyvalent, il est conçu pour les chantiers exigeants où la traction sur chenilles est indispensable.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "disponible",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "charge_utile_kg": 2300,
+        "type_propulsion": "chenilles"
+      },
+      "points_forts": [
+        "Forte charge utile",
+        "Chenilles haute adhérence",
+        "Robuste",
+        "Polyvalent"
+      ],
+      "applications": [
+        "Terrassement",
+        "Pentes",
+        "Terrains difficiles",
+        "Évacuation déblais"
+      ],
+      "secteurs": [
+        "BTP",
+        "Génie civil",
+        "Travaux publics"
+      ],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": true,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/wacker-neuson-dt23.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.wackerneuson.fr/produits/dumpers/dt23",
+      "date_scraping": "2026-06-04T14:28:13Z"
+    },
+    {
+      "id": "wn-dump-003",
+      "marque": "Wacker Neuson",
+      "modele": "DW10",
+      "reference": "DW10",
+      "nom_complet": "Dumper sur pneus Wacker Neuson DW10",
+      "slug": "wacker-neuson-dw10",
+      "categorie": "Dumper",
+      "sous_categorie": "Dumper sur pneus",
+      "description_courte": "Dumper sur pneus 1 t, ultra-compact pour chantiers étroits.",
+      "description_longue": "Le Wacker Neuson DW10 est le dumper sur pneus le plus compact de la gamme avec une charge utile de 1 000 kg. Sa petite taille le rend idéal pour les chantiers en espaces restreints, coursives et intérieurs.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "disponible",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "charge_utile_kg": 1000,
+        "type_propulsion": "pneus"
+      },
+      "points_forts": [
+        "Ultra-compact",
+        "Espaces restreints",
+        "Maniable",
+        "Benne basculante"
+      ],
+      "applications": [
+        "Espaces étroits",
+        "Intérieur",
+        "Paysagisme",
+        "Chantiers urbains"
+      ],
+      "secteurs": [
+        "BTP",
+        "Paysagisme",
+        "Rénovation"
+      ],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": true,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/wacker-neuson-dw10.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.wackerneuson.fr/produits/dumpers/dw10",
+      "date_scraping": "2026-06-04T14:28:13Z"
+    },
+    {
+      "id": "wn-dump-004",
+      "marque": "Wacker Neuson",
+      "modele": "DW15",
+      "reference": "DW15",
+      "nom_complet": "Dumper sur pneus Wacker Neuson DW15",
+      "slug": "wacker-neuson-dw15",
+      "categorie": "Dumper",
+      "sous_categorie": "Dumper sur pneus",
+      "description_courte": "Dumper sur pneus 1,5 t, équilibre parfait entre compacité et capacité.",
+      "description_longue": "Le Wacker Neuson DW15 est un dumper sur pneus de 1 500 kg offrant un excellent équilibre entre compacité et capacité de transport. Polyvalent, il s'adapte aussi bien aux chantiers de paysagisme qu'aux travaux publics.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "disponible",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "charge_utile_kg": 1500,
+        "type_propulsion": "pneus"
+      },
+      "points_forts": [
+        "Bon rapport taille/capacité",
+        "Sur pneus",
+        "Polyvalent",
+        "Benne basculante"
+      ],
+      "applications": [
+        "Chantiers BTP",
+        "Paysagisme",
+        "VRD",
+        "Terrassement léger"
+      ],
+      "secteurs": [
+        "BTP",
+        "Paysagisme",
+        "VRD"
+      ],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": true,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/wacker-neuson-dw15.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.wackerneuson.fr/produits/dumpers/dw15",
+      "date_scraping": "2026-06-04T14:28:13Z"
     }
   ]
 }
