@@ -4,7 +4,7 @@
     "marque": "Wacker Neuson",
     "distributeur": "AMC - Alpes Matériel Compact",
     "description": "Catalogue mis à jour — modèles vérifiés sur wackerneuson.fr (juin 2026)",
-    "total_machines": 37,
+    "total_machines": 38,
     "categories": [
       "Chargeuse",
       "Compacteur",
@@ -16,7 +16,7 @@
       "Télescopique"
     ],
     "date_creation": "2026-05-26T08:29:07Z",
-    "date_mise_a_jour": "2026-06-04T14:17:12Z"
+    "date_mise_a_jour": "2026-06-04T14:24:24Z"
   },
   "machines": [
     {
@@ -864,70 +864,15 @@
       "date_scraping": "2026-05-26T08:29:07Z"
     },
     {
-      "id": "wn-029",
-      "marque": "Wacker Neuson",
-      "modele": "BS50-2",
-      "reference": "BS50-2",
-      "nom_complet": "Pilonneuse Wacker Neuson BS50-2",
-      "slug": "wacker-neuson-bs50-2",
-      "categorie": "Pilonneuse",
-      "sous_categorie": "Pilonneuse thermique",
-      "description_courte": "Pilonneuse thermique 65 kg, compactage en tranchées et espaces étroits.",
-      "description_longue": "La Wacker Neuson BS50-2 est une pilonneuse (grenouille) thermique de 65 kg, incontournable pour le compactage en tranchées et espaces étroits. Moteur 2 temps fiable, excellente force d'impact.",
-      "prix_ht": null,
-      "devise": "EUR",
-      "etat": "neuf",
-      "disponibilite": "disponible",
-      "featured": false,
-      "caracteristiques_techniques": {
-        "masse_operationnelle_kg": 65,
-        "force_impact_kn": 14.5,
-        "frequence_coups_min": 700,
-        "hauteur_saut_mm": 50,
-        "semelle_mm": "280x330",
-        "puissance_kw": 1.6
-      },
-      "points_forts": [
-        "Moteur 2 temps fiable",
-        "Légère et maniable",
-        "Forte force d'impact",
-        "Idéale tranchées"
-      ],
-      "applications": [
-        "Compactage tranchées",
-        "Remblaimage",
-        "Espaces confinés",
-        "Fondations légères"
-      ],
-      "secteurs": [
-        "BTP",
-        "Assainissement",
-        "VRD"
-      ],
-      "services": {
-        "garantie_constructeur": true,
-        "sav_certifie_se_plus": true,
-        "pieces_detachees_origine": true,
-        "financement_disponible": true
-      },
-      "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-bs50-2.jpg",
-        "images": [],
-        "video": null
-      },
-      "url_wacker_neuson": "https://www.wackerneuson.com/fr/produits/pilonneuses/bs50-2",
-      "date_scraping": "2026-05-26T08:29:07Z"
-    },
-    {
       "id": "wn-030",
       "marque": "Wacker Neuson",
-      "modele": "BS60-4As",
-      "reference": "BS60-4As",
-      "nom_complet": "Pilonneuse Wacker Neuson BS60-4As",
-      "slug": "wacker-neuson-bs60-4as",
+      "modele": "BS62-4As",
+      "reference": "BS62-4As",
+      "nom_complet": "Pilonneuse Wacker Neuson BS62-4As",
+      "slug": "wacker-neuson-bs62-4as",
       "categorie": "Pilonneuse",
       "sous_categorie": "Pilonneuse thermique",
-      "description_courte": "Pilonneuse thermique 4 temps 75 kg, faibles émissions et haute performance.",
+      "description_courte": "Pilonneuse 4 temps BS62-4As, robuste et économique.",
       "description_longue": "La Wacker Neuson BS60-4As est une pilonneuse 4 temps avec démarreur automatique. Son moteur 4 temps réduit considérablement les émissions et la consommation par rapport aux modèles 2 temps, tout en maintenant des performances élevées.",
       "prix_ht": null,
       "devise": "EUR",
@@ -971,59 +916,6 @@
         "video": null
       },
       "url_wacker_neuson": "https://www.wackerneuson.com/fr/produits/pilonneuses/bs60-4as",
-      "date_scraping": "2026-05-26T08:29:07Z"
-    },
-    {
-      "id": "wn-031",
-      "marque": "Wacker Neuson",
-      "modele": "BS70-4As",
-      "reference": "BS70-4As",
-      "nom_complet": "Pilonneuse Wacker Neuson BS70-4As",
-      "slug": "wacker-neuson-bs70-4as",
-      "categorie": "Pilonneuse",
-      "sous_categorie": "Pilonneuse thermique",
-      "description_courte": "Pilonneuse 4 temps 82 kg, puissance maximale pour compactages difficiles.",
-      "description_longue": "La Wacker Neuson BS70-4As est la pilonneuse la plus puissante de la gamme. Avec 82 kg et une force d'impact de 18 kN, elle vient à bout des matériaux les plus compacts comme l'argile lourde.",
-      "prix_ht": null,
-      "devise": "EUR",
-      "etat": "neuf",
-      "disponibilite": "sur_commande",
-      "featured": false,
-      "caracteristiques_techniques": {
-        "masse_operationnelle_kg": 82,
-        "force_impact_kn": 18.0,
-        "frequence_coups_min": 650,
-        "hauteur_saut_mm": 60,
-        "semelle_mm": "280x330",
-        "puissance_kw": 2.5
-      },
-      "points_forts": [
-        "Force d'impact maximale",
-        "Moteur 4 temps",
-        "Traitement argile lourde",
-        "Robustesse maximale"
-      ],
-      "applications": [
-        "Argile lourde",
-        "Compactage sol difficile",
-        "Remblais profonds"
-      ],
-      "secteurs": [
-        "BTP",
-        "Génie civil"
-      ],
-      "services": {
-        "garantie_constructeur": true,
-        "sav_certifie_se_plus": true,
-        "pieces_detachees_origine": true,
-        "financement_disponible": true
-      },
-      "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-bs70-4as.jpg",
-        "images": [],
-        "video": null
-      },
-      "url_wacker_neuson": "https://www.wackerneuson.com/fr/produits/pilonneuses/bs70-4as",
       "date_scraping": "2026-05-26T08:29:07Z"
     },
     {
@@ -1417,59 +1309,6 @@
         "video": null
       },
       "url_wacker_neuson": "https://www.wackerneuson.com/fr/produits/plaques-vibrantes/vp1135aw",
-      "date_scraping": "2026-05-26T08:29:07Z"
-    },
-    {
-      "id": "wn-048",
-      "marque": "Wacker Neuson",
-      "modele": "BS45Y",
-      "reference": "BS45Y",
-      "nom_complet": "Pilonneuse Wacker Neuson BS45Y",
-      "slug": "wacker-neuson-bs45y",
-      "categorie": "Pilonneuse",
-      "sous_categorie": "Pilonneuse thermique",
-      "description_courte": "Pilonneuse légère 58 kg, maniable pour travaux de compactage polyvalents.",
-      "description_longue": "La Wacker Neuson BS45Y est une pilonneuse légère de 58 kg idéale pour les travaux de compactage en tranchées étroites et les zones à accès difficile. Sa légèreté facilite son transport et sa manipulation.",
-      "prix_ht": null,
-      "devise": "EUR",
-      "etat": "neuf",
-      "disponibilite": "disponible",
-      "featured": false,
-      "caracteristiques_techniques": {
-        "masse_operationnelle_kg": 58,
-        "force_impact_kn": 12.5,
-        "frequence_coups_min": 720,
-        "hauteur_saut_mm": 45,
-        "semelle_mm": "280x330",
-        "puissance_kw": 1.4
-      },
-      "points_forts": [
-        "Légère et maniable",
-        "Idéale petites tranchées",
-        "Moteur fiable",
-        "Démarrage facile"
-      ],
-      "applications": [
-        "Petites tranchées",
-        "Remblais légers",
-        "Travaux résidentiels"
-      ],
-      "secteurs": [
-        "BTP",
-        "Paysagisme"
-      ],
-      "services": {
-        "garantie_constructeur": true,
-        "sav_certifie_se_plus": true,
-        "pieces_detachees_origine": true,
-        "financement_disponible": true
-      },
-      "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-bs45y.jpg",
-        "images": [],
-        "video": null
-      },
-      "url_wacker_neuson": "https://www.wackerneuson.com/fr/produits/pilonneuses/bs45y",
       "date_scraping": "2026-05-26T08:29:07Z"
     },
     {
@@ -2053,6 +1892,210 @@
       },
       "url_wacker_neuson": "https://www.wackerneuson.fr/produits/chariots-telescopiques/th625",
       "date_scraping": "2026-06-04T14:17:12Z"
+    },
+    {
+      "id": "wn-pilo-001",
+      "marque": "Wacker Neuson",
+      "modele": "BS30",
+      "reference": "BS30",
+      "nom_complet": "Pilonneuse 2 temps Wacker Neuson BS30",
+      "slug": "wacker-neuson-bs30",
+      "categorie": "Pilonneuse",
+      "sous_categorie": "Pilonneuse 2 temps",
+      "description_courte": "Pilonneuse 2 temps légère BS30, maniable pour sols cohésifs.",
+      "description_longue": "La Wacker Neuson BS30 est une pilonneuse 2 temps légère et compacte. Elle est idéale pour le compactage des sols cohésifs dans les espaces restreints, tranchées et travaux de VRD.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "disponible",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "alimentation": "thermique 2 temps",
+        "masse_totale_kg": 62
+      },
+      "points_forts": [
+        "Légèreté",
+        "Maniabilité",
+        "2 temps fiable",
+        "Adapté tranchées"
+      ],
+      "applications": [
+        "Tranchées",
+        "Remblais",
+        "VRD",
+        "Sols cohésifs"
+      ],
+      "secteurs": [
+        "BTP",
+        "VRD",
+        "Génie civil"
+      ],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": true,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/wacker-neuson-bs30.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.wackerneuson.fr/produits/pilonneuses/bs30",
+      "date_scraping": "2026-06-04T14:24:24Z"
+    },
+    {
+      "id": "wn-pilo-002",
+      "marque": "Wacker Neuson",
+      "modele": "BS68-2",
+      "reference": "BS68-2",
+      "nom_complet": "Pilonneuse 2 temps Wacker Neuson BS68-2",
+      "slug": "wacker-neuson-bs68-2",
+      "categorie": "Pilonneuse",
+      "sous_categorie": "Pilonneuse 2 temps",
+      "description_courte": "Pilonneuse 2 temps BS68-2, haute productivité pour sols cohésifs.",
+      "description_longue": "La Wacker Neuson BS68-2 est une pilonneuse 2 temps performante. Sa puissance de frappe élevée la rend efficace pour le compactage intensif des sols cohésifs, remblais et travaux de fondations.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "disponible",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "alimentation": "thermique 2 temps",
+        "masse_totale_kg": 68
+      },
+      "points_forts": [
+        "Forte énergie de frappe",
+        "Robuste",
+        "Haute productivité",
+        "2 temps fiable"
+      ],
+      "applications": [
+        "Compactage intensif",
+        "Remblais",
+        "Fondations",
+        "Travaux publics"
+      ],
+      "secteurs": [
+        "BTP",
+        "Génie civil",
+        "Travaux publics"
+      ],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": true,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/wacker-neuson-bs68-2.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.wackerneuson.fr/produits/pilonneuses/bs68-2",
+      "date_scraping": "2026-06-04T14:24:24Z"
+    },
+    {
+      "id": "wn-pilo-003",
+      "marque": "Wacker Neuson",
+      "modele": "AS30e",
+      "reference": "AS30e",
+      "nom_complet": "Pilonneuse électrique batterie Wacker Neuson AS30e",
+      "slug": "wacker-neuson-as30e",
+      "categorie": "Pilonneuse",
+      "sous_categorie": "Pilonneuse électrique",
+      "description_courte": "Pilonneuse électrique à batterie AS30e, zéro émission en chantier.",
+      "description_longue": "La Wacker Neuson AS30e est une pilonneuse électrique fonctionnant sur batterie. Sans émissions et silencieuse, elle est idéale pour les chantiers en milieu urbain, intérieur ou à proximité d'ERP.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "disponible",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "alimentation": "électrique batterie",
+        "masse_totale_kg": 60
+      },
+      "points_forts": [
+        "Zéro émission",
+        "Faible bruit",
+        "Chantiers urbains",
+        "Batterie longue durée"
+      ],
+      "applications": [
+        "Chantiers urbains",
+        "Intérieur",
+        "Zones sensibles",
+        "Tranchées"
+      ],
+      "secteurs": [
+        "BTP",
+        "VRD",
+        "Rénovation"
+      ],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": true,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/wacker-neuson-as30e.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.wackerneuson.fr/produits/pilonneuses/as30e",
+      "date_scraping": "2026-06-04T14:24:24Z"
+    },
+    {
+      "id": "wn-pilo-004",
+      "marque": "Wacker Neuson",
+      "modele": "DS70",
+      "reference": "DS70",
+      "nom_complet": "Pilonneuse diesel Wacker Neuson DS70",
+      "slug": "wacker-neuson-ds70",
+      "categorie": "Pilonneuse",
+      "sous_categorie": "Pilonneuse diesel",
+      "description_courte": "Pilonneuse diesel DS70, puissance maximale pour chantiers exigeants.",
+      "description_longue": "La Wacker Neuson DS70 est une pilonneuse diesel robuste et puissante. Conçue pour les chantiers les plus exigeants, elle offre une énergie de frappe maximale et une grande autonomie grâce à son moteur diesel.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "disponible",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "alimentation": "diesel",
+        "masse_totale_kg": 84
+      },
+      "points_forts": [
+        "Moteur diesel puissant",
+        "Grande autonomie",
+        "Robustesse extrême",
+        "Forte énergie frappe"
+      ],
+      "applications": [
+        "Chantiers lourds",
+        "Remblais importants",
+        "Sols difficiles",
+        "Travaux publics"
+      ],
+      "secteurs": [
+        "BTP",
+        "Génie civil",
+        "Travaux publics"
+      ],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": true,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/catalogue/wacker-neuson-ds70.jpg",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.wackerneuson.fr/produits/pilonneuses/ds70",
+      "date_scraping": "2026-06-04T14:24:24Z"
     }
   ]
 }
