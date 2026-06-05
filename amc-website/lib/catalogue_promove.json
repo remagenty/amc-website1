@@ -38,7 +38,12 @@
         "Intérieurs de bâtiments",
         "Travaux de rénovation"
       ],
-      "secteurs": ["BTP", "Démolition", "Terrassement", "Rénovation"],
+      "secteurs": [
+        "BTP",
+        "Démolition",
+        "Terrassement",
+        "Rénovation"
+      ],
       "services": {
         "garantie_constructeur": true,
         "sav_certifie_se_plus": false,
@@ -46,7 +51,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/promove/xp-61/hero.jpg",
+        "image_principale": "/images/catalogue/promove/xp-61/hero.png",
         "images": [],
         "video": null
       },
@@ -89,7 +94,12 @@
         "Chantiers de rénovation",
         "Découpe de béton"
       ],
-      "secteurs": ["BTP", "Démolition", "Terrassement", "Rénovation"],
+      "secteurs": [
+        "BTP",
+        "Démolition",
+        "Terrassement",
+        "Rénovation"
+      ],
       "services": {
         "garantie_constructeur": true,
         "sav_certifie_se_plus": false,
@@ -97,7 +107,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/promove/xp-101/hero.jpg",
+        "image_principale": "/images/catalogue/promove/xp-101/hero.png",
         "images": [],
         "video": null
       },
@@ -139,7 +149,11 @@
         "Terrassement en milieu urbain",
         "Chantiers de rénovation"
       ],
-      "secteurs": ["BTP", "Démolition", "Terrassement"],
+      "secteurs": [
+        "BTP",
+        "Démolition",
+        "Terrassement"
+      ],
       "services": {
         "garantie_constructeur": true,
         "sav_certifie_se_plus": false,
@@ -147,7 +161,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/promove/xp-151/hero.jpg",
+        "image_principale": "/images/catalogue/promove/xp-151/hero.png",
         "images": [],
         "video": null
       },
@@ -190,7 +204,12 @@
         "Roches et béton",
         "Fondations"
       ],
-      "secteurs": ["BTP", "Démolition", "Terrassement", "Carrières"],
+      "secteurs": [
+        "BTP",
+        "Démolition",
+        "Terrassement",
+        "Carrières"
+      ],
       "services": {
         "garantie_constructeur": true,
         "sav_certifie_se_plus": false,
@@ -198,7 +217,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/promove/xp-300/hero.jpg",
+        "image_principale": "/images/catalogue/promove/xp-300/hero.png",
         "images": [],
         "video": null
       },
@@ -241,7 +260,11 @@
         "Chantiers BTP",
         "Roches moyennes à dures"
       ],
-      "secteurs": ["BTP", "Démolition", "Terrassement"],
+      "secteurs": [
+        "BTP",
+        "Démolition",
+        "Terrassement"
+      ],
       "services": {
         "garantie_constructeur": true,
         "sav_certifie_se_plus": false,
@@ -249,7 +272,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/promove/xp-400/hero.jpg",
+        "image_principale": "/images/catalogue/promove/xp-400/hero.png",
         "images": [],
         "video": null
       },
@@ -292,7 +315,12 @@
         "Béton armé",
         "Carrières"
       ],
-      "secteurs": ["BTP", "Démolition", "Carrières", "Génie civil"],
+      "secteurs": [
+        "BTP",
+        "Démolition",
+        "Carrières",
+        "Génie civil"
+      ],
       "services": {
         "garantie_constructeur": true,
         "sav_certifie_se_plus": false,
@@ -300,7 +328,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/promove/xp-600/hero.jpg",
+        "image_principale": "/images/catalogue/promove/xp-600/hero.png",
         "images": [],
         "video": null
       },
@@ -343,7 +371,12 @@
         "Génie civil lourd",
         "Roches dures"
       ],
-      "secteurs": ["BTP", "Démolition", "Carrières", "Génie civil"],
+      "secteurs": [
+        "BTP",
+        "Démolition",
+        "Carrières",
+        "Génie civil"
+      ],
       "services": {
         "garantie_constructeur": true,
         "sav_certifie_se_plus": false,
@@ -351,7 +384,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/promove/xp-800/hero.jpg",
+        "image_principale": "/images/catalogue/promove/xp-800/hero.png",
         "images": [],
         "video": null
       },
@@ -393,7 +426,11 @@
         "Génie civil lourd",
         "Béton et roches dures"
       ],
-      "secteurs": ["Démolition", "Carrières", "Génie civil"],
+      "secteurs": [
+        "Démolition",
+        "Carrières",
+        "Génie civil"
+      ],
       "services": {
         "garantie_constructeur": true,
         "sav_certifie_se_plus": false,
@@ -401,7 +438,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/promove/xp-1000/hero.jpg",
+        "image_principale": "/images/catalogue/promove/xp-1000/hero.png",
         "images": [],
         "video": null
       },
@@ -443,7 +480,12 @@
         "Béton armé haute résistance",
         "Structures industrielles"
       ],
-      "secteurs": ["Démolition", "Carrières", "Industrie", "Génie civil"],
+      "secteurs": [
+        "Démolition",
+        "Carrières",
+        "Industrie",
+        "Génie civil"
+      ],
       "services": {
         "garantie_constructeur": true,
         "sav_certifie_se_plus": false,
@@ -451,7 +493,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/promove/xp-1500/hero.jpg",
+        "image_principale": "/images/catalogue/promove/xp-1500/hero.png",
         "images": [],
         "video": null
       },
@@ -492,7 +534,12 @@
         "Découpage de ferrailles",
         "Tri de matériaux"
       ],
-      "secteurs": ["Démolition", "Recyclage", "BTP", "Rénovation"],
+      "secteurs": [
+        "Démolition",
+        "Recyclage",
+        "BTP",
+        "Rénovation"
+      ],
       "services": {
         "garantie_constructeur": true,
         "sav_certifie_se_plus": false,
@@ -500,7 +547,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/promove/cp-210/hero.jpg",
+        "image_principale": "/images/catalogue/promove/cp-210/hero.png",
         "images": [],
         "video": null
       },
@@ -542,7 +589,12 @@
         "Chantiers urbains",
         "Réhabilitation de structures"
       ],
-      "secteurs": ["Démolition", "BTP", "Recyclage", "Rénovation"],
+      "secteurs": [
+        "Démolition",
+        "BTP",
+        "Recyclage",
+        "Rénovation"
+      ],
       "services": {
         "garantie_constructeur": true,
         "sav_certifie_se_plus": false,
@@ -550,7 +602,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/promove/cp-300-sk/hero.jpg",
+        "image_principale": "/images/catalogue/promove/cp-300-sk/hero.png",
         "images": [],
         "video": null
       },
@@ -593,7 +645,12 @@
         "Travaux de déconstruction",
         "Recyclage de matériaux"
       ],
-      "secteurs": ["Démolition", "BTP", "Recyclage", "Industrie"],
+      "secteurs": [
+        "Démolition",
+        "BTP",
+        "Recyclage",
+        "Industrie"
+      ],
       "services": {
         "garantie_constructeur": true,
         "sav_certifie_se_plus": false,
@@ -601,7 +658,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/promove/cp-600/hero.jpg",
+        "image_principale": "/images/catalogue/promove/cp-600/hero.png",
         "images": [],
         "video": null
       },
@@ -643,7 +700,11 @@
         "Recyclage de béton",
         "Planchers et murs"
       ],
-      "secteurs": ["Démolition", "Recyclage", "BTP"],
+      "secteurs": [
+        "Démolition",
+        "Recyclage",
+        "BTP"
+      ],
       "services": {
         "garantie_constructeur": true,
         "sav_certifie_se_plus": false,
@@ -651,7 +712,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/promove/cf-45/hero.jpg",
+        "image_principale": "/images/catalogue/promove/cf-45/hero.png",
         "images": [],
         "video": null
       },
@@ -692,7 +753,11 @@
         "Recyclage béton armé",
         "Démolition primaire"
       ],
-      "secteurs": ["Démolition", "Industrie", "Recyclage"],
+      "secteurs": [
+        "Démolition",
+        "Industrie",
+        "Recyclage"
+      ],
       "services": {
         "garantie_constructeur": true,
         "sav_certifie_se_plus": false,
@@ -700,7 +765,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/promove/cf-130/hero.jpg",
+        "image_principale": "/images/catalogue/promove/cf-130/hero.png",
         "images": [],
         "video": null
       },
@@ -742,7 +807,11 @@
         "Structures industrielles",
         "Chantiers urbains"
       ],
-      "secteurs": ["Démolition", "BTP", "Industrie"],
+      "secteurs": [
+        "Démolition",
+        "BTP",
+        "Industrie"
+      ],
       "services": {
         "garantie_constructeur": true,
         "sav_certifie_se_plus": false,
@@ -750,7 +819,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/promove/cr-800/hero.jpg",
+        "image_principale": "/images/catalogue/promove/cr-800/hero.png",
         "images": [],
         "video": null
       },
@@ -792,7 +861,12 @@
         "Déconstruction structures métalliques",
         "Ferrailleurs"
       ],
-      "secteurs": ["Démolition", "Recyclage", "Industrie", "Sidérurgie"],
+      "secteurs": [
+        "Démolition",
+        "Recyclage",
+        "Industrie",
+        "Sidérurgie"
+      ],
       "services": {
         "garantie_constructeur": true,
         "sav_certifie_se_plus": false,
@@ -800,7 +874,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/promove/sc-700/hero.jpg",
+        "image_principale": "/images/catalogue/promove/sc-700/hero.png",
         "images": [],
         "video": null
       },
@@ -843,7 +917,12 @@
         "Déchetteries",
         "Recyclage acier"
       ],
-      "secteurs": ["Recyclage", "Industrie", "Démolition", "Sidérurgie"],
+      "secteurs": [
+        "Recyclage",
+        "Industrie",
+        "Démolition",
+        "Sidérurgie"
+      ],
       "services": {
         "garantie_constructeur": true,
         "sav_certifie_se_plus": false,
@@ -851,7 +930,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/promove/sc-1300/hero.jpg",
+        "image_principale": "/images/catalogue/promove/sc-1300/hero.png",
         "images": [],
         "video": null
       },
@@ -894,7 +973,12 @@
         "Manutention déchets inertes",
         "Chantiers urbains"
       ],
-      "secteurs": ["Recyclage", "Démolition", "BTP", "Environnement"],
+      "secteurs": [
+        "Recyclage",
+        "Démolition",
+        "BTP",
+        "Environnement"
+      ],
       "services": {
         "garantie_constructeur": true,
         "sav_certifie_se_plus": false,
@@ -902,7 +986,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/promove/sg-5-8/hero.jpg",
+        "image_principale": "/images/catalogue/promove/sg-5-8/hero.png",
         "images": [],
         "video": null
       },
@@ -945,7 +1029,12 @@
         "Déchets de chantier",
         "Manutention matériaux lourds"
       ],
-      "secteurs": ["Recyclage", "Démolition", "BTP", "Environnement"],
+      "secteurs": [
+        "Recyclage",
+        "Démolition",
+        "BTP",
+        "Environnement"
+      ],
       "services": {
         "garantie_constructeur": true,
         "sav_certifie_se_plus": false,
@@ -953,7 +1042,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/promove/sg-10-16/hero.jpg",
+        "image_principale": "/images/catalogue/promove/sg-10-16/hero.png",
         "images": [],
         "video": null
       },
@@ -996,7 +1085,11 @@
         "Manutention gros volumes",
         "Tri de gravats"
       ],
-      "secteurs": ["Démolition", "Recyclage", "Industrie"],
+      "secteurs": [
+        "Démolition",
+        "Recyclage",
+        "Industrie"
+      ],
       "services": {
         "garantie_constructeur": true,
         "sav_certifie_se_plus": false,
@@ -1004,7 +1097,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/promove/sg-16-20/hero.jpg",
+        "image_principale": "/images/catalogue/promove/sg-16-20/hero.png",
         "images": [],
         "video": null
       },
@@ -1047,7 +1140,11 @@
         "Déconstruction industrielle",
         "Chantiers de réhabilitation"
       ],
-      "secteurs": ["Démolition", "Industrie", "BTP"],
+      "secteurs": [
+        "Démolition",
+        "Industrie",
+        "BTP"
+      ],
       "services": {
         "garantie_constructeur": true,
         "sav_certifie_se_plus": false,
@@ -1055,7 +1152,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/promove/hg-17-28/hero.jpg",
+        "image_principale": "/images/catalogue/promove/hg-17-28/hero.png",
         "images": [],
         "video": null
       },
@@ -1098,7 +1195,11 @@
         "Déconstruction de grands ouvrages",
         "Recyclage intensif"
       ],
-      "secteurs": ["Démolition", "Industrie", "Recyclage"],
+      "secteurs": [
+        "Démolition",
+        "Industrie",
+        "Recyclage"
+      ],
       "services": {
         "garantie_constructeur": true,
         "sav_certifie_se_plus": false,
@@ -1106,7 +1207,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/promove/hg-25-38/hero.jpg",
+        "image_principale": "/images/catalogue/promove/hg-25-38/hero.png",
         "images": [],
         "video": null
       },
