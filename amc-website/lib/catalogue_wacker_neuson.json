@@ -1,6 +1,6 @@
 {
   "meta": {
-    "version": "2.1.0",
+    "version": "2.2.0",
     "marque": "Wacker Neuson",
     "distributeur": "AMC - Alpes Matériel Compact",
     "description": "Catalogue mis à jour — modèles vérifiés sur wackerneuson.fr (juin 2026)",
@@ -16,7 +16,7 @@
       "Télescopique"
     ],
     "date_creation": "2026-05-26T08:29:07Z",
-    "date_mise_a_jour": "2026-06-05T08:10:53Z"
+    "date_mise_a_jour": "2026-06-05T08:19:23Z"
   },
   "machines": [
     {
@@ -69,7 +69,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-ez17e.jpg",
+        "image_principale": "/images/catalogue/wacker-neuson-ez17e.png",
         "images": [],
         "video": null
       },
@@ -126,7 +126,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-ez26.jpg",
+        "image_principale": "/images/catalogue/wacker-neuson-ez26.png",
         "images": [],
         "video": null
       },
@@ -183,7 +183,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-ez53.jpg",
+        "image_principale": "/images/catalogue/wacker-neuson-ez53.png",
         "images": [],
         "video": null
       },
@@ -240,7 +240,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-ez80.jpg",
+        "image_principale": "/images/catalogue/wacker-neuson-ez80.png",
         "images": [],
         "video": null
       },
@@ -296,7 +296,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-dt10.jpg",
+        "image_principale": "/images/catalogue/wacker-neuson-dt10.png",
         "images": [],
         "video": null
       },
@@ -353,7 +353,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-dt15.jpg",
+        "image_principale": "/images/catalogue/wacker-neuson-dt15.png",
         "images": [],
         "video": null
       },
@@ -411,7 +411,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-wl20e.jpg",
+        "image_principale": "/images/catalogue/wacker-neuson-wl20e.png",
         "images": [],
         "video": null
       },
@@ -469,7 +469,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-wl28.jpg",
+        "image_principale": "/images/catalogue/wacker-neuson-wl28.png",
         "images": [],
         "video": null
       },
@@ -527,7 +527,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-wl52.jpg",
+        "image_principale": "/images/catalogue/wacker-neuson-wl52.png",
         "images": [],
         "video": null
       },
@@ -582,7 +582,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-rd18.jpg",
+        "image_principale": "/images/catalogue/wacker-neuson-rd18.png",
         "images": [],
         "video": null
       },
@@ -637,7 +637,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-dpu3060.jpg",
+        "image_principale": "/images/catalogue/wacker-neuson-dpu3060.png",
         "images": [],
         "video": null
       },
@@ -692,7 +692,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-dpu4545.jpg",
+        "image_principale": "/images/catalogue/wacker-neuson-dpu4545.png",
         "images": [],
         "video": null
       },
@@ -746,7 +746,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-dpu6555.jpg",
+        "image_principale": "/images/catalogue/wacker-neuson-dpu6555.png",
         "images": [],
         "video": null
       },
@@ -801,7 +801,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-vp1340.jpg",
+        "image_principale": "/images/catalogue/wacker-neuson-vp1340.png",
         "images": [],
         "video": null
       },
@@ -856,7 +856,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-vp2050.jpg",
+        "image_principale": "/images/catalogue/wacker-neuson-vp2050.png",
         "images": [],
         "video": null
       },
@@ -911,7 +911,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-bs60-4as.jpg",
+        "image_principale": "/images/catalogue/wacker-neuson-bs62-4as.png",
         "images": [],
         "video": null
       },
@@ -968,7 +968,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-wl38.jpg",
+        "image_principale": "/images/catalogue/wacker-neuson-wl38.png",
         "images": [],
         "video": null
       },
@@ -1025,7 +1025,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-th412.jpg",
+        "image_principale": "/images/catalogue/wacker-neuson-th412.png",
         "images": [],
         "video": null
       },
@@ -1082,7 +1082,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-ez17.jpg",
+        "image_principale": "/images/catalogue/wacker-neuson-ez17.png",
         "images": [],
         "video": null
       },
@@ -1138,7 +1138,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-dt10e.jpg",
+        "image_principale": "/images/catalogue/wacker-neuson-dt10e.png",
         "images": [],
         "video": null
       },
@@ -1195,7 +1195,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-wl20.jpg",
+        "image_principale": "/images/catalogue/wacker-neuson-wl20.png",
         "images": [],
         "video": null
       },
@@ -1250,7 +1250,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-dpu2560h.jpg",
+        "image_principale": "/images/catalogue/wacker-neuson-dpu2560h.png",
         "images": [],
         "video": null
       },
@@ -1304,7 +1304,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-vp1135aw.jpg",
+        "image_principale": "/images/catalogue/wacker-neuson-vp1135aw.png",
         "images": [],
         "video": null
       },
@@ -1361,7 +1361,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-ez36.jpg",
+        "image_principale": "/images/catalogue/wacker-neuson-ez36.png",
         "images": [],
         "video": null
       },
@@ -1418,7 +1418,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-ez26e.jpg",
+        "image_principale": "/images/catalogue/wacker-neuson-ez26e.png",
         "images": [],
         "video": null
       },
@@ -1470,7 +1470,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-dw20.jpg",
+        "image_principale": "/images/catalogue/wacker-neuson-dw20.png",
         "images": [],
         "video": null
       },
@@ -1522,7 +1522,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-dw30.jpg",
+        "image_principale": "/images/catalogue/wacker-neuson-dw30.png",
         "images": [],
         "video": null
       },
@@ -1574,7 +1574,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-rd24.jpg",
+        "image_principale": "/images/catalogue/wacker-neuson-rd24.png",
         "images": [],
         "video": null
       },
@@ -1627,7 +1627,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-rd28.jpg",
+        "image_principale": "/images/catalogue/wacker-neuson-rd28.png",
         "images": [],
         "video": null
       },
@@ -1680,7 +1680,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-rd45.jpg",
+        "image_principale": "/images/catalogue/wacker-neuson-rd45.png",
         "images": [],
         "video": null
       },
@@ -1731,7 +1731,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-bh40.jpg",
+        "image_principale": "/images/catalogue/wacker-neuson-bh40.png",
         "images": [],
         "video": null
       },
@@ -1782,7 +1782,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-bh55.jpg",
+        "image_principale": "/images/catalogue/wacker-neuson-bh55.png",
         "images": [],
         "video": null
       },
@@ -1833,7 +1833,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-bh65.jpg",
+        "image_principale": "/images/catalogue/wacker-neuson-bh65.png",
         "images": [],
         "video": null
       },
@@ -1886,7 +1886,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-th625.jpg",
+        "image_principale": "/images/catalogue/wacker-neuson-th625.png",
         "images": [],
         "video": null
       },
@@ -1937,7 +1937,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-bs30.jpg",
+        "image_principale": "/images/catalogue/wacker-neuson-bs30.png",
         "images": [],
         "video": null
       },
@@ -1988,7 +1988,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-bs68-2.jpg",
+        "image_principale": "/images/catalogue/wacker-neuson-bs68-2.png",
         "images": [],
         "video": null
       },
@@ -2039,7 +2039,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-as30e.jpg",
+        "image_principale": "/images/catalogue/wacker-neuson-as30e.png",
         "images": [],
         "video": null
       },
@@ -2090,7 +2090,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-ds70.jpg",
+        "image_principale": "/images/catalogue/wacker-neuson-ds70.png",
         "images": [],
         "video": null
       },
@@ -2141,7 +2141,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-dt12.jpg",
+        "image_principale": "/images/catalogue/wacker-neuson-dt12.png",
         "images": [],
         "video": null
       },
@@ -2192,7 +2192,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-dt23.jpg",
+        "image_principale": "/images/catalogue/wacker-neuson-dt23.png",
         "images": [],
         "video": null
       },
@@ -2243,7 +2243,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-dw10.jpg",
+        "image_principale": "/images/catalogue/wacker-neuson-dw10.png",
         "images": [],
         "video": null
       },
@@ -2294,7 +2294,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/catalogue/wacker-neuson-dw15.jpg",
+        "image_principale": "/images/catalogue/wacker-neuson-dw15.png",
         "images": [],
         "video": null
       },
