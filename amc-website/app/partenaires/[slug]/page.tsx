@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { getBrandInfo, getProductsByBrand, BRANDS } from "@/lib/data";
-import { ProductCard } from "@/components/ui/ProductCard";
+import { getBrandInfo, getProductsByBrand, getCategoriesForBrand, BRANDS } from "@/lib/data";
+import { PartnerProductGrid } from "@/components/partenaires/PartnerProductGrid";
 import { IconArrowRight } from "@/components/ui/Icons";
 import { NewsletterForm } from "@/components/ui/NewsletterForm";
 
@@ -28,6 +28,7 @@ export default function PartnerPage({ params }: Props) {
   if (!brand) notFound();
 
   const products = getProductsByBrand(params.slug);
+  const categories = getCategoriesForBrand(params.slug);
 
   const BRAND_IMAGES: Record<string, string> = {
     "wacker-neuson": "/images/photo-wacker-catalogue.jpg",
@@ -108,31 +109,24 @@ export default function PartnerPage({ params }: Props) {
       {/* Products */}
       <section className="section-padding">
         <div className="container-amc">
-          <div className="flex items-center justify-between mb-10">
-            <div>
-              <h2 className="section-title text-2xl">
-                Gamme {brand.name} disponible
-              </h2>
-              <p className="text-amc-text-secondary text-sm mt-1">
-                {products.length > 0
-                  ? `${products.length} modèle${products.length > 1 ? "s" : ""} en stock`
-                  : "Consultez-nous pour la disponibilité"}
-              </p>
-            </div>
-            <Link
-              href={`/catalogue?marque=${brand.id}`}
-              className="text-sm font-semibold text-amc-text hover:text-amc-yellow-dark flex items-center gap-1 transition-colors"
-            >
-              Voir tout <IconArrowRight size={14} />
-            </Link>
+          <div className="mb-8">
+            <h2 className="section-title text-2xl">
+              Gamme {brand.name} disponible
+            </h2>
+            <p className="text-amc-text-secondary text-sm mt-1">
+              {products.length > 0
+                ? `${products.length} modèle${products.length > 1 ? "s" : ""} disponible${products.length > 1 ? "s" : ""}`
+                : "Consultez-nous pour la disponibilité"}
+            </p>
           </div>
 
           {products.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-              {products.map((p) => (
-                <ProductCard key={p.id} product={p} />
-              ))}
-            </div>
+            <PartnerProductGrid
+              products={products}
+              brandId={brand.id}
+              brandName={brand.name}
+              categories={categories}
+            />
           ) : (
             <div className="text-center py-16 bg-white rounded-xl shadow-card">
               <p className="text-amc-text-secondary mb-4">

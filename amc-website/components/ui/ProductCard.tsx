@@ -25,6 +25,12 @@ const BRAND_COLORS: Record<string, string> = {
   "promove-demolition": "bg-orange-50 text-orange-700 border border-orange-200",
 };
 
+const BRAND_PLACEHOLDERS: Record<string, string> = {
+  "wacker-neuson": "/images/products/placeholder-wn.svg",
+  "magni": "/images/products/placeholder-magni.svg",
+  "promove-demolition": "/images/products/placeholder-promove.svg",
+};
+
 export function ProductCard({ product, className = "" }: ProductCardProps) {
   const router = useRouter();
 
@@ -39,7 +45,7 @@ export function ProductCard({ product, className = "" }: ProductCardProps) {
     >
       <div className="relative overflow-hidden aspect-[4/3] bg-white">
         <Image
-          src={product.images[0] || "/images/placeholder-product.jpg"}
+          src={product.images[0] || BRAND_PLACEHOLDERS[product.brand] || "/images/products/placeholder-machine.svg"}
           alt={`${product.name} — ${product.shortDescription}`}
           fill
           className="object-contain p-2 transition-transform duration-500 group-hover:scale-105"

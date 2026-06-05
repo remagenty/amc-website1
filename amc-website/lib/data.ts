@@ -475,7 +475,18 @@ export const WHY_CHOOSE_ITEMS = [
 ];
 
 export function getProductsByBrand(brand: string): Product[] {
-  return PRODUCTS.filter((p) => p.brand === brand);
+  return getMachines().filter((p) => p.brand === brand);
+}
+
+export function getCategoriesForBrand(brand: string): Array<{id: string; label: string; count: number}> {
+  const products = getMachines().filter((p) => p.brand === brand);
+  const counts: Record<string, number> = {};
+  for (const p of products) {
+    if (p.categorySlug) counts[p.categorySlug] = (counts[p.categorySlug] ?? 0) + 1;
+  }
+  return Object.entries(counts)
+    .map(([id, count]) => ({ id, label: ALL_CATEGORY_LABELS[id] ?? id, count }))
+    .sort((a, b) => a.label.localeCompare(b.label, "fr"));
 }
 
 export function getProductsByCategory(category: string): Product[] {
@@ -487,7 +498,7 @@ export function getOccasionProducts(): Product[] {
 }
 
 export function getFeaturedProducts(): Product[] {
-  return PRODUCTS.filter((p) => p.featured);
+  return getMachines().filter((p) => p.featured);
 }
 
 export function getProductBySlug(slug: string): Product | undefined {

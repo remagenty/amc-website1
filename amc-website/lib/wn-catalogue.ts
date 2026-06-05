@@ -166,7 +166,7 @@ export function wnMachineToProduct(m: WnMachine): Product {
     status: m.etat,
     price: m.prix_ht ?? undefined,
     priceOnRequest: m.prix_ht === null,
-    images: allImages.length > 0 ? allImages : ["/images/products/placeholder-wn.jpg"],
+    images: allImages.length > 0 ? allImages : ["/images/products/placeholder-wn.svg"],
     shortDescription: m.description_courte,
     description: m.description_longue,
     specs: technicalSpecsToArray(m.caracteristiques_techniques),
