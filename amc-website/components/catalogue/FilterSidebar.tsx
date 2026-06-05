@@ -39,28 +39,6 @@ export interface FilterSidebarProps {
   onSearchChange: (s: string) => void;
 }
 
-// ─── Category emoji icons ──────────────────────────────────────────────────────
-
-const CATEGORY_ICONS: Record<string, string> = {
-  "mini-pelles": "⛏️",
-  "dumpers": "🚛",
-  "chargeuses": "🚜",
-  "compacteurs": "🪨",
-  "plaques-vibrantes": "📳",
-  "pilonneuses": "🔨",
-  "marteaux-piqueurs": "⚒️",
-  "outillage": "🔧",
-  "telescopiques": "🏗️",
-  "telehandlers-rotatifs": "🔄",
-  "telehandlers-fixes": "📐",
-  "telehandlers-agricoles": "🌾",
-  "brise-roches": "💥",
-  "pinces-multiprocesseurs": "🦾",
-  "pulverisateurs": "💧",
-  "cisailles": "✂️",
-  "pinces-de-tri": "🔩",
-};
-
 // ─── Quick-access tags ────────────────────────────────────────────────────────
 
 const QUICK_TAGS: Array<{ label: string; emoji: string; categories: string[] }> = [
@@ -303,9 +281,6 @@ function FilterContent({
                           : "border-transparent hover:bg-gray-50 hover:border-gray-200"
                       }`}
                     >
-                      <span className="text-sm leading-none flex-shrink-0 w-5 text-center" aria-hidden>
-                        {CATEGORY_ICONS[cat.id] ?? "📦"}
-                      </span>
                       <span
                         className={`flex-1 text-xs leading-tight ${
                           active
