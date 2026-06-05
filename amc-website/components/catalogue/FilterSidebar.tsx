@@ -187,7 +187,9 @@ function FilterContent({
     if (isQuickTagActive(cats)) {
       onChange("categories", selected.categories.filter((c) => !cats.includes(c)));
     } else {
-      onChange("categories", [...new Set([...selected.categories, ...cats])]);
+      // Merge without Set spread (incompatible with TypeScript es5 target)
+      const merged = [...selected.categories, ...cats.filter((c) => !selected.categories.includes(c))];
+      onChange("categories", merged);
     }
   };
 
