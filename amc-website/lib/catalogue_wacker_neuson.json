@@ -1,6 +1,6 @@
 {
   "meta": {
-    "version": "2.0.0",
+    "version": "2.1.0",
     "marque": "Wacker Neuson",
     "distributeur": "AMC - Alpes Matériel Compact",
     "description": "Catalogue mis à jour — modèles vérifiés sur wackerneuson.fr (juin 2026)",
@@ -16,7 +16,7 @@
       "Télescopique"
     ],
     "date_creation": "2026-05-26T08:29:07Z",
-    "date_mise_a_jour": "2026-06-04T14:28:13Z"
+    "date_mise_a_jour": "2026-06-05T08:10:53Z"
   },
   "machines": [
     {
@@ -915,7 +915,7 @@
         "images": [],
         "video": null
       },
-      "url_wacker_neuson": "https://www.wackerneuson.com/fr/produits/pilonneuses/bs60-4as",
+      "url_wacker_neuson": "https://www.wackerneuson.fr/produits/pilonneuses-vibrantes/pilonneuses-quatre-temps/bs62-4as",
       "date_scraping": "2026-05-26T08:29:07Z"
     },
     {
@@ -1941,7 +1941,7 @@
         "images": [],
         "video": null
       },
-      "url_wacker_neuson": "https://www.wackerneuson.fr/produits/pilonneuses/bs30",
+      "url_wacker_neuson": "https://www.wackerneuson.fr/produits/pilonneuses-vibrantes/pilonneuses-deux-temps/bs30",
       "date_scraping": "2026-06-04T14:24:24Z"
     },
     {
@@ -1992,7 +1992,7 @@
         "images": [],
         "video": null
       },
-      "url_wacker_neuson": "https://www.wackerneuson.fr/produits/pilonneuses/bs68-2",
+      "url_wacker_neuson": "https://www.wackerneuson.fr/produits/pilonneuses-vibrantes/pilonneuses-deux-temps/bs68-2",
       "date_scraping": "2026-06-04T14:24:24Z"
     },
     {
@@ -2043,7 +2043,7 @@
         "images": [],
         "video": null
       },
-      "url_wacker_neuson": "https://www.wackerneuson.fr/produits/pilonneuses/as30e",
+      "url_wacker_neuson": "https://www.wackerneuson.fr/zero-emission/pilonneuses-electriques/as30e",
       "date_scraping": "2026-06-04T14:24:24Z"
     },
     {
@@ -2094,7 +2094,7 @@
         "images": [],
         "video": null
       },
-      "url_wacker_neuson": "https://www.wackerneuson.fr/produits/pilonneuses/ds70",
+      "url_wacker_neuson": "https://www.wackerneuson.fr/produits/pilonneuses-vibrantes/pilonneuses-diesel/ds70",
       "date_scraping": "2026-06-04T14:24:24Z"
     },
     {
@@ -2145,7 +2145,7 @@
         "images": [],
         "video": null
       },
-      "url_wacker_neuson": "https://www.wackerneuson.fr/produits/dumpers/dt12",
+      "url_wacker_neuson": "https://www.wackerneuson.fr/produits/dumpers/dumpers-sur-chenilles/dt12",
       "date_scraping": "2026-06-04T14:28:13Z"
     },
     {
@@ -2196,7 +2196,7 @@
         "images": [],
         "video": null
       },
-      "url_wacker_neuson": "https://www.wackerneuson.fr/produits/dumpers/dt23",
+      "url_wacker_neuson": "https://www.wackerneuson.fr/produits/dumpers/dumpers-sur-chenilles/dt23",
       "date_scraping": "2026-06-04T14:28:13Z"
     },
     {
@@ -2247,7 +2247,7 @@
         "images": [],
         "video": null
       },
-      "url_wacker_neuson": "https://www.wackerneuson.fr/produits/dumpers/dw10",
+      "url_wacker_neuson": "https://www.wackerneuson.fr/produits/dumpers/dumpers-sur-pneus/dw10",
       "date_scraping": "2026-06-04T14:28:13Z"
     },
     {
@@ -2298,7 +2298,7 @@
         "images": [],
         "video": null
       },
-      "url_wacker_neuson": "https://www.wackerneuson.fr/produits/dumpers/dw15",
+      "url_wacker_neuson": "https://www.wackerneuson.fr/produits/dumpers/dumpers-sur-pneus/dw15",
       "date_scraping": "2026-06-04T14:28:13Z"
     }
   ]
