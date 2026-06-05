@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, type ReactNode } from "react";
 import {
   IconSearch,
   IconX,
@@ -90,7 +90,7 @@ function CollapsibleSection({
   open: boolean;
   onToggle: () => void;
   badge?: number;
-  children: React.ReactNode;
+  children: ReactNode;
 }) {
   return (
     <div className="border-t border-gray-100">
