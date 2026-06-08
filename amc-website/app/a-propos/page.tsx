@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/Icons";
 
 export const metadata: Metadata = {
-  title: "À propos | AMC — Alta Matériel Compact",
+  title: "À propos | AMC — Alpes Matériel Compact",
   description:
     "Découvrez l'histoire d'AMC, distributeur officiel Wacker Neuson, Magni et Promove Demolition en Rhône-Alpes. Notre équipe d'experts à votre service.",
 };
@@ -147,7 +147,7 @@ export default function AProposPage() {
         <div className="absolute inset-0" style={{ backgroundColor: "rgba(0,0,0,0.58)" }} />
         <div className="relative z-10 container-amc py-24 flex flex-col items-start justify-end h-full min-h-[420px]">
           <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amc-yellow text-amc-text text-xs font-bold mb-5 uppercase tracking-wider">
-            <IconHardHat size={14} /> AMC — Alta Matériel Compact
+            <IconHardHat size={14} /> AMC — Alpes Matériel Compact
           </span>
           <h1 className="text-4xl md:text-5xl font-black text-white leading-tight mb-4">
             Notre histoire
