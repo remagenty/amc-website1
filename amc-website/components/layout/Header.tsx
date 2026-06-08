@@ -293,6 +293,18 @@ export function Header() {
                 </button>
               </div>
 
+              {/* À propos */}
+              <Link
+                href="/a-propos"
+                className={`flex items-center px-4 text-sm font-semibold transition-colors ${
+                  pathname === "/a-propos"
+                    ? "text-amc-yellow"
+                    : "text-white hover:text-amc-yellow"
+                }`}
+              >
+                À propos
+              </Link>
+
               {/* Actualités & Expertise */}
               <Link
                 href="/actualites"
@@ -510,6 +522,7 @@ export function Header() {
                   { label: "Promove Demolition", href: "/partenaires/promove-demolition" },
                   { label: "Nos services", href: "/services" },
                   { label: "SAV & Atelier", href: "/sav" },
+                  { label: "À propos", href: "/a-propos" },
                   { label: "Actualités & Expertise", href: "/actualites" },
                   { label: "Contact & Devis", href: "/contact" },
                 ].map((link) => (
