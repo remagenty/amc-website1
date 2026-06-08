@@ -24,7 +24,7 @@ export default function HomePage() {
       <FeaturedProducts />
 
       {/* Carte — juste avant le footer */}
-      <section className="bg-amc-cream py-12">
+      <section className="bg-white py-12">
         <div className="container-amc">
           <MapInteractive />
         </div>
