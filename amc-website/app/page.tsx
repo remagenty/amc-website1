@@ -5,6 +5,7 @@ import { ActivitiesSection } from "@/components/home/ActivitiesSection";
 import { PartnersSection } from "@/components/home/PartnersSection";
 import { FeaturedProducts } from "@/components/home/FeaturedProducts";
 import { WhyChooseSection } from "@/components/home/WhyChooseSection";
+import { TestimonialsStrip } from "@/components/home/TestimonialsStrip";
 import { MapInteractive } from "@/components/ui/MapInteractive";
 
 export const metadata: Metadata = {
@@ -20,6 +21,7 @@ export default function HomePage() {
       <ReassuranceBar />
       <ActivitiesSection />
       <WhyChooseSection />
+      <TestimonialsStrip />
       <PartnersSection />
       <FeaturedProducts />
 
