@@ -369,15 +369,17 @@ export default function TeamMemberPage({ params }: { params: { slug: string } })
       </section>
 
       {/* ── CTA BAS ── */}
-      <section className="bg-amc-gray py-14">
+      <section className="bg-white py-14 border-t border-gray-100">
         <div className="container-amc text-center">
           <ScrollReveal from="bottom">
-            <p className="text-white/70 text-sm mb-4">Vous souhaitez rencontrer toute l'équipe AMC ?</p>
+            <p className="text-amc-yellow font-semibold text-sm mb-4">
+              Vous souhaitez rencontrer toute l&apos;équipe AMC ?
+            </p>
             <Link
-              href="/a-propos"
-              className="inline-flex items-center gap-2 text-white font-bold text-sm hover:text-amc-yellow transition-colors"
+              href="/a-propos#equipe"
+              className="inline-flex items-center gap-2 text-amc-yellow font-bold text-sm hover:text-amc-yellow-dark transition-colors"
             >
-              ← Découvrir toute l'équipe
+              ← Découvrir toute l&apos;équipe
             </Link>
           </ScrollReveal>
         </div>

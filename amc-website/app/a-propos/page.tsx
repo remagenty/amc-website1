@@ -242,7 +242,7 @@ export default function AProposPage() {
       </section>
 
       {/* ── ÉQUIPE ── */}
-      <section className="bg-amc-cream py-24">
+      <section id="equipe" className="bg-amc-cream py-24">
         <div className="container-amc">
           <ScrollReveal from="bottom">
             <div className="text-center mb-14">
