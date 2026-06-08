@@ -329,7 +329,7 @@ export default function AProposPage() {
               </Link>
               <a
                 href="tel:+33426784390"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 text-amc-text font-bold rounded-lg hover:bg-gray-200 transition-colors text-sm"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-amc-cream text-amc-text font-bold rounded-xl hover:bg-gray-100 transition-colors text-sm shadow-sm"
               >
                 <IconPhone size={16} /> 04 26 78 43 90
               </a>
