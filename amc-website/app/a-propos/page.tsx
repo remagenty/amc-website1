@@ -72,6 +72,7 @@ const HISTOIRE_BLOCKS = [
 
 const TEAM = [
   {
+    slug: "chef-agence",
     initials: "CA",
     role: "Chef d'agence",
     name: "À compléter",
@@ -79,6 +80,7 @@ const TEAM = [
       "Pilote l'agence AMC au quotidien et garantit la qualité de service auprès de nos clients professionnels.",
   },
   {
+    slug: "responsable-sav",
     initials: "RS",
     role: "Responsable SAV",
     name: "À compléter",
@@ -86,6 +88,7 @@ const TEAM = [
       "Coordonne toutes les interventions techniques et assure la réactivité de notre service après-vente.",
   },
   {
+    slug: "commercial-1",
     initials: "C1",
     role: "Commercial",
     name: "À compléter",
@@ -93,6 +96,7 @@ const TEAM = [
       "Spécialiste des matériels Wacker Neuson et Magni, il vous accompagne dans le choix de vos équipements.",
   },
   {
+    slug: "commercial-2",
     initials: "C2",
     role: "Commercial",
     name: "À compléter",
@@ -100,6 +104,7 @@ const TEAM = [
       "Expert en matériels de démolition et d'attachements, il trouve la solution adaptée à chaque chantier.",
   },
   {
+    slug: "commercial-3",
     initials: "C3",
     role: "Commercial",
     name: "À compléter",
@@ -256,18 +261,24 @@ export default function AProposPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
             {TEAM.map((member, i) => (
-              <ScrollReveal key={member.role + i} from="bottom" delay={i * 80}>
-                <div className="bg-white rounded-2xl shadow-card p-6 text-center flex flex-col items-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+              <ScrollReveal key={member.slug} from="bottom" delay={i * 80}>
+                <Link
+                  href={`/a-propos/${member.slug}`}
+                  className="group bg-white rounded-2xl shadow-card p-6 text-center flex flex-col items-center hover:shadow-lg hover:-translate-y-1 hover:border-amc-yellow border-2 border-transparent transition-all duration-300 cursor-pointer block"
+                >
                   {/* Avatar initiales */}
-                  <div className="w-16 h-16 rounded-full bg-amc-yellow flex items-center justify-center mb-4 flex-shrink-0">
+                  <div className="w-16 h-16 rounded-full bg-amc-yellow flex items-center justify-center mb-4 flex-shrink-0 group-hover:scale-105 transition-transform duration-300">
                     <span className="text-lg font-black text-amc-text">{member.initials}</span>
                   </div>
                   <p className="text-xs font-bold uppercase tracking-widest text-[#FFD700] mb-1">
                     {member.role}
                   </p>
                   <h3 className="font-bold text-amc-text text-sm mb-3">{member.name}</h3>
-                  <p className="text-gray-500 text-xs leading-relaxed">{member.description}</p>
-                </div>
+                  <p className="text-gray-500 text-xs leading-relaxed mb-4">{member.description}</p>
+                  <span className="inline-flex items-center gap-1 text-xs font-semibold text-amc-yellow-dark group-hover:gap-2 transition-all mt-auto">
+                    Voir le profil <IconArrowRight size={11} />
+                  </span>
+                </Link>
               </ScrollReveal>
             ))}
           </div>
