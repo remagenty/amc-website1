@@ -43,7 +43,7 @@ export default function OccasionPage() {
               <Link href="/devis" className="btn-primary rounded-lg">
                 Demander un devis <IconArrowRight size={16} />
               </Link>
-              <Link href="/services" className="btn-outline rounded-lg">
+              <Link href="/sav" className="btn-outline rounded-lg">
                 En savoir plus sur nos certifications
               </Link>
             </div>

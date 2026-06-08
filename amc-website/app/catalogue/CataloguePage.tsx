@@ -161,10 +161,18 @@ export function CataloguePage() {
         {/* Header */}
         <div className="mb-8">
           <h1 className="text-2xl md:text-3xl font-bold text-amc-text">
-            Catalogue matériels de chantier
+            {filters.status === "occasion"
+              ? "Matériels d'occasion certifiés SE+"
+              : filters.status === "neuf"
+              ? "Matériels neufs de chantier"
+              : "Catalogue matériels de chantier"}
           </h1>
           <p className="text-amc-text-secondary mt-2 text-sm">
-            {ALL_MACHINES.length} machines — Wacker Neuson, Magni, Promove Demolition
+            {filters.status === "occasion"
+              ? "Toutes nos machines d'occasion sont inspectées et certifiées par nos techniciens SE+"
+              : filters.status === "neuf"
+              ? `Gamme neuve disponible — Wacker Neuson, Magni, Promove Demolition`
+              : `${ALL_MACHINES.length} machines — Wacker Neuson, Magni, Promove Demolition`}
           </p>
         </div>
 

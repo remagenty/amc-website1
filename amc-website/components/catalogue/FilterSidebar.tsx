@@ -116,7 +116,7 @@ function FilterContent({
   const [openSections, setOpenSections] = useState({
     brands: true,
     availability: false,
-    status: false,
+    status: selected.status !== "all", // auto-open when pre-filtered from URL
     budget: false,
   });
 

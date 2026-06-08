@@ -22,7 +22,7 @@ const ACTIVITIES = [
       "Des machines d'occasion soigneusement inspectées, révisées et garanties par nos techniciens certifiés SE+. Le rapport qualité-prix optimal pour vos chantiers.",
     badges: ["Inspecté", "Garanti", "Certifié SE+"],
     cta: "Voir les occasions",
-    href: "/occasion",
+    href: "/catalogue?etat=occasion",
   },
   {
     id: "sav",
