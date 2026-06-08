@@ -14,7 +14,7 @@ import {
 import { SEBadge } from "@/components/ui/SEBadge";
 
 const TOP_BAR_ITEMS: { label: string; href?: string }[] = [
-  { label: "📞 04 26 78 43 90" },
+  { label: "📞 04 26 78 43 90", href: "tel:+33426784390" },
   { label: "📍 ZAC D'Orsan, Saint-Félix (74)", href: "/contact#nous-localiser" },
   { label: "⏰ Lun-Ven : 8h-18h | Sam : 9h-12h" },
 ];
