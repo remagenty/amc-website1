@@ -33,7 +33,7 @@ const ACTIVITIES = [
     se: true,
     badges: ["Pièces d'origine", "Intervention rapide", "Contrats entretien"],
     cta: "Nos services",
-    href: "/services",
+    href: "/sav",
   },
 ];
 

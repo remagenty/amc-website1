@@ -170,20 +170,23 @@ export default function SavPage() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="bg-amc-gray py-20">
+      <section className="bg-white py-20">
         <div className="container-amc text-center">
           <ScrollReveal from="bottom">
-            <h2 className="text-3xl font-black text-white mb-4">
+            <h2 className="text-3xl font-black text-[#1F2937] mb-4">
               Besoin d&apos;une intervention ?
             </h2>
-            <p className="text-white/70 mb-8 max-w-lg mx-auto">
+            <p className="text-[#4B5563] mb-8 max-w-lg mx-auto">
               Contactez notre atelier pour un devis, une prise en charge ou tout renseignement sur nos contrats d&apos;entretien.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href="/devis?type=sav" className="btn-primary">
                 Demander un devis SAV <IconArrowRight size={16} />
               </Link>
-              <a href="tel:+33426784390" className="btn-outline">
+              <a
+                href="tel:+33426784390"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border-2 border-[#000000] text-[#000000] font-semibold hover:bg-gray-50 transition-colors"
+              >
                 <IconPhone size={16} /> 04 26 78 43 90
               </a>
             </div>

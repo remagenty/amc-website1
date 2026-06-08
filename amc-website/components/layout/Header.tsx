@@ -520,7 +520,6 @@ export function Header() {
                   { label: "Wacker Neuson", href: "/partenaires/wacker-neuson" },
                   { label: "Magni", href: "/partenaires/magni" },
                   { label: "Promove Demolition", href: "/partenaires/promove-demolition" },
-                  { label: "Nos services", href: "/services" },
                   { label: "SAV & Atelier", href: "/sav" },
                   { label: "À propos", href: "/a-propos" },
                   { label: "Actualités & Expertise", href: "/actualites" },
