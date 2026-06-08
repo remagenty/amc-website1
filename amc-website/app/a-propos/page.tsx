@@ -310,7 +310,7 @@ export default function AProposPage() {
       </section>
 
       {/* ── CTA FINAL ── */}
-      <section className="bg-white py-20 border-t border-gray-100">
+      <section className="bg-amc-cream py-20">
         <div className="container-amc text-center">
           <ScrollReveal from="bottom">
             <h2 className="text-3xl font-black text-amc-text mb-4">
@@ -329,7 +329,7 @@ export default function AProposPage() {
               </Link>
               <a
                 href="tel:+33426784390"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-amc-cream text-amc-text font-bold rounded-xl hover:bg-gray-100 transition-colors text-sm shadow-sm"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-white text-amc-text font-bold rounded-xl hover:bg-gray-50 transition-colors text-sm shadow-sm"
               >
                 <IconPhone size={16} /> 04 26 78 43 90
               </a>
