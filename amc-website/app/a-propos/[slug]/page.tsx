@@ -369,19 +369,21 @@ export default function TeamMemberPage({ params }: { params: { slug: string } })
       </section>
 
       {/* ── CTA BAS ── */}
-      <section className="bg-white py-14 border-t border-gray-100">
-        <div className="container-amc text-center">
+      <section className="bg-amc-cream py-14">
+        <div className="container-amc">
           <ScrollReveal from="bottom">
-            <p className="text-amc-yellow font-semibold text-sm mb-4">
-              Vous souhaitez rencontrer toute l&apos;équipe AMC ?
-            </p>
-            <Link
-              href="/a-propos#equipe"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-[#F3F4F6] text-[#1F2937] font-semibold text-sm rounded-lg hover:bg-[#E5E7EB] transition-colors"
-            >
-              <IconArrowRight size={14} className="rotate-180" />
-              Découvrir toute l&apos;équipe
-            </Link>
+            <div className="max-w-md mx-auto bg-white rounded-2xl shadow-card border border-gray-100 px-8 py-10 text-center">
+              <p className="text-amc-yellow font-semibold text-sm mb-5">
+                Vous souhaitez rencontrer toute l&apos;équipe AMC ?
+              </p>
+              <Link
+                href="/a-propos#equipe"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-[#F3F4F6] text-[#1F2937] font-semibold text-sm rounded-lg hover:bg-[#E5E7EB] transition-colors"
+              >
+                <IconArrowRight size={14} className="rotate-180" />
+                Découvrir toute l&apos;équipe
+              </Link>
+            </div>
           </ScrollReveal>
         </div>
       </section>
