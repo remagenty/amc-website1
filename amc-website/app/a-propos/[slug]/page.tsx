@@ -377,9 +377,10 @@ export default function TeamMemberPage({ params }: { params: { slug: string } })
             </p>
             <Link
               href="/a-propos#equipe"
-              className="inline-flex items-center gap-2 text-amc-yellow font-bold text-sm hover:text-amc-yellow-dark transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-[#F3F4F6] text-[#1F2937] font-semibold text-sm rounded-lg hover:bg-[#E5E7EB] transition-colors"
             >
-              ← Découvrir toute l&apos;équipe
+              <IconArrowRight size={14} className="rotate-180" />
+              Découvrir toute l&apos;équipe
             </Link>
           </ScrollReveal>
         </div>
