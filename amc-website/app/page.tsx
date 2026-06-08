@@ -18,10 +18,10 @@ export default function HomePage() {
     <>
       <HeroSlider />
       <ReassuranceBar />
-      <PartnersSection />
       <ActivitiesSection />
-      <FeaturedProducts />
       <WhyChooseSection />
+      <PartnersSection />
+      <FeaturedProducts />
 
       {/* Carte — juste avant le footer */}
       <section className="bg-amc-cream py-12">

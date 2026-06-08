@@ -7,7 +7,7 @@ import { ProductCard } from "@/components/ui/ProductCard";
 import { IconArrowRight, IconChevronLeft, IconChevronRight } from "@/components/ui/Icons";
 
 export function FeaturedProducts() {
-  const products = getFeaturedProducts();
+  const products = getFeaturedProducts().slice(0, 6);
   const scrollRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
@@ -37,32 +37,23 @@ export function FeaturedProducts() {
               Notre sélection de machines disponibles immédiatement
             </p>
           </div>
-          <div className="hidden md:flex items-center gap-4">
-            <div className="flex gap-2">
-              <button
-                onClick={() => scroll("left")}
-                disabled={!canScrollLeft}
-                className="p-2.5 rounded-full border border-gray-200 text-amc-text hover:bg-amc-yellow hover:border-amc-yellow disabled:opacity-30 disabled:cursor-not-allowed transition-all"
-                aria-label="Défiler vers la gauche"
-              >
-                <IconChevronLeft size={18} />
-              </button>
-              <button
-                onClick={() => scroll("right")}
-                disabled={!canScrollRight}
-                className="p-2.5 rounded-full border border-gray-200 text-amc-text hover:bg-amc-yellow hover:border-amc-yellow disabled:opacity-30 disabled:cursor-not-allowed transition-all"
-                aria-label="Défiler vers la droite"
-              >
-                <IconChevronRight size={18} />
-              </button>
-            </div>
-            <Link
-              href="/catalogue"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-amc-text hover:text-amc-yellow-dark transition-colors"
+          <div className="hidden md:flex gap-2">
+            <button
+              onClick={() => scroll("left")}
+              disabled={!canScrollLeft}
+              className="p-2.5 rounded-full border border-gray-200 text-amc-text hover:bg-amc-yellow hover:border-amc-yellow disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+              aria-label="Défiler vers la gauche"
             >
-              Voir tout le catalogue
-              <IconArrowRight size={14} />
-            </Link>
+              <IconChevronLeft size={18} />
+            </button>
+            <button
+              onClick={() => scroll("right")}
+              disabled={!canScrollRight}
+              className="p-2.5 rounded-full border border-gray-200 text-amc-text hover:bg-amc-yellow hover:border-amc-yellow disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+              aria-label="Défiler vers la droite"
+            >
+              <IconChevronRight size={18} />
+            </button>
           </div>
         </div>
 
@@ -84,9 +75,9 @@ export function FeaturedProducts() {
           ))}
         </div>
 
-        {/* Mobile CTA */}
-        <div className="mt-8 text-center md:hidden">
-          <Link href="/catalogue" className="btn-primary rounded-lg">
+        {/* CTA — tous écrans */}
+        <div className="mt-10 text-center">
+          <Link href="/catalogue" className="btn-primary rounded-lg inline-flex items-center gap-2 px-8 py-3 text-base font-bold">
             Voir tout le catalogue <IconArrowRight size={16} />
           </Link>
         </div>
