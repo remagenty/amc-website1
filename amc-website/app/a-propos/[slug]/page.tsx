@@ -51,7 +51,8 @@ const MEMBERS = {
   },
   "responsable-sav": {
     initials: "RS",
-    name: "À compléter",
+    name: "Romain",
+    photo: "/images/about/equipe-amc.png",
     role: "Responsable SAV",
     experience: "XX ans d'expérience",
     specialites: ["Certification SE+", "Wacker Neuson", "Magni", "Diagnostic"],
@@ -214,12 +215,21 @@ export default function TeamMemberPage({ params }: { params: { slug: string } })
           </nav>
 
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
-            {/* Avatar */}
+            {/* Avatar — photo si disponible, sinon initiales */}
             <ScrollReveal from="left" className="flex-shrink-0">
-              <div className="w-40 h-40 md:w-52 md:h-52 rounded-full bg-amc-yellow flex items-center justify-center shadow-xl">
-                <span className="text-4xl md:text-5xl font-black text-amc-text">
-                  {member.initials}
-                </span>
+              <div className="w-40 h-40 md:w-52 md:h-52 rounded-full bg-amc-yellow flex items-center justify-center shadow-xl overflow-hidden">
+                {"photo" in member && member.photo ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={member.photo as string}
+                    alt={`Photo ${member.name}`}
+                    className="w-full h-full object-cover object-top"
+                  />
+                ) : (
+                  <span className="text-4xl md:text-5xl font-black text-amc-text">
+                    {member.initials}
+                  </span>
+                )}
               </div>
             </ScrollReveal>
 

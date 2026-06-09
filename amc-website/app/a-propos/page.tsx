@@ -83,7 +83,8 @@ const TEAM = [
     slug: "responsable-sav",
     initials: "RS",
     role: "Responsable SAV",
-    name: "À compléter",
+    name: "Romain",
+    photo: "/images/about/equipe-amc.png",
     description:
       "Coordonne toutes les interventions techniques et assure la réactivité de notre service après-vente.",
   },
@@ -266,9 +267,18 @@ export default function AProposPage() {
                   href={`/a-propos/${member.slug}`}
                   className="group bg-white rounded-2xl shadow-card p-6 text-center flex flex-col items-center hover:shadow-lg hover:-translate-y-1 hover:border-amc-yellow border-2 border-transparent transition-all duration-300 cursor-pointer block"
                 >
-                  {/* Avatar initiales */}
-                  <div className="w-16 h-16 rounded-full bg-amc-yellow flex items-center justify-center mb-4 flex-shrink-0 group-hover:scale-105 transition-transform duration-300">
-                    <span className="text-lg font-black text-amc-text">{member.initials}</span>
+                  {/* Avatar — photo si disponible, sinon initiales */}
+                  <div className="w-16 h-16 rounded-full bg-amc-yellow flex items-center justify-center mb-4 flex-shrink-0 group-hover:scale-105 transition-transform duration-300 overflow-hidden">
+                    {"photo" in member && member.photo ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        src={member.photo as string}
+                        alt={`Photo ${member.name}`}
+                        className="w-full h-full object-cover object-top"
+                      />
+                    ) : (
+                      <span className="text-lg font-black text-amc-text">{member.initials}</span>
+                    )}
                   </div>
                   <p className="text-xs font-bold uppercase tracking-widest text-[#FFD700] mb-1">
                     {member.role}
