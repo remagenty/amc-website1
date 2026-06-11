@@ -48,8 +48,9 @@ const SORT_OPTIONS = [
 
 // ── Machine card ──────────────────────────────────────────────────────────────
 
-function MachineCard({ machine, categorySlug }: { machine: WnMachine; categorySlug: string }) {
+function MachineCard({ machine }: { machine: WnMachine }) {
   const [imgError, setImgError] = useState(false);
+  const categorySlug = getCategoryUrlSlug(machine);
   const href = `/materiels/${categorySlug}/${machine.slug}`;
   const isAvailable = machine.disponibilite === "disponible";
   const brandId = brandIdFromMarque(machine.marque ?? "");
@@ -62,24 +63,24 @@ function MachineCard({ machine, categorySlug }: { machine: WnMachine; categorySl
       href={href}
       className="group bg-white rounded-xl shadow-card hover:shadow-card-hover transition-all duration-200 overflow-hidden flex flex-col"
     >
-      <div className="relative aspect-[4/3] bg-white overflow-hidden">
+      <div className="relative aspect-[4/3] bg-gray-100 overflow-hidden">
         {imgSrc && !imgError ? (
           <Image
             src={imgSrc}
             alt={machine.nom_complet}
             fill
             loading="lazy"
-            className="object-contain p-2 group-hover:scale-105 transition-transform duration-300"
+            className="object-cover group-hover:scale-105 transition-transform duration-300"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             onError={() => setImgError(true)}
           />
         ) : (
-          <div className="w-full h-full flex flex-col items-center justify-center bg-white">
+          <div className="w-full h-full flex flex-col items-center justify-center bg-gray-50">
             <Image
               src={placeholderForBrand(brandId)}
               alt=""
               fill
-              className="object-contain p-2 opacity-60"
+              className="object-contain p-4 opacity-60"
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             />
           </div>
@@ -630,7 +631,7 @@ export function WnCategoryPage({
             ) : (
               <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
                 {filtered.map((machine) => (
-                  <MachineCard key={machine.id} machine={machine} categorySlug={categorySlug} />
+                  <MachineCard key={machine.id} machine={machine} />
                 ))}
               </div>
             )}
