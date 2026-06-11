@@ -14,7 +14,7 @@ import {
 import { SEBadge } from "@/components/ui/SEBadge";
 
 const TOP_BAR_ITEMS: { label: string; href?: string }[] = [
-  { label: "📞 04 26 78 43 90", href: "tel:+33426784390" },
+  { label: "📞 04 26 78 43 90" },
   { label: "📍 ZAC D'Orsan, Saint-Félix (74)", href: "/contact#nous-localiser" },
   { label: "⏰ Lun-Ven : 8h-18h | Sam : 9h-12h" },
 ];
@@ -293,18 +293,6 @@ export function Header() {
                 </button>
               </div>
 
-              {/* À propos */}
-              <Link
-                href="/a-propos"
-                className={`flex items-center px-4 text-sm font-semibold transition-colors ${
-                  pathname === "/a-propos"
-                    ? "text-amc-yellow"
-                    : "text-white hover:text-amc-yellow"
-                }`}
-              >
-                À propos
-              </Link>
-
               {/* Actualités & Expertise */}
               <Link
                 href="/actualites"
@@ -520,8 +508,8 @@ export function Header() {
                   { label: "Wacker Neuson", href: "/partenaires/wacker-neuson" },
                   { label: "Magni", href: "/partenaires/magni" },
                   { label: "Promove Demolition", href: "/partenaires/promove-demolition" },
+                  { label: "Nos services", href: "/services" },
                   { label: "SAV & Atelier", href: "/sav" },
-                  { label: "À propos", href: "/a-propos" },
                   { label: "Actualités & Expertise", href: "/actualites" },
                   { label: "Contact & Devis", href: "/contact" },
                 ].map((link) => (
