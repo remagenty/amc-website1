@@ -50,13 +50,12 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/magni/magni-rth-5-18.png",
+        "image_principale": "/images/machines/telehandler-rotatif/magni-rth-5-18/hero.jpg",
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/5-18/",
-      "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": "/images/machines/magni/magni-rth-5-18.png"
+      "date_scraping": "2026-05-26T00:00:00Z"
     },
     {
       "id": "magni-rth-5-21",
@@ -106,13 +105,12 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/magni/magni-rth-5-21.png",
+        "image_principale": "/images/machines/telehandler-rotatif/magni-rth-5-21/hero.png",
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/prodotto/5-21/",
-      "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": "/images/machines/magni/magni-rth-5-21.png"
+      "date_scraping": "2026-05-26T00:00:00Z"
     },
     {
       "id": "magni-rth-5-23",
@@ -162,13 +160,12 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/magni/magni-rth-5-23.png",
+        "image_principale": "/images/machines/telehandler-rotatif/magni-rth-5-23/hero.png",
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/5-23/",
-      "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": "/images/machines/magni/magni-rth-5-23.png"
+      "date_scraping": "2026-05-26T00:00:00Z"
     },
     {
       "id": "magni-rth-5-25",
@@ -218,13 +215,12 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/magni/magni-rth-5-25.png",
+        "image_principale": "/images/machines/telehandler-rotatif/magni-rth-5-25/hero.png",
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/rth-5-25/",
-      "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": "/images/machines/magni/magni-rth-5-25.png"
+      "date_scraping": "2026-05-26T00:00:00Z"
     },
     {
       "id": "magni-rth-6-26",
@@ -274,13 +270,12 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/magni/magni-rth-6-26.png",
+        "image_principale": "/images/machines/telehandler-rotatif/magni-rth-6-26/hero.png",
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/6-26/",
-      "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": "/images/machines/magni/magni-rth-6-26.png"
+      "date_scraping": "2026-05-26T00:00:00Z"
     },
     {
       "id": "magni-rth-6-30",
@@ -330,13 +325,122 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/magni/magni-rth-6-30.png",
+        "image_principale": "/images/machines/telehandler-rotatif/magni-rth-6-30/hero.png",
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/rth-6-30/",
-      "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": "/images/machines/magni/magni-rth-6-30.png"
+      "date_scraping": "2026-05-26T00:00:00Z"
+    },
+    {
+      "id": "magni-rth-6-35",
+      "marque": "Magni",
+      "modele": "RTH 6.35",
+      "reference": "RTH 6.35",
+      "nom_complet": "Téléhandler rotatif Magni RTH 6.35",
+      "slug": "magni-rth-6-35",
+      "categorie": "Téléhandler rotatif",
+      "sous_categorie": "Chariot télescopique rotatif",
+      "description_courte": "Téléhandler rotatif 6 tonnes à 35m, performances de grue pour les projets de construction les plus ambitieux.",
+      "description_longue": "Le Magni RTH 6.35 atteint 35 m de hauteur avec une capacité de 6 000 kg et une portée impressionnante de 29 m. Motorisé par un Mercedes OM 934 LA Stage IV de 170 kW, il dispose d'une puissance exceptionnelle pour les levages en grande hauteur. Sa rotation 360° et ses stabilisateurs automatiques lui permettent de s'adapter aux espaces restreints et aux configurations les plus complexes.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "sur_commande",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "charge_max_kg": 6000,
+        "hauteur_max_m": 35,
+        "portee_max_m": 29,
+        "masse_operationnelle_kg": 24000,
+        "puissance_kw": 170
+      },
+      "points_forts": [
+        "Performances de grue avec hauteur de 35 m",
+        "Portée de 29 m en configuration optimale",
+        "Moteur Mercedes OM 934 LA 170 kW",
+        "Rotation 360° avec stabilisateurs automatiques"
+      ],
+      "applications": [
+        "Construction de bâtiments en grande hauteur",
+        "Montage de structures complexes",
+        "Opérations de levage lourd",
+        "Chantiers d'infrastructure majeurs"
+      ],
+      "secteurs": [
+        "BTP",
+        "Construction",
+        "Événementiel",
+        "Industrie"
+      ],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": true,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/machines/telehandler-rotatif/magni-rth-6-35/hero.png",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.magnith.com/fr/produits/rth-6-35/",
+      "date_scraping": "2026-05-26T00:00:00Z"
+    },
+    {
+      "id": "magni-rth-7-26",
+      "marque": "Magni",
+      "modele": "RTH 7.26",
+      "reference": "RTH 7.26",
+      "nom_complet": "Téléhandler rotatif Magni RTH 7.26",
+      "slug": "magni-rth-7-26",
+      "categorie": "Téléhandler rotatif",
+      "sous_categorie": "Chariot télescopique rotatif",
+      "description_courte": "Téléhandler rotatif 7 tonnes à 26m, haute capacité pour les levages lourds avec rotation 360°.",
+      "description_longue": "Le Magni RTH 7.26 combine une capacité de 7 000 kg avec une hauteur de levage de 26 m et une portée de 21 m. Son moteur Volvo TAD 572 VE de 160 kW garantit une puissance fiable pour les travaux industriels intensifs. La rotation 360° et les stabilisateurs automatiques permettent de réaliser des levages précis même dans des environnements contraints. Conçu pour les professionnels exigeant le meilleur en termes de capacité et de flexibilité.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "sur_commande",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "charge_max_kg": 7000,
+        "hauteur_max_m": 26,
+        "portee_max_m": 21,
+        "masse_operationnelle_kg": 20700,
+        "puissance_kw": 160
+      },
+      "points_forts": [
+        "Capacité de 7 tonnes pour les charges exceptionnelles",
+        "Moteur Volvo TAD 572 VE 160 kW fiable",
+        "Rotation 360° pour un positionnement optimal",
+        "Stabilisateurs automatiques pour tous terrains"
+      ],
+      "applications": [
+        "Levage de préfabriqués très lourds",
+        "Industrie pétrolière et chimique",
+        "Montage de grandes structures",
+        "Chantiers navals et portuaires"
+      ],
+      "secteurs": [
+        "BTP",
+        "Construction",
+        "Événementiel",
+        "Industrie"
+      ],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": true,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/machines/telehandler-rotatif/magni-rth-7-26/hero.png",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.magnith.com/fr/produits/rth-7-26/",
+      "date_scraping": "2026-05-26T00:00:00Z"
     },
     {
       "id": "magni-rth-8-35",
@@ -386,13 +490,12 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/magni/magni-rth-8-35.png",
+        "image_principale": "/images/machines/telehandler-rotatif/magni-rth-8-35/hero.png",
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/rth-8-35/",
-      "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": "/images/machines/magni/magni-rth-8-35.png"
+      "date_scraping": "2026-05-26T00:00:00Z"
     },
     {
       "id": "magni-rth-8-39",
@@ -442,13 +545,12 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/magni/magni-rth-8-39.png",
+        "image_principale": "/images/machines/telehandler-rotatif/magni-rth-8-39/hero.png",
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/rth-8-39/",
-      "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": "/images/machines/magni/magni-rth-8-39.png"
+      "date_scraping": "2026-05-26T00:00:00Z"
     },
     {
       "id": "magni-rth-13-26",
@@ -498,13 +600,12 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/magni/magni-rth-13-26.png",
+        "image_principale": "/images/machines/telehandler-rotatif/magni-rth-13-26/hero.png",
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/rth-13-26/",
-      "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": "/images/machines/magni/magni-rth-13-26.png"
+      "date_scraping": "2026-05-26T00:00:00Z"
     },
     {
       "id": "magni-th-3-6",
@@ -552,13 +653,12 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/magni/magni-th-3-6.png",
+        "image_principale": "/images/machines/telehandler-fixe/magni-th-3-6/hero.jpg",
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/3-6/",
-      "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": "/images/machines/magni/magni-th-3-6.png"
+      "date_scraping": "2026-05-26T00:00:00Z"
     },
     {
       "id": "magni-th-4-5-15",
@@ -606,13 +706,12 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/magni/magni-th-4-5-15.png",
+        "image_principale": "/images/machines/telehandler-fixe/magni-th-4-5-15/hero.png",
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/th-4-5-15/",
-      "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": "/images/machines/magni/magni-th-4-5-15.png"
+      "date_scraping": "2026-05-26T00:00:00Z"
     },
     {
       "id": "magni-th-4-5-19",
@@ -660,13 +759,12 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/magni/magni-th-4-5-19.png",
+        "image_principale": "/images/machines/telehandler-fixe/magni-th-4-5-19/hero.png",
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/4-5-19-p/",
-      "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": "/images/machines/magni/magni-th-4-5-19.png"
+      "date_scraping": "2026-05-26T00:00:00Z"
     },
     {
       "id": "magni-th-5-5-19",
@@ -716,13 +814,12 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/magni/magni-th-5-5-19.png",
+        "image_principale": "/images/machines/telehandler-fixe/magni-th-5-5-19/hero.png",
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/th-5-5-19/",
-      "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": "/images/machines/magni/magni-th-5-5-19.png"
+      "date_scraping": "2026-05-26T00:00:00Z"
     },
     {
       "id": "magni-th-5-5-24",
@@ -770,13 +867,65 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/magni/magni-th-5-5-24.png",
+        "image_principale": "/images/machines/telehandler-fixe/magni-th-5-5-24/hero.png",
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/th-5-5-24/",
-      "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": "/images/machines/magni/magni-th-5-5-24.png"
+      "date_scraping": "2026-05-26T00:00:00Z"
+    },
+    {
+      "id": "magni-th-6-10",
+      "marque": "Magni",
+      "modele": "TH 6.10",
+      "reference": "TH 6.10",
+      "nom_complet": "Téléhandler fixe Magni TH 6.10",
+      "slug": "magni-th-6-10",
+      "categorie": "Téléhandler fixe",
+      "sous_categorie": "Chariot télescopique fixe",
+      "description_courte": "Téléhandler fixe 6 tonnes à 10m, haute capacité de levage pour les chantiers et entrepôts industriels.",
+      "description_longue": "Le Magni TH 6.10 est conçu pour la manutention de charges très lourdes allant jusqu'à 6 000 kg à 10 m de hauteur. Avec un poids opérationnel de 12 000 kg et un moteur Deutz Stage V de 74 kW, il offre une excellente stabilité pour les opérations de levage intensif. Sa conception robuste et sa capacité de charge élevée en font un outil de choix pour les entrepôts industriels, les chantiers de préfabricants et les opérations portuaires.",
+      "prix_ht": null,
+      "devise": "EUR",
+      "etat": "neuf",
+      "disponibilite": "sur_commande",
+      "featured": false,
+      "caracteristiques_techniques": {
+        "charge_max_kg": 6000,
+        "hauteur_max_m": 10,
+        "masse_operationnelle_kg": 12000,
+        "puissance_kw": 74
+      },
+      "points_forts": [
+        "Capacité maximale de 6 tonnes pour charges lourdes",
+        "Construction robuste pour usage intensif",
+        "Moteur Deutz Stage V économique et fiable",
+        "Stabilité optimale pour les opérations de manutention"
+      ],
+      "applications": [
+        "Manutention en entrepôt industriel",
+        "Chargement et déchargement de semi-remorques",
+        "Déplacement de préfabriqués béton",
+        "Opérations portuaires et logistiques"
+      ],
+      "secteurs": [
+        "BTP",
+        "Logistique",
+        "Industrie"
+      ],
+      "services": {
+        "garantie_constructeur": true,
+        "sav_certifie_se_plus": true,
+        "pieces_detachees_origine": true,
+        "financement_disponible": true
+      },
+      "medias": {
+        "image_principale": "/images/machines/telehandler-fixe/magni-th-6-10/hero.png",
+        "images": [],
+        "video": null
+      },
+      "url_wacker_neuson": "https://www.magnith.com/fr/produits/th-6-10/",
+      "date_scraping": "2026-05-26T00:00:00Z"
     },
     {
       "id": "magni-th-6-20",
@@ -824,13 +973,12 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/magni/magni-th-6-20.png",
+        "image_principale": "/images/machines/telehandler-fixe/magni-th-6-20/hero.png",
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/th-6-20/",
-      "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": "/images/machines/magni/magni-th-6-20.png"
+      "date_scraping": "2026-05-26T00:00:00Z"
     },
     {
       "id": "magni-tha-3-6",
@@ -879,13 +1027,12 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/magni/magni-tha-3-6.png",
+        "image_principale": "/images/machines/telehandler-agricole/magni-tha-3-6/hero.jpg",
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/tha-3-6/",
-      "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": "/images/machines/magni/magni-tha-3-6.png"
+      "date_scraping": "2026-05-26T00:00:00Z"
     },
     {
       "id": "magni-tha-4-5-8",
@@ -934,13 +1081,12 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/magni/magni-tha-4-5-8.png",
+        "image_principale": "/images/machines/telehandler-agricole/magni-tha-4-5-8/hero.png",
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/tha-4-5-8/",
-      "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": "/images/machines/magni/magni-tha-4-5-8.png"
+      "date_scraping": "2026-05-26T00:00:00Z"
     },
     {
       "id": "magni-tha-4-5-10",
@@ -989,13 +1135,12 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/magni/magni-tha-4-5-10.png",
+        "image_principale": "/images/machines/telehandler-agricole/magni-tha-4-5-10/hero.png",
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/tha-4-5-10/",
-      "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": "/images/machines/magni/magni-tha-4-5-10.png"
+      "date_scraping": "2026-05-26T00:00:00Z"
     },
     {
       "id": "magni-tha-5-8",
@@ -1044,13 +1189,12 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/magni/magni-tha-5-8.png",
+        "image_principale": "/images/machines/telehandler-agricole/magni-tha-5-8/hero.png",
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/tha-5-8/",
-      "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": "/images/machines/magni/magni-tha-5-8.png"
+      "date_scraping": "2026-05-26T00:00:00Z"
     },
     {
       "id": "magni-tha-5-10",
@@ -1099,13 +1243,12 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/machines/magni/magni-tha-5-10.png",
+        "image_principale": "/images/machines/telehandler-agricole/magni-tha-5-10/hero.png",
         "images": [],
         "video": null
       },
       "url_wacker_neuson": "https://www.magnith.com/fr/produits/tha-5-10/",
-      "date_scraping": "2026-05-26T00:00:00Z",
-      "image_principale": "/images/machines/magni/magni-tha-5-10.png"
+      "date_scraping": "2026-05-26T00:00:00Z"
     }
   ]
 }
