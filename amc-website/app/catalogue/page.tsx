@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
 import { CataloguePage } from "./CataloguePage";
 
 export const metadata: Metadata = {
@@ -13,10 +12,16 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Page() {
+export default function Page({
+  searchParams,
+}: {
+  searchParams: { categorie?: string; marque?: string; etat?: string };
+}) {
   return (
-    <Suspense fallback={<div className="min-h-screen bg-amc-cream flex items-center justify-center text-amc-text-secondary">Chargement du catalogue...</div>}>
-      <CataloguePage />
-    </Suspense>
+    <CataloguePage
+      initialCategorie={searchParams.categorie ?? ""}
+      initialMarque={searchParams.marque ?? ""}
+      initialEtat={searchParams.etat ?? ""}
+    />
   );
 }

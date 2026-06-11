@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import { useSearchParams } from "next/navigation";
 import { getMachines, getCatalogueCategories, getCatalogueBrands } from "@/lib/data";
 import { ProductCard } from "@/components/ui/ProductCard";
 import { FilterSidebar } from "@/components/catalogue/FilterSidebar";
@@ -39,18 +38,24 @@ const BRAND_DISPLAY: Record<string, string> = {
   "promove-demolition": "Promove Demolition",
 };
 
-export function CataloguePage() {
-  const searchParams = useSearchParams();
-
+export function CataloguePage({
+  initialCategorie = "",
+  initialMarque = "",
+  initialEtat = "",
+}: {
+  initialCategorie?: string;
+  initialMarque?: string;
+  initialEtat?: string;
+}) {
   const [filters, setFilters] = useState({
-    categories: searchParams.get("categorie") ? [searchParams.get("categorie") as string] : [],
-    brands: searchParams.get("marque") ? [searchParams.get("marque") as string] : [],
-    status: searchParams.get("etat") ?? "all",
+    categories: initialCategorie ? [initialCategorie] : [],
+    brands: initialMarque ? [initialMarque] : [],
+    status: initialEtat || "all",
     availability: "all" as string,
     priceMin: undefined as number | undefined,
     priceMax: undefined as number | undefined,
   });
-  const [search, setSearch] = useState(searchParams.get("q") ?? "");
+  const [search, setSearch] = useState("");
   const [sort, setSort] = useState("relevance");
   const [page, setPage] = useState(1);
   const [mobileFiltres, setMobileFiltres] = useState(false);

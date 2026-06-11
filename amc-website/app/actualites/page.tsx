@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
 import { ActualitesFeed } from "./ActualitesFeed";
 
 export const metadata: Metadata = {
@@ -8,7 +7,11 @@ export const metadata: Metadata = {
     "Retrouvez les dernières actualités, conseils d'experts et guides pratiques d'AMC, votre partenaire matériel de chantier en Rhône-Alpes.",
 };
 
-export default function ActualitesPage() {
+export default function ActualitesPage({
+  searchParams,
+}: {
+  searchParams: { filter?: string };
+}) {
   return (
     <div className="min-h-screen bg-amc-cream">
 
@@ -28,9 +31,7 @@ export default function ActualitesPage() {
       </section>
 
       {/* Feed filtrable (client component) */}
-      <Suspense fallback={<div className="container-amc py-16 text-center text-amc-text-secondary text-sm">Chargement…</div>}>
-        <ActualitesFeed />
-      </Suspense>
+      <ActualitesFeed initialFilter={searchParams.filter ?? ""} />
 
       {/* Newsletter CTA */}
       <section className="bg-white border-t border-gray-100 py-14">

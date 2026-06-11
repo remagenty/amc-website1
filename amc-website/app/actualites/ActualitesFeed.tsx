@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { ARTICLES } from "./articles-data";
 
@@ -19,10 +18,8 @@ const CATEGORY_STYLES: Record<string, { bg: string; color: string }> = {
   Actualités: { bg: "#fef3c7", color: "#92400e" },
 };
 
-export function ActualitesFeed() {
-  const searchParams = useSearchParams();
-  const param = searchParams.get("filter") ?? "";
-  const initial = FILTER_FROM_PARAM[param.toLowerCase()] ?? "Tous";
+export function ActualitesFeed({ initialFilter = "" }: { initialFilter?: string }) {
+  const initial = FILTER_FROM_PARAM[initialFilter.toLowerCase()] ?? "Tous";
   const [activeFilter, setActiveFilter] = useState(initial);
 
   const filtered =
