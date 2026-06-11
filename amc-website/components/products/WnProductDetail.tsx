@@ -97,9 +97,9 @@ function AccordionSection({
 
 // ── Similar machine card ──────────────────────────────────────────────────────
 
-function SimilarCard({ machine, categorySlug }: { machine: WnMachine; categorySlug: string }) {
+function SimilarCard({ machine }: { machine: WnMachine }) {
   const [imgError, setImgError] = useState(false);
-  const href = `/materiels/${categorySlug}/${machine.slug}`;
+  const href = `/materiels/${getCategoryUrlSlug(machine)}/${machine.slug}`;
   const rawSrc = machine.medias.image_principale_local ?? machine.medias.image_principale;
   const imgSrc = rawSrc ? encodeURI(rawSrc) : null;
 
@@ -108,14 +108,14 @@ function SimilarCard({ machine, categorySlug }: { machine: WnMachine; categorySl
       href={href}
       className="group bg-white rounded-xl shadow-card hover:shadow-card-hover transition-all overflow-hidden"
     >
-      <div className="relative aspect-[4/3] bg-white">
+      <div className="relative aspect-[4/3] bg-gray-100">
         {imgSrc && !imgError ? (
           <Image
             src={imgSrc}
             alt={machine.nom_complet}
             fill
             loading="lazy"
-            className="object-contain p-2 group-hover:scale-105 transition-transform duration-300"
+            className="object-cover group-hover:scale-105 transition-transform duration-300"
             sizes="(max-width: 640px) 100vw, 25vw"
             onError={() => setImgError(true)}
           />
@@ -124,7 +124,7 @@ function SimilarCard({ machine, categorySlug }: { machine: WnMachine; categorySl
             src="/images/products/placeholder-wn.jpg"
             alt=""
             fill
-            className="object-contain p-2 opacity-40"
+            className="object-contain p-4 opacity-40"
             sizes="25vw"
           />
         )}
@@ -204,12 +204,12 @@ export function WnProductDetail({ machine, similar, categorySlug, categoryLabel 
           {/* Left — gallery (2/5) */}
           <div className="lg:col-span-2">
             <div className="bg-white rounded-2xl shadow-card overflow-hidden">
-              <div className="relative aspect-[4/3] bg-white">
+              <div className="relative aspect-[4/3] bg-gray-100">
                 <Image
                   src={displayImages[activeImage]}
                   alt={`${machine.nom_complet} — vue ${activeImage + 1}`}
                   fill
-                  className="object-contain p-3"
+                  className="object-cover"
                   priority
                   sizes="(max-width: 1024px) 100vw, 40vw"
                   onError={(e) => {
@@ -255,7 +255,7 @@ export function WnProductDetail({ machine, similar, categorySlug, categoryLabel 
                         src={img}
                         alt=""
                         fill
-                        className="object-contain p-1"
+                        className="object-cover"
                         sizes="64px"
                         onError={(e) => {
                           (e.target as HTMLImageElement).src = "/images/products/placeholder-wn.jpg";
@@ -563,7 +563,7 @@ export function WnProductDetail({ machine, similar, categorySlug, categoryLabel 
             </div>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
               {similar.map((m) => (
-                <SimilarCard key={m.id} machine={m} categorySlug={categorySlug} />
+                <SimilarCard key={m.id} machine={m} />
               ))}
             </div>
           </div>
