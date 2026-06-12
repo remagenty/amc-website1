@@ -293,6 +293,14 @@ export function Header() {
                 </button>
               </div>
 
+              {/* À propos */}
+              <Link
+                href="/a-propos"
+                className="flex items-center px-4 text-sm font-semibold text-white hover:text-amc-yellow transition-colors"
+              >
+                À propos
+              </Link>
+
               {/* Actualités & Expertise */}
               <Link
                 href="/actualites"
