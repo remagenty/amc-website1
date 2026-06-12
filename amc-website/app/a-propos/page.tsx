@@ -73,15 +73,15 @@ const HISTOIRE_BLOCKS = [
 const TEAM = [
   {
     slug: "chef-agence",
-    initials: "CA",
+    initials: "TH",
     role: "Chef d'agence",
-    name: "À compléter",
+    name: "Thomas",
     description:
       "Pilote l'agence AMC au quotidien et garantit la qualité de service auprès de nos clients professionnels.",
   },
   {
     slug: "responsable-sav",
-    initials: "RS",
+    initials: "RO",
     role: "Responsable SAV",
     name: "Romain",
     photo: "/images/about/equipe-amc.png",
@@ -90,27 +90,27 @@ const TEAM = [
   },
   {
     slug: "commercial-1",
-    initials: "C1",
+    initials: "JP",
     role: "Commercial",
-    name: "À compléter",
+    name: "Jean-Pierre",
     description:
       "Spécialiste des matériels Wacker Neuson et Magni, il vous accompagne dans le choix de vos équipements.",
   },
   {
     slug: "commercial-2",
-    initials: "C2",
+    initials: "VA",
     role: "Commercial",
-    name: "À compléter",
+    name: "Valentin",
     description:
-      "Expert en matériels de démolition et d'attachements, il trouve la solution adaptée à chaque chantier.",
+      "Expert en relation client et vente de matériels de chantier, il trouve la solution adaptée à chaque projet.",
   },
   {
     slug: "commercial-3",
-    initials: "C3",
-    role: "Commercial",
-    name: "À compléter",
+    initials: "YA",
+    role: "Responsable des ventes",
+    name: "Yannick",
     description:
-      "Dédié au suivi client et aux projets spéciaux, il est votre interlocuteur pour les demandes sur mesure.",
+      "Pilote l'activité commerciale d'AMC et coordonne l'équipe de vente pour accompagner les projets les plus ambitieux.",
   },
 ];
 

@@ -21,8 +21,8 @@ import {
 
 const MEMBERS = {
   "chef-agence": {
-    initials: "CA",
-    name: "À compléter",
+    initials: "TH",
+    name: "Thomas",
     role: "Chef d'agence",
     experience: "XX ans d'expérience",
     specialites: ["Direction d'agence", "Wacker Neuson", "Magni", "Promove"],
@@ -50,7 +50,7 @@ const MEMBERS = {
     image: "/images/photo-wacker-catalogue.jpg",
   },
   "responsable-sav": {
-    initials: "RS",
+    initials: "RO",
     name: "Romain",
     photo: "/images/about/equipe-amc.png",
     role: "Responsable SAV",
@@ -80,8 +80,8 @@ const MEMBERS = {
     image: "/images/Slide-3.jpg",
   },
   "commercial-1": {
-    initials: "C1",
-    name: "À compléter",
+    initials: "JP",
+    name: "Jean-Pierre",
     role: "Commercial",
     experience: "XX ans d'expérience",
     specialites: ["Téléhandlers Magni", "Mini-pelles WN", "Dumpers", "Conseil"],
@@ -109,8 +109,8 @@ const MEMBERS = {
     image: "/images/Magni-catalogue.avif",
   },
   "commercial-2": {
-    initials: "C2",
-    name: "À compléter",
+    initials: "VA",
+    name: "Valentin",
     role: "Commercial",
     experience: "XX ans d'expérience",
     specialites: ["Promove Demolition", "Brise-roches", "Pinces", "Cisailles"],
@@ -138,9 +138,9 @@ const MEMBERS = {
     image: "/images/Slide-1.jpg",
   },
   "commercial-3": {
-    initials: "C3",
-    name: "À compléter",
-    role: "Commercial",
+    initials: "YA",
+    name: "Yannick",
+    role: "Responsable des ventes",
     experience: "XX ans d'expérience",
     specialites: ["Suivi client", "Projets spéciaux", "Occasion", "Financement"],
     roleTitle: "Suivi client & projets sur mesure",
