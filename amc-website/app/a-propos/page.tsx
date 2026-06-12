@@ -137,6 +137,19 @@ const VALEURS = [
   },
 ];
 
+// ─── Placeholder TODO ─────────────────────────────────────────────────────────
+
+function Todo({ label }: { label: string }) {
+  return (
+    <span className="inline-flex items-center gap-1.5 bg-amber-50 border border-dashed border-amber-400 text-amber-800 text-xs font-semibold px-2.5 py-1 rounded-lg">
+      <span className="bg-amber-400 text-white text-[9px] font-black px-1 py-0.5 rounded uppercase tracking-wide">
+        TODO
+      </span>
+      {label}
+    </span>
+  );
+}
+
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
 export default function AProposPage() {
@@ -159,7 +172,11 @@ export default function AProposPage() {
             Notre histoire
           </h1>
           <p className="text-white/75 text-lg max-w-xl mb-8">
-            Depuis notre création, AMC s&apos;est imposé comme le partenaire de confiance
+            {/* TODO: remplacer [Fondée en XXXX] par l'année réelle de création */}
+            <span className="inline-flex items-center gap-1.5 bg-amber-400/90 text-amber-900 text-xs font-black px-2 py-0.5 rounded mr-1.5 align-middle">
+              TODO
+            </span>
+            Fondée en [XXXX], AMC s&apos;est imposé comme le partenaire de confiance
             des professionnels du BTP en région Rhône-Alpes. Distributeur officiel
             Wacker Neuson, Magni et Promove Demolition, nous mettons notre expertise
             au service de vos chantiers.
@@ -172,6 +189,65 @@ export default function AProposPage() {
               <IconPhone size={16} /> Nous appeler
             </a>
           </div>
+        </div>
+      </section>
+
+      {/* ── EN CHIFFRES ── */}
+      <section className="bg-amc-gray py-16">
+        <div className="container-amc">
+          <ScrollReveal from="bottom">
+            <div className="text-center mb-10">
+              <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-amc-yellow mb-3">
+                <IconBadgeCheck size={14} /> AMC en chiffres
+              </span>
+              <h2 className="text-2xl md:text-3xl font-black text-white">
+                Chiffres clés
+              </h2>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-12">
+            {[
+              { label: "Année de création", placeholder: "XXXX" },
+              { label: "Techniciens certifiés", placeholder: "XX" },
+              { label: "Surface atelier", placeholder: "XXX m²" },
+              { label: "Zone d'intervention", placeholder: "XXX 000 km²" },
+            ].map((stat) => (
+              <ScrollReveal key={stat.label} from="bottom">
+                <div className="bg-white/5 border border-dashed border-amber-400/60 rounded-2xl p-6 text-center">
+                  <p className="text-2xl md:text-3xl font-black text-amber-400 mb-1">
+                    {stat.placeholder}
+                  </p>
+                  <p className="text-white/60 text-xs uppercase tracking-wider">{stat.label}</p>
+                  <Todo label="à remplir" />
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+
+          {/* Certifications */}
+          <ScrollReveal from="bottom">
+            <div className="border-t border-white/10 pt-10">
+              <p className="text-center text-xs font-bold uppercase tracking-widest text-amc-yellow mb-6">
+                Nos certifications
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                {[
+                  { label: "Distributeur officiel Wacker Neuson", color: "bg-red-900/40 border-red-400/40 text-red-100" },
+                  { label: "Distributeur officiel Magni", color: "bg-blue-900/40 border-blue-400/40 text-blue-100" },
+                  { label: "Atelier certifié SE+", color: "bg-green-900/40 border-green-400/40 text-green-100" },
+                ].map((cert) => (
+                  <div
+                    key={cert.label}
+                    className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full border text-sm font-semibold ${cert.color}`}
+                  >
+                    <IconCheck size={14} />
+                    {cert.label}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -326,6 +402,77 @@ export default function AProposPage() {
                 </ScrollReveal>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* ── ZONE D'INTERVENTION ── */}
+      <section className="bg-amc-cream py-20">
+        <div className="container-amc">
+          <ScrollReveal from="bottom">
+            <div className="text-center mb-12">
+              <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-amc-yellow mb-3">
+                <IconMapPin size={14} /> Couverture géographique
+              </span>
+              <h2 className="text-3xl md:text-4xl font-black text-amc-text mb-3">
+                Notre zone d&apos;intervention
+              </h2>
+              <p className="text-gray-500 max-w-lg mx-auto text-sm leading-relaxed">
+                Basés à Saint-Félix (74), nous intervenons sur l&apos;ensemble de la région
+                Rhône-Alpes et ses départements limitrophes.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div className="max-w-3xl mx-auto">
+            <div className="bg-white rounded-2xl shadow-card p-8">
+              <div className="flex flex-col md:flex-row gap-8">
+                {/* Région principale */}
+                <div className="flex-1">
+                  <h3 className="text-sm font-bold uppercase tracking-widest text-amc-yellow mb-4">
+                    Région principale
+                  </h3>
+                  <div className="flex items-center gap-3 p-4 bg-amc-yellow/10 rounded-xl border border-amc-yellow/30 mb-3">
+                    <IconMapPin size={20} className="text-amc-yellow-dark flex-shrink-0" />
+                    <div>
+                      <p className="font-bold text-amc-text">Rhône-Alpes (Auvergne-Rhône-Alpes)</p>
+                      <p className="text-xs text-amc-text-secondary">Région de référence — livraison et interventions</p>
+                    </div>
+                  </div>
+                  <div className="flex flex-wrap gap-2 mt-4">
+                    {[
+                      "Ain (01)", "Isère (38)", "Loire (42)",
+                      "Rhône (69)", "Savoie (73)", "Haute-Savoie (74)",
+                      "Ardèche (07)", "Drôme (26)",
+                    ].map((dept) => (
+                      <span
+                        key={dept}
+                        className="px-2.5 py-1 bg-gray-50 border border-gray-200 text-amc-text text-xs font-medium rounded-lg"
+                      >
+                        {dept}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Hors zone */}
+                <div className="md:w-56 flex-shrink-0">
+                  <h3 className="text-sm font-bold uppercase tracking-widest text-amc-yellow mb-4">
+                    Hors zone
+                  </h3>
+                  <p className="text-sm text-gray-500 leading-relaxed">
+                    Les livraisons et interventions en dehors de la région Rhône-Alpes sont
+                    étudiées au cas par cas. Contactez-nous pour un devis de transport.
+                  </p>
+                  <div className="mt-4 p-3 bg-amber-50 border border-dashed border-amber-300 rounded-xl">
+                    <Todo label="ajouter les km² exacts" />
+                    <p className="text-xs text-amber-700 mt-1.5">
+                      Renseigner la surface exacte de la zone couverte.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

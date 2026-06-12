@@ -54,7 +54,7 @@ const MEMBERS = {
     name: "Romain",
     photo: "/images/about/equipe-amc.png",
     role: "Responsable SAV",
-    experience: "XX ans d'expérience",
+    experience: "TODO: XX ans d'expérience",
     specialites: ["Certification SE+", "Wacker Neuson", "Magni", "Diagnostic"],
     roleTitle: "Expert technique et réactivité",
     roleText:
@@ -241,7 +241,16 @@ export default function TeamMemberPage({ params }: { params: { slug: string } })
               <h1 className="text-3xl md:text-4xl font-black text-amc-text mb-2">
                 {displayName}
               </h1>
-              <p className="text-amc-text-secondary text-sm mb-5">{member.experience}</p>
+              {member.experience.startsWith("TODO:") ? (
+                <div className="inline-flex items-center gap-1.5 bg-amber-50 border border-dashed border-amber-400 text-amber-800 text-xs font-semibold px-2.5 py-1.5 rounded-lg mb-5">
+                  <span className="bg-amber-400 text-white text-[9px] font-black px-1 py-0.5 rounded uppercase tracking-wide">
+                    TODO
+                  </span>
+                  {member.experience.replace("TODO: ", "")}
+                </div>
+              ) : (
+                <p className="text-amc-text-secondary text-sm mb-5">{member.experience}</p>
+              )}
 
               {/* Badges spécialités */}
               <div className="flex flex-wrap gap-2 mb-8">
