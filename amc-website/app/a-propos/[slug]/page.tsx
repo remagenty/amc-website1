@@ -185,9 +185,8 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const member = MEMBERS[params.slug as MemberSlug];
   if (!member) return {};
-  const displayName = member.name === "À compléter" ? member.role : member.name;
   return {
-    title: `${displayName} — ${member.role} | AMC Alpes Matériel Compact`,
+    title: `${member.name} — ${member.role} | AMC Alpes Matériel Compact`,
     description: `${member.roleText.slice(0, 140)}…`,
   };
 }
@@ -198,7 +197,7 @@ export default function TeamMemberPage({ params }: { params: { slug: string } })
   const member = MEMBERS[params.slug as MemberSlug];
   if (!member) notFound();
 
-  const displayName = member.name === "À compléter" ? member.role : member.name;
+  const displayName = member.name;
 
   return (
     <>
@@ -367,7 +366,7 @@ export default function TeamMemberPage({ params }: { params: { slug: string } })
                   <IconPhone size={14} /> Contact direct
                 </span>
                 <h2 className="text-3xl font-black text-amc-text mb-3">
-                  Contacter {displayName === member.role ? "ce conseiller" : displayName}
+                  Contacter {displayName}
                 </h2>
                 <p className="text-gray-500 text-sm">
                   Votre message lui sera transmis directement. Réponse sous 24h ouvrées.
