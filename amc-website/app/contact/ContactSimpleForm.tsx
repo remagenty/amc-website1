@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { IconArrowRight, IconCheck } from "@/components/ui/Icons";
+import { IconArrowRight } from "@/components/ui/Icons";
+import { FormConfirmation } from "@/components/ui/FormConfirmation";
 
 type FormState = {
   firstName: string;
@@ -25,7 +26,7 @@ export function ContactSimpleForm() {
   const [form, setForm] = useState<FormState>(INITIAL);
   const [errors, setErrors] = useState<Partial<Record<keyof FormState, string>>>({});
   const [loading, setLoading] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<"success" | "error" | null>(null);
 
   const set = (key: keyof FormState, value: string | boolean) => {
     setForm((prev) => ({ ...prev, [key]: value }));
@@ -50,29 +51,19 @@ export function ContactSimpleForm() {
     setLoading(true);
     await new Promise((r) => setTimeout(r, 1200));
     setLoading(false);
-    setSubmitted(true);
+    setStatus("success");
   };
 
   const inp = (key: keyof FormState) =>
     `input-base ${errors[key] ? "border-red-400 ring-1 ring-red-400" : ""}`;
 
-  if (submitted) {
+  if (status !== null) {
     return (
-      <div className="py-12 text-center">
-        <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-          <IconCheck size={26} className="text-green-600" />
-        </div>
-        <h3 className="text-lg font-bold text-amc-text mb-2">Message envoyé !</h3>
-        <p className="text-sm text-amc-text-secondary max-w-xs mx-auto">
-          Merci, notre équipe vous répondra sous 24h ouvrées.
-        </p>
-        <button
-          onClick={() => { setForm(INITIAL); setSubmitted(false); }}
-          className="mt-5 btn-secondary rounded-lg text-sm"
-        >
-          Nouveau message
-        </button>
-      </div>
+      <FormConfirmation
+        status={status}
+        name={`${form.firstName} ${form.lastName}`.trim()}
+        onReset={() => { setStatus(null); setForm(INITIAL); }}
+      />
     );
   }
 

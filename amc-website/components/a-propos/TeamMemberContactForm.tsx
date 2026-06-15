@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { IconCheck, IconArrowRight } from "@/components/ui/Icons";
+import { IconArrowRight } from "@/components/ui/Icons";
+import { FormConfirmation } from "@/components/ui/FormConfirmation";
 
 const OBJECT_TYPES = [
   { value: "devis", label: "Demande de devis" },
@@ -25,7 +26,7 @@ export function TeamMemberContactForm({ memberName, memberRole }: Props) {
     message: "",
     consent: false,
   });
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<"success" | "error" | null>(null);
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
 
@@ -46,7 +47,7 @@ export function TeamMemberContactForm({ memberName, memberRole }: Props) {
     setLoading(true);
     await new Promise((r) => setTimeout(r, 1200));
     setLoading(false);
-    setSubmitted(true);
+    setStatus("success");
   };
 
   const set = (key: string, value: string | boolean) => {
@@ -54,24 +55,13 @@ export function TeamMemberContactForm({ memberName, memberRole }: Props) {
     if (errors[key]) setErrors((prev) => ({ ...prev, [key]: "" }));
   };
 
-  if (submitted) {
+  if (status !== null) {
     return (
-      <div className="py-12 text-center">
-        <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-          <IconCheck size={28} className="text-green-600" />
-        </div>
-        <h3 className="text-xl font-bold text-amc-text mb-2">Message envoyé !</h3>
-        <p className="text-amc-text-secondary text-sm max-w-md mx-auto">
-          Votre message a bien été transmis à {memberName === "À compléter" ? memberRole : memberName}.
-          Nous vous répondrons dans les 24h ouvrées.
-        </p>
-        <button
-          onClick={() => { setSubmitted(false); setForm({ nom: "", email: "", telephone: "", societe: "", objet: "devis", message: "", consent: false }); }}
-          className="mt-6 btn-secondary rounded-lg text-sm"
-        >
-          Envoyer un autre message
-        </button>
-      </div>
+      <FormConfirmation
+        status={status}
+        name={form.nom}
+        onReset={() => { setStatus(null); setForm({ nom: "", email: "", telephone: "", societe: "", objet: "devis", message: "", consent: false }); }}
+      />
     );
   }
 

@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import { useSearchParams } from "next/navigation";
-import { IconCheck, IconArrowRight } from "@/components/ui/Icons";
+import { IconArrowRight } from "@/components/ui/Icons";
+import { FormConfirmation } from "@/components/ui/FormConfirmation";
 
 const REQUEST_TYPES = [
   { value: "devis", label: "Demande de devis" },
@@ -30,7 +31,7 @@ export function ContactForm() {
     message: "",
     consent: false,
   });
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<"success" | "error" | null>(null);
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
 
@@ -55,7 +56,7 @@ export function ContactForm() {
     setLoading(true);
     await new Promise((r) => setTimeout(r, 1200));
     setLoading(false);
-    setSubmitted(true);
+    setStatus("success");
   };
 
   const handleChange = (key: string, value: string | boolean) => {
@@ -63,26 +64,13 @@ export function ContactForm() {
     if (errors[key]) setErrors((prev) => ({ ...prev, [key]: "" }));
   };
 
-  if (submitted) {
+  if (status !== null) {
     return (
-      <div className="py-12 text-center">
-        <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-          <IconCheck size={28} className="text-green-600" />
-        </div>
-        <h3 className="text-xl font-bold text-amc-text mb-2">
-          Message envoyé avec succès !
-        </h3>
-        <p className="text-amc-text-secondary text-sm max-w-md mx-auto">
-          Merci pour votre demande. Notre équipe vous contactera dans les plus brefs délais,
-          généralement sous 24h ouvrées.
-        </p>
-        <button
-          onClick={() => { setSubmitted(false); setForm({ type: "devis", firstName: "", lastName: "", company: "", email: "", phone: "", materiel: "", message: "", consent: false }); }}
-          className="mt-6 btn-secondary rounded-lg text-sm"
-        >
-          Envoyer une nouvelle demande
-        </button>
-      </div>
+      <FormConfirmation
+        status={status}
+        name={`${form.firstName} ${form.lastName}`.trim()}
+        onReset={() => { setStatus(null); setForm({ type: defaultType, firstName: "", lastName: "", company: "", email: "", phone: "", materiel: defaultProduit, message: "", consent: false }); }}
+      />
     );
   }
 
