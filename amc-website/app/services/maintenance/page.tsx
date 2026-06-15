@@ -240,17 +240,17 @@ export default function MaintenancePage() {
       </section>
 
       {/* ── CONTRATS ── */}
-      <section className="bg-amc-gray py-20">
+      <section className="bg-amc-cream py-20">
         <div className="container-amc">
           <ScrollReveal from="bottom">
             <div className="text-center mb-12">
               <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-amc-yellow mb-3">
                 <IconShield size={14} /> Sur mesure
               </span>
-              <h2 className="text-3xl md:text-4xl font-black text-white mb-3">
+              <h2 className="text-3xl md:text-4xl font-black text-amc-text mb-3">
                 Nos contrats d&apos;entretien
               </h2>
-              <p className="text-white/70 max-w-lg mx-auto text-sm leading-relaxed">
+              <p className="text-gray-500 max-w-lg mx-auto text-sm leading-relaxed">
                 Un contrat adapté à votre flotte, votre activité et vos horaires de chantier.
               </p>
             </div>
@@ -272,12 +272,12 @@ export default function MaintenancePage() {
               },
             ].map((item) => (
               <ScrollReveal key={item.titre} from="bottom">
-                <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
+                <div className="bg-white rounded-2xl shadow-card p-6">
                   <div className="w-8 h-8 rounded-lg bg-amc-yellow flex items-center justify-center mb-4">
                     <IconCheck size={14} className="text-amc-text" />
                   </div>
-                  <h3 className="font-bold text-white mb-2 text-sm">{item.titre}</h3>
-                  <p className="text-white/60 text-xs leading-relaxed">{item.texte}</p>
+                  <h3 className="font-bold text-amc-text mb-2 text-sm">{item.titre}</h3>
+                  <p className="text-gray-500 text-xs leading-relaxed">{item.texte}</p>
                 </div>
               </ScrollReveal>
             ))}
@@ -288,7 +288,7 @@ export default function MaintenancePage() {
               <Link href="/devis?type=maintenance" className="btn-primary">
                 Demander un contrat d&apos;entretien <IconArrowRight size={16} />
               </Link>
-              <p className="text-white/50 text-xs mt-4">
+              <p className="text-gray-400 text-xs mt-4">
                 Devis gratuit — Réponse sous 24h ouvrées
               </p>
             </div>
