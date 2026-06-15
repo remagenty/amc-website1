@@ -66,7 +66,7 @@ export function ActivitiesSection() {
               }`}
             >
               {/* Photo */}
-              <div className="relative h-[200px] flex-shrink-0">
+              <div className="relative h-[130px] flex-shrink-0">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={activity.image}
