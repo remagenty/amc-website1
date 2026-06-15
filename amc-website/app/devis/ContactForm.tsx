@@ -8,8 +8,9 @@ const REQUEST_TYPES = [
   { value: "devis", label: "Demande de devis" },
   { value: "sav", label: "Service après-vente (SAV)" },
   { value: "information", label: "Demande d'information" },
-  { value: "pieces", label: "Commande pièces détachées" },
+  { value: "pieces-detachees", label: "Commande pièces détachées" },
   { value: "maintenance", label: "Contrat maintenance" },
+  { value: "financement", label: "Étude de financement" },
   { value: "recherche", label: "Recherche matériel occasion" },
   { value: "autre", label: "Autre demande" },
 ];
@@ -182,7 +183,7 @@ export function ContactForm() {
       </div>
 
       {/* Matériel concerné */}
-      {["devis", "sav", "pieces"].includes(form.type) && (
+      {["devis", "sav", "pieces-detachees"].includes(form.type) && (
         <div>
           <label className="block text-sm font-semibold text-amc-text mb-1.5">
             Matériel concerné
