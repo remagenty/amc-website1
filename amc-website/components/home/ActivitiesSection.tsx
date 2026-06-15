@@ -5,7 +5,7 @@ import { SEBadge } from "@/components/ui/SEBadge";
 const ACTIVITIES = [
   {
     id: "neuf",
-    icon: <IconStar size={18} className="text-amc-yellow" />,
+    icon: <IconStar size={28} className="text-amc-yellow" />,
     title: "Vente Matériel Neuf",
     description:
       "Distributeur officiel Wacker Neuson, Magni et Promove Demolition. Accédez à la gamme complète de matériels de chantier neufs avec garantie constructeur et livraison en Rhône-Alpes.",
@@ -18,7 +18,7 @@ const ACTIVITIES = [
   },
   {
     id: "occasion",
-    icon: <IconShield size={18} className="text-amc-yellow" />,
+    icon: <IconShield size={28} className="text-amc-yellow" />,
     title: "Vente Occasion Certifiée",
     description:
       "Des machines d'occasion soigneusement inspectées, révisées et garanties par nos techniciens certifiés SE+. Le rapport qualité-prix optimal pour vos chantiers.",
@@ -30,7 +30,7 @@ const ACTIVITIES = [
   },
   {
     id: "sav",
-    icon: <IconWrench size={18} className="text-amc-yellow" />,
+    icon: <IconWrench size={28} className="text-amc-yellow" />,
     title: "Service Après-Vente",
     description:
       "Notre atelier certifié SE+ prend en charge la maintenance préventive, les réparations et la fourniture de pièces d'origine pour tous vos équipements de chantier.",
@@ -57,16 +57,16 @@ export function ActivitiesSection() {
           </p>
         </div>
 
-        <div className="flex flex-col gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {ACTIVITIES.map((activity) => (
             <div
               key={activity.id}
-              className={`flex flex-col sm:flex-row min-h-[180px] bg-white rounded-2xl overflow-hidden shadow-card ${
+              className={`card flex flex-col overflow-hidden ${
                 activity.highlight ? "ring-2 ring-amc-yellow/40" : ""
               }`}
             >
-              {/* Image — 40 % de la largeur sur desktop, pleine largeur sur mobile */}
-              <div className="w-full sm:w-2/5 min-h-[180px] sm:min-h-0 flex-shrink-0 relative">
+              {/* Photo */}
+              <div className="relative h-[200px] flex-shrink-0">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={activity.image}
@@ -79,39 +79,36 @@ export function ActivitiesSection() {
               </div>
 
               {/* Contenu */}
-              <div className="flex-1 p-6 flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="p-1.5 rounded-lg bg-amc-yellow/10">
-                      {activity.icon}
+              <div className="p-6 lg:p-8 flex flex-col flex-1">
+                <div className="p-3 rounded-xl bg-amc-yellow/10 w-fit mb-5">
+                  {activity.icon}
+                </div>
+
+                <h3 className="text-xl font-bold text-amc-text mb-3">
+                  {activity.title}
+                  {activity.se && <SEBadge size="sm" className="ml-2 align-middle" />}
+                </h3>
+
+                <p className="text-amc-text-secondary text-sm leading-relaxed flex-1 mb-5">
+                  {activity.description}
+                </p>
+
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {activity.badges.map((badge) => (
+                    <span
+                      key={badge}
+                      className="text-xs font-semibold px-2.5 py-1 rounded-full bg-gray-100 text-amc-text-secondary"
+                    >
+                      {badge}
                     </span>
-                    <h3 className="text-lg font-bold text-amc-text leading-snug">
-                      {activity.title}
-                      {activity.se && <SEBadge size="sm" className="ml-2 align-middle" />}
-                    </h3>
-                  </div>
-
-                  <p className="text-amc-text-secondary text-sm leading-relaxed mb-4">
-                    {activity.description}
-                  </p>
-
-                  <div className="flex flex-wrap gap-2 mb-5">
-                    {activity.badges.map((badge) => (
-                      <span
-                        key={badge}
-                        className="text-xs font-semibold px-2.5 py-1 rounded-full bg-gray-100 text-amc-text-secondary"
-                      >
-                        {badge}
-                      </span>
-                    ))}
-                  </div>
+                  ))}
                 </div>
 
                 <Link
                   href={activity.href}
-                  className={`inline-flex items-center gap-2 font-semibold text-sm group w-fit ${
+                  className={`inline-flex items-center gap-2 font-semibold text-sm group ${
                     activity.highlight
-                      ? "btn-primary"
+                      ? "btn-primary justify-center"
                       : "text-amc-text hover:text-amc-yellow-dark transition-colors"
                   }`}
                 >
