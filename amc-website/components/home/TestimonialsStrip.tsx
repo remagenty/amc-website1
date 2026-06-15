@@ -84,7 +84,7 @@ function StarRating() {
 function TestimonialCard({ item }: { item: typeof TESTIMONIALS[number] }) {
   return (
     <div
-      className="flex-shrink-0 bg-white rounded-xl p-5 flex flex-col justify-between"
+      className="flex-shrink-0 bg-white rounded-xl p-5 flex flex-col self-start"
       style={{
         width: "320px",
         boxShadow: "0 2px 12px rgba(0,0,0,0.10), 0 1px 3px rgba(0,0,0,0.06)",
