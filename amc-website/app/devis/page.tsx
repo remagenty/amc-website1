@@ -6,7 +6,7 @@ import { SEBadge } from "@/components/ui/SEBadge";
 import { MapInteractive } from "@/components/ui/MapInteractive";
 
 export const metadata: Metadata = {
-  title: "Demande de Devis | AMC — Alpes Matériel Compact",
+  title: "Demande de Devis",
   description:
     "Demandez un devis, une information ou un rendez-vous SAV. Distributeur Wacker Neuson, Magni, Promove à Saint-Félix. Réponse sous 24h.",
 };

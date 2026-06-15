@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/Icons";
 
 export const metadata: Metadata = {
-  title: "À propos | AMC — Alpes Matériel Compact",
+  title: "À propos",
   description:
     "Découvrez l'histoire d'AMC, distributeur officiel Wacker Neuson, Magni et Promove Demolition en Rhône-Alpes. Notre équipe d'experts à votre service.",
 };

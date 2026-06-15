@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import { CataloguePage } from "./CataloguePage";
 
 export const metadata: Metadata = {
-  title: "Catalogue matériels de chantier | AMC — Alpes Matériel Compact",
+  title: "Catalogue matériels de chantier",
   description:
     "Découvrez le catalogue complet AMC : compacteurs, dumpers, pelles, télescopiques et outils de démolition. Matériels neufs et occasion certifiés Wacker Neuson, Magni, Promove Demolition.",
   openGraph: {
-    title: "Catalogue matériels de chantier | AMC",
+    title: "Catalogue matériels de chantier",
     description:
       "Matériels de chantier neufs et occasion — Wacker Neuson, Magni, Promove Demolition",
   },

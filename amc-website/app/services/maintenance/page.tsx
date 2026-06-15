@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/Icons";
 
 export const metadata: Metadata = {
-  title: "Maintenance préventive | AMC — Alpes Matériel Compact",
+  title: "Maintenance préventive",
   description:
     "Contrats de maintenance préventive pour engins de chantier en Rhône-Alpes. Atelier certifié SE+, techniciens spécialisés Wacker Neuson, Magni et Promove Demolition.",
 };

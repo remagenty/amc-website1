@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const brand = getBrandInfo(params.slug);
   if (!brand) return {};
   return {
-    title: `${brand.name} — Distributeur officiel | AMC Alpes Matériel Compact`,
+    title: `${brand.name} — Distributeur officiel`,
     description: `AMC, distributeur officiel ${brand.name} en Rhône-Alpes. ${brand.description}`,
   };
 }

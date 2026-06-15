@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/Icons";
 
 export const metadata: Metadata = {
-  title: "Service Après-Vente | AMC — Alpes Matériel Compact",
+  title: "Service Après-Vente",
   description:
     "Atelier certifié SE+, techniciens spécialisés constructeurs, pièces d'origine et maintenance préventive. SAV AMC à Saint-Félix, Haute-Savoie.",
 };

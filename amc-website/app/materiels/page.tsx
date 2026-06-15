@@ -6,7 +6,7 @@ import { getPromoveCategories } from "@/lib/promove-catalogue";
 import { IconArrowRight } from "@/components/ui/Icons";
 
 export const metadata: Metadata = {
-  title: "Nos matériels — AMC Alpes Matériel Compact",
+  title: "Nos matériels",
   description:
     "Découvrez la gamme complète des matériels AMC : Wacker Neuson (mini-pelles, dumpers, compacteurs), Magni (téléhandlers) et Promove Demolition (brise-roches, cisailles, pinces). Distributeur officiel Rhône-Alpes.",
 };

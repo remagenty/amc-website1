@@ -10,7 +10,7 @@ const GMAPS_EMBED =
 const GMAPS_DIR = "https://www.google.com/maps/dir/?api=1&destination=45.79640,5.97107";
 
 export const metadata: Metadata = {
-  title: "Contact | AMC — Alpes Matériel Compact",
+  title: "Contact",
   description:
     "Contactez AMC — Alpes Matériel Compact à Saint-Félix (74). Téléphone, email, horaires et localisation.",
 };

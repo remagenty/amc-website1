@@ -186,7 +186,7 @@ export async function generateMetadata({
   const member = MEMBERS[params.slug as MemberSlug];
   if (!member) return {};
   return {
-    title: `${member.name} — ${member.role} | AMC Alpes Matériel Compact`,
+    title: `${member.name} — ${member.role}`,
     description: `${member.roleText.slice(0, 140)}…`,
   };
 }

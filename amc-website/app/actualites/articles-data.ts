@@ -34,7 +34,7 @@ export const ARTICLES: Article[] = [
     gradientFrom: "#34d399",
     gradientTo: "#0f766e",
     icon: "⚡",
-    metaTitle: "Wacker Neuson gamme zéro émission 2026 — AMC Alpes Matériel Compact",
+    metaTitle: "Wacker Neuson gamme zéro émission 2026",
     metaDescription:
       "Découvrez la nouvelle gamme électrique Wacker Neuson 2026 : mini-pelles EZ17e, EZ26e et compacteurs zéro émission. Disponible chez AMC en Savoie.",
     content: [
@@ -133,7 +133,7 @@ export const ARTICLES: Article[] = [
     gradientFrom: "#60a5fa",
     gradientTo: "#1d4ed8",
     icon: "🔧",
-    metaTitle: "5 conseils maintenance engins de chantier — AMC Alpes Matériel Compact",
+    metaTitle: "5 conseils maintenance engins de chantier",
     metaDescription:
       "Nos experts AMC partagent 5 conseils essentiels pour optimiser la maintenance préventive de vos engins de chantier Wacker Neuson, Magni et Promove Demolition.",
     content: [
@@ -327,7 +327,7 @@ export const ARTICLES: Article[] = [
     gradientFrom: "#94a3b8",
     gradientTo: "#334155",
     icon: "⛰️",
-    metaTitle: "Équipement chantier en montagne : guide pratique — AMC",
+    metaTitle: "Équipement chantier en montagne : guide pratique",
     metaDescription:
       "Guide complet pour choisir le bon matériel de chantier en montagne : mini-pelles Wacker Neuson, dumpers, compacteurs et télescopiques Magni adaptés aux Alpes.",
     content: [

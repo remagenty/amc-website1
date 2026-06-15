@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Conditions Générales de Vente | AMC — Alpes Matériel Compact",
+  title: "Conditions Générales de Vente",
   description: "Conditions Générales de Vente d'AMC — Alpes Matériel Compact, distributeur officiel Wacker Neuson, Magni et Promove Demolition en Rhône-Alpes.",
   robots: { index: false },
 };

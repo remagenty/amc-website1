@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/Icons";
 
 export const metadata: Metadata = {
-  title: "Certification SE+ | AMC — Alpes Matériel Compact",
+  title: "Certification SE+",
   description:
     "Atelier AMC certifié SE+ par Wacker Neuson. Techniciens formés en usine, pièces d'origine, outillage homologué. La référence qualité du SAV compact en Rhône-Alpes.",
 };

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Mentions légales | AMC — Alpes Matériel Compact",
+  title: "Mentions légales",
   description: "Mentions légales du site AMC — Alpes Matériel Compact, distributeur officiel Wacker Neuson, Magni et Promove Demolition en Rhône-Alpes.",
   robots: { index: false },
 };

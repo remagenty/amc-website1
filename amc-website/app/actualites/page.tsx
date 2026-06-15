@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ActualitesFeed } from "./ActualitesFeed";
 
 export const metadata: Metadata = {
-  title: "Actualités & Expertise | AMC Alpes Matériel Compact",
+  title: "Actualités & Expertise",
   description:
     "Retrouvez les dernières actualités, conseils d'experts et guides pratiques d'AMC, votre partenaire matériel de chantier en Rhône-Alpes.",
 };

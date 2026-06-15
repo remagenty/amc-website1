@@ -22,10 +22,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 
   return {
-    title: `${product.name} — ${product.shortDescription} | AMC`,
+    title: `${product.name} — ${product.shortDescription}`,
     description: `${product.name} ${product.status === "neuf" ? "neuf" : "d'occasion certifié"} chez AMC. ${product.description.slice(0, 120)}...`,
     openGraph: {
-      title: `${product.name} | AMC — Alpes Matériel Compact`,
+      title: `${product.name}`,
       description: product.shortDescription,
       type: "website",
     },

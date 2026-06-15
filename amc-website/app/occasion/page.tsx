@@ -6,7 +6,7 @@ import { SEBadge } from "@/components/ui/SEBadge";
 import { IconShield, IconCheck, IconArrowRight } from "@/components/ui/Icons";
 
 export const metadata: Metadata = {
-  title: "Matériels de chantier d'occasion certifiés | AMC",
+  title: "Matériels de chantier d'occasion certifiés",
   description:
     "Découvrez nos matériels de chantier d'occasion certifiés AMC. Chaque machine est inspectée, révisée et garantie par nos techniciens certifiés SE+ à Saint-Félix.",
 };

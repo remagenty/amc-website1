@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Politique de confidentialité | AMC — Alpes Matériel Compact",
+  title: "Politique de confidentialité",
   description: "Politique de confidentialité et de protection des données personnelles du site AMC — Alpes Matériel Compact, conformément au RGPD.",
   robots: { index: false },
 };

@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/Icons";
 
 export const metadata: Metadata = {
-  title: "Financement | AMC — Alpes Matériel Compact",
+  title: "Financement",
   description:
     "Solutions de financement pour l'acquisition de matériels de chantier en Rhône-Alpes. Crédit-bail, LOA, financement classique. AMC distributeur Wacker Neuson, Magni, Promove.",
 };

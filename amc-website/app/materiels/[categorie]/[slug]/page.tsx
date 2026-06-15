@@ -55,7 +55,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!machine) return {};
 
   return {
-    title: `${machine.nom_complet} — AMC Alpes Matériel Compact`,
+    title: `${machine.nom_complet}`,
     description: machine.description_courte,
     openGraph: {
       title: machine.nom_complet,

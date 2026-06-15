@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     : (CATEGORY_LABELS[categorie] ?? categorie);
   const brand = isMagni ? "Magni" : isPromove ? "Promove Demolition" : "Wacker Neuson";
   return {
-    title: `${label} ${brand} — AMC Alpes Matériel Compact`,
+    title: `${label} ${brand}`,
     description: `Découvrez notre gamme de ${label.toLowerCase()} ${brand}. Distributeur officiel AMC en Rhône-Alpes — matériels neufs, SAV certifié SE+.`,
   };
 }
