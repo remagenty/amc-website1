@@ -17,6 +17,7 @@ export type Article = {
   gradientFrom: string;
   gradientTo: string;
   icon: string;
+  image?: string;
   metaTitle: string;
   metaDescription: string;
   content: ContentBlock[];
@@ -25,6 +26,7 @@ export type Article = {
 export const ARTICLES: Article[] = [
   {
     slug: "wacker-neuson-gamme-zero-emission-2026",
+    image: "/images/photo-wacker-catalogue.jpg",
     title: "Wacker Neuson lance sa nouvelle gamme zéro émission 2026",
     category: "Nouveautés",
     summary:
@@ -124,6 +126,7 @@ export const ARTICLES: Article[] = [
 
   {
     slug: "5-conseils-maintenance-engins-chantier",
+    image: "/images/Slide-3.jpg",
     title: "5 conseils pour optimiser la maintenance de vos engins de chantier",
     category: "Conseils",
     summary:
@@ -226,6 +229,7 @@ export const ARTICLES: Article[] = [
 
   {
     slug: "amc-certification-se-plus-atelier-saint-felix",
+    image: "/images/Slide-3.jpg",
     title: "AMC obtient la certification SE+ pour son atelier de Saint-Félix",
     category: "Actualités",
     summary:
@@ -318,6 +322,7 @@ export const ARTICLES: Article[] = [
 
   {
     slug: "chantiers-montagne-quel-equipement-choisir",
+    image: "/images/Slide-1.jpg",
     title: "Chantiers en montagne : quel équipement choisir ?",
     category: "Conseils",
     summary:
@@ -443,6 +448,7 @@ export const ARTICLES: Article[] = [
   // ── Article 5 ─────────────────────────────────────────────────────────────
   {
     slug: "wacker-neuson-ez26e-pelle-electrique",
+    image: "/images/photo-wacker-catalogue.jpg",
     title: "Wacker Neuson EZ26e : la mini-pelle électrique zéro émission arrive chez AMC",
     category: "Nouveautés",
     summary:
@@ -502,6 +508,7 @@ export const ARTICLES: Article[] = [
   // ── Article 6 ─────────────────────────────────────────────────────────────
   {
     slug: "plaques-vibrantes-reversibles-wacker-neuson-2025",
+    image: "/images/photo-wacker-catalogue.jpg",
     title: "Nouvelle génération de plaques vibrantes réversibles Wacker Neuson : DPU52 à BPU62",
     category: "Nouveautés",
     summary:
@@ -561,6 +568,7 @@ export const ARTICLES: Article[] = [
   // ── Article 7 ─────────────────────────────────────────────────────────────
   {
     slug: "magni-rth-6-22-telescopique-rotatif",
+    image: "/images/Magni-catalogue.avif",
     title: "Magni RTH 6.22 : le télescopique rotatif haute performance disponible chez AMC",
     category: "Nouveautés",
     summary:
@@ -621,6 +629,7 @@ export const ARTICLES: Article[] = [
   // ── Article 8 ─────────────────────────────────────────────────────────────
   {
     slug: "magni-th-3-6-e-telescopique-electrique",
+    image: "/images/Magni-catalogue.avif",
     title: "Magni TH 3.6 e : le premier télescopique électrique compact de la gamme",
     category: "Nouveautés",
     summary:
@@ -681,6 +690,7 @@ export const ARTICLES: Article[] = [
   // ── Article 9 ─────────────────────────────────────────────────────────────
   {
     slug: "choisir-telescopique-rotatif-fixe-guide",
+    image: "/images/Magni-catalogue.avif",
     title: "Télescopique rotatif ou fixe : comment choisir pour votre chantier ?",
     category: "Conseils",
     summary:
@@ -750,6 +760,7 @@ export const ARTICLES: Article[] = [
   // ── Article 10 ────────────────────────────────────────────────────────────
   {
     slug: "entretien-hivernal-materiel-chantier",
+    image: "/images/Slide-3.jpg",
     title: "Entretien hivernal de votre matériel de chantier : les 5 vérifications indispensables",
     category: "Conseils",
     summary:

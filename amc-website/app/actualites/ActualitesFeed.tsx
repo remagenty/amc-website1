@@ -60,12 +60,20 @@ export function ActualitesFeed({ initialFilter = "" }: { initialFilter?: string 
               >
                 {/* Image */}
                 <div className="relative overflow-hidden" style={{ paddingTop: "56.25%" }}>
-                  <div
-                    className="absolute inset-0 flex items-center justify-center transition-transform duration-500 group-hover:scale-105"
-                    style={{ background: `linear-gradient(135deg, ${article.gradientFrom}, ${article.gradientTo})` }}
-                  >
-                    <span className="text-6xl select-none">{article.icon}</span>
-                  </div>
+                  {article.image ? (
+                    <img
+                      src={article.image}
+                      alt={article.title}
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  ) : (
+                    <div
+                      className="absolute inset-0 flex items-center justify-center transition-transform duration-500 group-hover:scale-105"
+                      style={{ background: `linear-gradient(135deg, ${article.gradientFrom}, ${article.gradientTo})` }}
+                    >
+                      <span className="text-6xl select-none">{article.icon}</span>
+                    </div>
+                  )}
                   <div className="absolute top-3 left-3">
                     <span
                       className="px-2.5 py-1 rounded-full text-xs font-bold"

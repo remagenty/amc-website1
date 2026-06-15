@@ -38,12 +38,20 @@ export default function ArticlePage({ params }: Props) {
 
       {/* Hero image */}
       <div className="relative h-[260px] md:h-[340px] overflow-hidden">
-        <div
-          className="absolute inset-0 flex items-center justify-center"
-          style={{ background: `linear-gradient(135deg, ${article.gradientFrom}, ${article.gradientTo})` }}
-        >
-          <span className="text-[100px] md:text-[140px] select-none opacity-80">{article.icon}</span>
-        </div>
+        {article.image ? (
+          <img
+            src={article.image}
+            alt={article.title}
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        ) : (
+          <div
+            className="absolute inset-0 flex items-center justify-center"
+            style={{ background: `linear-gradient(135deg, ${article.gradientFrom}, ${article.gradientTo})` }}
+          >
+            <span className="text-[100px] md:text-[140px] select-none opacity-80">{article.icon}</span>
+          </div>
+        )}
         <div className="absolute inset-0 bg-black/25" />
 
         {/* Breadcrumb over hero */}
