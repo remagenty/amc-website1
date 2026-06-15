@@ -116,10 +116,15 @@ export function TestimonialsStrip() {
 
   return (
     <section
-      className="overflow-hidden py-10"
-      style={{ backgroundColor: "#FFD700" }}
+      className="py-10"
+      style={{ backgroundColor: "#FFD700", position: "relative", overflow: "hidden" }}
       aria-label="Avis clients Google"
     >
+      {/* Fade left */}
+      <div style={{ position: "absolute", top: 0, left: 0, width: "80px", height: "100%", background: "linear-gradient(to right, #FFD700, transparent)", zIndex: 2, pointerEvents: "none" }} />
+      {/* Fade right */}
+      <div style={{ position: "absolute", top: 0, right: 0, width: "80px", height: "100%", background: "linear-gradient(to left, #FFD700, transparent)", zIndex: 2, pointerEvents: "none" }} />
+
       <style>{`
         @keyframes testimonials-scroll {
           0%   { transform: translateX(0); }
