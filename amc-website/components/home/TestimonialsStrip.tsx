@@ -2,40 +2,70 @@
 
 const TESTIMONIALS = [
   {
-    text: "Équipe très réactive, le SAV est intervenu le lendemain de mon appel. Matériel impeccable, je recommande sans hésiter AMC pour tout achat de téléhandler.",
-    name: "Jean-Pierre M.",
-    role: "Chef de chantier, BTP Rhône-Alpes",
-    initials: "JP",
+    text: "AMC a fait preuve d'un grand professionnalisme et d'une excellente disponibilité malgré la distance géographique. Leur accompagnement a été clair, sérieux et utile. Rare de trouver un tel niveau de service et d'écoute aujourd'hui. Une entreprise fiable que je recommande.",
+    name: "David Carrozza",
+    date: "Février 2025",
+    initials: "DC",
   },
   {
-    text: "J'ai acheté une mini-pelle Wacker Neuson via AMC, le conseil était parfait. Ils ont vraiment pris le temps de comprendre mes besoins avant de me proposer le bon modèle.",
-    name: "Thomas B.",
-    role: "Artisan terrassier, Savoie",
-    initials: "TB",
+    text: "Un grand merci à l'équipe SAV pour la qualité de leurs prestations, leur écoute et leur rapidité d'intervention. À très vite pour de nouvelles aventures !",
+    name: "Florent Blanc",
+    date: "Mars 2025",
+    initials: "FB",
   },
   {
-    text: "Partenaire de confiance depuis 3 ans. Les pièces détachées arrivent vite et le personnel est compétent. C'est rare de trouver un distributeur aussi sérieux.",
-    name: "Marc D.",
-    role: "Responsable matériel, Entreprise de démolition",
-    initials: "MD",
+    text: "Équipe SAV au top ! Ils ont su me dépanner par téléphone avec beaucoup de professionnalisme. La personne que j'ai eue était claire, précise, et allait droit au but — aucun blabla inutile. Franchement, je recommande les yeux fermés !",
+    name: "Anthony",
+    date: "Mai 2025",
+    initials: "AN",
   },
   {
-    text: "Le financement proposé par AMC nous a permis d'acquérir deux machines sans impact sur notre trésorerie. Montage rapide et transparent.",
-    name: "Sophie L.",
-    role: "Gérante, PME travaux publics",
-    initials: "SL",
+    text: "Équipe professionnel, respect des délais, qualité des échanges. Je recommande fortement.",
+    name: "Vincent Figueiredo",
+    date: "Juin 2025",
+    initials: "VF",
   },
   {
-    text: "Très bon suivi après-vente. La certification SE+ de leur atelier fait vraiment la différence — on sait que les interventions sont faites dans les règles de l'art.",
-    name: "Christophe R.",
-    role: "Mécanicien TP, Haute-Savoie",
-    initials: "CR",
+    text: "Équipe au top, à l'écoute et très réactif sur les commandes de pièces détachées, je recommande !",
+    name: "Florian",
+    date: "Juillet 2023",
+    initials: "FR",
   },
   {
-    text: "AMC nous a livré le matériel Promove en temps et en heure pour un chantier urgent. Sérieux et professionnel, je n'irai plus ailleurs.",
-    name: "David F.",
-    role: "Conducteur de travaux, Isère",
-    initials: "DF",
+    text: "Grand choix, très pro, excellent services.",
+    name: "Enrico Avola",
+    date: "Octobre 2022",
+    initials: "EA",
+  },
+  {
+    text: "SAV très réactif et compétent. Je recommande.",
+    name: "francketflo",
+    date: "Mai 2025",
+    initials: "FF",
+  },
+  {
+    text: "Une belle équipe au service SAV, à l'écoute, professionnelle et arrangeante...",
+    name: "Florent Bottollier",
+    date: "Mars 2025",
+    initials: "FB",
+  },
+  {
+    text: "Un grand merci à Camille et Romain du service client qui ont géré mon dossier pour une recherche de pièce dans un délai remarquable. Cette équipe est très compétente dans ce domaine. Vous pouvez y aller les yeux fermés.",
+    name: "Kevin Veyrier",
+    date: "Mars 2025",
+    initials: "KV",
+  },
+  {
+    text: "Un grand bravo à Romain et à toute son équipe SAV. De nos jours, c'est rare de trouver un service aussi à l'écoute, réactif et professionnel. Merci pour votre efficacité. Je recommande sans hésiter.",
+    name: "Lucas",
+    date: "Mars 2025",
+    initials: "LU",
+  },
+  {
+    text: "Wacker Neuson, c'est tout ce qu'il faut !",
+    name: "Eric Floquet",
+    date: "Mai 2022",
+    initials: "EF",
   },
 ];
 
@@ -74,7 +104,7 @@ function TestimonialCard({ item }: { item: typeof TESTIMONIALS[number] }) {
         </div>
         <div>
           <p className="text-sm font-bold text-[#2d2d2d] leading-tight">{item.name}</p>
-          <p className="text-xs text-[#9B9B9B] leading-tight mt-0.5">{item.role}</p>
+          <p className="text-xs text-[#9B9B9B] leading-tight mt-0.5">{item.date}</p>
         </div>
       </div>
     </div>
@@ -82,14 +112,13 @@ function TestimonialCard({ item }: { item: typeof TESTIMONIALS[number] }) {
 }
 
 export function TestimonialsStrip() {
-  // Duplicate for seamless infinite loop
   const allItems = [...TESTIMONIALS, ...TESTIMONIALS];
 
   return (
     <section
       className="overflow-hidden py-10"
       style={{ backgroundColor: "#FFD700" }}
-      aria-label="Témoignages clients"
+      aria-label="Avis clients Google"
     >
       <style>{`
         @keyframes testimonials-scroll {
@@ -97,7 +126,7 @@ export function TestimonialsStrip() {
           100% { transform: translateX(-50%); }
         }
         .testimonials-track {
-          animation: testimonials-scroll 24s linear infinite;
+          animation: testimonials-scroll 40s linear infinite;
           will-change: transform;
         }
         .testimonials-track:hover {
