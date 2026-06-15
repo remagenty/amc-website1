@@ -12,9 +12,16 @@ import {
 } from "@/components/ui/Icons";
 
 export const metadata: Metadata = {
-  title: "Financement",
-  description:
-    "Solutions de financement pour l'acquisition de matériels de chantier en Rhône-Alpes. Crédit-bail, LOA, financement classique. AMC distributeur Wacker Neuson, Magni, Promove.",
+  title: { absolute: "Financement matériels de chantier | AMC" },
+  description: "Financez vos équipements de chantier avec nos solutions sur mesure. Leasing, crédit-bail, LOA. Durée 24-60 mois, sans apport obligatoire.",
+  openGraph: {
+    title: "Solutions de financement | AMC",
+    description: "Financez vos équipements de chantier avec nos solutions sur mesure. Leasing, crédit-bail, LOA. Durée 24-60 mois, sans apport obligatoire.",
+    images: [{ url: "/images/Slide-1.jpg" }],
+    type: "website",
+    url: `https://www.amc-savoie.fr/services/financement`,
+    siteName: "AMC — Alpes Matériel Compact",
+  },
 };
 
 const TYPES_FINANCEMENT = [

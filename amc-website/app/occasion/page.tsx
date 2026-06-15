@@ -6,9 +6,16 @@ import { SEBadge } from "@/components/ui/SEBadge";
 import { IconShield, IconCheck, IconArrowRight } from "@/components/ui/Icons";
 
 export const metadata: Metadata = {
-  title: "Matériels de chantier d'occasion certifiés",
-  description:
-    "Découvrez nos matériels de chantier d'occasion certifiés AMC. Chaque machine est inspectée, révisée et garantie par nos techniciens certifiés SE+ à Saint-Félix.",
+  title: { absolute: "Matériels d'occasion certifiés | AMC Rhône-Alpes" },
+  description: "Machines d'occasion inspectées, révisées et garanties par nos techniciens SE+. Compacteurs, pelles, dumpers, télescopiques disponibles immédiatement.",
+  openGraph: {
+    title: "Matériels d'occasion certifiés | AMC Rhône-Alpes",
+    description: "Machines d'occasion inspectées, révisées et garanties par nos techniciens SE+. Compacteurs, pelles, dumpers, télescopiques disponibles immédiatement.",
+    images: [{ url: "/images/Slide-1.jpg" }],
+    type: "website",
+    url: `https://www.amc-savoie.fr/occasion`,
+    siteName: "AMC — Alpes Matériel Compact",
+  },
 };
 
 const GUARANTEES = [

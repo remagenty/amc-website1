@@ -13,9 +13,16 @@ import {
 } from "@/components/ui/Icons";
 
 export const metadata: Metadata = {
-  title: "Certification SE+",
-  description:
-    "Atelier AMC certifié SE+ par Wacker Neuson. Techniciens formés en usine, pièces d'origine, outillage homologué. La référence qualité du SAV compact en Rhône-Alpes.",
+  title: { absolute: "Certification SE+ Wacker Neuson | AMC Saint-Félix" },
+  description: "AMC atelier certifié SE+ par Wacker Neuson. Techniciens formés en usine, pièces d'origine uniquement, interventions conformes aux standards constructeurs.",
+  openGraph: {
+    title: "Certification SE+ | AMC",
+    description: "AMC atelier certifié SE+ par Wacker Neuson. Techniciens formés en usine, pièces d'origine uniquement, interventions conformes aux standards constructeurs.",
+    images: [{ url: "/images/Slide-3.jpg" }],
+    type: "website",
+    url: `https://www.amc-savoie.fr/services/certification-se-plus`,
+    siteName: "AMC — Alpes Matériel Compact",
+  },
 };
 
 const GARANTIES = [

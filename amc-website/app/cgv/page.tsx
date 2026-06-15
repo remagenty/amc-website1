@@ -2,9 +2,16 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Conditions Générales de Vente",
-  description: "Conditions Générales de Vente d'AMC — Alpes Matériel Compact, distributeur officiel Wacker Neuson, Magni et Promove Demolition en Rhône-Alpes.",
+  title: { absolute: "Conditions Générales de Vente | AMC" },
+  description: "Conditions générales de vente AMC pour la vente de matériels de chantier neufs et occasion en Rhône-Alpes.",
   robots: { index: false },
+  openGraph: {
+    title: "CGV | AMC — Alpes Matériel Compact",
+    description: "Conditions générales de vente AMC pour la vente de matériels de chantier neufs et occasion en Rhône-Alpes.",
+    type: "website",
+    url: `https://www.amc-savoie.fr/cgv`,
+    siteName: "AMC — Alpes Matériel Compact",
+  },
 };
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {

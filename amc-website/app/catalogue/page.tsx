@@ -2,13 +2,15 @@ import type { Metadata } from "next";
 import { CataloguePage } from "./CataloguePage";
 
 export const metadata: Metadata = {
-  title: "Catalogue matériels de chantier",
-  description:
-    "Découvrez le catalogue complet AMC : compacteurs, dumpers, pelles, télescopiques et outils de démolition. Matériels neufs et occasion certifiés Wacker Neuson, Magni, Promove Demolition.",
+  title: { absolute: "Catalogue matériels de chantier | AMC" },
+  description: "Compacteurs, dumpers, pelles compactes, télescopiques neufs et occasion. Distributeur officiel Wacker Neuson, Magni, Promove en Rhône-Alpes.",
   openGraph: {
-    title: "Catalogue matériels de chantier",
-    description:
-      "Matériels de chantier neufs et occasion — Wacker Neuson, Magni, Promove Demolition",
+    title: "Catalogue matériels de chantier | AMC",
+    description: "Compacteurs, dumpers, pelles compactes, télescopiques neufs et occasion. Distributeur officiel Wacker Neuson, Magni, Promove en Rhône-Alpes.",
+    images: [{ url: "/images/photo-wacker-catalogue.jpg" }],
+    type: "website",
+    url: `https://www.amc-savoie.fr/catalogue`,
+    siteName: "AMC — Alpes Matériel Compact",
   },
 };
 

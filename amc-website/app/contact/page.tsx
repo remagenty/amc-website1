@@ -10,9 +10,16 @@ const GMAPS_EMBED =
 const GMAPS_DIR = "https://www.google.com/maps/dir/?api=1&destination=45.79640,5.97107";
 
 export const metadata: Metadata = {
-  title: "Contact",
-  description:
-    "Contactez AMC — Alpes Matériel Compact à Saint-Félix (74). Téléphone, email, horaires et localisation.",
+  title: { absolute: "Contact | AMC — Saint-Félix, Haute-Savoie" },
+  description: "Contactez AMC à Saint-Félix. Tél : 04 26 78 43 90. Lun-Ven 8h-18h, Sam 9h-12h.",
+  openGraph: {
+    title: "Contact | AMC — Saint-Félix, Haute-Savoie",
+    description: "Contactez AMC à Saint-Félix. Tél : 04 26 78 43 90. Lun-Ven 8h-18h, Sam 9h-12h.",
+    images: [{ url: "/images/Slide-1.jpg" }],
+    type: "website",
+    url: `https://www.amc-savoie.fr/contact`,
+    siteName: "AMC — Alpes Matériel Compact",
+  },
 };
 
 export default function ContactPage() {

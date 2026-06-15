@@ -2,9 +2,16 @@ import type { Metadata } from "next";
 import { ActualitesFeed } from "./ActualitesFeed";
 
 export const metadata: Metadata = {
-  title: "Actualités & Expertise",
-  description:
-    "Retrouvez les dernières actualités, conseils d'experts et guides pratiques d'AMC, votre partenaire matériel de chantier en Rhône-Alpes.",
+  title: { absolute: "Actualités & Expertise matériels chantier | AMC" },
+  description: "Conseils d'experts, nouveautés matériels, guides d'achat et actualités AMC pour les professionnels du BTP en Rhône-Alpes.",
+  openGraph: {
+    title: "Actualités & Expertise | AMC",
+    description: "Conseils d'experts, nouveautés matériels, guides d'achat et actualités AMC pour les professionnels du BTP en Rhône-Alpes.",
+    images: [{ url: "/images/Slide-1.jpg" }],
+    type: "website",
+    url: `https://www.amc-savoie.fr/actualites`,
+    siteName: "AMC — Alpes Matériel Compact",
+  },
 };
 
 export default function ActualitesPage({

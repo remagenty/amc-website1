@@ -6,9 +6,16 @@ import { SEBadge } from "@/components/ui/SEBadge";
 import { MapInteractive } from "@/components/ui/MapInteractive";
 
 export const metadata: Metadata = {
-  title: "Demande de Devis",
-  description:
-    "Demandez un devis, une information ou un rendez-vous SAV. Distributeur Wacker Neuson, Magni, Promove à Saint-Félix. Réponse sous 24h.",
+  title: { absolute: "Demande de devis | AMC — Alpes Matériel Compact" },
+  description: "Demandez un devis gratuit en ligne. Vente, SAV, pièces détachées, financement. Réponse sous 24h ouvrées.",
+  openGraph: {
+    title: "Demande de devis | AMC — Alpes Matériel Compact",
+    description: "Demandez un devis gratuit en ligne. Vente, SAV, pièces détachées, financement. Réponse sous 24h ouvrées.",
+    images: [{ url: "/images/Slide-1.jpg" }],
+    type: "website",
+    url: `https://www.amc-savoie.fr/devis`,
+    siteName: "AMC — Alpes Matériel Compact",
+  },
 };
 
 export default function DevisPage() {

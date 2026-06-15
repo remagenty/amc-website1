@@ -13,9 +13,16 @@ import {
 } from "@/components/ui/Icons";
 
 export const metadata: Metadata = {
-  title: "Maintenance préventive",
-  description:
-    "Contrats de maintenance préventive pour engins de chantier en Rhône-Alpes. Atelier certifié SE+, techniciens spécialisés Wacker Neuson, Magni et Promove Demolition.",
+  title: { absolute: "Maintenance préventive matériels chantier | AMC" },
+  description: "Contrats de maintenance préventive pour vos engins de chantier. Techniciens SE+ certifiés, planning personnalisé, rapport après intervention.",
+  openGraph: {
+    title: "Maintenance préventive | AMC",
+    description: "Contrats de maintenance préventive pour vos engins de chantier. Techniciens SE+ certifiés, planning personnalisé, rapport après intervention.",
+    images: [{ url: "/images/Slide-3.jpg" }],
+    type: "website",
+    url: `https://www.amc-savoie.fr/services/maintenance`,
+    siteName: "AMC — Alpes Matériel Compact",
+  },
 };
 
 const INCLUS = [

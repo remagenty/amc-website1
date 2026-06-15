@@ -2,9 +2,16 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Politique de confidentialité",
-  description: "Politique de confidentialité et de protection des données personnelles du site AMC — Alpes Matériel Compact, conformément au RGPD.",
+  title: { absolute: "Politique de confidentialité | AMC" },
+  description: "Politique de confidentialité et protection des données personnelles du site AMC — Alpes Matériel Compact.",
   robots: { index: false },
+  openGraph: {
+    title: "Politique de confidentialité | AMC",
+    description: "Politique de confidentialité et protection des données personnelles du site AMC — Alpes Matériel Compact.",
+    type: "website",
+    url: `https://www.amc-savoie.fr/politique-confidentialite`,
+    siteName: "AMC — Alpes Matériel Compact",
+  },
 };
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {

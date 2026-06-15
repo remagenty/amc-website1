@@ -13,9 +13,16 @@ import {
 } from "@/components/ui/Icons";
 
 export const metadata: Metadata = {
-  title: "À propos",
-  description:
-    "Découvrez l'histoire d'AMC, distributeur officiel Wacker Neuson, Magni et Promove Demolition en Rhône-Alpes. Notre équipe d'experts à votre service.",
+  title: { absolute: "Notre équipe | AMC — Alpes Matériel Compact" },
+  description: "Découvrez l'équipe AMC, distributeur officiel Wacker Neuson, Magni et Promove en Rhône-Alpes.",
+  openGraph: {
+    title: "Notre équipe | AMC — Alpes Matériel Compact",
+    description: "Découvrez l'équipe AMC, distributeur officiel Wacker Neuson, Magni et Promove en Rhône-Alpes.",
+    images: [{ url: "/images/equipe-amc.png" }],
+    type: "website",
+    url: `https://www.amc-savoie.fr/a-propos`,
+    siteName: "AMC — Alpes Matériel Compact",
+  },
 };
 
 // ─── Blocs alternés Histoire ──────────────────────────────────────────────────

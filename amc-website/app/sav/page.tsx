@@ -12,9 +12,16 @@ import {
 } from "@/components/ui/Icons";
 
 export const metadata: Metadata = {
-  title: "Service Après-Vente",
-  description:
-    "Atelier certifié SE+, techniciens spécialisés constructeurs, pièces d'origine et maintenance préventive. SAV AMC à Saint-Félix, Haute-Savoie.",
+  title: { absolute: "Service Après-Vente certifié SE+ | AMC" },
+  description: "Atelier certifié SE+, techniciens formés constructeurs, pièces d'origine. SAV matériel chantier à Saint-Félix, Haute-Savoie.",
+  openGraph: {
+    title: "Service Après-Vente certifié SE+ | AMC",
+    description: "Atelier certifié SE+, techniciens formés constructeurs, pièces d'origine. SAV matériel chantier à Saint-Félix, Haute-Savoie.",
+    images: [{ url: "/images/Slide-3.jpg" }],
+    type: "website",
+    url: `https://www.amc-savoie.fr/sav`,
+    siteName: "AMC — Alpes Matériel Compact",
+  },
 };
 
 const BLOCKS = [

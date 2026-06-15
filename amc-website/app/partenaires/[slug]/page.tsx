@@ -14,12 +14,44 @@ export async function generateStaticParams() {
   return BRANDS.map((b) => ({ slug: b.slug }));
 }
 
+const BRAND_OG: Record<string, { title: string; description: string; image: string; url: string }> = {
+  "wacker-neuson": {
+    title: "Wacker Neuson | Distributeur officiel AMC — Rhône-Alpes",
+    description: "AMC distributeur agréé Wacker Neuson en Rhône-Alpes. Compacteurs, mini-pelles, dumpers avec garantie constructeur et SAV certifié.",
+    image: "/images/logo-wacker.png",
+    url: "https://www.amc-savoie.fr/partenaires/wacker-neuson",
+  },
+  magni: {
+    title: "Magni | Distributeur officiel AMC — Rhône-Alpes",
+    description: "AMC distributeur agréé Magni en Rhône-Alpes. Télescopiques rotatifs et fixes avec support technique et pièces d'origine.",
+    image: "/images/logo-magni.png",
+    url: "https://www.amc-savoie.fr/partenaires/magni",
+  },
+  "promove-demolition": {
+    title: "Promove Demolition | Distributeur officiel AMC",
+    description: "AMC distributeur agréé Promove Demolition en Rhône-Alpes. Équipements de démolition et attachements pour chantiers BTP.",
+    image: "/images/logo-promove.jpg",
+    url: "https://www.amc-savoie.fr/partenaires/promove-demolition",
+  },
+};
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const brand = getBrandInfo(params.slug);
   if (!brand) return {};
+  const og = BRAND_OG[params.slug];
+  const title = og?.title ?? `${brand.name} — Distributeur officiel`;
+  const description = og?.description ?? `AMC, distributeur officiel ${brand.name} en Rhône-Alpes. ${brand.description}`;
   return {
-    title: `${brand.name} — Distributeur officiel`,
-    description: `AMC, distributeur officiel ${brand.name} en Rhône-Alpes. ${brand.description}`,
+    title: { absolute: title },
+    description,
+    openGraph: {
+      title: og?.title ?? title,
+      description,
+      ...(og?.image ? { images: [{ url: og.image }] } : {}),
+      type: "website",
+      ...(og?.url ? { url: og.url } : {}),
+      siteName: "AMC — Alpes Matériel Compact",
+    },
   };
 }
 
