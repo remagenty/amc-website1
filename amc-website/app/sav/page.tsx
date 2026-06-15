@@ -8,6 +8,7 @@ import {
   IconWrench,
   IconBadgeCheck,
   IconPhone,
+  IconMapPin,
 } from "@/components/ui/Icons";
 
 export const metadata: Metadata = {
@@ -165,6 +166,156 @@ export default function SavPage() {
                 </div>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* ── MARQUES COUVERTES ── */}
+      <section className="bg-amc-cream py-20">
+        <div className="container-amc">
+          <ScrollReveal from="bottom">
+            <div className="text-center mb-12">
+              <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-amc-yellow mb-3">
+                <IconBadgeCheck size={14} /> SAV agréé
+              </span>
+              <h2 className="text-3xl md:text-4xl font-black text-amc-text mb-3">
+                Marques couvertes
+              </h2>
+              <p className="text-gray-500 max-w-lg mx-auto text-sm leading-relaxed">
+                Notre atelier est agréé et certifié par les trois constructeurs distribués par AMC.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {[
+              {
+                logo: "/images/logo-wacker.png",
+                name: "Wacker Neuson",
+                alt: "Logo Wacker Neuson",
+                desc: "Mini-pelles, dumpers, chargeuses compactes, compacteurs et équipements de chantier.",
+                badge: "Certification SE+",
+                color: "border-red-200",
+              },
+              {
+                logo: "/images/logo-magni.png",
+                name: "Magni",
+                alt: "Logo Magni",
+                desc: "Téléhandlers rotatifs et fixes, nacelles et engins de levage de précision.",
+                badge: "Certification SE+",
+                color: "border-blue-200",
+              },
+              {
+                logo: "/images/logo-promove.jpg",
+                name: "Promove Demolition",
+                alt: "Logo Promove Demolition",
+                desc: "Brise-roches, pinces, cisailles et attachements hydrauliques pour pelles.",
+                badge: "Agréé constructeur",
+                color: "border-orange-200",
+              },
+            ].map((brand) => (
+              <ScrollReveal key={brand.name} from="bottom">
+                <div className={`bg-white rounded-2xl shadow-card p-6 flex flex-col items-center text-center border-2 ${brand.color}`}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={brand.logo}
+                    alt={brand.alt}
+                    className="h-10 w-auto object-contain mb-4"
+                  />
+                  <h3 className="font-bold text-amc-text text-sm mb-2">{brand.name}</h3>
+                  <p className="text-gray-500 text-xs leading-relaxed mb-4">{brand.desc}</p>
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amc-yellow/20 text-amc-text text-xs font-semibold">
+                    <IconCheck size={11} />
+                    {brand.badge}
+                  </span>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+
+          {/* Délais d'intervention — TODO */}
+          <ScrollReveal from="bottom">
+            <div className="mt-10 max-w-4xl mx-auto bg-white rounded-2xl shadow-card p-6">
+              <h3 className="text-sm font-bold uppercase tracking-widest text-amc-yellow mb-4">
+                Délais d&apos;intervention
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                {[
+                  { label: "Prise en charge atelier", placeholder: "XX h" },
+                  { label: "Délai livraison pièces courantes", placeholder: "X–X jours" },
+                  { label: "Intervention sur site", placeholder: "Sous X jours" },
+                ].map((item) => (
+                  <div
+                    key={item.label}
+                    className="flex flex-col items-center text-center bg-amber-50 border border-dashed border-amber-400 rounded-xl p-4"
+                  >
+                    <p className="text-xl font-black text-amber-500 mb-1">{item.placeholder}</p>
+                    <p className="text-xs text-amc-text-secondary mb-2">{item.label}</p>
+                    <span className="inline-flex items-center gap-1 bg-amber-400 text-white text-[9px] font-black px-1.5 py-0.5 rounded uppercase tracking-wide">
+                      TODO — à compléter
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* ── ZONE D'INTERVENTION ── */}
+      <section className="bg-white py-20">
+        <div className="container-amc">
+          <ScrollReveal from="bottom">
+            <div className="text-center mb-12">
+              <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-amc-yellow mb-3">
+                <IconMapPin size={14} /> Couverture géographique
+              </span>
+              <h2 className="text-3xl md:text-4xl font-black text-amc-text mb-3">
+                Zone d&apos;intervention SAV
+              </h2>
+              <p className="text-gray-500 max-w-lg mx-auto text-sm leading-relaxed">
+                Basés à Saint-Félix (74540), nous intervenons en atelier et sur site dans toute la région Rhône-Alpes.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div className="max-w-3xl mx-auto">
+            <div className="bg-amc-cream rounded-2xl p-8">
+              <div className="flex items-center gap-3 p-4 bg-amc-yellow/10 rounded-xl border border-amc-yellow/30 mb-6">
+                <IconMapPin size={20} className="text-amc-yellow-dark flex-shrink-0" />
+                <div>
+                  <p className="font-bold text-amc-text">Auvergne-Rhône-Alpes</p>
+                  <p className="text-xs text-amc-text-secondary">Zone principale — atelier + interventions terrain</p>
+                </div>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  "Ain (01)",
+                  "Ardèche (07)",
+                  "Drôme (26)",
+                  "Isère (38)",
+                  "Loire (42)",
+                  "Rhône (69)",
+                  "Savoie (73)",
+                  "Haute-Savoie (74)",
+                ].map((dept) => (
+                  <span
+                    key={dept}
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white border border-gray-200 rounded-lg text-sm font-medium text-amc-text shadow-sm"
+                  >
+                    <IconMapPin size={11} className="text-amc-yellow-dark" />
+                    {dept}
+                  </span>
+                ))}
+              </div>
+              <p className="text-xs text-gray-500 mt-5 leading-relaxed">
+                Les interventions en dehors de la région Rhône-Alpes sont étudiées au cas par cas.{" "}
+                <Link href="/contact" className="text-amc-yellow-dark hover:underline font-medium">
+                  Contactez-nous
+                </Link>{" "}
+                pour un devis de déplacement.
+              </p>
+            </div>
           </div>
         </div>
       </section>
