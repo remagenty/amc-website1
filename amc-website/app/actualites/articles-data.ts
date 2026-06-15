@@ -439,6 +439,371 @@ export const ARTICLES: Article[] = [
       { type: "cta", label: "Demander conseil à nos experts", href: "/contact?type=information" },
     ],
   },
+
+  // ── Article 5 ─────────────────────────────────────────────────────────────
+  {
+    slug: "wacker-neuson-ez26e-pelle-electrique",
+    title: "Wacker Neuson EZ26e : la mini-pelle électrique zéro émission arrive chez AMC",
+    category: "Nouveautés",
+    summary:
+      "2,6 tonnes, zéro émission, silence absolu. La mini-pelle électrique EZ26e de Wacker Neuson est désormais disponible chez AMC avec SAV certifié constructeur.",
+    date: "15 avril 2025",
+    readTime: "4 min",
+    gradientFrom: "#22c55e",
+    gradientTo: "#15803d",
+    icon: "⚡",
+    metaTitle: "Wacker Neuson EZ26e mini-pelle électrique chez AMC",
+    metaDescription:
+      "La mini-pelle électrique Wacker Neuson EZ26e — 2,6 tonnes, zéro émission, batterie 30 ou 39 kWh — est disponible chez AMC en Rhône-Alpes.",
+    content: [
+      {
+        type: "intro",
+        text: "Présentée au Bauma 2025 et attendue sur les chantiers depuis plusieurs mois, la mini-pelle électrique EZ26e de Wacker Neuson est désormais disponible chez AMC. Cette machine de 2,6 tonnes représente une étape majeure dans l'électrification des engins compacts : performances équivalentes au diesel, mais sans émissions ni nuisances sonores.",
+      },
+      { type: "h2", text: "Une mini-pelle conçue pour les chantiers urbains et confinés" },
+      {
+        type: "p",
+        text: "Le modèle EZ26e reprend les dimensions exactes de son équivalente thermique, avec un atout décisif : le design zero tail. Sans dépassement arrière, la machine évolue en toute sécurité dans les espaces restreints — ruelles, tranchées étroites, sous-sols, zones résidentielles. Elle reste transportable sur remorque 3,5 tonnes avec ses accessoires, ce qui simplifie la logistique de chantier.",
+      },
+      { type: "h2", text: "Deux configurations de batterie, une recharge polyvalente" },
+      {
+        type: "p",
+        text: "L'EZ26e est disponible avec deux options de batterie : 30 kWh pour les missions courtes et les chantiers avec accès à une recharge régulière, ou 39 kWh pour des journées complètes sans interruption. La recharge est possible sur prise standard 230V — adaptée aux bases de vie de chantier — ou via un chargeur haute puissance 400V triphasé pour réduire les temps d'arrêt au minimum.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Batterie 30 kWh : autonomie adaptée aux missions courtes, recharge légère sur 230V",
+          "Batterie 39 kWh : journée complète d'utilisation intensive, recharge rapide 400V",
+          "Recharge compatible prises standard de chantier sans infrastructure spéciale",
+          "Zero tail : rotation sans dépassement arrière, idéal en espace confiné",
+          "Transportable sur remorque 3,5 T avec accessoires inclus",
+        ],
+      },
+      { type: "h2", text: "Certified Battery Check : la traçabilité TÜV de l'état des cellules" },
+      {
+        type: "p",
+        text: "Wacker Neuson intègre dans l'EZ26e un système de diagnostic de batterie certifié TÜV, le « Certified Battery Check ». Cet outil analyse l'état de santé des cellules, évalue la capacité résiduelle et produit un rapport certifié. Un avantage concret pour les entreprises soumises à des obligations de traçabilité ou qui envisagent une revente future de la machine.",
+      },
+      { type: "h2", text: "Performances identiques au diesel, confort opérateur amélioré" },
+      {
+        type: "p",
+        text: "La transition électrique ne se fait pas au détriment de la productivité. L'EZ26e délivre des forces d'arrachement et de pénétration comparables à la version thermique, avec une réactivité hydraulique immédiate caractéristique des motorisations électriques. Les vibrations transmises à l'opérateur sont nettement réduites, et l'absence de chaleur moteur améliore le confort, notamment en cabine et lors des interventions en espace clos.",
+      },
+      {
+        type: "callout",
+        title: "Disponible chez AMC — SAV certifié Wacker Neuson",
+        body: "En tant que distributeur officiel et atelier certifié SE+ Wacker Neuson, AMC propose l'EZ26e à la vente et au SAV en Rhône-Alpes. Nos techniciens sont formés en usine sur les modèles électriques.",
+      },
+      { type: "cta", label: "Demander une démonstration", href: "/devis" },
+    ],
+  },
+
+  // ── Article 6 ─────────────────────────────────────────────────────────────
+  {
+    slug: "plaques-vibrantes-reversibles-wacker-neuson-2025",
+    title: "Nouvelle génération de plaques vibrantes réversibles Wacker Neuson : DPU52 à BPU62",
+    category: "Nouveautés",
+    summary:
+      "Forces de compactage 52 à 62 kN, transmission DireX, options numériques Bluetooth et télématique : la nouvelle génération de plaques Wacker Neuson printemps 2025.",
+    date: "28 mars 2025",
+    readTime: "3 min",
+    gradientFrom: "#f59e0b",
+    gradientTo: "#b45309",
+    icon: "📳",
+    metaTitle: "Plaques vibrantes réversibles Wacker Neuson DPU/BPU 2025",
+    metaDescription:
+      "Découvrez les nouvelles plaques vibrantes réversibles Wacker Neuson DPU52, DPU62, BPU52 et BPU62 — disponibles chez AMC distributeur officiel en Rhône-Alpes.",
+    content: [
+      {
+        type: "intro",
+        text: "Wacker Neuson renouvelle au printemps 2025 sa gamme de plaques vibrantes réversibles avec quatre nouveaux modèles : DPU52, DPU62, BPU52 et BPU62. Ces machines apportent des évolutions significatives en termes de puissance, de durabilité et de connectivité, répondant aux besoins croissants des entreprises de VRD, de terrassement et de pose de réseaux.",
+      },
+      { type: "h2", text: "Des forces de compactage de 52 à 62 kilonewtons" },
+      {
+        type: "p",
+        text: "La nouvelle génération couvre une plage de compactage allant de 52 kN pour les modèles DPU52 et BPU52, à 62 kN pour les DPU62 et BPU62. Ces valeurs placent ces machines dans la catégorie haute performance pour le compactage de remblais, de couches de base et d'enrobés. Les largeurs de travail disponibles — 47 cm, 60 cm et 75 cm — permettent de couvrir un large spectre de configurations de tranchées et de surfaces.",
+      },
+      { type: "h2", text: "La transmission DireX : moins de maintenance, plus de durée de vie" },
+      {
+        type: "p",
+        text: "L'innovation centrale de cette génération est la transmission DireX. Contrairement aux systèmes classiques à courroies ou à pignons, DireX assure une transmission directe de la puissance entre le moteur et l'excentrique. Résultat : moins de pièces d'usure, moins d'entretien périodique, et une durée de vie mécanique prolongée. Pour les entreprises qui cumulent les heures sur leurs compacteurs, c'est un argument économique concret.",
+      },
+      { type: "h2", text: "Options numériques avancées sur les versions diesel" },
+      {
+        type: "p",
+        text: "Les versions diesel DPU52 et DPU62 intègrent en option un écosystème numérique complet, particulièrement adapté aux chantiers avec suivi qualité imposé par le maître d'œuvre.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Panneau LED : visibilité des paramètres en plein soleil",
+          "Contrôle Bluetooth : pilotage et réglages depuis smartphone",
+          "Contrôle de compactage intégré : mesure en temps réel de la densification",
+          "Télématique : suivi de localisation, heures machine, alertes maintenance",
+          "Diagnostic embarqué : identification rapide des anomalies",
+        ],
+      },
+      { type: "h2", text: "Ergonomie et comportement en virage" },
+      {
+        type: "p",
+        text: "Wacker Neuson a retravaillé la géométrie des guidons et la position du centre de gravité pour améliorer la maniabilité dans les virages serrés et réduire la fatigue opérateur sur les longues sessions. La réversibilité, caractéristique clé de cette gamme, permet de progresser dans les deux sens sans retourner la machine, ce qui réduit le temps de passage et améliore la qualité de compactage aux reprises.",
+      },
+      {
+        type: "callout",
+        title: "Stock et démonstration disponibles chez AMC",
+        body: "AMC dispose de plaques vibrantes Wacker Neuson en stock avec prise en charge SAV certifiée. Contactez-nous pour organiser un essai sur votre chantier.",
+      },
+      { type: "cta", label: "Voir les compacteurs disponibles", href: "/catalogue?categorie=compacteurs" },
+    ],
+  },
+
+  // ── Article 7 ─────────────────────────────────────────────────────────────
+  {
+    slug: "magni-rth-6-22-telescopique-rotatif",
+    title: "Magni RTH 6.22 : le télescopique rotatif haute performance disponible chez AMC",
+    category: "Nouveautés",
+    summary:
+      "6 tonnes, 22 mètres de hauteur, rotation 360° continue. Le RTH 6.22 de Magni est la référence des télescopiques rotatifs pour les chantiers BTP exigeants.",
+    date: "20 mai 2025",
+    readTime: "4 min",
+    gradientFrom: "#3b82f6",
+    gradientTo: "#1e3a8a",
+    icon: "🏗️",
+    metaTitle: "Magni RTH 6.22 télescopique rotatif chez AMC Rhône-Alpes",
+    metaDescription:
+      "Le Magni RTH 6.22 — 6 tonnes, 22 m de hauteur, rotation 360° — est disponible chez AMC distributeur officiel Magni en Rhône-Alpes.",
+    content: [
+      {
+        type: "intro",
+        text: "AMC enrichit sa gamme de télescopiques Magni avec l'arrivée du RTH 6.22, modèle rotatif de référence de la marque italienne. Avec une capacité maximale de 6 tonnes, une hauteur de levage de 22 mètres et une portée horizontale de 18,5 mètres, ce télescopique s'adresse aux chantiers BTP, aux charpentiers de grande portée et à l'industrie.",
+      },
+      { type: "h2", text: "Rotation 360° continue : une machine, tous les angles" },
+      {
+        type: "p",
+        text: "Le principe fondamental du télescopique rotatif, c'est l'élimination des repositionnements. La tourelle du RTH 6.22 effectue une rotation continue à 360°, sans limitation d'angle ni besoin de déplacer le châssis. Sur un chantier complexe — construction ossature bois, levage en site exigu, travaux de façade — cette capacité réduit considérablement les temps de manœuvre et le risque d'incidents liés aux déplacements répétés.",
+      },
+      { type: "h2", text: "Motorisation Stage V et hydraulique haute pression" },
+      {
+        type: "p",
+        text: "Le RTH 6.22 embarque un moteur Deutz TCD 3.6 L4 Stage V développant 100 kW (136 ch), conforme aux normes antipollution européennes les plus récentes. Le circuit hydraulique, dimensionné à 130 l/min à 350 bar, garantit des vitesses de levage et de rotation fluides même avec des charges proches du maximum. Les stabilisateurs à ciseaux pivotants s'adaptent aux terrains irréguliers et réduisent l'emprise au sol lors des mises en œuvre.",
+      },
+      { type: "h2", text: "Polyvalence absolue grâce au système RFID" },
+      {
+        type: "p",
+        text: "La gestion des accessoires est l'un des points forts du RTH 6.22. Le système RFID intégré reconnaît automatiquement chaque outil connecté — fourches, treuil, nacelle, godet, pinces — et adapte en temps réel les dispositifs de sécurité, les limites de charge et les paramètres hydrauliques. Ce n'est plus l'opérateur qui doit reconfigurer la machine manuellement : le système le fait seul, réduisant les erreurs et les risques.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Capacité maximale 6 000 kg — portée 22 m en hauteur, 18,5 m en horizontal",
+          "Rotation 360° continue sans limitation d'angle",
+          "Stabilisateurs pivotants à ciseaux — adaptés aux terrains difficiles",
+          "Reconnaissance automatique des accessoires via RFID",
+          "Cabine pressurisée ROPS/FOPS niveau 2 — écran tactile MCTS",
+          "Moteur Deutz TCD 3.6 L4 Stage V — 100 kW / 136 ch",
+        ],
+      },
+      { type: "h2", text: "Cabine et ergonomie : confort de conduite longue durée" },
+      {
+        type: "p",
+        text: "La cabine pressurisée du RTH 6.22 est certifiée ROPS/FOPS niveau 2. L'écran tactile MCTS centralise toutes les informations machine, les charges en temps réel et les diagnostics. La visibilité depuis le poste de conduite a été travaillée pour permettre un suivi précis de la charge en mouvement, quelle que soit l'orientation de la flèche.",
+      },
+      {
+        type: "callout",
+        title: "AMC — distributeur officiel Magni en Rhône-Alpes",
+        body: "AMC propose à la vente et au SAV l'ensemble de la gamme Magni avec pièces d'origine et techniciens formés constructeur. Demandez un devis ou une démonstration.",
+      },
+      { type: "cta", label: "Demander un devis Magni RTH 6.22", href: "/devis" },
+    ],
+  },
+
+  // ── Article 8 ─────────────────────────────────────────────────────────────
+  {
+    slug: "magni-th-3-6-e-telescopique-electrique",
+    title: "Magni TH 3.6 e : le premier télescopique électrique compact de la gamme",
+    category: "Nouveautés",
+    summary:
+      "Dévoilé au GIS 2025, le Magni TH 3.6 e est le premier télescopique électrique de la marque. 3 tonnes, 6 mètres, recharge CCS Superfast, TCO compétitif.",
+    date: "30 septembre 2025",
+    readTime: "4 min",
+    gradientFrom: "#10b981",
+    gradientTo: "#065f46",
+    icon: "🔋",
+    metaTitle: "Magni TH 3.6 e — premier télescopique électrique Magni",
+    metaDescription:
+      "Le Magni TH 3.6 e, dévoilé au GIS 2025, est le premier télescopique électrique compact de la marque. Disponible à la commande chez AMC.",
+    content: [
+      {
+        type: "intro",
+        text: "Magni franchit le cap de l'électrification avec le TH 3.6 e, son premier télescopique entièrement électrique. Dévoilé au GIS 2025 (INTERMAT), ce modèle compact ouvre une nouvelle ère pour les chantiers en zones sensibles : silence, zéro émission locale, et performances équivalentes aux versions thermiques.",
+      },
+      { type: "h2", text: "Capacité 3 tonnes, hauteur 6 mètres : le compact polyvalent" },
+      {
+        type: "p",
+        text: "Le TH 3.6 e s'adresse aux applications où un télescopique compact est nécessaire mais où les contraintes environnementales excluent le thermique : chantiers en centre-ville, intérieurs d'usines, bâtiments classés, zones à faibles émissions. Avec 3 tonnes de capacité maximale et 6 mètres de hauteur de travail, il couvre la majorité des besoins de manutention de chantier léger et de bâtiment.",
+      },
+      { type: "h2", text: "Batterie 350V et charge rapide CCS Superfast" },
+      {
+        type: "p",
+        text: "Le système d'énergie du TH 3.6 e repose sur une batterie haute tension 350V. En option, le chargeur CCS Superfast permet d'atteindre 80 % de charge en seulement une heure, éliminant l'attente comme frein à la productivité. La charge standard overnight reste disponible pour les chantiers disposant d'un branchement 230V simple.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Capacité max 3 000 kg — hauteur de travail 6 m",
+          "Batterie 350V — autonomie suffisante pour une journée standard",
+          "Option CCS Superfast : 0 à 80 % en 1 heure",
+          "Transmission hydrostatique avec récupération d'énergie au freinage",
+          "Zéro émission locale — silencieux pour les chantiers en zones sensibles",
+          "TCO compétitif vs thermique sur cycles d'utilisation intensifs",
+        ],
+      },
+      { type: "h2", text: "Transmission hydrostatique et récupération d'énergie" },
+      {
+        type: "p",
+        text: "La transmission hydrostatique du TH 3.6 e intègre un système de récupération d'énergie cinétique lors des phases de freinage et de descente de charge. Cette énergie est réinjectée dans la batterie, améliorant l'autonomie réelle en usage cyclique — typiquement lors du déchargement de camions ou des va-et-vient répétitifs sur les chantiers de stockage.",
+      },
+      { type: "h2", text: "TCO compétitif : l'argument économique" },
+      {
+        type: "p",
+        text: "Au-delà du bilan carbone, le TH 3.6 e présente un TCO (coût total de possession) attractif sur la durée. Le coût de l'énergie électrique représente environ 20 à 30 % de celui d'un plein diesel équivalent. La maintenance préventive est allégée : pas de vidange moteur, pas de filtre à carburant, moins de pièces d'usure sur la transmission. Sur un cycle de vie de 5 à 7 ans, l'économie réalisée peut représenter plusieurs dizaines de milliers d'euros.",
+      },
+      {
+        type: "callout",
+        title: "Commandez dès maintenant chez AMC",
+        body: "Le Magni TH 3.6 e est disponible à la commande chez AMC. Nos conseillers vous accompagnent dans l'analyse de votre retour sur investissement et les solutions de financement adaptées.",
+      },
+      { type: "cta", label: "Nous contacter pour ce modèle", href: "/contact" },
+    ],
+  },
+
+  // ── Article 9 ─────────────────────────────────────────────────────────────
+  {
+    slug: "choisir-telescopique-rotatif-fixe-guide",
+    title: "Télescopique rotatif ou fixe : comment choisir pour votre chantier ?",
+    category: "Conseils",
+    summary:
+      "Rotation 360° ou axe fixe ? Ce guide pratique vous aide à choisir entre télescopique rotatif et fixe selon vos chantiers, votre budget et la polyvalence requise.",
+    date: "10 février 2025",
+    readTime: "5 min",
+    gradientFrom: "#6366f1",
+    gradientTo: "#312e81",
+    icon: "📋",
+    metaTitle: "Choisir télescopique rotatif ou fixe — guide pratique AMC",
+    metaDescription:
+      "Télescopique rotatif ou fixe : critères de choix, avantages, usages idéaux. Guide expert AMC distributeur Magni en Rhône-Alpes.",
+    content: [
+      {
+        type: "intro",
+        text: "Le choix entre un télescopique rotatif et un télescopique fixe est l'une des questions les plus fréquentes que nos conseillers traitent chez AMC. Les deux types de machines partagent le même principe de base — une flèche télescopique pour lever et déplacer des charges — mais leurs usages optimaux divergent significativement. Faire le mauvais choix peut coûter cher en termes de productivité ou d'investissement inutile.",
+      },
+      { type: "h2", text: "Le télescopique fixe : efficacité sur axes répétitifs" },
+      {
+        type: "p",
+        text: "Le télescopique à flèche fixe (également appelé « chariot télescopique » ou « manitou fixe ») déplace la charge dans un seul plan sans rotation de la tourelle. C'est sa principale contrainte, mais aussi sa force : la conception est plus simple, la maintenance moins lourde, et le coût d'acquisition inférieur de 30 à 50 % par rapport à un rotatif de capacité équivalente.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Coût d'acquisition inférieur de 30 à 50 % vs rotatif équivalent",
+          "Maintenance plus simple — moins de composants hydrauliques rotatifs",
+          "Stabilité maximale en charge frontale — idéal pour manutention répétitive sur axe fixe",
+          "Usages typiques : agriculture, logistique, déchargement de camions, palettisation",
+          "Moins adapté aux zones confinées où le positionnement est contraint",
+        ],
+      },
+      { type: "h2", text: "Le télescopique rotatif : une machine, toutes les situations" },
+      {
+        type: "p",
+        text: "La tourelle rotative à 360° change radicalement la logique d'emploi. Plus besoin de déplacer la machine pour atteindre un point difficile d'accès : on tourne. Cette capacité est déterminante dans les chantiers BTP complexes où l'espace de manœuvre est limité — constructions en terrain pentu, centres-villes, bâtiments en R+3 et plus, charpentes industrielles.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Rotation 360° continue — pas besoin de repositionner le châssis",
+          "Une machine remplace plusieurs engins (grue légère, nacelle, chariot)",
+          "Idéal : BTP, charpente, industrie lourde, espaces confinés",
+          "Accessoires multiples : fourches, nacelle, treuil, godet, pinces",
+          "Investissement supérieur justifié par la polyvalence et la réduction des coûts de location tiers",
+        ],
+      },
+      { type: "h2", text: "Les 4 critères décisifs pour votre choix" },
+      {
+        type: "p",
+        text: "Pour orienter votre décision, posez-vous ces quatre questions : Avez-vous besoin de rotation fréquente (plus de 30 % du temps de travail) ? Si oui, le rotatif s'impose. Votre chantier impose-t-il un positionnement contraint de la machine ? Si oui, le rotatif offre une flexibilité irremplaçable. Votre budget d'acquisition est-il serré ? Le fixe sera plus accessible. Cherchez-vous à mutualiser une seule machine sur plusieurs types de tâches ? Le rotatif l'emporte clairement.",
+      },
+      { type: "h2", text: "La gamme Magni chez AMC : fixe et rotatif pour tous les besoins" },
+      {
+        type: "p",
+        text: "AMC propose l'intégralité de la gamme Magni en Rhône-Alpes : modèles fixes TH (3 à 25 tonnes) et rotatifs RTH (4 à 10 tonnes). Nos conseillers techniques analysent votre cahier des charges — type de chantier, fréquence d'utilisation, accessoires nécessaires — pour vous recommander le modèle le plus rentable sur la durée. SAV certifié constructeur et pièces d'origine garantis.",
+      },
+      {
+        type: "callout",
+        title: "Conseil personnalisé gratuit",
+        body: "Appelez-nous ou remplissez le formulaire de contact : un conseiller AMC vous rappelle sous 24h pour analyser votre besoin et vous recommander le bon modèle.",
+      },
+      { type: "cta", label: "Parler à un expert AMC", href: "/contact" },
+    ],
+  },
+
+  // ── Article 10 ────────────────────────────────────────────────────────────
+  {
+    slug: "entretien-hivernal-materiel-chantier",
+    title: "Entretien hivernal de votre matériel de chantier : les 5 vérifications indispensables",
+    category: "Conseils",
+    summary:
+      "Températures négatives, humidité, gel : l'hiver est la période la plus éprouvante pour vos engins. Voici les 5 vérifications à ne pas manquer avant la saison froide.",
+    date: "3 novembre 2025",
+    readTime: "5 min",
+    gradientFrom: "#64748b",
+    gradientTo: "#1e3a5f",
+    icon: "❄️",
+    metaTitle: "Entretien hivernal matériel chantier — 5 vérifications clés",
+    metaDescription:
+      "Préparez vos engins de chantier pour l'hiver : huile moteur, filtres, flexibles, batterie, antigel. Guide pratique AMC — atelier certifié SE+.",
+    content: [
+      {
+        type: "intro",
+        text: "L'hiver est la période la plus critique pour les engins de chantier. Les températures négatives, la condensation, l'humidité et les cycles gel-dégel accélèrent l'usure de composants qui semblaient en parfait état en été. Une machine mal préparée pour l'hiver, c'est un démarrage difficile le matin, une panne en plein chantier, ou une casse coûteuse au printemps. Voici les 5 vérifications que nos techniciens certifiés SE+ réalisent systématiquement avant la saison froide.",
+      },
+      { type: "h2", text: "1. Niveaux d'huile moteur et hydraulique : les grades hivernaux" },
+      {
+        type: "p",
+        text: "Les huiles moteur et hydrauliques voient leur viscosité augmenter par temps froid. Une huile trop épaisse au démarrage freine la lubrification des organes à froid et force le démarreur. Vérifiez que les grades utilisés correspondent aux préconisations hivernales du constructeur (typiquement 5W-30 ou 10W-40 pour les moteurs, HV46 pour l'hydraulique). Si la machine reste en conditions extrêmes (<-15°C), un changement d'huile avec des grades adaptés s'impose.",
+      },
+      { type: "h2", text: "2. Filtres air et carburant : l'humidité accélère le colmatage" },
+      {
+        type: "p",
+        text: "L'humidité hivernale condense dans les filtres à carburant et favorise le développement de micro-organismes (algues, bactéries) dans le gasoil. Un filtre partiellement colmaté se bouche complètement au premier grand froid. Remplacez les filtres air et carburant avant l'entrée en hiver, surtout si les derniers remplacements datent de plus de 500 heures ou de 12 mois. Vérifiez également les décanteurs eau/carburant et vidangez-les si nécessaire.",
+      },
+      { type: "h2", text: "3. Flexibles et courroies : le froid fragilise le caoutchouc" },
+      {
+        type: "p",
+        text: "Le caoutchouc durcit et perd de son élasticité sous le gel. Les flexibles hydrauliques présentent un risque de fissuration accru, notamment aux points de courbure et aux sertissages. Inspectez visuellement l'ensemble des flexibles visibles : craquelures superficielles, déformations, traces d'huile autour des raccords. Une courroie de distribution ou d'accessoires qui lâche en hiver peut immobiliser la machine en urgence. Anticipez leur remplacement si elles approchent de la fin de leur durée de vie préconisée.",
+      },
+      { type: "h2", text: "4. Batterie : tester la charge et nettoyer les bornes" },
+      {
+        type: "p",
+        text: "Une batterie à 60 % de sa capacité en été peut ne plus suffire à démarrer le moteur à -10°C. Le froid réduit significativement la capacité de délivrer le courant de démarrage (CCA). Faites tester la capacité résiduelle de votre batterie avec un testeur de charge — un investissement de quelques euros qui évite une panne garantie. Nettoyez les bornes avec une brosse métallique et appliquez une graisse anti-oxydante. Si la batterie a plus de 3 ans, envisagez un remplacement préventif.",
+      },
+      { type: "h2", text: "5. Circuit de refroidissement : l'antigel ne se renouvelle pas tout seul" },
+      {
+        type: "p",
+        text: "L'antigel se dégrade progressivement : ses inhibiteurs de corrosion s'épuisent et son point de congélation remonte. Vérifiez la concentration à l'aide d'un réfractomètre (protection recommandée jusqu'à -30°C minimum pour nos régions alpines). Si le liquide est âgé de plus de 2 ans, procédez à un rinçage du circuit et à un remplacement complet. Un circuit mal protégé peut conduire à la fissuration du bloc-moteur — une réparation dont le coût dépasse souvent la valeur de l'entretien annuel.",
+      },
+      {
+        type: "callout",
+        title: "Conseil bonus : stockage et démarrages réguliers",
+        body: "Si votre machine est immobilisée plusieurs semaines, stockez-la à l'abri et effectuez un démarrage toutes les 2 semaines pour maintenir la batterie chargée et lubrifier les organes. Montez à température de fonctionnement avant de la remettre sous charge.",
+      },
+      {
+        type: "p",
+        text: "La check-list hivernale prend 2 à 3 heures par machine. C'est peu comparé au temps perdu sur un chantier paralysé par une panne évitable. Si vous souhaitez déléguer cette préparation à nos techniciens, AMC propose des contrats de maintenance préventive annuels couvrant l'ensemble de ces vérifications.",
+      },
+      { type: "cta", label: "Prendre rendez-vous SAV avant l'hiver", href: "/sav" },
+    ],
+  },
 ];
 
 export function getArticleBySlug(slug: string): Article | undefined {
