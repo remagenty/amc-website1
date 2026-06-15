@@ -59,10 +59,13 @@ export default function MentionsLegalesPage() {
                 <a href="mailto:contact@amc-savoie.fr" className="text-amc-yellow-dark hover:underline">contact@amc-savoie.fr</a>
               </p>
               <p className="pt-1">
-                <strong>SIRET :</strong>{" "}
-                <span className="inline-block bg-yellow-50 border border-yellow-200 text-yellow-800 text-xs font-mono px-2 py-0.5 rounded">
-                  [SIRET_À_COMPLÉTER]
-                </span>
+                <strong>SIRET :</strong> 790 635 916 000 22
+              </p>
+              <p>
+                <strong>N° TVA intracommunautaire :</strong> FR31790635916
+              </p>
+              <p>
+                <strong>RCS :</strong> RCS Grenoble
               </p>
             </div>
           </Section>

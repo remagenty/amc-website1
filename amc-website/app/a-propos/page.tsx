@@ -180,10 +180,7 @@ export default function AProposPage() {
           </h1>
           <p className="text-white/75 text-lg max-w-xl mb-8">
             {/* TODO: remplacer [Fondée en XXXX] par l'année réelle de création */}
-            <span className="inline-flex items-center gap-1.5 bg-amber-400/90 text-amber-900 text-xs font-black px-2 py-0.5 rounded mr-1.5 align-middle">
-              TODO
-            </span>
-            Fondée en [XXXX], AMC s&apos;est imposé comme le partenaire de confiance
+            Fondée en 2013, AMC s&apos;est imposé comme le partenaire de confiance
             des professionnels du BTP en région Rhône-Alpes. Distributeur officiel
             Wacker Neuson, Magni et Promove Demolition, nous mettons notre expertise
             au service de vos chantiers.
@@ -215,10 +212,10 @@ export default function AProposPage() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-12">
             {[
-              { label: "Année de création", placeholder: "XXXX" },
-              { label: "Techniciens certifiés", placeholder: "XX" },
-              { label: "Surface atelier", placeholder: "XXX m²" },
-              { label: "Zone d'intervention", placeholder: "XXX 000 km²" },
+              { label: "Année de création", placeholder: "2013", done: true },
+              { label: "Techniciens certifiés", placeholder: "XX", done: false },
+              { label: "Surface atelier", placeholder: "XXX m²", done: false },
+              { label: "Zone d'intervention", placeholder: "XXX 000 km²", done: false },
             ].map((stat) => (
               <ScrollReveal key={stat.label} from="bottom">
                 <div className="bg-white/5 border border-dashed border-amber-400/60 rounded-2xl p-6 text-center">
@@ -226,7 +223,7 @@ export default function AProposPage() {
                     {stat.placeholder}
                   </p>
                   <p className="text-white/60 text-xs uppercase tracking-wider">{stat.label}</p>
-                  <Todo label="à remplir" />
+                  {!stat.done && <Todo label="à remplir" />}
                 </div>
               </ScrollReveal>
             ))}
