@@ -71,9 +71,9 @@ const TESTIMONIALS = [
 
 function StarRating() {
   return (
-    <div className="flex gap-0.5 mb-3">
+    <div className="flex gap-0.5" style={{ marginBottom: "12px" }}>
       {[1, 2, 3, 4, 5].map((i) => (
-        <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill="#FFD700" aria-hidden="true">
+        <svg key={i} width="14" height="14" viewBox="0 0 24 24" fill="#FDC202" aria-hidden="true">
           <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
         </svg>
       ))}
@@ -84,27 +84,40 @@ function StarRating() {
 function TestimonialCard({ item }: { item: typeof TESTIMONIALS[number] }) {
   return (
     <div
-      className="flex-shrink-0 bg-white rounded-xl p-5 flex flex-col self-start"
+      className="flex-shrink-0 self-start flex flex-col"
       style={{
         width: "320px",
-        boxShadow: "0 2px 12px rgba(0,0,0,0.10), 0 1px 3px rgba(0,0,0,0.06)",
+        background: "#FFFFFF",
+        border: "1px solid #E8E8E8",
+        boxShadow: "0 2px 8px rgba(0,0,0,0.06)",
+        borderRadius: "12px",
+        padding: "24px",
       }}
     >
-      <div>
-        <StarRating />
-        <p className="text-[#374151] text-sm italic leading-relaxed">
-          &ldquo;{item.text}&rdquo;
-        </p>
-      </div>
-      <div className="flex items-center gap-3 mt-4 pt-4 border-t border-gray-100">
+      <StarRating />
+
+      {/* Guillemet */}
+      <div style={{ fontSize: "48px", fontWeight: 700, color: "#FDC202", lineHeight: 1, marginBottom: "-8px" }}>&ldquo;</div>
+
+      {/* Texte */}
+      <p style={{ color: "#444444", fontSize: "15px", lineHeight: 1.7, fontStyle: "italic" }}>
+        {item.text}
+      </p>
+
+      {/* Séparateur jaune */}
+      <div style={{ width: "32px", height: "2px", background: "#FDC202", margin: "16px 0" }} />
+
+      {/* Auteur */}
+      <div className="flex items-center gap-3">
         <div
-          className="w-9 h-9 rounded-full bg-[#FFD700] flex items-center justify-center flex-shrink-0"
+          className="flex-shrink-0 flex items-center justify-center rounded-full"
+          style={{ width: "40px", height: "40px", background: "#FDC202" }}
         >
-          <span className="text-xs font-black text-[#2d2d2d]">{item.initials}</span>
+          <span style={{ fontSize: "12px", fontWeight: 900, color: "#2d2d2d" }}>{item.initials}</span>
         </div>
         <div>
-          <p className="text-sm font-bold text-[#2d2d2d] leading-tight">{item.name}</p>
-          <p className="text-xs text-[#9B9B9B] leading-tight mt-0.5">{item.date}</p>
+          <p style={{ fontSize: "14px", fontWeight: 600, color: "#1a1a1a", lineHeight: 1.3 }}>{item.name}</p>
+          <p style={{ fontSize: "13px", color: "#999999", lineHeight: 1.3, marginTop: "2px" }}>{item.date}</p>
         </div>
       </div>
     </div>
@@ -116,14 +129,22 @@ export function TestimonialsStrip() {
 
   return (
     <section
-      className="py-10"
-      style={{ backgroundColor: "#FFD700", position: "relative", overflow: "hidden" }}
+      className="py-12"
+      style={{ backgroundColor: "#FFFFFF", position: "relative", overflow: "hidden" }}
       aria-label="Avis clients Google"
     >
+      {/* Titre */}
+      <div className="text-center mb-8">
+        <h2 style={{ fontSize: "22px", fontWeight: 700, color: "#1a1a1a", marginBottom: "6px" }}>
+          Ils nous font confiance
+        </h2>
+        <p style={{ fontSize: "14px", color: "#888888" }}>4,6 étoiles · 13 avis Google</p>
+      </div>
+
       {/* Fade left */}
-      <div style={{ position: "absolute", top: 0, left: 0, width: "80px", height: "100%", background: "linear-gradient(to right, #FFD700, transparent)", zIndex: 2, pointerEvents: "none" }} />
+      <div style={{ position: "absolute", top: 0, left: 0, width: "80px", height: "100%", background: "linear-gradient(to right, #FFFFFF, transparent)", zIndex: 2, pointerEvents: "none" }} />
       {/* Fade right */}
-      <div style={{ position: "absolute", top: 0, right: 0, width: "80px", height: "100%", background: "linear-gradient(to left, #FFD700, transparent)", zIndex: 2, pointerEvents: "none" }} />
+      <div style={{ position: "absolute", top: 0, right: 0, width: "80px", height: "100%", background: "linear-gradient(to left, #FFFFFF, transparent)", zIndex: 2, pointerEvents: "none" }} />
 
       <style>{`
         @keyframes testimonials-scroll {
@@ -140,8 +161,8 @@ export function TestimonialsStrip() {
       `}</style>
 
       <div
-        className="testimonials-track flex gap-5"
-        style={{ width: "max-content" }}
+        className="testimonials-track flex"
+        style={{ width: "max-content", gap: "20px", paddingLeft: "80px" }}
       >
         {allItems.map((item, i) => (
           <TestimonialCard key={i} item={item} />
