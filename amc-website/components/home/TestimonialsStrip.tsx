@@ -134,11 +134,10 @@ export function TestimonialsStrip() {
       aria-label="Avis clients Google"
     >
       {/* Titre */}
-      <div className="text-center mb-8">
-        <h2 style={{ fontSize: "22px", fontWeight: 700, color: "#1a1a1a", marginBottom: "6px" }}>
+      <div className="text-center mb-5">
+        <h2 style={{ fontSize: "22px", fontWeight: 700, color: "#1a1a1a" }}>
           Ils nous font confiance
         </h2>
-        <p style={{ fontSize: "14px", color: "#888888" }}>4,6 étoiles · 13 avis Google</p>
       </div>
 
       {/* Fade left */}
