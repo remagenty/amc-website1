@@ -1,25 +1,38 @@
 import Link from "next/link";
-import { IconArrowRight, IconSearch } from "@/components/ui/Icons";
+import { IconArrowRight } from "@/components/ui/Icons";
 
 export default function NotFound() {
   return (
-    <div className="min-h-[70vh] flex items-center justify-center bg-amc-cream">
-      <div className="text-center max-w-md mx-auto px-4">
-        <div className="text-8xl font-black text-amc-yellow mb-4">404</div>
-        <h1 className="text-2xl font-bold text-amc-text mb-3">
+    <div className="min-h-[70vh] flex items-center justify-center bg-amc-cream px-4">
+      <div className="text-center max-w-lg mx-auto">
+        {/* Logo */}
+        <div className="flex justify-center mb-8">
+          <img
+            src="/images/logo-amc.png"
+            alt="AMC — Alpes Matériel Compact"
+            className="h-16 w-auto object-contain"
+          />
+        </div>
+
+        {/* Titre */}
+        <h1 className="text-3xl sm:text-4xl font-black text-amc-text mb-3">
           Page introuvable
         </h1>
-        <p className="text-amc-text-secondary text-sm leading-relaxed mb-8">
-          La page que vous recherchez n'existe pas ou a été déplacée.
-          Utilisez notre catalogue pour trouver le matériel dont vous avez besoin.
+
+        {/* Sous-titre */}
+        <p className="text-amc-text-secondary text-base leading-relaxed mb-10">
+          Cette page n&apos;existe pas ou a été déplacée.
         </p>
-        <div className="flex flex-col sm:flex-row gap-3 justify-center">
-          <Link href="/actualites" className="btn-primary rounded-lg">
-            <IconSearch size={16} />
-            Actualités & Expertise
+
+        {/* CTAs */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Link href="/" className="btn-outline rounded-xl px-6 py-3 font-semibold inline-flex items-center gap-2 justify-center">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+            Retour à l&apos;accueil
           </Link>
-          <Link href="/" className="btn-secondary rounded-lg">
-            Retour à l'accueil <IconArrowRight size={16} />
+          <Link href="/catalogue" className="btn-primary rounded-xl px-6 py-3 inline-flex items-center gap-2 justify-center">
+            Voir le catalogue
+            <IconArrowRight size={16} />
           </Link>
         </div>
       </div>
