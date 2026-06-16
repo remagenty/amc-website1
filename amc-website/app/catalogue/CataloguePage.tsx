@@ -2,9 +2,10 @@
 
 import { useState, useMemo } from "react";
 import { getMachines, getCatalogueCategories, getCatalogueBrands } from "@/lib/data";
+import { getGammeFabricantUrl } from "@/lib/gammes";
 import { ProductCard } from "@/components/ui/ProductCard";
 import { FilterSidebar } from "@/components/catalogue/FilterSidebar";
-import { IconFilter } from "@/components/ui/Icons";
+import { IconFilter, IconExternalLink } from "@/components/ui/Icons";
 import type { Product } from "@/types";
 
 const SORT_OPTIONS = [
@@ -147,6 +148,14 @@ export function CataloguePage({
     (filters.priceMin ? 1 : 0) +
     (filters.priceMax ? 1 : 0);
 
+  // Quand une seule catégorie est sélectionnée (ex: venant de /gammes),
+  // on affiche son nom en titre et, si disponible, un lien vers la gamme du fabricant.
+  const singleCategorySlug = filters.categories.length === 1 ? filters.categories[0] : null;
+  const singleCategoryLabel = singleCategorySlug
+    ? ALL_CATEGORIES_STABLE.find((c) => c.id === singleCategorySlug)?.label ?? null
+    : null;
+  const gammeFabricantUrl = singleCategorySlug ? getGammeFabricantUrl(singleCategorySlug) : "";
+
   return (
     <div className="min-h-screen bg-amc-cream">
       {/* Breadcrumb */}
@@ -164,21 +173,35 @@ export function CataloguePage({
 
       <div className="container-amc py-8">
         {/* Header */}
-        <div className="mb-8">
-          <h1 className="text-2xl md:text-3xl font-bold text-amc-text">
-            {filters.status === "occasion"
-              ? "Matériels d'occasion certifiés SE+"
-              : filters.status === "neuf"
-              ? "Matériels neufs de chantier"
-              : "Catalogue matériels de chantier"}
-          </h1>
-          <p className="text-amc-text-secondary mt-2 text-sm">
-            {filters.status === "occasion"
-              ? "Toutes nos machines d'occasion sont inspectées et certifiées par nos techniciens SE+"
-              : filters.status === "neuf"
-              ? `Gamme neuve disponible — Wacker Neuson, Magni, Promove Demolition`
-              : `${ALL_MACHINES.length} machines — Wacker Neuson, Magni, Promove Demolition`}
-          </p>
+        <div className="mb-8 flex flex-wrap items-start justify-between gap-4">
+          <div>
+            <h1 className="text-2xl md:text-3xl font-bold text-amc-text">
+              {singleCategoryLabel
+                ? singleCategoryLabel
+                : filters.status === "occasion"
+                ? "Matériels d'occasion certifiés SE+"
+                : filters.status === "neuf"
+                ? "Matériels neufs de chantier"
+                : "Catalogue matériels de chantier"}
+            </h1>
+            <p className="text-amc-text-secondary mt-2 text-sm">
+              {filters.status === "occasion"
+                ? "Toutes nos machines d'occasion sont inspectées et certifiées par nos techniciens SE+"
+                : filters.status === "neuf"
+                ? `Gamme neuve disponible — Wacker Neuson, Magni, Promove Demolition`
+                : `${ALL_MACHINES.length} machines — Wacker Neuson, Magni, Promove Demolition`}
+            </p>
+          </div>
+          {singleCategoryLabel && gammeFabricantUrl && (
+            <a
+              href={gammeFabricantUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-outline rounded-lg inline-flex items-center gap-2 whitespace-nowrap"
+            >
+              Voir la gamme entière <IconExternalLink size={14} />
+            </a>
+          )}
         </div>
 
         {/* Toolbar — search moved into filter sidebar */}

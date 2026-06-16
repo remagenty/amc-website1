@@ -86,7 +86,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     subtitle:
       "Spécialiste de la vente de matériel de chantier en Rhône-Alpes. Compacteurs, dumpers, pelles, télescopiques et équipements de démolition.",
     ctaLabel: "Découvrir nos machines",
-    ctaHref: "/catalogue",
+    ctaHref: "/gammes",
     ctaSecondaryLabel: "Demander un devis",
     ctaSecondaryHref: "/contact?type=devis",
     image: "/images/Slide-1.jpg",

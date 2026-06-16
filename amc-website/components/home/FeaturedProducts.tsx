@@ -77,7 +77,7 @@ export function FeaturedProducts() {
 
         {/* CTA — tous écrans */}
         <div className="mt-10 text-center">
-          <Link href="/catalogue" className="btn-primary rounded-lg inline-flex items-center gap-2 px-8 py-3 text-base font-bold">
+          <Link href="/gammes" className="btn-primary rounded-lg inline-flex items-center gap-2 px-8 py-3 text-base font-bold">
             Voir tout le catalogue <IconArrowRight size={16} />
           </Link>
         </div>

@@ -281,7 +281,7 @@ export function Header() {
                   className="flex items-center gap-1.5 pl-5 pr-2 py-2 rounded-full text-sm font-semibold transition-all"
                   style={{ backgroundColor: "#FFD500", color: "#000000" }}
                 >
-                  <Link href="/catalogue" onClick={closeMenu}>
+                  <Link href="/gammes" onClick={closeMenu}>
                     Nos matériels
                   </Link>
                   <button
@@ -451,7 +451,7 @@ export function Header() {
                         </li>
                       ))}
                     </ul>
-                    <Link href="/catalogue" className="mt-5 btn-primary text-sm w-full justify-center" onClick={closeMenu}>
+                    <Link href="/gammes" className="mt-5 btn-primary text-sm w-full justify-center" onClick={closeMenu}>
                       Voir tous nos matériels <IconArrowRight size={13} />
                     </Link>
                   </div>
@@ -535,7 +535,7 @@ export function Header() {
               </form>
               <nav className="space-y-1">
                 {[
-                  { label: "Nos matériels", href: "/catalogue" },
+                  { label: "Nos matériels", href: "/gammes" },
                   { label: "Matériel neuf", href: "/catalogue" },
                   { label: "Matériel occasion", href: "/occasion" },
                   { label: "Wacker Neuson", href: "/partenaires/wacker-neuson" },

@@ -187,7 +187,7 @@ export default function AProposPage() {
             au service de vos chantiers.
           </p>
           <div className="flex flex-wrap gap-3">
-            <Link href="/catalogue" className="btn-primary">
+            <Link href="/gammes" className="btn-primary">
               Découvrir nos matériels <IconArrowRight size={16} />
             </Link>
             <PhoneLink className="btn-outline">
