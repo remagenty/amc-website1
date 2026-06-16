@@ -469,12 +469,6 @@ export default function AProposPage() {
                     Les livraisons et interventions en dehors de la région Rhône-Alpes sont
                     étudiées au cas par cas. Contactez-nous pour un devis de transport.
                   </p>
-                  <div className="mt-4 p-3 bg-amber-50 border border-dashed border-amber-300 rounded-xl">
-                    <Todo label="ajouter les km² exacts" />
-                    <p className="text-xs text-amber-700 mt-1.5">
-                      Renseigner la surface exacte de la zone couverte.
-                    </p>
-                  </div>
                 </div>
               </div>
             </div>
