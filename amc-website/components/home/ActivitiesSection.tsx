@@ -45,7 +45,7 @@ const ACTIVITIES = [
 
 export function ActivitiesSection() {
   return (
-    <section className="section-padding bg-amc-cream" aria-labelledby="activities-title">
+    <section className="section-padding bg-white" aria-labelledby="activities-title">
       <div className="container-amc">
         <div className="text-center mb-12">
           <h2 id="activities-title" className="section-title">

@@ -26,7 +26,7 @@ export function FeaturedProducts() {
   };
 
   return (
-    <section className="section-padding bg-amc-cream" aria-labelledby="featured-title">
+    <section className="section-padding bg-white" aria-labelledby="featured-title">
       <div className="container-amc">
         <div className="flex items-end justify-between mb-10">
           <div>

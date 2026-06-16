@@ -11,7 +11,8 @@ const BRAND_LOGOS: Record<string, string> = {
 export function PartnersSection() {
   return (
     <section
-      className="bg-amc-cream pt-16 pb-10 md:pt-20 md:pb-12 lg:pt-24 lg:pb-14"
+      className="pt-16 pb-10 md:pt-20 md:pb-12 lg:pt-24 lg:pb-14"
+      style={{ backgroundColor: "#F5F4EF" }}
       aria-labelledby="partners-title"
     >
       <div className="container-amc">

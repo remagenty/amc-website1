@@ -16,7 +16,7 @@ const ICONS: Record<string, React.ReactNode> = {
 
 export function WhyChooseSection() {
   return (
-    <section className="section-padding bg-amc-cream" aria-labelledby="why-title">
+    <section className="section-padding" style={{ backgroundColor: "#F5F4EF" }} aria-labelledby="why-title">
       <div className="container-amc">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left: content */}
