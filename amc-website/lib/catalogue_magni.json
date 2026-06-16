@@ -380,7 +380,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/products/placeholder-magni.svg",
+        "image_principale": "/images/machines/magni/magni-rth-6-30.png",
         "images": [],
         "video": null
       },
@@ -435,7 +435,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/products/placeholder-magni.svg",
+        "image_principale": "/images/machines/magni/magni-rth-6-26.png",
         "images": [],
         "video": null
       },
@@ -920,7 +920,7 @@
         "financement_disponible": true
       },
       "medias": {
-        "image_principale": "/images/products/placeholder-magni.svg",
+        "image_principale": "/images/machines/magni/magni-th-6-20.png",
         "images": [],
         "video": null
       },
