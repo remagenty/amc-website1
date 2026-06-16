@@ -111,7 +111,7 @@ export function ProductDetail({
             <div className="bg-white rounded-2xl shadow-card overflow-hidden">
               <div className="relative aspect-[4/3] bg-white">
                 <Image
-                  src={product.images[activeImage] || "/images/placeholder-product.jpg"}
+                  src={product.images[activeImage] || "/images/products/placeholder-machine.svg"}
                   alt={`${product.name} — vue ${activeImage + 1}`}
                   fill
                   className="object-contain p-3"

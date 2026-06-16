@@ -48,7 +48,7 @@ export const BRANDS: BrandInfo[] = [
     id: "wacker-neuson",
     name: "Wacker Neuson",
     slug: "wacker-neuson",
-    logo: "/images/brands/wacker-neuson.svg",
+    logo: "/images/logo-wacker.png",
     tagline: "Partenaire officiel — Gamme complète",
     description:
       "Leader mondial des équipements compacts de construction. AMC est distributeur officiel Wacker Neuson pour la région Rhône-Alpes, proposant l'ensemble de la gamme : compacteurs, dumpers, pelles, plaques vibrantes et bien plus.",
@@ -59,7 +59,7 @@ export const BRANDS: BrandInfo[] = [
     id: "magni",
     name: "Magni",
     slug: "magni",
-    logo: "/images/brands/magni.svg",
+    logo: "/images/logo-magni.png",
     tagline: "Spécialiste télescopiques",
     description:
       "Magni est le spécialiste des chariots télescopiques rotatifs haute performance. Des machines robustes et précises pour la manutention et la construction.",
@@ -70,7 +70,7 @@ export const BRANDS: BrandInfo[] = [
     id: "promove-demolition",
     name: "Promove Demolition",
     slug: "promove-demolition",
-    logo: "/images/brands/promove.svg",
+    logo: "/images/logo-promove.jpg",
     tagline: "Expert démolition",
     description:
       "Promove Demolition propose une gamme complète d'outils de démolition hydrauliques haute qualité : brise-roches, cisailles, pinces, pulvérisateurs et godets criblants.",
@@ -128,7 +128,7 @@ export const PRODUCTS: Product[] = [
     status: "neuf",
     priceOnRequest: false,
     price: 28500,
-    images: ["/images/products/dumper-dw60-1.jpg", "/images/products/dumper-dw60-2.jpg"],
+    images: ["/images/products/placeholder-wn.svg"],
     shortDescription: "Dumper articulé 6 tonnes — idéal pour les chantiers exigus",
     description:
       "Le DW60 de Wacker Neuson est un dumper articulé de 6 tonnes offrant une excellente maniabilité sur les chantiers confinés. Son moteur diesel Stage V garantit des émissions réduites et une performance optimale.",
@@ -159,7 +159,7 @@ export const PRODUCTS: Product[] = [
     status: "neuf",
     priceOnRequest: false,
     price: 42000,
-    images: ["/images/products/compacteur-rd27-1.jpg"],
+    images: ["/images/products/placeholder-wn.svg"],
     shortDescription: "Rouleau tandem 2,7 tonnes — compactage haute performance",
     description:
       "Le RD27-120 est un rouleau tandem de 2,7 tonnes pour le compactage de couches de roulement et de fondations. Système de vibration à grande amplitude pour un compactage optimal.",
@@ -187,7 +187,7 @@ export const PRODUCTS: Product[] = [
     category: "pelles",
     status: "neuf",
     priceOnRequest: true,
-    images: ["/images/products/pelle-ez17e-1.jpg"],
+    images: ["/images/catalogue/wacker-neuson-ez17e.png"],
     shortDescription: "Pelle électrique 1,7 tonne — zéro émission",
     description:
       "L'EZ17e est la première pelle compacte 100% électrique de Wacker Neuson. Idéale pour les chantiers urbains et les espaces confinés, elle offre zéro émission et un niveau sonore réduit.",
@@ -215,7 +215,7 @@ export const PRODUCTS: Product[] = [
     category: "telescopiques",
     status: "neuf",
     priceOnRequest: true,
-    images: ["/images/products/telescopique-rth518-1.jpg"],
+    images: ["/images/machines/magni/magni-rth-5-18.png"],
     shortDescription: "Télescopique rotatif 5 tonnes — hauteur 18 mètres",
     description:
       "Le Magni RTH 5.18 est un chariot télescopique rotatif de 5 tonnes avec une hauteur de levage de 18 mètres. Sa tourelle rotative 360° lui confère une polyvalence maximale sur chantier.",
@@ -245,7 +245,7 @@ export const PRODUCTS: Product[] = [
     status: "neuf",
     priceOnRequest: false,
     price: 8900,
-    images: ["/images/products/brise-roche-hb2000-1.jpg"],
+    images: ["/images/products/placeholder-promove.svg"],
     shortDescription: "Brise-roche hydraulique 2 000 kg — haute énergie d'impact",
     description:
       "Le brise-roche hydraulique HB 2000 de Promove Demolition est conçu pour les applications de démolition intensives. Il offre une énergie d'impact élevée avec une faible consommation hydraulique.",
@@ -274,7 +274,7 @@ export const PRODUCTS: Product[] = [
     status: "occasion",
     priceOnRequest: false,
     price: 14500,
-    images: ["/images/products/dumper-dw30-occ-1.jpg"],
+    images: ["/images/catalogue/wacker-neuson-dw30.png"],
     shortDescription: "Dumper articulé 3 tonnes — occasion certifiée",
     description:
       "Dumper articulé Wacker Neuson DW30 d'occasion, révisé et certifié par nos techniciens. Idéal pour les petits chantiers et zones d'accès difficile.",
@@ -305,7 +305,7 @@ export const PRODUCTS: Product[] = [
     status: "occasion",
     priceOnRequest: false,
     price: 11200,
-    images: ["/images/products/compacteur-rd12-occ-1.jpg"],
+    images: ["/images/products/placeholder-wn.svg"],
     shortDescription: "Rouleau tandem 1,2 tonne — occasion révisée",
     description:
       "Rouleau tandem Wacker Neuson RD12 d'occasion en excellent état. Inspecté et révisé dans nos ateliers certifiés SE+.",
@@ -335,7 +335,7 @@ export const PRODUCTS: Product[] = [
     category: "telescopiques",
     status: "neuf",
     priceOnRequest: true,
-    images: ["/images/products/telescopique-rth625-1.jpg"],
+    images: ["/images/products/placeholder-magni.svg"],
     shortDescription: "Télescopique rotatif 6 tonnes — hauteur 25 mètres",
     description:
       "Le Magni RTH 6.25, version haute portée de la gamme RTH. Capacité 6 tonnes et hauteur de levage 25 mètres pour les chantiers les plus exigeants.",

@@ -121,7 +121,7 @@ function SimilarCard({ machine }: { machine: WnMachine }) {
           />
         ) : (
           <Image
-            src="/images/products/placeholder-wn.jpg"
+            src="/images/products/placeholder-wn.svg"
             alt=""
             fill
             className="object-contain p-4 opacity-40"
@@ -165,7 +165,7 @@ export function WnProductDetail({ machine, similar, categorySlug, categoryLabel 
   const hero = machine.medias.image_principale_local ?? machine.medias.image_principale;
   const gallery = machine.medias.images_local ?? machine.medias.images;
   const allImages = [hero, ...gallery].filter(Boolean).map((p) => encodeURI(p as string));
-  const displayImages = allImages.length > 0 ? allImages : ["/images/products/placeholder-wn.jpg"];
+  const displayImages = allImages.length > 0 ? allImages : ["/images/products/placeholder-wn.svg"];
 
   const specEntries = Object.entries(machine.caracteristiques_techniques).filter(
     ([, v]) => v !== null && v !== undefined
@@ -213,7 +213,7 @@ export function WnProductDetail({ machine, similar, categorySlug, categoryLabel 
                   priority
                   sizes="(max-width: 1024px) 100vw, 40vw"
                   onError={(e) => {
-                    (e.target as HTMLImageElement).src = "/images/products/placeholder-wn.jpg";
+                    (e.target as HTMLImageElement).src = "/images/products/placeholder-wn.svg";
                   }}
                 />
                 {/* Status badges */}
@@ -258,7 +258,7 @@ export function WnProductDetail({ machine, similar, categorySlug, categoryLabel 
                         className="object-cover"
                         sizes="64px"
                         onError={(e) => {
-                          (e.target as HTMLImageElement).src = "/images/products/placeholder-wn.jpg";
+                          (e.target as HTMLImageElement).src = "/images/products/placeholder-wn.svg";
                         }}
                       />
                     </button>

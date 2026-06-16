@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Notre équipe | AMC — Alpes Matériel Compact",
     description: "Découvrez l'équipe AMC, distributeur officiel Wacker Neuson, Magni et Promove en Rhône-Alpes.",
-    images: [{ url: "/images/equipe-amc.png" }],
+    images: [{ url: "/images/about/equipe-amc.png" }],
     type: "website",
     url: `https://www.amc-savoie.fr/a-propos`,
     siteName: "AMC — Alpes Matériel Compact",
