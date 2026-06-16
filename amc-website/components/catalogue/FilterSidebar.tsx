@@ -43,7 +43,7 @@ export interface FilterSidebarProps {
 
 const QUICK_TAGS: Array<{ label: string; emoji: string; categories: string[] }> = [
   {
-    label: "Téléhandler",
+    label: "Chariot télescopique",
     emoji: "🏗️",
     categories: ["telehandlers-rotatifs", "telehandlers-fixes", "telehandlers-agricoles"],
   },

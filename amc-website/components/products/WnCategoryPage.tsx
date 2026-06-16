@@ -10,7 +10,7 @@ import {
   getAllWnMachines,
   getWnCategories,
 } from "@/lib/wn-catalogue";
-import { getCatalogueBrands } from "@/lib/data";
+import { getCatalogueBrands, ALL_CATEGORY_LABELS } from "@/lib/data";
 import {
   IconSearch,
   IconFilter,
@@ -261,7 +261,7 @@ export function WnCategoryPage({
   const [sort, setSort] = useState("featured");
   const [mobileFiltres, setMobileFiltres] = useState(false);
 
-  const categoryLabel = CATEGORY_LABELS[categorySlug] ?? categorySlug;
+  const categoryLabel = ALL_CATEGORY_LABELS[categorySlug] ?? CATEGORY_LABELS[categorySlug] ?? categorySlug;
   const currentBrandId = brandIdFromMarque(machines[0]?.marque ?? "");
 
   // ── Dynamic category counts (all machines, filtered by status + availability) ──

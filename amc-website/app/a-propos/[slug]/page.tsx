@@ -85,15 +85,15 @@ const MEMBERS = {
     name: "Jean-Pierre",
     role: "Commercial",
     experience: "XX ans d'expérience",
-    specialites: ["Téléhandlers Magni", "Mini-pelles WN", "Dumpers", "Conseil"],
+    specialites: ["Chariots télescopiques et nacelles Magni", "Mini-pelles WN", "Dumpers", "Conseil"],
     roleTitle: "Spécialiste Wacker Neuson & Magni",
     roleText:
-      "Mon domaine de prédilection : les matériels de levage et de terrassement. Je vous accompagne de A à Z dans le choix de vos téléhandlers Magni et de vos machines Wacker Neuson — mini-pelles, dumpers, chargeuses. Je prends le temps de comprendre vos chantiers pour vous proposer le matériel le plus adapté.",
-    competences: ["Téléhandlers Magni", "Mini-pelles", "Dumpers", "Conseil technique", "Devis"],
+      "Mon domaine de prédilection : les matériels de levage et de terrassement. Je vous accompagne de A à Z dans le choix de vos chariots télescopiques et nacelles Magni et de vos machines Wacker Neuson — mini-pelles, dumpers, chargeuses. Je prends le temps de comprendre vos chantiers pour vous proposer le matériel le plus adapté.",
+    competences: ["Chariots télescopiques et nacelles Magni", "Mini-pelles", "Dumpers", "Conseil technique", "Devis"],
     domaines: [
       {
         icon: IconStar,
-        titre: "Téléhandlers Magni",
+        titre: "Chariots télescopiques et nacelles Magni",
         texte: "Expert de la gamme complète Magni : rotatifs, fixes, agricoles. Je trouve le bon ratio hauteur/portée pour votre chantier.",
       },
       {

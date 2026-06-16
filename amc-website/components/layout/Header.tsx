@@ -49,7 +49,7 @@ const MATERIELS_CATEGORIES = [
   },
   {
     id: "telehandlers",
-    label: "Téléhandlers",
+    label: "Chariots télescopiques et nacelles",
     href: "/materiels/telehandlers-rotatifs",
     subs: [
       { label: "Rotatifs", href: "/materiels/telehandlers-rotatifs" },

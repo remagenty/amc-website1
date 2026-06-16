@@ -71,7 +71,7 @@ const MARQUES = [
     logo: "/images/logo-magni.png",
     name: "Magni",
     alt: "Logo Magni",
-    desc: "Habilitation constructeur pour les téléhandlers rotatifs et fixes Magni : maintenance, réparation et diagnostic.",
+    desc: "Habilitation constructeur pour les chariots télescopiques et nacelles rotatifs et fixes Magni : maintenance, réparation et diagnostic.",
     color: "border-blue-200 bg-blue-50/30",
   },
   {
