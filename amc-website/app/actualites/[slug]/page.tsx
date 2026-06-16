@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ARTICLES, getArticleBySlug, getRelatedArticles } from "../articles-data";
+import { PhoneLink } from "@/components/ui/PhoneLink";
 
 interface Props {
   params: { slug: string };
@@ -215,12 +216,9 @@ export default function ArticlePage({ params }: Props) {
               >
                 Parler à un expert
               </Link>
-              <a
-                href="tel:+33426784390"
-                className="flex items-center justify-center gap-2 w-full py-2.5 rounded-lg text-sm font-semibold text-white border border-white/30 hover:bg-white/10 transition-colors mt-2"
-              >
+              <PhoneLink className="flex items-center justify-center gap-2 w-full py-2.5 rounded-lg text-sm font-semibold text-white border border-white/30 hover:bg-white/10 transition-colors mt-2">
                 04 26 78 43 90
-              </a>
+              </PhoneLink>
             </div>
 
             {/* Related articles */}

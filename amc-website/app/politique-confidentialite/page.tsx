@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { PhoneLink } from "@/components/ui/PhoneLink";
 
 export const metadata: Metadata = {
   title: { absolute: "Politique de confidentialité | AMC" },
@@ -52,7 +53,7 @@ export default function PolitiqueConfidentialitePage() {
               <p>ZAC D&apos;Orsan, 330 Rue du Mont Blanc<br />74540 Saint-Félix — Haute-Savoie, France</p>
               <p>
                 Téléphone :{" "}
-                <a href="tel:+33426784390" className="text-amc-yellow-dark hover:underline">04 26 78 43 90</a>
+                <PhoneLink className="text-amc-yellow-dark hover:underline">04 26 78 43 90</PhoneLink>
               </p>
               <p>
                 Email :{" "}

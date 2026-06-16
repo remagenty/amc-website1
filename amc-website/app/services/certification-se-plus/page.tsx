@@ -11,6 +11,7 @@ import {
   IconZap,
   IconCog,
 } from "@/components/ui/Icons";
+import { PhoneLink } from "@/components/ui/PhoneLink";
 
 export const metadata: Metadata = {
   title: { absolute: "Certification SE+ Wacker Neuson | AMC Saint-Félix" },
@@ -117,9 +118,9 @@ export default function CertificationSePlusPage() {
             <Link href="/devis?type=sav" className="btn-primary">
               Prendre rendez-vous SAV <IconArrowRight size={16} />
             </Link>
-            <a href="tel:+33426784390" className="btn-outline">
+            <PhoneLink className="btn-outline">
               <IconPhone size={16} /> Appeler l&apos;atelier
-            </a>
+            </PhoneLink>
           </div>
         </div>
       </section>
@@ -311,9 +312,9 @@ export default function CertificationSePlusPage() {
               <Link href="/devis?type=sav" className="btn-primary">
                 Prendre rendez-vous SAV <IconArrowRight size={16} />
               </Link>
-              <a href="tel:+33426784390" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border-2 border-amc-text text-amc-text font-semibold hover:bg-amc-text hover:text-white transition-colors">
+              <PhoneLink className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border-2 border-amc-text text-amc-text font-semibold hover:bg-amc-text hover:text-white transition-colors">
                 <IconPhone size={16} /> 04 26 78 43 90
-              </a>
+              </PhoneLink>
             </div>
           </ScrollReveal>
         </div>

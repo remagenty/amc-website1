@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { SEBadge } from "@/components/ui/SEBadge";
+import { PhoneLink } from "@/components/ui/PhoneLink";
 import {
   IconMapPin,
   IconPhone,
@@ -64,10 +65,10 @@ export function Footer() {
                   Haute-Savoie
                 </span>
               </div>
-              <a href="tel:+33426784390" className="flex items-center gap-2 hover:text-white transition-colors">
+              <PhoneLink className="flex items-center gap-2 hover:text-white transition-colors">
                 <IconPhone size={16} className="text-amc-yellow flex-shrink-0" />
                 04 26 78 43 90
-              </a>
+              </PhoneLink>
               <a href="mailto:contact@amc-savoie.fr" className="flex items-center gap-2 hover:text-white transition-colors">
                 <IconMail size={16} className="text-amc-yellow flex-shrink-0" />
                 contact@amc-savoie.fr

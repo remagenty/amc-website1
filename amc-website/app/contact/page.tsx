@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { IconMapPin, IconPhone, IconMail, IconClock, IconArrowRight } from "@/components/ui/Icons";
 import { ContactSimpleForm } from "./ContactSimpleForm";
+import { PhoneLink } from "@/components/ui/PhoneLink";
 
 const GMAPS_EMBED =
   "https://www.google.com/maps?ll=45.79640,5.97107" +
@@ -78,12 +79,9 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-semibold text-amc-text">Téléphone</p>
-                    <a
-                      href="tel:+33426784390"
-                      className="text-amc-text-secondary hover:text-amc-yellow-dark transition-colors mt-1 block"
-                    >
+                    <PhoneLink className="text-amc-text-secondary hover:text-amc-yellow-dark transition-colors mt-1 block">
                       04 26 78 43 90
-                    </a>
+                    </PhoneLink>
                   </div>
                 </div>
 

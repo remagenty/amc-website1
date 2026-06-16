@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { PhoneLink } from "@/components/ui/PhoneLink";
 
 type Props = {
   status: "success" | "error";
@@ -67,9 +68,9 @@ export function FormConfirmation({ status, name, onReset, commercialName }: Prop
           <p style={{ fontSize: "16px", color: "#444444", lineHeight: 1.75 }}>
             Nous n&apos;avons pas pu traiter votre demande.<br />
             Veuillez nous contacter directement au{" "}
-            <a href="tel:+33426784390" className="font-semibold hover:underline">
+            <PhoneLink className="font-semibold hover:underline">
               04 26 78 43 90
-            </a>{" "}
+            </PhoneLink>{" "}
             ou par email à{" "}
             <a href="mailto:contact@amc-savoie.fr" className="font-semibold hover:underline">
               contact@amc-savoie.fr

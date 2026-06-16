@@ -11,6 +11,7 @@ import {
   IconCog,
   IconZap,
 } from "@/components/ui/Icons";
+import { PhoneLink } from "@/components/ui/PhoneLink";
 
 export const metadata: Metadata = {
   title: { absolute: "Maintenance préventive matériels chantier | AMC" },
@@ -104,9 +105,9 @@ export default function MaintenancePage() {
             <Link href="/devis?type=maintenance" className="btn-primary">
               Demander un contrat d&apos;entretien <IconArrowRight size={16} />
             </Link>
-            <a href="tel:+33426784390" className="btn-outline">
+            <PhoneLink className="btn-outline">
               <IconPhone size={16} /> Appeler l&apos;atelier
-            </a>
+            </PhoneLink>
           </div>
         </div>
       </section>

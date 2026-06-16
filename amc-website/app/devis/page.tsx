@@ -4,6 +4,7 @@ import { ContactForm } from "./ContactForm";
 import { IconMapPin, IconPhone, IconMail, IconClock } from "@/components/ui/Icons";
 import { SEBadge } from "@/components/ui/SEBadge";
 import { MapInteractive } from "@/components/ui/MapInteractive";
+import { PhoneLink } from "@/components/ui/PhoneLink";
 
 export const metadata: Metadata = {
   title: { absolute: "Demande de devis | AMC — Alpes Matériel Compact" },
@@ -58,9 +59,9 @@ export default function DevisPage() {
                   <IconPhone size={18} className="text-amc-yellow mt-0.5 flex-shrink-0" />
                   <div>
                     <p className="font-medium text-amc-text">Téléphone</p>
-                    <a href="tel:+33426784390" className="text-amc-text-secondary hover:text-amc-yellow-dark transition-colors mt-0.5 block">
+                    <PhoneLink className="text-amc-text-secondary hover:text-amc-yellow-dark transition-colors mt-0.5 block">
                       04 26 78 43 90
-                    </a>
+                    </PhoneLink>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">

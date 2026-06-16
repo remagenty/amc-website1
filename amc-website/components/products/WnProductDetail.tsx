@@ -17,6 +17,7 @@ import {
   IconCog,
   IconDownload,
 } from "@/components/ui/Icons";
+import { PhoneLink } from "@/components/ui/PhoneLink";
 
 // ── Spec label map ────────────────────────────────────────────────────────────
 
@@ -582,10 +583,10 @@ export function WnProductDetail({ machine, similar, categorySlug, categoryLabel 
             >
               Demander un devis <IconArrowRight size={16} />
             </Link>
-            <a href="tel:+33426784390" className="btn-outline rounded-lg">
+            <PhoneLink className="btn-outline rounded-lg">
               <IconPhone size={16} />
               Appeler maintenant
-            </a>
+            </PhoneLink>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { PhoneLink } from "@/components/ui/PhoneLink";
 
 export const metadata: Metadata = {
   title: { absolute: "Conditions Générales de Vente | AMC" },
@@ -206,7 +207,7 @@ export default function CGVPage() {
               <p className="font-medium text-amc-text mb-1">Contact SAV</p>
               <p>
                 Téléphone :{" "}
-                <a href="tel:+33426784390" className="text-amc-yellow-dark hover:underline">04 26 78 43 90</a>
+                <PhoneLink className="text-amc-yellow-dark hover:underline">04 26 78 43 90</PhoneLink>
               </p>
               <p>
                 Email :{" "}

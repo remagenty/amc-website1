@@ -10,6 +10,7 @@ import {
   IconPhone,
   IconMapPin,
 } from "@/components/ui/Icons";
+import { PhoneLink } from "@/components/ui/PhoneLink";
 
 export const metadata: Metadata = {
   title: { absolute: "Service Après-Vente certifié SE+ | AMC" },
@@ -105,9 +106,9 @@ export default function SavPage() {
             <Link href="/devis?type=sav" className="btn-primary">
               Prendre rendez-vous <IconArrowRight size={16} />
             </Link>
-            <a href="tel:+33426784390" className="btn-outline">
+            <PhoneLink className="btn-outline">
               <IconPhone size={16} /> Appeler l&apos;atelier
-            </a>
+            </PhoneLink>
           </div>
         </div>
       </section>
@@ -249,13 +250,12 @@ export default function SavPage() {
               <Link href="/devis?type=sav" className="btn-primary">
                 Demander un devis SAV <IconArrowRight size={16} />
               </Link>
-              <a
-                href="tel:+33426784390"
+              <PhoneLink
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border-2 font-semibold hover:bg-black/5 transition-colors"
                 style={{ borderColor: "#1a1a1a", color: "#1a1a1a" }}
               >
                 <IconPhone size={16} /> 04 26 78 43 90
-              </a>
+              </PhoneLink>
             </div>
           </ScrollReveal>
         </div>

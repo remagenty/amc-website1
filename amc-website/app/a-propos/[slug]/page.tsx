@@ -16,6 +16,7 @@ import {
   IconZap,
   IconShield,
 } from "@/components/ui/Icons";
+import { PhoneLink } from "@/components/ui/PhoneLink";
 
 // ─── Données membres ──────────────────────────────────────────────────────────
 
@@ -270,9 +271,9 @@ export default function TeamMemberPage({ params }: { params: { slug: string } })
                 >
                   Envoyer un message <IconArrowRight size={16} />
                 </a>
-                <a href="tel:+33426784390" className="btn-secondary rounded-lg">
+                <PhoneLink className="btn-secondary rounded-lg">
                   <IconPhone size={16} /> 04 26 78 43 90
-                </a>
+                </PhoneLink>
               </div>
             </ScrollReveal>
           </div>

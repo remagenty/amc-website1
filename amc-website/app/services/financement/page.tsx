@@ -10,6 +10,7 @@ import {
   IconBadgeCheck,
   IconTruck,
 } from "@/components/ui/Icons";
+import { PhoneLink } from "@/components/ui/PhoneLink";
 
 export const metadata: Metadata = {
   title: { absolute: "Financement matériels de chantier | AMC" },
@@ -95,9 +96,9 @@ export default function FinancementPage() {
             <Link href="/devis?type=financement" className="btn-primary">
               Demander une étude de financement <IconArrowRight size={16} />
             </Link>
-            <a href="tel:+33426784390" className="btn-outline">
+            <PhoneLink className="btn-outline">
               <IconPhone size={16} /> Nous appeler
-            </a>
+            </PhoneLink>
           </div>
         </div>
       </section>

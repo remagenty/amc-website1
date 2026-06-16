@@ -11,6 +11,7 @@ import {
   IconPhone,
   IconUser,
 } from "@/components/ui/Icons";
+import { PhoneLink } from "@/components/ui/PhoneLink";
 
 export const metadata: Metadata = {
   title: { absolute: "Notre équipe | AMC — Alpes Matériel Compact" },
@@ -189,9 +190,9 @@ export default function AProposPage() {
             <Link href="/catalogue" className="btn-primary">
               Découvrir nos matériels <IconArrowRight size={16} />
             </Link>
-            <a href="tel:+33426784390" className="btn-outline">
+            <PhoneLink className="btn-outline">
               <IconPhone size={16} /> Nous appeler
-            </a>
+            </PhoneLink>
           </div>
         </div>
       </section>
@@ -496,12 +497,9 @@ export default function AProposPage() {
               <Link href="/contact" className="btn-primary">
                 Contacter l&apos;équipe <IconArrowRight size={16} />
               </Link>
-              <a
-                href="tel:+33426784390"
-                className="btn-outline !text-amc-text !border-amc-text hover:!bg-amc-text hover:!text-white"
-              >
+              <PhoneLink className="btn-outline !text-amc-text !border-amc-text hover:!bg-amc-text hover:!text-white">
                 <IconPhone size={16} /> 04 26 78 43 90
-              </a>
+              </PhoneLink>
             </div>
           </ScrollReveal>
         </div>
