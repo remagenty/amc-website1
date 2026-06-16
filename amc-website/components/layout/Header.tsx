@@ -261,14 +261,21 @@ export function Header() {
 
               {/* Nos matériels */}
               <div className="relative flex items-center h-full">
-                <button
-                  className="flex items-center gap-1.5 px-5 py-2 rounded-full text-sm font-semibold transition-all"
+                <div
+                  className="flex items-center gap-1.5 pl-5 pr-2 py-2 rounded-full text-sm font-semibold transition-all"
                   style={{ backgroundColor: "#FFD500", color: "#000000" }}
-                  onClick={() => toggleMenu("materiels")}
                 >
-                  Nos matériels
-                  <IconChevronDown size={14} className={`transition-transform duration-200 ${activeMenu === "materiels" ? "rotate-180" : ""}`} />
-                </button>
+                  <Link href="/catalogue" onClick={closeMenu}>
+                    Nos matériels
+                  </Link>
+                  <button
+                    aria-label="Afficher les catégories de matériels"
+                    className="flex items-center"
+                    onClick={() => toggleMenu("materiels")}
+                  >
+                    <IconChevronDown size={14} className={`transition-transform duration-200 ${activeMenu === "materiels" ? "rotate-180" : ""}`} />
+                  </button>
+                </div>
               </div>
 
               {/* Nos services */}
@@ -426,7 +433,7 @@ export function Header() {
                         </li>
                       ))}
                     </ul>
-                    <Link href="/materiels" className="mt-5 btn-primary text-sm w-full justify-center" onClick={closeMenu}>
+                    <Link href="/catalogue" className="mt-5 btn-primary text-sm w-full justify-center" onClick={closeMenu}>
                       Voir tous nos matériels <IconArrowRight size={13} />
                     </Link>
                   </div>
@@ -510,8 +517,8 @@ export function Header() {
               </form>
               <nav className="space-y-1">
                 {[
-                  { label: "Nos matériels", href: "/materiels" },
-                  { label: "Matériel neuf", href: "/materiels" },
+                  { label: "Nos matériels", href: "/catalogue" },
+                  { label: "Matériel neuf", href: "/catalogue" },
                   { label: "Matériel occasion", href: "/occasion" },
                   { label: "Wacker Neuson", href: "/partenaires/wacker-neuson" },
                   { label: "Magni", href: "/partenaires/magni" },
@@ -522,7 +529,7 @@ export function Header() {
                   { label: "Contact & Devis", href: "/contact" },
                 ].map((link) => (
                   <Link
-                    key={link.href}
+                    key={link.label}
                     href={link.href}
                     className="flex items-center justify-between py-3 px-4 rounded-lg hover:bg-gray-50 text-sm font-medium text-amc-text"
                   >

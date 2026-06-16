@@ -499,7 +499,7 @@ export function WnCategoryPage({
             <ol className="flex items-center gap-2 flex-wrap">
               <li><Link href="/" className="hover:text-amc-yellow-dark">Accueil</Link></li>
               <li aria-hidden>/</li>
-              <li><Link href="/materiels" className="hover:text-amc-yellow-dark">Nos matériels</Link></li>
+              <li><Link href="/catalogue" className="hover:text-amc-yellow-dark">Nos matériels</Link></li>
               <li aria-hidden>/</li>
               <li className="font-medium text-amc-text">{categoryLabel}</li>
             </ol>

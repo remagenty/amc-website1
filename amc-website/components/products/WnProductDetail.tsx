@@ -183,7 +183,7 @@ export function WnProductDetail({ machine, similar, categorySlug, categoryLabel 
             <ol className="flex items-center gap-2 flex-wrap">
               <li><Link href="/" className="hover:text-amc-yellow-dark transition-colors">Accueil</Link></li>
               <li aria-hidden>/</li>
-              <li><Link href="/materiels" className="hover:text-amc-yellow-dark transition-colors">Nos matériels</Link></li>
+              <li><Link href="/catalogue" className="hover:text-amc-yellow-dark transition-colors">Nos matériels</Link></li>
               <li aria-hidden>/</li>
               <li>
                 <Link href={`/materiels/${categorySlug}`} className="hover:text-amc-yellow-dark transition-colors">
