@@ -482,13 +482,13 @@ export default function AProposPage() {
       </section>
 
       {/* ── CTA FINAL ── */}
-      <section className="bg-amc-gray py-20">
+      <section className="bg-white py-20">
         <div className="container-amc text-center">
           <ScrollReveal from="bottom">
-            <h2 className="text-3xl font-black text-white mb-4">
+            <h2 className="text-3xl font-black mb-4" style={{ color: "#1a1a1a" }}>
               Travaillons ensemble
             </h2>
-            <p className="text-white/70 mb-8 max-w-lg mx-auto">
+            <p className="mb-8 max-w-lg mx-auto" style={{ color: "#444444" }}>
               Vous avez un projet, un besoin en matériel ou une question technique ?
               Notre équipe est disponible pour vous conseiller.
             </p>
@@ -496,7 +496,10 @@ export default function AProposPage() {
               <Link href="/contact" className="btn-primary">
                 Contacter l&apos;équipe <IconArrowRight size={16} />
               </Link>
-              <a href="tel:+33426784390" className="btn-outline">
+              <a
+                href="tel:+33426784390"
+                className="btn-outline !text-amc-text !border-amc-text hover:!bg-amc-text hover:!text-white"
+              >
                 <IconPhone size={16} /> 04 26 78 43 90
               </a>
             </div>
