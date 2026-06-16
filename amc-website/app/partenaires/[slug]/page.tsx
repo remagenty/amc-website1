@@ -55,9 +55,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+const BRAND_SALES_REP: Record<string, string> = {
+  "wacker-neuson": "jean-pierre",
+  magni: "valentin",
+  "promove-demolition": "valentin",
+};
+
 export default function PartnerPage({ params }: Props) {
   const brand = getBrandInfo(params.slug);
   if (!brand) notFound();
+
+  const salesRep = BRAND_SALES_REP[params.slug];
 
   const products = getProductsByBrand(params.slug);
   const categories = getCategoriesForBrand(params.slug);
@@ -182,7 +190,10 @@ export default function PartnerPage({ params }: Props) {
             Nos experts AMC, partenaires officiels {brand.name}, vous accompagnent dans le choix
             du matériel le mieux adapté à vos chantiers.
           </p>
-          <Link href="/devis?type=information" className="btn-primary rounded-lg">
+          <Link
+            href={`/devis?type=information&commercial=${salesRep}&marque=${brand.id}`}
+            className="btn-primary rounded-lg"
+          >
             Parler à un expert <IconArrowRight size={16} />
           </Link>
         </div>

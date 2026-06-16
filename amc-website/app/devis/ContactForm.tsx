@@ -16,6 +16,17 @@ const REQUEST_TYPES = [
   { value: "autre", label: "Autre demande" },
 ];
 
+const COMMERCIAL_NAMES: Record<string, string> = {
+  "jean-pierre": "Jean-Pierre",
+  valentin: "Valentin",
+};
+
+const BRAND_NAMES: Record<string, string> = {
+  "wacker-neuson": "Wacker Neuson",
+  magni: "Magni",
+  "promove-demolition": "Promove Demolition",
+};
+
 const INITIAL_FORM = {
   type: "devis",
   firstName: "",
@@ -26,17 +37,23 @@ const INITIAL_FORM = {
   materiel: "",
   message: "",
   consent: false,
+  commercial: "",
 };
 
 export function ContactForm() {
   const searchParams = useSearchParams();
   const defaultType = searchParams.get("type") ?? "devis";
   const defaultProduit = searchParams.get("produit") ?? "";
+  const commercialParam = searchParams.get("commercial") ?? "";
+  const marqueParam = searchParams.get("marque") ?? "";
+  const commercialName = COMMERCIAL_NAMES[commercialParam];
+  const brandName = BRAND_NAMES[marqueParam];
 
   const [form, setForm] = useState({
     ...INITIAL_FORM,
     type: defaultType,
     materiel: defaultProduit,
+    commercial: commercialParam,
   });
   const [status, setStatus] = useState<"success" | "error" | null>(null);
   const [loading, setLoading] = useState(false);
@@ -73,13 +90,22 @@ export function ContactForm() {
       <FormConfirmation
         status={status}
         name={`${form.firstName} ${form.lastName}`.trim()}
-        onReset={() => { setStatus(null); setForm({ ...INITIAL_FORM, type: defaultType, materiel: defaultProduit }); }}
+        commercialName={commercialName}
+        onReset={() => { setStatus(null); setForm({ ...INITIAL_FORM, type: defaultType, materiel: defaultProduit, commercial: commercialParam }); }}
       />
     );
   }
 
   return (
     <form onSubmit={handleSubmit} noValidate className="space-y-5">
+      {commercialName && (
+        <div className="px-4 py-3 rounded-lg bg-amc-yellow/10 border border-amc-yellow/30 text-sm text-amc-text">
+          Votre demande sera transmise à <strong>{commercialName}</strong>
+          {brandName ? `, notre expert ${brandName}` : ""}.
+        </div>
+      )}
+      <input type="hidden" name="commercial" value={form.commercial} />
+
       {/* Type de demande */}
       <div>
         <label className="block text-sm font-semibold text-amc-text mb-1.5">

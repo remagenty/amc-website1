@@ -6,9 +6,10 @@ type Props = {
   status: "success" | "error";
   name: string;
   onReset: () => void;
+  commercialName?: string;
 };
 
-export function FormConfirmation({ status, name, onReset }: Props) {
+export function FormConfirmation({ status, name, onReset, commercialName }: Props) {
   const isSuccess = status === "success";
   const borderColor = isSuccess ? "#FDC202" : "#C0392B";
   const iconBg = isSuccess ? "#FDC202" : "#C0392B";
@@ -41,8 +42,11 @@ export function FormConfirmation({ status, name, onReset }: Props) {
             Merci {name},
           </p>
           <p style={{ fontSize: "16px", color: "#444444", lineHeight: 1.75, marginTop: "8px" }}>
-            Votre demande a bien été reçue. Notre équipe vous contactera dans les meilleurs
-            délais, généralement sous 24h ouvrées.
+            Votre demande a bien été reçue
+            {commercialName ? (
+              <> et sera transmise à <strong>{commercialName}</strong></>
+            ) : null}
+            . Notre équipe vous contactera dans les meilleurs délais, généralement sous 24h ouvrées.
           </p>
           <p style={{ fontSize: "16px", color: "#444444", lineHeight: 1.75, marginTop: "16px" }}>
             À bientôt,<br />
