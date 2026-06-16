@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { getBrandInfo, getProductsByBrand, getCategoriesForBrand, BRANDS } from "@/lib/data";
 import { PartnerProductGrid } from "@/components/partenaires/PartnerProductGrid";
 import { IconArrowRight } from "@/components/ui/Icons";
@@ -71,9 +72,9 @@ export default function PartnerPage({ params }: Props) {
   const categories = getCategoriesForBrand(params.slug);
 
   const BRAND_IMAGES: Record<string, string> = {
-    "wacker-neuson": "/images/photo-wacker-catalogue.jpg",
-    magni: "/images/Magni-catalogue.avif",
-    "promove-demolition": "/images/catalogue-promove-demolition.jpg",
+    "wacker-neuson": "/images/photo-wacker-catalogue.webp",
+    magni: "/images/Magni-catalogue.webp",
+    "promove-demolition": "/images/catalogue-promove-demolition.webp",
   };
 
   const heroImage = BRAND_IMAGES[params.slug];
@@ -87,12 +88,15 @@ export default function PartnerPage({ params }: Props) {
 
         {/* Photo catalogue */}
         {heroImage && (
-          /* eslint-disable-next-line @next/next/no-img-element */
-          <img
+          <Image
             src={heroImage}
             alt=""
             aria-hidden="true"
-            className="absolute inset-0 w-full h-full object-cover object-center"
+            fill
+            priority
+            fetchPriority="high"
+            sizes="100vw"
+            className="object-cover object-center"
           />
         )}
 

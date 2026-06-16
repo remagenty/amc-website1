@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -17,6 +17,12 @@ const TOP_BAR_ITEMS: { label: string; href?: string }[] = [
   { label: "📞 04 26 78 43 90" },
   { label: "📍 ZAC D'Orsan, Saint-Félix (74)", href: "/contact#nous-localiser" },
   { label: "⏰ Lun-Ven : 8h-12h / 14h-18h | Fermé le week-end" },
+];
+
+const PARTNER_HERO_IMAGES = [
+  "/images/photo-wacker-catalogue.webp",
+  "/images/Magni-catalogue.webp",
+  "/images/catalogue-promove-demolition.webp",
 ];
 
 const MATERIELS_CATEGORIES = [
@@ -100,6 +106,16 @@ export function Header() {
   const toggleMenu = (menu: string) => {
     setActiveMenu(activeMenu === menu ? null : menu);
     setOpenSubCategory(null);
+  };
+
+  const partnersImagesPreloaded = useRef(false);
+  const preloadPartnerImages = () => {
+    if (partnersImagesPreloaded.current) return;
+    partnersImagesPreloaded.current = true;
+    PARTNER_HERO_IMAGES.forEach((src) => {
+      const img = new window.Image();
+      img.src = src;
+    });
   };
 
   const closeMenu = () => {
@@ -294,6 +310,8 @@ export function Header() {
                 <button
                   className="flex items-center gap-1.5 px-4 text-sm font-semibold text-white hover:text-amc-yellow transition-colors"
                   onClick={() => toggleMenu("partenaires")}
+                  onMouseEnter={preloadPartnerImages}
+                  onFocus={preloadPartnerImages}
                 >
                   Nos partenaires
                   <IconChevronDown size={14} className={`transition-transform duration-200 ${activeMenu === "partenaires" ? "rotate-180" : ""}`} />
