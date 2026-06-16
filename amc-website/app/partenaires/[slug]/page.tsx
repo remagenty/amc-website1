@@ -64,6 +64,8 @@ const BRAND_SALES_REP: Record<string, string> = {
 
 const BRAND_EXPERT_PROFILE: Record<string, string> = {
   "wacker-neuson": "/a-propos/commercial-1",
+  magni: "/a-propos/commercial-2",
+  "promove-demolition": "/a-propos/commercial-2",
 };
 
 export default function PartnerPage({ params }: Props) {
