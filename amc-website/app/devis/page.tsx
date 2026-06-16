@@ -78,7 +78,7 @@ export default function DevisPage() {
                     <p className="font-medium text-amc-text">Horaires</p>
                     <div className="text-amc-text-secondary mt-0.5 space-y-0.5">
                       <p>Lun–Ven : 8h–12h / 14h–18h</p>
-                      <p>Samedi : 8h–12h</p>
+                      <p>Samedi : Fermé</p>
                       <p>Dimanche : Fermé</p>
                     </div>
                   </div>

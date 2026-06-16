@@ -11,10 +11,10 @@ const GMAPS_DIR = "https://www.google.com/maps/dir/?api=1&destination=45.79640,5
 
 export const metadata: Metadata = {
   title: { absolute: "Contact | AMC — Saint-Félix, Haute-Savoie" },
-  description: "Contactez AMC à Saint-Félix. Tél : 04 26 78 43 90. Lun-Ven 8h-18h, Sam 9h-12h.",
+  description: "Contactez AMC à Saint-Félix. Tél : 04 26 78 43 90. Lun-Ven 8h-12h / 14h-18h. Fermé le week-end.",
   openGraph: {
     title: "Contact | AMC — Saint-Félix, Haute-Savoie",
-    description: "Contactez AMC à Saint-Félix. Tél : 04 26 78 43 90. Lun-Ven 8h-18h, Sam 9h-12h.",
+    description: "Contactez AMC à Saint-Félix. Tél : 04 26 78 43 90. Lun-Ven 8h-12h / 14h-18h. Fermé le week-end.",
     images: [{ url: "/images/Slide-1.jpg" }],
     type: "website",
     url: `https://www.amc-savoie.fr/contact`,
@@ -110,7 +110,7 @@ export default function ContactPage() {
                     <p className="font-semibold text-amc-text">Horaires</p>
                     <div className="text-amc-text-secondary mt-1 space-y-0.5">
                       <p>Lun–Ven : 8h–12h / 14h–18h</p>
-                      <p>Samedi : 8h–12h</p>
+                      <p>Samedi : Fermé</p>
                       <p>Dimanche : Fermé</p>
                     </div>
                   </div>

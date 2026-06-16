@@ -76,7 +76,8 @@ export function Footer() {
                 <IconClock size={16} className="mt-0.5 flex-shrink-0 text-amc-yellow" />
                 <span>
                   Lun–Ven: 8h–12h / 14h–18h<br />
-                  Sam: 8h–12h
+                  Sam: Fermé<br />
+                  Dim: Fermé
                 </span>
               </div>
             </address>
