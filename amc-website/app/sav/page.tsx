@@ -177,98 +177,6 @@ export default function SavPage() {
         </div>
       </section>
 
-      {/* ── MARQUES COUVERTES ── */}
-      <section className="bg-amc-cream py-20">
-        <div className="container-amc">
-          <ScrollReveal from="bottom">
-            <div className="text-center mb-12">
-              <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-amc-yellow mb-3">
-                <IconBadgeCheck size={14} /> SAV agréé
-              </span>
-              <h2 className="text-3xl md:text-4xl font-black text-amc-text mb-3">
-                Marques couvertes
-              </h2>
-              <p className="text-gray-500 max-w-lg mx-auto text-sm leading-relaxed">
-                Notre atelier est agréé et certifié par les trois constructeurs distribués par AMC.
-              </p>
-            </div>
-          </ScrollReveal>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {[
-              {
-                logo: "/images/logo-wacker.png",
-                name: "Wacker Neuson",
-                alt: "Logo Wacker Neuson",
-                desc: "Mini-pelles, dumpers, chargeuses compactes, compacteurs et équipements de chantier.",
-                badge: "Certification SE+",
-                color: "border-red-200",
-              },
-              {
-                logo: "/images/logo-magni.png",
-                name: "Magni",
-                alt: "Logo Magni",
-                desc: "Téléhandlers rotatifs et fixes, nacelles et engins de levage de précision.",
-                badge: "Certification SE+",
-                color: "border-blue-200",
-              },
-              {
-                logo: "/images/logo-promove.jpg",
-                name: "Promove Demolition",
-                alt: "Logo Promove Demolition",
-                desc: "Brise-roches, pinces, cisailles et attachements hydrauliques pour pelles.",
-                badge: "Agréé constructeur",
-                color: "border-orange-200",
-              },
-            ].map((brand) => (
-              <ScrollReveal key={brand.name} from="bottom">
-                <div className={`bg-white rounded-2xl shadow-card p-6 flex flex-col items-center text-center border-2 ${brand.color}`}>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={brand.logo}
-                    alt={brand.alt}
-                    className="h-10 w-auto object-contain mb-4"
-                  />
-                  <h3 className="font-bold text-amc-text text-sm mb-2">{brand.name}</h3>
-                  <p className="text-gray-500 text-xs leading-relaxed mb-4">{brand.desc}</p>
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amc-yellow/20 text-amc-text text-xs font-semibold">
-                    <IconCheck size={11} />
-                    {brand.badge}
-                  </span>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-
-          {/* Délais d'intervention — TODO */}
-          <ScrollReveal from="bottom">
-            <div className="mt-10 max-w-4xl mx-auto bg-white rounded-2xl shadow-card p-6">
-              <h3 className="text-sm font-bold uppercase tracking-widest text-amc-yellow mb-4">
-                Délais d&apos;intervention
-              </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                {[
-                  { label: "Prise en charge atelier", placeholder: "XX h" },
-                  { label: "Délai livraison pièces courantes", placeholder: "X–X jours" },
-                  { label: "Intervention sur site", placeholder: "Sous X jours" },
-                ].map((item) => (
-                  <div
-                    key={item.label}
-                    className="flex flex-col items-center text-center bg-amber-50 border border-dashed border-amber-400 rounded-xl p-4"
-                  >
-                    <p className="text-xl font-black text-amber-500 mb-1">{item.placeholder}</p>
-                    <p className="text-xs text-amc-text-secondary mb-2">{item.label}</p>
-                    <span className="inline-flex items-center gap-1 bg-amber-400 text-white text-[9px] font-black px-1.5 py-0.5 rounded uppercase tracking-wide">
-                      TODO — à compléter
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
       {/* ── ZONE D'INTERVENTION ── */}
       <section className="bg-white py-20">
         <div className="container-amc">
@@ -328,13 +236,13 @@ export default function SavPage() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="bg-amc-gray py-20">
+      <section className="py-20" style={{ backgroundColor: "#F5F4EF" }}>
         <div className="container-amc text-center">
           <ScrollReveal from="bottom">
-            <h2 className="text-3xl font-black text-white mb-4">
+            <h2 className="text-3xl font-black mb-4" style={{ color: "#1a1a1a" }}>
               Besoin d&apos;une intervention ?
             </h2>
-            <p className="text-white/70 mb-8 max-w-lg mx-auto">
+            <p className="mb-8 max-w-lg mx-auto" style={{ color: "#444444" }}>
               Contactez notre atelier pour un devis, une prise en charge ou tout renseignement sur nos contrats d&apos;entretien.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -343,7 +251,8 @@ export default function SavPage() {
               </Link>
               <a
                 href="tel:+33426784390"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border-2 border-white text-white font-semibold hover:bg-white/10 transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border-2 font-semibold hover:bg-black/5 transition-colors"
+                style={{ borderColor: "#1a1a1a", color: "#1a1a1a" }}
               >
                 <IconPhone size={16} /> 04 26 78 43 90
               </a>
