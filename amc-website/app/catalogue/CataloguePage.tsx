@@ -354,7 +354,7 @@ export function CataloguePage({
                           href={url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="border border-gray-300 text-amc-text bg-white hover:border-gray-500 hover:bg-gray-50 rounded-lg px-4 py-2 text-sm font-medium inline-flex items-center gap-2 transition-colors whitespace-nowrap"
+                          className="border-2 border-amc-yellow text-amc-text bg-white hover:bg-amc-yellow rounded-lg px-6 py-3 text-base font-semibold inline-flex items-center gap-2 transition-all duration-150 whitespace-nowrap"
                         >
                           Voir toute la gamme <IconExternalLink size={14} />
                         </a>
