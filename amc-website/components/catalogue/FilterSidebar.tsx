@@ -290,13 +290,6 @@ function FilterContent({
                       >
                         {cat.label}
                       </span>
-                      <span
-                        className={`text-[10px] font-bold flex-shrink-0 ${
-                          active ? "text-amc-text" : "text-gray-400"
-                        }`}
-                      >
-                        {cat.count}
-                      </span>
                       <IconChevronRight
                         size={10}
                         className={`flex-shrink-0 ${
