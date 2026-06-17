@@ -148,13 +148,28 @@ export function CataloguePage({
     (filters.priceMin ? 1 : 0) +
     (filters.priceMax ? 1 : 0);
 
-  // Quand une seule catégorie est sélectionnée (ex: venant de /gammes),
-  // on affiche son nom en titre et, si disponible, un lien vers la gamme du fabricant.
+  // Quand une seule catégorie est sélectionnée, on affiche son nom en titre
+  // et un bouton "Voir toute la gamme [Marque]" par marque présente dans les résultats.
   const singleCategorySlug = filters.categories.length === 1 ? filters.categories[0] : null;
   const singleCategoryLabel = singleCategorySlug
     ? ALL_CATEGORIES_STABLE.find((c) => c.id === singleCategorySlug)?.label ?? null
     : null;
-  const gammeFabricantUrl = singleCategorySlug ? getGammeFabricantUrl(singleCategorySlug) : "";
+
+  const categoryFabricantButtons = useMemo(() => {
+    if (!singleCategorySlug || !singleCategoryLabel) return [];
+    const url = getGammeFabricantUrl(singleCategorySlug);
+    if (!url) return [];
+    const seen = new Set<string>();
+    const brandsInResults: string[] = [];
+    for (const p of filtered) {
+      if (!seen.has(p.brand)) { seen.add(p.brand); brandsInResults.push(p.brand); }
+    }
+    return brandsInResults.map((brandId) => ({
+      brandId,
+      brandName: BRAND_DISPLAY[brandId] ?? brandId,
+      url,
+    }));
+  }, [singleCategorySlug, singleCategoryLabel, filtered]);
 
   return (
     <div className="min-h-screen bg-amc-cream">
@@ -192,15 +207,20 @@ export function CataloguePage({
                 : `${ALL_MACHINES.length} machines — Wacker Neuson, Magni, Promove Demolition`}
             </p>
           </div>
-          {singleCategoryLabel && gammeFabricantUrl && (
-            <a
-              href={gammeFabricantUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-outline rounded-lg inline-flex items-center gap-2 whitespace-nowrap"
-            >
-              Voir la gamme entière <IconExternalLink size={14} />
-            </a>
+          {categoryFabricantButtons.length > 0 && (
+            <div className="flex flex-wrap gap-2">
+              {categoryFabricantButtons.map(({ brandId, brandName, url }) => (
+                <a
+                  key={brandId}
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-outline rounded-lg inline-flex items-center gap-2 whitespace-nowrap text-sm"
+                >
+                  Voir toute la gamme {brandName} <IconExternalLink size={14} />
+                </a>
+              ))}
+            </div>
           )}
         </div>
 
