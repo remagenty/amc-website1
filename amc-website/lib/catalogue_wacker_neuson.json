@@ -1546,6 +1546,7 @@
       "devise": "EUR",
       "etat": "neuf",
       "disponibilite": "disponible",
+      "visible": false,
       "featured": false,
       "caracteristiques_techniques": {
         "masse_operationnelle_kg": 2400,
