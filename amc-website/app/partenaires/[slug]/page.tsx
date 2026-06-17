@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { getBrandInfo, getProductsByBrand, getCategoriesForBrand, BRANDS } from "@/lib/data";
-import { PartnerProductGrid } from "@/components/partenaires/PartnerProductGrid";
+import { getBrandInfo, getCategoriesForBrand, BRANDS } from "@/lib/data";
+import { getGammeCategoryImage } from "@/lib/gammes";
+import { CategoryCard } from "@/components/gammes/CategoryCard";
 import { IconArrowRight } from "@/components/ui/Icons";
 import { NewsletterForm } from "@/components/ui/NewsletterForm";
 
@@ -77,7 +78,6 @@ export default function PartnerPage({ params }: Props) {
     BRAND_EXPERT_PROFILE[params.slug] ??
     `/devis?type=information&commercial=${salesRep}&marque=${brand.id}`;
 
-  const products = getProductsByBrand(params.slug);
   const categories = getCategoriesForBrand(params.slug);
 
   const BRAND_IMAGES: Record<string, string> = {
@@ -159,7 +159,7 @@ export default function PartnerPage({ params }: Props) {
         </div>
       </section>
 
-      {/* Products */}
+      {/* Categories */}
       <section className="section-padding">
         <div className="container-amc">
           <div className="mb-8">
@@ -167,29 +167,21 @@ export default function PartnerPage({ params }: Props) {
               Gamme {brand.name} disponible
             </h2>
             <p className="text-amc-text-secondary text-sm mt-1">
-              {products.length > 0
-                ? `${products.length} modèle${products.length > 1 ? "s" : ""} disponible${products.length > 1 ? "s" : ""}`
-                : "Consultez-nous pour la disponibilité"}
+              {categories.length} catégorie{categories.length > 1 ? "s" : ""} disponible{categories.length > 1 ? "s" : ""}
             </p>
           </div>
 
-          {products.length > 0 ? (
-            <PartnerProductGrid
-              products={products}
-              brandId={brand.id}
-              brandName={brand.name}
-              categories={categories}
-            />
-          ) : (
-            <div className="text-center py-16 bg-white rounded-xl shadow-card">
-              <p className="text-amc-text-secondary mb-4">
-                Consultez-nous pour connaître la disponibilité des produits {brand.name}.
-              </p>
-              <Link href="/contact" className="btn-primary rounded-lg">
-                Nous contacter <IconArrowRight size={16} />
-              </Link>
-            </div>
-          )}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {categories.map((cat) => (
+              <CategoryCard
+                key={cat.id}
+                href={`/catalogue?categorie=${cat.id}`}
+                label={cat.label}
+                count={cat.count}
+                image={getGammeCategoryImage(cat.id)}
+              />
+            ))}
+          </div>
         </div>
       </section>
 
