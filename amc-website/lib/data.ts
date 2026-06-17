@@ -13,10 +13,12 @@ let _cachedMachines: Product[] | null = null;
 
 export function getMachines(): Product[] {
   if (_cachedMachines) return _cachedMachines;
-  const wnProducts = getAllWnMachines().map(m => ({
-    ...wnMachineToProduct(m),
-    categorySlug: getCategoryUrlSlug(m),
-  }));
+  const wnProducts = getAllWnMachines()
+    .filter(m => m.visible !== false)
+    .map(m => ({
+      ...wnMachineToProduct(m),
+      categorySlug: getCategoryUrlSlug(m),
+    }));
   _cachedMachines = [...wnProducts, ...getMagniProducts(), ...getPromoveProducts()];
   return _cachedMachines;
 }

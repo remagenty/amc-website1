@@ -18,6 +18,7 @@ export interface WnMachine {
   devise: string;
   etat: "neuf" | "occasion";
   disponibilite: "disponible" | "sur_commande";
+  visible?: boolean;
   featured: boolean;
   caracteristiques_techniques: Record<string, string | number>;
   points_forts: string[];

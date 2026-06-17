@@ -933,6 +933,7 @@
       "devise": "EUR",
       "etat": "neuf",
       "disponibilite": "disponible",
+      "visible": false,
       "featured": false,
       "caracteristiques_techniques": {
         "charge_utile_kg": 1800,
@@ -1160,6 +1161,7 @@
       "devise": "EUR",
       "etat": "neuf",
       "disponibilite": "disponible",
+      "visible": false,
       "featured": false,
       "caracteristiques_techniques": {
         "charge_utile_kg": 700,
