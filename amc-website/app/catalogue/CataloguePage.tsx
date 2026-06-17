@@ -207,21 +207,6 @@ export function CataloguePage({
                 : `${ALL_MACHINES.length} machines — Wacker Neuson, Magni, Promove Demolition`}
             </p>
           </div>
-          {categoryFabricantButtons.length > 0 && (
-            <div className="flex flex-wrap gap-2">
-              {categoryFabricantButtons.map(({ brandId, brandName, url }) => (
-                <a
-                  key={brandId}
-                  href={url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-outline rounded-lg inline-flex items-center gap-2 whitespace-nowrap text-sm"
-                >
-                  Voir toute la gamme {brandName} <IconExternalLink size={14} />
-                </a>
-              ))}
-            </div>
-          )}
         </div>
 
         {/* Toolbar — search moved into filter sidebar */}
@@ -355,6 +340,26 @@ export function CataloguePage({
                     >
                       Suivant
                     </button>
+                  </div>
+                )}
+
+                {categoryFabricantButtons.length > 0 && (
+                  <div className="mt-8 flex justify-end flex-wrap gap-3">
+                    {categoryFabricantButtons.map(({ brandId, brandName, url }) => (
+                      <div key={brandId} className="flex flex-col items-end gap-1">
+                        {categoryFabricantButtons.length > 1 && (
+                          <span className="text-xs text-amc-text-secondary">{brandName}</span>
+                        )}
+                        <a
+                          href={url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="border border-gray-300 text-amc-text bg-white hover:border-gray-500 hover:bg-gray-50 rounded-lg px-4 py-2 text-sm font-medium inline-flex items-center gap-2 transition-colors whitespace-nowrap"
+                        >
+                          Voir toute la gamme <IconExternalLink size={14} />
+                        </a>
+                      </div>
+                    ))}
                   </div>
                 )}
               </>
