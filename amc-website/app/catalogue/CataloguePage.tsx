@@ -186,9 +186,9 @@ export function CataloguePage({
         </div>
       </div>
 
-      <div className="container-amc py-6">
+      <div className="container-amc pt-4 pb-8">
         {/* Header */}
-        <div className="mb-4 flex flex-wrap items-start justify-between gap-4">
+        <div className="mb-2 flex flex-wrap items-start justify-between gap-4">
           <div>
             <h1 className="text-2xl md:text-3xl font-bold text-amc-text">
               {singleCategoryLabel
