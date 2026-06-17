@@ -67,5 +67,5 @@ export function promoveMachineToProduct(m: WnMachine): Product {
 }
 
 export function getPromoveProducts(): Product[] {
-  return ALL_PROMOVE_MACHINES.map(promoveMachineToProduct);
+  return ALL_PROMOVE_MACHINES.filter(m => m.visible !== false).map(promoveMachineToProduct);
 }
