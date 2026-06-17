@@ -186,9 +186,9 @@ export function CataloguePage({
         </div>
       </div>
 
-      <div className="container-amc py-8">
+      <div className="container-amc py-6">
         {/* Header */}
-        <div className="mb-8 flex flex-wrap items-start justify-between gap-4">
+        <div className="mb-4 flex flex-wrap items-start justify-between gap-4">
           <div>
             <h1 className="text-2xl md:text-3xl font-bold text-amc-text">
               {singleCategoryLabel
@@ -210,7 +210,7 @@ export function CataloguePage({
         </div>
 
         {/* Toolbar — search moved into filter sidebar */}
-        <div className="flex items-center gap-3 mb-6">
+        <div className="flex items-center gap-3 mb-4">
           <button
             onClick={() => setMobileFiltres(true)}
             className="lg:hidden btn-secondary text-sm py-2.5 gap-2"
@@ -237,7 +237,7 @@ export function CataloguePage({
 
         {/* Active filter chips */}
         {activeCount > 0 && (
-          <div className="flex flex-wrap gap-2 mb-6">
+          <div className="flex flex-wrap gap-2 mb-4">
             {filters.status !== "all" && (
               <button
                 onClick={() => handleFilterChange("status", "all")}
