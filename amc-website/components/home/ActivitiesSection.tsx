@@ -11,7 +11,7 @@ const ACTIVITIES = [
       "Distributeur officiel Wacker Neuson, Magni et Promove Demolition. Accédez à la gamme complète de matériels de chantier neufs avec garantie constructeur et livraison en Rhône-Alpes.",
     badges: ["Wacker Neuson", "Magni", "Promove"],
     cta: "Voir le catalogue",
-    href: "/catalogue?etat=neuf",
+    href: "/gammes?etat=neuf",
     highlight: true,
     image: "/images/Magni-catalogue.avif",
     imageAlt: "Matériel neuf Wacker Neuson — AMC",

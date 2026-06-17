@@ -10,8 +10,18 @@ export const metadata: Metadata = {
     "Parcourez les gammes de matériels AMC par catégorie — Wacker Neuson, Magni, Promove Demolition. Mini-pelles, dumpers, télescopiques, équipements de démolition.",
 };
 
-export default function GammesPage() {
+export default function GammesPage({
+  searchParams,
+}: {
+  searchParams: { etat?: string };
+}) {
   const brands = getGammesData();
+  const etat = searchParams.etat === "neuf" || searchParams.etat === "occasion" ? searchParams.etat : null;
+
+  function catHref(slug: string) {
+    if (etat) return `/catalogue?categorie=${slug}&etat=${etat}`;
+    return `/catalogue?categorie=${slug}`;
+  }
 
   return (
     <div className="min-h-screen bg-amc-cream">
@@ -35,6 +45,21 @@ export default function GammesPage() {
             Choisissez une catégorie de matériel pour accéder directement aux machines disponibles
             dans notre catalogue, filtrées par marque et par usage.
           </p>
+
+          {etat && (
+            <div className="mt-4 inline-flex items-center gap-2 px-3 py-1.5 bg-amc-yellow/10 border border-amc-yellow/30 rounded-full text-sm text-amc-text">
+              <span>
+                Filtré sur : <strong>{etat === "neuf" ? "Matériel neuf" : "Matériel d'occasion"}</strong>
+              </span>
+              <Link
+                href="/gammes"
+                className="text-amc-text-secondary hover:text-red-500 transition-colors text-base leading-none"
+                aria-label="Retirer le filtre"
+              >
+                ×
+              </Link>
+            </div>
+          )}
         </div>
 
         <div className="space-y-12">
@@ -56,7 +81,7 @@ export default function GammesPage() {
                 {brand.categories.map((cat) => (
                   <Link
                     key={cat.slug}
-                    href={`/catalogue?categorie=${cat.slug}`}
+                    href={catHref(cat.slug)}
                     className="group flex flex-row items-stretch bg-white rounded-xl border border-gray-100 overflow-hidden hover:border-amc-yellow hover:shadow-card transition-all h-32"
                   >
                     {/* Texte — côté gauche */}
