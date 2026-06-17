@@ -25,38 +25,23 @@ const PARTNER_HERO_IMAGES = [
   "/images/catalogue-promove-demolition.webp",
 ];
 
-const MATERIELS_CATEGORIES = [
-  {
-    id: "terrassement",
-    label: "Terrassement & Excavation",
-    href: "/materiels/mini-pelles",
-    subs: [
-      { label: "Mini-pelles", href: "/materiels/mini-pelles" },
-      { label: "Dumpers articulés", href: "/materiels/dumpers" },
-      { label: "Chargeuses compactes", href: "/materiels/chargeuses" },
-      { label: "Télescopiques WN", href: "/materiels/telescopiques" },
-    ],
-  },
-  {
-    id: "compactage",
-    label: "Compactage",
-    href: "/materiels/compacteurs",
-    subs: [
-      { label: "Compacteurs tandem", href: "/materiels/compacteurs" },
-      { label: "Plaques vibrantes", href: "/materiels/plaques-vibrantes" },
-      { label: "Pilonneuses", href: "/materiels/pilonneuses" },
-    ],
-  },
-  {
-    id: "telehandlers",
-    label: "Chariots télescopiques et nacelles",
-    href: "/materiels/telehandlers-rotatifs",
-    subs: [
-      { label: "Rotatifs", href: "/materiels/telehandlers-rotatifs" },
-      { label: "Fixes", href: "/materiels/telehandlers-fixes" },
-      { label: "Agricoles", href: "/materiels/telehandlers-agricoles" },
-    ],
-  },
+const FLAT_CATEGORIES = [
+  { label: "Mini-pelles", href: "/materiels/mini-pelles" },
+  { label: "Dumpers articulés", href: "/materiels/dumpers" },
+  { label: "Chargeuses compactes", href: "/materiels/chargeuses" },
+  { label: "Compacteurs tandem", href: "/materiels/compacteurs" },
+  { label: "Plaques vibrantes", href: "/materiels/plaques-vibrantes" },
+  { label: "Pilonneuses", href: "/materiels/pilonneuses" },
+  { label: "Marteaux piqueurs", href: "/materiels/marteaux-piqueurs" },
+  { label: "Télescopiques", href: "/materiels/telescopiques" },
+  { label: "Chariots télescopiques et nacelles rotatifs", href: "/materiels/telehandlers-rotatifs" },
+  { label: "Chariots télescopiques et nacelles fixes", href: "/materiels/telehandlers-fixes" },
+  { label: "Chariots télescopiques et nacelles agricoles", href: "/materiels/telehandlers-agricoles" },
+  { label: "Brise-roches hydrauliques", href: "/materiels/brise-roches" },
+  { label: "Cisailles à ferraille", href: "/materiels/cisailles" },
+  { label: "Pinces de tri et démolition", href: "/materiels/pinces-de-tri" },
+  { label: "Pinces multiprocesseurs", href: "/materiels/pinces-multiprocesseurs" },
+  { label: "Pulvérisateurs béton", href: "/materiels/pulverisateurs" },
 ];
 
 const MEGA_MENUS = {
@@ -78,7 +63,6 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
-  const [openSubCategory, setOpenSubCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [searchFocused, setSearchFocused] = useState(false);
   const [carouselIndex, setCarouselIndex] = useState(0);
@@ -93,7 +77,6 @@ export function Header() {
   useEffect(() => {
     setMobileOpen(false);
     setActiveMenu(null);
-    setOpenSubCategory(null);
   }, [pathname]);
 
   useEffect(() => {
@@ -105,7 +88,6 @@ export function Header() {
 
   const toggleMenu = (menu: string) => {
     setActiveMenu(activeMenu === menu ? null : menu);
-    setOpenSubCategory(null);
   };
 
   const partnersImagesPreloaded = useRef(false);
@@ -120,11 +102,6 @@ export function Header() {
 
   const closeMenu = () => {
     setActiveMenu(null);
-    setOpenSubCategory(null);
-  };
-
-  const toggleSubCategory = (id: string) => {
-    setOpenSubCategory(openSubCategory === id ? null : id);
   };
 
   const handleSearch = (e: React.FormEvent) => {
@@ -359,43 +336,17 @@ export function Header() {
                     <h3 className="text-xs font-bold uppercase tracking-wider text-amc-text-secondary mb-3">
                       Nos catégories
                     </h3>
-                    <div className="divide-y divide-gray-100">
-                      {MATERIELS_CATEGORIES.map((cat) => (
-                        <div key={cat.id}>
-                          <button
-                            onClick={() => toggleSubCategory(cat.id)}
-                            className="w-full flex items-center justify-between py-3 px-2 hover:bg-gray-50 rounded-lg transition-colors cursor-pointer"
-                          >
-                            <span className="text-sm font-semibold text-amc-text hover:text-amc-yellow-dark transition-colors text-left">
-                              {cat.label}
-                            </span>
-                            <IconChevronDown
-                              size={14}
-                              className={`text-gray-400 flex-shrink-0 transition-transform duration-300 ${openSubCategory === cat.id ? "rotate-180" : ""}`}
-                            />
-                          </button>
-                          <div
-                            style={{
-                              maxHeight: openSubCategory === cat.id ? "200px" : "0",
-                              overflow: "hidden",
-                              transition: "max-height 0.3s ease-in-out",
-                            }}
-                          >
-                            <div className="pl-2 pb-3 grid grid-cols-2 gap-x-4 gap-y-0.5">
-                              {cat.subs.map((sub) => (
-                                <Link
-                                  key={sub.href}
-                                  href={sub.href}
-                                  className="flex items-center gap-2 px-3 py-2 text-sm text-amc-text-secondary hover:text-amc-text hover:bg-amc-yellow/5 rounded-lg transition-colors"
-                                  onClick={closeMenu}
-                                >
-                                  <span className="w-1.5 h-1.5 rounded-full bg-amc-yellow flex-shrink-0" />
-                                  {sub.label}
-                                </Link>
-                              ))}
-                            </div>
-                          </div>
-                        </div>
+                    <div className="grid grid-cols-2 gap-x-4 gap-y-0.5">
+                      {FLAT_CATEGORIES.map((cat) => (
+                        <Link
+                          key={cat.href}
+                          href={cat.href}
+                          className="flex items-center gap-2 px-3 py-2 text-sm text-amc-text-secondary hover:text-amc-text hover:bg-amc-yellow/5 rounded-lg transition-colors"
+                          onClick={closeMenu}
+                        >
+                          <span className="w-1.5 h-1.5 rounded-full bg-amc-yellow flex-shrink-0" />
+                          {cat.label}
+                        </Link>
                       ))}
                     </div>
                   </div>
