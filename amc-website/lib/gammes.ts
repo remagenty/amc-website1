@@ -1,4 +1,4 @@
-import { BRANDS, getCategoriesForBrand } from "./data";
+import { BRANDS, getCategoriesForBrand, getMachines } from "./data";
 
 // URL externe vers la page de gamme du fabricant, par slug de catégorie.
 // Laissé vide pour le moment — à compléter catégorie par catégorie.
@@ -29,29 +29,23 @@ export function getGammeFabricantUrl(categorySlug: string): string {
   return GAMME_FABRICANT_URLS[categorySlug] ?? "";
 }
 
-// Emoji/icône d'illustration par catégorie pour les cartes de la page /gammes.
-const GAMME_CATEGORY_EMOJI: Record<string, string> = {
-  "mini-pelles": "⛏️",
-  dumpers: "🚛",
-  chargeuses: "🚜",
-  compacteurs: "🛞",
-  "plaques-vibrantes": "🔲",
-  pilonneuses: "🔨",
-  "marteaux-piqueurs": "⚒️",
-  outillage: "🔧",
-  telescopiques: "🏗️",
-  "telehandlers-rotatifs": "🏗️",
-  "telehandlers-fixes": "🏗️",
-  "telehandlers-agricoles": "🏗️",
-  "brise-roches": "💥",
-  "pinces-multiprocesseurs": "🦾",
-  pulverisateurs: "🧱",
-  cisailles: "✂️",
-  "pinces-de-tri": "♻️",
-};
+// Image représentative par catégorie : premier produit disponible dans le catalogue.
+// Calculé une seule fois au démarrage depuis les données produit existantes.
+function buildCategoryImages(): Record<string, string> {
+  const images: Record<string, string> = {};
+  for (const m of getMachines()) {
+    const slug = m.categorySlug ?? "";
+    if (slug && !images[slug] && m.images[0]) {
+      images[slug] = m.images[0];
+    }
+  }
+  return images;
+}
 
-export function getGammeCategoryEmoji(categorySlug: string): string {
-  return GAMME_CATEGORY_EMOJI[categorySlug] ?? "🏗️";
+const GAMME_CATEGORY_IMAGES: Record<string, string> = buildCategoryImages();
+
+export function getGammeCategoryImage(categorySlug: string): string {
+  return GAMME_CATEGORY_IMAGES[categorySlug] ?? "";
 }
 
 export interface GammeCategory {
@@ -59,7 +53,7 @@ export interface GammeCategory {
   label: string;
   count: number;
   urlGammeFabricant: string;
-  emoji: string;
+  image: string;
 }
 
 export interface GammeBrand {
@@ -77,7 +71,7 @@ export function getGammesData(): GammeBrand[] {
       label: cat.label,
       count: cat.count,
       urlGammeFabricant: getGammeFabricantUrl(cat.id),
-      emoji: getGammeCategoryEmoji(cat.id),
+      image: getGammeCategoryImage(cat.id),
     })),
   }));
 }
