@@ -35,7 +35,7 @@ export function getMagniMachinesByCategory(categorySlug: string): WnMachine[] {
 }
 
 export function getMagniSimilarMachines(machine: WnMachine, limit = 4): WnMachine[] {
-  return ALL_MAGNI_MACHINES.filter(m => m.id !== machine.id && m.categorie === machine.categorie).slice(0, limit);
+  return ALL_MAGNI_MACHINES.filter(m => m.id !== machine.id && m.categorie === machine.categorie && m.visible !== false).slice(0, limit);
 }
 
 export function getMagniCategories(): Array<{slug: string; label: string; count: number}> {

@@ -38,7 +38,7 @@ export function getPromoveMachinesByCategory(categorySlug: string): WnMachine[] 
 }
 
 export function getPromoveSimilarMachines(machine: WnMachine, limit = 4): WnMachine[] {
-  return ALL_PROMOVE_MACHINES.filter(m => m.id !== machine.id && m.categorie === machine.categorie).slice(0, limit);
+  return ALL_PROMOVE_MACHINES.filter(m => m.id !== machine.id && m.categorie === machine.categorie && m.visible !== false).slice(0, limit);
 }
 
 export function getPromoveCategories(): Array<{slug: string; label: string; count: number}> {

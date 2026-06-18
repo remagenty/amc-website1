@@ -202,7 +202,7 @@ export function getWnMachinesByCategory(categorySlug: string): WnMachine[] {
 
 export function getWnSimilarMachines(machine: WnMachine, limit = 4): WnMachine[] {
   return ALL_MACHINES.filter(
-    (m) => m.id !== machine.id && m.categorie === machine.categorie
+    (m) => m.id !== machine.id && m.categorie === machine.categorie && m.visible !== false
   ).slice(0, limit);
 }
 
