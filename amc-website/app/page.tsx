@@ -9,9 +9,9 @@ import { TestimonialsStrip } from "@/components/home/TestimonialsStrip";
 import { MapInteractive } from "@/components/ui/MapInteractive";
 
 export const metadata: Metadata = {
-  title: { absolute: "AMC — Vente matériels de chantier Rhône-Alpes | Wacker Neuson, Magni, Promove" },
+  title: { absolute: "AMC — Vente matériels de chantier Rhône-Alpes | WACKER NEUSON, Magni, Promove" },
   description:
-    "AMC, votre spécialiste de la vente de matériels de chantier neufs et d'occasion en Rhône-Alpes. Distributeur officiel Wacker Neuson, Magni, Promove Demolition. SAV certifié SE+ à Saint-Félix.",
+    "AMC, votre spécialiste de la vente de matériels de chantier neufs et d'occasion en Rhône-Alpes. Distributeur officiel WACKER NEUSON, Magni, Promove Demolition. SAV certifié SE+ à Saint-Félix.",
 };
 
 export default function HomePage() {

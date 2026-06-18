@@ -47,13 +47,13 @@ const FLAT_CATEGORIES = [
 const MEGA_MENUS = {
   materiels: {
     brands: [
-      { label: "Wacker Neuson", href: "/catalogue?marque=wacker-neuson", badge: "55 machines" },
+      { label: "WACKER NEUSON", href: "/catalogue?marque=wacker-neuson", badge: "55 machines" },
       { label: "Magni", href: "/catalogue?marque=magni", badge: "23 machines" },
       { label: "Promove Demolition", href: "/catalogue?marque=promove-demolition", badge: "22 outils" },
     ],
   },
   partenaires: [
-    { label: "Wacker Neuson", href: "/partenaires/wacker-neuson", desc: "Gamme complète équipements compacts" },
+    { label: "WACKER NEUSON", href: "/partenaires/wacker-neuson", desc: "Gamme complète équipements compacts" },
     { label: "Magni", href: "/partenaires/magni", desc: "Télescopiques rotatifs haute performance" },
     { label: "Promove Demolition", href: "/partenaires/promove-demolition", desc: "Outils démolition hydrauliques" },
   ],
@@ -489,7 +489,7 @@ export function Header() {
                   { label: "Nos matériels", href: "/gammes" },
                   { label: "Matériel neuf", href: "/catalogue" },
                   { label: "Matériel occasion", href: "/occasion" },
-                  { label: "Wacker Neuson", href: "/partenaires/wacker-neuson" },
+                  { label: "WACKER NEUSON", href: "/partenaires/wacker-neuson" },
                   { label: "Magni", href: "/partenaires/magni" },
                   { label: "Promove Demolition", href: "/partenaires/promove-demolition" },
                   { label: "Nos services", href: "/services" },

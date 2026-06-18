@@ -56,7 +56,7 @@ export default function CGVPage() {
               distribués par AMC.
             </p>
             <p>
-              AMC est distributeur officiel des marques <strong>Wacker Neuson</strong>,{" "}
+              AMC est distributeur officiel des marques <strong>WACKER NEUSON</strong>,{" "}
               <strong>Magni</strong> et <strong>Promove Demolition</strong>. Les présentes CGV
               s&apos;appliquent à toutes les ventes conclues entre AMC et ses clients, à l&apos;exclusion
               de tout autre document, sauf accord écrit contraire signé par les deux parties.
@@ -168,7 +168,7 @@ export default function CGVPage() {
               par les constructeurs partenaires :
             </p>
             <ul className="list-disc list-inside space-y-1 ml-2">
-              <li><strong>Wacker Neuson</strong> — garantie constructeur selon conditions en vigueur</li>
+              <li><strong>WACKER NEUSON</strong> — garantie constructeur selon conditions en vigueur</li>
               <li><strong>Magni</strong> — garantie constructeur selon conditions en vigueur</li>
               <li><strong>Promove Demolition</strong> — garantie constructeur selon conditions en vigueur</li>
             </ul>

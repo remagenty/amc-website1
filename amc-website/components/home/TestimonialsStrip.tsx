@@ -62,7 +62,7 @@ const TESTIMONIALS = [
     initials: "LU",
   },
   {
-    text: "Wacker Neuson, c'est tout ce qu'il faut !",
+    text: "WACKER NEUSON, c'est tout ce qu'il faut !",
     name: "Eric Floquet",
     date: "Mai 2022",
     initials: "EF",

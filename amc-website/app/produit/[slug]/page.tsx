@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!product) return {};
 
   const BRAND_NAMES: Record<string, string> = {
-    "wacker-neuson": "Wacker Neuson",
+    "wacker-neuson": "WACKER NEUSON",
     magni: "Magni",
     "promove-demolition": "Promove Demolition",
   };

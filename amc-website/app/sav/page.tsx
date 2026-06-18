@@ -30,7 +30,7 @@ const BLOCKS = [
     icon: IconBadgeCheck,
     tag: "Certification SE+",
     title: "Techniciens certifiés par les constructeurs",
-    text: "Nos techniciens sont formés et certifiés directement par Wacker Neuson, Magni et Promove Demolition. La certification SE+ atteste de leur maîtrise technique et de leur capacité à intervenir sur l'ensemble des gammes, dans le strict respect des préconisations constructeur.",
+    text: "Nos techniciens sont formés et certifiés directement par WACKER NEUSON, Magni et Promove Demolition. La certification SE+ atteste de leur maîtrise technique et de leur capacité à intervenir sur l'ensemble des gammes, dans le strict respect des préconisations constructeur.",
     points: [
       "Formation continue directement chez les constructeurs",
       "Habilitations et certifications à jour",

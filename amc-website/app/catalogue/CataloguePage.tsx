@@ -27,7 +27,7 @@ function matchesSearch(p: Product, q: string): boolean {
 }
 
 const BRAND_DISPLAY: Record<string, string> = {
-  "wacker-neuson": "Wacker Neuson",
+  "wacker-neuson": "WACKER NEUSON",
   magni: "Magni",
   "promove-demolition": "Promove Demolition",
 };
@@ -183,8 +183,8 @@ export function CataloguePage({
               {filters.status === "occasion"
                 ? "Toutes nos machines d'occasion sont inspectées et certifiées par nos techniciens SE+"
                 : filters.status === "neuf"
-                ? `Gamme neuve disponible — Wacker Neuson, Magni, Promove Demolition`
-                : `${ALL_MACHINES.length} machines — Wacker Neuson, Magni, Promove Demolition`}
+                ? `Gamme neuve disponible — WACKER NEUSON, Magni, Promove Demolition`
+                : `${ALL_MACHINES.length} machines — WACKER NEUSON, Magni, Promove Demolition`}
             </p>
           </div>
         </div>

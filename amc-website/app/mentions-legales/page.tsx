@@ -110,7 +110,7 @@ export default function MentionsLegalesPage() {
               L&apos;ensemble du contenu publié sur ce site — textes, photographies, illustrations, logos,
               vidéos, graphismes, icônes — est la propriété exclusive d&apos;<strong>AMC — Alpes Matériel Compact</strong> ou
               fait l&apos;objet d&apos;une autorisation d&apos;utilisation de la part de leurs propriétaires respectifs
-              (constructeurs partenaires : Wacker Neuson, Magni, Promove Demolition).
+              (constructeurs partenaires : WACKER NEUSON, Magni, Promove Demolition).
             </p>
             <p>
               Toute reproduction, représentation, modification, publication, adaptation ou exploitation

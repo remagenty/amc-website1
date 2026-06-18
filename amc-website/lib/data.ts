@@ -38,7 +38,7 @@ export function getCatalogueBrands(): Array<{id: string; label: string; count: n
   const counts: Record<string, number> = {};
   for (const m of getMachines()) counts[m.brand] = (counts[m.brand] ?? 0) + 1;
   const labels: Record<string, string> = {
-    "wacker-neuson": "Wacker Neuson",
+    "wacker-neuson": "WACKER NEUSON",
     "magni": "Magni",
     "promove-demolition": "Promove Demolition",
   };
@@ -48,12 +48,12 @@ export function getCatalogueBrands(): Array<{id: string; label: string; count: n
 export const BRANDS: BrandInfo[] = [
   {
     id: "wacker-neuson",
-    name: "Wacker Neuson",
+    name: "WACKER NEUSON",
     slug: "wacker-neuson",
     logo: "/images/logo-wacker.png",
     tagline: "Partenaire officiel — Gamme complète",
     description:
-      "Leader mondial des équipements compacts de construction. AMC est distributeur officiel Wacker Neuson pour la région Rhône-Alpes, proposant l'ensemble de la gamme : compacteurs, dumpers, pelles, plaques vibrantes et bien plus.",
+      "Leader mondial des équipements compacts de construction. AMC est distributeur officiel WACKER NEUSON pour la région Rhône-Alpes, proposant l'ensemble de la gamme : compacteurs, dumpers, pelles, plaques vibrantes et bien plus.",
     website: "https://www.wackerneuson.com",
     productCount: 42,
   },
@@ -95,10 +95,10 @@ export const HERO_SLIDES: HeroSlide[] = [
   },
   {
     id: "slide-2",
-    title: "Distributeur officiel Wacker Neuson",
+    title: "Distributeur officiel WACKER NEUSON",
     subtitle:
-      "Accédez à toute la gamme Wacker Neuson : équipements compacts haute performance pour tous vos chantiers. Stock disponible, livraison Rhône-Alpes.",
-    ctaLabel: "Voir la gamme Wacker Neuson",
+      "Accédez à toute la gamme WACKER NEUSON : équipements compacts haute performance pour tous vos chantiers. Stock disponible, livraison Rhône-Alpes.",
+    ctaLabel: "Voir la gamme WACKER NEUSON",
     ctaHref: "/partenaires/wacker-neuson",
     ctaSecondaryLabel: "Contactez-nous",
     ctaSecondaryHref: "/contact",
@@ -123,7 +123,7 @@ export const PRODUCTS: Product[] = [
   {
     id: "dw60",
     slug: "wacker-neuson-dw60",
-    name: "Wacker Neuson DW60",
+    name: "WACKER NEUSON DW60",
     model: "DW60",
     brand: "wacker-neuson",
     category: "dumpers",
@@ -133,7 +133,7 @@ export const PRODUCTS: Product[] = [
     images: ["/images/products/placeholder-wn.svg"],
     shortDescription: "Dumper articulé 6 tonnes — idéal pour les chantiers exigus",
     description:
-      "Le DW60 de Wacker Neuson est un dumper articulé de 6 tonnes offrant une excellente maniabilité sur les chantiers confinés. Son moteur diesel Stage V garantit des émissions réduites et une performance optimale.",
+      "Le DW60 de WACKER NEUSON est un dumper articulé de 6 tonnes offrant une excellente maniabilité sur les chantiers confinés. Son moteur diesel Stage V garantit des émissions réduites et une performance optimale.",
     specs: [
       { label: "Capacité de charge", value: "6 000", unit: "kg" },
       { label: "Puissance moteur", value: "55,4", unit: "kW" },
@@ -154,7 +154,7 @@ export const PRODUCTS: Product[] = [
   {
     id: "rd27-120",
     slug: "wacker-neuson-rd27-120",
-    name: "Wacker Neuson RD27-120",
+    name: "WACKER NEUSON RD27-120",
     model: "RD27-120",
     brand: "wacker-neuson",
     category: "compacteurs",
@@ -183,7 +183,7 @@ export const PRODUCTS: Product[] = [
   {
     id: "ez17e",
     slug: "wacker-neuson-ez17e",
-    name: "Wacker Neuson EZ17e",
+    name: "WACKER NEUSON EZ17e",
     model: "EZ17e",
     brand: "wacker-neuson",
     category: "pelles",
@@ -192,7 +192,7 @@ export const PRODUCTS: Product[] = [
     images: ["/images/catalogue/wacker-neuson-ez17e.png"],
     shortDescription: "Pelle électrique 1,7 tonne — zéro émission",
     description:
-      "L'EZ17e est la première pelle compacte 100% électrique de Wacker Neuson. Idéale pour les chantiers urbains et les espaces confinés, elle offre zéro émission et un niveau sonore réduit.",
+      "L'EZ17e est la première pelle compacte 100% électrique de WACKER NEUSON. Idéale pour les chantiers urbains et les espaces confinés, elle offre zéro émission et un niveau sonore réduit.",
     specs: [
       { label: "Masse opérationnelle", value: "1 700", unit: "kg" },
       { label: "Puissance moteur électrique", value: "10", unit: "kW" },
@@ -269,7 +269,7 @@ export const PRODUCTS: Product[] = [
   {
     id: "dw30-occ",
     slug: "wacker-neuson-dw30-occasion",
-    name: "Wacker Neuson DW30",
+    name: "WACKER NEUSON DW30",
     model: "DW30",
     brand: "wacker-neuson",
     category: "dumpers",
@@ -279,7 +279,7 @@ export const PRODUCTS: Product[] = [
     images: ["/images/catalogue/wacker-neuson-dw30.png"],
     shortDescription: "Dumper articulé 3 tonnes — occasion certifiée",
     description:
-      "Dumper articulé Wacker Neuson DW30 d'occasion, révisé et certifié par nos techniciens. Idéal pour les petits chantiers et zones d'accès difficile.",
+      "Dumper articulé WACKER NEUSON DW30 d'occasion, révisé et certifié par nos techniciens. Idéal pour les petits chantiers et zones d'accès difficile.",
     specs: [
       { label: "Capacité de charge", value: "3 000", unit: "kg" },
       { label: "Puissance moteur", value: "28", unit: "kW" },
@@ -300,7 +300,7 @@ export const PRODUCTS: Product[] = [
   {
     id: "rd12-occ",
     slug: "wacker-neuson-rd12-occasion",
-    name: "Wacker Neuson RD12",
+    name: "WACKER NEUSON RD12",
     model: "RD12",
     brand: "wacker-neuson",
     category: "compacteurs",
@@ -310,7 +310,7 @@ export const PRODUCTS: Product[] = [
     images: ["/images/products/placeholder-wn.svg"],
     shortDescription: "Rouleau tandem 1,2 tonne — occasion révisée",
     description:
-      "Rouleau tandem Wacker Neuson RD12 d'occasion en excellent état. Inspecté et révisé dans nos ateliers certifiés SE+.",
+      "Rouleau tandem WACKER NEUSON RD12 d'occasion en excellent état. Inspecté et révisé dans nos ateliers certifiés SE+.",
     specs: [
       { label: "Masse de travail", value: "1 200", unit: "kg" },
       { label: "Largeur de travail", value: "780", unit: "mm" },
@@ -363,7 +363,7 @@ export const SERVICES: Service[] = [
     id: "vente-neuf",
     title: "Vente Matériel Neuf",
     description:
-      "Distributeur officiel Wacker Neuson, Magni et Promove Demolition. Accédez à la gamme complète de matériels neufs avec garantie constructeur.",
+      "Distributeur officiel WACKER NEUSON, Magni et Promove Demolition. Accédez à la gamme complète de matériels neufs avec garantie constructeur.",
     icon: "star",
     features: [
       "Gamme complète constructeurs",
@@ -402,7 +402,7 @@ export const SERVICES: Service[] = [
     id: "pieces",
     title: "Pièces Détachées",
     description:
-      "Stock de pièces d'origine pour Wacker Neuson, Magni et Promove. Commande rapide et livraison express pour minimiser l'immobilisation.",
+      "Stock de pièces d'origine pour WACKER NEUSON, Magni et Promove. Commande rapide et livraison express pour minimiser l'immobilisation.",
     icon: "cog",
     features: [
       "Pièces d'origine garanties",
@@ -454,7 +454,7 @@ export const WHY_CHOOSE_ITEMS = [
     icon: "star",
     title: "Partenaire officiel",
     description:
-      "Distributeur agréé Wacker Neuson, Magni et Promove Demolition. Accès aux gammes complètes avec le support constructeur.",
+      "Distributeur agréé WACKER NEUSON, Magni et Promove Demolition. Accès aux gammes complètes avec le support constructeur.",
   },
   {
     icon: "badge-check",

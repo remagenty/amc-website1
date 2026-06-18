@@ -26,7 +26,7 @@ const MEMBERS = {
     name: "Thomas",
     role: "Chef d'agence",
     experience: "XX ans d'expérience",
-    specialites: ["Direction d'agence", "Wacker Neuson", "Magni", "Promove"],
+    specialites: ["Direction d'agence", "WACKER NEUSON", "Magni", "Promove"],
     roleTitle: "Pilote de l'agence AMC",
     roleText:
       "En tant que chef d'agence, je supervise l'ensemble des activités d'AMC : de la relation client à la gestion des stocks, en passant par la coordination des équipes commerciales et techniques. Mon objectif : que chaque client trouve la solution adaptée à son chantier, dans les meilleurs délais.",
@@ -56,10 +56,10 @@ const MEMBERS = {
     photo: "/images/about/equipe-amc.png",
     role: "Responsable SAV",
     experience: "TODO: XX ans d'expérience",
-    specialites: ["Certification SE+", "Wacker Neuson", "Magni", "Diagnostic"],
+    specialites: ["Certification SE+", "WACKER NEUSON", "Magni", "Diagnostic"],
     roleTitle: "Expert technique et réactivité",
     roleText:
-      "Je coordonne toutes les interventions de notre service après-vente : diagnostics, réparations, entretiens préventifs et gestion des pièces détachées. Formé directement par Wacker Neuson et Magni, j'assure des interventions rapides et conformes aux standards constructeurs.",
+      "Je coordonne toutes les interventions de notre service après-vente : diagnostics, réparations, entretiens préventifs et gestion des pièces détachées. Formé directement par WACKER NEUSON et Magni, j'assure des interventions rapides et conformes aux standards constructeurs.",
     competences: ["Diagnostic technique", "Réparation", "Pièces d'origine", "Maintenance préventive", "Formation constructeur"],
     domaines: [
       {
@@ -70,7 +70,7 @@ const MEMBERS = {
       {
         icon: IconBadgeCheck,
         titre: "Certification SE+",
-        texte: "Technicien certifié SE+ par Wacker Neuson et Magni — garant de la qualité et de la conformité de chaque intervention.",
+        texte: "Technicien certifié SE+ par WACKER NEUSON et Magni — garant de la qualité et de la conformité de chaque intervention.",
       },
       {
         icon: IconZap,
@@ -86,9 +86,9 @@ const MEMBERS = {
     role: "Commercial",
     experience: "XX ans d'expérience",
     specialites: ["Chariots télescopiques et nacelles Magni", "Mini-pelles WN", "Dumpers", "Conseil"],
-    roleTitle: "Spécialiste Wacker Neuson & Magni",
+    roleTitle: "Spécialiste WACKER NEUSON & Magni",
     roleText:
-      "Mon domaine de prédilection : les matériels de levage et de terrassement. Je vous accompagne de A à Z dans le choix de vos chariots télescopiques et nacelles Magni et de vos machines Wacker Neuson — mini-pelles, dumpers, chargeuses. Je prends le temps de comprendre vos chantiers pour vous proposer le matériel le plus adapté.",
+      "Mon domaine de prédilection : les matériels de levage et de terrassement. Je vous accompagne de A à Z dans le choix de vos chariots télescopiques et nacelles Magni et de vos machines WACKER NEUSON — mini-pelles, dumpers, chargeuses. Je prends le temps de comprendre vos chantiers pour vous proposer le matériel le plus adapté.",
     competences: ["Chariots télescopiques et nacelles Magni", "Mini-pelles", "Dumpers", "Conseil technique", "Devis"],
     domaines: [
       {
@@ -99,7 +99,7 @@ const MEMBERS = {
       {
         icon: IconHardHat,
         titre: "Mini-pelles & Dumpers WN",
-        texte: "Connaissance approfondie de toute la gamme Wacker Neuson : mini-pelles électriques, dumpers articulés, chargeuses compactes.",
+        texte: "Connaissance approfondie de toute la gamme WACKER NEUSON : mini-pelles électriques, dumpers articulés, chargeuses compactes.",
       },
       {
         icon: IconCheck,

@@ -14,7 +14,7 @@ interface ProductCardProps {
 }
 
 const BRAND_LABELS: Record<string, string> = {
-  "wacker-neuson": "Wacker Neuson",
+  "wacker-neuson": "WACKER NEUSON",
   magni: "Magni",
   "promove-demolition": "Promove",
 };

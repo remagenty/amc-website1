@@ -31,7 +31,7 @@ const FOOTER_LINKS = {
   ],
   entreprise: [
     { label: "Qui sommes-nous", href: "/a-propos" },
-    { label: "Wacker Neuson", href: "/partenaires/wacker-neuson" },
+    { label: "WACKER NEUSON", href: "/partenaires/wacker-neuson" },
     { label: "Magni", href: "/partenaires/magni" },
     { label: "Promove Demolition", href: "/partenaires/promove-demolition" },
     { label: "Certification SE+", href: "/services/certification-se-plus" },
@@ -189,7 +189,7 @@ export function Footer() {
               </h4>
               <div className="space-y-2 text-sm text-white/70">
                 <Link href="/partenaires/wacker-neuson" className="block hover:text-amc-yellow transition-colors">
-                  Wacker Neuson
+                  WACKER NEUSON
                 </Link>
                 <Link href="/partenaires/magni" className="block hover:text-amc-yellow transition-colors">
                   Magni

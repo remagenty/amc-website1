@@ -22,7 +22,7 @@ const COMMERCIAL_NAMES: Record<string, string> = {
 };
 
 const BRAND_NAMES: Record<string, string> = {
-  "wacker-neuson": "Wacker Neuson",
+  "wacker-neuson": "WACKER NEUSON",
   magni: "Magni",
   "promove-demolition": "Promove Demolition",
 };
@@ -203,7 +203,7 @@ export function ContactForm() {
             type="text"
             value={form.materiel}
             onChange={(e) => handleChange("materiel", e.target.value)}
-            placeholder="Ex: Wacker Neuson DW60, Magni RTH 5.18..."
+            placeholder="Ex: WACKER NEUSON DW60, Magni RTH 5.18..."
             className="input-base"
           />
         </div>

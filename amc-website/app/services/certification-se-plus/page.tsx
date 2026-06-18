@@ -14,11 +14,11 @@ import {
 import { PhoneLink } from "@/components/ui/PhoneLink";
 
 export const metadata: Metadata = {
-  title: { absolute: "Certification SE+ Wacker Neuson | AMC Saint-Félix" },
-  description: "AMC atelier certifié SE+ par Wacker Neuson. Techniciens formés en usine, pièces d'origine uniquement, interventions conformes aux standards constructeurs.",
+  title: { absolute: "Certification SE+ WACKER NEUSON | AMC Saint-Félix" },
+  description: "AMC atelier certifié SE+ par WACKER NEUSON. Techniciens formés en usine, pièces d'origine uniquement, interventions conformes aux standards constructeurs.",
   openGraph: {
     title: "Certification SE+ | AMC",
-    description: "AMC atelier certifié SE+ par Wacker Neuson. Techniciens formés en usine, pièces d'origine uniquement, interventions conformes aux standards constructeurs.",
+    description: "AMC atelier certifié SE+ par WACKER NEUSON. Techniciens formés en usine, pièces d'origine uniquement, interventions conformes aux standards constructeurs.",
     images: [{ url: "/images/Slide-3.jpg" }],
     type: "website",
     url: `https://www.amc-savoie.fr/services/certification-se-plus`,
@@ -30,7 +30,7 @@ const GARANTIES = [
   {
     icon: IconBadgeCheck,
     titre: "Interventions aux normes constructeur",
-    texte: "Chaque intervention respecte scrupuleusement les procédures définies par Wacker Neuson, Magni et Promove Demolition. Aucun écart par rapport au standard.",
+    texte: "Chaque intervention respecte scrupuleusement les procédures définies par WACKER NEUSON, Magni et Promove Demolition. Aucun écart par rapport au standard.",
   },
   {
     icon: IconCog,
@@ -62,8 +62,8 @@ const GARANTIES = [
 const MARQUES = [
   {
     logo: "/images/logo-wacker.png",
-    name: "Wacker Neuson",
-    alt: "Logo Wacker Neuson",
+    name: "WACKER NEUSON",
+    alt: "Logo WACKER NEUSON",
     desc: "Certification SE+ pour l'ensemble de la gamme : mini-pelles, dumpers, compacteurs, chargeuses compactes et vibrateurs.",
     color: "border-red-200 bg-red-50/30",
   },
@@ -110,7 +110,7 @@ export default function CertificationSePlusPage() {
             Certification SE+
           </h1>
           <p className="text-white/75 text-lg max-w-2xl mb-8">
-            La référence qualité du SAV compact. Le programme SE+ de Wacker Neuson
+            La référence qualité du SAV compact. Le programme SE+ de WACKER NEUSON
             garantit des techniciens formés en usine et des interventions conformes
             aux standards constructeur.
           </p>
@@ -137,14 +137,14 @@ export default function CertificationSePlusPage() {
                 Qu&apos;est-ce que la certification SE+ ?
               </h2>
               <p className="text-gray-600 leading-relaxed mb-5">
-                SE+ est le programme qualité de <strong>Wacker Neuson</strong> dédié aux distributeurs SAV.
+                SE+ est le programme qualité de <strong>WACKER NEUSON</strong> dédié aux distributeurs SAV.
                 Il certifie qu&apos;un atelier et ses techniciens ont suivi la formation officielle du constructeur,
                 maîtrisent les gammes de produits et disposent de l&apos;outillage homologué nécessaire.
               </p>
               <p className="text-gray-600 leading-relaxed mb-6">
                 Cette certification est accordée après audit du constructeur et renouvelée régulièrement.
                 Elle s&apos;applique chez AMC à l&apos;ensemble des marques distribuées :
-                Wacker Neuson, Magni et Promove Demolition.
+                WACKER NEUSON, Magni et Promove Demolition.
               </p>
               <div className="flex flex-wrap gap-3">
                 {["Formation en usine", "Audit constructeur", "Renouvellement régulier", "Outillage homologué"].map((tag) => (
@@ -238,7 +238,7 @@ export default function CertificationSePlusPage() {
               </p>
               <ul className="space-y-3">
                 {[
-                  "Techniciens formés en usine Wacker Neuson, Magni et Promove",
+                  "Techniciens formés en usine WACKER NEUSON, Magni et Promove",
                   "Certifications individuelles à jour pour chaque technicien",
                   "Atelier équipé aux normes SE+ : bancs de diagnostic, outillage calibré",
                   "Stock de pièces d'origine en accès direct",

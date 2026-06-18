@@ -3,7 +3,7 @@ import { BRANDS, getCategoriesForBrand, getMachines } from "./data";
 // URL externe vers la page de gamme du fabricant, par slug de catégorie.
 // Laissé vide pour le moment — à compléter catégorie par catégorie.
 export const GAMME_FABRICANT_URLS: Record<string, string> = {
-  // Wacker Neuson
+  // WACKER NEUSON
   "mini-pelles": "https://www.wackerneuson.fr/produits/pelles",
   dumpers: "https://www.wackerneuson.fr/produits/dumpers",
   chargeuses: "https://www.wackerneuson.fr/produits/chargeuses-sur-pneus",

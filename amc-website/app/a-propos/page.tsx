@@ -15,10 +15,10 @@ import { PhoneLink } from "@/components/ui/PhoneLink";
 
 export const metadata: Metadata = {
   title: { absolute: "Notre équipe | AMC — Alpes Matériel Compact" },
-  description: "Découvrez l'équipe AMC, distributeur officiel Wacker Neuson, Magni et Promove en Rhône-Alpes.",
+  description: "Découvrez l'équipe AMC, distributeur officiel WACKER NEUSON, Magni et Promove en Rhône-Alpes.",
   openGraph: {
     title: "Notre équipe | AMC — Alpes Matériel Compact",
-    description: "Découvrez l'équipe AMC, distributeur officiel Wacker Neuson, Magni et Promove en Rhône-Alpes.",
+    description: "Découvrez l'équipe AMC, distributeur officiel WACKER NEUSON, Magni et Promove en Rhône-Alpes.",
     images: [{ url: "/images/about/equipe-amc.png" }],
     type: "website",
     url: `https://www.amc-savoie.fr/a-propos`,
@@ -35,7 +35,7 @@ const HISTOIRE_BLOCKS = [
     title: "Une expertise locale au service du BTP",
     text: "Implantée en région Rhône-Alpes, AMC a été fondée avec une conviction simple : les professionnels du chantier méritent un interlocuteur unique, réactif et expert.",
     points: [
-      "Distributeur officiel Wacker Neuson, Magni et Promove Demolition",
+      "Distributeur officiel WACKER NEUSON, Magni et Promove Demolition",
       "Gamme complète de matériels neufs et d'occasion",
       "Service après-vente de proximité certifié SE+",
     ],
@@ -50,14 +50,14 @@ const HISTOIRE_BLOCKS = [
     title: "Distributeur officiel des meilleures marques",
     text: "AMC est l'interlocuteur privilégié des professionnels du BTP en Rhône-Alpes pour trois marques leaders de l'industrie de la construction.",
     points: [
-      "Wacker Neuson — équipements compacts haute performance",
+      "WACKER NEUSON — équipements compacts haute performance",
       "Magni — télescopiques rotatifs et fixes de précision",
       "Promove Demolition — outils hydrauliques de démolition",
     ],
     extra:
       "Nos équipes sont formées directement par les constructeurs, avec accès aux pièces d'origine et aux garanties officielles.",
     image: "/images/photo-wacker-catalogue.jpg",
-    imageAlt: "Gamme matériels Wacker Neuson distribuée par AMC",
+    imageAlt: "Gamme matériels WACKER NEUSON distribuée par AMC",
   },
   {
     tag: "SAV certifié",
@@ -65,7 +65,7 @@ const HISTOIRE_BLOCKS = [
     title: "Un atelier certifié SE+ à votre service",
     text: "Notre atelier de Saint-Félix est équipé de bancs de diagnostic homologués et d'outillage constructeur. Nos techniciens certifiés interviennent sur tous les matériels distribués.",
     points: [
-      "Certification SE+ pour Wacker Neuson, Magni et Promove",
+      "Certification SE+ pour WACKER NEUSON, Magni et Promove",
       "Techniciens formés et habilités par les constructeurs",
       "Intervention rapide sur site ou en atelier",
     ],
@@ -102,7 +102,7 @@ const TEAM = [
     role: "Commercial",
     name: "Jean-Pierre",
     description:
-      "Spécialiste des matériels Wacker Neuson et Magni, il vous accompagne dans le choix de vos équipements.",
+      "Spécialiste des matériels WACKER NEUSON et Magni, il vous accompagne dans le choix de vos équipements.",
   },
   {
     slug: "commercial-2",
@@ -141,7 +141,7 @@ const VALEURS = [
     icon: IconStar,
     titre: "Partenaires officiels",
     texte:
-      "Distributeur agréé Wacker Neuson, Magni et Promove Demolition — garanties constructeur et pièces d'origine assurées.",
+      "Distributeur agréé WACKER NEUSON, Magni et Promove Demolition — garanties constructeur et pièces d'origine assurées.",
   },
 ];
 
@@ -183,7 +183,7 @@ export default function AProposPage() {
             {/* TODO: remplacer [Fondée en XXXX] par l'année réelle de création */}
             Fondée en 2013, AMC s&apos;est imposé comme le partenaire de confiance
             des professionnels du BTP en région Rhône-Alpes. Distributeur officiel
-            Wacker Neuson, Magni et Promove Demolition, nous mettons notre expertise
+            WACKER NEUSON, Magni et Promove Demolition, nous mettons notre expertise
             au service de vos chantiers.
           </p>
           <div className="flex flex-wrap gap-3">
@@ -238,7 +238,7 @@ export default function AProposPage() {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 {[
-                  { label: "Distributeur officiel Wacker Neuson", color: "bg-red-900/40 border-red-400/40 text-red-100" },
+                  { label: "Distributeur officiel WACKER NEUSON", color: "bg-red-900/40 border-red-400/40 text-red-100" },
                   { label: "Distributeur officiel Magni", color: "bg-blue-900/40 border-blue-400/40 text-blue-100" },
                   { label: "Atelier certifié SE+", color: "bg-green-900/40 border-green-400/40 text-green-100" },
                 ].map((cert) => (

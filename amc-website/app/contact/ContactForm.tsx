@@ -179,7 +179,7 @@ export function ContactForm() {
             type="text"
             value={form.materiel}
             onChange={(e) => handleChange("materiel", e.target.value)}
-            placeholder="Ex: Wacker Neuson DW60, Magni RTH 5.18..."
+            placeholder="Ex: WACKER NEUSON DW60, Magni RTH 5.18..."
             className="input-base"
           />
         </div>

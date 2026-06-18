@@ -8,13 +8,13 @@ const ACTIVITIES = [
     icon: <IconStar size={28} className="text-amc-yellow" />,
     title: "Vente Matériel Neuf",
     description:
-      "Distributeur officiel Wacker Neuson, Magni et Promove Demolition. Accédez à la gamme complète de matériels de chantier neufs avec garantie constructeur et livraison en Rhône-Alpes.",
-    badges: ["Wacker Neuson", "Magni", "Promove"],
+      "Distributeur officiel WACKER NEUSON, Magni et Promove Demolition. Accédez à la gamme complète de matériels de chantier neufs avec garantie constructeur et livraison en Rhône-Alpes.",
+    badges: ["WACKER NEUSON", "Magni", "Promove"],
     cta: "Voir le catalogue",
     href: "/gammes?etat=neuf",
     highlight: true,
     image: "/images/Magni-catalogue.avif",
-    imageAlt: "Matériel neuf Wacker Neuson — AMC",
+    imageAlt: "Matériel neuf WACKER NEUSON — AMC",
   },
   {
     id: "occasion",

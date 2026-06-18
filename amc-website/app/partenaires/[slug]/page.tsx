@@ -18,8 +18,8 @@ export async function generateStaticParams() {
 
 const BRAND_OG: Record<string, { title: string; description: string; image: string; url: string }> = {
   "wacker-neuson": {
-    title: "Wacker Neuson | Distributeur officiel AMC — Rhône-Alpes",
-    description: "AMC distributeur agréé Wacker Neuson en Rhône-Alpes. Compacteurs, mini-pelles, dumpers avec garantie constructeur et SAV certifié.",
+    title: "WACKER NEUSON | Distributeur officiel AMC — Rhône-Alpes",
+    description: "AMC distributeur agréé WACKER NEUSON en Rhône-Alpes. Compacteurs, mini-pelles, dumpers avec garantie constructeur et SAV certifié.",
     image: "/images/logo-wacker.png",
     url: "https://www.amc-savoie.fr/partenaires/wacker-neuson",
   },

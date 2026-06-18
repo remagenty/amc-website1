@@ -21,7 +21,7 @@ import {
 import { PhoneLink } from "@/components/ui/PhoneLink";
 
 const BRAND_NAMES: Record<string, string> = {
-  "wacker-neuson": "Wacker Neuson",
+  "wacker-neuson": "WACKER NEUSON",
   magni: "Magni",
   "promove-demolition": "Promove Demolition",
 };

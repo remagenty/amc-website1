@@ -7,7 +7,7 @@ import { CategoryCard } from "@/components/gammes/CategoryCard";
 export const metadata: Metadata = {
   title: { absolute: "Nos gammes par catégorie | AMC" },
   description:
-    "Parcourez les gammes de matériels AMC par catégorie — Wacker Neuson, Magni, Promove Demolition. Mini-pelles, dumpers, télescopiques, équipements de démolition.",
+    "Parcourez les gammes de matériels AMC par catégorie — WACKER NEUSON, Magni, Promove Demolition. Mini-pelles, dumpers, télescopiques, équipements de démolition.",
 };
 
 export default function GammesPage({

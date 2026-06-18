@@ -27,7 +27,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "wacker-neuson-gamme-zero-emission-2026",
     image: "/images/photo-wacker-catalogue.jpg",
-    title: "Wacker Neuson lance sa nouvelle gamme zéro émission 2026",
+    title: "WACKER NEUSON lance sa nouvelle gamme zéro émission 2026",
     category: "Nouveautés",
     summary:
       "Découvrez la révolution électrique avec les nouvelles mini-pelles et compacteurs 100% électriques. Performance maximale, zéro émission, pour des chantiers urbains plus propres.",
@@ -36,13 +36,13 @@ export const ARTICLES: Article[] = [
     gradientFrom: "#34d399",
     gradientTo: "#0f766e",
     icon: "⚡",
-    metaTitle: "Wacker Neuson gamme zéro émission 2026",
+    metaTitle: "WACKER NEUSON gamme zéro émission 2026",
     metaDescription:
-      "Découvrez la nouvelle gamme électrique Wacker Neuson 2026 : mini-pelles EZ17e, EZ26e et compacteurs zéro émission. Disponible chez AMC en Savoie.",
+      "Découvrez la nouvelle gamme électrique WACKER NEUSON 2026 : mini-pelles EZ17e, EZ26e et compacteurs zéro émission. Disponible chez AMC en Savoie.",
     content: [
       {
         type: "intro",
-        text: "Le secteur du BTP vit une mutation profonde. Face aux restrictions croissantes sur les émissions dans les centres-villes et aux zones à faibles émissions (ZFE), les constructeurs accélèrent leur transition électrique. Wacker Neuson, pionnier de l'électrification des engins compacts, franchit une nouvelle étape avec sa gamme zéro émission 2026, désormais disponible chez AMC Alpes Matériel Compact.",
+        text: "Le secteur du BTP vit une mutation profonde. Face aux restrictions croissantes sur les émissions dans les centres-villes et aux zones à faibles émissions (ZFE), les constructeurs accélèrent leur transition électrique. WACKER NEUSON, pionnier de l'électrification des engins compacts, franchit une nouvelle étape avec sa gamme zéro émission 2026, désormais disponible chez AMC Alpes Matériel Compact.",
       },
       {
         type: "h2",
@@ -50,15 +50,15 @@ export const ARTICLES: Article[] = [
       },
       {
         type: "p",
-        text: "En Europe, les zones à faibles émissions se multiplient. Paris, Lyon, Grenoble, et bientôt de nombreuses agglomérations imposent des restrictions strictes aux engins thermiques dans leurs centres. Pour les entreprises de BTP, cela représente un défi majeur : continuer à travailler en milieu urbain sans enfreindre les réglementations environnementales. La réponse de Wacker Neuson est claire : des machines 100 % électriques aussi performantes que leurs homologues diesel.",
+        text: "En Europe, les zones à faibles émissions se multiplient. Paris, Lyon, Grenoble, et bientôt de nombreuses agglomérations imposent des restrictions strictes aux engins thermiques dans leurs centres. Pour les entreprises de BTP, cela représente un défi majeur : continuer à travailler en milieu urbain sans enfreindre les réglementations environnementales. La réponse de WACKER NEUSON est claire : des machines 100 % électriques aussi performantes que leurs homologues diesel.",
       },
       {
         type: "h2",
-        text: "La gamme zéro émission Wacker Neuson 2026",
+        text: "La gamme zéro émission WACKER NEUSON 2026",
       },
       {
         type: "p",
-        text: "Wacker Neuson développe sa gamme « zero emission » depuis plusieurs années. La version 2026 marque une rupture technologique significative, avec des batteries lithium-ion de nouvelle génération offrant une densité énergétique améliorée de 30 % par rapport à la génération précédente. Le résultat : des machines plus légères, plus puissantes et disposant d'une autonomie suffisante pour une journée de chantier complète.",
+        text: "WACKER NEUSON développe sa gamme « zero emission » depuis plusieurs années. La version 2026 marque une rupture technologique significative, avec des batteries lithium-ion de nouvelle génération offrant une densité énergétique améliorée de 30 % par rapport à la génération précédente. Le résultat : des machines plus légères, plus puissantes et disposant d'une autonomie suffisante pour une journée de chantier complète.",
       },
       {
         type: "h2",
@@ -84,11 +84,11 @@ export const ARTICLES: Article[] = [
       },
       {
         type: "p",
-        text: "La gamme de compacteurs électriques Wacker Neuson couvre plaques vibrantes, pilonneuses et rouleaux tandem. Ces machines silencieuses sont particulièrement adaptées aux travaux de nuit, aux chantiers de proximité et aux rénovations en milieu occupé. La plaque vibrante VP1550e, par exemple, offre une force centrifuge de 15 kN avec une autonomie de 4 heures, sans aucune émission ni huile à changer.",
+        text: "La gamme de compacteurs électriques WACKER NEUSON couvre plaques vibrantes, pilonneuses et rouleaux tandem. Ces machines silencieuses sont particulièrement adaptées aux travaux de nuit, aux chantiers de proximité et aux rénovations en milieu occupé. La plaque vibrante VP1550e, par exemple, offre une force centrifuge de 15 kN avec une autonomie de 4 heures, sans aucune émission ni huile à changer.",
       },
       {
         type: "quote",
-        text: "Depuis que nous avons intégré les compacteurs électriques Wacker Neuson sur nos chantiers lyonnais, nos équipes travaillent dans de meilleures conditions. Plus de bruit, plus d'odeurs de carburant, et nous avons accès aux ZFE sans restriction. C'est un vrai gain opérationnel.",
+        text: "Depuis que nous avons intégré les compacteurs électriques WACKER NEUSON sur nos chantiers lyonnais, nos équipes travaillent dans de meilleures conditions. Plus de bruit, plus d'odeurs de carburant, et nous avons accès aux ZFE sans restriction. C'est un vrai gain opérationnel.",
         author: "Thomas D.",
         role: "Chef de chantier, entreprise VRD Rhône-Alpes",
       },
@@ -113,12 +113,12 @@ export const ARTICLES: Article[] = [
       },
       {
         type: "p",
-        text: "En tant que distributeur officiel Wacker Neuson pour la Haute-Savoie et la Savoie, AMC propose l'intégralité de la gamme zéro émission 2026 en démonstration et en stock. Nos conseillers techniques peuvent vous accompagner dans la transition électrique de votre parc : analyse des besoins, essais sur vos chantiers, calcul du retour sur investissement. Des solutions de financement adaptées (leasing, location longue durée) sont disponibles pour faciliter l'acquisition.",
+        text: "En tant que distributeur officiel WACKER NEUSON pour la Haute-Savoie et la Savoie, AMC propose l'intégralité de la gamme zéro émission 2026 en démonstration et en stock. Nos conseillers techniques peuvent vous accompagner dans la transition électrique de votre parc : analyse des besoins, essais sur vos chantiers, calcul du retour sur investissement. Des solutions de financement adaptées (leasing, location longue durée) sont disponibles pour faciliter l'acquisition.",
       },
       {
         type: "callout",
         title: "Essai gratuit sur votre chantier",
-        body: "AMC propose des démonstrations gratuites des machines électriques Wacker Neuson directement sur vos chantiers. Contactez-nous pour planifier un essai sans engagement.",
+        body: "AMC propose des démonstrations gratuites des machines électriques WACKER NEUSON directement sur vos chantiers. Contactez-nous pour planifier un essai sans engagement.",
       },
       { type: "cta", label: "Demander un devis", href: "/contact?type=devis" },
     ],
@@ -138,7 +138,7 @@ export const ARTICLES: Article[] = [
     icon: "🔧",
     metaTitle: "5 conseils maintenance engins de chantier",
     metaDescription:
-      "Nos experts AMC partagent 5 conseils essentiels pour optimiser la maintenance préventive de vos engins de chantier Wacker Neuson, Magni et Promove Demolition.",
+      "Nos experts AMC partagent 5 conseils essentiels pour optimiser la maintenance préventive de vos engins de chantier WACKER NEUSON, Magni et Promove Demolition.",
     content: [
       {
         type: "intro",
@@ -177,7 +177,7 @@ export const ARTICLES: Article[] = [
       },
       {
         type: "p",
-        text: "Wacker Neuson, Magni et Promove Demolition définissent des intervalles de maintenance précis dans leurs manuels d'entretien : 250h, 500h, 1 000h et 2 000h selon les opérations. Ces intervalles ne sont pas des suggestions : ils sont calculés pour garantir la fiabilité des composants et maintenir la garantie constructeur. Tenir un carnet d'entretien à jour est indispensable, notamment en cas de revente ou de sinistre.",
+        text: "WACKER NEUSON, Magni et Promove Demolition définissent des intervalles de maintenance précis dans leurs manuels d'entretien : 250h, 500h, 1 000h et 2 000h selon les opérations. Ces intervalles ne sont pas des suggestions : ils sont calculés pour garantir la fiabilité des composants et maintenir la garantie constructeur. Tenir un carnet d'entretien à jour est indispensable, notamment en cas de revente ou de sinistre.",
       },
       {
         type: "h2",
@@ -185,7 +185,7 @@ export const ARTICLES: Article[] = [
       },
       {
         type: "p",
-        text: "Les pièces de remplacement génériques peuvent sembler économiques à l'achat. En réalité, elles engendrent souvent des surcoûts importants : usure prématurée des composants adjacents, non-conformité aux tolérances constructeur, incompatibilité avec les systèmes électroniques. Les pièces d'origine Wacker Neuson et Magni garantissent les mêmes spécifications que les composants d'origine, préservent la garantie et assurent la traçabilité des interventions.",
+        text: "Les pièces de remplacement génériques peuvent sembler économiques à l'achat. En réalité, elles engendrent souvent des surcoûts importants : usure prématurée des composants adjacents, non-conformité aux tolérances constructeur, incompatibilité avec les systèmes électroniques. Les pièces d'origine WACKER NEUSON et Magni garantissent les mêmes spécifications que les composants d'origine, préservent la garantie et assurent la traçabilité des interventions.",
       },
       {
         type: "h2",
@@ -193,7 +193,7 @@ export const ARTICLES: Article[] = [
       },
       {
         type: "p",
-        text: "L'erreur humaine et la mauvaise utilisation sont responsables d'une part importante de l'usure prématurée des engins. Une formation aux bonnes pratiques opérateur — démarrage à froid, montée en température, cycles hydrauliques, stationnement — peut considérablement allonger la durée de vie des composants. Wacker Neuson propose des programmes de formation opérateur que nos équipes AMC peuvent organiser sur site.",
+        text: "L'erreur humaine et la mauvaise utilisation sont responsables d'une part importante de l'usure prématurée des engins. Une formation aux bonnes pratiques opérateur — démarrage à froid, montée en température, cycles hydrauliques, stationnement — peut considérablement allonger la durée de vie des composants. WACKER NEUSON propose des programmes de formation opérateur que nos équipes AMC peuvent organiser sur site.",
       },
       {
         type: "h2",
@@ -205,8 +205,8 @@ export const ARTICLES: Article[] = [
       },
       {
         type: "callout",
-        title: "L'atelier AMC : certifié SE+ par Wacker Neuson",
-        body: "Notre atelier de Saint-Félix dispose de 3 techniciens certifiés Wacker Neuson, Magni et Promove Demolition. Stock de pièces détachées d'origine disponible immédiatement. Diagnostic électronique constructeur. Délai d'intervention sous 48h ouvrées.",
+        title: "L'atelier AMC : certifié SE+ par WACKER NEUSON",
+        body: "Notre atelier de Saint-Félix dispose de 3 techniciens certifiés WACKER NEUSON, Magni et Promove Demolition. Stock de pièces détachées d'origine disponible immédiatement. Diagnostic électronique constructeur. Délai d'intervention sous 48h ouvrées.",
       },
       {
         type: "h2",
@@ -233,7 +233,7 @@ export const ARTICLES: Article[] = [
     title: "AMC obtient la certification SE+ pour son atelier de Saint-Félix",
     category: "Actualités",
     summary:
-      "Notre atelier est désormais certifié SE+ par Wacker Neuson, garantissant un service après-vente d'excellence avec des techniciens qualifiés et un stock de pièces détachées optimal.",
+      "Notre atelier est désormais certifié SE+ par WACKER NEUSON, garantissant un service après-vente d'excellence avec des techniciens qualifiés et un stock de pièces détachées optimal.",
     date: "3 mai 2026",
     readTime: "4 min",
     gradientFrom: "#fbbf24",
@@ -241,11 +241,11 @@ export const ARTICLES: Article[] = [
     icon: "🏆",
     metaTitle: "AMC certifié SE+ — Atelier SAV Saint-Félix Haute-Savoie",
     metaDescription:
-      "L'atelier AMC de Saint-Félix obtient la certification SE+ Wacker Neuson. Découvrez ce que ce label d'excellence garantit pour vos interventions SAV.",
+      "L'atelier AMC de Saint-Félix obtient la certification SE+ WACKER NEUSON. Découvrez ce que ce label d'excellence garantit pour vos interventions SAV.",
     content: [
       {
         type: "intro",
-        text: "C'est avec fierté qu'AMC Alpes Matériel Compact annonce l'obtention de la certification SE+ (Service Excellence Plus) par Wacker Neuson pour son atelier de Saint-Félix, en Haute-Savoie. Cette accréditation, la plus exigeante du secteur des équipements compacts de chantier, récompense plusieurs années d'investissement dans la formation de nos techniciens et dans nos équipements de diagnostic.",
+        text: "C'est avec fierté qu'AMC Alpes Matériel Compact annonce l'obtention de la certification SE+ (Service Excellence Plus) par WACKER NEUSON pour son atelier de Saint-Félix, en Haute-Savoie. Cette accréditation, la plus exigeante du secteur des équipements compacts de chantier, récompense plusieurs années d'investissement dans la formation de nos techniciens et dans nos équipements de diagnostic.",
       },
       {
         type: "h2",
@@ -253,17 +253,17 @@ export const ARTICLES: Article[] = [
       },
       {
         type: "p",
-        text: "Créée par Wacker Neuson, la certification SE+ (Service Excellence Plus) est le label de référence pour les ateliers SAV spécialisés dans les équipements compacts de chantier. Elle distingue les centres de service qui répondent aux critères les plus stricts en matière de compétences techniques, d'équipements et de réactivité. En France, seule une poignée de distributeurs disposent de ce label sur l'ensemble du territoire.",
+        text: "Créée par WACKER NEUSON, la certification SE+ (Service Excellence Plus) est le label de référence pour les ateliers SAV spécialisés dans les équipements compacts de chantier. Elle distingue les centres de service qui répondent aux critères les plus stricts en matière de compétences techniques, d'équipements et de réactivité. En France, seule une poignée de distributeurs disposent de ce label sur l'ensemble du territoire.",
       },
       {
         type: "ul",
         items: [
-          "Techniciens formés et certifiés directement par Wacker Neuson, avec recyclage annuel obligatoire",
+          "Techniciens formés et certifiés directement par WACKER NEUSON, avec recyclage annuel obligatoire",
           "Outillage spécifique agréé par le constructeur pour chaque type d'intervention",
           "Stock de pièces détachées d'origine dimensionné pour garantir une disponibilité immédiate",
           "Délai d'intervention maximum garanti contractuellement (48h ouvrées)",
           "Traçabilité complète de chaque intervention via le système constructeur",
-          "Audit qualité annuel réalisé par les équipes Wacker Neuson",
+          "Audit qualité annuel réalisé par les équipes WACKER NEUSON",
         ],
       },
       {
@@ -272,7 +272,7 @@ export const ARTICLES: Article[] = [
       },
       {
         type: "p",
-        text: "L'audit d'obtention de la certification SE+ dure deux jours. Les auditeurs Wacker Neuson contrôlent chaque aspect du service : conformité des équipements de diagnostic, maîtrise technique des intervenants sur des cas réels, organisation du stock de pièces, systèmes de traçabilité, conditions d'accueil des clients. C'est un processus rigoureux qui ne souffre aucun compromis.",
+        text: "L'audit d'obtention de la certification SE+ dure deux jours. Les auditeurs WACKER NEUSON contrôlent chaque aspect du service : conformité des équipements de diagnostic, maîtrise technique des intervenants sur des cas réels, organisation du stock de pièces, systèmes de traçabilité, conditions d'accueil des clients. C'est un processus rigoureux qui ne souffre aucun compromis.",
       },
       {
         type: "h2",
@@ -282,7 +282,7 @@ export const ARTICLES: Article[] = [
         type: "ul",
         items: [
           "500 m² d'atelier équipé, dont 2 fosses de visite et un pont élévateur grande capacité",
-          "3 techniciens certifiés Wacker Neuson, Magni et Promove Demolition",
+          "3 techniciens certifiés WACKER NEUSON, Magni et Promove Demolition",
           "Outillage de diagnostic constructeur : WDT (Wacker Diagnostic Tool), valises électroniques spécifiques",
           "Stock de plus de 2 000 références de pièces détachées d'origine en permanence",
           "Véhicule d'intervention mobile pour les dépannages sur site dans un rayon de 100 km",
@@ -299,21 +299,21 @@ export const ARTICLES: Article[] = [
       },
       {
         type: "quote",
-        text: "Obtenir la certification SE+ est la consécration d'un travail d'équipe. Nos techniciens sont passionnés par leur métier, et cette reconnaissance de Wacker Neuson valide leur niveau d'expertise. Pour nos clients, c'est la garantie d'un service réalisé exactement comme le préconise le constructeur.",
+        text: "Obtenir la certification SE+ est la consécration d'un travail d'équipe. Nos techniciens sont passionnés par leur métier, et cette reconnaissance de WACKER NEUSON valide leur niveau d'expertise. Pour nos clients, c'est la garantie d'un service réalisé exactement comme le préconise le constructeur.",
         author: "Rémi Fontaine",
         role: "Responsable atelier SAV, AMC Alpes Matériel Compact",
       },
       {
         type: "h2",
-        text: "AMC, distributeur officiel Wacker Neuson pour les deux Savoies",
+        text: "AMC, distributeur officiel WACKER NEUSON pour les deux Savoies",
       },
       {
         type: "p",
-        text: "AMC est le distributeur exclusif de Wacker Neuson pour la Haute-Savoie et la Savoie. Cette double accréditation — distributeur officiel et atelier certifié SE+ — garantit à nos clients une continuité de service optimale, de l'achat de la machine à la maintenance sur toute sa durée de vie. Nos équipes commerciales et techniques travaillent en synergie pour offrir le meilleur accompagnement possible aux professionnels du BTP de la région.",
+        text: "AMC est le distributeur exclusif de WACKER NEUSON pour la Haute-Savoie et la Savoie. Cette double accréditation — distributeur officiel et atelier certifié SE+ — garantit à nos clients une continuité de service optimale, de l'achat de la machine à la maintenance sur toute sa durée de vie. Nos équipes commerciales et techniques travaillent en synergie pour offrir le meilleur accompagnement possible aux professionnels du BTP de la région.",
       },
       {
         type: "callout",
-        title: "Votre machine Wacker Neuson nécessite une intervention ?",
+        title: "Votre machine WACKER NEUSON nécessite une intervention ?",
         body: "Contactez directement notre atelier certifié SE+ au 04 26 78 43 90 ou via notre formulaire en ligne. Nous vous répondons sous 24h ouvrées et proposons la prise en charge ou la venue d'un technicien sur site.",
       },
       { type: "cta", label: "Découvrir nos services SAV", href: "/services" },
@@ -334,7 +334,7 @@ export const ARTICLES: Article[] = [
     icon: "⛰️",
     metaTitle: "Équipement chantier en montagne : guide pratique",
     metaDescription:
-      "Guide complet pour choisir le bon matériel de chantier en montagne : mini-pelles Wacker Neuson, dumpers, compacteurs et télescopiques Magni adaptés aux Alpes.",
+      "Guide complet pour choisir le bon matériel de chantier en montagne : mini-pelles WACKER NEUSON, dumpers, compacteurs et télescopiques Magni adaptés aux Alpes.",
     content: [
       {
         type: "intro",
@@ -360,7 +360,7 @@ export const ARTICLES: Article[] = [
       },
       {
         type: "p",
-        text: "Pour les travaux d'excavation, de terrassement et de pose de réseaux en altitude, les mini-pelles Wacker Neuson s'imposent comme le choix de référence. Leur faible largeur de transport, leur capacité à travailler en dévers et leur polyvalence en font des outils universels sur les chantiers alpins.",
+        text: "Pour les travaux d'excavation, de terrassement et de pose de réseaux en altitude, les mini-pelles WACKER NEUSON s'imposent comme le choix de référence. Leur faible largeur de transport, leur capacité à travailler en dévers et leur polyvalence en font des outils universels sur les chantiers alpins.",
       },
       {
         type: "ul",
@@ -377,7 +377,7 @@ export const ARTICLES: Article[] = [
       },
       {
         type: "p",
-        text: "Le transport de matériaux sur des pentes supérieures à 20 % est une problématique spécifique aux chantiers de montagne. Les dumpers articulés Wacker Neuson sont conçus pour ces conditions extrêmes : leur châssis articulé au centre leur confère une motricité exceptionnelle, tandis que leur basse centre de gravité garantit la stabilité en dévers.",
+        text: "Le transport de matériaux sur des pentes supérieures à 20 % est une problématique spécifique aux chantiers de montagne. Les dumpers articulés WACKER NEUSON sont conçus pour ces conditions extrêmes : leur châssis articulé au centre leur confère une motricité exceptionnelle, tandis que leur basse centre de gravité garantit la stabilité en dévers.",
       },
       {
         type: "ul",
@@ -394,7 +394,7 @@ export const ARTICLES: Article[] = [
       },
       {
         type: "p",
-        text: "Le compactage en altitude nécessite des équipements adaptés aux spécificités des sols de montagne : roche concassée, grave naturelle, sols argileux saturés en eau. Les plaques vibrantes réversibles et les rouleaux tandem Wacker Neuson couvrent l'ensemble des situations rencontrées sur les chantiers alpins.",
+        text: "Le compactage en altitude nécessite des équipements adaptés aux spécificités des sols de montagne : roche concassée, grave naturelle, sols argileux saturés en eau. Les plaques vibrantes réversibles et les rouleaux tandem WACKER NEUSON couvrent l'ensemble des situations rencontrées sur les chantiers alpins.",
       },
       {
         type: "h2",
@@ -449,22 +449,22 @@ export const ARTICLES: Article[] = [
   {
     slug: "wacker-neuson-ez26e-pelle-electrique",
     image: "/images/photo-wacker-catalogue.jpg",
-    title: "Wacker Neuson EZ26e : la mini-pelle électrique zéro émission arrive chez AMC",
+    title: "WACKER NEUSON EZ26e : la mini-pelle électrique zéro émission arrive chez AMC",
     category: "Nouveautés",
     summary:
-      "2,6 tonnes, zéro émission, silence absolu. La mini-pelle électrique EZ26e de Wacker Neuson est désormais disponible chez AMC avec SAV certifié constructeur.",
+      "2,6 tonnes, zéro émission, silence absolu. La mini-pelle électrique EZ26e de WACKER NEUSON est désormais disponible chez AMC avec SAV certifié constructeur.",
     date: "15 avril 2025",
     readTime: "4 min",
     gradientFrom: "#22c55e",
     gradientTo: "#15803d",
     icon: "⚡",
-    metaTitle: "Wacker Neuson EZ26e mini-pelle électrique chez AMC",
+    metaTitle: "WACKER NEUSON EZ26e mini-pelle électrique chez AMC",
     metaDescription:
-      "La mini-pelle électrique Wacker Neuson EZ26e — 2,6 tonnes, zéro émission, batterie 30 ou 39 kWh — est disponible chez AMC en Rhône-Alpes.",
+      "La mini-pelle électrique WACKER NEUSON EZ26e — 2,6 tonnes, zéro émission, batterie 30 ou 39 kWh — est disponible chez AMC en Rhône-Alpes.",
     content: [
       {
         type: "intro",
-        text: "Présentée au Bauma 2025 et attendue sur les chantiers depuis plusieurs mois, la mini-pelle électrique EZ26e de Wacker Neuson est désormais disponible chez AMC. Cette machine de 2,6 tonnes représente une étape majeure dans l'électrification des engins compacts : performances équivalentes au diesel, mais sans émissions ni nuisances sonores.",
+        text: "Présentée au Bauma 2025 et attendue sur les chantiers depuis plusieurs mois, la mini-pelle électrique EZ26e de WACKER NEUSON est désormais disponible chez AMC. Cette machine de 2,6 tonnes représente une étape majeure dans l'électrification des engins compacts : performances équivalentes au diesel, mais sans émissions ni nuisances sonores.",
       },
       { type: "h2", text: "Une mini-pelle conçue pour les chantiers urbains et confinés" },
       {
@@ -489,7 +489,7 @@ export const ARTICLES: Article[] = [
       { type: "h2", text: "Certified Battery Check : la traçabilité TÜV de l'état des cellules" },
       {
         type: "p",
-        text: "Wacker Neuson intègre dans l'EZ26e un système de diagnostic de batterie certifié TÜV, le « Certified Battery Check ». Cet outil analyse l'état de santé des cellules, évalue la capacité résiduelle et produit un rapport certifié. Un avantage concret pour les entreprises soumises à des obligations de traçabilité ou qui envisagent une revente future de la machine.",
+        text: "WACKER NEUSON intègre dans l'EZ26e un système de diagnostic de batterie certifié TÜV, le « Certified Battery Check ». Cet outil analyse l'état de santé des cellules, évalue la capacité résiduelle et produit un rapport certifié. Un avantage concret pour les entreprises soumises à des obligations de traçabilité ou qui envisagent une revente future de la machine.",
       },
       { type: "h2", text: "Performances identiques au diesel, confort opérateur amélioré" },
       {
@@ -498,8 +498,8 @@ export const ARTICLES: Article[] = [
       },
       {
         type: "callout",
-        title: "Disponible chez AMC — SAV certifié Wacker Neuson",
-        body: "En tant que distributeur officiel et atelier certifié SE+ Wacker Neuson, AMC propose l'EZ26e à la vente et au SAV en Rhône-Alpes. Nos techniciens sont formés en usine sur les modèles électriques.",
+        title: "Disponible chez AMC — SAV certifié WACKER NEUSON",
+        body: "En tant que distributeur officiel et atelier certifié SE+ WACKER NEUSON, AMC propose l'EZ26e à la vente et au SAV en Rhône-Alpes. Nos techniciens sont formés en usine sur les modèles électriques.",
       },
       { type: "cta", label: "Demander une démonstration", href: "/devis" },
     ],
@@ -509,22 +509,22 @@ export const ARTICLES: Article[] = [
   {
     slug: "plaques-vibrantes-reversibles-wacker-neuson-2025",
     image: "/images/photo-wacker-catalogue.jpg",
-    title: "Nouvelle génération de plaques vibrantes réversibles Wacker Neuson : DPU52 à BPU62",
+    title: "Nouvelle génération de plaques vibrantes réversibles WACKER NEUSON : DPU52 à BPU62",
     category: "Nouveautés",
     summary:
-      "Forces de compactage 52 à 62 kN, transmission DireX, options numériques Bluetooth et télématique : la nouvelle génération de plaques Wacker Neuson printemps 2025.",
+      "Forces de compactage 52 à 62 kN, transmission DireX, options numériques Bluetooth et télématique : la nouvelle génération de plaques WACKER NEUSON printemps 2025.",
     date: "28 mars 2025",
     readTime: "3 min",
     gradientFrom: "#f59e0b",
     gradientTo: "#b45309",
     icon: "📳",
-    metaTitle: "Plaques vibrantes réversibles Wacker Neuson DPU/BPU 2025",
+    metaTitle: "Plaques vibrantes réversibles WACKER NEUSON DPU/BPU 2025",
     metaDescription:
-      "Découvrez les nouvelles plaques vibrantes réversibles Wacker Neuson DPU52, DPU62, BPU52 et BPU62 — disponibles chez AMC distributeur officiel en Rhône-Alpes.",
+      "Découvrez les nouvelles plaques vibrantes réversibles WACKER NEUSON DPU52, DPU62, BPU52 et BPU62 — disponibles chez AMC distributeur officiel en Rhône-Alpes.",
     content: [
       {
         type: "intro",
-        text: "Wacker Neuson renouvelle au printemps 2025 sa gamme de plaques vibrantes réversibles avec quatre nouveaux modèles : DPU52, DPU62, BPU52 et BPU62. Ces machines apportent des évolutions significatives en termes de puissance, de durabilité et de connectivité, répondant aux besoins croissants des entreprises de VRD, de terrassement et de pose de réseaux.",
+        text: "WACKER NEUSON renouvelle au printemps 2025 sa gamme de plaques vibrantes réversibles avec quatre nouveaux modèles : DPU52, DPU62, BPU52 et BPU62. Ces machines apportent des évolutions significatives en termes de puissance, de durabilité et de connectivité, répondant aux besoins croissants des entreprises de VRD, de terrassement et de pose de réseaux.",
       },
       { type: "h2", text: "Des forces de compactage de 52 à 62 kilonewtons" },
       {
@@ -554,12 +554,12 @@ export const ARTICLES: Article[] = [
       { type: "h2", text: "Ergonomie et comportement en virage" },
       {
         type: "p",
-        text: "Wacker Neuson a retravaillé la géométrie des guidons et la position du centre de gravité pour améliorer la maniabilité dans les virages serrés et réduire la fatigue opérateur sur les longues sessions. La réversibilité, caractéristique clé de cette gamme, permet de progresser dans les deux sens sans retourner la machine, ce qui réduit le temps de passage et améliore la qualité de compactage aux reprises.",
+        text: "WACKER NEUSON a retravaillé la géométrie des guidons et la position du centre de gravité pour améliorer la maniabilité dans les virages serrés et réduire la fatigue opérateur sur les longues sessions. La réversibilité, caractéristique clé de cette gamme, permet de progresser dans les deux sens sans retourner la machine, ce qui réduit le temps de passage et améliore la qualité de compactage aux reprises.",
       },
       {
         type: "callout",
         title: "Stock et démonstration disponibles chez AMC",
-        body: "AMC dispose de plaques vibrantes Wacker Neuson en stock avec prise en charge SAV certifiée. Contactez-nous pour organiser un essai sur votre chantier.",
+        body: "AMC dispose de plaques vibrantes WACKER NEUSON en stock avec prise en charge SAV certifiée. Contactez-nous pour organiser un essai sur votre chantier.",
       },
       { type: "cta", label: "Voir les compacteurs disponibles", href: "/catalogue?categorie=compacteurs" },
     ],
