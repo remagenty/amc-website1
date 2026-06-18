@@ -45,6 +45,15 @@ export function getCatalogueBrands(): Array<{id: string; label: string; count: n
   return Object.entries(counts).map(([id, count]) => ({ id, label: labels[id] ?? id, count }));
 }
 
+// Counts of visible (non-hidden) machines per brand — computed once from live catalogue data.
+// Used wherever a machine count per brand is displayed (header badges, partner pages, home section).
+function _computeBrandVisibleCounts(): Record<string, number> {
+  const counts: Record<string, number> = {};
+  for (const m of getMachines()) counts[m.brand] = (counts[m.brand] ?? 0) + 1;
+  return counts;
+}
+export const BRAND_VISIBLE_COUNTS: Record<string, number> = _computeBrandVisibleCounts();
+
 export const BRANDS: BrandInfo[] = [
   {
     id: "wacker-neuson",
@@ -55,7 +64,7 @@ export const BRANDS: BrandInfo[] = [
     description:
       "Leader mondial des équipements compacts de construction. AMC est distributeur officiel WACKER NEUSON pour la région Rhône-Alpes, proposant l'ensemble de la gamme : compacteurs, dumpers, pelles, plaques vibrantes et bien plus.",
     website: "https://www.wackerneuson.com",
-    productCount: 42,
+    productCount: BRAND_VISIBLE_COUNTS["wacker-neuson"] ?? 0,
   },
   {
     id: "magni",
@@ -66,7 +75,7 @@ export const BRANDS: BrandInfo[] = [
     description:
       "Magni est le spécialiste des chariots télescopiques rotatifs haute performance. Des machines robustes et précises pour la manutention et la construction.",
     website: "https://www.magni.it",
-    productCount: 18,
+    productCount: BRAND_VISIBLE_COUNTS["magni"] ?? 0,
   },
   {
     id: "promove-demolition",
@@ -77,7 +86,7 @@ export const BRANDS: BrandInfo[] = [
     description:
       "Promove Demolition propose une gamme complète d'outils de démolition hydrauliques haute qualité : brise-roches, cisailles, pinces, pulvérisateurs et godets criblants.",
     website: "https://www.promove-demolition.com",
-    productCount: 24,
+    productCount: BRAND_VISIBLE_COUNTS["promove-demolition"] ?? 0,
   },
 ];
 

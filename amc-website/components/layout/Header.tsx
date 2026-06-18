@@ -12,6 +12,7 @@ import {
   IconArrowRight,
 } from "@/components/ui/Icons";
 import { SEBadge } from "@/components/ui/SEBadge";
+import { BRAND_VISIBLE_COUNTS } from "@/lib/data";
 
 const TOP_BAR_ITEMS: { label: string; href?: string }[] = [
   { label: "📞 04 26 78 43 90" },
@@ -47,9 +48,9 @@ const FLAT_CATEGORIES = [
 const MEGA_MENUS = {
   materiels: {
     brands: [
-      { label: "WACKER NEUSON", href: "/catalogue?marque=wacker-neuson", badge: "55 machines" },
-      { label: "Magni", href: "/catalogue?marque=magni", badge: "23 machines" },
-      { label: "Promove Demolition", href: "/catalogue?marque=promove-demolition", badge: "22 outils" },
+      { label: "WACKER NEUSON", href: "/catalogue?marque=wacker-neuson", badge: `${BRAND_VISIBLE_COUNTS["wacker-neuson"] ?? 0} machines` },
+      { label: "Magni", href: "/catalogue?marque=magni", badge: `${BRAND_VISIBLE_COUNTS["magni"] ?? 0} machines` },
+      { label: "Promove Demolition", href: "/catalogue?marque=promove-demolition", badge: `${BRAND_VISIBLE_COUNTS["promove-demolition"] ?? 0} outils` },
     ],
   },
   partenaires: [
