@@ -138,35 +138,6 @@ const MEMBERS = {
     ],
     image: "/images/Slide-1.jpg",
   },
-  "commercial-3": {
-    initials: "YA",
-    name: "Yannick",
-    role: "Responsable des ventes",
-    experience: "XX ans d'expérience",
-    specialites: ["Suivi client", "Projets spéciaux", "Occasion", "Financement"],
-    roleTitle: "Suivi client & projets sur mesure",
-    roleText:
-      "Je m'occupe du suivi de vos commandes, des demandes spécifiques et des projets qui nécessitent une attention particulière. Besoin d'un matériel en urgence ? D'une configuration spéciale ? Je suis votre interlocuteur pour toutes les demandes hors standard.",
-    competences: ["Suivi commandes", "Projets spéciaux", "Urgences", "Financement", "Occasion"],
-    domaines: [
-      {
-        icon: IconCheck,
-        titre: "Suivi commandes",
-        texte: "Point de contact unique pour le suivi de vos commandes, délais de livraison et mise en service de vos matériels.",
-      },
-      {
-        icon: IconZap,
-        titre: "Projets urgents",
-        texte: "Mobilisation rapide pour les besoins immédiats : stock disponible, recherche occasion, locations longue durée.",
-      },
-      {
-        icon: IconShield,
-        titre: "Financement & occasion",
-        texte: "Solutions de financement adaptées et sélection rigoureuse de matériels d'occasion certifiés par nos ateliers SE+.",
-      },
-    ],
-    image: "/images/photo-wacker-catalogue.jpg",
-  },
 } as const;
 
 type MemberSlug = keyof typeof MEMBERS;

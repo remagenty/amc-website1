@@ -112,14 +112,6 @@ const TEAM = [
     description:
       "Expert en relation client et vente de matériels de chantier, il trouve la solution adaptée à chaque projet.",
   },
-  {
-    slug: "commercial-3",
-    initials: "YA",
-    role: "Responsable des ventes",
-    name: "Yannick",
-    description:
-      "Pilote l'activité commerciale d'AMC et coordonne l'équipe de vente pour accompagner les projets les plus ambitieux.",
-  },
 ];
 
 // ─── Valeurs ──────────────────────────────────────────────────────────────────
@@ -215,7 +207,7 @@ export default function AProposPage() {
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {TEAM.map((member, i) => (
               <ScrollReveal key={member.slug} from="bottom" delay={i * 80}>
                 <Link
