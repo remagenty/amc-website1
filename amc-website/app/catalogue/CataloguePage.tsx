@@ -8,13 +8,6 @@ import { FilterSidebar } from "@/components/catalogue/FilterSidebar";
 import { IconFilter, IconExternalLink } from "@/components/ui/Icons";
 import type { Product } from "@/types";
 
-const SORT_OPTIONS = [
-  { value: "relevance", label: "Pertinence" },
-  { value: "price-asc", label: "Prix croissant" },
-  { value: "price-desc", label: "Prix décroissant" },
-  { value: "newest", label: "Les plus récents" },
-];
-
 const PER_PAGE = 12;
 
 // Static full lists — computed once from the whole catalogue, never change.
@@ -57,7 +50,6 @@ export function CataloguePage({
     priceMax: undefined as number | undefined,
   });
   const [search, setSearch] = useState("");
-  const [sort, setSort] = useState("relevance");
   const [page, setPage] = useState(1);
   const [mobileFiltres, setMobileFiltres] = useState(false);
 
@@ -102,20 +94,8 @@ export function CataloguePage({
 
   const filtered = useMemo(() => {
     const list = applyFilters(ALL_MACHINES);
-    return [...list].sort((a, b) => {
-      if (sort === "price-asc") {
-        const pa = a.priceOnRequest ? Infinity : (a.price ?? Infinity);
-        const pb = b.priceOnRequest ? Infinity : (b.price ?? Infinity);
-        return pa - pb;
-      }
-      if (sort === "price-desc") {
-        const pa = a.priceOnRequest ? -Infinity : (a.price ?? -Infinity);
-        const pb = b.priceOnRequest ? -Infinity : (b.price ?? -Infinity);
-        return pb - pa;
-      }
-      return (b.featured ? 1 : 0) - (a.featured ? 1 : 0);
-    });
-  }, [applyFilters, sort]);
+    return [...list].sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0));
+  }, [applyFilters]);
 
   // --- Faceted counts ---
   // Categories: count from set filtered by everything EXCEPT the category filter.
@@ -209,7 +189,7 @@ export function CataloguePage({
           </div>
         </div>
 
-        {/* Toolbar — search moved into filter sidebar */}
+        {/* Toolbar */}
         <div className="flex items-center gap-3 mb-4">
           <button
             onClick={() => setMobileFiltres(true)}
@@ -224,15 +204,25 @@ export function CataloguePage({
             )}
           </button>
 
-          <select
-            value={sort}
-            onChange={(e) => setSort(e.target.value)}
-            className="ml-auto bg-white border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-amc-text focus:outline-none focus:ring-2 focus:ring-amc-yellow cursor-pointer"
-          >
-            {SORT_OPTIONS.map((opt) => (
-              <option key={opt.value} value={opt.value}>{opt.label}</option>
-            ))}
-          </select>
+          {categoryFabricantButtons.length > 0 && (
+            <div className="ml-auto flex flex-wrap gap-2">
+              {categoryFabricantButtons.map(({ brandId, brandName, url }) => (
+                <div key={brandId} className="flex flex-col items-end gap-1">
+                  {categoryFabricantButtons.length > 1 && (
+                    <span className="text-xs text-amc-text-secondary">{brandName}</span>
+                  )}
+                  <a
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="border-2 border-amc-yellow text-amc-text bg-white hover:bg-amc-yellow rounded-lg px-6 py-3 text-base font-semibold inline-flex items-center gap-2 transition-all duration-150 whitespace-nowrap"
+                  >
+                    Voir toute la gamme <IconExternalLink size={14} />
+                  </a>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
 
         {/* Active filter chips */}
@@ -343,25 +333,6 @@ export function CataloguePage({
                   </div>
                 )}
 
-                {categoryFabricantButtons.length > 0 && (
-                  <div className="mt-8 flex justify-end flex-wrap gap-3">
-                    {categoryFabricantButtons.map(({ brandId, brandName, url }) => (
-                      <div key={brandId} className="flex flex-col items-end gap-1">
-                        {categoryFabricantButtons.length > 1 && (
-                          <span className="text-xs text-amc-text-secondary">{brandName}</span>
-                        )}
-                        <a
-                          href={url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="border-2 border-amc-yellow text-amc-text bg-white hover:bg-amc-yellow rounded-lg px-6 py-3 text-base font-semibold inline-flex items-center gap-2 transition-all duration-150 whitespace-nowrap"
-                        >
-                          Voir toute la gamme <IconExternalLink size={14} />
-                        </a>
-                      </div>
-                    ))}
-                  </div>
-                )}
               </>
             )}
           </div>
