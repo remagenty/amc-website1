@@ -13,7 +13,7 @@ export function CategoryCard({ href, label, count, image }: Props) {
   return (
     <Link
       href={href}
-      className="group flex flex-row items-stretch bg-white rounded-xl border border-gray-100 overflow-hidden hover:border-amc-yellow hover:shadow-card transition-all h-32"
+      className="group flex flex-row items-stretch bg-white rounded-xl border border-gray-100 overflow-hidden hover:border-amc-yellow hover:shadow-card transition-all h-64"
     >
       <div className="flex flex-col justify-between p-5 flex-1 min-w-0">
         <div>
@@ -28,13 +28,13 @@ export function CategoryCard({ href, label, count, image }: Props) {
       </div>
 
       {image && (
-        <div className="relative w-32 flex-shrink-0 bg-gray-50">
+        <div className="relative w-48 flex-shrink-0 bg-gray-100">
           <Image
             src={image}
             alt={label}
             fill
-            sizes="128px"
-            className="object-contain p-2 transition-transform duration-300 group-hover:scale-105"
+            sizes="192px"
+            className="object-contain p-4 transition-transform duration-300 group-hover:scale-105"
           />
         </div>
       )}
