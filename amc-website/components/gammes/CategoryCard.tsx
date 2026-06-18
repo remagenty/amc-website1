@@ -34,7 +34,7 @@ export function CategoryCard({ href, label, count, image }: Props) {
             alt={label}
             fill
             sizes="192px"
-            className="object-contain scale-[2] group-hover:scale-[2.1] transition-transform duration-300"
+            className="object-contain scale-[1.5] group-hover:scale-[1.6] transition-transform duration-300"
           />
         </div>
       )}
