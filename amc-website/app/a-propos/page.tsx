@@ -250,6 +250,65 @@ export default function AProposPage() {
         </div>
       </section>
 
+      {/* ── EN CHIFFRES ── */}
+      <section className="bg-amc-gray py-8">
+        <div className="container-amc">
+          <ScrollReveal from="bottom">
+            <div className="text-center mb-6">
+              <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-amc-yellow mb-2">
+                <IconBadgeCheck size={14} /> AMC en chiffres
+              </span>
+              <h2 className="text-xl md:text-2xl font-black text-white">
+                Chiffres clés
+              </h2>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mb-6">
+            {[
+              { label: "Année de création", placeholder: "2013", done: true },
+              { label: "Techniciens certifiés", placeholder: "XX", done: false },
+              { label: "Surface atelier", placeholder: "XXX m²", done: false },
+              { label: "Zone d'intervention", placeholder: "XXX 000 km²", done: false },
+            ].map((stat) => (
+              <ScrollReveal key={stat.label} from="bottom">
+                <div className="bg-white/5 border border-dashed border-amber-400/60 rounded-xl p-4 text-center">
+                  <p className="text-xl md:text-2xl font-black text-amber-400 mb-0.5">
+                    {stat.placeholder}
+                  </p>
+                  <p className="text-white/60 text-xs uppercase tracking-wider">{stat.label}</p>
+                  {!stat.done && <Todo label="à remplir" />}
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+
+          {/* Certifications */}
+          <ScrollReveal from="bottom">
+            <div className="border-t border-white/10 pt-5">
+              <p className="text-center text-xs font-bold uppercase tracking-widest text-amc-yellow mb-3">
+                Nos certifications
+              </p>
+              <div className="flex flex-wrap justify-center gap-3">
+                {[
+                  { label: "Distributeur officiel WACKER NEUSON", color: "bg-red-900/40 border-red-400/40 text-red-100" },
+                  { label: "Distributeur officiel Magni", color: "bg-blue-900/40 border-blue-400/40 text-blue-100" },
+                  { label: "Atelier certifié SE+", color: "bg-green-900/40 border-green-400/40 text-green-100" },
+                ].map((cert) => (
+                  <div
+                    key={cert.label}
+                    className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full border text-xs font-semibold ${cert.color}`}
+                  >
+                    <IconCheck size={12} />
+                    {cert.label}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* ── BLOCS ALTERNÉS ── */}
       <section className="bg-white py-24">
         <div className="container-amc">
@@ -314,65 +373,6 @@ export default function AProposPage() {
               );
             })}
           </div>
-        </div>
-      </section>
-
-      {/* ── EN CHIFFRES ── */}
-      <section className="bg-amc-gray py-16">
-        <div className="container-amc">
-          <ScrollReveal from="bottom">
-            <div className="text-center mb-10">
-              <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-amc-yellow mb-3">
-                <IconBadgeCheck size={14} /> AMC en chiffres
-              </span>
-              <h2 className="text-2xl md:text-3xl font-black text-white">
-                Chiffres clés
-              </h2>
-            </div>
-          </ScrollReveal>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-12">
-            {[
-              { label: "Année de création", placeholder: "2013", done: true },
-              { label: "Techniciens certifiés", placeholder: "XX", done: false },
-              { label: "Surface atelier", placeholder: "XXX m²", done: false },
-              { label: "Zone d'intervention", placeholder: "XXX 000 km²", done: false },
-            ].map((stat) => (
-              <ScrollReveal key={stat.label} from="bottom">
-                <div className="bg-white/5 border border-dashed border-amber-400/60 rounded-2xl p-6 text-center">
-                  <p className="text-2xl md:text-3xl font-black text-amber-400 mb-1">
-                    {stat.placeholder}
-                  </p>
-                  <p className="text-white/60 text-xs uppercase tracking-wider">{stat.label}</p>
-                  {!stat.done && <Todo label="à remplir" />}
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-
-          {/* Certifications */}
-          <ScrollReveal from="bottom">
-            <div className="border-t border-white/10 pt-10">
-              <p className="text-center text-xs font-bold uppercase tracking-widest text-amc-yellow mb-6">
-                Nos certifications
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                {[
-                  { label: "Distributeur officiel WACKER NEUSON", color: "bg-red-900/40 border-red-400/40 text-red-100" },
-                  { label: "Distributeur officiel Magni", color: "bg-blue-900/40 border-blue-400/40 text-blue-100" },
-                  { label: "Atelier certifié SE+", color: "bg-green-900/40 border-green-400/40 text-green-100" },
-                ].map((cert) => (
-                  <div
-                    key={cert.label}
-                    className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full border text-sm font-semibold ${cert.color}`}
-                  >
-                    <IconCheck size={14} />
-                    {cert.label}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </ScrollReveal>
         </div>
       </section>
 
