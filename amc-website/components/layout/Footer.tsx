@@ -6,9 +6,8 @@ import {
   IconPhone,
   IconMail,
   IconClock,
-  IconLinkedIn,
   IconFacebook,
-  IconYoutube,
+  IconInstagram,
   IconArrowRight,
 } from "@/components/ui/Icons";
 
@@ -155,16 +154,7 @@ export function Footer() {
             </h3>
             <div className="flex gap-3 mb-6">
               <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2.5 rounded-lg bg-white/10 hover:bg-amc-yellow hover:text-amc-text text-white/70 transition-all"
-                aria-label="LinkedIn AMC"
-              >
-                <IconLinkedIn size={18} />
-              </a>
-              <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/alpesmaterielcompact.amc"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2.5 rounded-lg bg-white/10 hover:bg-amc-yellow hover:text-amc-text text-white/70 transition-all"
@@ -173,13 +163,13 @@ export function Footer() {
                 <IconFacebook size={18} />
               </a>
               <a
-                href="https://youtube.com"
+                href="https://www.instagram.com/sav.amc.vs?utm_source=qr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2.5 rounded-lg bg-white/10 hover:bg-amc-yellow hover:text-amc-text text-white/70 transition-all"
-                aria-label="YouTube AMC"
+                aria-label="Instagram AMC"
               >
-                <IconYoutube size={18} />
+                <IconInstagram size={18} />
               </a>
             </div>
 
