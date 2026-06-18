@@ -197,62 +197,56 @@ export default function AProposPage() {
         </div>
       </section>
 
-      {/* ── EN CHIFFRES ── */}
-      <section className="bg-amc-gray py-16">
+      {/* ── ÉQUIPE ── */}
+      <section id="equipe" className="bg-amc-cream py-24">
         <div className="container-amc">
           <ScrollReveal from="bottom">
-            <div className="text-center mb-10">
+            <div className="text-center mb-14">
               <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-amc-yellow mb-3">
-                <IconBadgeCheck size={14} /> AMC en chiffres
+                <IconUser size={14} /> Notre équipe
               </span>
-              <h2 className="text-2xl md:text-3xl font-black text-white">
-                Chiffres clés
+              <h2 className="text-3xl md:text-4xl font-black text-amc-text mb-3">
+                Des experts à votre écoute
               </h2>
+              <p className="text-gray-500 max-w-lg mx-auto text-sm leading-relaxed">
+                Une équipe passionnée par les machines et dédiée à votre satisfaction,
+                de la vente à la maintenance.
+              </p>
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-12">
-            {[
-              { label: "Année de création", placeholder: "2013", done: true },
-              { label: "Techniciens certifiés", placeholder: "XX", done: false },
-              { label: "Surface atelier", placeholder: "XXX m²", done: false },
-              { label: "Zone d'intervention", placeholder: "XXX 000 km²", done: false },
-            ].map((stat) => (
-              <ScrollReveal key={stat.label} from="bottom">
-                <div className="bg-white/5 border border-dashed border-amber-400/60 rounded-2xl p-6 text-center">
-                  <p className="text-2xl md:text-3xl font-black text-amber-400 mb-1">
-                    {stat.placeholder}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+            {TEAM.map((member, i) => (
+              <ScrollReveal key={member.slug} from="bottom" delay={i * 80}>
+                <Link
+                  href={`/a-propos/${member.slug}`}
+                  className="group bg-white rounded-2xl shadow-card p-6 text-center flex flex-col items-center hover:shadow-lg hover:-translate-y-1 hover:border-amc-yellow border-2 border-transparent transition-all duration-300 cursor-pointer block"
+                >
+                  {/* Avatar — photo si disponible, sinon initiales */}
+                  <div className="w-16 h-16 rounded-full bg-amc-yellow flex items-center justify-center mb-4 flex-shrink-0 group-hover:scale-105 transition-transform duration-300 overflow-hidden">
+                    {"photo" in member && member.photo ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        src={member.photo as string}
+                        alt={`Photo ${member.name}`}
+                        className="w-full h-full object-cover object-top"
+                      />
+                    ) : (
+                      <span className="text-lg font-black text-amc-text">{member.initials}</span>
+                    )}
+                  </div>
+                  <p className="text-xs font-bold uppercase tracking-widest text-[#FFD700] mb-1">
+                    {member.role}
                   </p>
-                  <p className="text-white/60 text-xs uppercase tracking-wider">{stat.label}</p>
-                  {!stat.done && <Todo label="à remplir" />}
-                </div>
+                  <h3 className="font-bold text-amc-text text-sm mb-3">{member.name}</h3>
+                  <p className="text-gray-500 text-xs leading-relaxed mb-4">{member.description}</p>
+                  <span className="inline-flex items-center gap-1 text-xs font-semibold text-amc-yellow-dark group-hover:gap-2 transition-all mt-auto">
+                    Voir le profil <IconArrowRight size={11} />
+                  </span>
+                </Link>
               </ScrollReveal>
             ))}
           </div>
-
-          {/* Certifications */}
-          <ScrollReveal from="bottom">
-            <div className="border-t border-white/10 pt-10">
-              <p className="text-center text-xs font-bold uppercase tracking-widest text-amc-yellow mb-6">
-                Nos certifications
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                {[
-                  { label: "Distributeur officiel WACKER NEUSON", color: "bg-red-900/40 border-red-400/40 text-red-100" },
-                  { label: "Distributeur officiel Magni", color: "bg-blue-900/40 border-blue-400/40 text-blue-100" },
-                  { label: "Atelier certifié SE+", color: "bg-green-900/40 border-green-400/40 text-green-100" },
-                ].map((cert) => (
-                  <div
-                    key={cert.label}
-                    className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full border text-sm font-semibold ${cert.color}`}
-                  >
-                    <IconCheck size={14} />
-                    {cert.label}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </ScrollReveal>
         </div>
       </section>
 
@@ -323,56 +317,62 @@ export default function AProposPage() {
         </div>
       </section>
 
-      {/* ── ÉQUIPE ── */}
-      <section id="equipe" className="bg-amc-cream py-24">
+      {/* ── EN CHIFFRES ── */}
+      <section className="bg-amc-gray py-16">
         <div className="container-amc">
           <ScrollReveal from="bottom">
-            <div className="text-center mb-14">
+            <div className="text-center mb-10">
               <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-amc-yellow mb-3">
-                <IconUser size={14} /> Notre équipe
+                <IconBadgeCheck size={14} /> AMC en chiffres
               </span>
-              <h2 className="text-3xl md:text-4xl font-black text-amc-text mb-3">
-                Des experts à votre écoute
+              <h2 className="text-2xl md:text-3xl font-black text-white">
+                Chiffres clés
               </h2>
-              <p className="text-gray-500 max-w-lg mx-auto text-sm leading-relaxed">
-                Une équipe passionnée par les machines et dédiée à votre satisfaction,
-                de la vente à la maintenance.
-              </p>
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
-            {TEAM.map((member, i) => (
-              <ScrollReveal key={member.slug} from="bottom" delay={i * 80}>
-                <Link
-                  href={`/a-propos/${member.slug}`}
-                  className="group bg-white rounded-2xl shadow-card p-6 text-center flex flex-col items-center hover:shadow-lg hover:-translate-y-1 hover:border-amc-yellow border-2 border-transparent transition-all duration-300 cursor-pointer block"
-                >
-                  {/* Avatar — photo si disponible, sinon initiales */}
-                  <div className="w-16 h-16 rounded-full bg-amc-yellow flex items-center justify-center mb-4 flex-shrink-0 group-hover:scale-105 transition-transform duration-300 overflow-hidden">
-                    {"photo" in member && member.photo ? (
-                      // eslint-disable-next-line @next/next/no-img-element
-                      <img
-                        src={member.photo as string}
-                        alt={`Photo ${member.name}`}
-                        className="w-full h-full object-cover object-top"
-                      />
-                    ) : (
-                      <span className="text-lg font-black text-amc-text">{member.initials}</span>
-                    )}
-                  </div>
-                  <p className="text-xs font-bold uppercase tracking-widest text-[#FFD700] mb-1">
-                    {member.role}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-12">
+            {[
+              { label: "Année de création", placeholder: "2013", done: true },
+              { label: "Techniciens certifiés", placeholder: "XX", done: false },
+              { label: "Surface atelier", placeholder: "XXX m²", done: false },
+              { label: "Zone d'intervention", placeholder: "XXX 000 km²", done: false },
+            ].map((stat) => (
+              <ScrollReveal key={stat.label} from="bottom">
+                <div className="bg-white/5 border border-dashed border-amber-400/60 rounded-2xl p-6 text-center">
+                  <p className="text-2xl md:text-3xl font-black text-amber-400 mb-1">
+                    {stat.placeholder}
                   </p>
-                  <h3 className="font-bold text-amc-text text-sm mb-3">{member.name}</h3>
-                  <p className="text-gray-500 text-xs leading-relaxed mb-4">{member.description}</p>
-                  <span className="inline-flex items-center gap-1 text-xs font-semibold text-amc-yellow-dark group-hover:gap-2 transition-all mt-auto">
-                    Voir le profil <IconArrowRight size={11} />
-                  </span>
-                </Link>
+                  <p className="text-white/60 text-xs uppercase tracking-wider">{stat.label}</p>
+                  {!stat.done && <Todo label="à remplir" />}
+                </div>
               </ScrollReveal>
             ))}
           </div>
+
+          {/* Certifications */}
+          <ScrollReveal from="bottom">
+            <div className="border-t border-white/10 pt-10">
+              <p className="text-center text-xs font-bold uppercase tracking-widest text-amc-yellow mb-6">
+                Nos certifications
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                {[
+                  { label: "Distributeur officiel WACKER NEUSON", color: "bg-red-900/40 border-red-400/40 text-red-100" },
+                  { label: "Distributeur officiel Magni", color: "bg-blue-900/40 border-blue-400/40 text-blue-100" },
+                  { label: "Atelier certifié SE+", color: "bg-green-900/40 border-green-400/40 text-green-100" },
+                ].map((cert) => (
+                  <div
+                    key={cert.label}
+                    className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full border text-sm font-semibold ${cert.color}`}
+                  >
+                    <IconCheck size={14} />
+                    {cert.label}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
