@@ -28,13 +28,13 @@ export function CategoryCard({ href, label, count, image }: Props) {
       </div>
 
       {image && (
-        <div className="relative w-48 flex-shrink-0 overflow-hidden">
+        <div className="relative w-48 flex-shrink-0">
           <Image
             src={image}
             alt={label}
             fill
             sizes="192px"
-            className="object-contain scale-[2] group-hover:scale-[2.1] transition-transform duration-300"
+            className="object-contain transition-transform duration-300 group-hover:scale-105"
           />
         </div>
       )}
