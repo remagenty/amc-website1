@@ -187,7 +187,7 @@ export function WnProductDetail({ machine, similar, categorySlug, categoryLabel 
               <li><Link href="/catalogue" className="hover:text-amc-yellow-dark transition-colors">Nos matériels</Link></li>
               <li aria-hidden>/</li>
               <li>
-                <Link href={`/materiels/${categorySlug}`} className="hover:text-amc-yellow-dark transition-colors">
+                <Link href={`/catalogue?categorie=${categorySlug}`} className="hover:text-amc-yellow-dark transition-colors">
                   {categoryLabel}
                 </Link>
               </li>
@@ -556,7 +556,7 @@ export function WnProductDetail({ machine, similar, categorySlug, categoryLabel 
             <div className="flex items-end justify-between mb-8">
               <h2 className="section-title text-2xl">Machines similaires</h2>
               <Link
-                href={`/materiels/${categorySlug}`}
+                href={`/catalogue?categorie=${categorySlug}`}
                 className="text-sm font-semibold text-amc-text hover:text-amc-yellow-dark transition-colors flex items-center gap-1"
               >
                 Voir toute la gamme <IconArrowRight size={14} />

@@ -26,30 +26,30 @@ const PARTNER_HERO_IMAGES = [
 ];
 
 const FLAT_CATEGORIES = [
-  { label: "Mini-pelles", href: "/materiels/mini-pelles" },
-  { label: "Dumpers articulés", href: "/materiels/dumpers" },
-  { label: "Chargeuses compactes", href: "/materiels/chargeuses" },
-  { label: "Compacteurs tandem", href: "/materiels/compacteurs" },
-  { label: "Plaques vibrantes", href: "/materiels/plaques-vibrantes" },
-  { label: "Pilonneuses", href: "/materiels/pilonneuses" },
-  { label: "Marteaux piqueurs", href: "/materiels/marteaux-piqueurs" },
-  { label: "Télescopiques", href: "/materiels/telescopiques" },
-  { label: "Chariots télescopiques et nacelles rotatifs", href: "/materiels/telehandlers-rotatifs" },
-  { label: "Chariots télescopiques et nacelles fixes", href: "/materiels/telehandlers-fixes" },
-  { label: "Chariots télescopiques et nacelles agricoles", href: "/materiels/telehandlers-agricoles" },
-  { label: "Brise-roches hydrauliques", href: "/materiels/brise-roches" },
-  { label: "Cisailles à ferraille", href: "/materiels/cisailles" },
-  { label: "Pinces de tri et démolition", href: "/materiels/pinces-de-tri" },
-  { label: "Pinces multiprocesseurs", href: "/materiels/pinces-multiprocesseurs" },
-  { label: "Pulvérisateurs béton", href: "/materiels/pulverisateurs" },
+  { label: "Mini-pelles", href: "/catalogue?categorie=mini-pelles" },
+  { label: "Dumpers articulés", href: "/catalogue?categorie=dumpers" },
+  { label: "Chargeuses compactes", href: "/catalogue?categorie=chargeuses" },
+  { label: "Compacteurs tandem", href: "/catalogue?categorie=compacteurs" },
+  { label: "Plaques vibrantes", href: "/catalogue?categorie=plaques-vibrantes" },
+  { label: "Pilonneuses", href: "/catalogue?categorie=pilonneuses" },
+  { label: "Marteaux piqueurs", href: "/catalogue?categorie=marteaux-piqueurs" },
+  { label: "Télescopiques", href: "/catalogue?categorie=telescopiques" },
+  { label: "Chariots télescopiques et nacelles rotatifs", href: "/catalogue?categorie=telehandlers-rotatifs" },
+  { label: "Chariots télescopiques et nacelles fixes", href: "/catalogue?categorie=telehandlers-fixes" },
+  { label: "Chariots télescopiques et nacelles agricoles", href: "/catalogue?categorie=telehandlers-agricoles" },
+  { label: "Brise-roches hydrauliques", href: "/catalogue?categorie=brise-roches" },
+  { label: "Cisailles à ferraille", href: "/catalogue?categorie=cisailles" },
+  { label: "Pinces de tri et démolition", href: "/catalogue?categorie=pinces-de-tri" },
+  { label: "Pinces multiprocesseurs", href: "/catalogue?categorie=pinces-multiprocesseurs" },
+  { label: "Pulvérisateurs béton", href: "/catalogue?categorie=pulverisateurs" },
 ];
 
 const MEGA_MENUS = {
   materiels: {
     brands: [
-      { label: "Wacker Neuson", href: "/materiels/mini-pelles", badge: "55 machines" },
-      { label: "Magni", href: "/materiels/telehandlers-rotatifs", badge: "23 machines" },
-      { label: "Promove Demolition", href: "/materiels/brise-roches", badge: "22 outils" },
+      { label: "Wacker Neuson", href: "/catalogue?marque=wacker-neuson", badge: "55 machines" },
+      { label: "Magni", href: "/catalogue?marque=magni", badge: "23 machines" },
+      { label: "Promove Demolition", href: "/catalogue?marque=promove-demolition", badge: "22 outils" },
     ],
   },
   partenaires: [
