@@ -7,6 +7,11 @@ import { getGammeCategoryImage } from "@/lib/gammes";
 import { CategoryCard } from "@/components/gammes/CategoryCard";
 import { IconArrowRight } from "@/components/ui/Icons";
 import { NewsletterForm } from "@/components/ui/NewsletterForm";
+import { kvGet } from "@/lib/kv";
+
+export const dynamic = "force-dynamic";
+
+type PartnerOverride = { slug?: string; name?: string; tagline?: string; description?: string; logo?: string | null; heroImage?: string | null; website?: string; stats?: Array<{ value: string; label: string }> };
 
 interface Props {
   params: { slug: string };
@@ -69,9 +74,12 @@ const BRAND_EXPERT_PROFILE: Record<string, string> = {
   "promove-demolition": "/a-propos/commercial-2",
 };
 
-export default function PartnerPage({ params }: Props) {
+export default async function PartnerPage({ params }: Props) {
   const brand = getBrandInfo(params.slug);
   if (!brand) notFound();
+
+  const allPartners = (await kvGet<Record<string, PartnerOverride>>("partners")) ?? {};
+  const ov = allPartners[params.slug] ?? {};
 
   const salesRep = BRAND_SALES_REP[params.slug];
   const expertProfileHref =
@@ -86,7 +94,18 @@ export default function PartnerPage({ params }: Props) {
     "promove-demolition": "/images/catalogue-promove-demolition.webp",
   };
 
-  const heroImage = BRAND_IMAGES[params.slug];
+  const heroImage = (ov.heroImage as string | null | undefined) ?? BRAND_IMAGES[params.slug];
+  const brandName = ov.name ?? brand.name;
+  const brandTagline = ov.tagline ?? brand.tagline;
+  const brandDescription = ov.description ?? brand.description;
+  const brandLogo = (ov.logo as string | null | undefined) ?? brand.logo;
+
+  const DEFAULT_STATS = [
+    { value: `${brand.productCount}+`, label: "Références disponibles" },
+    { value: "15+", label: "Années de partenariat" },
+    { value: "SE+", label: "SAV certifié" },
+  ];
+  const stats = ov.stats ?? DEFAULT_STATS;
 
   return (
     <div className="min-h-screen bg-amc-cream">
@@ -118,20 +137,20 @@ export default function PartnerPage({ params }: Props) {
               Partenaire officiel
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white">
-              {brand.name}
+              {brandName}
             </h1>
             <p className="mt-3 text-xl font-semibold text-white/80">
-              {brand.tagline}
+              {brandTagline}
             </p>
             <p className="mt-5 text-base text-white/70 leading-relaxed max-w-2xl">
-              {brand.description}
+              {brandDescription}
             </p>
             <div className="mt-8">
               <Link
                 href={`/catalogue?marque=${brand.id}`}
                 className="btn-primary rounded-lg"
               >
-                Voir toute la gamme {brand.name}
+                Voir toute la gamme {brandName}
                 <IconArrowRight size={16} />
               </Link>
             </div>
@@ -143,18 +162,12 @@ export default function PartnerPage({ params }: Props) {
       <section className="bg-white py-10 border-b border-gray-100">
         <div className="container-amc">
           <div className="grid grid-cols-3 gap-8 max-w-2xl">
-            <div className="text-center">
-              <div className="text-3xl font-black text-amc-text">{brand.productCount}+</div>
-              <div className="text-xs text-amc-text-secondary mt-1">Références disponibles</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-black text-amc-text">15+</div>
-              <div className="text-xs text-amc-text-secondary mt-1">Années de partenariat</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-black text-amc-text">SE+</div>
-              <div className="text-xs text-amc-text-secondary mt-1">SAV certifié</div>
-            </div>
+            {stats.map((s, i) => (
+              <div key={i} className="text-center">
+                <div className="text-3xl font-black text-amc-text">{s.value}</div>
+                <div className="text-xs text-amc-text-secondary mt-1">{s.label}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -164,7 +177,7 @@ export default function PartnerPage({ params }: Props) {
         <div className="container-amc">
           <div className="mb-8">
             <h2 className="section-title text-2xl">
-              Gamme {brand.name} disponible
+              Gamme {brandName} disponible
             </h2>
             <p className="text-amc-text-secondary text-sm mt-1">
               {categories.length} catégorie{categories.length > 1 ? "s" : ""} disponible{categories.length > 1 ? "s" : ""}

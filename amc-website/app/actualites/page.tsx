@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { ActualitesFeed } from "./ActualitesFeed";
+import { kvGet } from "@/lib/kv";
+
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: { absolute: "Actualités & Expertise matériels chantier | AMC" },
@@ -14,11 +17,15 @@ export const metadata: Metadata = {
   },
 };
 
-export default function ActualitesPage({
+type KvArticle = { slug: string; title: string; category: string; summary: string; coverImage: string | null; status: "published" | "draft"; publishedAt: string; createdAt: string };
+
+export default async function ActualitesPage({
   searchParams,
 }: {
   searchParams: { filter?: string };
 }) {
+  const kvArticles = (await kvGet<KvArticle[]>("articles")) ?? [];
+
   return (
     <div className="min-h-screen bg-amc-cream">
 
@@ -38,7 +45,7 @@ export default function ActualitesPage({
       </section>
 
       {/* Feed filtrable (client component) */}
-      <ActualitesFeed initialFilter={searchParams.filter ?? ""} />
+      <ActualitesFeed initialFilter={searchParams.filter ?? ""} kvArticles={kvArticles} />
 
       {/* Newsletter CTA */}
       <section className="bg-white border-t border-gray-100 py-14">

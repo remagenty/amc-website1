@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, use } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { ImageUpload } from "@/components/admin/ImageUpload";
 
@@ -49,8 +49,8 @@ function objFromKv(kv: KV[]): Record<string, string | number> {
   return out;
 }
 
-export default function MachineEditPage({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = use(params);
+export default function MachineEditPage({ params }: { params: { id: string } }) {
+  const { id } = params;
   const isNew = id === "new" || id === "__new__";
   const router = useRouter();
 

@@ -4,28 +4,59 @@ import { useState } from "react";
 import Link from "next/link";
 import { ARTICLES } from "./articles-data";
 
+type KvArticle = {
+  slug: string; title: string; category: string; summary: string;
+  coverImage: string | null; status: "published" | "draft"; publishedAt: string; createdAt: string;
+};
+
+type FeedArticle = {
+  slug: string; title: string; category: string; summary: string; date: string;
+  readTime: string; image?: string; gradientFrom: string; gradientTo: string; icon: string;
+  source: "static" | "kv";
+};
+
+function kvToFeed(a: KvArticle): FeedArticle {
+  return {
+    slug: a.slug, title: a.title, category: a.category, summary: a.summary,
+    date: a.publishedAt, readTime: "5 min",
+    image: a.coverImage ?? undefined,
+    gradientFrom: "#ffd500", gradientTo: "#e6c000", icon: "📰",
+    source: "kv",
+  };
+}
+
 const FILTER_FROM_PARAM: Record<string, string> = {
   nouveautes: "Nouveautés",
   conseils: "Conseils",
   actualites: "Actualités",
+  "guide-technique": "Guide technique",
+  "conseil-chantier": "Conseil chantier",
 };
-
-const FILTERS = ["Tous", "Nouveautés", "Conseils", "Actualités"];
 
 const CATEGORY_STYLES: Record<string, { bg: string; color: string }> = {
-  Nouveautés: { bg: "#d1fae5", color: "#065f46" },
-  Conseils:   { bg: "#dbeafe", color: "#1e40af" },
-  Actualités: { bg: "#fef3c7", color: "#92400e" },
+  Nouveautés:        { bg: "#d1fae5", color: "#065f46" },
+  Conseils:          { bg: "#dbeafe", color: "#1e40af" },
+  Actualités:        { bg: "#fef3c7", color: "#92400e" },
+  "Guide technique": { bg: "#ede9fe", color: "#5b21b6" },
+  "Conseil chantier":{ bg: "#fce7f3", color: "#9d174d" },
 };
 
-export function ActualitesFeed({ initialFilter = "" }: { initialFilter?: string }) {
+export function ActualitesFeed({ initialFilter = "", kvArticles = [] }: { initialFilter?: string; kvArticles?: KvArticle[] }) {
+  const publishedKv = kvArticles.filter((a) => a.status === "published");
+  const kvFeeds = publishedKv.map(kvToFeed);
+  const staticFeeds: FeedArticle[] = ARTICLES.map((a) => ({ ...a, readTime: a.readTime, image: a.image, gradientFrom: a.gradientFrom, gradientTo: a.gradientTo, icon: a.icon, source: "static" as const }));
+
+  // KV articles take precedence; merge and deduplicate by slug
+  const slugSet = new Set(kvFeeds.map((a) => a.slug));
+  const merged: FeedArticle[] = [...kvFeeds, ...staticFeeds.filter((a) => !slugSet.has(a.slug))];
+
+  const allCategories = Array.from(new Set(merged.map((a) => a.category)));
+  const FILTERS = ["Tous", ...allCategories];
+
   const initial = FILTER_FROM_PARAM[initialFilter.toLowerCase()] ?? "Tous";
   const [activeFilter, setActiveFilter] = useState(initial);
 
-  const filtered =
-    activeFilter === "Tous"
-      ? ARTICLES
-      : ARTICLES.filter((a) => a.category === activeFilter);
+  const filtered = activeFilter === "Tous" ? merged : merged.filter((a) => a.category === activeFilter);
 
   return (
     <section className="pt-6 pb-16">
@@ -51,7 +82,7 @@ export function ActualitesFeed({ initialFilter = "" }: { initialFilter?: string 
 
         {/* Articles grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filtered.map((article) => {
+          {(filtered as FeedArticle[]).map((article) => {
             const catStyle = CATEGORY_STYLES[article.category] ?? { bg: "#f3f4f6", color: "#374151" };
             return (
               <article
