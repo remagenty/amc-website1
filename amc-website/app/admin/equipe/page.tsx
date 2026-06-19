@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { ImageUpload } from "@/components/admin/ImageUpload";
 
 type Member = {
   slug: string;
@@ -160,8 +161,11 @@ export default function EquipePage() {
                 </div>
               </div>
               <div>
-                <label className="block text-xs font-medium text-gray-700 mb-1">Photo (chemin)</label>
-                <input type="text" value={form.photo ?? ""} onChange={(e) => setForm((f) => ({ ...f, photo: e.target.value || null }))} className={inp} placeholder="/images/about/nom.png" />
+                <ImageUpload
+                  label="Photo"
+                  value={form.photo ?? null}
+                  onChange={(url) => setForm((f) => ({ ...f, photo: url }))}
+                />
               </div>
               <div>
                 <label className="block text-xs font-medium text-gray-700 mb-1">Description</label>

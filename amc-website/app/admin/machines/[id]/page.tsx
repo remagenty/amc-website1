@@ -2,6 +2,7 @@
 
 import { useEffect, useState, use } from "react";
 import { useRouter } from "next/navigation";
+import { ImageUpload } from "@/components/admin/ImageUpload";
 
 type KV = { key: string; value: string };
 
@@ -239,8 +240,11 @@ export default function MachineEditPage({ params }: { params: Promise<{ id: stri
         <section className="bg-white rounded-xl border border-gray-200 p-5 space-y-4">
           <h2 className="font-semibold text-gray-900 text-sm">Média & Statut</h2>
           <div>
-            <label className={label}>Chemin image principale</label>
-            <input type="text" value={form.medias?.image_principale ?? ""} onChange={(e) => set("medias", { ...form.medias, image_principale: e.target.value })} className={input} placeholder="/images/catalogue/nom-machine.png" />
+            <ImageUpload
+              label="Image principale"
+              value={form.medias?.image_principale || null}
+              onChange={(url) => set("medias", { ...form.medias, image_principale: url ?? "" })}
+            />
           </div>
           <div className="flex items-center gap-6">
             <label className="flex items-center gap-2 cursor-pointer">
