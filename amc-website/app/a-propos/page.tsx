@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import teamData from "@/lib/team.json";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import {
   IconArrowRight,
@@ -78,41 +79,7 @@ const HISTOIRE_BLOCKS = [
 
 // ─── Équipe ───────────────────────────────────────────────────────────────────
 
-const TEAM = [
-  {
-    slug: "chef-agence",
-    initials: "TH",
-    role: "Chef d'agence",
-    name: "Thomas",
-    description:
-      "Pilote l'agence AMC au quotidien et garantit la qualité de service auprès de nos clients professionnels.",
-  },
-  {
-    slug: "responsable-sav",
-    initials: "RO",
-    role: "Responsable SAV",
-    name: "Romain",
-    photo: "/images/about/equipe-amc.png",
-    description:
-      "Coordonne toutes les interventions techniques et assure la réactivité de notre service après-vente.",
-  },
-  {
-    slug: "commercial-1",
-    initials: "JP",
-    role: "Commercial",
-    name: "Jean-Pierre",
-    description:
-      "Spécialiste des matériels WACKER NEUSON et Magni, il vous accompagne dans le choix de vos équipements.",
-  },
-  {
-    slug: "commercial-2",
-    initials: "VA",
-    role: "Commercial",
-    name: "Valentin",
-    description:
-      "Expert en relation client et vente de matériels de chantier, il trouve la solution adaptée à chaque projet.",
-  },
-];
+const TEAM = (teamData as Array<{ slug: string; initials: string; role: string; name: string; description: string; photo: string | null }>).filter((m) => m.slug !== undefined);
 
 // ─── Valeurs ──────────────────────────────────────────────────────────────────
 

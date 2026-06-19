@@ -1,0 +1,34 @@
+[
+  {
+    "slug": "chef-agence",
+    "initials": "TH",
+    "role": "Chef d'agence",
+    "name": "Thomas",
+    "description": "Pilote l'agence AMC au quotidien, coordonne les équipes commerciales et techniques pour garantir un service de qualité.",
+    "photo": null
+  },
+  {
+    "slug": "responsable-sav",
+    "initials": "RO",
+    "role": "Responsable SAV",
+    "name": "Romain",
+    "description": "Coordonne toutes les interventions techniques et supervise l'atelier certifié SE+.",
+    "photo": "/images/about/equipe-amc.png"
+  },
+  {
+    "slug": "commercial-1",
+    "initials": "JP",
+    "role": "Commercial",
+    "name": "Jean-Pierre",
+    "description": "Spécialiste des matériels WACKER NEUSON et Magni, il vous accompagne dans le choix de vos équipements.",
+    "photo": null
+  },
+  {
+    "slug": "commercial-2",
+    "initials": "VA",
+    "role": "Commercial",
+    "name": "Valentin",
+    "description": "Expert en relation client et vente de matériels de chantier, il trouve la solution adaptée à chaque projet.",
+    "photo": null
+  }
+]

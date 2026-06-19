@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { headers } from "next/headers";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -62,11 +63,15 @@ export const metadata: Metadata = {
     : undefined,
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const headersList = await headers();
+  const pathname = headersList.get("x-pathname") ?? "";
+  const isAdmin = pathname.startsWith("/admin");
+
   return (
     <html lang="fr" className={inter.variable}>
       <head>
@@ -118,15 +123,17 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased font-sans bg-amc-cream text-amc-text">
-        <a
-          href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-amc-yellow focus:text-amc-text focus:px-4 focus:py-2 focus:rounded-lg focus:font-semibold"
-        >
-          Aller au contenu principal
-        </a>
-        <Header />
-        <main id="main-content">{children}</main>
-        <Footer />
+        {!isAdmin && (
+          <a
+            href="#main-content"
+            className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-amc-yellow focus:text-amc-text focus:px-4 focus:py-2 focus:rounded-lg focus:font-semibold"
+          >
+            Aller au contenu principal
+          </a>
+        )}
+        {!isAdmin && <Header />}
+        {isAdmin ? children : <main id="main-content">{children}</main>}
+        {!isAdmin && <Footer />}
       </body>
     </html>
   );
