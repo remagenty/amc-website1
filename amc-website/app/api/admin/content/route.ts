@@ -26,7 +26,7 @@ export type SiteContent = {
   };
 };
 
-export const DEFAULT_CONTENT: SiteContent = {
+const DEFAULT_CONTENT: SiteContent = {
   contact: {
     address: "ZAC D'Orsan, 330 Rue du Mont Blanc\n74540 Saint-Félix",
     phone: "04 26 78 43 90",
