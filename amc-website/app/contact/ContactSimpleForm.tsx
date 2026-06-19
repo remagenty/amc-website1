@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { IconArrowRight } from "@/components/ui/Icons";
 import { FormConfirmation } from "@/components/ui/FormConfirmation";
+import { PhotoUpload, type UploadedPhoto } from "@/components/ui/PhotoUpload";
 
 type FormState = {
   firstName: string;
@@ -27,6 +28,7 @@ export function ContactSimpleForm() {
   const [errors, setErrors] = useState<Partial<Record<keyof FormState, string>>>({});
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState<"success" | "error" | null>(null);
+  const [photos, setPhotos] = useState<UploadedPhoto[]>([]);
 
   const set = (key: keyof FormState, value: string | boolean) => {
     setForm((prev) => ({ ...prev, [key]: value }));
@@ -62,7 +64,7 @@ export function ContactSimpleForm() {
       <FormConfirmation
         status={status}
         name={`${form.firstName} ${form.lastName}`.trim()}
-        onReset={() => { setStatus(null); setForm(INITIAL); }}
+        onReset={() => { setStatus(null); setForm(INITIAL); setPhotos([]); }}
       />
     );
   }
@@ -165,6 +167,8 @@ export function ContactSimpleForm() {
         </label>
         {errors.consent && <p className="text-red-500 text-xs mt-1">{errors.consent}</p>}
       </div>
+
+      <PhotoUpload photos={photos} onChange={setPhotos} />
 
       <button
         type="submit"

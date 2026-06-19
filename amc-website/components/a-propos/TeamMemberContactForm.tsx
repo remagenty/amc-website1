@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { IconArrowRight } from "@/components/ui/Icons";
 import { FormConfirmation } from "@/components/ui/FormConfirmation";
+import { PhotoUpload, type UploadedPhoto } from "@/components/ui/PhotoUpload";
 
 const OBJECT_TYPES = [
   { value: "devis", label: "Demande de devis" },
@@ -29,6 +30,7 @@ export function TeamMemberContactForm({ memberName, memberRole }: Props) {
   const [status, setStatus] = useState<"success" | "error" | null>(null);
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [photos, setPhotos] = useState<UploadedPhoto[]>([]);
 
   const validate = () => {
     const e: Record<string, string> = {};
@@ -60,7 +62,7 @@ export function TeamMemberContactForm({ memberName, memberRole }: Props) {
       <FormConfirmation
         status={status}
         name={form.nom}
-        onReset={() => { setStatus(null); setForm({ nom: "", email: "", telephone: "", societe: "", objet: "devis", message: "", consent: false }); }}
+        onReset={() => { setStatus(null); setForm({ nom: "", email: "", telephone: "", societe: "", objet: "devis", message: "", consent: false }); setPhotos([]); }}
       />
     );
   }
@@ -182,6 +184,8 @@ export function TeamMemberContactForm({ memberName, memberRole }: Props) {
         </label>
         {errors.consent && <p className="text-red-500 text-xs mt-1">{errors.consent}</p>}
       </div>
+
+      <PhotoUpload photos={photos} onChange={setPhotos} />
 
       <button
         type="submit"
