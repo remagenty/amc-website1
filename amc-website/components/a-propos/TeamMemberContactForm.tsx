@@ -165,6 +165,8 @@ export function TeamMemberContactForm({ memberName, memberRole }: Props) {
         {errors.message && <p className="text-red-500 text-xs mt-1">{errors.message}</p>}
       </div>
 
+      <PhotoUpload photos={photos} onChange={setPhotos} />
+
       {/* Consentement */}
       <div>
         <label className="flex items-start gap-3 cursor-pointer">
@@ -184,8 +186,6 @@ export function TeamMemberContactForm({ memberName, memberRole }: Props) {
         </label>
         {errors.consent && <p className="text-red-500 text-xs mt-1">{errors.consent}</p>}
       </div>
-
-      <PhotoUpload photos={photos} onChange={setPhotos} />
 
       <button
         type="submit"

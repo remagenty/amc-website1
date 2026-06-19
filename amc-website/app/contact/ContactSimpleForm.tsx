@@ -149,6 +149,8 @@ export function ContactSimpleForm() {
         {errors.message && <p className="text-red-500 text-xs mt-1">{errors.message}</p>}
       </div>
 
+      <PhotoUpload photos={photos} onChange={setPhotos} />
+
       {/* RGPD */}
       <div>
         <label className="flex items-start gap-3 cursor-pointer">
@@ -167,8 +169,6 @@ export function ContactSimpleForm() {
         </label>
         {errors.consent && <p className="text-red-500 text-xs mt-1">{errors.consent}</p>}
       </div>
-
-      <PhotoUpload photos={photos} onChange={setPhotos} />
 
       <button
         type="submit"
