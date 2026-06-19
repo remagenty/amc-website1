@@ -1,7 +1,9 @@
 import type { Product, BrandInfo, HeroSlide, Service } from "@/types";
-import { getAllWnMachines, wnMachineToProduct, getCategoryUrlSlug, CATEGORY_LABELS as WN_CATEGORY_LABELS } from "./wn-catalogue";
-import { getMagniProducts, getMagniCategories, MAGNI_CATEGORY_LABELS } from "./magni-catalogue";
-import { getPromoveProducts, getPromoveCategories, PROMOVE_CATEGORY_LABELS } from "./promove-catalogue";
+import { getAllWnMachines, wnMachineToProduct, getCategoryUrlSlug, getWnProductsFromData, CATEGORY_LABELS as WN_CATEGORY_LABELS } from "./wn-catalogue";
+import type { WnMachine } from "./wn-catalogue";
+import { getMagniProducts, getMagniCategories, getMagniProductsFromData, MAGNI_CATEGORY_LABELS } from "./magni-catalogue";
+import { getPromoveProducts, getPromoveCategories, getPromoveProductsFromData, PROMOVE_CATEGORY_LABELS } from "./promove-catalogue";
+import { kvGet } from "./kv";
 
 export const ALL_CATEGORY_LABELS: Record<string, string> = {
   ...WN_CATEGORY_LABELS,
@@ -32,6 +34,24 @@ export function getCatalogueCategories(): Array<{id: string; label: string; coun
   return Object.entries(counts)
     .map(([id, count]) => ({ id, label: ALL_CATEGORY_LABELS[id] ?? id, count }))
     .sort((a, b) => a.label.localeCompare(b.label, "fr"));
+}
+
+type Catalogue = { machines: WnMachine[] };
+
+export async function getMachinesAsync(): Promise<Product[]> {
+  const [wn, magni, promove] = await Promise.all([
+    kvGet<Catalogue>("catalogue:wacker_neuson"),
+    kvGet<Catalogue>("catalogue:magni"),
+    kvGet<Catalogue>("catalogue:promove"),
+  ]);
+  if (wn && magni && promove) {
+    return [
+      ...getWnProductsFromData(wn.machines),
+      ...getMagniProductsFromData(magni.machines),
+      ...getPromoveProductsFromData(promove.machines),
+    ];
+  }
+  return getMachines();
 }
 
 export function getCatalogueBrands(): Array<{id: string; label: string; count: number}> {

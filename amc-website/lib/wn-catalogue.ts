@@ -190,6 +190,12 @@ export function getAllWnMachines(): WnMachine[] {
   return ALL_MACHINES;
 }
 
+export function getWnProductsFromData(machines: WnMachine[]): Product[] {
+  return machines
+    .filter((m) => m.visible !== false)
+    .map((m) => ({ ...wnMachineToProduct(m), categorySlug: getCategoryUrlSlug(m) }));
+}
+
 export function getWnMachineBySlug(slug: string): WnMachine | undefined {
   return ALL_MACHINES.find((m) => m.slug === slug);
 }

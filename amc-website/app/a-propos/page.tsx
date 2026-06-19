@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import teamData from "@/lib/team.json";
+import { kvGet } from "@/lib/kv";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import {
   IconArrowRight,
@@ -79,7 +80,7 @@ const HISTOIRE_BLOCKS = [
 
 // ─── Équipe ───────────────────────────────────────────────────────────────────
 
-const TEAM = (teamData as Array<{ slug: string; initials: string; role: string; name: string; description: string; photo: string | null }>).filter((m) => m.slug !== undefined);
+type TeamMember = { slug: string; initials: string; role: string; name: string; description: string; photo: string | null };
 
 // ─── Valeurs ──────────────────────────────────────────────────────────────────
 
@@ -119,7 +120,12 @@ function Todo({ label }: { label: string }) {
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
-export default function AProposPage() {
+export const dynamic = "force-dynamic";
+
+export default async function AProposPage() {
+  const kvTeam = await kvGet<TeamMember[]>("team");
+  const TEAM = (kvTeam ?? (teamData as TeamMember[])).filter((m) => m.slug !== undefined);
+
   return (
     <>
       {/* ── HERO ── */}

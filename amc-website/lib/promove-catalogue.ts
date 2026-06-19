@@ -69,3 +69,7 @@ export function promoveMachineToProduct(m: WnMachine): Product {
 export function getPromoveProducts(): Product[] {
   return ALL_PROMOVE_MACHINES.filter(m => m.visible !== false).map(promoveMachineToProduct);
 }
+
+export function getPromoveProductsFromData(machines: WnMachine[]): Product[] {
+  return machines.filter(m => m.visible !== false).map(promoveMachineToProduct);
+}

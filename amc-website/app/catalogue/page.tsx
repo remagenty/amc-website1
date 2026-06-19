@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { CataloguePage } from "./CataloguePage";
+import { getMachinesAsync } from "@/lib/data";
+
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: { absolute: "Catalogue matériels de chantier | AMC" },
@@ -14,16 +17,18 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Page({
+export default async function Page({
   searchParams,
 }: {
   searchParams: { categorie?: string; marque?: string; etat?: string };
 }) {
+  const ssrMachines = await getMachinesAsync();
   return (
     <CataloguePage
       initialCategorie={searchParams.categorie ?? ""}
       initialMarque={searchParams.marque ?? ""}
       initialEtat={searchParams.etat ?? ""}
+      ssrMachines={ssrMachines}
     />
   );
 }

@@ -10,12 +10,6 @@ import type { Product } from "@/types";
 
 const PER_PAGE = 12;
 
-// Static full lists — computed once from the whole catalogue, never change.
-// These define the STABLE set of options shown in the filter sidebar.
-const ALL_MACHINES = getMachines();
-const ALL_CATEGORIES_STABLE = getCatalogueCategories();
-const ALL_BRANDS_STABLE = getCatalogueBrands();
-
 // Shared search predicate
 function matchesSearch(p: Product, q: string): boolean {
   return (
@@ -36,11 +30,33 @@ export function CataloguePage({
   initialCategorie = "",
   initialMarque = "",
   initialEtat = "",
+  ssrMachines,
 }: {
   initialCategorie?: string;
   initialMarque?: string;
   initialEtat?: string;
+  ssrMachines?: Product[];
 }) {
+  const ALL_MACHINES = ssrMachines ?? getMachines();
+  const ALL_CATEGORIES_STABLE = useMemo(() => {
+    const counts: Record<string, number> = {};
+    for (const m of ALL_MACHINES) {
+      const slug = m.categorySlug ?? "";
+      if (slug) counts[slug] = (counts[slug] ?? 0) + 1;
+    }
+    const labels: Record<string, string> = getCatalogueCategories().reduce((acc, c) => ({ ...acc, [c.id]: c.label }), {});
+    return Object.entries(counts)
+      .map(([id, count]) => ({ id, label: labels[id] ?? id, count }))
+      .sort((a, b) => a.label.localeCompare(b.label, "fr"));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [ssrMachines]);
+  const ALL_BRANDS_STABLE = useMemo(() => {
+    const counts: Record<string, number> = {};
+    for (const m of ALL_MACHINES) counts[m.brand] = (counts[m.brand] ?? 0) + 1;
+    const brandLabels: Record<string, string> = { "wacker-neuson": "WACKER NEUSON", magni: "Magni", "promove-demolition": "Promove Demolition" };
+    return Object.entries(counts).map(([id, count]) => ({ id, label: brandLabels[id] ?? id, count }));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [ssrMachines]);
   const [filters, setFilters] = useState({
     categories: initialCategorie ? [initialCategorie] : [],
     brands: initialMarque ? [initialMarque] : [],

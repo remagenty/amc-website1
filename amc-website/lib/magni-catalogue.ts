@@ -66,3 +66,7 @@ export function magniMachineToProduct(m: WnMachine): Product {
 export function getMagniProducts(): Product[] {
   return ALL_MAGNI_MACHINES.filter(m => m.visible !== false).map(magniMachineToProduct);
 }
+
+export function getMagniProductsFromData(machines: WnMachine[]): Product[] {
+  return machines.filter(m => m.visible !== false).map(magniMachineToProduct);
+}
