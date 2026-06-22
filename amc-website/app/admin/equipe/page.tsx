@@ -11,9 +11,11 @@ type Member = {
   initials: string;
   description: string;
   photo: string | null;
+  order?: number;
+  visible?: boolean;
 };
 
-const EMPTY: Member = { slug: "", name: "", role: "", initials: "", description: "", photo: null };
+const EMPTY: Member = { slug: "", name: "", role: "", initials: "", description: "", photo: null, order: 0, visible: true };
 
 export default function EquipePage() {
   const [team, setTeam] = useState<Member[]>([]);
@@ -27,7 +29,12 @@ export default function EquipePage() {
   const showToast = (msg: string) => { setToast(msg); setTimeout(() => setToast(""), 3000); };
 
   useEffect(() => {
-    fetch("/api/admin/team").then((r) => r.json()).then((d) => { setTeam(d); setLoading(false); });
+    fetch("/api/admin/team")
+      .then((r) => r.json())
+      .then((d: Member[]) => {
+        setTeam(d.slice().sort((a, b) => (a.order ?? 0) - (b.order ?? 0)));
+        setLoading(false);
+      });
   }, []);
 
   function openEdit(m: Member) {
@@ -65,13 +72,25 @@ export default function EquipePage() {
         const updated = isNew
           ? [...team, payload]
           : team.map((m) => m.slug === editing!.slug ? payload : m);
-        setTeam(updated);
+        setTeam(updated.slice().sort((a, b) => (a.order ?? 0) - (b.order ?? 0)));
         setEditing(null);
         showToast(isNew ? `${payload.name} ajouté(e)` : `${payload.name} mis à jour`);
       }
     } finally {
       setSaving(false);
     }
+  }
+
+  async function toggleVisible(m: Member) {
+    const updated = { ...m, visible: !(m.visible ?? true) };
+    await fetch(`/api/admin/team/${m.slug}`, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(updated),
+    });
+    setTeam((t) =>
+      t.map((x) => (x.slug === m.slug ? updated : x)).slice().sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
+    );
   }
 
   async function deleteMember(m: Member) {
@@ -106,6 +125,8 @@ export default function EquipePage() {
                 <th className="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase">Photo</th>
                 <th className="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase">Nom</th>
                 <th className="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase hidden md:table-cell">Rôle</th>
+                <th className="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase hidden md:table-cell">Ordre</th>
+                <th className="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase hidden md:table-cell">Visible</th>
                 <th className="text-right px-4 py-3 text-xs font-semibold text-gray-500 uppercase">Actions</th>
               </tr>
             </thead>
@@ -123,6 +144,26 @@ export default function EquipePage() {
                   </td>
                   <td className="px-4 py-3 font-medium text-gray-900">{m.name}</td>
                   <td className="px-4 py-3 text-gray-500 hidden md:table-cell">{m.role}</td>
+                  <td className="px-4 py-3 hidden md:table-cell">
+                    <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-gray-100 text-xs font-bold text-gray-600">
+                      {m.order ?? 0}
+                    </span>
+                  </td>
+                  <td className="px-4 py-3 hidden md:table-cell">
+                    <button
+                      onClick={() => toggleVisible(m)}
+                      className={`w-9 h-5 rounded-full transition-colors relative flex-shrink-0 ${
+                        (m.visible ?? true) ? "bg-[#ffd500]" : "bg-gray-200"
+                      }`}
+                      title={(m.visible ?? true) ? "Masquer" : "Afficher"}
+                    >
+                      <span
+                        className={`absolute top-0.5 w-4 h-4 bg-white rounded-full shadow transition-transform ${
+                          (m.visible ?? true) ? "translate-x-4" : "translate-x-0.5"
+                        }`}
+                      />
+                    </button>
+                  </td>
                   <td className="px-4 py-3">
                     <div className="flex justify-end gap-2">
                       <button onClick={() => openEdit(m)} className="px-3 py-1.5 text-xs font-medium text-blue-600 bg-blue-50 hover:bg-blue-100 rounded-lg">Modifier</button>
@@ -170,6 +211,30 @@ export default function EquipePage() {
               <div>
                 <label className="block text-xs font-medium text-gray-700 mb-1">Description</label>
                 <textarea rows={3} value={form.description} onChange={(e) => setForm((f) => ({ ...f, description: e.target.value }))} className={`${inp} resize-none`} />
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                <div>
+                  <label className="block text-xs font-medium text-gray-700 mb-1">Ordre d&apos;affichage</label>
+                  <input
+                    type="number"
+                    min={0}
+                    value={form.order ?? 0}
+                    onChange={(e) => setForm((f) => ({ ...f, order: parseInt(e.target.value, 10) || 0 }))}
+                    className={inp}
+                  />
+                </div>
+                <div className="flex flex-col justify-center">
+                  <label className="block text-xs font-medium text-gray-700 mb-2">Visible sur le site</label>
+                  <label className="flex items-center gap-2 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      checked={form.visible ?? true}
+                      onChange={(e) => setForm((f) => ({ ...f, visible: e.target.checked }))}
+                      className="w-4 h-4 rounded border-gray-300 accent-yellow-400"
+                    />
+                    <span className="text-sm text-gray-700">{form.visible ?? true ? "Visible" : "Masqué"}</span>
+                  </label>
+                </div>
               </div>
             </div>
             <div className="flex gap-3 mt-5">

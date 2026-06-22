@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { kvGet } from "@/lib/kv";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import {
   IconArrowRight,
@@ -12,6 +13,36 @@ import {
   IconZap,
 } from "@/components/ui/Icons";
 import { PhoneLink } from "@/components/ui/PhoneLink";
+
+export const dynamic = "force-dynamic";
+
+type Service = {
+  slug: string;
+  title: string;
+  description: string;
+  heroImage: string | null;
+  keyPoints: string[];
+  ctaText: string;
+  ctaHref: string;
+};
+
+const DEFAULT_SERVICE_MAINTENANCE: Service = {
+  slug: "maintenance",
+  title: "SAV & Maintenance",
+  description:
+    "Notre atelier certifié SE+ prend en charge la maintenance préventive, les réparations et la fourniture de pièces d'origine pour tous vos équipements de chantier.",
+  heroImage: null,
+  keyPoints: [
+    "Maintenance préventive selon les préconisations constructeur",
+    "Réparations toutes marques",
+    "Pièces détachées d'origine WACKER NEUSON, Magni, Promove",
+    "Intervention rapide — atelier et déplacement sur site",
+    "Techniciens certifiés usine SE+",
+    "Contrats d'entretien annuels disponibles",
+  ],
+  ctaText: "Prendre rendez-vous SAV",
+  ctaHref: "/contact?type=sav",
+};
 
 export const metadata: Metadata = {
   title: { absolute: "Maintenance préventive matériels chantier | AMC" },
@@ -74,14 +105,18 @@ const FREQUENCES = [
   },
 ];
 
-export default function MaintenancePage() {
+export default async function MaintenancePage() {
+  const services = await kvGet<Record<string, Service>>("services");
+  const data = services?.maintenance ?? DEFAULT_SERVICE_MAINTENANCE;
+  const heroSrc = data.heroImage ?? "/images/Slide-3.jpg";
+
   return (
     <>
       {/* ── HERO ── */}
       <section className="relative overflow-hidden" style={{ minHeight: "420px" }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/images/Slide-3.jpg"
+          src={heroSrc}
           alt="Maintenance préventive AMC"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -96,14 +131,14 @@ export default function MaintenancePage() {
             <IconWrench size={14} /> Service AMC
           </span>
           <h1 className="text-4xl md:text-5xl font-black text-white leading-tight mb-4">
-            Maintenance préventive
+            {data.title}
           </h1>
           <p className="text-white/75 text-lg max-w-2xl mb-8">
-            Prolongez la durée de vie de vos engins. Intervenez avant la panne plutôt qu&apos;après.
+            {data.description}
           </p>
           <div className="flex flex-wrap gap-3">
-            <Link href="/devis?type=maintenance" className="btn-primary">
-              Demander un contrat d&apos;entretien <IconArrowRight size={16} />
+            <Link href={data.ctaHref} className="btn-primary">
+              {data.ctaText} <IconArrowRight size={16} />
             </Link>
             <PhoneLink className="btn-outline">
               <IconPhone size={16} /> Appeler l&apos;atelier
@@ -111,6 +146,24 @@ export default function MaintenancePage() {
           </div>
         </div>
       </section>
+
+      {/* ── KEY POINTS ── */}
+      {data.keyPoints.length > 0 && (
+        <section className="bg-amc-yellow py-8">
+          <div className="container-amc">
+            <ul className="flex flex-wrap gap-x-8 gap-y-2 justify-center">
+              {data.keyPoints.map((pt, i) => (
+                <li key={i} className="flex items-center gap-2 text-sm font-medium text-gray-900">
+                  <span className="w-5 h-5 rounded-full bg-gray-900 flex items-center justify-center flex-shrink-0">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3"><polyline points="20 6 9 17 4 12"/></svg>
+                  </span>
+                  {pt}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
 
       {/* ── POURQUOI ── */}
       <section className="bg-white py-20">

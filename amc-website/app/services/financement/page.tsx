@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { kvGet } from "@/lib/kv";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import {
   IconArrowRight,
@@ -11,6 +12,35 @@ import {
   IconTruck,
 } from "@/components/ui/Icons";
 import { PhoneLink } from "@/components/ui/PhoneLink";
+
+export const dynamic = "force-dynamic";
+
+type Service = {
+  slug: string;
+  title: string;
+  description: string;
+  heroImage: string | null;
+  keyPoints: string[];
+  ctaText: string;
+  ctaHref: string;
+};
+
+const DEFAULT_SERVICE_FINANCEMENT: Service = {
+  slug: "financement",
+  title: "Solutions de financement",
+  description:
+    "AMC vous propose des solutions de financement adaptées à votre activité et à vos besoins pour l'acquisition de matériels de chantier neufs ou d'occasion.",
+  heroImage: null,
+  keyPoints: [
+    "Crédit-bail : gardez votre trésorerie pour votre activité",
+    "LOA (Location avec Option d'Achat) : flexibilité maximale",
+    "Financement classique avec nos partenaires bancaires",
+    "Réponse sous 48h après dépôt du dossier",
+    "Accompagnement personnalisé par nos conseillers",
+  ],
+  ctaText: "Demander un devis financement",
+  ctaHref: "/devis?type=financement",
+};
 
 export const metadata: Metadata = {
   title: { absolute: "Financement matériels de chantier | AMC" },
@@ -64,14 +94,18 @@ const ETAPES = [
   },
 ];
 
-export default function FinancementPage() {
+export default async function FinancementPage() {
+  const services = await kvGet<Record<string, Service>>("services");
+  const data = services?.financement ?? DEFAULT_SERVICE_FINANCEMENT;
+  const heroSrc = data.heroImage ?? "/images/Magni-catalogue.avif";
+
   return (
     <>
       {/* ── HERO ── */}
       <section className="relative overflow-hidden" style={{ minHeight: "420px" }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/images/Magni-catalogue.avif"
+          src={heroSrc}
           alt="Financement matériels de chantier AMC"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -86,15 +120,14 @@ export default function FinancementPage() {
             <IconStar size={14} /> Solutions financières
           </span>
           <h1 className="text-4xl md:text-5xl font-black text-white leading-tight mb-4">
-            Financement de vos équipements
+            {data.title}
           </h1>
           <p className="text-white/75 text-lg max-w-2xl mb-8">
-            Acquérez vos matériels de chantier sans immobiliser votre trésorerie.
-            Des solutions adaptées à chaque situation.
+            {data.description}
           </p>
           <div className="flex flex-wrap gap-3">
-            <Link href="/devis?type=financement" className="btn-primary">
-              Demander une étude de financement <IconArrowRight size={16} />
+            <Link href={data.ctaHref} className="btn-primary">
+              {data.ctaText} <IconArrowRight size={16} />
             </Link>
             <PhoneLink className="btn-outline">
               <IconPhone size={16} /> Nous appeler
@@ -102,6 +135,24 @@ export default function FinancementPage() {
           </div>
         </div>
       </section>
+
+      {/* ── KEY POINTS ── */}
+      {data.keyPoints.length > 0 && (
+        <section className="bg-amc-yellow py-8">
+          <div className="container-amc">
+            <ul className="flex flex-wrap gap-x-8 gap-y-2 justify-center">
+              {data.keyPoints.map((pt, i) => (
+                <li key={i} className="flex items-center gap-2 text-sm font-medium text-gray-900">
+                  <span className="w-5 h-5 rounded-full bg-gray-900 flex items-center justify-center flex-shrink-0">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3"><polyline points="20 6 9 17 4 12"/></svg>
+                  </span>
+                  {pt}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
 
       {/* ── POURQUOI FINANCER ── */}
       <section className="bg-white py-20">
