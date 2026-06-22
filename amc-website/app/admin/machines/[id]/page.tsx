@@ -21,6 +21,9 @@ type MachineForm = {
   caracteristiques_techniques: Record<string, string | number>;
   points_forts: string[];
   _brand: string;
+  etat: "neuf" | "occasion";
+  disponibilite: "disponible" | "sur_commande";
+  prix_ht: number | null;
 };
 
 const BRANDS = [
@@ -30,9 +33,17 @@ const BRANDS = [
 ];
 
 const CATEGORIES: Record<string, string[]> = {
-  "wacker-neuson": ["Mini-pelle", "Dumper", "Compacteur", "Plaque vibrante", "Pilonneuse", "Marteau piqueur", "Télescopique", "Chargeuse"],
-  magni: ["Téléhandler rotatif", "Téléhandler fixe"],
-  "promove-demolition": ["Brise-roche hydraulique", "Cisaille", "Concasseur", "Grappin", "Pulvérisateur", "Scarificateur"],
+  "wacker-neuson": [
+    "Mini-pelle", "Dumper", "Chargeuse", "Compacteur",
+    "Plaque vibrante", "Pilonneuse", "Marteau piqueur", "Télescopique",
+  ],
+  magni: [
+    "Téléhandler rotatif", "Téléhandler fixe", "Téléhandler agricole",
+  ],
+  "promove-demolition": [
+    "Brise-roche hydraulique", "Cisaille à ferraille",
+    "Pince multiprocesseur", "Pince de tri et démolition", "Pulvérisateur béton",
+  ],
 };
 
 function kvFromObj(obj: Record<string, unknown>): KV[] {
@@ -62,6 +73,9 @@ export default function MachineEditPage({ params }: { params: { id: string } }) 
     caracteristiques_techniques: {},
     points_forts: [],
     _brand: "wacker-neuson",
+    etat: "neuf",
+    disponibilite: "disponible",
+    prix_ht: null,
   });
   const [kv, setKv] = useState<KV[]>([{ key: "", value: "" }]);
   const [pointsForts, setPointsForts] = useState<string[]>([""]);
@@ -85,6 +99,10 @@ export default function MachineEditPage({ params }: { params: { id: string } }) 
 
   function set<K extends keyof MachineForm>(k: K, v: MachineForm[K]) {
     setForm((f) => ({ ...f, [k]: v }));
+  }
+
+  function setPrix(v: number | null) {
+    setForm((f) => ({ ...f, prix_ht: v }));
   }
 
   async function save() {
@@ -156,6 +174,46 @@ export default function MachineEditPage({ params }: { params: { id: string } }) 
                 <option value="">— Choisir —</option>
                 {(CATEGORIES[form._brand] ?? []).map((c) => <option key={c} value={c}>{c}</option>)}
               </select>
+            </div>
+          </div>
+
+          <div className="grid sm:grid-cols-3 gap-4">
+            <div>
+              <label className={label}>État</label>
+              <select value={form.etat} onChange={(e) => set("etat", e.target.value as "neuf" | "occasion")} className={input}>
+                <option value="neuf">Neuf</option>
+                <option value="occasion">Occasion</option>
+              </select>
+            </div>
+            <div>
+              <label className={label}>Disponibilité</label>
+              <select value={form.disponibilite} onChange={(e) => set("disponibilite", e.target.value as "disponible" | "sur_commande")} className={input}>
+                <option value="disponible">Disponible</option>
+                <option value="sur_commande">Sur commande</option>
+              </select>
+            </div>
+            <div>
+              <label className={label}>Prix HT (€)</label>
+              <div className="flex gap-2 items-center">
+                <input
+                  type="number"
+                  value={form.prix_ht ?? ""}
+                  disabled={form.prix_ht === null}
+                  onChange={(e) => setPrix(e.target.value === "" ? null : parseFloat(e.target.value))}
+                  className={`${input} disabled:opacity-50`}
+                  placeholder="Sur devis"
+                  min="0"
+                />
+                <label className="flex items-center gap-1.5 whitespace-nowrap text-xs text-gray-600 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={form.prix_ht === null}
+                    onChange={(e) => setPrix(e.target.checked ? null : 0)}
+                    className="w-3.5 h-3.5 accent-yellow-400"
+                  />
+                  Sur devis
+                </label>
+              </div>
             </div>
           </div>
 
