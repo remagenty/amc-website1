@@ -81,7 +81,15 @@ function StarRating() {
   );
 }
 
-function TestimonialCard({ item }: { item: typeof TESTIMONIALS[number] }) {
+type ReviewDisplay = {
+  name: string;
+  initials: string;
+  text: string;
+  date: string;
+  rating?: number;
+};
+
+function TestimonialCard({ item }: { item: ReviewDisplay }) {
   return (
     <div
       className="flex-shrink-0 self-start flex flex-col"
@@ -124,8 +132,9 @@ function TestimonialCard({ item }: { item: typeof TESTIMONIALS[number] }) {
   );
 }
 
-export function TestimonialsStrip() {
-  const allItems = [...TESTIMONIALS, ...TESTIMONIALS];
+export function TestimonialsStrip({ reviews }: { reviews?: ReviewDisplay[] }) {
+  const items = (reviews && reviews.length > 0) ? reviews : TESTIMONIALS;
+  const allItems = [...items, ...items];
 
   return (
     <section
