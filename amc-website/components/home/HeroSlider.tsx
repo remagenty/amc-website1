@@ -6,7 +6,20 @@ import { HERO_SLIDES } from "@/lib/data";
 import { IconArrowRight, IconChevronLeft, IconChevronRight } from "@/components/ui/Icons";
 import { SEBadge } from "@/components/ui/SEBadge";
 
-export function HeroSlider() {
+type HeroSlideKV = {
+  id: string;
+  title: string;
+  subtitle: string;
+  ctaLabel: string;
+  ctaHref: string;
+  ctaSecondaryLabel?: string;
+  ctaSecondaryHref?: string;
+  image?: string;
+  badge?: string;
+};
+
+export function HeroSlider({ slides }: { slides?: HeroSlideKV[] }) {
+  const activeSlides = slides && slides.length > 0 ? slides : HERO_SLIDES;
   const [current, setCurrent] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
@@ -21,19 +34,19 @@ export function HeroSlider() {
   );
 
   const next = useCallback(() => {
-    goTo((current + 1) % HERO_SLIDES.length);
-  }, [current, goTo]);
+    goTo((current + 1) % activeSlides.length);
+  }, [current, goTo, activeSlides.length]);
 
   const prev = useCallback(() => {
-    goTo((current - 1 + HERO_SLIDES.length) % HERO_SLIDES.length);
-  }, [current, goTo]);
+    goTo((current - 1 + activeSlides.length) % activeSlides.length);
+  }, [current, goTo, activeSlides.length]);
 
   useEffect(() => {
     const interval = setInterval(next, 6000);
     return () => clearInterval(interval);
   }, [next]);
 
-  const slide = HERO_SLIDES[current];
+  const slide = activeSlides[current];
 
   const BG_COLORS = [
     "from-slate-900 to-slate-700",
@@ -47,7 +60,7 @@ export function HeroSlider() {
       className="relative h-[520px] md:h-[600px] lg:h-[680px] overflow-hidden"
       aria-label="Diaporama principal"
     >
-      {HERO_SLIDES.map((s, i) => (
+      {activeSlides.map((s, i) => (
         <div
           key={s.id}
           className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
@@ -59,9 +72,9 @@ export function HeroSlider() {
           <div className={`absolute inset-0 bg-gradient-to-br ${BG_COLORS[i % BG_COLORS.length]}`} />
 
           {/* Vidéo de fond */}
-          {s.video && (
+          {"video" in s && (s as { video?: string }).video && (
             <video
-              src={s.video}
+              src={(s as { video?: string }).video}
               autoPlay
               muted
               loop
@@ -72,7 +85,7 @@ export function HeroSlider() {
           )}
 
           {/* Photo de fond */}
-          {!s.video && s.image && (
+          {!("video" in s && (s as { video?: string }).video) && s.image && (
             /* eslint-disable-next-line @next/next/no-img-element */
             <img
               src={s.image}
@@ -147,7 +160,7 @@ export function HeroSlider() {
 
       {/* Dots */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2" role="tablist" aria-label="Navigation diaporama">
-        {HERO_SLIDES.map((s, i) => (
+        {activeSlides.map((s, i) => (
           <button
             key={s.id}
             onClick={() => goTo(i)}
@@ -165,7 +178,7 @@ export function HeroSlider() {
 
       {/* Slide counter */}
       <div className="absolute bottom-6 right-6 z-20 text-white/60 text-sm font-medium">
-        {current + 1} / {HERO_SLIDES.length}
+        {current + 1} / {activeSlides.length}
       </div>
     </section>
   );

@@ -3,6 +3,10 @@ import Link from "next/link";
 import { IconMapPin, IconPhone, IconMail, IconClock, IconArrowRight } from "@/components/ui/Icons";
 import { ContactSimpleForm } from "./ContactSimpleForm";
 import { PhoneLink } from "@/components/ui/PhoneLink";
+import { kvGet } from "@/lib/kv";
+import type { SiteContent } from "@/app/api/admin/content/route";
+
+export const dynamic = "force-dynamic";
 
 const GMAPS_EMBED =
   "https://www.google.com/maps?ll=45.79640,5.97107" +
@@ -23,7 +27,15 @@ export const metadata: Metadata = {
   },
 };
 
-export default function ContactPage() {
+export default async function ContactPage() {
+  const content = await kvGet<SiteContent>("site-content");
+  const contact = content?.contact;
+
+  const address = contact?.address ?? "ZAC D'Orsan, 330 Rue du Mont Blanc\n74540 Saint-Félix";
+  const phone = contact?.phone ?? "04 26 78 43 90";
+  const email = contact?.email ?? "contact@amc-savoie.fr";
+  const hours = contact?.hours ?? "Lun–Ven : 8h–12h / 14h–18h\nSam : Fermé";
+
   return (
     <div className="min-h-screen bg-amc-cream">
 
@@ -67,8 +79,9 @@ export default function ContactPage() {
                   <div>
                     <p className="font-semibold text-amc-text">Adresse</p>
                     <p className="text-amc-text-secondary mt-1 leading-relaxed">
-                      ZAC D&apos;Orsan, 330 Rue du Mont Blanc<br />
-                      74540 Saint-Félix, Haute-Savoie
+                      {address.split("\n").map((line, i) => (
+                        <span key={i}>{line}{i < address.split("\n").length - 1 && <br />}</span>
+                      ))}
                     </p>
                   </div>
                 </div>
@@ -80,7 +93,7 @@ export default function ContactPage() {
                   <div>
                     <p className="font-semibold text-amc-text">Téléphone</p>
                     <PhoneLink className="text-amc-text-secondary hover:text-amc-yellow-dark transition-colors mt-1 block">
-                      04 26 78 43 90
+                      {phone}
                     </PhoneLink>
                   </div>
                 </div>
@@ -92,10 +105,10 @@ export default function ContactPage() {
                   <div>
                     <p className="font-semibold text-amc-text">Email</p>
                     <a
-                      href="mailto:contact@amc-savoie.fr"
+                      href={`mailto:${email}`}
                       className="text-amc-text-secondary hover:text-amc-yellow-dark transition-colors mt-1 block"
                     >
-                      contact@amc-savoie.fr
+                      {email}
                     </a>
                   </div>
                 </div>
@@ -107,9 +120,9 @@ export default function ContactPage() {
                   <div>
                     <p className="font-semibold text-amc-text">Horaires</p>
                     <div className="text-amc-text-secondary mt-1 space-y-0.5">
-                      <p>Lun–Ven : 8h–12h / 14h–18h</p>
-                      <p>Samedi : Fermé</p>
-                      <p>Dimanche : Fermé</p>
+                      {hours.split("\n").map((line, i) => (
+                        <p key={i}>{line}</p>
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -146,7 +159,7 @@ export default function ContactPage() {
             <h2 className="font-bold text-amc-text text-lg">Nous localiser</h2>
           </div>
           <p className="text-sm text-amc-text-secondary mt-1 ml-7">
-            ZAC D&apos;Orsan, 330 Rue du Mont Blanc, 74540 Saint-Félix, Haute-Savoie
+            {address.split("\n").join(", ")}, Haute-Savoie
           </p>
         </div>
 

@@ -14,7 +14,15 @@ const ICONS: Record<string, React.ReactNode> = {
   "map-pin": <IconMapPin size={24} />,
 };
 
-export function WhyChooseSection() {
+const DEFAULT_STATS = [
+  { value: "3", label: "Partenaires constructeurs" },
+  { value: "15+", label: "Années d'expertise" },
+  { value: "500+", label: "Machines vendues" },
+  { value: "100%", label: "Matériaux d'origine" },
+];
+
+export function WhyChooseSection({ stats }: { stats?: { value: string; label: string }[] }) {
+  const displayStats = stats && stats.length > 0 ? stats : DEFAULT_STATS;
   return (
     <section className="section-padding" style={{ backgroundColor: "#F5F4EF" }} aria-labelledby="why-title">
       <div className="container-amc">
@@ -77,12 +85,7 @@ export function WhyChooseSection() {
                 </p>
 
                 <div className="grid grid-cols-2 gap-6">
-                  {[
-                    { value: "3", label: "Partenaires constructeurs", unit: "" },
-                    { value: "15+", label: "Années d'expertise", unit: "" },
-                    { value: "500+", label: "Machines vendues", unit: "" },
-                    { value: "100%", label: "Matériaux d'origine", unit: "" },
-                  ].map((stat) => (
+                  {displayStats.map((stat) => (
                     <div key={stat.label} className="text-center">
                       <div className="text-3xl font-black text-amc-yellow">
                         {stat.value}

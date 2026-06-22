@@ -5,6 +5,10 @@ import { IconMapPin, IconPhone, IconMail, IconClock } from "@/components/ui/Icon
 import { SEBadge } from "@/components/ui/SEBadge";
 import { MapInteractive } from "@/components/ui/MapInteractive";
 import { PhoneLink } from "@/components/ui/PhoneLink";
+import { kvGet } from "@/lib/kv";
+import type { SiteContent } from "@/app/api/admin/content/route";
+
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: { absolute: "Demande de devis | AMC — Alpes Matériel Compact" },
@@ -19,7 +23,17 @@ export const metadata: Metadata = {
   },
 };
 
-export default function DevisPage() {
+export default async function DevisPage() {
+  const content = await kvGet<SiteContent>("site-content");
+  const contact = content?.contact;
+
+  const address = contact?.address ?? "ZAC D'Orsan, 330 Rue du Mont Blanc\n74540 Saint-Félix";
+  const phone = contact?.phone ?? "04 26 78 43 90";
+  const email = contact?.email ?? "contact@amc-savoie.fr";
+  const hours = contact?.hours ?? "Lun–Ven : 8h–12h / 14h–18h\nSam : Fermé";
+
+  const addressLines = address.split("\n");
+
   return (
     <div className="min-h-screen bg-amc-cream">
       {/* Header */}
@@ -48,10 +62,9 @@ export default function DevisPage() {
                   <div>
                     <p className="font-medium text-amc-text">Adresse</p>
                     <p className="text-amc-text-secondary mt-0.5">
-                      ZAC D&apos;Orsan<br />
-                      330 Rue du Mont Blanc<br />
-                      74540 Saint-Félix<br />
-                      Haute-Savoie
+                      {addressLines.map((line, i) => (
+                        <span key={i}>{line}{i < addressLines.length - 1 && <br />}</span>
+                      ))}
                     </p>
                   </div>
                 </div>
@@ -60,7 +73,7 @@ export default function DevisPage() {
                   <div>
                     <p className="font-medium text-amc-text">Téléphone</p>
                     <PhoneLink className="text-amc-text-secondary hover:text-amc-yellow-dark transition-colors mt-0.5 block">
-                      04 26 78 43 90
+                      {phone}
                     </PhoneLink>
                   </div>
                 </div>
@@ -68,8 +81,8 @@ export default function DevisPage() {
                   <IconMail size={18} className="text-amc-yellow mt-0.5 flex-shrink-0" />
                   <div>
                     <p className="font-medium text-amc-text">Email</p>
-                    <a href="mailto:contact@amc-savoie.fr" className="text-amc-text-secondary hover:text-amc-yellow-dark transition-colors mt-0.5 block">
-                      contact@amc-savoie.fr
+                    <a href={`mailto:${email}`} className="text-amc-text-secondary hover:text-amc-yellow-dark transition-colors mt-0.5 block">
+                      {email}
                     </a>
                   </div>
                 </div>
@@ -78,9 +91,9 @@ export default function DevisPage() {
                   <div>
                     <p className="font-medium text-amc-text">Horaires</p>
                     <div className="text-amc-text-secondary mt-0.5 space-y-0.5">
-                      <p>Lun–Ven : 8h–12h / 14h–18h</p>
-                      <p>Samedi : Fermé</p>
-                      <p>Dimanche : Fermé</p>
+                      {hours.split("\n").map((line, i) => (
+                        <p key={i}>{line}</p>
+                      ))}
                     </div>
                   </div>
                 </div>

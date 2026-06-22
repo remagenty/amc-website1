@@ -5,6 +5,24 @@ import { kvGet, kvSet } from "@/lib/kv";
 export type SiteStat = { value: string; label: string };
 export type FooterLink = { label: string; href: string; section: string };
 
+export type TickerItem = { text: string };
+
+export type HeroSlideKV = {
+  id: string;
+  title: string;
+  subtitle: string;
+  ctaLabel: string;
+  ctaHref: string;
+  ctaSecondaryLabel?: string;
+  ctaSecondaryHref?: string;
+  image?: string;
+  badge?: string;
+};
+
+export type HomepageStat = { value: string; label: string };
+export type SocialSettings = { facebookUrl: string; instagramUrl: string; facebookEnabled: boolean; instagramEnabled: boolean };
+export type SeoSettings = { homeTitle: string; homeDescription: string; keywords: string };
+
 export type SiteContent = {
   contact: {
     address: string;
@@ -24,6 +42,12 @@ export type SiteContent = {
   footer: {
     links: FooterLink[];
   };
+  ticker: { items: TickerItem[] };
+  heroSlides: HeroSlideKV[];
+  homepageStats: HomepageStat[];
+  social: SocialSettings;
+  seo: SeoSettings;
+  copyright: string;
 };
 
 const DEFAULT_CONTENT: SiteContent = {
@@ -61,6 +85,71 @@ const DEFAULT_CONTENT: SiteContent = {
       { label: "Contact", href: "/contact", section: "L'entreprise" },
     ],
   },
+  ticker: {
+    items: [
+      { text: "Certification SE+" },
+      { text: "Livraison Rhône-Alpes" },
+      { text: "Garantie constructeur" },
+      { text: "Financement disponible" },
+      { text: "Stock disponible — Livraison immédiate" },
+      { text: "Pièces d'origine constructeur" },
+      { text: "Techniciens certifiés usine" },
+      { text: "Devis gratuit sous 24h" },
+      { text: "+15 ans d'expérience" },
+      { text: "Service après-vente sur site" },
+    ],
+  },
+  heroSlides: [
+    {
+      id: "slide-1",
+      title: "Votre partenaire machines neuves et occasion",
+      subtitle: "Spécialiste de la vente de matériel de chantier en Rhône-Alpes. Compacteurs, dumpers, pelles, télescopiques et équipements de démolition.",
+      ctaLabel: "Découvrir nos machines",
+      ctaHref: "/gammes",
+      ctaSecondaryLabel: "Demander un devis",
+      ctaSecondaryHref: "/contact?type=devis",
+      image: "/images/Slide-1.jpg",
+    },
+    {
+      id: "slide-2",
+      title: "Distributeur officiel WACKER NEUSON",
+      subtitle: "Accédez à toute la gamme WACKER NEUSON : équipements compacts haute performance pour tous vos chantiers. Stock disponible, livraison Rhône-Alpes.",
+      ctaLabel: "Voir la gamme WACKER NEUSON",
+      ctaHref: "/partenaires/wacker-neuson",
+      ctaSecondaryLabel: "Contactez-nous",
+      ctaSecondaryHref: "/contact",
+      badge: "Partenaire officiel",
+    },
+    {
+      id: "slide-3",
+      title: "Atelier certifié SE+ et techniciens qualifiés",
+      subtitle: "Un service après-vente d'excellence avec des techniciens certifiés et un atelier équipé",
+      ctaLabel: "Découvrir nos services",
+      ctaHref: "/services",
+      ctaSecondaryLabel: "Prendre rendez-vous",
+      ctaSecondaryHref: "/contact?type=sav",
+      image: "/images/Slide-3.jpg",
+      badge: "Certification SE+",
+    },
+  ],
+  homepageStats: [
+    { value: "3", label: "Marques partenaires" },
+    { value: "15+", label: "Années d'expérience" },
+    { value: "500+", label: "Machines disponibles" },
+    { value: "100%", label: "Pièces d'origine" },
+  ],
+  social: {
+    facebookUrl: "https://www.facebook.com/amcalpesmc",
+    instagramUrl: "https://www.instagram.com/amc_savoie",
+    facebookEnabled: true,
+    instagramEnabled: true,
+  },
+  seo: {
+    homeTitle: "AMC — Vente matériels de chantier Rhône-Alpes | WACKER NEUSON, Magni, Promove",
+    homeDescription: "AMC, votre spécialiste de la vente de matériels de chantier neufs et d'occasion en Rhône-Alpes. Distributeur officiel WACKER NEUSON, Magni, Promove Demolition. SAV certifié SE+ à Saint-Félix.",
+    keywords: "matériel chantier, WACKER NEUSON, Magni, Promove, Rhône-Alpes, SAV certifié, mini-pelle, dumper, compacteur",
+  },
+  copyright: `© ${new Date().getFullYear()} AMC — Alpes Matériel Compact. Tous droits réservés.`,
 };
 
 async function requireAuth(req: NextRequest) {
@@ -71,7 +160,17 @@ async function requireAuth(req: NextRequest) {
 export async function GET(req: NextRequest) {
   if (!(await requireAuth(req))) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   const stored = await kvGet<SiteContent>("site-content");
-  return NextResponse.json(stored ?? DEFAULT_CONTENT);
+  const merged = stored ? {
+    ...DEFAULT_CONTENT,
+    ...stored,
+    ticker: stored.ticker ?? DEFAULT_CONTENT.ticker,
+    heroSlides: stored.heroSlides ?? DEFAULT_CONTENT.heroSlides,
+    homepageStats: stored.homepageStats ?? DEFAULT_CONTENT.homepageStats,
+    social: { ...DEFAULT_CONTENT.social, ...stored.social },
+    seo: { ...DEFAULT_CONTENT.seo, ...stored.seo },
+    copyright: stored.copyright ?? DEFAULT_CONTENT.copyright,
+  } : DEFAULT_CONTENT;
+  return NextResponse.json(merged);
 }
 
 export async function PUT(req: NextRequest) {

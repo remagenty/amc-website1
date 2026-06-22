@@ -34,7 +34,11 @@ function Item({ icon, text }: { icon: React.ReactNode; text: string }) {
   );
 }
 
-export function ReassuranceBar() {
+export function ReassuranceBar({ items }: { items?: string[] }) {
+  const displayItems =
+    items && items.length > 0
+      ? items.map((text) => ({ icon: <IconCheck size={18} />, text }))
+      : ITEMS;
   return (
     <section
       className="bg-amc-yellow overflow-hidden py-4"
@@ -69,7 +73,7 @@ export function ReassuranceBar() {
       >
         {/* Duplicate items for seamless loop */}
         <div className="marquee-track">
-          {[...ITEMS, ...ITEMS].map((item, i) => (
+          {[...displayItems, ...displayItems].map((item, i) => (
             <Item key={i} icon={item.icon} text={item.text} />
           ))}
         </div>
