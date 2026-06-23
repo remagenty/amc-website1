@@ -29,8 +29,8 @@ const BLOCKS = [
   {
     icon: IconBadgeCheck,
     tag: "Certification SE+",
-    title: "Techniciens certifiés par les constructeurs",
-    text: "Nos techniciens sont formés et certifiés directement par WACKER NEUSON, Magni et Promove Demolition. La certification SE+ atteste de leur maîtrise technique et de leur capacité à intervenir sur l'ensemble des gammes, dans le strict respect des préconisations constructeur.",
+    title: "Techniciens confirmés",
+    text: "Nos techniciens cumulent des années d'expérience terrain sur toutes les gammes que nous distribuons. Formés directement par WACKER NEUSON, Magni et Promove Demolition, ils maîtrisent chaque machine de fond en comble et interviennent avec les bons outils, au bon moment.",
     points: [
       "Formation continue directement chez les constructeurs",
       "Habilitations et certifications à jour",
@@ -42,10 +42,10 @@ const BLOCKS = [
   {
     icon: IconWrench,
     tag: "Atelier",
-    title: "Atelier équipé aux normes constructeurs",
-    text: "Notre atelier de Saint-Félix dispose de bancs de diagnostic homologués, d'outillage spécifique et d'équipements dédiés aux engins compacts. Chaque intervention est réalisée dans des conditions optimales pour garantir la fiabilité et la longévité de vos machines.",
+    title: "Atelier équipé en technologies",
+    text: "Notre atelier de Saint-Félix est équipé de mallettes de diagnostic électronique, d'outillages spécifiques et de tous les équipements nécessaires pour intervenir efficacement sur vos engins. Chaque réparation est réalisée dans des conditions optimales pour garantir fiabilité et longévité.",
     points: [
-      "Bancs de diagnostic constructeurs homologués",
+      "Mallettes de diagnostic électronique constructeurs",
       "Outillage spécifique et instruments calibrés",
       "Espace dédié lavage et préparation des engins",
     ],
@@ -55,7 +55,7 @@ const BLOCKS = [
   {
     icon: IconShield,
     tag: "Pièces détachées",
-    title: "Pièces d'origine, délais maîtrisés",
+    title: "Pièces d'origine & adaptables, délais maîtrisés",
     text: "Nous approvisionnons exclusivement des pièces détachées d'origine constructeur pour toutes les marques distribuées. Notre stock local et nos accès directs aux filières logistiques réduisent au maximum les temps d'immobilisation de vos engins sur chantier.",
     points: [
       "Stock de pièces courantes disponible à Saint-Félix",
