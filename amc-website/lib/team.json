@@ -1,34 +1,40 @@
 [
   {
     "slug": "chef-agence",
-    "initials": "TH",
-    "role": "Chef d'agence",
-    "name": "Thomas",
+    "initials": "TW",
+    "role": "Directeur",
+    "name": "Thomas Wciorka",
     "description": "Pilote l'agence AMC au quotidien, coordonne les équipes commerciales et techniques pour garantir un service de qualité.",
-    "photo": null
+    "photo": null,
+    "phone": "06 72 56 31 27",
+    "email": "admin@amc2savoie.com"
   },
   {
     "slug": "responsable-sav",
     "initials": "RO",
     "role": "Responsable SAV",
-    "name": "Romain",
-    "description": "Coordonne toutes les interventions techniques et supervise l'atelier certifié SE+.",
-    "photo": "/images/about/equipe-amc.png"
+    "name": "Romain Bazingette",
+    "description": "Coordonne toutes les interventions techniques et supervise l'atelier certifié SE+. 18 ans d'expérience SAV.",
+    "photo": "/images/about/equipe-amc.png",
+    "phone": "06 32 64 71 63",
+    "email": "sav2@amc2savoie.com"
   },
   {
     "slug": "commercial-1",
-    "initials": "JP",
+    "initials": "JS",
     "role": "Commercial",
-    "name": "Jean-Pierre",
+    "name": "Jean-Pierre Sudre",
     "description": "Spécialiste des matériels WACKER NEUSON et Magni, il vous accompagne dans le choix de vos équipements.",
-    "photo": null
+    "photo": null,
+    "phone": "06 75 73 62 33"
   },
   {
     "slug": "commercial-2",
-    "initials": "VA",
+    "initials": "VK",
     "role": "Commercial",
-    "name": "Valentin",
+    "name": "Valentin Kint",
     "description": "Expert en relation client et vente de matériels de chantier, il trouve la solution adaptée à chaque projet.",
-    "photo": null
+    "photo": null,
+    "phone": "06 73 60 11 33"
   }
 ]

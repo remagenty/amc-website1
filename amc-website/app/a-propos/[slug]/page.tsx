@@ -7,6 +7,7 @@ import {
   IconArrowRight,
   IconCheck,
   IconPhone,
+  IconMail,
   IconBadgeCheck,
   IconWrench,
   IconStar,
@@ -22,10 +23,12 @@ import { PhoneLink } from "@/components/ui/PhoneLink";
 
 const MEMBERS = {
   "chef-agence": {
-    initials: "TH",
-    name: "Thomas",
-    role: "Chef d'agence",
-    experience: "XX ans d'expérience",
+    initials: "TW",
+    name: "Thomas Wciorka",
+    role: "Directeur",
+    phone: "06 72 56 31 27",
+    email: "admin@amc2savoie.com",
+    experience: "Directeur d'AMC — Alpes Matériel Compact",
     specialites: ["Direction d'agence", "WACKER NEUSON", "Magni", "Promove"],
     roleTitle: "Pilote de l'agence AMC",
     roleText:
@@ -52,10 +55,12 @@ const MEMBERS = {
   },
   "responsable-sav": {
     initials: "RO",
-    name: "Romain",
+    name: "Romain Bazingette",
     photo: "/images/about/equipe-amc.png",
     role: "Responsable SAV",
-    experience: "TODO: XX ans d'expérience",
+    phone: "06 32 64 71 63",
+    email: "sav2@amc2savoie.com",
+    experience: "18 ans d'expérience SAV",
     specialites: ["Certification SE+", "WACKER NEUSON", "Magni", "Diagnostic"],
     roleTitle: "Expert technique et réactivité",
     roleText:
@@ -81,10 +86,11 @@ const MEMBERS = {
     image: "/images/Slide-3.jpg",
   },
   "commercial-1": {
-    initials: "JP",
-    name: "Jean-Pierre",
+    initials: "JS",
+    name: "Jean-Pierre Sudre",
     role: "Commercial",
-    experience: "XX ans d'expérience",
+    phone: "06 75 73 62 33",
+    experience: "Commercial spécialiste WACKER NEUSON & Magni",
     specialites: ["Chariots télescopiques et nacelles Magni", "Mini-pelles WN", "Dumpers", "Conseil"],
     roleTitle: "Spécialiste WACKER NEUSON & Magni",
     roleText:
@@ -110,10 +116,11 @@ const MEMBERS = {
     image: "/images/Magni-catalogue.avif",
   },
   "commercial-2": {
-    initials: "VA",
-    name: "Valentin",
+    initials: "VK",
+    name: "Valentin Kint",
     role: "Commercial",
-    experience: "XX ans d'expérience",
+    phone: "06 73 60 11 33",
+    experience: "Commercial spécialiste Promove Demolition",
     specialites: ["Promove Demolition", "Brise-roches", "Pinces", "Cisailles"],
     roleTitle: "Expert démolition & attachements",
     roleText:
@@ -138,7 +145,7 @@ const MEMBERS = {
     ],
     image: "/images/Slide-1.jpg",
   },
-} as const;
+};
 
 type MemberSlug = keyof typeof MEMBERS;
 
@@ -212,16 +219,7 @@ export default function TeamMemberPage({ params }: { params: { slug: string } })
               <h1 className="text-3xl md:text-4xl font-black text-amc-text mb-2">
                 {displayName}
               </h1>
-              {member.experience.startsWith("TODO:") ? (
-                <div className="inline-flex items-center gap-1.5 bg-amber-50 border border-dashed border-amber-400 text-amber-800 text-xs font-semibold px-2.5 py-1.5 rounded-lg mb-5">
-                  <span className="bg-amber-400 text-white text-[9px] font-black px-1 py-0.5 rounded uppercase tracking-wide">
-                    TODO
-                  </span>
-                  {member.experience.replace("TODO: ", "")}
-                </div>
-              ) : (
-                <p className="text-amc-text-secondary text-sm mb-5">{member.experience}</p>
-              )}
+              <p className="text-amc-text-secondary text-sm mb-5">{member.experience}</p>
 
               {/* Badges spécialités */}
               <div className="flex flex-wrap gap-2 mb-8">
@@ -242,9 +240,20 @@ export default function TeamMemberPage({ params }: { params: { slug: string } })
                 >
                   Envoyer un message <IconArrowRight size={16} />
                 </a>
-                <PhoneLink className="btn-secondary rounded-lg">
-                  <IconPhone size={16} /> 04 26 78 43 90
-                </PhoneLink>
+                {"phone" in member && member.phone ? (
+                  <a href={`tel:${(member.phone as string).replace(/\s/g, "")}`} className="btn-secondary rounded-lg inline-flex items-center gap-2">
+                    <IconPhone size={16} /> {member.phone as string}
+                  </a>
+                ) : (
+                  <PhoneLink className="btn-secondary rounded-lg">
+                    <IconPhone size={16} /> 04 26 78 43 90
+                  </PhoneLink>
+                )}
+                {"email" in member && member.email && (
+                  <a href={`mailto:${member.email as string}`} className="btn-secondary rounded-lg inline-flex items-center gap-2">
+                    <IconMail size={16} /> {member.email as string}
+                  </a>
+                )}
               </div>
             </ScrollReveal>
           </div>

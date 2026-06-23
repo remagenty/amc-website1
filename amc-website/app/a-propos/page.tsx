@@ -11,6 +11,7 @@ import {
   IconStar,
   IconHardHat,
   IconPhone,
+  IconMail,
   IconUser,
 } from "@/components/ui/Icons";
 import { PhoneLink } from "@/components/ui/PhoneLink";
@@ -80,7 +81,7 @@ const HISTOIRE_BLOCKS = [
 
 // ─── Équipe ───────────────────────────────────────────────────────────────────
 
-type TeamMember = { slug: string; initials: string; role: string; name: string; description: string; photo: string | null };
+type TeamMember = { slug: string; initials: string; role: string; name: string; description: string; photo: string | null; phone?: string; email?: string };
 
 // ─── Valeurs ──────────────────────────────────────────────────────────────────
 
@@ -204,7 +205,23 @@ export default async function AProposPage() {
                     {member.role}
                   </p>
                   <h3 className="font-bold text-amc-text text-sm mb-3">{member.name}</h3>
-                  <p className="text-gray-500 text-xs leading-relaxed mb-4">{member.description}</p>
+                  <p className="text-gray-500 text-xs leading-relaxed mb-3">{member.description}</p>
+                  {(member.phone || member.email) && (
+                    <div className="w-full space-y-1 mb-3" onClick={(e) => e.preventDefault()}>
+                      {member.phone && (
+                        <a href={`tel:${member.phone.replace(/\s/g, "")}`} className="flex items-center gap-1.5 text-xs text-gray-600 hover:text-amc-yellow-dark transition-colors">
+                          <IconPhone size={11} className="flex-shrink-0 text-amc-yellow" />
+                          {member.phone}
+                        </a>
+                      )}
+                      {member.email && (
+                        <a href={`mailto:${member.email}`} className="flex items-center gap-1.5 text-xs text-gray-600 hover:text-amc-yellow-dark transition-colors truncate">
+                          <IconMail size={11} className="flex-shrink-0 text-amc-yellow" />
+                          {member.email}
+                        </a>
+                      )}
+                    </div>
+                  )}
                   <span className="inline-flex items-center gap-1 text-xs font-semibold text-amc-yellow-dark group-hover:gap-2 transition-all mt-auto">
                     Voir le profil <IconArrowRight size={11} />
                   </span>

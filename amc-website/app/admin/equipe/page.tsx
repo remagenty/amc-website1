@@ -11,11 +11,13 @@ type Member = {
   initials: string;
   description: string;
   photo: string | null;
+  phone?: string;
+  email?: string;
   order?: number;
   visible?: boolean;
 };
 
-const EMPTY: Member = { slug: "", name: "", role: "", initials: "", description: "", photo: null, order: 0, visible: true };
+const EMPTY: Member = { slug: "", name: "", role: "", initials: "", description: "", photo: null, phone: "", email: "", order: 0, visible: true };
 
 export default function EquipePage() {
   const [team, setTeam] = useState<Member[]>([]);
@@ -211,6 +213,16 @@ export default function EquipePage() {
               <div>
                 <label className="block text-xs font-medium text-gray-700 mb-1">Description</label>
                 <textarea rows={3} value={form.description} onChange={(e) => setForm((f) => ({ ...f, description: e.target.value }))} className={`${inp} resize-none`} />
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                <div>
+                  <label className="block text-xs font-medium text-gray-700 mb-1">Téléphone</label>
+                  <input type="tel" value={form.phone ?? ""} onChange={(e) => setForm((f) => ({ ...f, phone: e.target.value }))} className={inp} placeholder="06 XX XX XX XX" />
+                </div>
+                <div>
+                  <label className="block text-xs font-medium text-gray-700 mb-1">Email</label>
+                  <input type="email" value={form.email ?? ""} onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))} className={inp} placeholder="prenom@amc2savoie.com" />
+                </div>
               </div>
               <div className="grid grid-cols-2 gap-3">
                 <div>
