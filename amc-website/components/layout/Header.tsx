@@ -173,7 +173,7 @@ export function Header() {
               />
             </Link>
 
-            <form onSubmit={handleSearch} className="flex-1 max-w-[580px]">
+            <form onSubmit={handleSearch} className="flex-1">
               <div
                 className={`relative flex items-center rounded-lg transition-all duration-200 ${
                   searchFocused ? "ring-2 ring-amc-yellow" : ""
@@ -203,7 +203,7 @@ export function Header() {
               </Link>
               <Link
                 href="/connexion"
-                className="flex flex-col items-center gap-0.5 px-3 py-2 rounded-lg text-white hover:bg-white/15 transition-colors"
+                className="hidden flex-col items-center gap-0.5 px-3 py-2 rounded-lg text-white hover:bg-white/15 transition-colors"
               >
                 <div className="relative">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
