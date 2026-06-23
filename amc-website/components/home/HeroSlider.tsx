@@ -15,6 +15,7 @@ type HeroSlideKV = {
   ctaSecondaryLabel?: string;
   ctaSecondaryHref?: string;
   image?: string;
+  video?: string;
   badge?: string;
 };
 
@@ -72,9 +73,9 @@ export function HeroSlider({ slides }: { slides?: HeroSlideKV[] }) {
           <div className={`absolute inset-0 bg-gradient-to-br ${BG_COLORS[i % BG_COLORS.length]}`} />
 
           {/* Vidéo de fond */}
-          {"video" in s && (s as { video?: string }).video && (
+          {s.video && (
             <video
-              src={(s as { video?: string }).video}
+              src={s.video}
               autoPlay
               muted
               loop
@@ -85,7 +86,7 @@ export function HeroSlider({ slides }: { slides?: HeroSlideKV[] }) {
           )}
 
           {/* Photo de fond */}
-          {!("video" in s && (s as { video?: string }).video) && s.image && (
+          {!s.video && s.image && (
             /* eslint-disable-next-line @next/next/no-img-element */
             <img
               src={s.image}

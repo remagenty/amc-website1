@@ -16,6 +16,7 @@ export type HeroSlideKV = {
   ctaSecondaryLabel?: string;
   ctaSecondaryHref?: string;
   image?: string;
+  video?: string;
   badge?: string;
 };
 
@@ -118,6 +119,7 @@ const DEFAULT_CONTENT: SiteContent = {
       ctaHref: "/partenaires/wacker-neuson",
       ctaSecondaryLabel: "Contactez-nous",
       ctaSecondaryHref: "/contact",
+      video: "/videos/Slide-2.mp4",
       badge: "Partenaire officiel",
     },
     {
