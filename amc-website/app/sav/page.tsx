@@ -8,7 +8,6 @@ import {
   IconWrench,
   IconBadgeCheck,
   IconPhone,
-  IconMapPin,
 } from "@/components/ui/Icons";
 import { PhoneLink } from "@/components/ui/PhoneLink";
 
@@ -174,64 +173,6 @@ export default function SavPage() {
                 </div>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      {/* ── ZONE D'INTERVENTION ── */}
-      <section className="bg-white py-20">
-        <div className="container-amc">
-          <ScrollReveal from="bottom">
-            <div className="text-center mb-12">
-              <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-amc-yellow mb-3">
-                <IconMapPin size={14} /> Couverture géographique
-              </span>
-              <h2 className="text-3xl md:text-4xl font-black text-amc-text mb-3">
-                Zone d&apos;intervention SAV
-              </h2>
-              <p className="text-gray-500 max-w-lg mx-auto text-sm leading-relaxed">
-                Basés à Saint-Félix (74540), nous intervenons en atelier et sur site dans toute la région Rhône-Alpes.
-              </p>
-            </div>
-          </ScrollReveal>
-
-          <div className="max-w-3xl mx-auto">
-            <div className="bg-amc-cream rounded-2xl p-8">
-              <div className="flex items-center gap-3 p-4 bg-amc-yellow/10 rounded-xl border border-amc-yellow/30 mb-6">
-                <IconMapPin size={20} className="text-amc-yellow-dark flex-shrink-0" />
-                <div>
-                  <p className="font-bold text-amc-text">Auvergne-Rhône-Alpes</p>
-                  <p className="text-xs text-amc-text-secondary">Zone principale — atelier + interventions terrain</p>
-                </div>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  "Ain (01)",
-                  "Ardèche (07)",
-                  "Drôme (26)",
-                  "Isère (38)",
-                  "Loire (42)",
-                  "Rhône (69)",
-                  "Savoie (73)",
-                  "Haute-Savoie (74)",
-                ].map((dept) => (
-                  <span
-                    key={dept}
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white border border-gray-200 rounded-lg text-sm font-medium text-amc-text shadow-sm"
-                  >
-                    <IconMapPin size={11} className="text-amc-yellow-dark" />
-                    {dept}
-                  </span>
-                ))}
-              </div>
-              <p className="text-xs text-gray-500 mt-5 leading-relaxed">
-                Les interventions en dehors de la région Rhône-Alpes sont étudiées au cas par cas.{" "}
-                <Link href="/contact" className="text-amc-yellow-dark hover:underline font-medium">
-                  Contactez-nous
-                </Link>{" "}
-                pour un devis de déplacement.
-              </p>
-            </div>
           </div>
         </div>
       </section>
