@@ -15,9 +15,9 @@ const FOOTER_LINKS = {
   materiels: [
     { label: "Compacteurs & Rouleaux", href: "/catalogue?categorie=compacteurs" },
     { label: "Dumpers articulés", href: "/catalogue?categorie=dumpers" },
-    { label: "Pelles compactes", href: "/catalogue?categorie=pelles" },
-    { label: "Télescopiques rotatifs", href: "/catalogue?categorie=telescopiques" },
-    { label: "Outils de démolition", href: "/catalogue?categorie=demolition" },
+    { label: "Pelles compactes", href: "/catalogue?categorie=mini-pelles" },
+    { label: "Télescopiques rotatifs", href: "/catalogue?categorie=telehandlers-rotatifs" },
+    { label: "Outils de démolition", href: "/catalogue?categorie=brise-roches" },
     { label: "Matériel neuf", href: "/catalogue?etat=neuf" },
     { label: "Matériel occasion", href: "/catalogue?etat=occasion" },
   ],
