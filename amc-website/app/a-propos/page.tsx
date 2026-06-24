@@ -207,7 +207,7 @@ export default async function AProposPage() {
                   <h3 className="font-bold text-amc-text text-sm mb-3">{member.name}</h3>
                   <p className="text-gray-500 text-xs leading-relaxed mb-3">{member.description}</p>
                   {(member.phone || member.email) && (
-                    <div className="w-full space-y-1 mb-3" onClick={(e) => e.preventDefault()}>
+                    <div className="w-full space-y-1 mb-3">
                       {member.phone && (
                         <a href={`tel:${member.phone.replace(/\s/g, "")}`} className="flex items-center gap-1.5 text-xs text-gray-600 hover:text-amc-yellow-dark transition-colors">
                           <IconPhone size={11} className="flex-shrink-0 text-amc-yellow" />
