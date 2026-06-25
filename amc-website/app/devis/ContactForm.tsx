@@ -50,6 +50,12 @@ export function ContactForm() {
   const commercialName = COMMERCIAL_NAMES[commercialParam];
   const brandName = BRAND_NAMES[marqueParam];
 
+  const SAV_PIECE_TYPES = ["pieces-detachees", "maintenance"];
+  const isSavPieceContext = SAV_PIECE_TYPES.includes(defaultType);
+  const visibleTypes = isSavPieceContext
+    ? REQUEST_TYPES.filter((t) => SAV_PIECE_TYPES.includes(t.value))
+    : REQUEST_TYPES;
+
   const [form, setForm] = useState({
     ...INITIAL_FORM,
     type: defaultType,
@@ -77,9 +83,32 @@ export function ContactForm() {
     if (Object.keys(errs).length > 0) { setErrors(errs); return; }
     setErrors({});
     setLoading(true);
-    await new Promise((r) => setTimeout(r, 1200));
-    setLoading(false);
-    setStatus("success");
+    try {
+      const res = await fetch("/api/devis", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          type: form.type,
+          firstName: form.firstName,
+          lastName: form.lastName,
+          company: form.company || undefined,
+          email: form.email,
+          phone: form.phone || undefined,
+          materiel: form.materiel || undefined,
+          message: form.message,
+          commercial: form.commercial || undefined,
+          photoNames: photos.map((p) => p.name),
+        }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error ?? "Erreur inconnue");
+      setStatus("success");
+    } catch (err) {
+      console.error(err);
+      setStatus("error");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleChange = (key: string, value: string | boolean) => {
@@ -118,7 +147,7 @@ export function ContactForm() {
           onChange={(e) => handleChange("type", e.target.value)}
           className="select-base"
         >
-          {REQUEST_TYPES.map((t) => (
+          {visibleTypes.map((t) => (
             <option key={t.value} value={t.value}>{t.label}</option>
           ))}
         </select>

@@ -61,6 +61,7 @@ const BLOCKS = [
       "Commande directe auprès des constructeurs",
       "Garantie constructeur sur toutes les pièces",
     ],
+    cta: { label: "Commander des pièces", href: "/devis?type=pieces-detachees" },
     image: "/images/Slide-1.jpg",
     imageAlt: "Pièces détachées d'origine constructeur AMC",
   },
@@ -74,6 +75,7 @@ const BLOCKS = [
       "Rapports d'intervention détaillés après chaque passage",
       "Priorité d'accès à l'atelier pour les contrats",
     ],
+    cta: { label: "Maintenance & Pièces", href: "/devis?type=maintenance" },
     image: "/images/Magni-catalogue.avif",
     imageAlt: "Maintenance préventive engins de chantier AMC",
   },
@@ -139,7 +141,7 @@ export default function SavPage() {
                       {block.title}
                     </h2>
                     <p className="text-gray-600 leading-relaxed mb-7">{block.text}</p>
-                    <ul className="space-y-3">
+                    <ul className="space-y-3 mb-7">
                       {block.points.map((point) => (
                         <li key={point} className="flex items-start gap-3 text-sm text-gray-700">
                           <span className="mt-0.5 w-5 h-5 rounded-full bg-amc-yellow flex-shrink-0 flex items-center justify-center">
@@ -149,6 +151,11 @@ export default function SavPage() {
                         </li>
                       ))}
                     </ul>
+                    {"cta" in block && block.cta && (
+                      <Link href={block.cta.href} className="btn-primary self-start">
+                        {block.cta.label} <IconArrowRight size={15} />
+                      </Link>
+                    )}
                   </ScrollReveal>
 
                   {/* Image */}
