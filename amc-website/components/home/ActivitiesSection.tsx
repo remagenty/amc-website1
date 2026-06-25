@@ -13,11 +13,8 @@ const ACTIVITIES = [
     cta: "Voir le catalogue",
     href: "/gammes?etat=neuf",
     highlight: true,
-    image: "/images/photo-machines-wacker.jpg",
+    image: "/images/Magni-catalogue.avif",
     imageAlt: "Matériel neuf WACKER NEUSON — AMC",
-    imageFit: "object-contain",
-    imagePosition: "object-[center_50%]",
-    containerBg: "bg-gray-900",
   },
   {
     id: "occasion",
@@ -69,12 +66,12 @@ export function ActivitiesSection() {
               }`}
             >
               {/* Photo */}
-              <div className={`relative h-[130px] flex-shrink-0 ${"containerBg" in activity ? activity.containerBg : ""}`}>
+              <div className="relative h-[130px] flex-shrink-0">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={activity.image}
                   alt={activity.imageAlt}
-                  className={`absolute inset-0 w-full h-full ${"imageFit" in activity ? activity.imageFit : "object-cover"} ${"imagePosition" in activity ? activity.imagePosition : "object-center"}`}
+                  className="absolute inset-0 w-full h-full object-cover object-center"
                 />
                 {activity.highlight && (
                   <div className="absolute top-0 left-0 right-0 h-1 bg-amc-yellow" />
