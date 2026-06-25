@@ -143,7 +143,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     ctaHref: "/services",
     ctaSecondaryLabel: "Prendre rendez-vous",
     ctaSecondaryHref: "/contact?type=sav",
-    image: "/images/Slide-3.jpg",
+    image: "/images/sav-sur-terrain.jpg",
     badge: "Certification SE+",
   },
 ];

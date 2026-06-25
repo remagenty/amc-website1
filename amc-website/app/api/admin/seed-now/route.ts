@@ -199,7 +199,7 @@ async function seedSiteContent(force: boolean) {
     heroSlides: [
       { id: "slide-1", title: "Votre partenaire machines neuves et occasion", subtitle: "Spécialiste de la vente de matériel de chantier en Rhône-Alpes. Compacteurs, dumpers, pelles, télescopiques et équipements de démolition.", ctaLabel: "Découvrir nos machines", ctaHref: "/gammes", ctaSecondaryLabel: "Demander un devis", ctaSecondaryHref: "/contact?type=devis", image: "/images/Slide-1.jpg" },
       { id: "slide-2", title: "Distributeur officiel WACKER NEUSON", subtitle: "Accédez à toute la gamme WACKER NEUSON : équipements compacts haute performance pour tous vos chantiers. Stock disponible, livraison Rhône-Alpes.", ctaLabel: "Voir la gamme WACKER NEUSON", ctaHref: "/partenaires/wacker-neuson", ctaSecondaryLabel: "Contactez-nous", ctaSecondaryHref: "/contact", video: "/videos/Slide-2.mp4", badge: "Partenaire officiel" },
-      { id: "slide-3", title: "Atelier certifié SE+ et techniciens qualifiés", subtitle: "Un service après-vente d'excellence avec des techniciens certifiés et un atelier équipé", ctaLabel: "Découvrir nos services", ctaHref: "/services", ctaSecondaryLabel: "Prendre rendez-vous", ctaSecondaryHref: "/contact?type=sav", image: "/images/Slide-3.jpg", badge: "Certification SE+" },
+      { id: "slide-3", title: "Atelier certifié SE+ et techniciens qualifiés", subtitle: "Un service après-vente d'excellence avec des techniciens certifiés et un atelier équipé", ctaLabel: "Découvrir nos services", ctaHref: "/services", ctaSecondaryLabel: "Prendre rendez-vous", ctaSecondaryHref: "/contact?type=sav", image: "/images/sav-sur-terrain.jpg", badge: "Certification SE+" },
     ],
     homepageStats: [
       { value: "3", label: "Marques partenaires" },
