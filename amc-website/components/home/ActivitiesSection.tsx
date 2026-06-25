@@ -13,7 +13,7 @@ const ACTIVITIES = [
     cta: "Voir le catalogue",
     href: "/gammes?etat=neuf",
     highlight: true,
-    image: "/images/Magni-catalogue.avif",
+    image: "/images/Photo machines wacker.JPG",
     imageAlt: "Matériel neuf WACKER NEUSON — AMC",
   },
   {
