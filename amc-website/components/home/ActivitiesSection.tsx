@@ -15,7 +15,7 @@ const ACTIVITIES = [
     highlight: true,
     image: "/images/photo-machines-wacker.jpg",
     imageAlt: "Matériel neuf WACKER NEUSON — AMC",
-    imagePosition: "object-[center_bottom]",
+    imagePosition: "object-[center_75%]",
   },
   {
     id: "occasion",
