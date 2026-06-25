@@ -15,7 +15,7 @@ const ACTIVITIES = [
     highlight: true,
     image: "/images/photo-machines-wacker.jpg",
     imageAlt: "Matériel neuf WACKER NEUSON — AMC",
-    imageClass: "scale-[0.8]",
+    imagePosition: "object-[center_bottom]",
   },
   {
     id: "occasion",
@@ -72,7 +72,7 @@ export function ActivitiesSection() {
                 <img
                   src={activity.image}
                   alt={activity.imageAlt}
-                  className={`absolute inset-0 w-full h-full object-cover object-center${"imageClass" in activity ? ` ${activity.imageClass}` : ""}`}
+                  className={`absolute inset-0 w-full h-full object-cover ${"imagePosition" in activity ? activity.imagePosition : "object-center"}`}
                 />
                 {activity.highlight && (
                   <div className="absolute top-0 left-0 right-0 h-1 bg-amc-yellow" />
