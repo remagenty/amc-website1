@@ -4,6 +4,7 @@ import { headers } from "next/headers";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { EventPopup } from "@/components/ui/EventPopup";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -18,14 +19,14 @@ export const metadata: Metadata = {
     default: "AMC — Alpes Matériel Compact | Vente matériels de chantier Rhône-Alpes",
   },
   description:
-    "AMC, distributeur officiel WACKER NEUSON, Magni et Promove Demolition. Vente de matériels de chantier neufs et d'occasion certifiés. Service après-vente certifié SE+ à Saint-Félix, Haute-Savoie.",
+    "AMC, distributeur officiel WACKER NEUSON, Magni et Promove Demolition. Vente de matériels de chantier neufs et d'occasion certifiés. Service après-vente certifié à Saint-Félix, Haute-Savoie.",
   keywords: [
     "vente matériel chantier Rhône-Alpes",
     "machine WACKER NEUSON Saint-Félix",
     "télescopique Magni neuf",
     "matériel démolition occasion",
     "service après-vente machine chantier",
-    "certification SE+",
+    "certification SAV",
     "compacteur neuf occasion",
     "dumper articulé",
     "pelle compacte",
@@ -40,7 +41,7 @@ export const metadata: Metadata = {
     siteName: "AMC — Alpes Matériel Compact",
     title: "AMC — Alpes Matériel Compact | Vente matériels de chantier Rhône-Alpes",
     description:
-      "Distributeur officiel WACKER NEUSON, Magni et Promove Demolition. Matériels neufs et occasion certifiés, SAV certifié SE+.",
+      "Distributeur officiel WACKER NEUSON, Magni et Promove Demolition. Matériels neufs et occasion certifiés, SAV certifié.",
   },
   twitter: {
     card: "summary_large_image",
@@ -86,7 +87,7 @@ export default async function RootLayout({
               url: "https://www.amc-savoie.fr",
               logo: "https://www.amc-savoie.fr/images/logo.png",
               description:
-                "Distributeur officiel WACKER NEUSON, Magni et Promove Demolition. Vente matériels de chantier neufs et occasion. SAV certifié SE+.",
+                "Distributeur officiel WACKER NEUSON, Magni et Promove Demolition. Vente matériels de chantier neufs et occasion. SAV certifié.",
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "ZAC D'Orsan, 330 Rue du Mont Blanc",
@@ -134,6 +135,7 @@ export default async function RootLayout({
         {!isAdmin && <Header />}
         {isAdmin ? children : <main id="main-content">{children}</main>}
         {!isAdmin && <Footer />}
+        {!isAdmin && <EventPopup />}
       </body>
     </html>
   );
