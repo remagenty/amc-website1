@@ -1,8 +1,8 @@
 import type { Product, BrandInfo, HeroSlide, Service } from "@/types";
-import { getAllWnMachines, wnMachineToProduct, getCategoryUrlSlug, getWnProductsFromData, CATEGORY_LABELS as WN_CATEGORY_LABELS } from "./wn-catalogue";
+import { getAllWnMachines, wnMachineToProduct, getCategoryUrlSlug, getWnProductsFromData, CATEGORY_LABELS as WN_CATEGORY_LABELS, CATEGORY_TO_SLUG as WN_CATEGORY_TO_SLUG } from "./wn-catalogue";
 import type { WnMachine } from "./wn-catalogue";
-import { getMagniProducts, getMagniCategories, getMagniProductsFromData, MAGNI_CATEGORY_LABELS } from "./magni-catalogue";
-import { getPromoveProducts, getPromoveCategories, getPromoveProductsFromData, PROMOVE_CATEGORY_LABELS } from "./promove-catalogue";
+import { getMagniProducts, getMagniCategories, getMagniProductsFromData, MAGNI_CATEGORY_LABELS, MAGNI_CATEGORY_TO_SLUG } from "./magni-catalogue";
+import { getPromoveProducts, getPromoveCategories, getPromoveProductsFromData, PROMOVE_CATEGORY_LABELS, PROMOVE_CATEGORY_TO_SLUG } from "./promove-catalogue";
 import { kvGet } from "./kv";
 
 export const ALL_CATEGORY_LABELS: Record<string, string> = {
@@ -10,6 +10,26 @@ export const ALL_CATEGORY_LABELS: Record<string, string> = {
   ...MAGNI_CATEGORY_LABELS,
   ...PROMOVE_CATEGORY_LABELS,
 };
+
+// Canonical slug order derived from the insertion order of each catalogue's CATEGORY_TO_SLUG map.
+const CATEGORY_SLUG_ORDER: string[] = [
+  ...Object.values(WN_CATEGORY_TO_SLUG),
+  ...Object.values(MAGNI_CATEGORY_TO_SLUG),
+  ...Object.values(PROMOVE_CATEGORY_TO_SLUG),
+];
+
+function sortByCanonicalOrder<T extends {id: string}>(items: T[]): T[] {
+  return [...items].sort(
+    (a, b) => {
+      const ai = CATEGORY_SLUG_ORDER.indexOf(a.id);
+      const bi = CATEGORY_SLUG_ORDER.indexOf(b.id);
+      if (ai === -1 && bi === -1) return 0;
+      if (ai === -1) return 1;
+      if (bi === -1) return -1;
+      return ai - bi;
+    }
+  );
+}
 
 let _cachedMachines: Product[] | null = null;
 
@@ -31,9 +51,9 @@ export function getCatalogueCategories(): Array<{id: string; label: string; coun
     const slug = m.categorySlug ?? "";
     if (slug) counts[slug] = (counts[slug] ?? 0) + 1;
   }
-  return Object.entries(counts)
-    .map(([id, count]) => ({ id, label: ALL_CATEGORY_LABELS[id] ?? id, count }))
-    .sort((a, b) => a.label.localeCompare(b.label, "fr"));
+  return sortByCanonicalOrder(
+    Object.entries(counts).map(([id, count]) => ({ id, label: ALL_CATEGORY_LABELS[id] ?? id, count }))
+  );
 }
 
 type Catalogue = { machines: WnMachine[] };
@@ -515,9 +535,9 @@ export function getCategoriesForBrand(brand: string): Array<{id: string; label: 
   for (const p of products) {
     if (p.categorySlug) counts[p.categorySlug] = (counts[p.categorySlug] ?? 0) + 1;
   }
-  return Object.entries(counts)
-    .map(([id, count]) => ({ id, label: ALL_CATEGORY_LABELS[id] ?? id, count }))
-    .sort((a, b) => a.label.localeCompare(b.label, "fr"));
+  return sortByCanonicalOrder(
+    Object.entries(counts).map(([id, count]) => ({ id, label: ALL_CATEGORY_LABELS[id] ?? id, count }))
+  );
 }
 
 export function getProductsByCategory(category: string): Product[] {
