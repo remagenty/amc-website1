@@ -46,14 +46,14 @@ export interface WnMachine {
 
 export const CATEGORY_TO_SLUG: Record<string, string> = {
   "Mini-pelle": "mini-pelles",
-  "Dumper": "dumpers",
-  "Chargeuse": "chargeuses",
-  "Compacteur": "compacteurs",
   "Plaque vibrante": "plaques-vibrantes",
-  "Pilonneuse": "pilonneuses",
-  "Marteau piqueur": "marteaux-piqueurs",
-  "Outillage": "outillage",
+  "Dumper": "dumpers",
   "Télescopique": "telescopiques",
+  "Compacteur": "compacteurs",
+  "Pilonneuse": "pilonneuses",
+  "Chargeuse": "chargeuses",
+  "Outillage": "outillage",
+  "Marteau piqueur": "marteaux-piqueurs",
 };
 
 export const SLUG_TO_CATEGORY: Record<string, string> = Object.fromEntries(
@@ -62,14 +62,14 @@ export const SLUG_TO_CATEGORY: Record<string, string> = Object.fromEntries(
 
 export const CATEGORY_LABELS: Record<string, string> = {
   "mini-pelles": "Mini-pelles",
-  "dumpers": "Dumpers articulés",
-  "chargeuses": "Chargeuses compactes",
-  "compacteurs": "Compacteurs tandem",
   "plaques-vibrantes": "Plaques vibrantes",
-  "pilonneuses": "Pilonneuses",
-  "marteaux-piqueurs": "Marteaux piqueurs",
-  "outillage": "Outillage",
+  "dumpers": "Dumpers articulés",
   "telescopiques": "Télescopiques",
+  "compacteurs": "Compacteurs tandem",
+  "pilonneuses": "Pilonneuses",
+  "chargeuses": "Chargeuses compactes",
+  "outillage": "Outillage",
+  "marteaux-piqueurs": "Vibration",
 };
 
 // ── Spec label mapping ────────────────────────────────────────────────────────
