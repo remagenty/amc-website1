@@ -19,7 +19,6 @@ import {
   IconChevronDown,
   IconX,
 } from "@/components/ui/Icons";
-import { SEBadge } from "@/components/ui/SEBadge";
 
 // Computed once at module level — 55 machines, no re-import cost
 const ALL_MACHINES = getAllWnMachines();
@@ -93,7 +92,6 @@ function MachineCard({ machine }: { machine: WnMachine }) {
           }`}>
             {machine.etat === "neuf" ? "Neuf" : "Occasion"}
           </span>
-          {machine.services.sav_certifie_se_plus && <SEBadge size="sm" />}
         </div>
         {!isAvailable && (
           <div className="absolute top-3 right-3">

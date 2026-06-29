@@ -1,5 +1,4 @@
 import { WHY_CHOOSE_ITEMS } from "@/lib/data";
-import { SEBadge } from "@/components/ui/SEBadge";
 import {
   IconStar,
   IconBadgeCheck,
@@ -73,8 +72,6 @@ export function WhyChooseSection({ stats }: { stats?: { value: string; label: st
               />
 
               <div className="relative">
-                <SEBadge size="lg" className="mb-6" />
-
                 <h3 className="text-2xl font-bold mb-2">
                   Certification SAV
                 </h3>

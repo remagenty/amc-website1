@@ -16,7 +16,7 @@ type Service = {
 const SLUG_LABELS: Record<string, string> = {
   financement: "Financement",
   maintenance: "SAV & Maintenance",
-  "certification-se-plus": "Certification SE+",
+  "certification-se-plus": "Certification SAV",
 };
 
 const SLUG_ORDER = ["financement", "maintenance", "certification-se-plus"];

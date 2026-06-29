@@ -88,7 +88,7 @@ const DEFAULT_CONTENT: SiteContent = {
   },
   ticker: {
     items: [
-      { text: "Certification SE+" },
+      { text: "Certification SAV" },
       { text: "Livraison Rhône-Alpes" },
       { text: "Garantie constructeur" },
       { text: "Financement disponible" },
@@ -124,14 +124,14 @@ const DEFAULT_CONTENT: SiteContent = {
     },
     {
       id: "slide-3",
-      title: "Atelier certifié SE+ et techniciens qualifiés",
+      title: "Atelier certifié et techniciens qualifiés",
       subtitle: "Un service après-vente d'excellence avec des techniciens certifiés et un atelier équipé",
       ctaLabel: "Découvrir nos services",
       ctaHref: "/services",
       ctaSecondaryLabel: "Prendre rendez-vous",
       ctaSecondaryHref: "/contact?type=sav",
       image: "/images/sav-sur-terrain.jpg",
-      badge: "Certification SE+",
+      badge: "Certification SAV",
     },
   ],
   homepageStats: [
@@ -148,7 +148,7 @@ const DEFAULT_CONTENT: SiteContent = {
   },
   seo: {
     homeTitle: "AMC — Vente matériels de chantier Rhône-Alpes | WACKER NEUSON, Magni, Promove",
-    homeDescription: "AMC, votre spécialiste de la vente de matériels de chantier neufs et d'occasion en Rhône-Alpes. Distributeur officiel WACKER NEUSON, Magni, Promove Demolition. SAV certifié SE+ à Saint-Félix.",
+    homeDescription: "AMC, votre spécialiste de la vente de matériels de chantier neufs et d'occasion en Rhône-Alpes. Distributeur officiel WACKER NEUSON, Magni, Promove Demolition. SAV certifié à Saint-Félix.",
     keywords: "matériel chantier, WACKER NEUSON, Magni, Promove, Rhône-Alpes, SAV certifié, mini-pelle, dumper, compacteur",
   },
   copyright: `© ${new Date().getFullYear()} AMC — Alpes Matériel Compact. Tous droits réservés.`,

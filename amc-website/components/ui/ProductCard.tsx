@@ -5,7 +5,6 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import type { Product } from "@/types";
 import { formatPrice } from "@/lib/data";
-import { SEBadge } from "./SEBadge";
 import { IconArrowRight, IconZap } from "./Icons";
 
 interface ProductCardProps {
@@ -57,7 +56,6 @@ export function ProductCard({ product, className = "" }: ProductCardProps) {
           ) : (
             <span className="badge-occasion">Occasion</span>
           )}
-          {product.hasSECertification && <SEBadge size="sm" />}
         </div>
         <div className="absolute top-3 right-3">
           <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${BRAND_COLORS[product.brand]}`}>

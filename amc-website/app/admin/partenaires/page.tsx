@@ -23,7 +23,7 @@ const DEFAULTS: Record<string, PartnerForm> = {
     description: "Leader mondial des équipements compacts de construction. AMC est distributeur officiel WACKER NEUSON pour la région Rhône-Alpes, proposant l'ensemble de la gamme : compacteurs, dumpers, pelles, plaques vibrantes et bien plus.",
     logo: "/images/logo-wacker.png", heroImage: "/images/photo-wacker-catalogue.webp",
     website: "https://www.wackerneuson.com",
-    stats: [{ value: "42+", label: "Références disponibles" }, { value: "15+", label: "Années de partenariat" }, { value: "SE+", label: "SAV certifié" }],
+    stats: [{ value: "42+", label: "Références disponibles" }, { value: "15+", label: "Années de partenariat" }, { value: "SAV", label: "Certification SAV" }],
   },
   magni: {
     slug: "magni", name: "Magni",
@@ -31,7 +31,7 @@ const DEFAULTS: Record<string, PartnerForm> = {
     description: "Magni est le spécialiste des chariots télescopiques rotatifs haute performance. Des machines robustes et précises pour la manutention et la construction.",
     logo: "/images/logo-magni.png", heroImage: "/images/Magni-catalogue.webp",
     website: "https://www.magni.it",
-    stats: [{ value: "23+", label: "Références disponibles" }, { value: "10+", label: "Années de partenariat" }, { value: "SE+", label: "SAV certifié" }],
+    stats: [{ value: "23+", label: "Références disponibles" }, { value: "10+", label: "Années de partenariat" }, { value: "SAV", label: "Certification SAV" }],
   },
   "promove-demolition": {
     slug: "promove-demolition", name: "Promove Demolition",
@@ -39,7 +39,7 @@ const DEFAULTS: Record<string, PartnerForm> = {
     description: "Promove Demolition est le spécialiste des équipements de démolition et attachements pour chantiers BTP.",
     logo: "/images/logo-promove.jpg", heroImage: "/images/catalogue-promove-demolition.webp",
     website: "https://www.promove-demolition.fr",
-    stats: [{ value: "22+", label: "Références disponibles" }, { value: "8+", label: "Années de partenariat" }, { value: "SE+", label: "SAV certifié" }],
+    stats: [{ value: "22+", label: "Références disponibles" }, { value: "8+", label: "Années de partenariat" }, { value: "SAV", label: "Certification SAV" }],
   },
 };
 

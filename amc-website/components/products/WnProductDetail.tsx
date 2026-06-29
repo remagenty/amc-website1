@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import type { WnMachine } from "@/lib/wn-catalogue";
 import { getCategoryUrlSlug } from "@/lib/wn-catalogue";
-import { SEBadge } from "@/components/ui/SEBadge";
 import {
   IconChevronDown,
   IconShare,
@@ -226,7 +225,6 @@ export function WnProductDetail({ machine, similar, categorySlug, categoryLabel 
                   }`}>
                     {machine.etat === "neuf" ? "Neuf" : "Occasion"}
                   </span>
-                  {machine.services.sav_certifie_se_plus && <SEBadge size="sm" />}
                 </div>
                 {/* Disponibilité */}
                 <div className="absolute bottom-4 right-4">
@@ -510,12 +508,11 @@ export function WnProductDetail({ machine, similar, categorySlug, categoryLabel 
                     <IconWrench size={20} className="text-amc-yellow" />
                   </div>
                   <div>
-                    <p className="font-semibold text-amc-text text-sm flex items-center gap-2">
+                    <p className="font-semibold text-amc-text text-sm">
                       Service après-vente
-                      <SEBadge size="sm" />
                     </p>
                     <p className="text-xs text-amc-text-secondary mt-0.5">
-                      SAV certifié SE+ — pièces d'origine constructeur
+                      SAV certifié — pièces d'origine constructeur
                     </p>
                   </div>
                 </div>

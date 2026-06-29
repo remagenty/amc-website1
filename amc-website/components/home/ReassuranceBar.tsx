@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/Icons";
 
 const ITEMS = [
-  { icon: <IconBadgeCheck size={18} />, text: "Certification SE+" },
+  { icon: <IconBadgeCheck size={18} />, text: "Certification SAV" },
   { icon: <IconTruck size={18} />,      text: "Livraison Rhône-Alpes" },
   { icon: <IconShield size={18} />,     text: "Garantie constructeur" },
   { icon: <IconCreditCard size={18} />, text: "Financement disponible" },

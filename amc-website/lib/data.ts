@@ -136,7 +136,7 @@ export const HERO_SLIDES: HeroSlide[] = [
   },
   {
     id: "slide-3",
-    title: "Atelier certifié SE+ et techniciens qualifiés",
+    title: "Atelier certifié et techniciens qualifiés",
     subtitle:
       "Un service après-vente d'excellence avec des techniciens certifiés et un atelier équipé",
     ctaLabel: "Découvrir nos services",
@@ -144,7 +144,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     ctaSecondaryLabel: "Prendre rendez-vous",
     ctaSecondaryHref: "/contact?type=sav",
     image: "/images/sav-sur-terrain.jpg",
-    badge: "Certification SE+",
+    badge: "Certification SAV",
   },
 ];
 
@@ -339,7 +339,7 @@ export const PRODUCTS: Product[] = [
     images: ["/images/products/placeholder-wn.svg"],
     shortDescription: "Rouleau tandem 1,2 tonne — occasion révisée",
     description:
-      "Rouleau tandem WACKER NEUSON RD12 d'occasion en excellent état. Inspecté et révisé dans nos ateliers certifiés SE+.",
+      "Rouleau tandem WACKER NEUSON RD12 d'occasion en excellent état. Inspecté et révisé dans nos ateliers certifiés.",
     specs: [
       { label: "Masse de travail", value: "1 200", unit: "kg" },
       { label: "Largeur de travail", value: "780", unit: "mm" },
@@ -405,11 +405,11 @@ export const SERVICES: Service[] = [
     id: "vente-occasion",
     title: "Vente Occasion Certifiée",
     description:
-      "Des machines d'occasion soigneusement sélectionnées, inspectées et révisées dans nos ateliers certifiés SE+. Qualité garantie.",
+      "Des machines d'occasion soigneusement sélectionnées, inspectées et révisées dans nos ateliers certifiés. Qualité garantie.",
     icon: "shield",
     features: [
       "Inspection technique complète",
-      "Révision certifiée SE+",
+      "Révision certifiée",
       "Garantie 6 mois",
       "Dossier technique fourni",
     ],
@@ -418,10 +418,10 @@ export const SERVICES: Service[] = [
     id: "sav",
     title: "Service Après-Vente",
     description:
-      "Atelier certifié SE+ pour la maintenance, réparation et fourniture de pièces d'origine. Intervention rapide sur site ou en atelier.",
+      "Atelier certifié pour la maintenance, réparation et fourniture de pièces d'origine. Intervention rapide sur site ou en atelier.",
     icon: "wrench",
     features: [
-      "Certification SE+",
+      "Certification SAV",
       "Pièces d'origine constructeur",
       "Techniciens certifiés",
       "Intervention sur site",
@@ -454,9 +454,9 @@ export const CATEGORIES = [
 export const REASSURANCE_ITEMS = [
   {
     icon: "badge-check",
-    title: "Certification SE+",
+    title: "Certification SAV",
     subtitle: "SAV certifié",
-    description: "Nos techniciens sont certifiés SE+ pour vous garantir une maintenance d'excellence",
+    description: "Nos techniciens sont certifiés pour vous garantir une maintenance d'excellence",
   },
   {
     icon: "truck",
@@ -487,9 +487,9 @@ export const WHY_CHOOSE_ITEMS = [
   },
   {
     icon: "badge-check",
-    title: "SAV certifié SE+",
+    title: "SAV certifié",
     description:
-      "Notre atelier certifié SE+ assure la maintenance et réparation de vos équipements avec des pièces d'origine.",
+      "Notre atelier certifié assure la maintenance et réparation de vos équipements avec des pièces d'origine.",
   },
   {
     icon: "archive",

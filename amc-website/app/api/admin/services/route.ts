@@ -35,14 +35,14 @@ const DEFAULT_SERVICES: Record<string, Service> = {
     slug: "maintenance",
     title: "SAV & Maintenance",
     description:
-      "Notre atelier certifié SE+ prend en charge la maintenance préventive, les réparations et la fourniture de pièces d'origine pour tous vos équipements de chantier.",
+      "Notre atelier certifié prend en charge la maintenance préventive, les réparations et la fourniture de pièces d'origine pour tous vos équipements de chantier.",
     heroImage: null,
     keyPoints: [
       "Maintenance préventive selon les préconisations constructeur",
       "Réparations toutes marques",
       "Pièces détachées d'origine WACKER NEUSON, Magni, Promove",
       "Intervention rapide — atelier et déplacement sur site",
-      "Techniciens certifiés usine SE+",
+      "Techniciens certifiés usine",
       "Contrats d'entretien annuels disponibles",
     ],
     ctaText: "Prendre rendez-vous SAV",
@@ -50,12 +50,12 @@ const DEFAULT_SERVICES: Record<string, Service> = {
   },
   "certification-se-plus": {
     slug: "certification-se-plus",
-    title: "Certification SE+",
+    title: "Certification SAV",
     description:
-      "L'atelier AMC est certifié SE+ par WACKER NEUSON — la certification d'excellence du service après-vente pour les équipements compacts de construction.",
+      "L'atelier AMC est certifié par WACKER NEUSON — la certification d'excellence du service après-vente pour les équipements compacts de construction.",
     heroImage: null,
     keyPoints: [
-      "Seul atelier certifié SE+ de la région Rhône-Alpes",
+      "Seul atelier certifié de la région Rhône-Alpes",
       "Techniciens formés directement par les constructeurs",
       "Accès aux outils de diagnostic officiels",
       "Garanties constructeur maintenues",

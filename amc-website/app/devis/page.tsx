@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import { ContactForm } from "./ContactForm";
 import { IconMapPin, IconPhone, IconMail, IconClock } from "@/components/ui/Icons";
-import { SEBadge } from "@/components/ui/SEBadge";
 import { MapInteractive } from "@/components/ui/MapInteractive";
 import { PhoneLink } from "@/components/ui/PhoneLink";
 import { kvGet } from "@/lib/kv";
@@ -100,9 +99,8 @@ export default async function DevisPage() {
               </div>
 
               <div className="mt-5 pt-5 border-t border-gray-100">
-                <SEBadge size="sm" />
                 <p className="text-xs text-amc-text-secondary mt-2">
-                  Service après-vente certifié SE+
+                  Service après-vente certifié
                 </p>
               </div>
             </div>

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { SEBadge } from "@/components/ui/SEBadge";
 import { PhoneLink } from "@/components/ui/PhoneLink";
 import {
   IconMapPin,
@@ -33,7 +32,7 @@ const FOOTER_LINKS = {
     { label: "WACKER NEUSON", href: "/partenaires/wacker-neuson" },
     { label: "Magni", href: "/partenaires/magni" },
     { label: "Promove Demolition", href: "/partenaires/promove-demolition" },
-    { label: "Certification SE+", href: "/services/certification-se-plus" },
+    { label: "Certification SAV", href: "/services/certification-se-plus" },
     { label: "Contact", href: "/contact" },
   ],
 };
@@ -82,9 +81,6 @@ export function Footer() {
               </div>
             </address>
 
-            <div className="mt-5">
-              <SEBadge size="sm" />
-            </div>
           </div>
 
           {/* Col 2: Matériels */}

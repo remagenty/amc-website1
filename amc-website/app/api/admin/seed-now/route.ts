@@ -184,7 +184,7 @@ async function seedSiteContent(force: boolean) {
     },
     ticker: {
       items: [
-        { text: "Certification SE+" },
+        { text: "Certification SAV" },
         { text: "Livraison Rhône-Alpes" },
         { text: "Garantie constructeur" },
         { text: "Financement disponible" },
@@ -199,7 +199,7 @@ async function seedSiteContent(force: boolean) {
     heroSlides: [
       { id: "slide-1", title: "Votre partenaire machines neuves et occasion", subtitle: "Spécialiste de la vente de matériel de chantier en Rhône-Alpes. Compacteurs, dumpers, pelles, télescopiques et équipements de démolition.", ctaLabel: "Découvrir nos machines", ctaHref: "/gammes", ctaSecondaryLabel: "Demander un devis", ctaSecondaryHref: "/contact?type=devis", image: "/images/Slide-1.jpg" },
       { id: "slide-2", title: "Distributeur officiel WACKER NEUSON", subtitle: "Accédez à toute la gamme WACKER NEUSON : équipements compacts haute performance pour tous vos chantiers. Stock disponible, livraison Rhône-Alpes.", ctaLabel: "Voir la gamme WACKER NEUSON", ctaHref: "/partenaires/wacker-neuson", ctaSecondaryLabel: "Contactez-nous", ctaSecondaryHref: "/contact", video: "/videos/Slide-2.mp4", badge: "Partenaire officiel" },
-      { id: "slide-3", title: "Atelier certifié SE+ et techniciens qualifiés", subtitle: "Un service après-vente d'excellence avec des techniciens certifiés et un atelier équipé", ctaLabel: "Découvrir nos services", ctaHref: "/services", ctaSecondaryLabel: "Prendre rendez-vous", ctaSecondaryHref: "/contact?type=sav", image: "/images/sav-sur-terrain.jpg", badge: "Certification SE+" },
+      { id: "slide-3", title: "Atelier certifié et techniciens qualifiés", subtitle: "Un service après-vente d'excellence avec des techniciens certifiés et un atelier équipé", ctaLabel: "Découvrir nos services", ctaHref: "/services", ctaSecondaryLabel: "Prendre rendez-vous", ctaSecondaryHref: "/contact?type=sav", image: "/images/sav-sur-terrain.jpg", badge: "Certification SAV" },
     ],
     homepageStats: [
       { value: "3", label: "Marques partenaires" },
@@ -208,7 +208,7 @@ async function seedSiteContent(force: boolean) {
       { value: "100%", label: "Pièces d'origine" },
     ],
     social: { facebookUrl: "https://www.facebook.com/amcalpesmc", instagramUrl: "https://www.instagram.com/amc_savoie", facebookEnabled: true, instagramEnabled: true },
-    seo: { homeTitle: "AMC — Vente matériels de chantier Rhône-Alpes | WACKER NEUSON, Magni, Promove", homeDescription: "AMC, votre spécialiste de la vente de matériels de chantier neufs et d'occasion en Rhône-Alpes. Distributeur officiel WACKER NEUSON, Magni, Promove Demolition. SAV certifié SE+ à Saint-Félix.", keywords: "matériel chantier, WACKER NEUSON, Magni, Promove, Rhône-Alpes, SAV certifié" },
+    seo: { homeTitle: "AMC — Vente matériels de chantier Rhône-Alpes | WACKER NEUSON, Magni, Promove", homeDescription: "AMC, votre spécialiste de la vente de matériels de chantier neufs et d'occasion en Rhône-Alpes. Distributeur officiel WACKER NEUSON, Magni, Promove Demolition. SAV certifié à Saint-Félix.", keywords: "matériel chantier, WACKER NEUSON, Magni, Promove, Rhône-Alpes, SAV certifié" },
     copyright: `© ${new Date().getFullYear()} AMC — Alpes Matériel Compact. Tous droits réservés.`,
   };
   await kvSet("site-content", siteContent);
@@ -220,8 +220,8 @@ async function seedServices(force: boolean) {
   if (!force && existing) return ["services: skipped (already exists)"];
   const services = {
     financement: { slug: "financement", title: "Solutions de financement", description: "AMC vous propose des solutions de financement adaptées à votre activité et à vos besoins pour l'acquisition de matériels de chantier neufs ou d'occasion.", heroImage: null, keyPoints: ["Crédit-bail : gardez votre trésorerie pour votre activité", "LOA (Location avec Option d'Achat) : flexibilité maximale", "Financement classique avec nos partenaires bancaires", "Réponse sous 48h après dépôt du dossier", "Accompagnement personnalisé par nos conseillers"], ctaText: "Demander un devis financement", ctaHref: "/devis?type=financement" },
-    maintenance: { slug: "maintenance", title: "SAV & Maintenance", description: "Notre atelier certifié SE+ prend en charge la maintenance préventive, les réparations et la fourniture de pièces d'origine pour tous vos équipements de chantier.", heroImage: null, keyPoints: ["Maintenance préventive selon les préconisations constructeur", "Réparations toutes marques", "Pièces détachées d'origine WACKER NEUSON, Magni, Promove", "Intervention rapide — atelier et déplacement sur site", "Techniciens certifiés usine SE+", "Contrats d'entretien annuels disponibles"], ctaText: "Prendre rendez-vous SAV", ctaHref: "/contact?type=sav" },
-    "certification-se-plus": { slug: "certification-se-plus", title: "Certification SE+", description: "L'atelier AMC est certifié SE+ par WACKER NEUSON — la certification d'excellence du service après-vente pour les équipements compacts de construction.", heroImage: null, keyPoints: ["Seul atelier certifié SE+ de la région Rhône-Alpes", "Techniciens formés directement par les constructeurs", "Accès aux outils de diagnostic officiels", "Garanties constructeur maintenues", "Stock de pièces d'origine certifiées", "Formation opérateurs disponible"], ctaText: "En savoir plus", ctaHref: "/contact" },
+    maintenance: { slug: "maintenance", title: "SAV & Maintenance", description: "Notre atelier certifié prend en charge la maintenance préventive, les réparations et la fourniture de pièces d'origine pour tous vos équipements de chantier.", heroImage: null, keyPoints: ["Maintenance préventive selon les préconisations constructeur", "Réparations toutes marques", "Pièces détachées d'origine WACKER NEUSON, Magni, Promove", "Intervention rapide — atelier et déplacement sur site", "Techniciens certifiés usine", "Contrats d'entretien annuels disponibles"], ctaText: "Prendre rendez-vous SAV", ctaHref: "/contact?type=sav" },
+    "certification-se-plus": { slug: "certification-se-plus", title: "Certification SAV", description: "L'atelier AMC est certifié par WACKER NEUSON — la certification d'excellence du service après-vente pour les équipements compacts de construction.", heroImage: null, keyPoints: ["Seul atelier certifié de la région Rhône-Alpes", "Techniciens formés directement par les constructeurs", "Accès aux outils de diagnostic officiels", "Garanties constructeur maintenues", "Stock de pièces d'origine certifiées", "Formation opérateurs disponible"], ctaText: "En savoir plus", ctaHref: "/contact" },
   };
   await kvSet("services", services);
   return ["services: seeded 3 services"];

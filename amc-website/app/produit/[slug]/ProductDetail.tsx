@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Product } from "@/types";
 import { formatPrice } from "@/lib/data";
-import { SEBadge } from "@/components/ui/SEBadge";
 import { ProductCard } from "@/components/ui/ProductCard";
 import {
   IconChevronDown,
@@ -125,7 +124,6 @@ export function ProductDetail({
                   ) : (
                     <span className="badge-occasion">Occasion certifiée</span>
                   )}
-                  {product.hasSECertification && <SEBadge size="sm" />}
                 </div>
               </div>
 
@@ -372,10 +370,8 @@ export function ProductDetail({
                 {
                   icon: <IconWrench size={20} className="text-amc-yellow" />,
                   title: "Service après-vente",
-                  desc: product.hasSECertification
-                    ? "SAV certifié SE+ — pièces d'origine"
-                    : "SAV disponible sur demande",
-                  badge: product.hasSECertification ? <SEBadge size="sm" className="ml-2" /> : null,
+                  desc: "SAV certifié — pièces d'origine",
+                  badge: null,
                 },
                 {
                   icon: <IconCog size={20} className="text-amc-yellow" />,

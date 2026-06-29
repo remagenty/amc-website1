@@ -12,11 +12,11 @@ import {
 import { PhoneLink } from "@/components/ui/PhoneLink";
 
 export const metadata: Metadata = {
-  title: { absolute: "Service Après-Vente certifié SE+ | AMC" },
-  description: "Atelier certifié SE+, techniciens formés constructeurs, pièces d'origine. SAV matériel chantier à Saint-Félix, Haute-Savoie.",
+  title: { absolute: "Service Après-Vente certifié | AMC" },
+  description: "Atelier certifié, techniciens formés constructeurs, pièces d'origine. SAV matériel chantier à Saint-Félix, Haute-Savoie.",
   openGraph: {
-    title: "Service Après-Vente certifié SE+ | AMC",
-    description: "Atelier certifié SE+, techniciens formés constructeurs, pièces d'origine. SAV matériel chantier à Saint-Félix, Haute-Savoie.",
+    title: "Service Après-Vente certifié | AMC",
+    description: "Atelier certifié, techniciens formés constructeurs, pièces d'origine. SAV matériel chantier à Saint-Félix, Haute-Savoie.",
     images: [{ url: "/images/Slide-3.jpg" }],
     type: "website",
     url: `https://www.amc-savoie.fr/sav`,
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 const BLOCKS = [
   {
     icon: IconBadgeCheck,
-    tag: "Certification SE+",
+    tag: "Certification SAV",
     title: "Techniciens confirmés",
     text: "Nos techniciens cumulent des années d'expérience terrain sur toutes les gammes que nous distribuons. Formés directement par WACKER NEUSON, Magni et Promove Demolition, ils maîtrisent chaque machine de fond en comble et interviennent avec les bons outils, au bon moment.",
     points: [
@@ -36,7 +36,7 @@ const BLOCKS = [
       "Interventions en atelier et déplacements sur site",
     ],
     image: "/images/Slide-3.jpg",
-    imageAlt: "Technicien AMC certifié SE+ en atelier",
+    imageAlt: "Technicien AMC certifié en atelier",
   },
   {
     icon: IconWrench,
@@ -95,7 +95,7 @@ export default function SavPage() {
         <div className="absolute inset-0" style={{ backgroundColor: "rgba(0,0,0,0.58)" }} />
         <div className="relative z-10 container-amc py-24 flex flex-col items-start justify-end h-full min-h-[420px]">
           <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amc-yellow text-amc-text text-xs font-bold mb-5 uppercase tracking-wider">
-            <IconShield size={14} /> Certification SE+
+            <IconShield size={14} /> Certification SAV
           </span>
           <h1 className="text-4xl md:text-5xl font-black text-white leading-tight mb-4">
             Service Après-Vente

@@ -187,7 +187,7 @@ export default function CGVPage() {
 
           <Section title="Article 7 — Service Après-Vente (SAV)">
             <p>
-              AMC dispose d&apos;un atelier SAV <strong>certifié SE+</strong> situé à{" "}
+              AMC dispose d&apos;un atelier SAV <strong>certifié</strong> situé à{" "}
               <strong>Saint-Félix (74540)</strong>, habilité à réaliser l&apos;ensemble des
               interventions de maintenance, de réparation et de révision sur les matériels
               des marques distribuées.
@@ -195,7 +195,7 @@ export default function CGVPage() {
             <p>
               Les interventions SAV sont réalisées par des techniciens formés et certifiés
               directement par les constructeurs, avec des <strong>pièces détachées d&apos;origine</strong>.
-              La certification SE+ garantit des interventions conformes aux préconisations
+              La certification SAV garantit des interventions conformes aux préconisations
               constructeur, preservant ainsi les garanties applicables.
             </p>
             <p>

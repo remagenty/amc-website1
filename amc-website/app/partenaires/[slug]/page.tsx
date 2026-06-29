@@ -103,7 +103,7 @@ export default async function PartnerPage({ params }: Props) {
   const DEFAULT_STATS = [
     { value: `${brand.productCount}+`, label: "Références disponibles" },
     { value: "15+", label: "Années de partenariat" },
-    { value: "SE+", label: "SAV certifié" },
+    { value: "SAV", label: "Certification SAV" },
   ];
   const stats = ov.stats ?? DEFAULT_STATS;
 

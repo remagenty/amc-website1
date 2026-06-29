@@ -109,7 +109,7 @@ export default function ConnexionPage() {
                 "Suivez vos devis et commandes",
                 "Historique de vos machines",
                 "Demandes SAV simplifiées",
-                "Documentation certifiée SE+",
+                "Documentation certifiée",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
                   <span

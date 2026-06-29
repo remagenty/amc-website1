@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { IconArrowRight, IconStar, IconShield, IconWrench } from "@/components/ui/Icons";
-import { SEBadge } from "@/components/ui/SEBadge";
 
 const ACTIVITIES = [
   {
@@ -21,8 +20,8 @@ const ACTIVITIES = [
     icon: <IconShield size={28} className="text-amc-yellow" />,
     title: "Vente Occasion Certifiée",
     description:
-      "Des machines d'occasion soigneusement inspectées, révisées et garanties par nos techniciens certifiés SE+. Le rapport qualité-prix optimal pour vos chantiers.",
-    badges: ["Inspecté", "Garanti", "Certifié SE+"],
+      "Des machines d'occasion soigneusement inspectées, révisées et garanties par nos techniciens certifiés. Le rapport qualité-prix optimal pour vos chantiers.",
+    badges: ["Inspecté", "Garanti", "Certifié"],
     cta: "Voir les occasions",
     href: "/catalogue?etat=occasion",
     image: "/images/Slide-1.jpg",
@@ -33,13 +32,13 @@ const ACTIVITIES = [
     icon: <IconWrench size={28} className="text-amc-yellow" />,
     title: "Service Après-Vente",
     description:
-      "Notre atelier certifié SE+ prend en charge la maintenance préventive, les réparations et la fourniture de pièces d'origine pour tous vos équipements de chantier.",
+      "Notre atelier certifié prend en charge la maintenance préventive, les réparations et la fourniture de pièces d'origine pour tous vos équipements de chantier.",
     se: true,
     badges: ["Pièces d'origine", "Intervention rapide", "Contrats entretien"],
     cta: "Nos services",
     href: "/sav",
     image: "/images/Slide-3.jpg",
-    imageAlt: "Atelier SAV certifié SE+ — AMC",
+    imageAlt: "Atelier SAV certifié — AMC",
   },
 ];
 
@@ -86,7 +85,6 @@ export function ActivitiesSection() {
 
                 <h3 className="text-xl font-bold text-amc-text mb-3">
                   {activity.title}
-                  {activity.se && <SEBadge size="sm" className="ml-2 align-middle" />}
                 </h3>
 
                 <p className="text-amc-text-secondary text-sm leading-relaxed flex-1 mb-5">

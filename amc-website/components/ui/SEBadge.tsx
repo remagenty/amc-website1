@@ -15,7 +15,7 @@ export function SEBadge({ size = "md", className = "" }: SEBadgeProps) {
   return (
     <span
       className={`inline-flex items-center font-bold rounded-full bg-amc-yellow text-amc-text ${sizes[size]} ${className}`}
-      title="Service Après-Vente certifié SE+"
+      title="Service Après-Vente certifié"
     >
       <IconBadgeCheck size={size === "sm" ? 12 : size === "md" ? 14 : 18} />
       SE+

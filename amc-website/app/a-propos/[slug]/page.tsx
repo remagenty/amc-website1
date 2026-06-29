@@ -61,7 +61,7 @@ const MEMBERS = {
     phone: "06 32 64 71 63",
     email: "sav2@amc2savoie.com",
     experience: "18 ans d'expérience SAV",
-    specialites: ["Certification SE+", "WACKER NEUSON", "Magni", "Diagnostic"],
+    specialites: ["Certification SAV", "WACKER NEUSON", "Magni", "Diagnostic"],
     roleTitle: "Expert technique et réactivité",
     roleText:
       "Je coordonne toutes les interventions de notre service après-vente : diagnostics, réparations, entretiens préventifs et gestion des pièces détachées. Formé directement par WACKER NEUSON et Magni, j'assure des interventions rapides et conformes aux standards constructeurs.",
@@ -74,8 +74,8 @@ const MEMBERS = {
       },
       {
         icon: IconBadgeCheck,
-        titre: "Certification SE+",
-        texte: "Technicien certifié SE+ par WACKER NEUSON et Magni — garant de la qualité et de la conformité de chaque intervention.",
+        titre: "Certification SAV",
+        texte: "Technicien certifié par WACKER NEUSON et Magni — garant de la qualité et de la conformité de chaque intervention.",
       },
       {
         icon: IconZap,

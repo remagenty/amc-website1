@@ -190,14 +190,14 @@ export function CataloguePage({
               {singleCategoryLabel
                 ? singleCategoryLabel
                 : filters.status === "occasion"
-                ? "Matériels d'occasion certifiés SE+"
+                ? "Matériels d'occasion certifiés"
                 : filters.status === "neuf"
                 ? "Matériels neufs de chantier"
                 : "Catalogue matériels de chantier"}
             </h1>
             <p className="text-amc-text-secondary mt-2 text-sm">
               {filters.status === "occasion"
-                ? "Toutes nos machines d'occasion sont inspectées et certifiées par nos techniciens SE+"
+                ? "Toutes nos machines d'occasion sont inspectées et certifiées par nos techniciens"
                 : filters.status === "neuf"
                 ? `Gamme neuve disponible — WACKER NEUSON, Magni, Promove Demolition`
                 : `${ALL_MACHINES.length} machines — WACKER NEUSON, Magni, Promove Demolition`}

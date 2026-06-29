@@ -30,14 +30,14 @@ const DEFAULT_SERVICE_MAINTENANCE: Service = {
   slug: "maintenance",
   title: "SAV & Maintenance",
   description:
-    "Notre atelier certifié SE+ prend en charge la maintenance préventive, les réparations et la fourniture de pièces d'origine pour tous vos équipements de chantier.",
+    "Notre atelier certifié prend en charge la maintenance préventive, les réparations et la fourniture de pièces d'origine pour tous vos équipements de chantier.",
   heroImage: null,
   keyPoints: [
     "Maintenance préventive selon les préconisations constructeur",
     "Réparations toutes marques",
     "Pièces détachées d'origine WACKER NEUSON, Magni, Promove",
     "Intervention rapide — atelier et déplacement sur site",
-    "Techniciens certifiés usine SE+",
+    "Techniciens certifiés usine",
     "Contrats d'entretien annuels disponibles",
   ],
   ctaText: "Prendre rendez-vous SAV",
@@ -46,10 +46,10 @@ const DEFAULT_SERVICE_MAINTENANCE: Service = {
 
 export const metadata: Metadata = {
   title: { absolute: "Maintenance préventive matériels chantier | AMC" },
-  description: "Contrats de maintenance préventive pour vos engins de chantier. Techniciens SE+ certifiés, planning personnalisé, rapport après intervention.",
+  description: "Contrats de maintenance préventive pour vos engins de chantier. Techniciens certifiés, planning personnalisé, rapport après intervention.",
   openGraph: {
     title: "Maintenance préventive | AMC",
-    description: "Contrats de maintenance préventive pour vos engins de chantier. Techniciens SE+ certifiés, planning personnalisé, rapport après intervention.",
+    description: "Contrats de maintenance préventive pour vos engins de chantier. Techniciens certifiés, planning personnalisé, rapport après intervention.",
     images: [{ url: "/images/Slide-3.jpg" }],
     type: "website",
     url: `https://www.amc-savoie.fr/services/maintenance`,
@@ -199,7 +199,7 @@ export default async function MaintenancePage() {
               {
                 icon: IconBadgeCheck,
                 titre: "Garantie préservée",
-                texte: "Un entretien réalisé selon les préconisations constructeur par un atelier agréé SE+ préserve intégralement la garantie constructeur.",
+                texte: "Un entretien réalisé selon les préconisations constructeur par un atelier agréé préserve intégralement la garantie constructeur.",
               },
             ].map((item) => {
               const Icon = item.icon;
@@ -232,7 +232,7 @@ export default async function MaintenancePage() {
               </h2>
               <p className="text-gray-500 max-w-lg mx-auto text-sm leading-relaxed">
                 Chaque intervention de maintenance préventive comprend les opérations suivantes,
-                réalisées par nos techniciens certifiés SE+.
+                réalisées par nos techniciens certifiés.
               </p>
             </div>
           </ScrollReveal>

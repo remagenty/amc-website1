@@ -51,7 +51,7 @@ const DEFAULT: SiteContent = {
   ] },
   ticker: {
     items: [
-      { text: "Certification SE+" },
+      { text: "Certification SAV" },
       { text: "Livraison Rhône-Alpes" },
       { text: "Garantie constructeur" },
       { text: "Financement disponible" },
@@ -86,14 +86,14 @@ const DEFAULT: SiteContent = {
     },
     {
       id: "slide-3",
-      title: "Atelier certifié SE+ et techniciens qualifiés",
+      title: "Atelier certifié et techniciens qualifiés",
       subtitle: "Un service après-vente d'excellence avec des techniciens certifiés.",
       ctaLabel: "Découvrir nos services",
       ctaHref: "/services",
       ctaSecondaryLabel: "Prendre rendez-vous",
       ctaSecondaryHref: "/contact?type=sav",
       image: "/images/Slide-3.jpg",
-      badge: "Certification SE+",
+      badge: "Certification SAV",
     },
   ],
   homepageStats: [

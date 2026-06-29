@@ -14,11 +14,11 @@ import {
 import { PhoneLink } from "@/components/ui/PhoneLink";
 
 export const metadata: Metadata = {
-  title: { absolute: "Certification SE+ WACKER NEUSON | AMC Saint-Félix" },
-  description: "AMC atelier certifié SE+ par WACKER NEUSON. Techniciens formés en usine, pièces d'origine uniquement, interventions conformes aux standards constructeurs.",
+  title: { absolute: "Certification SAV WACKER NEUSON | AMC Saint-Félix" },
+  description: "AMC atelier certifié par WACKER NEUSON. Techniciens formés en usine, pièces d'origine uniquement, interventions conformes aux standards constructeurs.",
   openGraph: {
-    title: "Certification SE+ | AMC",
-    description: "AMC atelier certifié SE+ par WACKER NEUSON. Techniciens formés en usine, pièces d'origine uniquement, interventions conformes aux standards constructeurs.",
+    title: "Certification SAV | AMC",
+    description: "AMC atelier certifié par WACKER NEUSON. Techniciens formés en usine, pièces d'origine uniquement, interventions conformes aux standards constructeurs.",
     images: [{ url: "/images/Slide-3.jpg" }],
     type: "website",
     url: `https://www.amc-savoie.fr/services/certification-se-plus`,
@@ -45,7 +45,7 @@ const GARANTIES = [
   {
     icon: IconShield,
     titre: "Garantie constructeur préservée",
-    texte: "Un entretien ou une réparation réalisée par un atelier certifié SE+ préserve intégralement la garantie constructeur sur le matériel.",
+    texte: "Un entretien ou une réparation réalisée par un atelier certifié préserve intégralement la garantie constructeur sur le matériel.",
   },
   {
     icon: IconZap,
@@ -64,7 +64,7 @@ const MARQUES = [
     logo: "/images/logo-wacker.png",
     name: "WACKER NEUSON",
     alt: "Logo WACKER NEUSON",
-    desc: "Certification SE+ pour l'ensemble de la gamme : mini-pelles, dumpers, compacteurs, chargeuses compactes et vibrateurs.",
+    desc: "Certification SAV pour l'ensemble de la gamme : mini-pelles, dumpers, compacteurs, chargeuses compactes et vibrateurs.",
     color: "border-red-200 bg-red-50/30",
   },
   {
@@ -91,7 +91,7 @@ export default function CertificationSePlusPage() {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/images/Slide-3.jpg"
-          alt="Atelier certifié SE+ AMC"
+          alt="Atelier certifié AMC"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0" style={{ backgroundColor: "rgba(0,0,0,0.60)" }} />
@@ -101,13 +101,13 @@ export default function CertificationSePlusPage() {
             <span>/</span>
             <Link href="/sav" className="hover:text-white transition-colors">SAV</Link>
             <span>/</span>
-            <span className="text-white/80">Certification SE+</span>
+            <span className="text-white/80">Certification SAV</span>
           </nav>
           <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amc-yellow text-amc-text text-xs font-bold mb-5 uppercase tracking-wider">
             <IconBadgeCheck size={14} /> Programme qualité
           </span>
           <h1 className="text-4xl md:text-5xl font-black text-white leading-tight mb-4">
-            Certification SE+
+            Certification SAV
           </h1>
           <p className="text-white/75 text-lg max-w-2xl mb-8">
             La référence qualité du SAV compact. Le programme SE+ de WACKER NEUSON
@@ -134,7 +134,7 @@ export default function CertificationSePlusPage() {
                 <IconBadgeCheck size={14} /> Définition
               </span>
               <h2 className="text-3xl font-black text-amc-text mb-5">
-                Qu&apos;est-ce que la certification SE+ ?
+                Qu&apos;est-ce que la certification SAV ?
               </h2>
               <p className="text-gray-600 leading-relaxed mb-5">
                 SE+ est le programme qualité de <strong>WACKER NEUSON</strong> dédié aux distributeurs SAV.
@@ -161,7 +161,7 @@ export default function CertificationSePlusPage() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/images/photo-wacker-catalogue.jpg"
-                  alt="Technicien AMC certifié SE+"
+                  alt="Technicien AMC certifié"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute bottom-0 right-0 w-1 h-1/2 bg-amc-yellow" />
@@ -183,7 +183,7 @@ export default function CertificationSePlusPage() {
                 Ce que ça garantit pour le client
               </h2>
               <p className="text-gray-500 max-w-lg mx-auto text-sm leading-relaxed">
-                Confier votre engin à un atelier certifié SE+ offre des garanties concrètes
+                Confier votre engin à un atelier certifié offre des garanties concrètes
                 sur la qualité et la fiabilité de chaque intervention.
               </p>
             </div>
@@ -232,7 +232,7 @@ export default function CertificationSePlusPage() {
                 Notre engagement SE+ chez AMC
               </h2>
               <p className="text-white/75 leading-relaxed mb-6">
-                Depuis l&apos;obtention de notre certification SE+, nous maintenons des standards
+                Depuis l&apos;obtention de notre certification SAV, nous maintenons des standards
                 stricts dans notre atelier de Saint-Félix. Chaque technicien est formé directement
                 en usine par les équipes constructeurs.
               </p>
@@ -288,7 +288,7 @@ export default function CertificationSePlusPage() {
                   <p className="text-gray-500 text-xs leading-relaxed mb-4">{brand.desc}</p>
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amc-yellow/20 text-amc-text text-xs font-semibold">
                     <IconCheck size={11} />
-                    Certifié SE+
+                    Certifié
                   </span>
                 </div>
               </ScrollReveal>

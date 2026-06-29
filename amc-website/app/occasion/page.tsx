@@ -2,15 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getOccasionProducts } from "@/lib/data";
 import { ProductCard } from "@/components/ui/ProductCard";
-import { SEBadge } from "@/components/ui/SEBadge";
 import { IconShield, IconCheck, IconArrowRight } from "@/components/ui/Icons";
 
 export const metadata: Metadata = {
   title: { absolute: "Matériels d'occasion certifiés | AMC Rhône-Alpes" },
-  description: "Machines d'occasion inspectées, révisées et garanties par nos techniciens SE+. Compacteurs, pelles, dumpers, télescopiques disponibles immédiatement.",
+  description: "Machines d'occasion inspectées, révisées et garanties par nos techniciens. Compacteurs, pelles, dumpers, télescopiques disponibles immédiatement.",
   openGraph: {
     title: "Matériels d'occasion certifiés | AMC Rhône-Alpes",
-    description: "Machines d'occasion inspectées, révisées et garanties par nos techniciens SE+. Compacteurs, pelles, dumpers, télescopiques disponibles immédiatement.",
+    description: "Machines d'occasion inspectées, révisées et garanties par nos techniciens. Compacteurs, pelles, dumpers, télescopiques disponibles immédiatement.",
     images: [{ url: "/images/Slide-1.jpg" }],
     type: "website",
     url: `https://www.amc-savoie.fr/occasion`,
@@ -20,7 +19,7 @@ export const metadata: Metadata = {
 
 const GUARANTEES = [
   { icon: <IconCheck size={18} className="text-amc-yellow" />, text: "Inspection technique complète (50 points de contrôle)" },
-  { icon: <IconCheck size={18} className="text-amc-yellow" />, text: "Révision générale certifiée SE+" },
+  { icon: <IconCheck size={18} className="text-amc-yellow" />, text: "Révision générale certifiée" },
   { icon: <IconCheck size={18} className="text-amc-yellow" />, text: "Garantie 6 mois pièces et main d'œuvre" },
   { icon: <IconCheck size={18} className="text-amc-yellow" />, text: "Historique d'entretien fourni" },
   { icon: <IconCheck size={18} className="text-amc-yellow" />, text: "Pièces d'origine remplacées si nécessaire" },
@@ -36,15 +35,12 @@ export default function OccasionPage() {
       <section className="bg-amc-gray text-white py-16 md:py-20">
         <div className="container-amc">
           <div className="max-w-3xl">
-            <div className="mb-4">
-              <SEBadge size="md" />
-            </div>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-black leading-tight">
               Matériel d'occasion certifié
             </h1>
             <p className="mt-5 text-lg text-white/75 leading-relaxed max-w-2xl">
               Chaque machine d'occasion AMC est rigoureusement inspectée, révisée et certifiée par nos
-              techniciens agréés SE+. Qualité garantie au meilleur prix pour vos chantiers.
+              techniciens agréés. Qualité garantie au meilleur prix pour vos chantiers.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link href="/devis" className="btn-primary rounded-lg">
@@ -78,10 +74,9 @@ export default function OccasionPage() {
             </div>
             <div className="flex-shrink-0">
               <div className="bg-amc-yellow rounded-2xl p-8 text-center max-w-xs">
-                <SEBadge size="lg" className="mb-4" />
-                <h3 className="text-2xl font-black text-amc-text mt-3">Certifié SE+</h3>
+                <h3 className="text-2xl font-black text-amc-text">Certifié</h3>
                 <p className="text-sm text-amc-text/70 mt-2">
-                  Tous nos matériels d'occasion passent par notre atelier certifié SE+ avant livraison.
+                  Tous nos matériels d'occasion passent par notre atelier certifié avant livraison.
                 </p>
               </div>
             </div>

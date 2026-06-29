@@ -40,7 +40,7 @@ const HISTOIRE_BLOCKS = [
     points: [
       "Distributeur officiel WACKER NEUSON, Magni et Promove Demolition",
       "Gamme complète de matériels neufs et d'occasion",
-      "Service après-vente de proximité certifié SE+",
+      "Service après-vente de proximité certifié",
     ],
     extra:
       "Notre engagement : vous accompagner de la sélection du matériel jusqu'à sa maintenance, avec des conseillers qui connaissent vos métiers.",
@@ -65,17 +65,17 @@ const HISTOIRE_BLOCKS = [
   {
     tag: "SAV certifié",
     icon: IconBadgeCheck,
-    title: "Un atelier certifié SE+ à votre service",
+    title: "Un atelier certifié à votre service",
     text: "Notre atelier de Saint-Félix est équipé de bancs de diagnostic homologués et d'outillage constructeur. Nos techniciens certifiés interviennent sur tous les matériels distribués.",
     points: [
-      "Certification SE+ pour WACKER NEUSON, Magni et Promove",
+      "Certification SAV pour WACKER NEUSON, Magni et Promove",
       "Techniciens formés et habilités par les constructeurs",
       "Intervention rapide sur site ou en atelier",
     ],
     extra:
       "Contrats d'entretien préventif, réparations, pièces d'origine : nous gérons tout le cycle de vie de vos engins.",
     image: "/images/Slide-3.jpg",
-    imageAlt: "Atelier SAV certifié SE+ AMC à Saint-Félix",
+    imageAlt: "Atelier SAV certifié AMC à Saint-Félix",
   },
 ];
 
@@ -275,7 +275,7 @@ export default async function AProposPage() {
                 {[
                   { label: "Distributeur officiel WACKER NEUSON", color: "bg-red-900/40 border-red-400/40 text-red-100" },
                   { label: "Distributeur officiel Magni", color: "bg-blue-900/40 border-blue-400/40 text-blue-100" },
-                  { label: "Atelier certifié SE+", color: "bg-green-900/40 border-green-400/40 text-green-100" },
+                  { label: "Atelier certifié", color: "bg-green-900/40 border-green-400/40 text-green-100" },
                 ].map((cert) => (
                   <div
                     key={cert.label}

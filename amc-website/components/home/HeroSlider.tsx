@@ -4,7 +4,6 @@ import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { HERO_SLIDES } from "@/lib/data";
 import { IconArrowRight, IconChevronLeft, IconChevronRight } from "@/components/ui/Icons";
-import { SEBadge } from "@/components/ui/SEBadge";
 
 type HeroSlideKV = {
   id: string;
@@ -105,15 +104,11 @@ export function HeroSlider({ slides }: { slides?: HeroSlideKV[] }) {
       <div className="relative z-20 h-full flex items-center">
         <div className="container-amc w-full">
           <div className="max-w-2xl animate-slide-up" key={current}>
-            {slide.badge && (
+            {slide.badge && slide.badge !== "Certification SAV" && (
               <div className="mb-4">
-                {slide.badge === "Certification SE+" ? (
-                  <SEBadge size="md" />
-                ) : (
-                  <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-bold bg-amc-yellow text-amc-text">
-                    {slide.badge}
-                  </span>
-                )}
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-bold bg-amc-yellow text-amc-text">
+                  {slide.badge}
+                </span>
               </div>
             )}
 

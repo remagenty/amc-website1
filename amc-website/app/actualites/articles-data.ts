@@ -142,7 +142,7 @@ export const ARTICLES: Article[] = [
     content: [
       {
         type: "intro",
-        text: "Un engin de chantier bien entretenu, c'est une machine qui dure deux fois plus longtemps, qui tombe en panne deux fois moins souvent et qui conserve une valeur de revente significativement supérieure. Pourtant, la maintenance préventive reste le parent pauvre des entreprises de BTP, souvent sacrifiée sur l'autel de la rentabilité immédiate. Voici les 5 conseils de nos techniciens certifiés SE+ pour changer la donne.",
+        text: "Un engin de chantier bien entretenu, c'est une machine qui dure deux fois plus longtemps, qui tombe en panne deux fois moins souvent et qui conserve une valeur de revente significativement supérieure. Pourtant, la maintenance préventive reste le parent pauvre des entreprises de BTP, souvent sacrifiée sur l'autel de la rentabilité immédiate. Voici les 5 conseils de nos techniciens certifiés pour changer la donne.",
       },
       {
         type: "h2",
@@ -197,15 +197,15 @@ export const ARTICLES: Article[] = [
       },
       {
         type: "h2",
-        text: "Conseil 5 — Confiez vos révisions à un atelier certifié SE+",
+        text: "Conseil 5 — Confiez vos révisions à un atelier certifié",
       },
       {
         type: "p",
-        text: "Toutes les révisions ne se valent pas. Un atelier certifié SE+ dispose des outils de diagnostic spécifiques au constructeur, emploie des techniciens formés et certifiés, et utilise des procédures validées par le fabricant. Faire réaliser les grandes révisions par un atelier certifié, c'est garantir que le travail est fait dans les règles de l'art et que votre garantie constructeur est préservée.",
+        text: "Toutes les révisions ne se valent pas. Un atelier certifié dispose des outils de diagnostic spécifiques au constructeur, emploie des techniciens formés et certifiés, et utilise des procédures validées par le fabricant. Faire réaliser les grandes révisions par un atelier certifié, c'est garantir que le travail est fait dans les règles de l'art et que votre garantie constructeur est préservée.",
       },
       {
         type: "callout",
-        title: "L'atelier AMC : certifié SE+ par WACKER NEUSON",
+        title: "L'atelier AMC : certifié par WACKER NEUSON",
         body: "Notre atelier de Saint-Félix dispose de 3 techniciens certifiés WACKER NEUSON, Magni et Promove Demolition. Stock de pièces détachées d'origine disponible immédiatement. Diagnostic électronique constructeur. Délai d'intervention sous 48h ouvrées.",
       },
       {
@@ -230,30 +230,30 @@ export const ARTICLES: Article[] = [
   {
     slug: "amc-certification-se-plus-atelier-saint-felix",
     image: "/images/Slide-3.jpg",
-    title: "AMC obtient la certification SE+ pour son atelier de Saint-Félix",
+    title: "AMC obtient la certification SAV pour son atelier de Saint-Félix",
     category: "Actualités",
     summary:
-      "Notre atelier est désormais certifié SE+ par WACKER NEUSON, garantissant un service après-vente d'excellence avec des techniciens qualifiés et un stock de pièces détachées optimal.",
+      "Notre atelier est désormais certifié par WACKER NEUSON, garantissant un service après-vente d'excellence avec des techniciens qualifiés et un stock de pièces détachées optimal.",
     date: "3 mai 2026",
     readTime: "4 min",
     gradientFrom: "#fbbf24",
     gradientTo: "#d97706",
     icon: "🏆",
-    metaTitle: "AMC certifié SE+ — Atelier SAV Saint-Félix Haute-Savoie",
+    metaTitle: "AMC certifié — Atelier SAV Saint-Félix Haute-Savoie",
     metaDescription:
-      "L'atelier AMC de Saint-Félix obtient la certification SE+ WACKER NEUSON. Découvrez ce que ce label d'excellence garantit pour vos interventions SAV.",
+      "L'atelier AMC de Saint-Félix obtient la certification SAV WACKER NEUSON. Découvrez ce que ce label d'excellence garantit pour vos interventions SAV.",
     content: [
       {
         type: "intro",
-        text: "C'est avec fierté qu'AMC Alpes Matériel Compact annonce l'obtention de la certification SE+ (Service Excellence Plus) par WACKER NEUSON pour son atelier de Saint-Félix, en Haute-Savoie. Cette accréditation, la plus exigeante du secteur des équipements compacts de chantier, récompense plusieurs années d'investissement dans la formation de nos techniciens et dans nos équipements de diagnostic.",
+        text: "C'est avec fierté qu'AMC Alpes Matériel Compact annonce l'obtention de la certification SAV (Service Excellence Plus) par WACKER NEUSON pour son atelier de Saint-Félix, en Haute-Savoie. Cette accréditation, la plus exigeante du secteur des équipements compacts de chantier, récompense plusieurs années d'investissement dans la formation de nos techniciens et dans nos équipements de diagnostic.",
       },
       {
         type: "h2",
-        text: "La certification SE+ : qu'est-ce que c'est ?",
+        text: "La certification SAV : qu'est-ce que c'est ?",
       },
       {
         type: "p",
-        text: "Créée par WACKER NEUSON, la certification SE+ (Service Excellence Plus) est le label de référence pour les ateliers SAV spécialisés dans les équipements compacts de chantier. Elle distingue les centres de service qui répondent aux critères les plus stricts en matière de compétences techniques, d'équipements et de réactivité. En France, seule une poignée de distributeurs disposent de ce label sur l'ensemble du territoire.",
+        text: "Créée par WACKER NEUSON, la certification SAV (Service Excellence Plus) est le label de référence pour les ateliers SAV spécialisés dans les équipements compacts de chantier. Elle distingue les centres de service qui répondent aux critères les plus stricts en matière de compétences techniques, d'équipements et de réactivité. En France, seule une poignée de distributeurs disposent de ce label sur l'ensemble du territoire.",
       },
       {
         type: "ul",
@@ -272,7 +272,7 @@ export const ARTICLES: Article[] = [
       },
       {
         type: "p",
-        text: "L'audit d'obtention de la certification SE+ dure deux jours. Les auditeurs WACKER NEUSON contrôlent chaque aspect du service : conformité des équipements de diagnostic, maîtrise technique des intervenants sur des cas réels, organisation du stock de pièces, systèmes de traçabilité, conditions d'accueil des clients. C'est un processus rigoureux qui ne souffre aucun compromis.",
+        text: "L'audit d'obtention de la certification SAV dure deux jours. Les auditeurs WACKER NEUSON contrôlent chaque aspect du service : conformité des équipements de diagnostic, maîtrise technique des intervenants sur des cas réels, organisation du stock de pièces, systèmes de traçabilité, conditions d'accueil des clients. C'est un processus rigoureux qui ne souffre aucun compromis.",
       },
       {
         type: "h2",
@@ -295,11 +295,11 @@ export const ARTICLES: Article[] = [
       },
       {
         type: "p",
-        text: "Grâce à la certification SE+, les clients AMC bénéficient d'un niveau de service inégalé dans la région. Diagnostic électronique complet, réparations moteur et hydraulique, révisions périodiques constructeur, mise à jour des systèmes embarqués : tous les types d'interventions sont couverts. La garantie constructeur de vos machines est intégralement préservée lorsque les interventions sont réalisées dans un atelier certifié.",
+        text: "Grâce à la certification SAV, les clients AMC bénéficient d'un niveau de service inégalé dans la région. Diagnostic électronique complet, réparations moteur et hydraulique, révisions périodiques constructeur, mise à jour des systèmes embarqués : tous les types d'interventions sont couverts. La garantie constructeur de vos machines est intégralement préservée lorsque les interventions sont réalisées dans un atelier certifié.",
       },
       {
         type: "quote",
-        text: "Obtenir la certification SE+ est la consécration d'un travail d'équipe. Nos techniciens sont passionnés par leur métier, et cette reconnaissance de WACKER NEUSON valide leur niveau d'expertise. Pour nos clients, c'est la garantie d'un service réalisé exactement comme le préconise le constructeur.",
+        text: "Obtenir la certification SAV est la consécration d'un travail d'équipe. Nos techniciens sont passionnés par leur métier, et cette reconnaissance de WACKER NEUSON valide leur niveau d'expertise. Pour nos clients, c'est la garantie d'un service réalisé exactement comme le préconise le constructeur.",
         author: "Rémi Fontaine",
         role: "Responsable atelier SAV, AMC Alpes Matériel Compact",
       },
@@ -309,12 +309,12 @@ export const ARTICLES: Article[] = [
       },
       {
         type: "p",
-        text: "AMC est le distributeur exclusif de WACKER NEUSON pour la Haute-Savoie et la Savoie. Cette double accréditation — distributeur officiel et atelier certifié SE+ — garantit à nos clients une continuité de service optimale, de l'achat de la machine à la maintenance sur toute sa durée de vie. Nos équipes commerciales et techniques travaillent en synergie pour offrir le meilleur accompagnement possible aux professionnels du BTP de la région.",
+        text: "AMC est le distributeur exclusif de WACKER NEUSON pour la Haute-Savoie et la Savoie. Cette double accréditation — distributeur officiel et atelier certifié — garantit à nos clients une continuité de service optimale, de l'achat de la machine à la maintenance sur toute sa durée de vie. Nos équipes commerciales et techniques travaillent en synergie pour offrir le meilleur accompagnement possible aux professionnels du BTP de la région.",
       },
       {
         type: "callout",
         title: "Votre machine WACKER NEUSON nécessite une intervention ?",
-        body: "Contactez directement notre atelier certifié SE+ au 04 26 78 43 90 ou via notre formulaire en ligne. Nous vous répondons sous 24h ouvrées et proposons la prise en charge ou la venue d'un technicien sur site.",
+        body: "Contactez directement notre atelier certifié au 04 26 78 43 90 ou via notre formulaire en ligne. Nous vous répondons sous 24h ouvrées et proposons la prise en charge ou la venue d'un technicien sur site.",
       },
       { type: "cta", label: "Découvrir nos services SAV", href: "/services" },
     ],
@@ -431,7 +431,7 @@ export const ARTICLES: Article[] = [
       {
         type: "callout",
         title: "AMC livre et intervient dans toute la Savoie et Haute-Savoie",
-        body: "Notre atelier certifié SE+ dispose d'un véhicule d'intervention mobile pour les dépannages sur site, même en altitude. Nous livrons les machines à louer ou à vendre sur vos chantiers, accompagnées d'une mise en main par nos techniciens.",
+        body: "Notre atelier certifié dispose d'un véhicule d'intervention mobile pour les dépannages sur site, même en altitude. Nous livrons les machines à louer ou à vendre sur vos chantiers, accompagnées d'une mise en main par nos techniciens.",
       },
       {
         type: "h2",
@@ -499,7 +499,7 @@ export const ARTICLES: Article[] = [
       {
         type: "callout",
         title: "Disponible chez AMC — SAV certifié WACKER NEUSON",
-        body: "En tant que distributeur officiel et atelier certifié SE+ WACKER NEUSON, AMC propose l'EZ26e à la vente et au SAV en Rhône-Alpes. Nos techniciens sont formés en usine sur les modèles électriques.",
+        body: "En tant que distributeur officiel et atelier certifié WACKER NEUSON, AMC propose l'EZ26e à la vente et au SAV en Rhône-Alpes. Nos techniciens sont formés en usine sur les modèles électriques.",
       },
       { type: "cta", label: "Demander une démonstration", href: "/devis" },
     ],
@@ -772,11 +772,11 @@ export const ARTICLES: Article[] = [
     icon: "❄️",
     metaTitle: "Entretien hivernal matériel chantier — 5 vérifications clés",
     metaDescription:
-      "Préparez vos engins de chantier pour l'hiver : huile moteur, filtres, flexibles, batterie, antigel. Guide pratique AMC — atelier certifié SE+.",
+      "Préparez vos engins de chantier pour l'hiver : huile moteur, filtres, flexibles, batterie, antigel. Guide pratique AMC — atelier certifié.",
     content: [
       {
         type: "intro",
-        text: "L'hiver est la période la plus critique pour les engins de chantier. Les températures négatives, la condensation, l'humidité et les cycles gel-dégel accélèrent l'usure de composants qui semblaient en parfait état en été. Une machine mal préparée pour l'hiver, c'est un démarrage difficile le matin, une panne en plein chantier, ou une casse coûteuse au printemps. Voici les 5 vérifications que nos techniciens certifiés SE+ réalisent systématiquement avant la saison froide.",
+        text: "L'hiver est la période la plus critique pour les engins de chantier. Les températures négatives, la condensation, l'humidité et les cycles gel-dégel accélèrent l'usure de composants qui semblaient en parfait état en été. Une machine mal préparée pour l'hiver, c'est un démarrage difficile le matin, une panne en plein chantier, ou une casse coûteuse au printemps. Voici les 5 vérifications que nos techniciens certifiés réalisent systématiquement avant la saison froide.",
       },
       { type: "h2", text: "1. Niveaux d'huile moteur et hydraulique : les grades hivernaux" },
       {
