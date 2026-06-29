@@ -65,20 +65,6 @@ const BLOCKS = [
     image: "/images/Slide-1.jpg",
     imageAlt: "Pièces détachées d'origine constructeur AMC",
   },
-  {
-    icon: IconCheck,
-    tag: "Contrats d'entretien",
-    title: "Maintenance préventive sur mesure",
-    text: "Nos contrats de maintenance préventive vous permettent de planifier les entretiens de vos engins conformément aux préconisations constructeur. En intervenant avant la panne, nous réduisons les coûts de réparation et assurons la disponibilité de vos machines aux moments clés du chantier.",
-    points: [
-      "Planning d'entretien personnalisé par machine",
-      "Rapports d'intervention détaillés après chaque passage",
-      "Priorité d'accès à l'atelier pour les contrats",
-    ],
-    cta: { label: "Maintenance & Pièces", href: "/devis?type=maintenance" },
-    image: "/images/Magni-catalogue.avif",
-    imageAlt: "Maintenance préventive engins de chantier AMC",
-  },
 ];
 
 export default function SavPage() {
