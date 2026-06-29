@@ -3,8 +3,6 @@
 import { useEffect, useState } from "react";
 import { IconX, IconMapPin, IconExternalLink } from "@/components/ui/Icons";
 
-const STORAGE_KEY = "amc-popup-btp-montagne-2026";
-
 // Oct 18 at midnight local time — popup disappears on the 18th
 const EXPIRY = new Date(2026, 9, 18);
 
@@ -20,14 +18,12 @@ export function EventPopup() {
 
   useEffect(() => {
     if (new Date() >= EXPIRY) return;
-    if (localStorage.getItem(STORAGE_KEY)) return;
     const timer = setTimeout(() => setVisible(true), 7_000);
     return () => clearTimeout(timer);
   }, []);
 
   function close() {
     setVisible(false);
-    localStorage.setItem(STORAGE_KEY, "1");
   }
 
   if (!visible) return null;
