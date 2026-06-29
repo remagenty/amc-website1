@@ -51,7 +51,6 @@ export function WhyChooseSection({ stats }: { stats?: { value: string; label: st
                   <div>
                     <h3 className="font-bold text-amc-text text-base">
                       {item.title}
-                      {item.title.includes("SE+") && <SEBadge size="sm" className="ml-2" />}
                     </h3>
                     <p className="text-sm text-amc-text-secondary mt-1 leading-relaxed">
                       {item.description}
@@ -77,10 +76,10 @@ export function WhyChooseSection({ stats }: { stats?: { value: string; label: st
                 <SEBadge size="lg" className="mb-6" />
 
                 <h3 className="text-2xl font-bold mb-2">
-                  Certification SE+
+                  Certification SAV
                 </h3>
                 <p className="text-white/70 text-sm leading-relaxed mb-8">
-                  Nos techniciens sont certifiés SE+ — la référence qualité pour le service
+                  Nos techniciens sont certifiés — la référence qualité pour le service
                   après-vente des équipements de chantier compacts.
                 </p>
 

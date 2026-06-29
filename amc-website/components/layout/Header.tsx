@@ -11,7 +11,6 @@ import {
   IconX,
   IconArrowRight,
 } from "@/components/ui/Icons";
-import { SEBadge } from "@/components/ui/SEBadge";
 import { BRAND_VISIBLE_COUNTS } from "@/lib/data";
 
 const TOP_BAR_ITEMS: { label: string; href?: string }[] = [
@@ -408,13 +407,13 @@ export function Header() {
                     </Link>
                   </div>
 
-                  {/* Bloc 2 — SAV certifié SE+ */}
+                  {/* Bloc 2 — SAV certifié */}
                   <div className="flex flex-col p-5 rounded-xl border border-amc-yellow/30 bg-amc-yellow/5 hover:border-amc-yellow hover:shadow-md transition-all">
                     <div className="flex items-center gap-2 mb-4">
                       <span className="text-2xl">🔧</span>
-                      <span className="text-xs font-bold bg-amc-yellow text-amc-text px-2 py-0.5 rounded">SE+</span>
+                      <span className="text-xs font-bold bg-amc-yellow text-amc-text px-2 py-0.5 rounded">SAV</span>
                     </div>
-                    <h4 className="font-bold text-amc-text text-base mb-3">SAV certifié SE+</h4>
+                    <h4 className="font-bold text-amc-text text-base mb-3">SAV certifié</h4>
                     <p className="text-sm text-amc-text-secondary flex-1">
                       Atelier agréé par les constructeurs, techniciens certifiés, pièces d&apos;origine garanties.
                     </p>
