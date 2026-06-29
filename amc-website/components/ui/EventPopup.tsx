@@ -21,7 +21,7 @@ export function EventPopup() {
   useEffect(() => {
     if (new Date() >= EXPIRY) return;
     if (localStorage.getItem(STORAGE_KEY)) return;
-    const timer = setTimeout(() => setVisible(true), 10_000);
+    const timer = setTimeout(() => setVisible(true), 7_000);
     return () => clearTimeout(timer);
   }, []);
 
