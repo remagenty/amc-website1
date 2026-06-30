@@ -50,7 +50,7 @@ export default function MachinesPage() {
   useEffect(() => { loadMachines(); }, [loadMachines]);
 
   async function toggleVisible(m: Machine) {
-    const next = m.visible === false ? true : false;
+    const next = m.visible !== true;
     const res = await fetch(`/api/admin/machines/${m.id}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
