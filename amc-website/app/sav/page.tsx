@@ -62,7 +62,7 @@ const BLOCKS = [
       "Garantie constructeur sur toutes les pièces",
     ],
     cta: { label: "Commander des pièces", href: "/devis?type=pieces-detachees" },
-    image: "/images/chantier-realiste-fusion-des-engins.jpg",
+    image: "/images/photos-machines-wacker-interieur.jpg",
     imageAlt: "Pièces détachées d'origine constructeur AMC",
   },
 ];
