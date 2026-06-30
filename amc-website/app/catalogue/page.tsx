@@ -23,11 +23,17 @@ export default async function Page({
   searchParams: { categorie?: string; marque?: string; etat?: string };
 }) {
   const ssrMachines = await getMachinesAsync();
+  const categorie = searchParams.categorie ?? "";
+  const marque = searchParams.marque ?? "";
+  const etat = searchParams.etat ?? "";
+
   return (
+    // key forces remount when URL params change so useState re-initialises correctly
     <CataloguePage
-      initialCategorie={searchParams.categorie ?? ""}
-      initialMarque={searchParams.marque ?? ""}
-      initialEtat={searchParams.etat ?? ""}
+      key={`${categorie}|${marque}|${etat}`}
+      initialCategorie={categorie}
+      initialMarque={marque}
+      initialEtat={etat}
       ssrMachines={ssrMachines}
     />
   );
