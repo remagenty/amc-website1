@@ -190,6 +190,22 @@ export async function GET(req: NextRequest) {
       dirty = true;
     }
 
+    if (stored.heroSlides?.some((s) => s.id === "slide-3" && (s.title?.includes("SE+") || s.badge?.includes("SE+")))) {
+      stored = {
+        ...stored,
+        heroSlides: stored.heroSlides!.map((s) =>
+          s.id === "slide-3"
+            ? {
+                ...s,
+                title: s.title?.replace(/SE\+\s*/g, "").trim(),
+                badge: s.badge?.includes("SE+") ? "Certification SAV" : s.badge,
+              }
+            : s
+        ),
+      };
+      dirty = true;
+    }
+
     if (dirty) await kvSet("site-content", stored);
   }
 

@@ -50,6 +50,23 @@ export default async function HomePage() {
       dirty = true;
     }
 
+    // 3. Fix slide-3: remove "SE+" from title and badge
+    if (content.heroSlides?.some((s) => s.id === "slide-3" && (s.title?.includes("SE+") || s.badge?.includes("SE+")))) {
+      content = {
+        ...content,
+        heroSlides: content.heroSlides!.map((s) =>
+          s.id === "slide-3"
+            ? {
+                ...s,
+                title: s.title?.replace(/SE\+\s*/g, "").trim(),
+                badge: s.badge?.includes("SE+") ? "Certification SAV" : s.badge,
+              }
+            : s
+        ),
+      };
+      dirty = true;
+    }
+
     if (dirty) kvSet("site-content", content); // fire-and-forget
   }
 
