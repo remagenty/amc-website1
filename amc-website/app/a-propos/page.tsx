@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import teamData from "@/lib/team.json";
-import { kvGet } from "@/lib/kv";
+import { kvGet, kvSet } from "@/lib/kv";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import {
   IconArrowRight,
@@ -124,7 +124,20 @@ function Todo({ label }: { label: string }) {
 export const dynamic = "force-dynamic";
 
 export default async function AProposPage() {
-  const kvTeam = await kvGet<TeamMember[]>("team");
+  let kvTeam = await kvGet<TeamMember[]>("team");
+
+  // Auto-migrate: add photo paths from team.json if KV members are missing them
+  if (kvTeam) {
+    const photoBySlug: Record<string, string | null> = Object.fromEntries(
+      (teamData as TeamMember[]).map((m) => [m.slug, m.photo ?? null])
+    );
+    const needsUpdate = kvTeam.some((m) => !m.photo && photoBySlug[m.slug]);
+    if (needsUpdate) {
+      kvTeam = kvTeam.map((m) => ({ ...m, photo: m.photo ?? photoBySlug[m.slug] ?? null }));
+      kvSet("team", kvTeam); // fire-and-forget: update KV for future requests
+    }
+  }
+
   const TEAM = (kvTeam ?? (teamData as TeamMember[])).filter((m) => m.slug !== undefined);
 
   return (
