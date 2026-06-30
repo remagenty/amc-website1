@@ -48,7 +48,7 @@ const BLOCKS = [
       "Outillage spécifique et instruments calibrés",
       "Espace dédié lavage et préparation des engins",
     ],
-    image: "/images/photo-wacker-catalogue.jpg",
+    image: "/images/sav-interieur-de-machine.jpg",
     imageAlt: "Atelier SAV AMC équipé à Saint-Félix",
   },
   {
