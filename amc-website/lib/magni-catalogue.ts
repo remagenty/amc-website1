@@ -15,9 +15,9 @@ export const MAGNI_SLUG_TO_CATEGORY: Record<string, string> = Object.fromEntries
 );
 
 export const MAGNI_CATEGORY_LABELS: Record<string, string> = {
-  "telehandlers-rotatifs": "Chariots télescopiques et nacelles rotatifs",
-  "telehandlers-fixes": "Chariots télescopiques et nacelles fixes",
-  "telehandlers-agricoles": "Chariots télescopiques et nacelles agricoles",
+  "telehandlers-rotatifs": "Chariot télescopique rotatif",
+  "telehandlers-fixes": "Chariot télescopique",
+  "telehandlers-agricoles": "Chariot agricole",
 };
 
 const ALL_MAGNI_MACHINES: WnMachine[] = catalogueData.machines as unknown as WnMachine[];
