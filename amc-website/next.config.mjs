@@ -10,6 +10,11 @@ const nextConfig = {
         destination: "/catalogue",
         permanent: true,
       },
+      {
+        source: "/services/certification-se-plus",
+        destination: "/services/certification-sav",
+        permanent: true,
+      },
     ];
   },
 };

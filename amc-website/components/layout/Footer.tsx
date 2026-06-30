@@ -7,6 +7,7 @@ import {
   IconClock,
   IconFacebook,
   IconInstagram,
+  IconLinkedIn,
   IconArrowRight,
 } from "@/components/ui/Icons";
 
@@ -32,7 +33,7 @@ const FOOTER_LINKS = {
     { label: "WACKER NEUSON", href: "/partenaires/wacker-neuson" },
     { label: "Magni", href: "/partenaires/magni" },
     { label: "Promove Demolition", href: "/partenaires/promove-demolition" },
-    { label: "Certification SAV", href: "/services/certification-se-plus" },
+    { label: "Certification SAV", href: "/services/certification-sav" },
     { label: "Contact", href: "/contact" },
   ],
 };
@@ -166,6 +167,15 @@ export function Footer() {
                 aria-label="Instagram AMC"
               >
                 <IconInstagram size={18} />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/isermatsecamatamc/?viewAsMember=true"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2.5 rounded-lg bg-white/10 hover:bg-amc-yellow hover:text-amc-text text-white/70 transition-all"
+                aria-label="LinkedIn AMC"
+              >
+                <IconLinkedIn size={18} />
               </a>
             </div>
 
