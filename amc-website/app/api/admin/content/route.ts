@@ -109,7 +109,7 @@ const DEFAULT_CONTENT: SiteContent = {
       ctaHref: "/gammes",
       ctaSecondaryLabel: "Demander un devis",
       ctaSecondaryHref: "/contact?type=devis",
-      image: "/images/Slide-1.jpg",
+      image: "/images/chantier-realiste-fusion-des-engins.jpg",
     },
     {
       id: "slide-2",
@@ -161,7 +161,21 @@ async function requireAuth(req: NextRequest) {
 
 export async function GET(req: NextRequest) {
   if (!(await requireAuth(req))) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-  const stored = await kvGet<SiteContent>("site-content");
+  let stored = await kvGet<SiteContent>("site-content");
+
+  // Auto-migrate: replace old slide-1 image if still present in KV
+  if (stored?.heroSlides?.some((s) => s.id === "slide-1" && s.image === "/images/Slide-1.jpg")) {
+    stored = {
+      ...stored,
+      heroSlides: stored.heroSlides!.map((s) =>
+        s.id === "slide-1" && s.image === "/images/Slide-1.jpg"
+          ? { ...s, image: "/images/chantier-realiste-fusion-des-engins.jpg" }
+          : s
+      ),
+    };
+    await kvSet("site-content", stored);
+  }
+
   const merged = stored ? {
     ...DEFAULT_CONTENT,
     ...stored,

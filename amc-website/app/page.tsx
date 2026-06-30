@@ -7,7 +7,7 @@ import { FeaturedProducts } from "@/components/home/FeaturedProducts";
 import { WhyChooseSection } from "@/components/home/WhyChooseSection";
 import { TestimonialsStrip } from "@/components/home/TestimonialsStrip";
 import { MapInteractive } from "@/components/ui/MapInteractive";
-import { kvGet } from "@/lib/kv";
+import { kvGet, kvSet } from "@/lib/kv";
 import type { SiteContent } from "@/app/api/admin/content/route";
 
 export const dynamic = "force-dynamic";
@@ -19,7 +19,20 @@ export const metadata: Metadata = {
 };
 
 export default async function HomePage() {
-  const content = await kvGet<SiteContent>("site-content");
+  let content = await kvGet<SiteContent>("site-content");
+
+  // Auto-migrate: replace old slide-1 image if KV still has the previous value
+  if (content?.heroSlides?.some((s) => s.id === "slide-1" && s.image === "/images/Slide-1.jpg")) {
+    content = {
+      ...content,
+      heroSlides: content.heroSlides!.map((s) =>
+        s.id === "slide-1" && s.image === "/images/Slide-1.jpg"
+          ? { ...s, image: "/images/chantier-realiste-fusion-des-engins.jpg" }
+          : s
+      ),
+    };
+    kvSet("site-content", content); // fire-and-forget: update KV for future requests
+  }
 
   return (
     <>
