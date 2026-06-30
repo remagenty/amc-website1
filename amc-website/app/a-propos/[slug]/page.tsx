@@ -52,7 +52,7 @@ const MEMBERS = {
         texte: "Pilotage des approvisionnements, des niveaux de stock et des délais de livraison sur toute la région Rhône-Alpes.",
       },
     ],
-    image: "/images/photo-wacker-catalogue.jpg",
+    image: "/images/photos-de-facades-amc.jpg",
   },
   "responsable-sav": {
     initials: "RO",
