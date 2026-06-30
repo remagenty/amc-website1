@@ -163,17 +163,34 @@ export async function GET(req: NextRequest) {
   if (!(await requireAuth(req))) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   let stored = await kvGet<SiteContent>("site-content");
 
-  // Auto-migrate: replace old slide-1 image if still present in KV
-  if (stored?.heroSlides?.some((s) => s.id === "slide-1" && s.image === "/images/Slide-1.jpg")) {
-    stored = {
-      ...stored,
-      heroSlides: stored.heroSlides!.map((s) =>
-        s.id === "slide-1" && s.image === "/images/Slide-1.jpg"
-          ? { ...s, image: "/images/chantier-realiste-fusion-des-engins.jpg" }
-          : s
-      ),
-    };
-    await kvSet("site-content", stored);
+  // Auto-migrate stale KV data
+  if (stored) {
+    let dirty = false;
+
+    if (stored.heroSlides?.some((s) => s.id === "slide-1" && s.image && s.image !== "/images/chantier-realiste-fusion-des-engins.jpg")) {
+      stored = {
+        ...stored,
+        heroSlides: stored.heroSlides!.map((s) =>
+          s.id === "slide-1" && s.image && s.image !== "/images/chantier-realiste-fusion-des-engins.jpg"
+            ? { ...s, image: "/images/chantier-realiste-fusion-des-engins.jpg" }
+            : s
+        ),
+      };
+      dirty = true;
+    }
+
+    if (stored.ticker?.items?.some((i) => i.text.includes("SE+"))) {
+      stored = {
+        ...stored,
+        ticker: {
+          ...stored.ticker,
+          items: stored.ticker.items.filter((i) => !i.text.includes("SE+")),
+        },
+      };
+      dirty = true;
+    }
+
+    if (dirty) await kvSet("site-content", stored);
   }
 
   const merged = stored ? {

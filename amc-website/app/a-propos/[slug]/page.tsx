@@ -146,7 +146,7 @@ const MEMBERS = {
         texte: "Conseils pour maximiser la productivité : bon outil, bonne pression, bonne fréquence — moins de temps, plus de rendement.",
       },
     ],
-    image: "/images/Slide-1.jpg",
+    image: "/images/chantier-realiste-fusion-des-engins.jpg",
   },
 };
 

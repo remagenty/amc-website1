@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Actualités & Expertise | AMC",
     description: "Conseils d'experts, nouveautés matériels, guides d'achat et actualités AMC pour les professionnels du BTP en Rhône-Alpes.",
-    images: [{ url: "/images/Slide-1.jpg" }],
+    images: [{ url: "/images/chantier-realiste-fusion-des-engins.jpg" }],
     type: "website",
     url: `https://www.amc-savoie.fr/actualites`,
     siteName: "AMC — Alpes Matériel Compact",

@@ -21,17 +21,36 @@ export const metadata: Metadata = {
 export default async function HomePage() {
   let content = await kvGet<SiteContent>("site-content");
 
-  // Auto-migrate: replace old slide-1 image if KV still has the previous value
-  if (content?.heroSlides?.some((s) => s.id === "slide-1" && s.image === "/images/Slide-1.jpg")) {
-    content = {
-      ...content,
-      heroSlides: content.heroSlides!.map((s) =>
-        s.id === "slide-1" && s.image === "/images/Slide-1.jpg"
-          ? { ...s, image: "/images/chantier-realiste-fusion-des-engins.jpg" }
-          : s
-      ),
-    };
-    kvSet("site-content", content); // fire-and-forget: update KV for future requests
+  // Auto-migrate stale KV data
+  if (content) {
+    let dirty = false;
+
+    // 1. Replace old slide-1 image (any path other than the new one)
+    if (content.heroSlides?.some((s) => s.id === "slide-1" && s.image !== "/images/chantier-realiste-fusion-des-engins.jpg" && s.image)) {
+      content = {
+        ...content,
+        heroSlides: content.heroSlides!.map((s) =>
+          s.id === "slide-1" && s.image && s.image !== "/images/chantier-realiste-fusion-des-engins.jpg"
+            ? { ...s, image: "/images/chantier-realiste-fusion-des-engins.jpg" }
+            : s
+        ),
+      };
+      dirty = true;
+    }
+
+    // 2. Remove "Certification SE+" from ticker items
+    if (content.ticker?.items?.some((i) => i.text.includes("SE+"))) {
+      content = {
+        ...content,
+        ticker: {
+          ...content.ticker,
+          items: content.ticker.items.filter((i) => !i.text.includes("SE+")),
+        },
+      };
+      dirty = true;
+    }
+
+    if (dirty) kvSet("site-content", content); // fire-and-forget
   }
 
   return (

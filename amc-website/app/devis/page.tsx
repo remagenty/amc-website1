@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Demande de devis | AMC — Alpes Matériel Compact",
     description: "Demandez un devis gratuit en ligne. Vente, SAV, pièces détachées, financement. Réponse sous 24h ouvrées.",
-    images: [{ url: "/images/Slide-1.jpg" }],
+    images: [{ url: "/images/chantier-realiste-fusion-des-engins.jpg" }],
     type: "website",
     url: `https://www.amc-savoie.fr/devis`,
     siteName: "AMC — Alpes Matériel Compact",

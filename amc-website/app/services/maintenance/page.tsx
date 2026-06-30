@@ -78,7 +78,7 @@ const FREQUENCES = [
   },
   {
     machine: "Mini-pelles & pelles compactes",
-    image: "/images/Slide-1.jpg",
+    image: "/images/chantier-realiste-fusion-des-engins.jpg",
     intervalles: [
       { label: "Entretien courant", freq: "Toutes les 250 h" },
       { label: "Entretien périodique", freq: "Toutes les 500 h" },

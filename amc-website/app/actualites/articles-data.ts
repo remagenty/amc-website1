@@ -322,7 +322,7 @@ export const ARTICLES: Article[] = [
 
   {
     slug: "chantiers-montagne-quel-equipement-choisir",
-    image: "/images/Slide-1.jpg",
+    image: "/images/chantier-realiste-fusion-des-engins.jpg",
     title: "Chantiers en montagne : quel équipement choisir ?",
     category: "Conseils",
     summary:

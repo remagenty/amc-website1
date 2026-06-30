@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Solutions de financement | AMC",
     description: "Financez vos équipements de chantier avec nos solutions sur mesure. Leasing, crédit-bail, LOA. Durée 24-60 mois, sans apport obligatoire.",
-    images: [{ url: "/images/Slide-1.jpg" }],
+    images: [{ url: "/images/chantier-realiste-fusion-des-engins.jpg" }],
     type: "website",
     url: `https://www.amc-savoie.fr/services/financement`,
     siteName: "AMC — Alpes Matériel Compact",
