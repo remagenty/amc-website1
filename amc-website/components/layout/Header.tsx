@@ -422,14 +422,14 @@ export function Header() {
                     </Link>
                   </div>
 
-                  {/* Bloc 3 — Maintenance & Pièces */}
+                  {/* Bloc 3 — Pièces détachées */}
                   <div className="flex flex-col p-5 rounded-xl border border-gray-100 hover:border-amc-yellow/50 hover:shadow-md transition-all">
                     <div className="w-10 h-10 rounded-lg bg-amc-yellow/10 flex items-center justify-center mb-4 text-xl">
                       ⚙️
                     </div>
-                    <h4 className="font-bold text-amc-text text-base mb-3">Maintenance &amp; Pièces</h4>
+                    <h4 className="font-bold text-amc-text text-base mb-3">Pièces détachées</h4>
                     <ul className="space-y-2 text-sm text-amc-text-secondary flex-1">
-                      {["Pièces détachées d'origine constructeur", "Maintenance préventive (contrats sur mesure)"].map((item) => (
+                      {["Pièces détachées d'origine constructeur", "Stock local à Saint-Félix", "Garantie constructeur sur toutes les pièces"].map((item) => (
                         <li key={item} className="flex items-center gap-2">
                           <span className="w-1.5 h-1.5 rounded-full bg-amc-yellow flex-shrink-0" />
                           {item}
