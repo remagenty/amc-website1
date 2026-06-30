@@ -33,8 +33,11 @@ export async function POST(request: NextRequest) {
   const filename = `admin/${Date.now()}-${name.replace(/[^a-z0-9.\-_]/gi, "_")}`;
 
   try {
-    const blob = await put(filename, file, { access: "public" });
-    return NextResponse.json({ url: blob.url });
+    const blob = await put(filename, file, { access: "private" });
+    // Return a proxy URL so the image is publicly accessible on the site
+    // without exposing the private blob URL or the read/write token.
+    const proxyUrl = `/api/blob?src=${encodeURIComponent(blob.url)}`;
+    return NextResponse.json({ url: proxyUrl });
   } catch (err: unknown) {
     const msg = err instanceof Error ? err.message : "Erreur Vercel Blob inconnue";
     console.error("[upload] Vercel Blob error:", msg);
