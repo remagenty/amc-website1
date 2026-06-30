@@ -116,7 +116,7 @@ const MEMBERS = {
         texte: "De la première demande jusqu'à la livraison : je gère votre dossier de A à Z avec des devis sous 24h.",
       },
     ],
-    image: "/images/Magni-catalogue.avif",
+    image: "/images/photos-machines-wacker-interieur.jpg",
   },
   "commercial-2": {
     initials: "VK",
