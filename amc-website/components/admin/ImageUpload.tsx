@@ -37,14 +37,25 @@ export function ImageUpload({ value, onChange, label }: ImageUploadProps) {
         const formData = new FormData();
         formData.append("file", file);
         const res = await fetch("/api/admin/upload", { method: "POST", body: formData });
+        const responseText = await res.text();
+        console.log("[ImageUpload] status:", res.status, "body:", responseText);
         if (!res.ok) {
-          const { error: msg } = await res.json().catch(() => ({ error: "Erreur upload" }));
-          throw new Error(msg ?? "Erreur upload");
+          let msg = `HTTP ${res.status}`;
+          try {
+            const json = JSON.parse(responseText);
+            msg = json.error ?? msg;
+          } catch {
+            msg = responseText.slice(0, 200) || msg;
+          }
+          throw new Error(msg);
         }
-        const { url } = await res.json();
+        const { url } = JSON.parse(responseText);
+        if (!url) throw new Error("Réponse invalide — pas d'URL retournée");
         onChange(url);
       } catch (e: unknown) {
-        setError(e instanceof Error ? e.message : "Erreur upload");
+        const msg = e instanceof Error ? e.message : "Erreur upload inconnue";
+        console.error("[ImageUpload] upload failed:", msg);
+        setError(msg);
         setPreview(null);
         onChange(null);
       } finally {
