@@ -1,14 +1,12 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getProductBySlug, getSimilarProducts, PRODUCTS, formatPrice } from "@/lib/data";
+import { getProductBySlug, getSimilarProducts, formatPrice } from "@/lib/data";
 import { ProductDetail } from "./ProductDetail";
+
+export const dynamic = "force-dynamic";
 
 interface Props {
   params: { slug: string };
-}
-
-export async function generateStaticParams() {
-  return PRODUCTS.map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

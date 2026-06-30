@@ -1,8 +1,8 @@
 import type { Product, BrandInfo, HeroSlide, Service } from "@/types";
 import { getAllWnMachines, wnMachineToProduct, getCategoryUrlSlug, getWnProductsFromData, CATEGORY_LABELS as WN_CATEGORY_LABELS, CATEGORY_TO_SLUG as WN_CATEGORY_TO_SLUG } from "./wn-catalogue";
 import type { WnMachine } from "./wn-catalogue";
-import { getMagniProducts, getMagniCategories, getMagniProductsFromData, MAGNI_CATEGORY_LABELS, MAGNI_CATEGORY_TO_SLUG } from "./magni-catalogue";
-import { getPromoveProducts, getPromoveCategories, getPromoveProductsFromData, PROMOVE_CATEGORY_LABELS, PROMOVE_CATEGORY_TO_SLUG } from "./promove-catalogue";
+import { getMagniProducts, getMagniCategories, getMagniProductsFromData, MAGNI_CATEGORY_LABELS, MAGNI_CATEGORY_TO_SLUG, getAllMagniMachines } from "./magni-catalogue";
+import { getPromoveProducts, getPromoveCategories, getPromoveProductsFromData, PROMOVE_CATEGORY_LABELS, PROMOVE_CATEGORY_TO_SLUG, getAllPromoveMachines } from "./promove-catalogue";
 import { kvGet } from "./kv";
 
 export const ALL_CATEGORY_LABELS: Record<string, string> = {
@@ -572,4 +572,53 @@ export function formatPrice(price: number): string {
     currency: "EUR",
     maximumFractionDigits: 0,
   }).format(price);
+}
+
+// ── Async machine lookups (KV-first, static JSON fallback) ───────────────────
+// Used by dynamic page routes so admin edits are visible without redeployment.
+
+type KVCatalogue = { machines: WnMachine[] };
+
+export async function getWnMachineBySlugAsync(slug: string): Promise<WnMachine | undefined> {
+  const kv = await kvGet<KVCatalogue>("catalogue:wacker_neuson");
+  return (kv?.machines ?? getAllWnMachines()).find((m) => m.slug === slug);
+}
+
+export async function getMagniMachineBySlugAsync(slug: string): Promise<WnMachine | undefined> {
+  const kv = await kvGet<KVCatalogue>("catalogue:magni");
+  return (kv?.machines ?? getAllMagniMachines()).find((m) => m.slug === slug);
+}
+
+export async function getPromoveMachineBySlugAsync(slug: string): Promise<WnMachine | undefined> {
+  const kv = await kvGet<KVCatalogue>("catalogue:promove");
+  return (kv?.machines ?? getAllPromoveMachines()).find((m) => m.slug === slug);
+}
+
+export async function getWnSimilarMachinesAsync(machine: WnMachine, limit = 4): Promise<WnMachine[]> {
+  const kv = await kvGet<KVCatalogue>("catalogue:wacker_neuson");
+  const all = kv?.machines ?? getAllWnMachines();
+  return all
+    .filter((m) => m.id !== machine.id && m.categorie === machine.categorie && m.visible !== false)
+    .slice(0, limit);
+}
+
+export async function getMagniSimilarMachinesAsync(machine: WnMachine, limit = 4): Promise<WnMachine[]> {
+  const kv = await kvGet<KVCatalogue>("catalogue:magni");
+  const all = kv?.machines ?? getAllMagniMachines();
+  return all
+    .filter((m) => m.id !== machine.id && m.categorie === machine.categorie && m.visible !== false)
+    .slice(0, limit);
+}
+
+export async function getPromoveSimilarMachinesAsync(machine: WnMachine, limit = 4): Promise<WnMachine[]> {
+  const kv = await kvGet<KVCatalogue>("catalogue:promove");
+  const all = kv?.machines ?? getAllPromoveMachines();
+  return all
+    .filter((m) => m.id !== machine.id && m.categorie === machine.categorie && m.visible !== false)
+    .slice(0, limit);
+}
+
+export async function getOccasionProductsAsync(): Promise<Product[]> {
+  const machines = await getMachinesAsync();
+  return machines.filter((p) => p.status === "occasion");
 }

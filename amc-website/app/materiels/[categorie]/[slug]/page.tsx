@@ -1,57 +1,42 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import {
-  getWnMachineBySlug,
-  getWnSimilarMachines,
-  getAllWnMachines,
-  getCategoryUrlSlug,
   CATEGORY_LABELS,
   SLUG_TO_CATEGORY,
 } from "@/lib/wn-catalogue";
 import {
-  getMagniMachineBySlug,
-  getMagniSimilarMachines,
-  getAllMagniMachines,
-  getMagniCategoryUrlSlug,
   MAGNI_CATEGORY_LABELS,
   MAGNI_SLUG_TO_CATEGORY,
 } from "@/lib/magni-catalogue";
 import {
-  getPromoveMachineBySlug,
-  getPromoveSimilarMachines,
-  getAllPromoveMachines,
-  getPromoveCategoryUrlSlug,
   PROMOVE_CATEGORY_LABELS,
   PROMOVE_SLUG_TO_CATEGORY,
 } from "@/lib/promove-catalogue";
+import {
+  getWnMachineBySlugAsync,
+  getMagniMachineBySlugAsync,
+  getPromoveMachineBySlugAsync,
+  getWnSimilarMachinesAsync,
+  getMagniSimilarMachinesAsync,
+  getPromoveSimilarMachinesAsync,
+} from "@/lib/data";
 import { WnProductDetail } from "@/components/products/WnProductDetail";
+
+export const dynamic = "force-dynamic";
 
 interface Props {
   params: Promise<{ categorie: string; slug: string }>;
 }
 
-export async function generateStaticParams() {
-  const wnParams = getAllWnMachines().map((m) => ({
-    categorie: getCategoryUrlSlug(m),
-    slug: m.slug,
-  }));
-  const magniParams = getAllMagniMachines().map((m) => ({
-    categorie: getMagniCategoryUrlSlug(m),
-    slug: m.slug,
-  }));
-  const promoveParams = getAllPromoveMachines().map((m) => ({
-    categorie: getPromoveCategoryUrlSlug(m),
-    slug: m.slug,
-  }));
-  return [...wnParams, ...magniParams, ...promoveParams];
-}
-
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params;
-  const machine =
-    getWnMachineBySlug(slug) ??
-    getMagniMachineBySlug(slug) ??
-    getPromoveMachineBySlug(slug);
+  const { slug, categorie } = await params;
+  const isMagni = !!MAGNI_SLUG_TO_CATEGORY[categorie];
+  const isPromove = !!PROMOVE_SLUG_TO_CATEGORY[categorie];
+  const machine = isMagni
+    ? await getMagniMachineBySlugAsync(slug)
+    : isPromove
+    ? await getPromoveMachineBySlugAsync(slug)
+    : await getWnMachineBySlugAsync(slug);
   if (!machine) return {};
 
   return {
@@ -76,17 +61,17 @@ export default async function ProductPage({ params }: Props) {
   if (!isMagni && !isPromove && !isWn) notFound();
 
   const machine = isMagni
-    ? getMagniMachineBySlug(slug)
+    ? await getMagniMachineBySlugAsync(slug)
     : isPromove
-    ? getPromoveMachineBySlug(slug)
-    : getWnMachineBySlug(slug);
+    ? await getPromoveMachineBySlugAsync(slug)
+    : await getWnMachineBySlugAsync(slug);
   if (!machine) notFound();
 
   const similar = isMagni
-    ? getMagniSimilarMachines(machine, 4)
+    ? await getMagniSimilarMachinesAsync(machine, 4)
     : isPromove
-    ? getPromoveSimilarMachines(machine, 4)
-    : getWnSimilarMachines(machine, 4);
+    ? await getPromoveSimilarMachinesAsync(machine, 4)
+    : await getWnSimilarMachinesAsync(machine, 4);
 
   const categoryLabel = isMagni
     ? (MAGNI_CATEGORY_LABELS[categorie] ?? categorie)

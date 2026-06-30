@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { getOccasionProducts } from "@/lib/data";
+import { getOccasionProductsAsync } from "@/lib/data";
+
+export const dynamic = "force-dynamic";
 import { ProductCard } from "@/components/ui/ProductCard";
 import { IconShield, IconCheck, IconArrowRight } from "@/components/ui/Icons";
 
@@ -26,8 +28,8 @@ const GUARANTEES = [
   { icon: <IconCheck size={18} className="text-amc-yellow" />, text: "Nettoyage et remise en état esthétique" },
 ];
 
-export default function OccasionPage() {
-  const products = getOccasionProducts();
+export default async function OccasionPage() {
+  const products = await getOccasionProductsAsync();
 
   return (
     <div className="min-h-screen bg-amc-cream">
