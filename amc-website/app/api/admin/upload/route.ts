@@ -9,6 +9,13 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Non autorisé" }, { status: 401 });
   }
 
+  if (!process.env.BLOB_READ_WRITE_TOKEN) {
+    return NextResponse.json(
+      { error: "Upload désactivé — BLOB_READ_WRITE_TOKEN non configuré. Utilisez le champ URL pour coller un chemin d'image existant." },
+      { status: 503 }
+    );
+  }
+
   const formData = await request.formData();
   const file = formData.get("file");
 
@@ -18,13 +25,19 @@ export async function POST(request: NextRequest) {
 
   const name = (file as File).name ?? `upload-${Date.now()}`;
   const ext = name.split(".").pop()?.toLowerCase() ?? "jpg";
-  const allowed = ["jpg", "jpeg", "png", "webp"];
+  const allowed = ["jpg", "jpeg", "png", "webp", "avif"];
   if (!allowed.includes(ext)) {
-    return NextResponse.json({ error: "Format invalide" }, { status: 400 });
+    return NextResponse.json({ error: "Format invalide — JPG, PNG, WebP ou AVIF uniquement" }, { status: 400 });
   }
 
   const filename = `admin/${Date.now()}-${name.replace(/[^a-z0-9.\-_]/gi, "_")}`;
-  const blob = await put(filename, file, { access: "public" });
 
-  return NextResponse.json({ url: blob.url });
+  try {
+    const blob = await put(filename, file, { access: "public" });
+    return NextResponse.json({ url: blob.url });
+  } catch (err: unknown) {
+    const msg = err instanceof Error ? err.message : "Erreur Vercel Blob inconnue";
+    console.error("[upload] Vercel Blob error:", msg);
+    return NextResponse.json({ error: `Erreur upload : ${msg}` }, { status: 500 });
+  }
 }

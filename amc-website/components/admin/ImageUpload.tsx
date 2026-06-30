@@ -15,11 +15,13 @@ export function ImageUpload({ value, onChange, label }: ImageUploadProps) {
   const [uploading, setUploading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [preview, setPreview] = useState<{ url: string; name: string } | null>(null);
+  const [urlInput, setUrlInput] = useState("");
+  const [showUrlInput, setShowUrlInput] = useState(false);
 
   const handleFile = useCallback(
     async (file: File) => {
-      if (!file.type.match(/^image\/(jpeg|png|webp)$/)) {
-        setError("Format invalide — JPG, PNG ou WebP uniquement.");
+      if (!file.type.match(/^image\/(jpeg|png|webp|avif|heic|heif)$/)) {
+        setError("Format invalide — JPG, PNG, WebP ou AVIF uniquement.");
         return;
       }
       if (file.size > 10 * 1024 * 1024) {
@@ -74,7 +76,18 @@ export function ImageUpload({ value, onChange, label }: ImageUploadProps) {
     setPreview(null);
     onChange(null);
     setError(null);
+    setUrlInput("");
+    setShowUrlInput(false);
     if (inputRef.current) inputRef.current.value = "";
+  }
+
+  function applyUrl() {
+    const trimmed = urlInput.trim();
+    if (!trimmed) return;
+    setError(null);
+    setPreview(null);
+    onChange(trimmed);
+    setShowUrlInput(false);
   }
 
   const active = dragging || uploading;
@@ -154,11 +167,52 @@ export function ImageUpload({ value, onChange, label }: ImageUploadProps) {
       <input
         ref={inputRef}
         type="file"
-        accept="image/jpeg,image/png,image/webp"
+        accept="image/jpeg,image/png,image/webp,image/avif"
         className="sr-only"
         onChange={onInputChange}
         tabIndex={-1}
       />
+
+      {/* Fallback : coller une URL ou un chemin /images/… */}
+      {!hasImage && (
+        <div className="mt-1">
+          {showUrlInput ? (
+            <div className="flex gap-1.5">
+              <input
+                type="text"
+                value={urlInput}
+                onChange={(e) => setUrlInput(e.target.value)}
+                onKeyDown={(e) => e.key === "Enter" && applyUrl()}
+                placeholder="/images/mon-image.jpg"
+                className="flex-1 text-xs border border-gray-300 rounded-lg px-2.5 py-1.5 focus:outline-none focus:ring-1 focus:ring-[#F5B800]"
+                autoFocus
+              />
+              <button
+                type="button"
+                onClick={applyUrl}
+                className="text-xs px-2.5 py-1.5 bg-[#F5B800] text-gray-900 font-semibold rounded-lg hover:bg-[#e0a800]"
+              >
+                OK
+              </button>
+              <button
+                type="button"
+                onClick={() => setShowUrlInput(false)}
+                className="text-xs px-2 py-1.5 text-gray-500 hover:text-gray-700"
+              >
+                ✕
+              </button>
+            </div>
+          ) : (
+            <button
+              type="button"
+              onClick={() => setShowUrlInput(true)}
+              className="text-xs text-gray-400 hover:text-gray-600 underline underline-offset-2"
+            >
+              Coller une URL ou un chemin d&apos;image
+            </button>
+          )}
+        </div>
+      )}
 
       {error && <p className="text-xs text-red-600 mt-1">{error}</p>}
     </div>
