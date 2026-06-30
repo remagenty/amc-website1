@@ -44,7 +44,7 @@ const HISTOIRE_BLOCKS = [
     ],
     extra:
       "Notre engagement : vous accompagner de la sélection du matériel jusqu'à sa maintenance, avec des conseillers qui connaissent vos métiers.",
-    image: "/images/chantier-realiste-fusion-des-engins.jpg",
+    image: "/images/photo-wacker-catalogue.jpg",
     imageAlt: "Chantier BTP en Rhône-Alpes — AMC Alpes Matériel Compact",
   },
   {
@@ -59,7 +59,7 @@ const HISTOIRE_BLOCKS = [
     ],
     extra:
       "Nos équipes sont formées directement par les constructeurs, avec accès aux pièces d'origine et aux garanties officielles.",
-    image: "/images/photo-wacker-catalogue.jpg",
+    image: "/images/chantier-realiste-fusion-des-engins.jpg",
     imageAlt: "Gamme matériels WACKER NEUSON distribuée par AMC",
   },
   {
