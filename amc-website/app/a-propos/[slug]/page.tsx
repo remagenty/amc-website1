@@ -84,7 +84,7 @@ const MEMBERS = {
         texte: "Prise en charge rapide des pannes et immobilisations sur chantier, en atelier ou en déplacement sur site.",
       },
     ],
-    image: "/images/Slide-3.jpg",
+    image: "/images/sav-sur-terrain-2.jpg",
   },
   "commercial-1": {
     initials: "JS",
