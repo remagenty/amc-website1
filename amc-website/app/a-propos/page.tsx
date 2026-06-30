@@ -74,7 +74,7 @@ const HISTOIRE_BLOCKS = [
     ],
     extra:
       "Contrats d'entretien préventif, réparations, pièces d'origine : nous gérons tout le cycle de vie de vos engins.",
-    image: "/images/Slide-3.jpg",
+    image: "/images/sav-interieur-2.jpg",
     imageAlt: "Atelier SAV certifié AMC à Saint-Félix",
   },
 ];
