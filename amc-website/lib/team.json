@@ -5,7 +5,7 @@
     "role": "Directeur",
     "name": "Thomas Wciorka",
     "description": "Pilote l'agence AMC au quotidien, coordonne les équipes commerciales et techniques pour garantir un service de qualité.",
-    "photo": null,
+    "photo": "/images/photo-thomas.jpg",
     "phone": "06 72 56 31 27",
     "email": "admin@amc2savoie.com"
   },
@@ -25,7 +25,7 @@
     "role": "Commercial",
     "name": "Jean-Pierre Sudre",
     "description": "Spécialiste des matériels WACKER NEUSON et Magni, il vous accompagne dans le choix de vos équipements.",
-    "photo": null,
+    "photo": "/images/photo-jp.jpg",
     "phone": "06 75 73 62 33"
   },
   {
@@ -34,7 +34,7 @@
     "role": "Commercial",
     "name": "Valentin Kint",
     "description": "Expert en relation client et vente de matériels de chantier, il trouve la solution adaptée à chaque projet.",
-    "photo": null,
+    "photo": "/images/photo-valentin.jpg",
     "phone": "06 73 60 11 33"
   }
 ]

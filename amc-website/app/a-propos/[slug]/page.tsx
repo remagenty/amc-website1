@@ -24,6 +24,7 @@ import { PhoneLink } from "@/components/ui/PhoneLink";
 const MEMBERS = {
   "chef-agence": {
     initials: "TW",
+    photo: "/images/photo-thomas.jpg",
     name: "Thomas Wciorka",
     role: "Directeur",
     phone: "06 72 56 31 27",
@@ -87,6 +88,7 @@ const MEMBERS = {
   },
   "commercial-1": {
     initials: "JS",
+    photo: "/images/photo-jp.jpg",
     name: "Jean-Pierre Sudre",
     role: "Commercial",
     phone: "06 75 73 62 33",
@@ -117,6 +119,7 @@ const MEMBERS = {
   },
   "commercial-2": {
     initials: "VK",
+    photo: "/images/photo-valentin.jpg",
     name: "Valentin Kint",
     role: "Commercial",
     phone: "06 73 60 11 33",
