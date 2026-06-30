@@ -44,7 +44,7 @@ const HISTOIRE_BLOCKS = [
     ],
     extra:
       "Notre engagement : vous accompagner de la sélection du matériel jusqu'à sa maintenance, avec des conseillers qui connaissent vos métiers.",
-    image: "/images/Slide-1.jpg",
+    image: "/images/chantier-realiste-fusion-des-engins.jpg",
     imageAlt: "Chantier BTP en Rhône-Alpes — AMC Alpes Matériel Compact",
   },
   {
@@ -126,14 +126,20 @@ export const dynamic = "force-dynamic";
 export default async function AProposPage() {
   let kvTeam = await kvGet<TeamMember[]>("team");
 
-  // Auto-migrate: add photo paths from team.json if KV members are missing them
+  // Auto-migrate: backfill photo and email from team.json when missing in KV
   if (kvTeam) {
-    const photoBySlug: Record<string, string | null> = Object.fromEntries(
-      (teamData as TeamMember[]).map((m) => [m.slug, m.photo ?? null])
+    const bySlug: Record<string, TeamMember> = Object.fromEntries(
+      (teamData as TeamMember[]).map((m) => [m.slug, m])
     );
-    const needsUpdate = kvTeam.some((m) => !m.photo && photoBySlug[m.slug]);
+    const needsUpdate = kvTeam.some(
+      (m) => (!m.photo && bySlug[m.slug]?.photo) || (!m.email && bySlug[m.slug]?.email)
+    );
     if (needsUpdate) {
-      kvTeam = kvTeam.map((m) => ({ ...m, photo: m.photo ?? photoBySlug[m.slug] ?? null }));
+      kvTeam = kvTeam.map((m) => ({
+        ...m,
+        photo: m.photo ?? bySlug[m.slug]?.photo ?? null,
+        email: m.email ?? bySlug[m.slug]?.email ?? undefined,
+      }));
       kvSet("team", kvTeam); // fire-and-forget: update KV for future requests
     }
   }
@@ -146,7 +152,7 @@ export default async function AProposPage() {
       <section className="relative overflow-hidden" style={{ minHeight: "420px" }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/images/Slide-1.jpg"
+          src="/images/chantier-realiste-fusion-des-engins.jpg"
           alt="AMC Alpes Matériel Compact — Rhône-Alpes"
           className="absolute inset-0 w-full h-full object-cover"
         />
