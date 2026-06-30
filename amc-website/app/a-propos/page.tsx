@@ -44,7 +44,7 @@ const HISTOIRE_BLOCKS = [
     ],
     extra:
       "Notre engagement : vous accompagner de la sélection du matériel jusqu'à sa maintenance, avec des conseillers qui connaissent vos métiers.",
-    image: "/images/photo-wacker-catalogue.jpg",
+    image: "/images/sav-sur-terrain-2.jpg",
     imageAlt: "Chantier BTP en Rhône-Alpes — AMC Alpes Matériel Compact",
   },
   {
