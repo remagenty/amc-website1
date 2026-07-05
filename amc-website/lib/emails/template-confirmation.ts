@@ -1,5 +1,5 @@
 const SITE_URL = "https://www.amc-savoie.fr";
-const LOGO_URL = `${SITE_URL}/images/logo-amc.png`;
+const LOGO_URL = `${SITE_URL}/images/LOGO-AMC-ORANGE-site-web.png`;
 
 export interface ConfirmationEmailData {
   type: string;

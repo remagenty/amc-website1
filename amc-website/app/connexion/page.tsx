@@ -139,7 +139,7 @@ export default function ConnexionPage() {
           <Link href="/">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/logo-amc.png"
+              src="/images/LOGO-AMC-ORANGE-site-web.png"
               alt="AMC - Alpes Matériel Compact"
               className="h-16 w-auto object-contain"
             />

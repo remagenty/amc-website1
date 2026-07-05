@@ -166,7 +166,7 @@ export function Header() {
             <Link href="/" className="flex-shrink-0 flex items-center self-stretch py-2" aria-label="AMC - Alpes Matériel Compact">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/logo-amc.png"
+                src="/images/LOGO-AMC-ORANGE-site-web.png"
                 alt="AMC - Alpes Matériel Compact"
                 className="h-full w-auto object-contain max-h-20 lg:max-h-24"
               />
@@ -236,7 +236,7 @@ export function Header() {
         <div className="lg:hidden flex items-center justify-between px-4 h-16" style={{ backgroundColor: "#9B9B9B" }}>
           <Link href="/" aria-label="AMC - Alpes Matériel Compact">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/logo-amc.png" alt="AMC" className="h-12 w-auto object-contain" />
+            <img src="/images/LOGO-AMC-ORANGE-site-web.png" alt="AMC" className="h-12 w-auto object-contain" />
           </Link>
           <button
             onClick={() => setMobileOpen(!mobileOpen)}

@@ -48,7 +48,7 @@ export function Footer() {
             <Link href="/" className="inline-block mb-5" aria-label="AMC - Alpes Matériel Compact">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/logo-amc.png"
+                src="/images/LOGO-AMC-ORANGE-site-web.png"
                 alt="AMC — Alpes Matériel Compact"
                 className="h-16 w-auto object-contain"
               />
