@@ -140,7 +140,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     ctaHref: "/gammes",
     ctaSecondaryLabel: "Demander un devis",
     ctaSecondaryHref: "/contact?type=devis",
-    image: "/images/chantier-realiste-fusion-des-engins.jpg",
+    image: "/images/immage-accueil-site-internet.png",
   },
   {
     id: "slide-2",

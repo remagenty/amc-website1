@@ -216,7 +216,7 @@ export default function CertificationSePlusPage() {
               <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-[4/3]">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/images/chantier-realiste-fusion-des-engins.jpg"
+                  src="/images/immage-accueil-site-internet.png"
                   alt="Atelier AMC Saint-Félix"
                   className="w-full h-full object-cover"
                 />

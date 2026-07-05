@@ -109,7 +109,7 @@ const DEFAULT_CONTENT: SiteContent = {
       ctaHref: "/gammes",
       ctaSecondaryLabel: "Demander un devis",
       ctaSecondaryHref: "/contact?type=devis",
-      image: "/images/chantier-realiste-fusion-des-engins.jpg",
+      image: "/images/immage-accueil-site-internet.png",
     },
     {
       id: "slide-2",
@@ -167,12 +167,12 @@ export async function GET(req: NextRequest) {
   if (stored) {
     let dirty = false;
 
-    if (stored.heroSlides?.some((s) => s.id === "slide-1" && s.image && s.image !== "/images/chantier-realiste-fusion-des-engins.jpg")) {
+    if (stored.heroSlides?.some((s) => s.id === "slide-1" && s.image && s.image !== "/images/immage-accueil-site-internet.png")) {
       stored = {
         ...stored,
         heroSlides: stored.heroSlides!.map((s) =>
-          s.id === "slide-1" && s.image && s.image !== "/images/chantier-realiste-fusion-des-engins.jpg"
-            ? { ...s, image: "/images/chantier-realiste-fusion-des-engins.jpg" }
+          s.id === "slide-1" && s.image && s.image !== "/images/immage-accueil-site-internet.png"
+            ? { ...s, image: "/images/immage-accueil-site-internet.png" }
             : s
         ),
       };

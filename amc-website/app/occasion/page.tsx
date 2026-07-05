@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Matériels d'occasion certifiés | AMC Rhône-Alpes",
     description: "Machines d'occasion inspectées, révisées et garanties par nos techniciens. Compacteurs, pelles, dumpers, télescopiques disponibles immédiatement.",
-    images: [{ url: "/images/chantier-realiste-fusion-des-engins.jpg" }],
+    images: [{ url: "/images/immage-accueil-site-internet.png" }],
     type: "website",
     url: `https://www.amc-savoie.fr/occasion`,
     siteName: "AMC — Alpes Matériel Compact",

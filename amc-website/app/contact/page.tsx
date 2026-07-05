@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Contact | AMC — Saint-Félix, Haute-Savoie",
     description: "Contactez AMC à Saint-Félix. Tél : 04 26 78 43 90. Lun-Ven 8h-12h / 14h-18h. Fermé le week-end.",
-    images: [{ url: "/images/chantier-realiste-fusion-des-engins.jpg" }],
+    images: [{ url: "/images/immage-accueil-site-internet.png" }],
     type: "website",
     url: `https://www.amc-savoie.fr/contact`,
     siteName: "AMC — Alpes Matériel Compact",
@@ -44,7 +44,7 @@ export default async function ContactPage() {
         {/* Image de fond */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/images/chantier-realiste-fusion-des-engins.jpg"
+          src="/images/immage-accueil-site-internet.png"
           alt=""
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover object-center"

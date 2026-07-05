@@ -72,7 +72,7 @@ const DEFAULT: SiteContent = {
       ctaHref: "/gammes",
       ctaSecondaryLabel: "Demander un devis",
       ctaSecondaryHref: "/contact?type=devis",
-      image: "/images/chantier-realiste-fusion-des-engins.jpg",
+      image: "/images/immage-accueil-site-internet.png",
     },
     {
       id: "slide-2",
@@ -464,7 +464,7 @@ export default function ContenusPage() {
                       <div className="grid sm:grid-cols-2 gap-3">
                         <div>
                           <label className="block text-xs font-medium text-gray-700 mb-1">Image URL (optionnel)</label>
-                          <input type="text" value={slide.image ?? ""} onChange={(e) => setSlideField(i, "image", e.target.value)} className={inp} placeholder="/images/chantier-realiste-fusion-des-engins.jpg" />
+                          <input type="text" value={slide.image ?? ""} onChange={(e) => setSlideField(i, "image", e.target.value)} className={inp} placeholder="/images/immage-accueil-site-internet.png" />
                         </div>
                         <div>
                           <label className="block text-xs font-medium text-gray-700 mb-1">Badge (optionnel)</label>

@@ -59,7 +59,7 @@ const HISTOIRE_BLOCKS = [
     ],
     extra:
       "Nos équipes sont formées directement par les constructeurs, avec accès aux pièces d'origine et aux garanties officielles.",
-    image: "/images/chantier-realiste-fusion-des-engins.jpg",
+    image: "/images/immage-accueil-site-internet.png",
     imageAlt: "Gamme matériels WACKER NEUSON distribuée par AMC",
   },
   {
@@ -152,7 +152,7 @@ export default async function AProposPage() {
       <section className="relative overflow-hidden" style={{ minHeight: "420px" }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/images/chantier-realiste-fusion-des-engins.jpg"
+          src="/images/immage-accueil-site-internet.png"
           alt="AMC Alpes Matériel Compact — Rhône-Alpes"
           className="absolute inset-0 w-full h-full object-cover"
         />

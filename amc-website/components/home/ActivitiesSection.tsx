@@ -24,7 +24,7 @@ const ACTIVITIES = [
     badges: ["Inspecté", "Garanti", "Certifié"],
     cta: "Voir les occasions",
     href: "/catalogue?etat=occasion",
-    image: "/images/chantier-realiste-fusion-des-engins.jpg",
+    image: "/images/immage-accueil-site-internet.png",
     imageAlt: "Matériel occasion certifié — AMC",
   },
   {

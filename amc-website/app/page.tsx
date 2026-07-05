@@ -26,12 +26,12 @@ export default async function HomePage() {
     let dirty = false;
 
     // 1. Replace old slide-1 image (any path other than the new one)
-    if (content.heroSlides?.some((s) => s.id === "slide-1" && s.image !== "/images/chantier-realiste-fusion-des-engins.jpg" && s.image)) {
+    if (content.heroSlides?.some((s) => s.id === "slide-1" && s.image !== "/images/immage-accueil-site-internet.png" && s.image)) {
       content = {
         ...content,
         heroSlides: content.heroSlides!.map((s) =>
-          s.id === "slide-1" && s.image && s.image !== "/images/chantier-realiste-fusion-des-engins.jpg"
-            ? { ...s, image: "/images/chantier-realiste-fusion-des-engins.jpg" }
+          s.id === "slide-1" && s.image && s.image !== "/images/immage-accueil-site-internet.png"
+            ? { ...s, image: "/images/immage-accueil-site-internet.png" }
             : s
         ),
       };
