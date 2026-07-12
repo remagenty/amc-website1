@@ -8,7 +8,7 @@ export default function NotFound() {
         {/* Logo */}
         <div className="flex justify-center mb-8">
           <img
-            src="/images/LOGO-AMC-ORANGE-site-web.png"
+            src="/images/LOGO-AMC-ORANGE-site-web-V3.png"
             alt="AMC — Alpes Matériel Compact"
             className="h-16 w-auto object-contain"
           />

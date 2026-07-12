@@ -1,5 +1,5 @@
 const SITE_URL = "https://www.amc-savoie.fr";
-const LOGO_URL = `${SITE_URL}/images/LOGO-AMC-ORANGE-site-web.png`;
+const LOGO_URL = `${SITE_URL}/images/LOGO-AMC-ORANGE-site-web-V3.png`;
 
 const TYPE_LABELS: Record<string, string> = {
   devis: "Demande de devis",

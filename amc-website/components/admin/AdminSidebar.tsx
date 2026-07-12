@@ -91,7 +91,7 @@ export function AdminSidebar() {
     <aside className="flex flex-col h-full bg-[#1a1a1a] text-white w-56 flex-shrink-0">
       {/* Logo */}
       <div className="px-4 py-5 border-b border-white/10">
-        <Image src="/images/LOGO-AMC-ORANGE-site-web.png" alt="AMC" width={100} height={19} className="object-contain brightness-0 invert" />
+        <Image src="/images/LOGO-AMC-ORANGE-site-web-V3.png" alt="AMC" width={100} height={19} className="object-contain brightness-0 invert" />
         <p className="text-xs text-white/40 mt-1">Administration</p>
       </div>
 

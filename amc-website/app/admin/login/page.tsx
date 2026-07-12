@@ -46,7 +46,7 @@ export default function AdminLoginPage() {
           {/* Logo */}
           <div className="flex justify-center mb-8">
             <Image
-              src="/images/LOGO-AMC-ORANGE-site-web.png"
+              src="/images/LOGO-AMC-ORANGE-site-web-V3.png"
               alt="AMC"
               width={140}
               height={26}
