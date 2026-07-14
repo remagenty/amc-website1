@@ -13,9 +13,17 @@ import type { SiteContent } from "@/app/api/admin/content/route";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: { absolute: "AMC — Vente matériels de chantier Rhône-Alpes | WACKER NEUSON, Magni, Promove" },
+  title: { absolute: "Achat matériel BTP Haute-Savoie | Mini-pelles, Dumpers, Télescopiques — AMC Saint-Félix (74)" },
   description:
-    "AMC, votre spécialiste de la vente de matériels de chantier neufs et d'occasion en Rhône-Alpes. Distributeur officiel WACKER NEUSON, Magni, Promove Demolition. SAV certifié à Saint-Félix.",
+    "AMC — distributeur officiel WACKER NEUSON, Magni et Promove en Haute-Savoie. Vente matériels de chantier neufs et occasion à Saint-Félix (74), livraison Annecy, Chambéry, Aix-les-Bains, Albertville. SAV certifié.",
+  openGraph: {
+    title: "Achat matériel BTP Haute-Savoie | Mini-pelles, Dumpers, Télescopiques — AMC Saint-Félix (74)",
+    description: "AMC — distributeur officiel WACKER NEUSON, Magni et Promove en Haute-Savoie. Vente matériels de chantier neufs et occasion à Saint-Félix (74), livraison Annecy, Chambéry, Aix-les-Bains, Albertville. SAV certifié.",
+    images: [{ url: "/images/LOGO-AMC-ORANGE-site-web-V3.png" }],
+    type: "website",
+    url: "https://www.amc-savoie.fr",
+    siteName: "AMC — Alpes Matériel Compact",
+  },
 };
 
 export default async function HomePage() {

@@ -12,11 +12,11 @@ import {
 import { PhoneLink } from "@/components/ui/PhoneLink";
 
 export const metadata: Metadata = {
-  title: { absolute: "Service Après-Vente certifié | AMC" },
-  description: "Atelier certifié, techniciens formés constructeurs, pièces d'origine. SAV matériel chantier à Saint-Félix, Haute-Savoie.",
+  title: { absolute: "Service après-vente matériel BTP Savoie Mont-Blanc | Atelier certifié AMC Saint-Félix" },
+  description: "SAV matériel chantier en Haute-Savoie et Savoie : atelier certifié à Saint-Félix (74), techniciens formés WACKER NEUSON, Magni, Promove. Interventions Annecy, Chambéry, Aix-les-Bains, Albertville.",
   openGraph: {
-    title: "Service Après-Vente certifié | AMC",
-    description: "Atelier certifié, techniciens formés constructeurs, pièces d'origine. SAV matériel chantier à Saint-Félix, Haute-Savoie.",
+    title: "Service après-vente matériel BTP Savoie Mont-Blanc | Atelier certifié AMC Saint-Félix",
+    description: "SAV matériel chantier en Haute-Savoie et Savoie : atelier certifié à Saint-Félix (74), techniciens formés WACKER NEUSON, Magni, Promove. Interventions Annecy, Chambéry, Aix-les-Bains, Albertville.",
     images: [{ url: "/images/Slide-3.jpg" }],
     type: "website",
     url: `https://www.amc-savoie.fr/sav`,

@@ -52,7 +52,7 @@ export function ActivitiesSection() {
           </h2>
           <p className="section-subtitle mx-auto mt-4">
             AMC est votre partenaire de confiance pour la vente de matériels de chantier neufs et
-            d&apos;occasion en Rhône-Alpes.
+            d&apos;occasion en Haute-Savoie et Savoie — Annecy, Chambéry, Aix-les-Bains, Albertville et toute la région Auvergne-Rhône-Alpes.
           </p>
         </div>
 

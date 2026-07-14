@@ -78,6 +78,7 @@ function MachineCard({ machine }: { machine: WnMachine }) {
             <Image
               src={placeholderForBrand(brandId)}
               alt=""
+              aria-hidden="true"
               fill
               className="object-contain p-4 opacity-60"
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"

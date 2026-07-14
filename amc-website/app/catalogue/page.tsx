@@ -5,11 +5,11 @@ import { getMachinesAsync } from "@/lib/data";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: { absolute: "Catalogue matériels de chantier | AMC" },
-  description: "Compacteurs, dumpers, pelles compactes, télescopiques neufs et occasion. Distributeur officiel WACKER NEUSON, Magni, Promove en Rhône-Alpes.",
+  title: { absolute: "Matériel de chantier neuf et occasion Haute-Savoie | Wacker Neuson, Magni, Promove — AMC" },
+  description: "Compacteurs, dumpers, mini-pelles, télescopiques neufs et occasion en Haute-Savoie. Distributeur officiel WACKER NEUSON, Magni, Promove à Saint-Félix (74). Livraison Annecy, Chambéry, Aix-les-Bains, Albertville.",
   openGraph: {
-    title: "Catalogue matériels de chantier | AMC",
-    description: "Compacteurs, dumpers, pelles compactes, télescopiques neufs et occasion. Distributeur officiel WACKER NEUSON, Magni, Promove en Rhône-Alpes.",
+    title: "Matériel de chantier neuf et occasion Haute-Savoie | Wacker Neuson, Magni, Promove — AMC",
+    description: "Compacteurs, dumpers, mini-pelles, télescopiques neufs et occasion en Haute-Savoie. Distributeur officiel WACKER NEUSON, Magni, Promove à Saint-Félix (74). Livraison Annecy, Chambéry, Aix-les-Bains, Albertville.",
     images: [{ url: "/images/photo-wacker-catalogue.jpg" }],
     type: "website",
     url: `https://www.amc-savoie.fr/catalogue`,

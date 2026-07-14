@@ -17,11 +17,11 @@ import {
 import { PhoneLink } from "@/components/ui/PhoneLink";
 
 export const metadata: Metadata = {
-  title: { absolute: "Notre équipe | AMC — Alpes Matériel Compact" },
-  description: "Découvrez l'équipe AMC, distributeur officiel WACKER NEUSON, Magni et Promove en Rhône-Alpes.",
+  title: { absolute: "À propos d'AMC — Distributeur matériel BTP Saint-Félix, Haute-Savoie (74)" },
+  description: "AMC Alpes Matériel Compact, distributeur officiel WACKER NEUSON, Magni et Promove à Saint-Félix (74540), Haute-Savoie. Équipe expérimentée au service des professionnels BTP en Auvergne-Rhône-Alpes.",
   openGraph: {
-    title: "Notre équipe | AMC — Alpes Matériel Compact",
-    description: "Découvrez l'équipe AMC, distributeur officiel WACKER NEUSON, Magni et Promove en Rhône-Alpes.",
+    title: "À propos d'AMC — Distributeur matériel BTP Saint-Félix, Haute-Savoie (74)",
+    description: "AMC Alpes Matériel Compact, distributeur officiel WACKER NEUSON, Magni et Promove à Saint-Félix (74540), Haute-Savoie. Équipe expérimentée au service des professionnels BTP en Auvergne-Rhône-Alpes.",
     images: [{ url: "/images/about/equipe-amc.png" }],
     type: "website",
     url: `https://www.amc-savoie.fr/a-propos`,
@@ -165,11 +165,11 @@ export default async function AProposPage() {
             Notre histoire
           </h1>
           <p className="text-white/75 text-lg max-w-xl mb-8">
-            {/* TODO: remplacer [Fondée en XXXX] par l'année réelle de création */}
             Fondée en 2013, AMC s&apos;est imposé comme le partenaire de confiance
-            des professionnels du BTP en région Rhône-Alpes. Distributeur officiel
-            WACKER NEUSON, Magni et Promove Demolition, nous mettons notre expertise
-            au service de vos chantiers.
+            des professionnels du BTP en Haute-Savoie et en Savoie. Installés à Saint-Félix
+            (74540), nous couvrons toute la région Auvergne-Rhône-Alpes&nbsp;: Annecy, Chambéry,
+            Aix-les-Bains, Albertville et au-delà. Distributeur officiel WACKER NEUSON, Magni
+            et Promove Demolition.
           </p>
           <div className="flex flex-wrap gap-3">
             <Link href="/gammes" className="btn-primary">

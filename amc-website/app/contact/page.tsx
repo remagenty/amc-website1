@@ -15,11 +15,11 @@ const GMAPS_EMBED =
 const GMAPS_DIR = "https://www.google.com/maps/dir/?api=1&destination=45.79640,5.97107";
 
 export const metadata: Metadata = {
-  title: { absolute: "Contact | AMC — Saint-Félix, Haute-Savoie" },
-  description: "Contactez AMC à Saint-Félix. Tél : 04 26 78 43 90. Lun-Ven 8h-12h / 14h-18h. Fermé le week-end.",
+  title: { absolute: "Contact AMC — Distributeur matériel BTP Annecy, Chambéry, Aix-les-Bains (74/73)" },
+  description: "Contactez AMC à Saint-Félix (74). Distributeur matériel BTP en Haute-Savoie et Savoie : Annecy, Chambéry, Aix-les-Bains, Albertville, Thonon, Cluses. Tél : 04 26 78 43 90. Lun-Ven 8h-12h / 14h-18h.",
   openGraph: {
-    title: "Contact | AMC — Saint-Félix, Haute-Savoie",
-    description: "Contactez AMC à Saint-Félix. Tél : 04 26 78 43 90. Lun-Ven 8h-12h / 14h-18h. Fermé le week-end.",
+    title: "Contact AMC — Distributeur matériel BTP Annecy, Chambéry, Aix-les-Bains (74/73)",
+    description: "Contactez AMC à Saint-Félix (74). Distributeur matériel BTP en Haute-Savoie et Savoie : Annecy, Chambéry, Aix-les-Bains, Albertville, Thonon, Cluses. Tél : 04 26 78 43 90. Lun-Ven 8h-12h / 14h-18h.",
     images: [{ url: "/images/immage-accueil-site-internet.png" }],
     type: "website",
     url: `https://www.amc-savoie.fr/contact`,
@@ -160,6 +160,9 @@ export default async function ContactPage() {
           </div>
           <p className="text-sm text-amc-text-secondary mt-1 ml-7">
             {address.split("\n").join(", ")}, Haute-Savoie
+          </p>
+          <p className="text-sm text-amc-text-secondary mt-2 ml-7">
+            Nous intervenons dans toute la Haute-Savoie et la Savoie&nbsp;: Annecy, Chambéry, Aix-les-Bains, Albertville, Thonon-les-Bains, Cluses, Bonneville, Rumilly, Annemasse.
           </p>
         </div>
 

@@ -23,20 +23,20 @@ export async function generateStaticParams() {
 
 const BRAND_OG: Record<string, { title: string; description: string; image: string; url: string }> = {
   "wacker-neuson": {
-    title: "WACKER NEUSON | Distributeur officiel AMC — Rhône-Alpes",
-    description: "AMC distributeur agréé WACKER NEUSON en Rhône-Alpes. Compacteurs, mini-pelles, dumpers avec garantie constructeur et SAV certifié.",
+    title: "WACKER NEUSON Haute-Savoie | Distributeur officiel AMC Saint-Félix (74)",
+    description: "AMC distributeur agréé WACKER NEUSON en Haute-Savoie. Compacteurs, mini-pelles, dumpers neufs et occasion à Saint-Félix (74). SAV certifié constructeur. Livraison Annecy, Chambéry, Aix-les-Bains.",
     image: "/images/logo-wacker.png",
     url: "https://www.amc-savoie.fr/partenaires/wacker-neuson",
   },
   magni: {
-    title: "Magni | Distributeur officiel AMC — Rhône-Alpes",
-    description: "AMC distributeur agréé Magni en Rhône-Alpes. Télescopiques rotatifs et fixes avec support technique et pièces d'origine.",
+    title: "Magni Haute-Savoie | Distributeur officiel télescopiques AMC Saint-Félix (74)",
+    description: "AMC distributeur agréé Magni en Haute-Savoie. Télescopiques rotatifs et fixes neufs à Saint-Félix (74). Support technique et pièces d'origine. Zone Annecy, Chambéry, Albertville.",
     image: "/images/logo-magni.png",
     url: "https://www.amc-savoie.fr/partenaires/magni",
   },
   "promove-demolition": {
-    title: "Promove Demolition | Distributeur officiel AMC",
-    description: "AMC distributeur agréé Promove Demolition en Rhône-Alpes. Équipements de démolition et attachements pour chantiers BTP.",
+    title: "Promove Demolition Haute-Savoie | Distributeur officiel AMC Saint-Félix (74)",
+    description: "AMC distributeur agréé Promove Demolition en Haute-Savoie et Savoie. Équipements de démolition et attachements hydrauliques pour chantiers BTP. Livraison Annecy, Chambéry, Aix-les-Bains.",
     image: "/images/logo-promove.jpg",
     url: "https://www.amc-savoie.fr/partenaires/promove-demolition",
   },

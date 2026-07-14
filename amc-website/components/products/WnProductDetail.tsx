@@ -123,6 +123,7 @@ function SimilarCard({ machine }: { machine: WnMachine }) {
           <Image
             src="/images/products/placeholder-wn.svg"
             alt=""
+            aria-hidden="true"
             fill
             className="object-contain p-4 opacity-40"
             sizes="25vw"
@@ -253,6 +254,7 @@ export function WnProductDetail({ machine, similar, categorySlug, categoryLabel 
                       <Image
                         src={img}
                         alt=""
+                        aria-hidden="true"
                         fill
                         className="object-cover"
                         sizes="64px"
