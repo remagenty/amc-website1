@@ -11,6 +11,7 @@ type Machine = {
   marque: string;
   visible?: boolean;
   _brand: string;
+  etat?: "neuf" | "occasion";
   medias?: { image_principale?: string };
 };
 
@@ -25,6 +26,7 @@ export default function MachinesPage() {
   const [loading, setLoading] = useState(true);
   const [filterBrand, setFilterBrand] = useState("");
   const [filterCat, setFilterCat] = useState("");
+  const [filterEtat, setFilterEtat] = useState("");
   const [search, setSearch] = useState("");
   const [toast, setToast] = useState<{ msg: string; type: "success" | "error" } | null>(null);
   const [confirmDelete, setConfirmDelete] = useState<Machine | null>(null);
@@ -81,6 +83,7 @@ export default function MachinesPage() {
   const filtered = machines.filter((m) => {
     if (filterBrand && m._brand !== filterBrand) return false;
     if (filterCat && m.categorie !== filterCat) return false;
+    if (filterEtat && m.etat !== filterEtat) return false;
     if (search && !m.nom_complet.toLowerCase().includes(search.toLowerCase())) return false;
     return true;
   });
@@ -131,8 +134,17 @@ export default function MachinesPage() {
             <option key={c} value={c}>{c}</option>
           ))}
         </select>
-        {(filterBrand || filterCat || search) && (
-          <button onClick={() => { setFilterBrand(""); setFilterCat(""); setSearch(""); }} className="text-sm text-gray-500 hover:text-gray-800 underline">
+        <select
+          value={filterEtat}
+          onChange={(e) => setFilterEtat(e.target.value)}
+          className="border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-yellow-400"
+        >
+          <option value="">Tous les états</option>
+          <option value="neuf">Neuf</option>
+          <option value="occasion">Occasion</option>
+        </select>
+        {(filterBrand || filterCat || filterEtat || search) && (
+          <button onClick={() => { setFilterBrand(""); setFilterCat(""); setFilterEtat(""); setSearch(""); }} className="text-sm text-gray-500 hover:text-gray-800 underline">
             Réinitialiser
           </button>
         )}
@@ -152,6 +164,7 @@ export default function MachinesPage() {
                 <th className="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase tracking-wide">Nom</th>
                 <th className="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase tracking-wide hidden md:table-cell">Catégorie</th>
                 <th className="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase tracking-wide hidden lg:table-cell">Marque</th>
+                <th className="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase tracking-wide hidden lg:table-cell">État</th>
                 <th className="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase tracking-wide">Statut</th>
                 <th className="text-right px-4 py-3 text-xs font-semibold text-gray-500 uppercase tracking-wide">Actions</th>
               </tr>
@@ -183,6 +196,13 @@ export default function MachinesPage() {
                     <span className="text-xs font-medium text-gray-600 bg-gray-100 px-2 py-0.5 rounded-full">
                       {BRAND_LABELS[m._brand] ?? m._brand}
                     </span>
+                  </td>
+                  <td className="px-4 py-3 hidden lg:table-cell">
+                    {m.etat === "occasion" ? (
+                      <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-orange-50 text-orange-600">Occasion</span>
+                    ) : (
+                      <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-green-50 text-green-700">Neuf</span>
+                    )}
                   </td>
                   <td className="px-4 py-3">
                     <button
