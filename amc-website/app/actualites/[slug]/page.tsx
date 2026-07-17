@@ -44,6 +44,8 @@ export default function ArticlePage({ params }: Props) {
             src={article.image}
             alt={article.title}
             className="absolute inset-0 w-full h-full object-cover"
+            fetchPriority="high"
+            loading="eager"
           />
         ) : (
           <div

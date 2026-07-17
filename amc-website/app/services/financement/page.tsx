@@ -108,6 +108,8 @@ export default async function FinancementPage() {
           src={heroSrc}
           alt="Financement matériels de chantier AMC"
           className="absolute inset-0 w-full h-full object-cover"
+          fetchPriority="high"
+          loading="eager"
         />
         <div className="absolute inset-0" style={{ backgroundColor: "rgba(0,0,0,0.62)" }} />
         <div className="relative z-10 container-amc py-24 flex flex-col items-start justify-end h-full min-h-[420px]">

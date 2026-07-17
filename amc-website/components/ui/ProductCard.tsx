@@ -49,6 +49,8 @@ export function ProductCard({ product, className = "" }: ProductCardProps) {
           fill
           className="object-contain p-2 transition-transform duration-500 group-hover:scale-105"
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          placeholder="blur"
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN89+5dPQAIoAMs4GmYvgAAAABJRU5ErkJggg=="
         />
         <div className="absolute top-3 left-3 flex flex-wrap gap-1.5">
           {product.status === "neuf" ? (

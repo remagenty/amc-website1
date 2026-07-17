@@ -155,6 +155,8 @@ export default async function AProposPage() {
           src="/images/immage-accueil-site-internet.png"
           alt="AMC Alpes Matériel Compact — Rhône-Alpes"
           className="absolute inset-0 w-full h-full object-cover"
+          fetchPriority="high"
+          loading="eager"
         />
         <div className="absolute inset-0" style={{ backgroundColor: "rgba(0,0,0,0.58)" }} />
         <div className="relative z-10 container-amc py-24 flex flex-col items-start justify-end h-full min-h-[420px]">
@@ -215,6 +217,7 @@ export default async function AProposPage() {
                         src={member.photo as string}
                         alt={`Photo ${member.name}`}
                         className="w-full h-full object-cover object-top"
+                        loading="lazy"
                       />
                     ) : (
                       <span className="text-lg font-black text-amc-text">{member.initials}</span>
@@ -306,6 +309,7 @@ export default async function AProposPage() {
                         src={block.image}
                         alt={block.imageAlt}
                         className="w-full h-full object-cover"
+                        loading="lazy"
                       />
                       <div
                         className={`absolute bottom-0 ${isEven ? "right-0" : "left-0"} w-1 h-1/2 bg-amc-yellow`}

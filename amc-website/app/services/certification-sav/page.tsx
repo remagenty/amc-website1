@@ -93,6 +93,8 @@ export default function CertificationSePlusPage() {
           src="/images/Slide-3.jpg"
           alt="Atelier certifié AMC"
           className="absolute inset-0 w-full h-full object-cover"
+          fetchPriority="high"
+          loading="eager"
         />
         <div className="absolute inset-0" style={{ backgroundColor: "rgba(0,0,0,0.60)" }} />
         <div className="relative z-10 container-amc py-24 flex flex-col items-start justify-end h-full min-h-[420px]">
@@ -163,6 +165,7 @@ export default function CertificationSePlusPage() {
                   src="/images/photo-wacker-catalogue.jpg"
                   alt="Technicien AMC certifié"
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
                 <div className="absolute bottom-0 right-0 w-1 h-1/2 bg-amc-yellow" />
               </div>
@@ -219,6 +222,7 @@ export default function CertificationSePlusPage() {
                   src="/images/immage-accueil-site-internet.png"
                   alt="Atelier AMC Saint-Félix"
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
                 <div className="absolute bottom-0 left-0 w-1 h-1/2 bg-amc-yellow" />
               </div>
@@ -283,6 +287,7 @@ export default function CertificationSePlusPage() {
                     src={brand.logo}
                     alt={brand.alt}
                     className="h-10 w-auto object-contain mb-4"
+                    loading="lazy"
                   />
                   <h3 className="font-bold text-amc-text text-sm mb-2">{brand.name}</h3>
                   <p className="text-gray-500 text-xs leading-relaxed mb-4">{brand.desc}</p>

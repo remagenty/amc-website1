@@ -96,6 +96,7 @@ export function ActualitesFeed({ initialFilter = "", kvArticles = [] }: { initia
                       src={article.image}
                       alt={article.title}
                       className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
                     />
                   ) : (
                     <div

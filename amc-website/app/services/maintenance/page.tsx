@@ -119,6 +119,8 @@ export default async function MaintenancePage() {
           src={heroSrc}
           alt="Maintenance préventive AMC"
           className="absolute inset-0 w-full h-full object-cover"
+          fetchPriority="high"
+          loading="eager"
         />
         <div className="absolute inset-0" style={{ backgroundColor: "rgba(0,0,0,0.60)" }} />
         <div className="relative z-10 container-amc py-24 flex flex-col items-start justify-end h-full min-h-[420px]">
@@ -280,7 +282,7 @@ export default async function MaintenancePage() {
                 <div className="bg-amc-cream rounded-2xl overflow-hidden shadow-card">
                   <div className="aspect-[4/3] overflow-hidden">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={machine.image} alt={machine.machine} className="w-full h-full object-cover" />
+                    <img src={machine.image} alt={machine.machine} className="w-full h-full object-cover" loading="lazy" />
                   </div>
                   <div className="p-5">
                     <h3 className="font-bold text-amc-text text-sm mb-4">{machine.machine}</h3>

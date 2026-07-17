@@ -92,6 +92,8 @@ export function HeroSlider({ slides }: { slides?: HeroSlideKV[] }) {
               alt=""
               aria-hidden="true"
               className="absolute inset-0 w-full h-full object-cover object-center"
+              fetchPriority={i === 0 ? "high" : "low"}
+              loading={i === 0 ? "eager" : "lazy"}
             />
           )}
 

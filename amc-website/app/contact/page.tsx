@@ -48,6 +48,8 @@ export default async function ContactPage() {
           alt=""
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover object-center"
+          fetchPriority="high"
+          loading="eager"
         />
         {/* Overlay sombre */}
         <div className="absolute inset-0" style={{ backgroundColor: "rgba(0,0,0,0.55)" }} />

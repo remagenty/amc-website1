@@ -169,6 +169,8 @@ export function Header() {
                 src="/images/LOGO-AMC-ORANGE-site-web-V3.png"
                 alt="AMC - Alpes Matériel Compact"
                 className="h-full w-auto object-contain max-h-20 lg:max-h-24"
+                fetchPriority="high"
+                loading="eager"
               />
             </Link>
 
@@ -206,7 +208,7 @@ export function Header() {
               >
                 <div className="relative">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/images/me-connecter.png" alt="" aria-hidden="true" className="h-9 w-auto" />
+                  <img src="/images/me-connecter.png" alt="" aria-hidden="true" className="h-9 w-auto" loading="lazy" />
                   <span className="badge-animate w-4 h-4 bg-red-500 rounded-full text-white text-[9px] font-black flex items-center justify-center leading-none">
                     1
                   </span>
@@ -236,7 +238,7 @@ export function Header() {
         <div className="lg:hidden flex items-center justify-between px-4 h-16" style={{ backgroundColor: "#9B9B9B" }}>
           <Link href="/" aria-label="AMC - Alpes Matériel Compact">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/LOGO-AMC-ORANGE-site-web-V3.png" alt="AMC" className="h-12 w-auto object-contain" />
+            <img src="/images/LOGO-AMC-ORANGE-site-web-V3.png" alt="AMC" className="h-12 w-auto object-contain" fetchPriority="high" loading="eager" />
           </Link>
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
