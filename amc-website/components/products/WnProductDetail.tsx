@@ -571,8 +571,8 @@ export function WnProductDetail({ machine, similar, categorySlug, categoryLabel 
 
         {/* ── CTA BANNER ── */}
         <div className="mt-12 bg-amc-gray rounded-2xl p-8 text-center text-white">
-          <h2 className="text-2xl font-bold mb-3">Besoin d'un conseil sur ce matériel ?</h2>
-          <p className="text-white/70 mb-6">
+          <h2 className="text-2xl font-bold mb-3 text-white">Besoin d'un conseil sur ce matériel ?</h2>
+          <p className="text-white/80 mb-6">
             Nos experts AMC sont disponibles pour vous accompagner dans votre choix.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
