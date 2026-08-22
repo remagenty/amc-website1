@@ -108,7 +108,7 @@ const SPEC_MAP: Record<string, { label: string; unit: string }> = {
   tension_v: { label: "Tension", unit: "V" },
   capacite_reservoir_l: { label: "Capacité réservoir", unit: "L" },
   autonomie_h: { label: "Autonomie", unit: "h" },
-  // Magni telehandler specs
+  // Magni chariot télescopique specs
   portee_max_m: { label: "Portée maximale", unit: "m" },
   vitesse_transport_kmh: { label: "Vitesse de transport", unit: "km/h" },
   rotation_deg: { label: "Rotation", unit: "°" },

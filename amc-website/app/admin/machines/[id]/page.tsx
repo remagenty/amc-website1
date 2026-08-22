@@ -38,7 +38,7 @@ const CATEGORIES: Record<string, string[]> = {
     "Plaque vibrante", "Pilonneuse", "Marteau piqueur", "Télescopique",
   ],
   magni: [
-    "Téléhandler rotatif", "Téléhandler fixe", "Téléhandler agricole",
+    "Chariot télescopique rotatif", "Chariot télescopique fixe", "Chariot télescopique agricole",
   ],
   "promove-demolition": [
     "Brise-roche hydraulique", "Cisaille à ferraille",

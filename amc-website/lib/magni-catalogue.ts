@@ -5,6 +5,10 @@ import type { Product } from "@/types";
 
 // Magni-specific categories
 export const MAGNI_CATEGORY_TO_SLUG: Record<string, string> = {
+  "Chariot télescopique rotatif": "telehandlers-rotatifs",
+  "Chariot télescopique fixe": "telehandlers-fixes",
+  "Chariot télescopique agricole": "telehandlers-agricoles",
+  // Legacy keys for KV-stored machines not yet migrated
   "Téléhandler rotatif": "telehandlers-rotatifs",
   "Téléhandler fixe": "telehandlers-fixes",
   "Téléhandler agricole": "telehandlers-agricoles",
@@ -16,8 +20,8 @@ export const MAGNI_SLUG_TO_CATEGORY: Record<string, string> = Object.fromEntries
 
 export const MAGNI_CATEGORY_LABELS: Record<string, string> = {
   "telehandlers-rotatifs": "Chariot télescopique rotatif",
-  "telehandlers-fixes": "Chariot télescopique",
-  "telehandlers-agricoles": "Chariot agricole",
+  "telehandlers-fixes": "Chariot télescopique fixe",
+  "telehandlers-agricoles": "Chariot télescopique agricole",
 };
 
 const ALL_MAGNI_MACHINES: WnMachine[] = catalogueData.machines as unknown as WnMachine[];
