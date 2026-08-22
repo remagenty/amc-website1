@@ -5,6 +5,7 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { EventPopup } from "@/components/ui/EventPopup";
+import { PrefetchImages } from "@/components/ui/PrefetchImages";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -142,6 +143,7 @@ export default async function RootLayout({
         {isAdmin ? children : <main id="main-content">{children}</main>}
         {!isAdmin && <Footer />}
         {!isAdmin && <EventPopup />}
+        {!isAdmin && <PrefetchImages />}
       </body>
     </html>
   );

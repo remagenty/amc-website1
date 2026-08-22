@@ -148,6 +148,7 @@ export default async function AProposPage() {
 
   return (
     <>
+      <link rel="preload" as="image" href="/images/immage-accueil-site-internet.png" fetchPriority="high" />
       {/* ── HERO ── */}
       <section className="relative overflow-hidden" style={{ minHeight: "420px" }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}

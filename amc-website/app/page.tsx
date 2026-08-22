@@ -78,8 +78,15 @@ export default async function HomePage() {
     if (dirty) kvSet("site-content", content); // fire-and-forget
   }
 
+  // Preload hero slide images (React hoists <link> to <head> automatically)
+  const slide1Image = content?.heroSlides?.find(s => s.id === "slide-1")?.image ?? "/images/immage-accueil-site-internet.png";
+  const slide3Image = content?.heroSlides?.find(s => s.id === "slide-3")?.image ?? "/images/sav-sur-terrain.jpg";
+
   return (
     <>
+      {/* eslint-disable-next-line @next/next/no-page-custom-font */}
+      <link rel="preload" as="image" href={slide1Image} fetchPriority="high" />
+      <link rel="preload" as="image" href={slide3Image} />
       <HeroSlider slides={content?.heroSlides} />
       <ReassuranceBar items={content?.ticker?.items?.map((i) => i.text)} />
       <ActivitiesSection />

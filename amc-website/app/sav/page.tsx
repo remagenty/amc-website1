@@ -70,6 +70,7 @@ const BLOCKS = [
 export default function SavPage() {
   return (
     <>
+      <link rel="preload" as="image" href="/images/sav-page-arrivee.jpg" fetchPriority="high" />
       {/* ── HERO ── */}
       <section className="relative overflow-hidden" style={{ minHeight: "420px" }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}

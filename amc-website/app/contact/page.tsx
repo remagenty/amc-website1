@@ -38,6 +38,7 @@ export default async function ContactPage() {
 
   return (
     <div className="min-h-screen bg-amc-cream">
+      <link rel="preload" as="image" href="/images/immage-accueil-site-internet.png" fetchPriority="high" />
 
       {/* ── Hero ── */}
       <section className="relative h-[400px] md:h-[460px] flex items-center overflow-hidden">
