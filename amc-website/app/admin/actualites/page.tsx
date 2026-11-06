@@ -57,7 +57,11 @@ export default function ActualitesPage() {
   function openEdit(a: Article) { setEditing(a); setForm({ ...a }); }
 
   function setTitle(title: string) {
-    setForm((f) => ({ ...f, title, slug: f.slug || toSlug(title) }));
+    // New article: slug follows the title until edited by hand. Existing article: URL stays stable.
+    setForm((f) => {
+      const followsTitle = !editing?.slug && f.slug === toSlug(f.title);
+      return { ...f, title, slug: followsTitle ? toSlug(title) : f.slug };
+    });
   }
 
   async function save() {

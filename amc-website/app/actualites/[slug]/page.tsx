@@ -1,19 +1,51 @@
+import { cache } from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { ARTICLES, getArticleBySlug, getRelatedArticles } from "../articles-data";
+import Markdown, { type Components } from "react-markdown";
+import remarkBreaks from "remark-breaks";
+import { getArticleBySlug, getRelatedArticles, type Article } from "../articles-data";
 import { PhoneLink } from "@/components/ui/PhoneLink";
+import { kvGet } from "@/lib/kv";
+import type { AdminArticle } from "@/app/api/admin/articles/route";
+
+export const dynamic = "force-dynamic";
 
 interface Props {
   params: { slug: string };
 }
 
-export async function generateStaticParams() {
-  return ARTICLES.map((a) => ({ slug: a.slug }));
+type ArticleView = Article & { markdown?: string };
+
+function formatDate(iso: string) {
+  const date = new Date(iso);
+  if (isNaN(date.getTime())) return iso;
+  return date.toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
 }
 
+function kvToView(a: AdminArticle): ArticleView {
+  return {
+    slug: a.slug, title: a.title, category: a.category, summary: a.summary,
+    date: formatDate(a.publishedAt), readTime: "5 min",
+    image: a.coverImage ?? undefined,
+    gradientFrom: "#ffd500", gradientTo: "#e6c000", icon: "📰",
+    metaTitle: a.title, metaDescription: a.summary,
+    content: [], markdown: a.content,
+  };
+}
+
+// Static articles keep their rich layout; everything else comes from the admin (KV)
+const loadArticle = cache(async (rawSlug: string): Promise<ArticleView | undefined> => {
+  const slug = decodeURIComponent(rawSlug);
+  const staticArticle = getArticleBySlug(slug);
+  if (staticArticle) return staticArticle;
+  const kvArticles = (await kvGet<AdminArticle[]>("articles")) ?? [];
+  const kvArticle = kvArticles.find((a) => a.slug === slug && a.status === "published");
+  return kvArticle ? kvToView(kvArticle) : undefined;
+});
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const article = getArticleBySlug(params.slug);
+  const article = await loadArticle(params.slug);
   if (!article) return {};
   return {
     title: article.metaTitle,
@@ -27,8 +59,24 @@ const CATEGORY_STYLES: Record<string, { bg: string; color: string }> = {
   Actualités: { bg: "#fef3c7", color: "#92400e" },
 };
 
-export default function ArticlePage({ params }: Props) {
-  const article = getArticleBySlug(params.slug);
+const h2Class = "text-xl font-bold text-amc-text pt-3 pb-1";
+
+const MARKDOWN_COMPONENTS: Components = {
+  h1: ({ children }) => <h2 className={h2Class}>{children}</h2>,
+  h2: ({ children }) => <h2 className={h2Class}>{children}</h2>,
+  h3: ({ children }) => <h3 className="text-base font-bold text-amc-text pt-2">{children}</h3>,
+  p: ({ children }) => <p className="text-sm text-amc-text-secondary leading-relaxed">{children}</p>,
+  ul: ({ children }) => <ul className="list-disc pl-5 space-y-2 text-sm text-amc-text-secondary">{children}</ul>,
+  ol: ({ children }) => <ol className="list-decimal pl-5 space-y-2 text-sm text-amc-text-secondary">{children}</ol>,
+  li: ({ children }) => <li className="leading-relaxed">{children}</li>,
+  a: ({ href, children }) => <a href={href} className="font-semibold text-amc-text underline hover:text-amc-yellow-dark">{children}</a>,
+  strong: ({ children }) => <strong className="font-bold text-amc-text">{children}</strong>,
+  blockquote: ({ children }) => <blockquote className="bg-gray-50 rounded-xl p-5 border-l-4 border-amc-yellow space-y-2">{children}</blockquote>,
+  img: ({ src, alt }) => <img src={src} alt={alt ?? ""} className="max-w-full rounded-xl" loading="lazy" />,
+};
+
+export default async function ArticlePage({ params }: Props) {
+  const article = await loadArticle(params.slug);
   if (!article) notFound();
 
   const related = getRelatedArticles(params.slug, 3);
@@ -122,6 +170,14 @@ export default function ArticlePage({ params }: Props) {
             </div>
 
             {/* Article content */}
+            {article.markdown?.trim() && (
+              <div className="bg-white rounded-2xl p-6 md:p-8 shadow-card space-y-5">
+                <Markdown remarkPlugins={[remarkBreaks]} components={MARKDOWN_COMPONENTS}>
+                  {article.markdown}
+                </Markdown>
+              </div>
+            )}
+            {article.content.length > 0 && (
             <div className="bg-white rounded-2xl p-6 md:p-8 shadow-card space-y-5">
               {article.content.map((block, i) => {
                 if (block.type === "intro") {
@@ -200,6 +256,7 @@ export default function ArticlePage({ params }: Props) {
                 return null;
               })}
             </div>
+            )}
           </main>
 
           {/* ── SIDEBAR ── */}
