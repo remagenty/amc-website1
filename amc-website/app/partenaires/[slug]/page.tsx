@@ -44,7 +44,8 @@ const BRAND_OG: Record<string, { title: string; description: string; image: stri
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const brand = getBrandInfo(params.slug);
-  if (!brand) return {};
+  // app/loading.tsx forces a 200 status on these pages, so keep them out of the search index
+  if (!brand) return { title: "Page introuvable", robots: { index: false, follow: false } };
   const og = BRAND_OG[params.slug];
   const title = og?.title ?? `${brand.name} — Distributeur officiel`;
   const description = og?.description ?? `AMC, distributeur officiel ${brand.name} en Rhône-Alpes. ${brand.description}`;

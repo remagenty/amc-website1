@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ARTICLES } from "./articles-data";
+import { ARTICLES, formatArticleDate } from "./articles-data";
 
 type KvArticle = {
   slug: string; title: string; category: string; summary: string;
@@ -18,7 +18,7 @@ type FeedArticle = {
 function kvToFeed(a: KvArticle): FeedArticle {
   return {
     slug: a.slug, title: a.title, category: a.category, summary: a.summary,
-    date: a.publishedAt, readTime: "5 min",
+    date: formatArticleDate(a.publishedAt), readTime: "5 min",
     image: a.coverImage ?? undefined,
     gradientFrom: "#ffd500", gradientTo: "#e6c000", icon: "📰",
     source: "kv",

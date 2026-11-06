@@ -11,7 +11,8 @@ interface Props {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const product = getProductBySlug(params.slug);
-  if (!product) return {};
+  // app/loading.tsx forces a 200 status on these pages, so keep them out of the search index
+  if (!product) return { title: "Page introuvable", robots: { index: false, follow: false } };
 
   const BRAND_NAMES: Record<string, string> = {
     "wacker-neuson": "WACKER NEUSON",

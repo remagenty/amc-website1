@@ -12,6 +12,7 @@ export type AdminArticle = {
   status: "published" | "draft";
   publishedAt: string;
   createdAt: string;
+  editedAt?: string;
 };
 
 async function requireAuth(req: NextRequest) {

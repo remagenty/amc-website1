@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Markdown, { type Components } from "react-markdown";
 import remarkBreaks from "remark-breaks";
-import { getArticleBySlug, getRelatedArticles, type Article } from "../articles-data";
+import { formatArticleDate, getArticleBySlug, getRelatedArticles, type Article } from "../articles-data";
 import { PhoneLink } from "@/components/ui/PhoneLink";
 import { kvGet } from "@/lib/kv";
 import type { AdminArticle } from "@/app/api/admin/articles/route";
@@ -17,36 +17,36 @@ interface Props {
 
 type ArticleView = Article & { markdown?: string };
 
-function formatDate(iso: string) {
-  const date = new Date(iso);
-  if (isNaN(date.getTime())) return iso;
-  return date.toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
+// Tolerates headings typed as "##Titre##", which Markdown would otherwise show literally
+function normalizeHeadings(markdown: string) {
+  return markdown.replace(/^(#{2,6})[ \t]*([^\s#].*?)[ \t]*(?:#{2,})?[ \t]*$/gm, "$1 $2");
 }
 
 function kvToView(a: AdminArticle): ArticleView {
   return {
     slug: a.slug, title: a.title, category: a.category, summary: a.summary,
-    date: formatDate(a.publishedAt), readTime: "5 min",
+    date: formatArticleDate(a.publishedAt), readTime: "5 min",
     image: a.coverImage ?? undefined,
     gradientFrom: "#ffd500", gradientTo: "#e6c000", icon: "📰",
     metaTitle: a.title, metaDescription: a.summary,
-    content: [], markdown: a.content,
+    content: [], markdown: normalizeHeadings(a.content),
   };
 }
 
-// Static articles keep their rich layout; everything else comes from the admin (KV)
+// Static articles keep their rich layout until they are edited in the admin (KV)
 const loadArticle = cache(async (rawSlug: string): Promise<ArticleView | undefined> => {
   const slug = decodeURIComponent(rawSlug);
   const staticArticle = getArticleBySlug(slug);
-  if (staticArticle) return staticArticle;
   const kvArticles = (await kvGet<AdminArticle[]>("articles")) ?? [];
   const kvArticle = kvArticles.find((a) => a.slug === slug && a.status === "published");
+  if (staticArticle && !kvArticle?.editedAt) return staticArticle;
   return kvArticle ? kvToView(kvArticle) : undefined;
 });
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const article = await loadArticle(params.slug);
-  if (!article) return {};
+  // app/loading.tsx forces a 200 status on these pages, so keep them out of the search index
+  if (!article) return { title: "Page introuvable", robots: { index: false, follow: false } };
   return {
     title: article.metaTitle,
     description: article.metaDescription,

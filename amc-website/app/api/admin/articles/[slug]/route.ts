@@ -28,7 +28,9 @@ export async function PUT(req: NextRequest, { params }: Params) {
   const articles = await getArticles();
   const idx = articles.findIndex((a) => a.slug === params.slug);
   if (idx === -1) return NextResponse.json({ error: "Not found" }, { status: 404 });
-  articles[idx] = { ...articles[idx], ...updated };
+  const current = articles[idx];
+  const edited = (["title", "category", "summary", "content", "coverImage"] as const).some((k) => updated[k] !== current[k]);
+  articles[idx] = { ...current, ...updated, ...(edited ? { editedAt: new Date().toISOString() } : {}) };
   await kvSet("articles", articles);
   return NextResponse.json({ ok: true });
 }
