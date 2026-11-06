@@ -87,7 +87,19 @@ export default async function ArticlePage({ params }: Props) {
 
       {/* Hero image */}
       <div className="relative h-[260px] md:h-[340px] overflow-hidden">
-        {article.image ? (
+        {article.image && article.markdown !== undefined ? (
+          // Admin covers are often posters with text: show them whole over a blurred backdrop
+          <>
+            <img src={article.image} alt="" aria-hidden="true" className="absolute inset-0 w-full h-full object-cover scale-110 blur-2xl" />
+            <img
+              src={article.image}
+              alt={article.title}
+              className="absolute inset-0 w-full h-full object-contain"
+              fetchPriority="high"
+              loading="eager"
+            />
+          </>
+        ) : article.image ? (
           <img
             src={article.image}
             alt={article.title}
@@ -103,7 +115,9 @@ export default async function ArticlePage({ params }: Props) {
             <span className="text-[100px] md:text-[140px] select-none opacity-80">{article.icon}</span>
           </div>
         )}
-        <div className="absolute inset-0 bg-black/25" />
+        {article.markdown !== undefined
+          ? <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/70 to-transparent" />
+          : <div className="absolute inset-0 bg-black/25" />}
 
         {/* Breadcrumb over hero */}
         <div className="absolute bottom-4 left-0 right-0">
@@ -275,7 +289,7 @@ export default async function ArticlePage({ params }: Props) {
               >
                 Parler à un expert
               </Link>
-              <PhoneLink className="flex items-center justify-center gap-2 w-full py-2.5 rounded-lg text-sm font-semibold text-white border border-white/30 hover:bg-white/10 transition-colors mt-2">
+              <PhoneLink wrapperClassName="block" className="flex items-center justify-center gap-2 w-full py-2.5 rounded-lg text-sm font-semibold text-white border border-white/30 hover:bg-white/10 transition-colors mt-2">
                 04 26 78 43 90
               </PhoneLink>
             </div>

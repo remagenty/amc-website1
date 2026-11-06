@@ -13,11 +13,12 @@ function isMobileDevice() {
 
 type Props = {
   className?: string;
+  wrapperClassName?: string;
   style?: React.CSSProperties;
   children: React.ReactNode;
 };
 
-export function PhoneLink({ className, style, children }: Props) {
+export function PhoneLink({ className, wrapperClassName = "inline-block", style, children }: Props) {
   const [open, setOpen] = useState(false);
   const [copied, setCopied] = useState(false);
   const wrapperRef = useRef<HTMLSpanElement>(null);
@@ -58,7 +59,7 @@ export function PhoneLink({ className, style, children }: Props) {
   };
 
   return (
-    <span ref={wrapperRef} className="relative inline-block">
+    <span ref={wrapperRef} className={`relative ${wrapperClassName}`}>
       <a href={`tel:${PHONE_E164}`} className={className} style={style} onClick={handleClick}>
         {children}
       </a>
